@@ -12,9 +12,7 @@ This folder with contain all the .paks of mods where I worked on or collaborated
   - [Table of contents](#table-of-contents)
   - [❗❗❗Required For **ALL MODS**❗❗❗](#required-for-all-mods)
   - [Current mods](#current-mods)
-    - [500-InsideTraderBoard_P.pak](#500-insidetraderboard_ppak)
-      - [Screenshot](#screenshot)
-      - [Credits](#credits)
+
 
 ## ❗❗❗Required For **ALL MODS**❗❗❗
 
@@ -22,19 +20,4 @@ This folder with contain all the .paks of mods where I worked on or collaborated
 
 ## Current mods
 
-### 500-InsideTraderBoard_P.pak
-
-Adds a placeable board with all the stock markets.
-
-Only way to get the board is by using the spawn menu from Rhino!
-- [SpawnMenu](https://github.com/RHlNO/HydroneerModding/raw/main/Release%20Mods/500-SpawnMenu_P.pak)
-
-#### Screenshot
-
-![Inside Trader Board](../GitImgs/Mods/500-InsideTraderBoard_P_1.jpg)
-
-#### Credits
-
-- ResaloliPT
-- F4T4L
-- Hydroneer Community
+No mods currently
