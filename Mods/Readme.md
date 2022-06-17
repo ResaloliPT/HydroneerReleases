@@ -27,7 +27,7 @@ Spawn multiple items from both the game and mods!
 Requires HML!
 
 
-Controlls:
+Controls:
 F7 - Toggle menu
 Ctrl+C - Select item being aimed
 Middle-Mouse-Click - Spawn selected item
@@ -37,3 +37,7 @@ Set weight for resources
 Spawn dev items
 
 Note: Intake pipe can be spawned as dev but its located under Pipes or search for "intake pipe".
+
+- 500-DevTools_P.pak - Dev Tools
+Custom dev items!
+Dev Intake pipe, Resource Spawner.
