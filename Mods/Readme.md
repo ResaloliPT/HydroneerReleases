@@ -17,15 +17,17 @@ This folder with contain all the .paks of mods where I worked on or collaborated
 
 ## Current mods
 
+### HydroModLoader (HML)
+
 - 500-HMLoader_P.pak - Mod Loader Used by my mods and alot others
 Used to load Legacy and Workshop Mods
 Press F6 To show debug log
 
+### Creative Menu
 
 - 500-CreativeMenu_P.pak - Creative menu
 Spawn multiple items from both the game and mods!
 Requires HML!
-
 
 Controls:
 F7 - Toggle menu
@@ -37,6 +39,10 @@ Set weight for resources
 Spawn dev items
 
 Note: Intake pipe can be spawned as dev but its located under Pipes or search for "intake pipe".
+
+- Credits to Cheebsta for the Readme on the API export
+
+### Developer Tools (DevTools)
 
 - 500-DevTools_P.pak - Dev Tools
 Custom dev items!
