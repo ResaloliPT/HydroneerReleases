@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * Class AssetTags.AssetTagsSubsystem
 	 * Size -> 0x0000 (FullSize[0x0030] - InheritedSize[0x0030])
@@ -21,12 +22,29 @@ namespace CG
 	class UAssetTagsSubsystem : public UEngineSubsystem
 	{
 	public:
-		TArray<class FName> GetCollectionsContainingAssetPtr(class UObject* AssetPtr);
-		TArray<class FName> GetCollectionsContainingAssetData(const struct FAssetData& AssetData);
-		TArray<class FName> GetCollectionsContainingAsset(const class FName& AssetPathName);
+
+		TArray<class FName> GetCollectionsContainingAssetPtr(
+class UObject* AssetPtr
+);
+
+		TArray<class FName> GetCollectionsContainingAssetData(
+const struct FAssetData& AssetData
+);
+
+		TArray<class FName> GetCollectionsContainingAsset(
+const class FName& AssetPathName
+);
+
 		TArray<class FName> GetCollections();
-		TArray<struct FAssetData> GetAssetsInCollection(const class FName& Name);
-		bool CollectionExists(const class FName& Name);
+
+		TArray<struct FAssetData> GetAssetsInCollection(
+const class FName& Name
+);
+
+		bool CollectionExists(
+const class FName& Name
+);
+
 		static UClass* StaticClass();
 	};
 

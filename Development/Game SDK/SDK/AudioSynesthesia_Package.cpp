@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAudioSynesthesiaNRTSettings.StaticClass
+	 * 		Name   -> PredefinedFunction UAudioSynesthesiaNRTSettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAudioSynesthesiaNRTSettings::StaticClass()
@@ -24,10 +25,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAudioSynesthesiaNRT.StaticClass
+	 * 		Name   -> PredefinedFunction UAudioSynesthesiaNRT.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAudioSynesthesiaNRT::StaticClass()
@@ -38,10 +41,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UConstantQNRTSettings.StaticClass
+	 * 		Name   -> PredefinedFunction UConstantQNRTSettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UConstantQNRTSettings::StaticClass()
@@ -51,6 +56,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AudioSynesthesia.ConstantQNRTSettings");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -62,7 +69,13 @@ namespace CG
 	 * 		int32_t                                            InChannel                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<float>                                      OutConstantQ                                               (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UConstantQNRT::GetNormalizedChannelConstantQAtTime(float InSeconds, int32_t InChannel, TArray<float>* OutConstantQ)
+	void UConstantQNRT::GetNormalizedChannelConstantQAtTime(
+float InSeconds
+, 
+int32_t InChannel
+, 
+TArray<float>* OutConstantQ
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -85,6 +98,8 @@ namespace CG
 			*OutConstantQ = params.OutConstantQ;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -95,7 +110,13 @@ namespace CG
 	 * 		int32_t                                            InChannel                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<float>                                      OutConstantQ                                               (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UConstantQNRT::GetChannelConstantQAtTime(float InSeconds, int32_t InChannel, TArray<float>* OutConstantQ)
+	void UConstantQNRT::GetChannelConstantQAtTime(
+float InSeconds
+, 
+int32_t InChannel
+, 
+TArray<float>* OutConstantQ
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -118,10 +139,12 @@ namespace CG
 			*OutConstantQ = params.OutConstantQ;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UConstantQNRT.StaticClass
+	 * 		Name   -> PredefinedFunction UConstantQNRT.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UConstantQNRT::StaticClass()
@@ -132,10 +155,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULoudnessNRTSettings.StaticClass
+	 * 		Name   -> PredefinedFunction ULoudnessNRTSettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULoudnessNRTSettings::StaticClass()
@@ -146,6 +171,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -155,7 +182,11 @@ namespace CG
 	 * 		float                                              InSeconds                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              OutLoudness                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULoudnessNRT::GetNormalizedLoudnessAtTime(float InSeconds, float* OutLoudness)
+	void ULoudnessNRT::GetNormalizedLoudnessAtTime(
+float InSeconds
+, 
+float* OutLoudness
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -176,6 +207,8 @@ namespace CG
 			*OutLoudness = params.OutLoudness;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -186,7 +219,13 @@ namespace CG
 	 * 		int32_t                                            InChannel                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              OutLoudness                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULoudnessNRT::GetNormalizedChannelLoudnessAtTime(float InSeconds, int32_t InChannel, float* OutLoudness)
+	void ULoudnessNRT::GetNormalizedChannelLoudnessAtTime(
+float InSeconds
+, 
+int32_t InChannel
+, 
+float* OutLoudness
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -209,6 +248,8 @@ namespace CG
 			*OutLoudness = params.OutLoudness;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -218,7 +259,11 @@ namespace CG
 	 * 		float                                              InSeconds                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              OutLoudness                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULoudnessNRT::GetLoudnessAtTime(float InSeconds, float* OutLoudness)
+	void ULoudnessNRT::GetLoudnessAtTime(
+float InSeconds
+, 
+float* OutLoudness
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -239,6 +284,8 @@ namespace CG
 			*OutLoudness = params.OutLoudness;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -249,7 +296,13 @@ namespace CG
 	 * 		int32_t                                            InChannel                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              OutLoudness                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULoudnessNRT::GetChannelLoudnessAtTime(float InSeconds, int32_t InChannel, float* OutLoudness)
+	void ULoudnessNRT::GetChannelLoudnessAtTime(
+float InSeconds
+, 
+int32_t InChannel
+, 
+float* OutLoudness
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -272,10 +325,12 @@ namespace CG
 			*OutLoudness = params.OutLoudness;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULoudnessNRT.StaticClass
+	 * 		Name   -> PredefinedFunction ULoudnessNRT.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULoudnessNRT::StaticClass()
@@ -286,10 +341,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UOnsetNRTSettings.StaticClass
+	 * 		Name   -> PredefinedFunction UOnsetNRTSettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UOnsetNRTSettings::StaticClass()
@@ -299,6 +356,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AudioSynesthesia.OnsetNRTSettings");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -312,7 +371,17 @@ namespace CG
 	 * 		TArray<float>                                      OutOnsetTimestamps                                         (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		TArray<float>                                      OutOnsetStrengths                                          (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UOnsetNRT::GetNormalizedChannelOnsetsBetweenTimes(float InStartSeconds, float InEndSeconds, int32_t InChannel, TArray<float>* OutOnsetTimestamps, TArray<float>* OutOnsetStrengths)
+	void UOnsetNRT::GetNormalizedChannelOnsetsBetweenTimes(
+float InStartSeconds
+, 
+float InEndSeconds
+, 
+int32_t InChannel
+, 
+TArray<float>* OutOnsetTimestamps
+, 
+TArray<float>* OutOnsetStrengths
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -340,6 +409,8 @@ namespace CG
 			*OutOnsetStrengths = params.OutOnsetStrengths;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -352,7 +423,17 @@ namespace CG
 	 * 		TArray<float>                                      OutOnsetTimestamps                                         (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		TArray<float>                                      OutOnsetStrengths                                          (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UOnsetNRT::GetChannelOnsetsBetweenTimes(float InStartSeconds, float InEndSeconds, int32_t InChannel, TArray<float>* OutOnsetTimestamps, TArray<float>* OutOnsetStrengths)
+	void UOnsetNRT::GetChannelOnsetsBetweenTimes(
+float InStartSeconds
+, 
+float InEndSeconds
+, 
+int32_t InChannel
+, 
+TArray<float>* OutOnsetTimestamps
+, 
+TArray<float>* OutOnsetStrengths
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -380,10 +461,12 @@ namespace CG
 			*OutOnsetStrengths = params.OutOnsetStrengths;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UOnsetNRT.StaticClass
+	 * 		Name   -> PredefinedFunction UOnsetNRT.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UOnsetNRT::StaticClass()
@@ -393,6 +476,7 @@ namespace CG
 			ptr = UObject::FindClass("Class AudioSynesthesia.OnsetNRT");
 		return ptr;
 	}
+
 
 }
 

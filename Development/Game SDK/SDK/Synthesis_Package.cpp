@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UModularSynthPresetBank.StaticClass
+	 * 		Name   -> PredefinedFunction UModularSynthPresetBank.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UModularSynthPresetBank::StaticClass()
@@ -23,6 +24,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Synthesis.ModularSynthPresetBank");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -34,7 +37,13 @@ namespace CG
 	 * 		struct FModularSynthPreset                         Preset                                                     (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		class FString                                      PresetName                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthLibrary::AddModularSynthPresetToBankAsset(class UModularSynthPresetBank* InBank, const struct FModularSynthPreset& Preset, const class FString& PresetName)
+	void UModularSynthLibrary::AddModularSynthPresetToBankAsset(
+class UModularSynthPresetBank* InBank
+, 
+const struct FModularSynthPreset& Preset
+, 
+const class FString& PresetName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -55,10 +64,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UModularSynthLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UModularSynthLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UModularSynthLibrary::StaticClass()
@@ -69,6 +80,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -77,7 +90,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FModularSynthPreset                         SynthPreset                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetSynthPreset(const struct FModularSynthPreset& SynthPreset)
+	void UModularSynthComponent::SetSynthPreset(
+const struct FModularSynthPreset& SynthPreset
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -94,6 +109,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -102,7 +119,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              SustainGain                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetSustainGain(float SustainGain)
+	void UModularSynthComponent::SetSustainGain(
+float SustainGain
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -119,6 +138,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -127,7 +148,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              DelayWetlevel                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetStereoDelayWetlevel(float DelayWetlevel)
+	void UModularSynthComponent::SetStereoDelayWetlevel(
+float DelayWetlevel
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -144,6 +167,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -152,7 +177,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              DelayTimeMsec                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetStereoDelayTime(float DelayTimeMsec)
+	void UModularSynthComponent::SetStereoDelayTime(
+float DelayTimeMsec
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -169,6 +196,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -177,7 +206,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              DelayRatio                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetStereoDelayRatio(float DelayRatio)
+	void UModularSynthComponent::SetStereoDelayRatio(
+float DelayRatio
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -194,6 +225,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -202,7 +235,9 @@ namespace CG
 	 * Parameters:
 	 * 		ESynthStereoDelayMode                              StereoDelayMode                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetStereoDelayMode(ESynthStereoDelayMode StereoDelayMode)
+	void UModularSynthComponent::SetStereoDelayMode(
+ESynthStereoDelayMode StereoDelayMode
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -219,6 +254,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -227,7 +264,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               StereoDelayEnabled                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetStereoDelayIsEnabled(bool StereoDelayEnabled)
+	void UModularSynthComponent::SetStereoDelayIsEnabled(
+bool StereoDelayEnabled
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -244,6 +283,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -252,7 +293,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              DelayFeedback                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetStereoDelayFeedback(float DelayFeedback)
+	void UModularSynthComponent::SetStereoDelayFeedback(
+float DelayFeedback
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -269,6 +312,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -277,7 +322,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              Spread                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetSpread(float Spread)
+	void UModularSynthComponent::SetSpread(
+float Spread
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -294,6 +341,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -302,7 +351,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              ReleaseTimeMsec                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetReleaseTime(float ReleaseTimeMsec)
+	void UModularSynthComponent::SetReleaseTime(
+float ReleaseTimeMsec
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -319,6 +370,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -327,7 +380,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              Portamento                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetPortamento(float Portamento)
+	void UModularSynthComponent::SetPortamento(
+float Portamento
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -344,6 +399,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -352,7 +409,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              PitchBend                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetPitchBend(float PitchBend)
+	void UModularSynthComponent::SetPitchBend(
+float PitchBend
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -369,6 +428,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -377,7 +438,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              Pan                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetPan(float Pan)
+	void UModularSynthComponent::SetPan(
+float Pan
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -394,6 +457,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -403,7 +468,11 @@ namespace CG
 	 * 		int32_t                                            OscIndex                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ESynth1OscType                                     OscType                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetOscType(int32_t OscIndex, ESynth1OscType OscType)
+	void UModularSynthComponent::SetOscType(
+int32_t OscIndex
+, 
+ESynth1OscType OscType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -422,6 +491,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -430,7 +501,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bIsSynced                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetOscSync(bool bIsSynced)
+	void UModularSynthComponent::SetOscSync(
+bool bIsSynced
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -447,6 +520,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -456,7 +531,11 @@ namespace CG
 	 * 		int32_t                                            OscIndex                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Semitones                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetOscSemitones(int32_t OscIndex, float Semitones)
+	void UModularSynthComponent::SetOscSemitones(
+int32_t OscIndex
+, 
+float Semitones
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -475,6 +554,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -484,7 +565,11 @@ namespace CG
 	 * 		int32_t                                            OscIndex                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Pulsewidth                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetOscPulsewidth(int32_t OscIndex, float Pulsewidth)
+	void UModularSynthComponent::SetOscPulsewidth(
+int32_t OscIndex
+, 
+float Pulsewidth
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -503,6 +588,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -512,7 +599,11 @@ namespace CG
 	 * 		int32_t                                            OscIndex                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Octave                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetOscOctave(int32_t OscIndex, float Octave)
+	void UModularSynthComponent::SetOscOctave(
+int32_t OscIndex
+, 
+float Octave
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -531,6 +622,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -540,7 +633,11 @@ namespace CG
 	 * 		int32_t                                            OscIndex                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              OscGainMod                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetOscGainMod(int32_t OscIndex, float OscGainMod)
+	void UModularSynthComponent::SetOscGainMod(
+int32_t OscIndex
+, 
+float OscGainMod
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -559,6 +656,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -568,7 +667,11 @@ namespace CG
 	 * 		int32_t                                            OscIndex                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              OscGain                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetOscGain(int32_t OscIndex, float OscGain)
+	void UModularSynthComponent::SetOscGain(
+int32_t OscIndex
+, 
+float OscGain
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -587,6 +690,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -596,7 +701,11 @@ namespace CG
 	 * 		int32_t                                            OscIndex                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              OscFreqMod                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetOscFrequencyMod(int32_t OscIndex, float OscFreqMod)
+	void UModularSynthComponent::SetOscFrequencyMod(
+int32_t OscIndex
+, 
+float OscFreqMod
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -615,6 +724,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -624,7 +735,11 @@ namespace CG
 	 * 		int32_t                                            OscIndex                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Cents                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetOscCents(int32_t OscIndex, float Cents)
+	void UModularSynthComponent::SetOscCents(
+int32_t OscIndex
+, 
+float Cents
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -643,6 +758,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -651,7 +768,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              SustainGain                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetModEnvSustainGain(float SustainGain)
+	void UModularSynthComponent::SetModEnvSustainGain(
+float SustainGain
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -668,6 +787,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -676,7 +797,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              Release                                                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetModEnvReleaseTime(float Release)
+	void UModularSynthComponent::SetModEnvReleaseTime(
+float Release
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -693,6 +816,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -701,7 +826,9 @@ namespace CG
 	 * Parameters:
 	 * 		ESynthModEnvPatch                                  InPatchType                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetModEnvPatch(ESynthModEnvPatch InPatchType)
+	void UModularSynthComponent::SetModEnvPatch(
+ESynthModEnvPatch InPatchType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -718,6 +845,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -726,7 +855,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bInvert                                                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetModEnvInvert(bool bInvert)
+	void UModularSynthComponent::SetModEnvInvert(
+bool bInvert
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -743,6 +874,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -751,7 +884,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              Depth                                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetModEnvDepth(float Depth)
+	void UModularSynthComponent::SetModEnvDepth(
+float Depth
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -768,6 +903,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -776,7 +913,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              DecayTimeMsec                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetModEnvDecayTime(float DecayTimeMsec)
+	void UModularSynthComponent::SetModEnvDecayTime(
+float DecayTimeMsec
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -793,6 +932,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -801,7 +942,9 @@ namespace CG
 	 * Parameters:
 	 * 		ESynthModEnvBiasPatch                              InPatchType                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetModEnvBiasPatch(ESynthModEnvBiasPatch InPatchType)
+	void UModularSynthComponent::SetModEnvBiasPatch(
+ESynthModEnvBiasPatch InPatchType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -818,6 +961,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -826,7 +971,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bInvert                                                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetModEnvBiasInvert(bool bInvert)
+	void UModularSynthComponent::SetModEnvBiasInvert(
+bool bInvert
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -843,6 +990,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -851,7 +1000,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              AttackTimeMsec                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetModEnvAttackTime(float AttackTimeMsec)
+	void UModularSynthComponent::SetModEnvAttackTime(
+float AttackTimeMsec
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -868,6 +1019,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -877,7 +1030,11 @@ namespace CG
 	 * 		int32_t                                            LFOIndex                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ESynthLFOType                                      LFOType                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetLFOType(int32_t LFOIndex, ESynthLFOType LFOType)
+	void UModularSynthComponent::SetLFOType(
+int32_t LFOIndex
+, 
+ESynthLFOType LFOType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -896,6 +1053,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -905,7 +1064,11 @@ namespace CG
 	 * 		int32_t                                            LFOIndex                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ESynthLFOPatchType                                 LFOPatchType                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetLFOPatch(int32_t LFOIndex, ESynthLFOPatchType LFOPatchType)
+	void UModularSynthComponent::SetLFOPatch(
+int32_t LFOIndex
+, 
+ESynthLFOPatchType LFOPatchType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -924,6 +1087,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -933,7 +1098,11 @@ namespace CG
 	 * 		int32_t                                            LFOIndex                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ESynthLFOMode                                      LFOMode                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetLFOMode(int32_t LFOIndex, ESynthLFOMode LFOMode)
+	void UModularSynthComponent::SetLFOMode(
+int32_t LFOIndex
+, 
+ESynthLFOMode LFOMode
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -952,6 +1121,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -961,7 +1132,11 @@ namespace CG
 	 * 		int32_t                                            LFOIndex                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              GainMod                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetLFOGainMod(int32_t LFOIndex, float GainMod)
+	void UModularSynthComponent::SetLFOGainMod(
+int32_t LFOIndex
+, 
+float GainMod
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -980,6 +1155,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -989,7 +1166,11 @@ namespace CG
 	 * 		int32_t                                            LFOIndex                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Gain                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetLFOGain(int32_t LFOIndex, float Gain)
+	void UModularSynthComponent::SetLFOGain(
+int32_t LFOIndex
+, 
+float Gain
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1008,6 +1189,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1017,7 +1200,11 @@ namespace CG
 	 * 		int32_t                                            LFOIndex                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              FrequencyModHz                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetLFOFrequencyMod(int32_t LFOIndex, float FrequencyModHz)
+	void UModularSynthComponent::SetLFOFrequencyMod(
+int32_t LFOIndex
+, 
+float FrequencyModHz
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1036,6 +1223,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1045,7 +1234,11 @@ namespace CG
 	 * 		int32_t                                            LFOIndex                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              FrequencyHz                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetLFOFrequency(int32_t LFOIndex, float FrequencyHz)
+	void UModularSynthComponent::SetLFOFrequency(
+int32_t LFOIndex
+, 
+float FrequencyHz
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1064,6 +1257,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1072,7 +1267,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              GainDb                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetGainDb(float GainDb)
+	void UModularSynthComponent::SetGainDb(
+float GainDb
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1089,6 +1286,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1097,7 +1296,9 @@ namespace CG
 	 * Parameters:
 	 * 		ESynthFilterType                                   FilterType                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetFilterType(ESynthFilterType FilterType)
+	void UModularSynthComponent::SetFilterType(
+ESynthFilterType FilterType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1114,6 +1315,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1122,7 +1325,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              FilterQ                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetFilterQMod(float FilterQ)
+	void UModularSynthComponent::SetFilterQMod(
+float FilterQ
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1139,6 +1344,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1147,7 +1354,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              FilterQ                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetFilterQ(float FilterQ)
+	void UModularSynthComponent::SetFilterQ(
+float FilterQ
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1164,6 +1373,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1172,7 +1383,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              FilterFrequencyHz                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetFilterFrequencyMod(float FilterFrequencyHz)
+	void UModularSynthComponent::SetFilterFrequencyMod(
+float FilterFrequencyHz
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1189,6 +1402,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1197,7 +1412,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              FilterFrequencyHz                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetFilterFrequency(float FilterFrequencyHz)
+	void UModularSynthComponent::SetFilterFrequency(
+float FilterFrequencyHz
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1214,6 +1431,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1222,7 +1441,9 @@ namespace CG
 	 * Parameters:
 	 * 		ESynthFilterAlgorithm                              FilterAlgorithm                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetFilterAlgorithm(ESynthFilterAlgorithm FilterAlgorithm)
+	void UModularSynthComponent::SetFilterAlgorithm(
+ESynthFilterAlgorithm FilterAlgorithm
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1239,6 +1460,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1247,7 +1470,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               EnableUnison                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetEnableUnison(bool EnableUnison)
+	void UModularSynthComponent::SetEnableUnison(
+bool EnableUnison
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1264,6 +1489,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1272,7 +1499,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               RetriggerEnabled                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetEnableRetrigger(bool RetriggerEnabled)
+	void UModularSynthComponent::SetEnableRetrigger(
+bool RetriggerEnabled
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1289,6 +1518,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1297,7 +1528,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bEnablePolyphony                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetEnablePolyphony(bool bEnablePolyphony)
+	void UModularSynthComponent::SetEnablePolyphony(
+bool bEnablePolyphony
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1314,6 +1547,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1323,7 +1558,11 @@ namespace CG
 	 * 		struct FPatchId                                    PatchId                                                    (ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               BIsEnabled                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UModularSynthComponent::SetEnablePatch(const struct FPatchId& PatchId, bool BIsEnabled)
+	bool UModularSynthComponent::SetEnablePatch(
+const struct FPatchId& PatchId
+, 
+bool BIsEnabled
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1344,6 +1583,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1352,7 +1593,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               LegatoEnabled                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetEnableLegato(bool LegatoEnabled)
+	void UModularSynthComponent::SetEnableLegato(
+bool LegatoEnabled
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1369,6 +1612,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1377,7 +1622,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              DecayTimeMsec                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetDecayTime(float DecayTimeMsec)
+	void UModularSynthComponent::SetDecayTime(
+float DecayTimeMsec
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1394,6 +1641,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1402,7 +1651,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              Frequency                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetChorusFrequency(float Frequency)
+	void UModularSynthComponent::SetChorusFrequency(
+float Frequency
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1419,6 +1670,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1427,7 +1680,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              Feedback                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetChorusFeedback(float Feedback)
+	void UModularSynthComponent::SetChorusFeedback(
+float Feedback
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1444,6 +1699,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1452,7 +1709,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               EnableChorus                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetChorusEnabled(bool EnableChorus)
+	void UModularSynthComponent::SetChorusEnabled(
+bool EnableChorus
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1469,6 +1728,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1477,7 +1738,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              Depth                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetChorusDepth(float Depth)
+	void UModularSynthComponent::SetChorusDepth(
+float Depth
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1494,6 +1757,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1502,7 +1767,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              AttackTimeMsec                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::SetAttackTime(float AttackTimeMsec)
+	void UModularSynthComponent::SetAttackTime(
+float AttackTimeMsec
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1519,6 +1786,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1529,7 +1798,13 @@ namespace CG
 	 * 		int32_t                                            Velocity                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Duration                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::NoteOn(float Note, int32_t Velocity, float Duration)
+	void UModularSynthComponent::NoteOn(
+float Note
+, 
+int32_t Velocity
+, 
+float Duration
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1550,6 +1825,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1560,7 +1837,13 @@ namespace CG
 	 * 		bool                                               bAllNotesOff                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bKillAllNotes                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModularSynthComponent::NoteOff(float Note, bool bAllNotesOff, bool bKillAllNotes)
+	void UModularSynthComponent::NoteOff(
+float Note
+, 
+bool bAllNotesOff
+, 
+bool bKillAllNotes
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1581,6 +1864,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1591,7 +1876,13 @@ namespace CG
 	 * 		TArray<struct FSynth1PatchCable>                   PatchCables                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		bool                                               bEnableByDefault                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FPatchId UModularSynthComponent::CreatePatch(ESynth1PatchSource PatchSource, TArray<struct FSynth1PatchCable> PatchCables, bool bEnableByDefault)
+	struct FPatchId UModularSynthComponent::CreatePatch(
+ESynth1PatchSource PatchSource
+, 
+TArray<struct FSynth1PatchCable> PatchCables
+, 
+bool bEnableByDefault
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1614,10 +1905,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UModularSynthComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UModularSynthComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UModularSynthComponent::StaticClass()
@@ -1628,6 +1921,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1636,7 +1931,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSourceEffectBitCrusherBaseSettings         Settings                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void USourceEffectBitCrusherPreset::SetSettings(const struct FSourceEffectBitCrusherBaseSettings& Settings)
+	void USourceEffectBitCrusherPreset::SetSettings(
+const struct FSourceEffectBitCrusherBaseSettings& Settings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1653,6 +1950,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1661,7 +1960,9 @@ namespace CG
 	 * Parameters:
 	 * 		class USoundModulatorBase*                         Modulator                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USourceEffectBitCrusherPreset::SetSampleRateModulator(class USoundModulatorBase* Modulator)
+	void USourceEffectBitCrusherPreset::SetSampleRateModulator(
+class USoundModulatorBase* Modulator
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1678,6 +1979,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1686,7 +1989,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              SampleRate                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USourceEffectBitCrusherPreset::SetSampleRate(float SampleRate)
+	void USourceEffectBitCrusherPreset::SetSampleRate(
+float SampleRate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1703,6 +2008,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1711,7 +2018,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSourceEffectBitCrusherSettings             ModulationSettings                                         (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void USourceEffectBitCrusherPreset::SetModulationSettings(const struct FSourceEffectBitCrusherSettings& ModulationSettings)
+	void USourceEffectBitCrusherPreset::SetModulationSettings(
+const struct FSourceEffectBitCrusherSettings& ModulationSettings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1728,6 +2037,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1736,7 +2047,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              Bits                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USourceEffectBitCrusherPreset::SetBits(float Bits)
+	void USourceEffectBitCrusherPreset::SetBits(
+float Bits
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1753,6 +2066,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1761,7 +2076,9 @@ namespace CG
 	 * Parameters:
 	 * 		class USoundModulatorBase*                         Modulator                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USourceEffectBitCrusherPreset::SetBitModulator(class USoundModulatorBase* Modulator)
+	void USourceEffectBitCrusherPreset::SetBitModulator(
+class USoundModulatorBase* Modulator
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1778,10 +2095,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USourceEffectBitCrusherPreset.StaticClass
+	 * 		Name   -> PredefinedFunction USourceEffectBitCrusherPreset.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USourceEffectBitCrusherPreset::StaticClass()
@@ -1792,6 +2111,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1800,7 +2121,9 @@ namespace CG
 	 * Parameters:
 	 * 		class USoundModulatorBase*                         Modulator                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USourceEffectChorusPreset::SetWetModulator(class USoundModulatorBase* Modulator)
+	void USourceEffectChorusPreset::SetWetModulator(
+class USoundModulatorBase* Modulator
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1817,6 +2140,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1825,7 +2150,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              WetAmount                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USourceEffectChorusPreset::SetWet(float WetAmount)
+	void USourceEffectChorusPreset::SetWet(
+float WetAmount
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1842,6 +2169,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1850,7 +2179,9 @@ namespace CG
 	 * Parameters:
 	 * 		class USoundModulatorBase*                         Modulator                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USourceEffectChorusPreset::SetSpreadModulator(class USoundModulatorBase* Modulator)
+	void USourceEffectChorusPreset::SetSpreadModulator(
+class USoundModulatorBase* Modulator
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1867,6 +2198,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1875,7 +2208,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              Spread                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USourceEffectChorusPreset::SetSpread(float Spread)
+	void USourceEffectChorusPreset::SetSpread(
+float Spread
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1892,6 +2227,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1900,7 +2237,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSourceEffectChorusBaseSettings             Settings                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void USourceEffectChorusPreset::SetSettings(const struct FSourceEffectChorusBaseSettings& Settings)
+	void USourceEffectChorusPreset::SetSettings(
+const struct FSourceEffectChorusBaseSettings& Settings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1917,6 +2256,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1925,7 +2266,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSourceEffectChorusSettings                 ModulationSettings                                         (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void USourceEffectChorusPreset::SetModulationSettings(const struct FSourceEffectChorusSettings& ModulationSettings)
+	void USourceEffectChorusPreset::SetModulationSettings(
+const struct FSourceEffectChorusSettings& ModulationSettings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1942,6 +2285,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1950,7 +2295,9 @@ namespace CG
 	 * Parameters:
 	 * 		class USoundModulatorBase*                         Modulator                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USourceEffectChorusPreset::SetFrequencyModulator(class USoundModulatorBase* Modulator)
+	void USourceEffectChorusPreset::SetFrequencyModulator(
+class USoundModulatorBase* Modulator
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1967,6 +2314,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1975,7 +2324,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              Frequency                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USourceEffectChorusPreset::SetFrequency(float Frequency)
+	void USourceEffectChorusPreset::SetFrequency(
+float Frequency
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1992,6 +2343,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2000,7 +2353,9 @@ namespace CG
 	 * Parameters:
 	 * 		class USoundModulatorBase*                         Modulator                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USourceEffectChorusPreset::SetFeedbackModulator(class USoundModulatorBase* Modulator)
+	void USourceEffectChorusPreset::SetFeedbackModulator(
+class USoundModulatorBase* Modulator
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2017,6 +2372,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2025,7 +2382,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              Feedback                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USourceEffectChorusPreset::SetFeedback(float Feedback)
+	void USourceEffectChorusPreset::SetFeedback(
+float Feedback
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2042,6 +2401,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2050,7 +2411,9 @@ namespace CG
 	 * Parameters:
 	 * 		class USoundModulatorBase*                         Modulator                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USourceEffectChorusPreset::SetDryModulator(class USoundModulatorBase* Modulator)
+	void USourceEffectChorusPreset::SetDryModulator(
+class USoundModulatorBase* Modulator
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2067,6 +2430,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2075,7 +2440,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              DryAmount                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USourceEffectChorusPreset::SetDry(float DryAmount)
+	void USourceEffectChorusPreset::SetDry(
+float DryAmount
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2092,6 +2459,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2100,7 +2469,9 @@ namespace CG
 	 * Parameters:
 	 * 		class USoundModulatorBase*                         Modulator                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USourceEffectChorusPreset::SetDepthModulator(class USoundModulatorBase* Modulator)
+	void USourceEffectChorusPreset::SetDepthModulator(
+class USoundModulatorBase* Modulator
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2117,6 +2488,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2125,7 +2498,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              Depth                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USourceEffectChorusPreset::SetDepth(float Depth)
+	void USourceEffectChorusPreset::SetDepth(
+float Depth
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2142,10 +2517,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USourceEffectChorusPreset.StaticClass
+	 * 		Name   -> PredefinedFunction USourceEffectChorusPreset.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USourceEffectChorusPreset::StaticClass()
@@ -2156,6 +2533,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2164,7 +2543,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSourceEffectDynamicsProcessorSettings      InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void USourceEffectDynamicsProcessorPreset::SetSettings(const struct FSourceEffectDynamicsProcessorSettings& InSettings)
+	void USourceEffectDynamicsProcessorPreset::SetSettings(
+const struct FSourceEffectDynamicsProcessorSettings& InSettings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2181,10 +2562,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USourceEffectDynamicsProcessorPreset.StaticClass
+	 * 		Name   -> PredefinedFunction USourceEffectDynamicsProcessorPreset.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USourceEffectDynamicsProcessorPreset::StaticClass()
@@ -2195,10 +2578,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvelopeFollowerListener.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvelopeFollowerListener.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvelopeFollowerListener::StaticClass()
@@ -2209,6 +2594,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2217,7 +2604,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UEnvelopeFollowerListener*                   EnvelopeFollowerListener                                   (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USourceEffectEnvelopeFollowerPreset::UnregisterEnvelopeFollowerListener(class UEnvelopeFollowerListener* EnvelopeFollowerListener)
+	void USourceEffectEnvelopeFollowerPreset::UnregisterEnvelopeFollowerListener(
+class UEnvelopeFollowerListener* EnvelopeFollowerListener
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2234,6 +2623,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2242,7 +2633,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSourceEffectEnvelopeFollowerSettings       InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void USourceEffectEnvelopeFollowerPreset::SetSettings(const struct FSourceEffectEnvelopeFollowerSettings& InSettings)
+	void USourceEffectEnvelopeFollowerPreset::SetSettings(
+const struct FSourceEffectEnvelopeFollowerSettings& InSettings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2259,6 +2652,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2267,7 +2662,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UEnvelopeFollowerListener*                   EnvelopeFollowerListener                                   (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USourceEffectEnvelopeFollowerPreset::RegisterEnvelopeFollowerListener(class UEnvelopeFollowerListener* EnvelopeFollowerListener)
+	void USourceEffectEnvelopeFollowerPreset::RegisterEnvelopeFollowerListener(
+class UEnvelopeFollowerListener* EnvelopeFollowerListener
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2284,10 +2681,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USourceEffectEnvelopeFollowerPreset.StaticClass
+	 * 		Name   -> PredefinedFunction USourceEffectEnvelopeFollowerPreset.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USourceEffectEnvelopeFollowerPreset::StaticClass()
@@ -2298,6 +2697,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2306,7 +2707,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSourceEffectEQSettings                     InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void USourceEffectEQPreset::SetSettings(const struct FSourceEffectEQSettings& InSettings)
+	void USourceEffectEQPreset::SetSettings(
+const struct FSourceEffectEQSettings& InSettings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2323,10 +2726,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USourceEffectEQPreset.StaticClass
+	 * 		Name   -> PredefinedFunction USourceEffectEQPreset.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USourceEffectEQPreset::StaticClass()
@@ -2337,6 +2742,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2345,7 +2752,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSourceEffectFilterSettings                 InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void USourceEffectFilterPreset::SetSettings(const struct FSourceEffectFilterSettings& InSettings)
+	void USourceEffectFilterPreset::SetSettings(
+const struct FSourceEffectFilterSettings& InSettings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2362,10 +2771,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USourceEffectFilterPreset.StaticClass
+	 * 		Name   -> PredefinedFunction USourceEffectFilterPreset.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USourceEffectFilterPreset::StaticClass()
@@ -2376,6 +2787,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2384,7 +2797,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSourceEffectFoldbackDistortionSettings     InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void USourceEffectFoldbackDistortionPreset::SetSettings(const struct FSourceEffectFoldbackDistortionSettings& InSettings)
+	void USourceEffectFoldbackDistortionPreset::SetSettings(
+const struct FSourceEffectFoldbackDistortionSettings& InSettings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2401,10 +2816,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USourceEffectFoldbackDistortionPreset.StaticClass
+	 * 		Name   -> PredefinedFunction USourceEffectFoldbackDistortionPreset.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USourceEffectFoldbackDistortionPreset::StaticClass()
@@ -2415,6 +2832,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2423,7 +2842,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSourceEffectMidSideSpreaderSettings        InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void USourceEffectMidSideSpreaderPreset::SetSettings(const struct FSourceEffectMidSideSpreaderSettings& InSettings)
+	void USourceEffectMidSideSpreaderPreset::SetSettings(
+const struct FSourceEffectMidSideSpreaderSettings& InSettings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2440,10 +2861,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USourceEffectMidSideSpreaderPreset.StaticClass
+	 * 		Name   -> PredefinedFunction USourceEffectMidSideSpreaderPreset.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USourceEffectMidSideSpreaderPreset::StaticClass()
@@ -2454,6 +2877,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2462,7 +2887,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSourceEffectPannerSettings                 InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void USourceEffectPannerPreset::SetSettings(const struct FSourceEffectPannerSettings& InSettings)
+	void USourceEffectPannerPreset::SetSettings(
+const struct FSourceEffectPannerSettings& InSettings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2479,10 +2906,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USourceEffectPannerPreset.StaticClass
+	 * 		Name   -> PredefinedFunction USourceEffectPannerPreset.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USourceEffectPannerPreset::StaticClass()
@@ -2493,6 +2922,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2501,7 +2932,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSourceEffectPhaserSettings                 InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void USourceEffectPhaserPreset::SetSettings(const struct FSourceEffectPhaserSettings& InSettings)
+	void USourceEffectPhaserPreset::SetSettings(
+const struct FSourceEffectPhaserSettings& InSettings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2518,10 +2951,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USourceEffectPhaserPreset.StaticClass
+	 * 		Name   -> PredefinedFunction USourceEffectPhaserPreset.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USourceEffectPhaserPreset::StaticClass()
@@ -2532,6 +2967,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2540,7 +2977,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSourceEffectRingModulationSettings         InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void USourceEffectRingModulationPreset::SetSettings(const struct FSourceEffectRingModulationSettings& InSettings)
+	void USourceEffectRingModulationPreset::SetSettings(
+const struct FSourceEffectRingModulationSettings& InSettings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2557,10 +2996,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USourceEffectRingModulationPreset.StaticClass
+	 * 		Name   -> PredefinedFunction USourceEffectRingModulationPreset.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USourceEffectRingModulationPreset::StaticClass()
@@ -2571,6 +3012,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2579,7 +3022,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSourceEffectSimpleDelaySettings            InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void USourceEffectSimpleDelayPreset::SetSettings(const struct FSourceEffectSimpleDelaySettings& InSettings)
+	void USourceEffectSimpleDelayPreset::SetSettings(
+const struct FSourceEffectSimpleDelaySettings& InSettings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2596,10 +3041,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USourceEffectSimpleDelayPreset.StaticClass
+	 * 		Name   -> PredefinedFunction USourceEffectSimpleDelayPreset.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USourceEffectSimpleDelayPreset::StaticClass()
@@ -2610,6 +3057,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2618,7 +3067,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSourceEffectStereoDelaySettings            InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void USourceEffectStereoDelayPreset::SetSettings(const struct FSourceEffectStereoDelaySettings& InSettings)
+	void USourceEffectStereoDelayPreset::SetSettings(
+const struct FSourceEffectStereoDelaySettings& InSettings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2635,10 +3086,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USourceEffectStereoDelayPreset.StaticClass
+	 * 		Name   -> PredefinedFunction USourceEffectStereoDelayPreset.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USourceEffectStereoDelayPreset::StaticClass()
@@ -2649,6 +3102,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2657,7 +3112,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSourceEffectWaveShaperSettings             InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void USourceEffectWaveShaperPreset::SetSettings(const struct FSourceEffectWaveShaperSettings& InSettings)
+	void USourceEffectWaveShaperPreset::SetSettings(
+const struct FSourceEffectWaveShaperSettings& InSettings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2674,10 +3131,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USourceEffectWaveShaperPreset.StaticClass
+	 * 		Name   -> PredefinedFunction USourceEffectWaveShaperPreset.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USourceEffectWaveShaperPreset::StaticClass()
@@ -2688,10 +3147,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAudioImpulseResponse.StaticClass
+	 * 		Name   -> PredefinedFunction UAudioImpulseResponse.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAudioImpulseResponse::StaticClass()
@@ -2702,6 +3163,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2710,7 +3173,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSubmixEffectConvolutionReverbSettings      InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void USubmixEffectConvolutionReverbPreset::SetSettings(const struct FSubmixEffectConvolutionReverbSettings& InSettings)
+	void USubmixEffectConvolutionReverbPreset::SetSettings(
+const struct FSubmixEffectConvolutionReverbSettings& InSettings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2727,6 +3192,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2735,7 +3202,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UAudioImpulseResponse*                       InImpulseResponse                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USubmixEffectConvolutionReverbPreset::SetImpulseResponse(class UAudioImpulseResponse* InImpulseResponse)
+	void USubmixEffectConvolutionReverbPreset::SetImpulseResponse(
+class UAudioImpulseResponse* InImpulseResponse
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2752,10 +3221,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USubmixEffectConvolutionReverbPreset.StaticClass
+	 * 		Name   -> PredefinedFunction USubmixEffectConvolutionReverbPreset.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USubmixEffectConvolutionReverbPreset::StaticClass()
@@ -2766,6 +3237,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2774,7 +3247,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSubmixEffectDelaySettings                  InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void USubmixEffectDelayPreset::SetSettings(const struct FSubmixEffectDelaySettings& InSettings)
+	void USubmixEffectDelayPreset::SetSettings(
+const struct FSubmixEffectDelaySettings& InSettings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2791,6 +3266,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2799,7 +3276,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              Time                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USubmixEffectDelayPreset::SetInterpolationTime(float Time)
+	void USubmixEffectDelayPreset::SetInterpolationTime(
+float Time
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2816,6 +3295,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2824,7 +3305,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              Length                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USubmixEffectDelayPreset::SetDelay(float Length)
+	void USubmixEffectDelayPreset::SetDelay(
+float Length
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2840,6 +3323,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2864,10 +3349,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USubmixEffectDelayPreset.StaticClass
+	 * 		Name   -> PredefinedFunction USubmixEffectDelayPreset.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USubmixEffectDelayPreset::StaticClass()
@@ -2878,6 +3365,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2886,7 +3375,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSubmixEffectFilterSettings                 InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void USubmixEffectFilterPreset::SetSettings(const struct FSubmixEffectFilterSettings& InSettings)
+	void USubmixEffectFilterPreset::SetSettings(
+const struct FSubmixEffectFilterSettings& InSettings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2903,6 +3394,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2911,7 +3404,9 @@ namespace CG
 	 * Parameters:
 	 * 		ESubmixFilterType                                  InType                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USubmixEffectFilterPreset::SetFilterType(ESubmixFilterType InType)
+	void USubmixEffectFilterPreset::SetFilterType(
+ESubmixFilterType InType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2928,6 +3423,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2936,7 +3433,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InQ                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USubmixEffectFilterPreset::SetFilterQMod(float InQ)
+	void USubmixEffectFilterPreset::SetFilterQMod(
+float InQ
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2953,6 +3452,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2961,7 +3462,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InQ                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USubmixEffectFilterPreset::SetFilterQ(float InQ)
+	void USubmixEffectFilterPreset::SetFilterQ(
+float InQ
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2978,6 +3481,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2986,7 +3491,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InFrequency                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USubmixEffectFilterPreset::SetFilterCutoffFrequencyMod(float InFrequency)
+	void USubmixEffectFilterPreset::SetFilterCutoffFrequencyMod(
+float InFrequency
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3003,6 +3510,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3011,7 +3520,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InFrequency                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USubmixEffectFilterPreset::SetFilterCutoffFrequency(float InFrequency)
+	void USubmixEffectFilterPreset::SetFilterCutoffFrequency(
+float InFrequency
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3028,6 +3539,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3036,7 +3549,9 @@ namespace CG
 	 * Parameters:
 	 * 		ESubmixFilterAlgorithm                             InAlgorithm                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USubmixEffectFilterPreset::SetFilterAlgorithm(ESubmixFilterAlgorithm InAlgorithm)
+	void USubmixEffectFilterPreset::SetFilterAlgorithm(
+ESubmixFilterAlgorithm InAlgorithm
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3053,10 +3568,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USubmixEffectFilterPreset.StaticClass
+	 * 		Name   -> PredefinedFunction USubmixEffectFilterPreset.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USubmixEffectFilterPreset::StaticClass()
@@ -3067,6 +3584,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3075,7 +3594,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSubmixEffectFlexiverbSettings              InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void USubmixEffectFlexiverbPreset::SetSettings(const struct FSubmixEffectFlexiverbSettings& InSettings)
+	void USubmixEffectFlexiverbPreset::SetSettings(
+const struct FSubmixEffectFlexiverbSettings& InSettings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3092,10 +3613,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USubmixEffectFlexiverbPreset.StaticClass
+	 * 		Name   -> PredefinedFunction USubmixEffectFlexiverbPreset.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USubmixEffectFlexiverbPreset::StaticClass()
@@ -3106,6 +3629,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3114,7 +3639,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSubmixEffectMultibandCompressorSettings    InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void USubmixEffectMultibandCompressorPreset::SetSettings(const struct FSubmixEffectMultibandCompressorSettings& InSettings)
+	void USubmixEffectMultibandCompressorPreset::SetSettings(
+const struct FSubmixEffectMultibandCompressorSettings& InSettings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3131,10 +3658,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USubmixEffectMultibandCompressorPreset.StaticClass
+	 * 		Name   -> PredefinedFunction USubmixEffectMultibandCompressorPreset.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USubmixEffectMultibandCompressorPreset::StaticClass()
@@ -3145,6 +3674,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3153,7 +3684,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSubmixEffectStereoDelaySettings            InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void USubmixEffectStereoDelayPreset::SetSettings(const struct FSubmixEffectStereoDelaySettings& InSettings)
+	void USubmixEffectStereoDelayPreset::SetSettings(
+const struct FSubmixEffectStereoDelaySettings& InSettings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3170,10 +3703,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USubmixEffectStereoDelayPreset.StaticClass
+	 * 		Name   -> PredefinedFunction USubmixEffectStereoDelayPreset.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USubmixEffectStereoDelayPreset::StaticClass()
@@ -3184,6 +3719,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3193,7 +3730,11 @@ namespace CG
 	 * 		int32_t                                            TapId                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FTapDelayInfo                               TapInfo                                                    (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void USubmixEffectTapDelayPreset::SetTap(int32_t TapId, const struct FTapDelayInfo& TapInfo)
+	void USubmixEffectTapDelayPreset::SetTap(
+int32_t TapId
+, 
+const struct FTapDelayInfo& TapInfo
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3212,6 +3753,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3220,7 +3763,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSubmixEffectTapDelaySettings               InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void USubmixEffectTapDelayPreset::SetSettings(const struct FSubmixEffectTapDelaySettings& InSettings)
+	void USubmixEffectTapDelayPreset::SetSettings(
+const struct FSubmixEffectTapDelaySettings& InSettings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3237,6 +3782,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3245,7 +3792,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              Time                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USubmixEffectTapDelayPreset::SetInterpolationTime(float Time)
+	void USubmixEffectTapDelayPreset::SetInterpolationTime(
+float Time
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3262,6 +3811,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3270,7 +3821,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            TapId                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USubmixEffectTapDelayPreset::RemoveTap(int32_t TapId)
+	void USubmixEffectTapDelayPreset::RemoveTap(
+int32_t TapId
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3287,6 +3840,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3295,7 +3850,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<int32_t>                                    TapIds                                                     (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void USubmixEffectTapDelayPreset::GetTapIds(TArray<int32_t>* TapIds)
+	void USubmixEffectTapDelayPreset::GetTapIds(
+TArray<int32_t>* TapIds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3314,6 +3871,8 @@ namespace CG
 			*TapIds = params.TapIds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3323,7 +3882,11 @@ namespace CG
 	 * 		int32_t                                            TapId                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FTapDelayInfo                               TapInfo                                                    (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void USubmixEffectTapDelayPreset::GetTap(int32_t TapId, struct FTapDelayInfo* TapInfo)
+	void USubmixEffectTapDelayPreset::GetTap(
+int32_t TapId
+, 
+struct FTapDelayInfo* TapInfo
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3343,6 +3906,8 @@ namespace CG
 		if (TapInfo != nullptr)
 			*TapInfo = params.TapInfo;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3367,6 +3932,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3375,7 +3942,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            TapId                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USubmixEffectTapDelayPreset::AddTap(int32_t* TapId)
+	void USubmixEffectTapDelayPreset::AddTap(
+int32_t* TapId
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3394,10 +3963,12 @@ namespace CG
 			*TapId = params.TapId;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USubmixEffectTapDelayPreset.StaticClass
+	 * 		Name   -> PredefinedFunction USubmixEffectTapDelayPreset.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USubmixEffectTapDelayPreset::StaticClass()
@@ -3408,6 +3979,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3416,7 +3989,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector2D                                   InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynth2DSlider::SetValue(const struct FVector2D& InValue)
+	void USynth2DSlider::SetValue(
+const struct FVector2D& InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3433,6 +4008,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3441,7 +4018,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynth2DSlider::SetStepSize(float InValue)
+	void USynth2DSlider::SetStepSize(
+float InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3458,6 +4037,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3466,7 +4047,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FLinearColor                                InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynth2DSlider::SetSliderHandleColor(const struct FLinearColor& InValue)
+	void USynth2DSlider::SetSliderHandleColor(
+const struct FLinearColor& InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3483,6 +4066,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3491,7 +4076,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynth2DSlider::SetLocked(bool InValue)
+	void USynth2DSlider::SetLocked(
+bool InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3508,6 +4095,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3516,7 +4105,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynth2DSlider::SetIndentHandle(bool InValue)
+	void USynth2DSlider::SetIndentHandle(
+bool InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3532,6 +4123,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3556,10 +4149,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USynth2DSlider.StaticClass
+	 * 		Name   -> PredefinedFunction USynth2DSlider.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USynth2DSlider::StaticClass()
@@ -3570,6 +4165,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3578,7 +4175,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              SustainGain                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGranularSynth::SetSustainGain(float SustainGain)
+	void UGranularSynth::SetSustainGain(
+float SustainGain
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3595,6 +4194,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3603,7 +4204,9 @@ namespace CG
 	 * Parameters:
 	 * 		class USoundWave*                                  InSoundWave                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGranularSynth::SetSoundWave(class USoundWave* InSoundWave)
+	void UGranularSynth::SetSoundWave(
+class USoundWave* InSoundWave
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3620,6 +4223,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3628,7 +4233,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bScrubMode                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGranularSynth::SetScrubMode(bool bScrubMode)
+	void UGranularSynth::SetScrubMode(
+bool bScrubMode
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3645,6 +4252,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3653,7 +4262,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              ReleaseTimeMsec                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGranularSynth::SetReleaseTimeMsec(float ReleaseTimeMsec)
+	void UGranularSynth::SetReleaseTimeMsec(
+float ReleaseTimeMsec
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3670,6 +4281,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3680,7 +4293,13 @@ namespace CG
 	 * 		float                                              LerpTimeSec                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EGranularSynthSeekType                             SeekType                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGranularSynth::SetPlayheadTime(float InPositionSec, float LerpTimeSec, EGranularSynthSeekType SeekType)
+	void UGranularSynth::SetPlayheadTime(
+float InPositionSec
+, 
+float LerpTimeSec
+, 
+EGranularSynthSeekType SeekType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3701,6 +4320,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3709,7 +4330,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InPlayheadRate                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGranularSynth::SetPlaybackSpeed(float InPlayheadRate)
+	void UGranularSynth::SetPlaybackSpeed(
+float InPlayheadRate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3726,6 +4349,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3735,7 +4360,11 @@ namespace CG
 	 * 		float                                              BaseVolume                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector2D                                   VolumeRange                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGranularSynth::SetGrainVolume(float BaseVolume, const struct FVector2D& VolumeRange)
+	void UGranularSynth::SetGrainVolume(
+float BaseVolume
+, 
+const struct FVector2D& VolumeRange
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3754,6 +4383,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3762,7 +4393,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InGrainsPerSecond                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGranularSynth::SetGrainsPerSecond(float InGrainsPerSecond)
+	void UGranularSynth::SetGrainsPerSecond(
+float InGrainsPerSecond
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3779,6 +4412,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3787,7 +4422,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InGrainProbability                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGranularSynth::SetGrainProbability(float InGrainProbability)
+	void UGranularSynth::SetGrainProbability(
+float InGrainProbability
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3804,6 +4441,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3813,7 +4452,11 @@ namespace CG
 	 * 		float                                              BasePitch                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector2D                                   PitchRange                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGranularSynth::SetGrainPitch(float BasePitch, const struct FVector2D& PitchRange)
+	void UGranularSynth::SetGrainPitch(
+float BasePitch
+, 
+const struct FVector2D& PitchRange
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3832,6 +4475,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3841,7 +4486,11 @@ namespace CG
 	 * 		float                                              BasePan                                                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector2D                                   PanRange                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGranularSynth::SetGrainPan(float BasePan, const struct FVector2D& PanRange)
+	void UGranularSynth::SetGrainPan(
+float BasePan
+, 
+const struct FVector2D& PanRange
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3860,6 +4509,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3868,7 +4519,9 @@ namespace CG
 	 * Parameters:
 	 * 		EGranularSynthEnvelopeType                         EnvelopeType                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGranularSynth::SetGrainEnvelopeType(EGranularSynthEnvelopeType EnvelopeType)
+	void UGranularSynth::SetGrainEnvelopeType(
+EGranularSynthEnvelopeType EnvelopeType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3885,6 +4538,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3894,7 +4549,11 @@ namespace CG
 	 * 		float                                              BaseDurationMsec                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector2D                                   DurationRange                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGranularSynth::SetGrainDuration(float BaseDurationMsec, const struct FVector2D& DurationRange)
+	void UGranularSynth::SetGrainDuration(
+float BaseDurationMsec
+, 
+const struct FVector2D& DurationRange
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3913,6 +4572,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3921,7 +4582,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              DecayTimeMsec                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGranularSynth::SetDecayTime(float DecayTimeMsec)
+	void UGranularSynth::SetDecayTime(
+float DecayTimeMsec
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3938,6 +4601,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3946,7 +4611,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              AttackTimeMsec                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGranularSynth::SetAttackTime(float AttackTimeMsec)
+	void UGranularSynth::SetAttackTime(
+float AttackTimeMsec
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3963,6 +4630,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3973,7 +4642,13 @@ namespace CG
 	 * 		int32_t                                            Velocity                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Duration                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGranularSynth::NoteOn(float Note, int32_t Velocity, float Duration)
+	void UGranularSynth::NoteOn(
+float Note
+, 
+int32_t Velocity
+, 
+float Duration
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3994,6 +4669,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4003,7 +4680,11 @@ namespace CG
 	 * 		float                                              Note                                                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bKill                                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGranularSynth::NoteOff(float Note, bool bKill)
+	void UGranularSynth::NoteOff(
+float Note
+, 
+bool bKill
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4021,6 +4702,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4045,6 +4728,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4067,6 +4752,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4091,10 +4778,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGranularSynth.StaticClass
+	 * 		Name   -> PredefinedFunction UGranularSynth.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGranularSynth::StaticClass()
@@ -4105,10 +4794,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMonoWaveTableSynthPreset.StaticClass
+	 * 		Name   -> PredefinedFunction UMonoWaveTableSynthPreset.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMonoWaveTableSynthPreset::StaticClass()
@@ -4119,6 +4810,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4127,7 +4820,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InPosition                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMonoWaveTable::SetWaveTablePosition(float InPosition)
+	void USynthComponentMonoWaveTable::SetWaveTablePosition(
+float InPosition
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4144,6 +4839,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4152,7 +4849,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               InSustainPedalState                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMonoWaveTable::SetSustainPedalState(bool InSustainPedalState)
+	void USynthComponentMonoWaveTable::SetSustainPedalState(
+bool InSustainPedalState
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4169,6 +4868,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4177,7 +4878,9 @@ namespace CG
 	 * Parameters:
 	 * 		ESynthLFOType                                      InLfoType                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMonoWaveTable::SetPosLfoType(ESynthLFOType InLfoType)
+	void USynthComponentMonoWaveTable::SetPosLfoType(
+ESynthLFOType InLfoType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4194,6 +4897,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4202,7 +4907,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InLfoFrequency                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMonoWaveTable::SetPosLfoFrequency(float InLfoFrequency)
+	void USynthComponentMonoWaveTable::SetPosLfoFrequency(
+float InLfoFrequency
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4219,6 +4926,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4227,7 +4936,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InLfoDepth                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMonoWaveTable::SetPosLfoDepth(float InLfoDepth)
+	void USynthComponentMonoWaveTable::SetPosLfoDepth(
+float InLfoDepth
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4244,6 +4955,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4252,7 +4965,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InSustainGain                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMonoWaveTable::SetPositionEnvelopeSustainGain(float InSustainGain)
+	void USynthComponentMonoWaveTable::SetPositionEnvelopeSustainGain(
+float InSustainGain
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4269,6 +4984,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4277,7 +4994,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InReleaseTimeMsec                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMonoWaveTable::SetPositionEnvelopeReleaseTime(float InReleaseTimeMsec)
+	void USynthComponentMonoWaveTable::SetPositionEnvelopeReleaseTime(
+float InReleaseTimeMsec
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4294,6 +5013,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4302,7 +5023,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bInInvert                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMonoWaveTable::SetPositionEnvelopeInvert(bool bInInvert)
+	void USynthComponentMonoWaveTable::SetPositionEnvelopeInvert(
+bool bInInvert
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4319,6 +5042,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4327,7 +5052,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InDepth                                                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMonoWaveTable::SetPositionEnvelopeDepth(float InDepth)
+	void USynthComponentMonoWaveTable::SetPositionEnvelopeDepth(
+float InDepth
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4344,6 +5071,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4352,7 +5081,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InDecayTimeMsec                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMonoWaveTable::SetPositionEnvelopeDecayTime(float InDecayTimeMsec)
+	void USynthComponentMonoWaveTable::SetPositionEnvelopeDecayTime(
+float InDecayTimeMsec
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4369,6 +5100,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4377,7 +5110,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bInBiasInvert                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMonoWaveTable::SetPositionEnvelopeBiasInvert(bool bInBiasInvert)
+	void USynthComponentMonoWaveTable::SetPositionEnvelopeBiasInvert(
+bool bInBiasInvert
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4394,6 +5129,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4402,7 +5139,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InDepth                                                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMonoWaveTable::SetPositionEnvelopeBiasDepth(float InDepth)
+	void USynthComponentMonoWaveTable::SetPositionEnvelopeBiasDepth(
+float InDepth
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4419,6 +5158,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4427,7 +5168,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InAttackTimeMsec                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMonoWaveTable::SetPositionEnvelopeAttackTime(float InAttackTimeMsec)
+	void USynthComponentMonoWaveTable::SetPositionEnvelopeAttackTime(
+float InAttackTimeMsec
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4444,6 +5187,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4452,7 +5197,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InNewQ                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMonoWaveTable::SetLowPassFilterResonance(float InNewQ)
+	void USynthComponentMonoWaveTable::SetLowPassFilterResonance(
+float InNewQ
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4469,6 +5216,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4477,7 +5226,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InMidiNote                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMonoWaveTable::SetFrequencyWithMidiNote(float InMidiNote)
+	void USynthComponentMonoWaveTable::SetFrequencyWithMidiNote(
+float InMidiNote
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4494,6 +5245,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4502,7 +5255,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              FrequencyOffsetCents                                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMonoWaveTable::SetFrequencyPitchBend(float FrequencyOffsetCents)
+	void USynthComponentMonoWaveTable::SetFrequencyPitchBend(
+float FrequencyOffsetCents
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4519,6 +5274,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4527,7 +5284,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              FrequencyHz                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMonoWaveTable::SetFrequency(float FrequencyHz)
+	void USynthComponentMonoWaveTable::SetFrequency(
+float FrequencyHz
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4544,6 +5303,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4552,7 +5313,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InSustainGain                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMonoWaveTable::SetFilterEnvelopeSustainGain(float InSustainGain)
+	void USynthComponentMonoWaveTable::SetFilterEnvelopeSustainGain(
+float InSustainGain
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4569,6 +5332,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4577,7 +5342,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InReleaseTimeMsec                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMonoWaveTable::SetFilterEnvelopeReleaseTime(float InReleaseTimeMsec)
+	void USynthComponentMonoWaveTable::SetFilterEnvelopeReleaseTime(
+float InReleaseTimeMsec
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4594,6 +5361,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4602,7 +5371,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InDecayTimeMsec                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMonoWaveTable::SetFilterEnvelopenDecayTime(float InDecayTimeMsec)
+	void USynthComponentMonoWaveTable::SetFilterEnvelopenDecayTime(
+float InDecayTimeMsec
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4619,6 +5390,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4627,7 +5400,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bInInvert                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMonoWaveTable::SetFilterEnvelopeInvert(bool bInInvert)
+	void USynthComponentMonoWaveTable::SetFilterEnvelopeInvert(
+bool bInInvert
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4644,6 +5419,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4652,7 +5429,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InDepth                                                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMonoWaveTable::SetFilterEnvelopeDepth(float InDepth)
+	void USynthComponentMonoWaveTable::SetFilterEnvelopeDepth(
+float InDepth
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4669,6 +5448,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4677,7 +5458,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bInBiasInvert                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMonoWaveTable::SetFilterEnvelopeBiasInvert(bool bInBiasInvert)
+	void USynthComponentMonoWaveTable::SetFilterEnvelopeBiasInvert(
+bool bInBiasInvert
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4694,6 +5477,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4702,7 +5487,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InDepth                                                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMonoWaveTable::SetFilterEnvelopeBiasDepth(float InDepth)
+	void USynthComponentMonoWaveTable::SetFilterEnvelopeBiasDepth(
+float InDepth
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4719,6 +5506,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4727,7 +5516,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InAttackTimeMsec                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMonoWaveTable::SetFilterEnvelopeAttackTime(float InAttackTimeMsec)
+	void USynthComponentMonoWaveTable::SetFilterEnvelopeAttackTime(
+float InAttackTimeMsec
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4744,6 +5535,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4754,7 +5547,13 @@ namespace CG
 	 * 		int32_t                                            KeyframeIndex                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              NewValue                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool USynthComponentMonoWaveTable::SetCurveValue(int32_t TableIndex, int32_t KeyframeIndex, float NewValue)
+	bool USynthComponentMonoWaveTable::SetCurveValue(
+int32_t TableIndex
+, 
+int32_t KeyframeIndex
+, 
+float NewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4777,6 +5576,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4786,7 +5587,11 @@ namespace CG
 	 * 		int32_t                                            TableIndex                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              InNewTangent                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool USynthComponentMonoWaveTable::SetCurveTangent(int32_t TableIndex, float InNewTangent)
+	bool USynthComponentMonoWaveTable::SetCurveTangent(
+int32_t TableIndex
+, 
+float InNewTangent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4807,6 +5612,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4816,7 +5623,11 @@ namespace CG
 	 * 		ECurveInterpolationType                            InterpolationType                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            TableIndex                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool USynthComponentMonoWaveTable::SetCurveInterpolationType(ECurveInterpolationType InterpolationType, int32_t TableIndex)
+	bool USynthComponentMonoWaveTable::SetCurveInterpolationType(
+ECurveInterpolationType InterpolationType
+, 
+int32_t TableIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4837,6 +5648,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4845,7 +5658,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InSustainGain                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMonoWaveTable::SetAmpEnvelopeSustainGain(float InSustainGain)
+	void USynthComponentMonoWaveTable::SetAmpEnvelopeSustainGain(
+float InSustainGain
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4862,6 +5677,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4870,7 +5687,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InReleaseTimeMsec                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMonoWaveTable::SetAmpEnvelopeReleaseTime(float InReleaseTimeMsec)
+	void USynthComponentMonoWaveTable::SetAmpEnvelopeReleaseTime(
+float InReleaseTimeMsec
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4887,6 +5706,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4895,7 +5716,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bInInvert                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMonoWaveTable::SetAmpEnvelopeInvert(bool bInInvert)
+	void USynthComponentMonoWaveTable::SetAmpEnvelopeInvert(
+bool bInInvert
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4912,6 +5735,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4920,7 +5745,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InDepth                                                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMonoWaveTable::SetAmpEnvelopeDepth(float InDepth)
+	void USynthComponentMonoWaveTable::SetAmpEnvelopeDepth(
+float InDepth
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4937,6 +5764,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4945,7 +5774,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InDecayTimeMsec                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMonoWaveTable::SetAmpEnvelopeDecayTime(float InDecayTimeMsec)
+	void USynthComponentMonoWaveTable::SetAmpEnvelopeDecayTime(
+float InDecayTimeMsec
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4962,6 +5793,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4970,7 +5803,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bInBiasInvert                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMonoWaveTable::SetAmpEnvelopeBiasInvert(bool bInBiasInvert)
+	void USynthComponentMonoWaveTable::SetAmpEnvelopeBiasInvert(
+bool bInBiasInvert
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4987,6 +5822,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4995,7 +5832,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InDepth                                                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMonoWaveTable::SetAmpEnvelopeBiasDepth(float InDepth)
+	void USynthComponentMonoWaveTable::SetAmpEnvelopeBiasDepth(
+float InDepth
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5012,6 +5851,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5020,7 +5861,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InAttackTimeMsec                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMonoWaveTable::SetAmpEnvelopeAttackTime(float InAttackTimeMsec)
+	void USynthComponentMonoWaveTable::SetAmpEnvelopeAttackTime(
+float InAttackTimeMsec
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5037,6 +5880,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5045,7 +5890,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMonoWaveTable::RefreshWaveTable(int32_t Index)
+	void USynthComponentMonoWaveTable::RefreshWaveTable(
+int32_t Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5061,6 +5908,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5083,6 +5932,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5092,7 +5943,11 @@ namespace CG
 	 * 		float                                              InMidiNote                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              InVelocity                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMonoWaveTable::NoteOn(float InMidiNote, float InVelocity)
+	void USynthComponentMonoWaveTable::NoteOn(
+float InMidiNote
+, 
+float InVelocity
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5111,6 +5966,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5119,7 +5976,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InMidiNote                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMonoWaveTable::NoteOff(float InMidiNote)
+	void USynthComponentMonoWaveTable::NoteOff(
+float InMidiNote
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5135,6 +5994,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5159,6 +6020,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5182,6 +6045,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5190,7 +6055,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              TableIndex                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<float> USynthComponentMonoWaveTable::GetKeyFrameValuesForTable(float TableIndex)
+	TArray<float> USynthComponentMonoWaveTable::GetKeyFrameValuesForTable(
+float TableIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5209,6 +6076,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5217,7 +6086,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            TableIndex                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float USynthComponentMonoWaveTable::GetCurveTangent(int32_t TableIndex)
+	float USynthComponentMonoWaveTable::GetCurveTangent(
+int32_t TableIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5236,10 +6107,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USynthComponentMonoWaveTable.StaticClass
+	 * 		Name   -> PredefinedFunction USynthComponentMonoWaveTable.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USynthComponentMonoWaveTable::StaticClass()
@@ -5250,6 +6123,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5258,7 +6133,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InVolume                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentToneGenerator::SetVolume(float InVolume)
+	void USynthComponentToneGenerator::SetVolume(
+float InVolume
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5275,6 +6152,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5283,7 +6162,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InFrequency                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentToneGenerator::SetFrequency(float InFrequency)
+	void USynthComponentToneGenerator::SetFrequency(
+float InFrequency
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5300,10 +6181,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USynthComponentToneGenerator.StaticClass
+	 * 		Name   -> PredefinedFunction USynthComponentToneGenerator.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USynthComponentToneGenerator::StaticClass()
@@ -5314,6 +6197,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5322,7 +6207,9 @@ namespace CG
 	 * Parameters:
 	 * 		class USoundWave*                                  InSoundWave                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthSamplePlayer::SetSoundWave(class USoundWave* InSoundWave)
+	void USynthSamplePlayer::SetSoundWave(
+class USoundWave* InSoundWave
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5339,6 +6226,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5347,7 +6236,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InScrubTimeWidthSec                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthSamplePlayer::SetScrubTimeWidth(float InScrubTimeWidthSec)
+	void USynthSamplePlayer::SetScrubTimeWidth(
+float InScrubTimeWidthSec
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5364,6 +6255,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5372,7 +6265,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bScrubMode                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthSamplePlayer::SetScrubMode(bool bScrubMode)
+	void USynthSamplePlayer::SetScrubMode(
+bool bScrubMode
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5389,6 +6284,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5398,7 +6295,11 @@ namespace CG
 	 * 		float                                              InPitch                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              TimeSec                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthSamplePlayer::SetPitch(float InPitch, float TimeSec)
+	void USynthSamplePlayer::SetPitch(
+float InPitch
+, 
+float TimeSec
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5417,6 +6318,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5427,7 +6330,13 @@ namespace CG
 	 * 		ESamplePlayerSeekType                              SeekType                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWrap                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthSamplePlayer::SeekToTime(float TimeSec, ESamplePlayerSeekType SeekType, bool bWrap)
+	void USynthSamplePlayer::SeekToTime(
+float TimeSec
+, 
+ESamplePlayerSeekType SeekType
+, 
+bool bWrap
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5447,6 +6356,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5471,6 +6382,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5493,6 +6406,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5517,6 +6432,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5540,10 +6457,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USynthSamplePlayer.StaticClass
+	 * 		Name   -> PredefinedFunction USynthSamplePlayer.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USynthSamplePlayer::StaticClass()
@@ -5553,6 +6472,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Synthesis.SynthSamplePlayer");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5566,7 +6487,17 @@ namespace CG
 	 * 		float                                              InRangeMin                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              InRangeMax                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float USynthesisUtilitiesBlueprintFunctionLibrary::GetLogFrequency(float InLinearValue, float InDomainMin, float InDomainMax, float InRangeMin, float InRangeMax)
+	float USynthesisUtilitiesBlueprintFunctionLibrary::GetLogFrequency(
+float InLinearValue
+, 
+float InDomainMin
+, 
+float InDomainMax
+, 
+float InRangeMin
+, 
+float InRangeMax
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5593,6 +6524,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5605,7 +6538,17 @@ namespace CG
 	 * 		float                                              InRangeMin                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              InRangeMax                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float USynthesisUtilitiesBlueprintFunctionLibrary::GetLinearFrequency(float InLogFrequencyValue, float InDomainMin, float InDomainMax, float InRangeMin, float InRangeMax)
+	float USynthesisUtilitiesBlueprintFunctionLibrary::GetLinearFrequency(
+float InLogFrequencyValue
+, 
+float InDomainMin
+, 
+float InDomainMax
+, 
+float InRangeMin
+, 
+float InRangeMax
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5632,10 +6575,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USynthesisUtilitiesBlueprintFunctionLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction USynthesisUtilitiesBlueprintFunctionLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USynthesisUtilitiesBlueprintFunctionLibrary::StaticClass()
@@ -5646,6 +6591,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5654,7 +6601,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthKnob::SetValue(float InValue)
+	void USynthKnob::SetValue(
+float InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5671,6 +6620,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5679,7 +6630,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthKnob::SetStepSize(float InValue)
+	void USynthKnob::SetStepSize(
+float InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5696,6 +6649,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5704,7 +6659,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthKnob::SetLocked(bool InValue)
+	void USynthKnob::SetLocked(
+bool InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5720,6 +6677,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5744,10 +6703,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USynthKnob.StaticClass
+	 * 		Name   -> PredefinedFunction USynthKnob.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USynthKnob::StaticClass()
@@ -5757,6 +6718,7 @@ namespace CG
 			ptr = UObject::FindClass("Class Synthesis.SynthKnob");
 		return ptr;
 	}
+
 
 }
 

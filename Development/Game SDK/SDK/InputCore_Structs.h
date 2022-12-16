@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+
 	/**
 	 * Enum InputCore.ETouchIndex
 	 */
@@ -33,6 +34,8 @@ namespace CG
 		MAX_TOUCHES        = 11,
 		MAX                = 12
 	};
+
+
 
 	/**
 	 * Enum InputCore.EControllerHand
@@ -60,6 +63,8 @@ namespace CG
 		MAX                  = 18
 	};
 
+
+
 	/**
 	 * Enum InputCore.ETouchType
 	 */
@@ -75,6 +80,8 @@ namespace CG
 		MAX          = 7
 	};
 
+
+
 	/**
 	 * Enum InputCore.EConsoleForGamepadLabels
 	 */
@@ -89,6 +96,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+
 	/**
 	 * ScriptStruct InputCore.Key
 	 * Size -> 0x0018
@@ -96,8 +104,12 @@ namespace CG
 	struct FKey
 	{
 	public:
-		class FName                                                KeyName;                                                 // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_MY46[0x10];                                  // 0x0008(0x0010) MISSED OFFSET (PADDING)
+
+		class FName                                              KeyName;                                                 // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+
+		unsigned char                                            UnknownData_AMT3[0x10];                                  // 0x0008(0x0010) MISSED OFFSET (PADDING)
+
 	};
 
 }

@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * Class ImgMedia.ImgMediaSource
 	 * Size -> 0x0028 (FullSize[0x00B0] - InheritedSize[0x0088])
@@ -21,14 +22,28 @@ namespace CG
 	class UImgMediaSource : public UBaseMediaSource
 	{
 	public:
-		struct FFrameRate                                          FrameRateOverride;                                       // 0x0088(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                              ProxyOverride;                                           // 0x0090(0x0010) Edit, BlueprintVisible, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FDirectoryPath                                      SequencePath;                                            // 0x00A0(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected
+
+		struct FFrameRate                                        FrameRateOverride;                                       // 0x0088(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FString                                            ProxyOverride;                                           // 0x0090(0x0010) Edit, BlueprintVisible, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FDirectoryPath                                    SequencePath;                                            // 0x00A0(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected
+
 
 	public:
-		void SetSequencePath(const class FString& Path);
+
+		void SetSequencePath(
+const class FString& Path
+);
+
 		class FString GetSequencePath();
-		void GetProxies(TArray<class FString>* OutProxies);
+
+		void GetProxies(
+TArray<class FString>* OutProxies
+);
+
 		static UClass* StaticClass();
 	};
 

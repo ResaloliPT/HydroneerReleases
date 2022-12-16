@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,29 +14,56 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * BlueprintGeneratedClass BP_ParentBar.BP_ParentBar_C
-	 * Size -> 0x001F (FullSize[0x0398] - InheritedSize[0x0379])
+	 * Size -> 0x0018 (FullSize[0x0400] - InheritedSize[0x03E8])
 	 */
 	class ABP_ParentBar_C : public ABP_ParentResource_C
 	{
 	public:
-		unsigned char                                              UnknownData_QX8C[0x7];                                   // 0x0379(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x0380(0x0008) ZeroConstructor, Transient, DuplicateTransient, UObjectWrapper
-		class UAC_Heat_C*                                          AC_Heat;                                                 // 0x0388(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
-		class UMaterialInstanceDynamic*                            DynamicMaterial;                                         // 0x0390(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+
+		struct FPointerToUberGraphFrame                          UberGraphFrame;                                          // 0x03E8(0x0008) ZeroConstructor, Transient, DuplicateTransient, UObjectWrapper
+
+
+		class UAC_Heat_C*                                        AC_Heat;                                                 // 0x03F0(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+
+
+		class UMaterialInstanceDynamic*                          DynamicMaterial;                                         // 0x03F8(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+
 
 	public:
+
 		void UserConstructionScript();
-		void HeatUpdated(float Heat);
-		void InFire(bool SlowBurn_);
-		void OutOfFire();
+
+		void HasWater();
+
 		void FullHeat();
-		void InWater(bool WaterBody_);
+
+		void HeatUpdated(
+float Heat
+);
+
+		void HasNoWater();
+
+		void InFire(
+bool SlowBurn
+);
+
+		void OutOfFire();
+
 		void WaterParticleHit();
-		void SetCraftedSize();
-		void SetResourceSize();
-		void ExecuteUbergraph_BP_ParentBar(int32_t EntryPoint);
+
+		void InWater(
+bool WaterBody
+, 
+class UPrimitiveComponent* Comp
+);
+
+		void ExecuteUbergraph_BP_ParentBar(
+int32_t EntryPoint
+);
+
 		static UClass* StaticClass();
 	};
 

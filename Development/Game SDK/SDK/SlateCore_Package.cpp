@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UFontBulkData.StaticClass
+	 * 		Name   -> PredefinedFunction UFontBulkData.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UFontBulkData::StaticClass()
@@ -24,10 +25,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UFontFaceInterface.StaticClass
+	 * 		Name   -> PredefinedFunction UFontFaceInterface.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UFontFaceInterface::StaticClass()
@@ -38,10 +41,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UFontProviderInterface.StaticClass
+	 * 		Name   -> PredefinedFunction UFontProviderInterface.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UFontProviderInterface::StaticClass()
@@ -52,10 +57,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USlateTypes.StaticClass
+	 * 		Name   -> PredefinedFunction USlateTypes.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USlateTypes::StaticClass()
@@ -66,10 +73,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USlateWidgetStyleAsset.StaticClass
+	 * 		Name   -> PredefinedFunction USlateWidgetStyleAsset.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USlateWidgetStyleAsset::StaticClass()
@@ -80,10 +89,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USlateWidgetStyleContainerBase.StaticClass
+	 * 		Name   -> PredefinedFunction USlateWidgetStyleContainerBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USlateWidgetStyleContainerBase::StaticClass()
@@ -94,10 +105,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USlateWidgetStyleContainerInterface.StaticClass
+	 * 		Name   -> PredefinedFunction USlateWidgetStyleContainerInterface.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USlateWidgetStyleContainerInterface::StaticClass()
@@ -107,6 +120,7 @@ namespace CG
 			ptr = UObject::FindClass("Class SlateCore.SlateWidgetStyleContainerInterface");
 		return ptr;
 	}
+
 
 }
 

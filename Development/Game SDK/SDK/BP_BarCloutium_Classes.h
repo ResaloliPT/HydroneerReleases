@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,13 +14,15 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * BlueprintGeneratedClass BP_BarCloutium.BP_BarCloutium_C
-	 * Size -> 0x0000 (FullSize[0x0398] - InheritedSize[0x0398])
+	 * Size -> 0x0000 (FullSize[0x0400] - InheritedSize[0x0400])
 	 */
 	class ABP_BarCloutium_C : public ABP_ParentBar_C
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
 

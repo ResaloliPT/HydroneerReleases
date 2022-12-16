@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * Class UObjectPlugin.MyPluginObject
 	 * Size -> 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
@@ -21,9 +22,12 @@ namespace CG
 	class UMyPluginObject : public UObject
 	{
 	public:
-		struct FMyPluginStruct                                     MyStruct;                                                // 0x0028(0x0010) NativeAccessSpecifierPrivate
+
+		struct FMyPluginStruct                                   MyStruct;                                                // 0x0028(0x0010) NativeAccessSpecifierPrivate
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
 

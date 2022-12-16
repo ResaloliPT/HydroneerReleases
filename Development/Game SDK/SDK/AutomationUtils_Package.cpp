@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -21,7 +22,15 @@ namespace CG
 	 * 		float                                              MaxLocalError                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      MapNameOverride                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAutomationUtilsBlueprintLibrary::TakeGameplayAutomationScreenshot(const class FString& ScreenshotName, float MaxGlobalError, float MaxLocalError, const class FString& MapNameOverride)
+	void UAutomationUtilsBlueprintLibrary::TakeGameplayAutomationScreenshot(
+const class FString& ScreenshotName
+, 
+float MaxGlobalError
+, 
+float MaxLocalError
+, 
+const class FString& MapNameOverride
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -44,10 +53,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAutomationUtilsBlueprintLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UAutomationUtilsBlueprintLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAutomationUtilsBlueprintLibrary::StaticClass()
@@ -57,6 +68,7 @@ namespace CG
 			ptr = UObject::FindClass("Class AutomationUtils.AutomationUtilsBlueprintLibrary");
 		return ptr;
 	}
+
 
 }
 

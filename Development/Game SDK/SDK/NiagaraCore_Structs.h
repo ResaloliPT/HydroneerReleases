@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+
 	/**
 	 * ScriptStruct NiagaraCore.NiagaraCompileHash
 	 * Size -> 0x0010
@@ -21,7 +22,9 @@ namespace CG
 	struct FNiagaraCompileHash
 	{
 	public:
-		TArray<unsigned char>                                      DataHash;                                                // 0x0000(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
+
+		TArray<unsigned char>                                    DataHash;                                                // 0x0000(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
+
 	};
 
 }

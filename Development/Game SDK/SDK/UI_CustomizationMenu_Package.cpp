@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,30 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UI_CustomizationMenu.UI_CustomizationMenu_C.RefreshHairStyleOptions
+	 * 		Flags  -> ()
+	 */
+	void UUI_CustomizationMenu_C::RefreshHairStyleOptions()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.RefreshHairStyleOptions");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -30,6 +54,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -52,6 +78,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -60,7 +88,9 @@ namespace CG
 	 * Parameters:
 	 * 		ESlateVisibility                                   Visibility                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_CustomizationMenu_C::SetDummyVisibility(ESlateVisibility Visibility)
+	void UUI_CustomizationMenu_C::SetDummyVisibility(
+ESlateVisibility Visibility
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -77,6 +107,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -85,7 +117,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UTextureRenderTarget2D*                      RenderTarget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_CustomizationMenu_C::SpawnDummy(class UTextureRenderTarget2D* RenderTarget)
+	void UUI_CustomizationMenu_C::SpawnDummy(
+class UTextureRenderTarget2D* RenderTarget
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -101,6 +135,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -123,6 +159,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -133,7 +171,13 @@ namespace CG
 	 * 		int32_t                                            SessionID                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class UTextureRenderTarget2D*                      RenderTarget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_CustomizationMenu_C::OpenMenu(class APlayerController* PlayerController, int32_t SessionID, class UTextureRenderTarget2D* RenderTarget)
+	void UUI_CustomizationMenu_C::OpenMenu(
+class APlayerController* PlayerController
+, 
+int32_t SessionID
+, 
+class UTextureRenderTarget2D* RenderTarget
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -153,6 +197,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -175,6 +221,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -195,6 +243,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -217,6 +267,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -237,6 +289,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -259,6 +313,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -279,6 +335,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -301,6 +359,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -309,7 +369,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            StyleIndex                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_CustomizationMenu_C::BndEvt__UI_CustomizationMenu_UI_StylePanel_Hair_K2Node_ComponentBoundEvent_5_OnUpdateStyle__DelegateSignature(int32_t StyleIndex)
+	void UUI_CustomizationMenu_C::BndEvt__UI_CustomizationMenu_UI_StylePanel_Hair_K2Node_ComponentBoundEvent_5_OnUpdateStyle__DelegateSignature(
+int32_t StyleIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -326,6 +388,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -334,7 +398,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            StyleIndex                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_CustomizationMenu_C::BndEvt__UI_CustomizationMenu_UI_StylePanel_Face_K2Node_ComponentBoundEvent_6_OnUpdateStyle__DelegateSignature(int32_t StyleIndex)
+	void UUI_CustomizationMenu_C::BndEvt__UI_CustomizationMenu_UI_StylePanel_Face_K2Node_ComponentBoundEvent_6_OnUpdateStyle__DelegateSignature(
+int32_t StyleIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -351,6 +417,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -359,7 +427,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            StyleIndex                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_CustomizationMenu_C::BndEvt__UI_CustomizationMenu_UI_StylePanel_FacialHair_K2Node_ComponentBoundEvent_7_OnUpdateStyle__DelegateSignature(int32_t StyleIndex)
+	void UUI_CustomizationMenu_C::BndEvt__UI_CustomizationMenu_UI_StylePanel_FacialHair_K2Node_ComponentBoundEvent_7_OnUpdateStyle__DelegateSignature(
+int32_t StyleIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -376,6 +446,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -384,7 +456,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            StyleIndex                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_CustomizationMenu_C::BndEvt__UI_CustomizationMenu_UI_StylePanel_Shirt_K2Node_ComponentBoundEvent_8_OnUpdateStyle__DelegateSignature(int32_t StyleIndex)
+	void UUI_CustomizationMenu_C::BndEvt__UI_CustomizationMenu_UI_StylePanel_Shirt_K2Node_ComponentBoundEvent_8_OnUpdateStyle__DelegateSignature(
+int32_t StyleIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -401,6 +475,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -409,7 +485,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            StyleIndex                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_CustomizationMenu_C::BndEvt__UI_CustomizationMenu_UI_StylePanel_Pants_K2Node_ComponentBoundEvent_9_OnUpdateStyle__DelegateSignature(int32_t StyleIndex)
+	void UUI_CustomizationMenu_C::BndEvt__UI_CustomizationMenu_UI_StylePanel_Pants_K2Node_ComponentBoundEvent_9_OnUpdateStyle__DelegateSignature(
+int32_t StyleIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -426,6 +504,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -434,7 +514,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        ColorID                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_CustomizationMenu_C::BndEvt__UI_CustomizationMenu_UI_SwatchPanel_C_143_K2Node_ComponentBoundEvent_10_OnUpdate__DelegateSignature(const class FName& ColorID)
+	void UUI_CustomizationMenu_C::BndEvt__UI_CustomizationMenu_UI_SwatchPanel_C_143_K2Node_ComponentBoundEvent_10_OnUpdate__DelegateSignature(
+const class FName& ColorID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -451,6 +533,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -459,7 +543,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        ColorID                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_CustomizationMenu_C::BndEvt__UI_CustomizationMenu_UI_SwatchPanel_HairColor_K2Node_ComponentBoundEvent_11_OnUpdate__DelegateSignature(const class FName& ColorID)
+	void UUI_CustomizationMenu_C::BndEvt__UI_CustomizationMenu_UI_SwatchPanel_HairColor_K2Node_ComponentBoundEvent_11_OnUpdate__DelegateSignature(
+const class FName& ColorID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -476,6 +562,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -484,7 +572,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        ColorID                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_CustomizationMenu_C::BndEvt__UI_CustomizationMenu_UI_SwatchPanel_ShirtColor_K2Node_ComponentBoundEvent_12_OnUpdate__DelegateSignature(const class FName& ColorID)
+	void UUI_CustomizationMenu_C::BndEvt__UI_CustomizationMenu_UI_SwatchPanel_ShirtColor_K2Node_ComponentBoundEvent_12_OnUpdate__DelegateSignature(
+const class FName& ColorID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -501,6 +591,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -509,7 +601,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        ColorID                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_CustomizationMenu_C::BndEvt__UI_CustomizationMenu_UI_SwatchPanel_PantsColor_K2Node_ComponentBoundEvent_16_OnUpdate__DelegateSignature(const class FName& ColorID)
+	void UUI_CustomizationMenu_C::BndEvt__UI_CustomizationMenu_UI_SwatchPanel_PantsColor_K2Node_ComponentBoundEvent_16_OnUpdate__DelegateSignature(
+const class FName& ColorID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -525,6 +619,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -547,6 +643,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -567,6 +665,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -589,6 +689,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -597,7 +699,9 @@ namespace CG
 	 * Parameters:
 	 * 		ESlateVisibility                                   InVisibility                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_CustomizationMenu_C::VisibilityChanged(ESlateVisibility InVisibility)
+	void UUI_CustomizationMenu_C::VisibilityChanged(
+ESlateVisibility InVisibility
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -613,6 +717,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -635,6 +741,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -655,6 +763,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -677,6 +787,37 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UI_CustomizationMenu.UI_CustomizationMenu_C.BndEvt__UI_CustomizationMenu_UI_BodyPanel_K2Node_ComponentBoundEvent_17_OnUpdateBody__DelegateSignature
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FName                                        BodyID                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void UUI_CustomizationMenu_C::BndEvt__UI_CustomizationMenu_UI_BodyPanel_K2Node_ComponentBoundEvent_17_OnUpdateBody__DelegateSignature(
+const class FName& BodyID
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CustomizationMenu.UI_CustomizationMenu_C.BndEvt__UI_CustomizationMenu_UI_BodyPanel_K2Node_ComponentBoundEvent_17_OnUpdateBody__DelegateSignature");
+		
+		struct
+		{
+			class FName                                        BodyID;
+		} params;
+		params.BodyID = BodyID;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -685,7 +826,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_CustomizationMenu_C::ExecuteUbergraph_UI_CustomizationMenu(int32_t EntryPoint)
+	void UUI_CustomizationMenu_C::ExecuteUbergraph_UI_CustomizationMenu(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -702,6 +845,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -710,7 +855,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FS_CharacterStyle                           Style                                                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_CustomizationMenu_C::UpdateAll__DelegateSignature(const struct FS_CharacterStyle& Style)
+	void UUI_CustomizationMenu_C::UpdateAll__DelegateSignature(
+const struct FS_CharacterStyle& Style
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -727,10 +874,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UUI_CustomizationMenu_C.StaticClass
+	 * 		Name   -> PredefinedFunction UUI_CustomizationMenu_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UUI_CustomizationMenu_C::StaticClass()
@@ -740,6 +889,7 @@ namespace CG
 			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_CustomizationMenu.UI_CustomizationMenu_C");
 		return ptr;
 	}
+
 
 }
 

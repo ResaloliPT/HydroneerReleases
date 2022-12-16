@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * BlueprintGeneratedClass H_ButtonWood3.H_ButtonWood3_C
 	 * Size -> 0x0000 (FullSize[0x0428] - InheritedSize[0x0428])
@@ -21,6 +22,7 @@ namespace CG
 	class UH_ButtonWood3_C : public UH_ButtonParent_C
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
 

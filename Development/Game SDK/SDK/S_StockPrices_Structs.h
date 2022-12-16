@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+
 	/**
 	 * UserDefinedStruct S_StockPrices.S_StockPrices
 	 * Size -> 0x0008
@@ -21,9 +22,15 @@ namespace CG
 	struct FS_StockPrices
 	{
 	public:
-		E_Stocks                                                   StockType_4_0E5920CA472924601A6FC6889ABD4EB1;            // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
-		unsigned char                                              UnknownData_NRJM[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		float                                                      Percent_7_65CDA8284D1DA759A03ED6A3E31FB7D1;              // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+
+		E_Stocks                                                 StockType_4_0E5920CA472924601A6FC6889ABD4EB1;            // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+
+
+		unsigned char                                            UnknownData_AYA8[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		float                                                    Percent_7_65CDA8284D1DA759A03ED6A3E31FB7D1;              // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+
 	};
 
 }

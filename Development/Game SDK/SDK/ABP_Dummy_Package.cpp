@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18,7 +19,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FPoseLink                                   AnimGraph                                                  (Parm, OutParm, NoDestructor)
 	 */
-	void UABP_Dummy_C::AnimGraph(struct FPoseLink* AnimGraph)
+	void UABP_Dummy_C::AnimGraph(
+struct FPoseLink* AnimGraph
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -37,6 +40,8 @@ namespace CG
 			*AnimGraph = params.AnimGraph;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -45,7 +50,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UABP_Dummy_C::ExecuteUbergraph_ABP_Dummy(int32_t EntryPoint)
+	void UABP_Dummy_C::ExecuteUbergraph_ABP_Dummy(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -62,10 +69,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UABP_Dummy_C.StaticClass
+	 * 		Name   -> PredefinedFunction UABP_Dummy_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UABP_Dummy_C::StaticClass()
@@ -75,6 +84,7 @@ namespace CG
 			ptr = UObject::FindClass("AnimBlueprintGeneratedClass ABP_Dummy.ABP_Dummy_C");
 		return ptr;
 	}
+
 
 }
 

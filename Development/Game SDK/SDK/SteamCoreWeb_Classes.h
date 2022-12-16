@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * Class SteamCoreWeb.SteamCoreWeb
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
@@ -21,8 +22,11 @@ namespace CG
 	class USteamCoreWeb : public UObject
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebSubsystem
@@ -31,11 +35,16 @@ namespace CG
 	class USteamCoreWebSubsystem : public UGameInstanceSubsystem
 	{
 	public:
-		unsigned char                                              UnknownData_JLN0[0x18];                                  // 0x0030(0x0018) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_JDRV[0x18];                                  // 0x0030(0x0018) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncAction
@@ -44,13 +53,25 @@ namespace CG
 	class USteamCoreWebAsyncAction : public UBlueprintAsyncActionBase
 	{
 	public:
-		class FScriptMulticastDelegate                             OnCallback;                                              // 0x0030(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_3DZN[0x18];                                  // 0x0040(0x0018) MISSED OFFSET (PADDING)
+
+		class FScriptMulticastDelegate                           OnCallback;                                              // 0x0030(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_JPCK[0x18];                                  // 0x0040(0x0018) MISSED OFFSET (PADDING)
+
 
 	public:
-		void HandleCallback(const class FString& Data, bool bWasSuccessful);
+
+		void HandleCallback(
+const class FString& Data
+, 
+bool bWasSuccessful
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebSettings
@@ -59,21 +80,46 @@ namespace CG
 	class USteamCoreWebSettings : public UDeveloperSettings
 	{
 	public:
-		float                                                      AsyncTaskTimeout;                                        // 0x0038(0x0004) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    DisabledSubsystems;                                      // 0x003C(0x0004) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bDebugging;                                              // 0x0040(0x0001) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bDevMode;                                                // 0x0041(0x0001) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_6PFN[0x6];                                   // 0x0042(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FString                                              Key;                                                     // 0x0048(0x0010) Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    AppID;                                                   // 0x0058(0x0004) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_CEY2[0x4];                                   // 0x005C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FString                                              DevSteamID;                                              // 0x0060(0x0010) Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bSandboxMode;                                            // 0x0070(0x0001) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_ECPE[0x7];                                   // 0x0071(0x0007) MISSED OFFSET (PADDING)
+
+		float                                                    AsyncTaskTimeout;                                        // 0x0038(0x0004) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  DisabledSubsystems;                                      // 0x003C(0x0004) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bDebugging;                                              // 0x0040(0x0001) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bDevMode;                                                // 0x0041(0x0001) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_PIBM[0x6];                                   // 0x0042(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		class FString                                            Key;                                                     // 0x0048(0x0010) Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  AppID;                                                   // 0x0058(0x0004) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_VRX7[0x4];                                   // 0x005C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		class FString                                            DevSteamID;                                              // 0x0060(0x0010) Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bSandboxMode;                                            // 0x0070(0x0001) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_PO06[0x7];                                   // 0x0071(0x0007) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamWebUtilities
@@ -82,18 +128,83 @@ namespace CG
 	class USteamWebUtilities : public UBlueprintFunctionLibrary
 	{
 	public:
-		bool ParseJson(const class FString& JsonString, TArray<struct FSteamCoreJson>* Data);
+
+		bool ParseJson(
+const class FString& JsonString
+, 
+TArray<struct FSteamCoreJson>* Data
+);
+
 		class FString GetProjectKey();
+
 		int32_t GetProjectAppID();
+
 		class FString GetDevSteamID();
-		void FindJsonStrings(const class FString& JsonString, const class FString& Key, TArray<class FString>* Values, ESteamJsonResult* Result);
-		void FindJsonString(const class FString& JsonString, const class FString& Key, class FString* Value, ESteamJsonResult* Result);
-		void FindJsonNumbers(const class FString& JsonString, const class FString& Key, TArray<int32_t>* Values, ESteamJsonResult* Result);
-		void FindJsonNumber(const class FString& JsonString, const class FString& Key, int32_t* Value, ESteamJsonResult* Result);
-		void FindJsonBools(const class FString& JsonString, const class FString& Key, TArray<bool>* bValues, ESteamJsonResult* Result);
-		void FindJsonBool(const class FString& JsonString, const class FString& Key, bool* bValue, ESteamJsonResult* Result);
+
+		void FindJsonStrings(
+const class FString& JsonString
+, 
+const class FString& Key
+, 
+TArray<class FString>* Values
+, 
+ESteamJsonResult* Result
+);
+
+		void FindJsonString(
+const class FString& JsonString
+, 
+const class FString& Key
+, 
+class FString* Value
+, 
+ESteamJsonResult* Result
+);
+
+		void FindJsonNumbers(
+const class FString& JsonString
+, 
+const class FString& Key
+, 
+TArray<int32_t>* Values
+, 
+ESteamJsonResult* Result
+);
+
+		void FindJsonNumber(
+const class FString& JsonString
+, 
+const class FString& Key
+, 
+int32_t* Value
+, 
+ESteamJsonResult* Result
+);
+
+		void FindJsonBools(
+const class FString& JsonString
+, 
+const class FString& Key
+, 
+TArray<bool>* bValues
+, 
+ESteamJsonResult* Result
+);
+
+		void FindJsonBool(
+const class FString& JsonString
+, 
+const class FString& Key
+, 
+bool* bValue
+, 
+ESteamJsonResult* Result
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.WebApps
@@ -102,18 +213,107 @@ namespace CG
 	class UWebApps : public USteamCoreWebSubsystem
 	{
 	public:
-		void UpToDateCheck(const class FScriptDelegate& Callback, int32_t AppID, int32_t Version);
-		void SetAppBuildLive(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, int32_t BuildID, const class FString& BetaKey, const class FString& Description);
-		void GetServersAtAddress(const class FScriptDelegate& Callback, const class FString& Addr);
-		void GetServerList(const class FScriptDelegate& Callback, const class FString& Key, const class FString& Filter, int32_t Limit);
-		void GetPlayersBanned(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID);
-		void GetCheatingReports(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, int32_t TimeBegin, int32_t TimeEnd, bool bIncludeReports, bool bIncludeBans, int32_t ReportidMin);
-		void GetAppList(const class FScriptDelegate& Callback, const class FString& Key);
-		void GetAppDepotVersions(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID);
-		void GetAppBuilds(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, int32_t Count);
-		void GetAppBetas(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID);
+
+		void UpToDateCheck(
+const class FScriptDelegate& Callback
+, 
+int32_t AppID
+, 
+int32_t Version
+);
+
+		void SetAppBuildLive(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t BuildID
+, 
+const class FString& BetaKey
+, 
+const class FString& Description
+);
+
+		void GetServersAtAddress(
+const class FScriptDelegate& Callback
+, 
+const class FString& Addr
+);
+
+		void GetServerList(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& Filter
+, 
+int32_t Limit
+);
+
+		void GetPlayersBanned(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+);
+
+		void GetCheatingReports(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t TimeBegin
+, 
+int32_t TimeEnd
+, 
+bool bIncludeReports
+, 
+bool bIncludeBans
+, 
+int32_t ReportidMin
+);
+
+		void GetAppList(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+);
+
+		void GetAppDepotVersions(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+);
+
+		void GetAppBuilds(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t Count
+);
+
+		void GetAppBetas(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreAppsAsyncActionGetAppBetas
@@ -122,9 +322,19 @@ namespace CG
 	class USteamCoreAppsAsyncActionGetAppBetas : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreAppsAsyncActionGetAppBetas* GetAppBetasAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID);
+
+		class USteamCoreAppsAsyncActionGetAppBetas* GetAppBetasAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreAppsAsyncActionGetAppBuilds
@@ -133,9 +343,21 @@ namespace CG
 	class USteamCoreAppsAsyncActionGetAppBuilds : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreAppsAsyncActionGetAppBuilds* GetAppBuildsAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, int32_t Count);
+
+		class USteamCoreAppsAsyncActionGetAppBuilds* GetAppBuildsAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t Count
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreAppsAsyncActionGetAppDepotVersions
@@ -144,9 +366,19 @@ namespace CG
 	class USteamCoreAppsAsyncActionGetAppDepotVersions : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreAppsAsyncActionGetAppDepotVersions* GetAppDepotVersionsAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID);
+
+		class USteamCoreAppsAsyncActionGetAppDepotVersions* GetAppDepotVersionsAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreAppsAsyncActionGetAppList
@@ -155,9 +387,17 @@ namespace CG
 	class USteamCoreAppsAsyncActionGetAppList : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreAppsAsyncActionGetAppList* GetAppListAsync(class UObject* WorldContextObject, const class FString& Key);
+
+		class USteamCoreAppsAsyncActionGetAppList* GetAppListAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreAppsAsyncActionGetCheatingReports
@@ -166,9 +406,29 @@ namespace CG
 	class USteamCoreAppsAsyncActionGetCheatingReports : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreAppsAsyncActionGetCheatingReports* GetCheatingReportsAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, int32_t TimeBegin, int32_t TimeEnd, bool bIncludeReports, bool bIncludeBans, int32_t ReportidMin);
+
+		class USteamCoreAppsAsyncActionGetCheatingReports* GetCheatingReportsAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t TimeBegin
+, 
+int32_t TimeEnd
+, 
+bool bIncludeReports
+, 
+bool bIncludeBans
+, 
+int32_t ReportidMin
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreAppsAsyncActionGetPlayersBanned
@@ -177,9 +437,19 @@ namespace CG
 	class USteamCoreAppsAsyncActionGetPlayersBanned : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreAppsAsyncActionGetPlayersBanned* GetPlayersBannedAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID);
+
+		class USteamCoreAppsAsyncActionGetPlayersBanned* GetPlayersBannedAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreAppsAsyncActionGetServerList
@@ -188,9 +458,21 @@ namespace CG
 	class USteamCoreAppsAsyncActionGetServerList : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreAppsAsyncActionGetServerList* GetServerListAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& Filter, int32_t Limit);
+
+		class USteamCoreAppsAsyncActionGetServerList* GetServerListAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& Filter
+, 
+int32_t Limit
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreAppsAsyncActionGetServersAtAddress
@@ -199,9 +481,17 @@ namespace CG
 	class USteamCoreAppsAsyncActionGetServersAtAddress : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreAppsAsyncActionGetServersAtAddress* GetServersAtAddressAsync(class UObject* WorldContextObject, const class FString& Addr);
+
+		class USteamCoreAppsAsyncActionGetServersAtAddress* GetServersAtAddressAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Addr
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreAppsAsyncActionSetAppBuildLive
@@ -210,9 +500,25 @@ namespace CG
 	class USteamCoreAppsAsyncActionSetAppBuildLive : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreAppsAsyncActionSetAppBuildLive* SetAppBuildLiveAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, int32_t BuildID, const class FString& BetaKey, const class FString& Description);
+
+		class USteamCoreAppsAsyncActionSetAppBuildLive* SetAppBuildLiveAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t BuildID
+, 
+const class FString& BetaKey
+, 
+const class FString& Description
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreAppsAsyncActionUpToDateCheck
@@ -221,9 +527,19 @@ namespace CG
 	class USteamCoreAppsAsyncActionUpToDateCheck : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreAppsAsyncActionUpToDateCheck* UpToDateCheckAsync(class UObject* WorldContextObject, int32_t AppID, int32_t Version);
+
+		class USteamCoreAppsAsyncActionUpToDateCheck* UpToDateCheckAsync(
+class UObject* WorldContextObject
+, 
+int32_t AppID
+, 
+int32_t Version
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.WebBroadcastService
@@ -232,9 +548,25 @@ namespace CG
 	class UWebBroadcastService : public USteamCoreWebSubsystem
 	{
 	public:
-		void PostGameDataFrame(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& BroadcastId, const class FString& FrameData);
+
+		void PostGameDataFrame(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+const class FString& BroadcastId
+, 
+const class FString& FrameData
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionPostGameDataFrame
@@ -243,9 +575,25 @@ namespace CG
 	class USteamCoreWebAsyncActionPostGameDataFrame : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionPostGameDataFrame* PostGameDataFrameAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& BroadcastId, const class FString& FrameData);
+
+		class USteamCoreWebAsyncActionPostGameDataFrame* PostGameDataFrameAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+const class FString& BroadcastId
+, 
+const class FString& FrameData
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.WebCheatReporting
@@ -254,16 +602,151 @@ namespace CG
 	class UWebCheatReporting : public USteamCoreWebSubsystem
 	{
 	public:
-		void StartSecureMultiplayerSession(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID);
-		void RequestVacStatusForUser(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& SessionID);
-		void RequestPlayerGameBan(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& ReportID, const class FString& CheatDescription, int32_t Duration, bool bDelayBan);
-		void ReportPlayerCheating(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& SteamIdReporter, const class FString& AppData, bool bHeuristic, bool bDetection, bool bPlayerReport, bool bNoReportID, int32_t GameMode, int32_t SuspicionStartTime, int32_t Severity);
-		void ReportCheatData(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& PathAndFileName, const class FString& WebCheatURL, const class FString& TimeNow, const class FString& TimeStarted, const class FString& TimeStopped, const class FString& CheatName, int32_t GameProcessId, int32_t CheatProcessId, const class FString& CheatParam1, const class FString& CheatParam2);
-		void RemovePlayerGameBan(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID);
-		void GetCheatingReports(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, int32_t TimeEnd, int32_t TimeBegin, const class FString& ReportidMin, bool bIncludeReports, bool bIncludeBans, const class FString& SteamID);
-		void EndSecureMultiplayerSession(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& SessionID);
+
+		void StartSecureMultiplayerSession(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+);
+
+		void RequestVacStatusForUser(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& SessionID
+);
+
+		void RequestPlayerGameBan(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& ReportID
+, 
+const class FString& CheatDescription
+, 
+int32_t Duration
+, 
+bool bDelayBan
+);
+
+		void ReportPlayerCheating(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+const class FString& SteamIdReporter
+, 
+const class FString& AppData
+, 
+bool bHeuristic
+, 
+bool bDetection
+, 
+bool bPlayerReport
+, 
+bool bNoReportID
+, 
+int32_t GameMode
+, 
+int32_t SuspicionStartTime
+, 
+int32_t Severity
+);
+
+		void ReportCheatData(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& PathAndFileName
+, 
+const class FString& WebCheatURL
+, 
+const class FString& TimeNow
+, 
+const class FString& TimeStarted
+, 
+const class FString& TimeStopped
+, 
+const class FString& CheatName
+, 
+int32_t GameProcessId
+, 
+int32_t CheatProcessId
+, 
+const class FString& CheatParam1
+, 
+const class FString& CheatParam2
+);
+
+		void RemovePlayerGameBan(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+);
+
+		void GetCheatingReports(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t TimeEnd
+, 
+int32_t TimeBegin
+, 
+const class FString& ReportidMin
+, 
+bool bIncludeReports
+, 
+bool bIncludeBans
+, 
+const class FString& SteamID
+);
+
+		void EndSecureMultiplayerSession(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& SessionID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionReportPlayerCheating
@@ -272,9 +755,39 @@ namespace CG
 	class USteamCoreWebAsyncActionReportPlayerCheating : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionReportPlayerCheating* ReportPlayerCheatingAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& SteamIdReporter, const class FString& AppData, bool bHeuristic, bool bDetection, bool bPlayerReport, bool bNoReportID, int32_t GameMode, int32_t SuspicionStartTime, int32_t Severity);
+
+		class USteamCoreWebAsyncActionReportPlayerCheating* ReportPlayerCheatingAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+const class FString& SteamIdReporter
+, 
+const class FString& AppData
+, 
+bool bHeuristic
+, 
+bool bDetection
+, 
+bool bPlayerReport
+, 
+bool bNoReportID
+, 
+int32_t GameMode
+, 
+int32_t SuspicionStartTime
+, 
+int32_t Severity
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionRequestPlayerGameBan
@@ -283,9 +796,29 @@ namespace CG
 	class USteamCoreWebAsyncActionRequestPlayerGameBan : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionRequestPlayerGameBan* RequestPlayerGameBanAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& ReportID, const class FString& CheatDescription, int32_t Duration, bool bDelayBan);
+
+		class USteamCoreWebAsyncActionRequestPlayerGameBan* RequestPlayerGameBanAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& ReportID
+, 
+const class FString& CheatDescription
+, 
+int32_t Duration
+, 
+bool bDelayBan
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionRemovePlayerGameBan
@@ -294,9 +827,21 @@ namespace CG
 	class USteamCoreWebAsyncActionRemovePlayerGameBan : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionRemovePlayerGameBan* RemovePlayerGameBanAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID);
+
+		class USteamCoreWebAsyncActionRemovePlayerGameBan* RemovePlayerGameBanAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetCheatingReports
@@ -305,9 +850,31 @@ namespace CG
 	class USteamCoreWebAsyncActionGetCheatingReports : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetCheatingReports* GetCheatingReportsAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, int32_t TimeEnd, int32_t TimeBegin, const class FString& ReportidMin, bool bIncludeReports, bool bIncludeBans, const class FString& SteamID);
+
+		class USteamCoreWebAsyncActionGetCheatingReports* GetCheatingReportsAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t TimeEnd
+, 
+int32_t TimeBegin
+, 
+const class FString& ReportidMin
+, 
+bool bIncludeReports
+, 
+bool bIncludeBans
+, 
+const class FString& SteamID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionReportCheatData
@@ -316,9 +883,41 @@ namespace CG
 	class USteamCoreWebAsyncActionReportCheatData : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionReportCheatData* ReportCheatDataAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& PathAndFileName, const class FString& WebCheatURL, const class FString& TimeNow, const class FString& TimeStarted, const class FString& TimeStopped, const class FString& CheatName, int32_t GameProcessId, int32_t CheatProcessId, const class FString& CheatParam1, const class FString& CheatParam2);
+
+		class USteamCoreWebAsyncActionReportCheatData* ReportCheatDataAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& PathAndFileName
+, 
+const class FString& WebCheatURL
+, 
+const class FString& TimeNow
+, 
+const class FString& TimeStarted
+, 
+const class FString& TimeStopped
+, 
+const class FString& CheatName
+, 
+int32_t GameProcessId
+, 
+int32_t CheatProcessId
+, 
+const class FString& CheatParam1
+, 
+const class FString& CheatParam2
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionRequestVacStatusForUser
@@ -327,9 +926,23 @@ namespace CG
 	class USteamCoreWebAsyncActionRequestVacStatusForUser : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionRequestVacStatusForUser* RequestVacStatusForUserAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& SessionID);
+
+		class USteamCoreWebAsyncActionRequestVacStatusForUser* RequestVacStatusForUserAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& SessionID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionStartSecureMultiplayerSession
@@ -338,9 +951,21 @@ namespace CG
 	class USteamCoreWebAsyncActionStartSecureMultiplayerSession : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionStartSecureMultiplayerSession* StartSecureMultiplayerSessionAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID);
+
+		class USteamCoreWebAsyncActionStartSecureMultiplayerSession* StartSecureMultiplayerSessionAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionEndSecureMultiplayerSession
@@ -349,9 +974,23 @@ namespace CG
 	class USteamCoreWebAsyncActionEndSecureMultiplayerSession : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionEndSecureMultiplayerSession* EndSecureMultiplayerSessionAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& SessionID);
+
+		class USteamCoreWebAsyncActionEndSecureMultiplayerSession* EndSecureMultiplayerSessionAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& SessionID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.WebEconMarketService
@@ -360,12 +999,57 @@ namespace CG
 	class UWebEconMarketService : public USteamCoreWebSubsystem
 	{
 	public:
-		void GetPopular(const class FScriptDelegate& Callback, const class FString& Key, const class FString& Language, int32_t Rows, int32_t Start, int32_t FilterAppId, int32_t ECurrency);
-		void GetMarketEligibility(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID);
-		void GetAssetID(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& ListingId);
-		void CancelAppListingsForUser(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, bool bSynchronous);
+
+		void GetPopular(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& Language
+, 
+int32_t Rows
+, 
+int32_t Start
+, 
+int32_t FilterAppId
+, 
+int32_t ECurrency
+);
+
+		void GetMarketEligibility(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+);
+
+		void GetAssetID(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& ListingId
+);
+
+		void CancelAppListingsForUser(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+bool bSynchronous
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetMarketEligibility
@@ -374,9 +1058,19 @@ namespace CG
 	class USteamCoreWebAsyncActionGetMarketEligibility : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetMarketEligibility* GetMarketEligibilityAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID);
+
+		class USteamCoreWebAsyncActionGetMarketEligibility* GetMarketEligibilityAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionCancelAppListingsForUser
@@ -385,9 +1079,23 @@ namespace CG
 	class USteamCoreWebAsyncActionCancelAppListingsForUser : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionCancelAppListingsForUser* CancelAppListingsForUserAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, bool bSynchronous);
+
+		class USteamCoreWebAsyncActionCancelAppListingsForUser* CancelAppListingsForUserAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+bool bSynchronous
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetAssetID
@@ -396,9 +1104,21 @@ namespace CG
 	class USteamCoreWebAsyncActionGetAssetID : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetAssetID* GetAssetIDAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& ListingId);
+
+		class USteamCoreWebAsyncActionGetAssetID* GetAssetIDAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& ListingId
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetPopular
@@ -407,9 +1127,27 @@ namespace CG
 	class USteamCoreWebAsyncActionGetPopular : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetPopular* GetPopularAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& Language, int32_t Rows, int32_t Start, int32_t FilterAppId, int32_t ECurrency);
+
+		class USteamCoreWebAsyncActionGetPopular* GetPopularAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& Language
+, 
+int32_t Rows
+, 
+int32_t Start
+, 
+int32_t FilterAppId
+, 
+int32_t ECurrency
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.WebEconService
@@ -418,17 +1156,115 @@ namespace CG
 	class UWebEconService : public USteamCoreWebSubsystem
 	{
 	public:
-		void GetTradeOffersSummary(const class FScriptDelegate& Callback, const class FString& Key, int32_t TimeLastVisit);
-		void GetTradeOffers(const class FScriptDelegate& Callback, const class FString& Key, bool bGetSentOffers, bool bGetReceivedOffers, bool bGetDescriptions, const class FString& Language, bool bActiveOnly, bool bHistoricalOnly, int32_t TimeHistoricalCutoff);
-		void GetTradeOffer(const class FScriptDelegate& Callback, const class FString& Key, const class FString& TradeOfferId, const class FString& Language);
-		void GetTradeHistory(const class FScriptDelegate& Callback, const class FString& Key, int32_t MaxTrades, int32_t StartAfterTime, const class FString& StartAfterTradeId, bool bNavigatingBack, bool bGetDescriptions, const class FString& Language, bool bIncludeFailed, bool bIncludeTotal);
-		void FlushInventoryCache(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& ContextId);
-		void FlushContextCache(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID);
-		void FlushAssetAppearanceCache(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID);
-		void DeclineTradeOffer(const class FScriptDelegate& Callback, const class FString& Key, const class FString& TradeOfferId);
-		void CancelTradeOffer(const class FScriptDelegate& Callback, const class FString& Key, const class FString& TradeOfferId);
+
+		void GetTradeOffersSummary(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t TimeLastVisit
+);
+
+		void GetTradeOffers(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+bool bGetSentOffers
+, 
+bool bGetReceivedOffers
+, 
+bool bGetDescriptions
+, 
+const class FString& Language
+, 
+bool bActiveOnly
+, 
+bool bHistoricalOnly
+, 
+int32_t TimeHistoricalCutoff
+);
+
+		void GetTradeOffer(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& TradeOfferId
+, 
+const class FString& Language
+);
+
+		void GetTradeHistory(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t MaxTrades
+, 
+int32_t StartAfterTime
+, 
+const class FString& StartAfterTradeId
+, 
+bool bNavigatingBack
+, 
+bool bGetDescriptions
+, 
+const class FString& Language
+, 
+bool bIncludeFailed
+, 
+bool bIncludeTotal
+);
+
+		void FlushInventoryCache(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& ContextId
+);
+
+		void FlushContextCache(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+);
+
+		void FlushAssetAppearanceCache(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+);
+
+		void DeclineTradeOffer(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& TradeOfferId
+);
+
+		void CancelTradeOffer(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& TradeOfferId
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetTradeHistory
@@ -437,9 +1273,33 @@ namespace CG
 	class USteamCoreWebAsyncActionGetTradeHistory : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetTradeHistory* GetTradeHistoryAsync(class UObject* WorldContextObject, const class FString& Key, int32_t MaxTrades, int32_t StartAfterTime, const class FString& StartAfterTradeId, bool bNavigatingBack, bool bGetDescriptions, const class FString& Language, bool bIncludeFailed, bool bIncludeTotal);
+
+		class USteamCoreWebAsyncActionGetTradeHistory* GetTradeHistoryAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t MaxTrades
+, 
+int32_t StartAfterTime
+, 
+const class FString& StartAfterTradeId
+, 
+bool bNavigatingBack
+, 
+bool bGetDescriptions
+, 
+const class FString& Language
+, 
+bool bIncludeFailed
+, 
+bool bIncludeTotal
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionFlushInventoryCache
@@ -448,9 +1308,23 @@ namespace CG
 	class USteamCoreWebAsyncActionFlushInventoryCache : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionFlushInventoryCache* FlushInventoryCacheAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& ContextId);
+
+		class USteamCoreWebAsyncActionFlushInventoryCache* FlushInventoryCacheAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& ContextId
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionFlushAssetAppearanceCache
@@ -459,9 +1333,19 @@ namespace CG
 	class USteamCoreWebAsyncActionFlushAssetAppearanceCache : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionFlushAssetAppearanceCache* FlushAssetAppearanceCacheAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID);
+
+		class USteamCoreWebAsyncActionFlushAssetAppearanceCache* FlushAssetAppearanceCacheAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionFlushContextCache
@@ -470,9 +1354,19 @@ namespace CG
 	class USteamCoreWebAsyncActionFlushContextCache : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionFlushContextCache* FlushContextCacheAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID);
+
+		class USteamCoreWebAsyncActionFlushContextCache* FlushContextCacheAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetTradeOffers
@@ -481,9 +1375,31 @@ namespace CG
 	class USteamCoreWebAsyncActionGetTradeOffers : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetTradeOffers* GetTradeOffersAsync(class UObject* WorldContextObject, const class FString& Key, bool bGetSentOffers, bool bGetReceivedOffers, bool bGetDescriptions, const class FString& Language, bool bActiveOnly, bool bHistoricalOnly, int32_t TimeHistoricalCutoff);
+
+		class USteamCoreWebAsyncActionGetTradeOffers* GetTradeOffersAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+bool bGetSentOffers
+, 
+bool bGetReceivedOffers
+, 
+bool bGetDescriptions
+, 
+const class FString& Language
+, 
+bool bActiveOnly
+, 
+bool bHistoricalOnly
+, 
+int32_t TimeHistoricalCutoff
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetTradeOffer
@@ -492,9 +1408,21 @@ namespace CG
 	class USteamCoreWebAsyncActionGetTradeOffer : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetTradeOffer* GetTradeOfferAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& TradeOfferId, const class FString& Language);
+
+		class USteamCoreWebAsyncActionGetTradeOffer* GetTradeOfferAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& TradeOfferId
+, 
+const class FString& Language
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetTradeOffersSummary
@@ -503,9 +1431,19 @@ namespace CG
 	class USteamCoreWebAsyncActionGetTradeOffersSummary : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetTradeOffersSummary* GetTradeOffersSummaryAsync(class UObject* WorldContextObject, const class FString& Key, int32_t TimeLastVisit);
+
+		class USteamCoreWebAsyncActionGetTradeOffersSummary* GetTradeOffersSummaryAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t TimeLastVisit
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionDeclineTradeOffer
@@ -514,9 +1452,19 @@ namespace CG
 	class USteamCoreWebAsyncActionDeclineTradeOffer : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionDeclineTradeOffer* DeclineTradeOfferAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& TradeOfferId);
+
+		class USteamCoreWebAsyncActionDeclineTradeOffer* DeclineTradeOfferAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& TradeOfferId
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionCancelTradeOffer
@@ -525,9 +1473,19 @@ namespace CG
 	class USteamCoreWebAsyncActionCancelTradeOffer : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionCancelTradeOffer* CancelTradeOfferAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& TradeOfferId);
+
+		class USteamCoreWebAsyncActionCancelTradeOffer* CancelTradeOfferAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& TradeOfferId
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.WebGameInventory
@@ -536,13 +1494,71 @@ namespace CG
 	class UWebGameInventory : public USteamCoreWebSubsystem
 	{
 	public:
+
 		void UpdateItemDefs();
-		void SupportGetAssetHistory(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& AssetId, const class FString& ContextId);
-		void HistoryExecuteCommands(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& ContextId, int32_t ActorId);
-		void GetUserHistory(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& ContextId, int32_t StartTime, int32_t EndTime);
-		void GetHistoryCommandDetails(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& Command, const class FString& ContextId, const class FString& Arguments);
+
+		void SupportGetAssetHistory(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& AssetId
+, 
+const class FString& ContextId
+);
+
+		void HistoryExecuteCommands(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+const class FString& ContextId
+, 
+int32_t ActorId
+);
+
+		void GetUserHistory(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+const class FString& ContextId
+, 
+int32_t StartTime
+, 
+int32_t EndTime
+);
+
+		void GetHistoryCommandDetails(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+const class FString& Command
+, 
+const class FString& ContextId
+, 
+const class FString& Arguments
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetHistoryCommandDetails
@@ -551,9 +1567,27 @@ namespace CG
 	class USteamCoreWebAsyncActionGetHistoryCommandDetails : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetHistoryCommandDetails* GetHistoryCommandDetailsAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& Command, const class FString& ContextId, const class FString& Arguments);
+
+		class USteamCoreWebAsyncActionGetHistoryCommandDetails* GetHistoryCommandDetailsAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+const class FString& Command
+, 
+const class FString& ContextId
+, 
+const class FString& Arguments
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetUserHistory
@@ -562,9 +1596,27 @@ namespace CG
 	class USteamCoreWebAsyncActionGetUserHistory : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetUserHistory* GetUserHistoryAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& ContextId, int32_t StartTime, int32_t EndTime);
+
+		class USteamCoreWebAsyncActionGetUserHistory* GetUserHistoryAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+const class FString& ContextId
+, 
+int32_t StartTime
+, 
+int32_t EndTime
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionHistoryExecuteCommand
@@ -573,9 +1625,25 @@ namespace CG
 	class USteamCoreWebAsyncActionHistoryExecuteCommand : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionHistoryExecuteCommand* HistoryExecuteCommandAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& ContextId, int32_t ActorId);
+
+		class USteamCoreWebAsyncActionHistoryExecuteCommand* HistoryExecuteCommandAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+const class FString& ContextId
+, 
+int32_t ActorId
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionSupportGetAssetHistory
@@ -584,9 +1652,23 @@ namespace CG
 	class USteamCoreWebAsyncActionSupportGetAssetHistory : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionSupportGetAssetHistory* SupportGetAssetHistoryAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& AssetId, const class FString& ContextId);
+
+		class USteamCoreWebAsyncActionSupportGetAssetHistory* SupportGetAssetHistoryAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& AssetId
+, 
+const class FString& ContextId
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.WebGameNotificationsService
@@ -595,15 +1677,103 @@ namespace CG
 	class UWebGameNotificationsService : public USteamCoreWebSubsystem
 	{
 	public:
-		void UpdateSession(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SessionID, int32_t AppID, const class FString& Title, const class FString& Users, const class FString& SteamID);
-		void RequestNotifications(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID);
-		void GetSessionDetailsForApp(const class FScriptDelegate& Callback, const class FString& Key, const class FString& Sessions, int32_t AppID, const class FString& Language);
-		void EnumerateSessionsForApp(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, bool bIncludeAllUserMessages, bool bIncludeAuthUserMessage, const class FString& Language);
-		void DeleteSessionBatch(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SessionID, int32_t AppID);
-		void DeleteSession(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SessionID, int32_t AppID, const class FString& SteamID);
-		void CreateSession(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& Context, const class FString& Title, const class FString& Users, const class FString& SteamID);
+
+		void UpdateSession(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SessionID
+, 
+int32_t AppID
+, 
+const class FString& Title
+, 
+const class FString& Users
+, 
+const class FString& SteamID
+);
+
+		void RequestNotifications(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+);
+
+		void GetSessionDetailsForApp(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& Sessions
+, 
+int32_t AppID
+, 
+const class FString& Language
+);
+
+		void EnumerateSessionsForApp(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+bool bIncludeAllUserMessages
+, 
+bool bIncludeAuthUserMessage
+, 
+const class FString& Language
+);
+
+		void DeleteSessionBatch(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SessionID
+, 
+int32_t AppID
+);
+
+		void DeleteSession(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SessionID
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+);
+
+		void CreateSession(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& Context
+, 
+const class FString& Title
+, 
+const class FString& Users
+, 
+const class FString& SteamID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionCreateSession
@@ -612,9 +1782,27 @@ namespace CG
 	class USteamCoreWebAsyncActionCreateSession : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionCreateSession* CreateSessionAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& Context, const class FString& Title, const class FString& Users, const class FString& SteamID);
+
+		class USteamCoreWebAsyncActionCreateSession* CreateSessionAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& Context
+, 
+const class FString& Title
+, 
+const class FString& Users
+, 
+const class FString& SteamID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionUpdateSession
@@ -623,9 +1811,27 @@ namespace CG
 	class USteamCoreWebAsyncActionUpdateSession : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionUpdateSession* UpdateSessionAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SessionID, int32_t AppID, const class FString& Title, const class FString& Users, const class FString& SteamID);
+
+		class USteamCoreWebAsyncActionUpdateSession* UpdateSessionAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SessionID
+, 
+int32_t AppID
+, 
+const class FString& Title
+, 
+const class FString& Users
+, 
+const class FString& SteamID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionEnumerateSessionsForApp
@@ -634,9 +1840,27 @@ namespace CG
 	class USteamCoreWebAsyncActionEnumerateSessionsForApp : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionEnumerateSessionsForApp* EnumerateSessionsForAppAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, bool bIncludeAllUserMessages, bool bIncludeAuthUserMessage, const class FString& Language);
+
+		class USteamCoreWebAsyncActionEnumerateSessionsForApp* EnumerateSessionsForAppAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+bool bIncludeAllUserMessages
+, 
+bool bIncludeAuthUserMessage
+, 
+const class FString& Language
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetSessionDetailsForApp
@@ -645,9 +1869,23 @@ namespace CG
 	class USteamCoreWebAsyncActionGetSessionDetailsForApp : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetSessionDetailsForApp* GetSessionDetailsForAppAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& Sessions, int32_t AppID, const class FString& Language);
+
+		class USteamCoreWebAsyncActionGetSessionDetailsForApp* GetSessionDetailsForAppAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& Sessions
+, 
+int32_t AppID
+, 
+const class FString& Language
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionRequestNotifications
@@ -656,9 +1894,21 @@ namespace CG
 	class USteamCoreWebAsyncActionRequestNotifications : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionRequestNotifications* RequestNotificationsAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID);
+
+		class USteamCoreWebAsyncActionRequestNotifications* RequestNotificationsAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionDeleteSession
@@ -667,9 +1917,23 @@ namespace CG
 	class USteamCoreWebAsyncActionDeleteSession : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionDeleteSession* DeleteSessionAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SessionID, int32_t AppID, const class FString& SteamID);
+
+		class USteamCoreWebAsyncActionDeleteSession* DeleteSessionAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SessionID
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionDeleteSessionBatch
@@ -678,9 +1942,21 @@ namespace CG
 	class USteamCoreWebAsyncActionDeleteSessionBatch : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionDeleteSessionBatch* DeleteSessionBatchAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SessionID, int32_t AppID);
+
+		class USteamCoreWebAsyncActionDeleteSessionBatch* DeleteSessionBatchAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SessionID
+, 
+int32_t AppID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.WebGameServersService
@@ -689,18 +1965,97 @@ namespace CG
 	class UWebGameServersService : public USteamCoreWebSubsystem
 	{
 	public:
-		void SetMemo(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, const class FString& Memo);
-		void SetBanStatus(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, bool bBanned, int32_t banSeconds);
-		void ResetLoginToken(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID);
-		void QueryLoginToken(const class FScriptDelegate& Callback, const class FString& Key, const class FString& LoginToken);
-		void GetServerSteamIDsByIP(const class FScriptDelegate& Callback, const class FString& Key, const class FString& ServerIP);
-		void GetServerIPsBySteamID(const class FScriptDelegate& Callback, const class FString& Key, const class FString& ServerSteamId);
-		void GetAccountPublicInfo(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID);
-		void GetAccountList(const class FScriptDelegate& Callback, const class FString& Key);
-		void DeleteAccount(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID);
-		void CreateAccount(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& Memo);
+
+		void SetMemo(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+const class FString& Memo
+);
+
+		void SetBanStatus(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+bool bBanned
+, 
+int32_t banSeconds
+);
+
+		void ResetLoginToken(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+);
+
+		void QueryLoginToken(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& LoginToken
+);
+
+		void GetServerSteamIDsByIP(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& ServerIP
+);
+
+		void GetServerIPsBySteamID(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& ServerSteamId
+);
+
+		void GetAccountPublicInfo(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+);
+
+		void GetAccountList(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+);
+
+		void DeleteAccount(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+);
+
+		void CreateAccount(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& Memo
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.WebInventoryService
@@ -709,18 +2064,159 @@ namespace CG
 	class UWebInventoryService : public USteamCoreWebSubsystem
 	{
 	public:
-		void ModifyItems(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& InputJson, const class FString& SteamID, int32_t Timestamp, const class FString& Updates);
-		void GetQuantity(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, TArray<int32_t> ItemdefIDs, bool bForce);
-		void GetPriceSheet(const class FScriptDelegate& Callback, const class FString& Key, int32_t Currency);
-		void GetItemDefs(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& ModifiedSince, TArray<int32_t> ItemdefIDs, TArray<int32_t> WorkshopIDs, int32_t CacheMaxAgeSeconds);
-		void GetInventory(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID);
-		void ExchangeItem(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, TArray<int32_t> MaterialsItemID, TArray<int32_t> MaterialsQuantity, const class FString& OutputItemdefId);
-		void ConsumeItem(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& ItemId, const class FString& Quantity, const class FString& SteamID, const class FString& RequestID);
-		void Consolidate(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, TArray<int32_t> ItemdefIDs, bool bForce);
-		void AddPromoItem(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, int32_t ItemdefId, const class FString& ItemPropsJson, const class FString& SteamID, bool bNotify, const class FString& RequestID);
-		void AddItem(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, TArray<int32_t> ItemdefId, const class FString& ItemPropsJson, const class FString& SteamID, bool bNotify, const class FString& RequestID, bool bTradeRestriction);
+
+		void ModifyItems(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& InputJson
+, 
+const class FString& SteamID
+, 
+int32_t Timestamp
+, 
+const class FString& Updates
+);
+
+		void GetQuantity(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+TArray<int32_t> ItemdefIDs
+, 
+bool bForce
+);
+
+		void GetPriceSheet(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t Currency
+);
+
+		void GetItemDefs(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& ModifiedSince
+, 
+TArray<int32_t> ItemdefIDs
+, 
+TArray<int32_t> WorkshopIDs
+, 
+int32_t CacheMaxAgeSeconds
+);
+
+		void GetInventory(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+);
+
+		void ExchangeItem(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+TArray<int32_t> MaterialsItemID
+, 
+TArray<int32_t> MaterialsQuantity
+, 
+const class FString& OutputItemdefId
+);
+
+		void ConsumeItem(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& ItemId
+, 
+const class FString& Quantity
+, 
+const class FString& SteamID
+, 
+const class FString& RequestID
+);
+
+		void Consolidate(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+TArray<int32_t> ItemdefIDs
+, 
+bool bForce
+);
+
+		void AddPromoItem(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t ItemdefId
+, 
+const class FString& ItemPropsJson
+, 
+const class FString& SteamID
+, 
+bool bNotify
+, 
+const class FString& RequestID
+);
+
+		void AddItem(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+TArray<int32_t> ItemdefId
+, 
+const class FString& ItemPropsJson
+, 
+const class FString& SteamID
+, 
+bool bNotify
+, 
+const class FString& RequestID
+, 
+bool bTradeRestriction
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionAddItem
@@ -729,9 +2225,31 @@ namespace CG
 	class USteamCoreWebAsyncActionAddItem : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionAddItem* AddItemAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, TArray<int32_t> ItemdefId, const class FString& ItemPropsJson, const class FString& SteamID, bool bNotify, const class FString& RequestID, bool bTradeRestriction);
+
+		class USteamCoreWebAsyncActionAddItem* AddItemAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+TArray<int32_t> ItemdefId
+, 
+const class FString& ItemPropsJson
+, 
+const class FString& SteamID
+, 
+bool bNotify
+, 
+const class FString& RequestID
+, 
+bool bTradeRestriction
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionAddPromoItem
@@ -740,9 +2258,29 @@ namespace CG
 	class USteamCoreWebAsyncActionAddPromoItem : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionAddPromoItem* AddPromoItemAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, int32_t ItemdefId, const class FString& ItemPropsJson, const class FString& SteamID, bool bNotify, const class FString& RequestID);
+
+		class USteamCoreWebAsyncActionAddPromoItem* AddPromoItemAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t ItemdefId
+, 
+const class FString& ItemPropsJson
+, 
+const class FString& SteamID
+, 
+bool bNotify
+, 
+const class FString& RequestID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionConsumeItem
@@ -751,9 +2289,27 @@ namespace CG
 	class USteamCoreWebAsyncActionConsumeItem : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionConsumeItem* ConsumeItemAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& ItemId, const class FString& Quantity, const class FString& SteamID, const class FString& RequestID);
+
+		class USteamCoreWebAsyncActionConsumeItem* ConsumeItemAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& ItemId
+, 
+const class FString& Quantity
+, 
+const class FString& SteamID
+, 
+const class FString& RequestID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionExchangeItem
@@ -762,9 +2318,27 @@ namespace CG
 	class USteamCoreWebAsyncActionExchangeItem : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionExchangeItem* ExchangeItemAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, TArray<int32_t> MaterialsItemID, TArray<int32_t> MaterialsQuantity, const class FString& OutputItemdefId);
+
+		class USteamCoreWebAsyncActionExchangeItem* ExchangeItemAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+TArray<int32_t> MaterialsItemID
+, 
+TArray<int32_t> MaterialsQuantity
+, 
+const class FString& OutputItemdefId
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetInventory
@@ -773,9 +2347,21 @@ namespace CG
 	class USteamCoreWebAsyncActionGetInventory : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetInventory* GetInventoryAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID);
+
+		class USteamCoreWebAsyncActionGetInventory* GetInventoryAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetItemDefs
@@ -784,9 +2370,27 @@ namespace CG
 	class USteamCoreWebAsyncActionGetItemDefs : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetItemDefs* GetItemDefsAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& ModifiedSince, TArray<int32_t> ItemdefIDs, TArray<int32_t> WorkshopIDs, int32_t CacheMaxAgeSeconds);
+
+		class USteamCoreWebAsyncActionGetItemDefs* GetItemDefsAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& ModifiedSince
+, 
+TArray<int32_t> ItemdefIDs
+, 
+TArray<int32_t> WorkshopIDs
+, 
+int32_t CacheMaxAgeSeconds
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetPriceSheet
@@ -795,9 +2399,19 @@ namespace CG
 	class USteamCoreWebAsyncActionGetPriceSheet : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetPriceSheet* GetPriceSheetAsync(class UObject* WorldContextObject, const class FString& Key, int32_t Currency);
+
+		class USteamCoreWebAsyncActionGetPriceSheet* GetPriceSheetAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t Currency
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionConsolidate
@@ -806,9 +2420,25 @@ namespace CG
 	class USteamCoreWebAsyncActionConsolidate : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionConsolidate* ConsolidateAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, TArray<int32_t> ItemdefIDs, bool bForce);
+
+		class USteamCoreWebAsyncActionConsolidate* ConsolidateAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+TArray<int32_t> ItemdefIDs
+, 
+bool bForce
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetQuantity
@@ -817,9 +2447,25 @@ namespace CG
 	class USteamCoreWebAsyncActionGetQuantity : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetQuantity* GetQuantityAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, TArray<int32_t> ItemdefIDs, bool bForce);
+
+		class USteamCoreWebAsyncActionGetQuantity* GetQuantityAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+TArray<int32_t> ItemdefIDs
+, 
+bool bForce
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionModifyItems
@@ -828,9 +2474,27 @@ namespace CG
 	class USteamCoreWebAsyncActionModifyItems : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionModifyItems* ModifyItemsAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& InputJson, const class FString& SteamID, int32_t Timestamp, const class FString& Updates);
+
+		class USteamCoreWebAsyncActionModifyItems* ModifyItemsAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& InputJson
+, 
+const class FString& SteamID
+, 
+int32_t Timestamp
+, 
+const class FString& Updates
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.WebLeaderboards
@@ -839,14 +2503,95 @@ namespace CG
 	class UWebLeaderboards : public USteamCoreWebSubsystem
 	{
 	public:
-		void SetLeaderboardScore(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, int32_t LeaderbordId, const class FString& SteamID, int32_t Score, TArray<unsigned char> Details, const class FString& ScoreMethod);
-		void ResetLeaderboard(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, int32_t LeaderboardId);
-		void GetLeaderboardsForGame(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID);
-		void GetLeaderboardEntries(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, int32_t RangeStart, int32_t RangeEnd, int32_t LeaderboardId, int32_t DataRequest, const class FString& SteamID);
-		void FindOrCreateLeaderboard(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& Name, const class FString& SortMethod, const class FString& DisplayType, bool bCreateIfNotFound, bool bOnlyTrustedWrites, bool bOnlyFriendsReads);
-		void DeleteLeaderboard(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& Name);
+
+		void SetLeaderboardScore(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t LeaderbordId
+, 
+const class FString& SteamID
+, 
+int32_t Score
+, 
+TArray<unsigned char> Details
+, 
+const class FString& ScoreMethod
+);
+
+		void ResetLeaderboard(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t LeaderboardId
+);
+
+		void GetLeaderboardsForGame(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+);
+
+		void GetLeaderboardEntries(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t RangeStart
+, 
+int32_t RangeEnd
+, 
+int32_t LeaderboardId
+, 
+int32_t DataRequest
+, 
+const class FString& SteamID
+);
+
+		void FindOrCreateLeaderboard(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& Name
+, 
+const class FString& SortMethod
+, 
+const class FString& DisplayType
+, 
+bool bCreateIfNotFound
+, 
+bool bOnlyTrustedWrites
+, 
+bool bOnlyFriendsReads
+);
+
+		void DeleteLeaderboard(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& Name
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionDeleteLeaderboard
@@ -855,9 +2600,21 @@ namespace CG
 	class USteamCoreWebAsyncActionDeleteLeaderboard : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionDeleteLeaderboard* DeleteLeaderboardAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& Name);
+
+		class USteamCoreWebAsyncActionDeleteLeaderboard* DeleteLeaderboardAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& Name
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionFindOrCreateLeaderboard
@@ -866,9 +2623,31 @@ namespace CG
 	class USteamCoreWebAsyncActionFindOrCreateLeaderboard : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionFindOrCreateLeaderboard* FindOrCreateLeaderboardAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& Name, const class FString& SortMethod, const class FString& DisplayType, bool bCreateIfNotFound, bool bOnlyTrustedWrites, bool bOnlyFriendsReads);
+
+		class USteamCoreWebAsyncActionFindOrCreateLeaderboard* FindOrCreateLeaderboardAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& Name
+, 
+const class FString& SortMethod
+, 
+const class FString& DisplayType
+, 
+bool bCreateIfNotFound
+, 
+bool bOnlyTrustedWrites
+, 
+bool bOnlyFriendsReads
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetLeaderboardEntries
@@ -877,9 +2656,29 @@ namespace CG
 	class USteamCoreWebAsyncActionGetLeaderboardEntries : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetLeaderboardEntries* GetLeaderboardEntriesAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, int32_t RangeStart, int32_t RangeEnd, int32_t LeaderboardId, int32_t DataRequest, const class FString& SteamID);
+
+		class USteamCoreWebAsyncActionGetLeaderboardEntries* GetLeaderboardEntriesAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t RangeStart
+, 
+int32_t RangeEnd
+, 
+int32_t LeaderboardId
+, 
+int32_t DataRequest
+, 
+const class FString& SteamID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetLeaderboardsForGame
@@ -888,9 +2687,19 @@ namespace CG
 	class USteamCoreWebAsyncActionGetLeaderboardsForGame : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetLeaderboardsForGame* GetLeaderboardsForGameAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID);
+
+		class USteamCoreWebAsyncActionGetLeaderboardsForGame* GetLeaderboardsForGameAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionResetLeaderboard
@@ -899,9 +2708,21 @@ namespace CG
 	class USteamCoreWebAsyncActionResetLeaderboard : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionResetLeaderboard* ResetLeaderboardAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, int32_t LeaderboardId);
+
+		class USteamCoreWebAsyncActionResetLeaderboard* ResetLeaderboardAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t LeaderboardId
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionSetLeaderboardScore
@@ -910,9 +2731,29 @@ namespace CG
 	class USteamCoreWebAsyncActionSetLeaderboardScore : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionSetLeaderboardScore* SetLeaderboardScoreAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, int32_t LeaderboardId, const class FString& SteamID, int32_t Score, TArray<unsigned char> Details, const class FString& ScoreMethod);
+
+		class USteamCoreWebAsyncActionSetLeaderboardScore* SetLeaderboardScoreAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t LeaderboardId
+, 
+const class FString& SteamID
+, 
+int32_t Score
+, 
+TArray<unsigned char> Details
+, 
+const class FString& ScoreMethod
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.WebLobbyMatchmakingService
@@ -921,10 +2762,45 @@ namespace CG
 	class UWebLobbyMatchmakingService : public USteamCoreWebSubsystem
 	{
 	public:
-		void RemoveUserFromLobby(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamIdToRemove, const class FString& SteamIDLobby, const class FString& InputJson);
-		void CreateLobby(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, int32_t MaxMembers, ESteamCoreWebLobbyType LobbyType, const class FString& LobbyName, const class FString& InputJson, TArray<class FString> SteamIdInvitedMembers, const class FString& LobbyMetaData);
+
+		void RemoveUserFromLobby(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamIdToRemove
+, 
+const class FString& SteamIDLobby
+, 
+const class FString& InputJson
+);
+
+		void CreateLobby(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t MaxMembers
+, 
+ESteamCoreWebLobbyType LobbyType
+, 
+const class FString& LobbyName
+, 
+const class FString& InputJson
+, 
+TArray<class FString> SteamIdInvitedMembers
+, 
+const class FString& LobbyMetaData
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.WebMicroTxn
@@ -933,19 +2809,177 @@ namespace CG
 	class UWebMicroTxn : public USteamCoreWebSubsystem
 	{
 	public:
-		void RefundTxn(const class FScriptDelegate& Callback, const class FString& Key, const class FString& OrderId, int32_t AppID);
-		void QueryTxn(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& OrderId, const class FString& TransId);
-		void ProcessAgreement(const class FScriptDelegate& Callback, const class FString& Key, const class FString& OrderId, const class FString& SteamID, const class FString& AgreementId, int32_t AppID, int32_t Amount, const class FString& Currency);
+
+		void RefundTxn(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& OrderId
+, 
+int32_t AppID
+);
+
+		void QueryTxn(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& OrderId
+, 
+const class FString& TransId
+);
+
+		void ProcessAgreement(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& OrderId
+, 
+const class FString& SteamID
+, 
+const class FString& AgreementId
+, 
+int32_t AppID
+, 
+int32_t Amount
+, 
+const class FString& Currency
+);
+
 		class FString MakeTransactionID();
-		void InitTxn(const class FScriptDelegate& Callback, const class FString& Key, const class FString& OrderId, const class FString& SteamID, int32_t AppID, const class FString& Language, const class FString& Currency, const class FString& UserSession, const class FString& Ipaddress, TArray<int32_t> ItemId, TArray<int32_t> Quantity, TArray<class FString> Amount, TArray<class FString> Description, TArray<class FString> Category, TArray<int32_t> AssociatedBundle, TArray<class FString> BillingType, TArray<class FString> StartDate, TArray<class FString> EndDate, TArray<class FString> Period, TArray<int32_t> Frequency, TArray<class FString> RecurringAmt, TArray<int32_t> BundleCount, TArray<int32_t> BundleId, TArray<int32_t> BundleQty, TArray<class FString> BundleDesc, TArray<class FString> BundleCategory);
-		void GetUserInfo(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t Ipaddress);
-		void GetUserAgreementInfo(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID);
-		void GetReport(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& Time, const class FString& Type, int32_t MaxResults);
-		void FinalizeTxn(const class FScriptDelegate& Callback, const class FString& Key, const class FString& OrderId, int32_t AppID);
-		void CancelAgreement(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, const class FString& AgreementId, int32_t AppID);
-		void AdjustAgreement(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, const class FString& AgreementId, int32_t AppID, const class FString& NextProcessDate);
+
+		void InitTxn(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& OrderId
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& Language
+, 
+const class FString& Currency
+, 
+const class FString& UserSession
+, 
+const class FString& Ipaddress
+, 
+TArray<int32_t> ItemId
+, 
+TArray<int32_t> Quantity
+, 
+TArray<class FString> Amount
+, 
+TArray<class FString> Description
+, 
+TArray<class FString> Category
+, 
+TArray<int32_t> AssociatedBundle
+, 
+TArray<class FString> BillingType
+, 
+TArray<class FString> StartDate
+, 
+TArray<class FString> EndDate
+, 
+TArray<class FString> Period
+, 
+TArray<int32_t> Frequency
+, 
+TArray<class FString> RecurringAmt
+, 
+TArray<int32_t> BundleCount
+, 
+TArray<int32_t> BundleId
+, 
+TArray<int32_t> BundleQty
+, 
+TArray<class FString> BundleDesc
+, 
+TArray<class FString> BundleCategory
+);
+
+		void GetUserInfo(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t Ipaddress
+);
+
+		void GetUserAgreementInfo(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+);
+
+		void GetReport(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& Time
+, 
+const class FString& Type
+, 
+int32_t MaxResults
+);
+
+		void FinalizeTxn(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& OrderId
+, 
+int32_t AppID
+);
+
+		void CancelAgreement(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+const class FString& AgreementId
+, 
+int32_t AppID
+);
+
+		void AdjustAgreement(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+const class FString& AgreementId
+, 
+int32_t AppID
+, 
+const class FString& NextProcessDate
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionAdjustAgreement
@@ -954,9 +2988,25 @@ namespace CG
 	class USteamCoreWebAsyncActionAdjustAgreement : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionAdjustAgreement* AdjustAgreementAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, const class FString& AgreementId, int32_t AppID, const class FString& NextProcessDate);
+
+		class USteamCoreWebAsyncActionAdjustAgreement* AdjustAgreementAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+const class FString& AgreementId
+, 
+int32_t AppID
+, 
+const class FString& NextProcessDate
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionCancelAgreement
@@ -965,9 +3015,23 @@ namespace CG
 	class USteamCoreWebAsyncActionCancelAgreement : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionCancelAgreement* CancelAgreementAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, const class FString& AgreementId, int32_t AppID);
+
+		class USteamCoreWebAsyncActionCancelAgreement* CancelAgreementAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+const class FString& AgreementId
+, 
+int32_t AppID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionFinalizeTxn
@@ -976,9 +3040,21 @@ namespace CG
 	class USteamCoreWebAsyncActionFinalizeTxn : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionFinalizeTxn* FinalizeTxnAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& OrderId, int32_t AppID);
+
+		class USteamCoreWebAsyncActionFinalizeTxn* FinalizeTxnAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& OrderId
+, 
+int32_t AppID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetReport
@@ -987,9 +3063,25 @@ namespace CG
 	class USteamCoreWebAsyncActionGetReport : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetReport* GetReportAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& Time, const class FString& Type, int32_t MaxResults);
+
+		class USteamCoreWebAsyncActionGetReport* GetReportAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& Time
+, 
+const class FString& Type
+, 
+int32_t MaxResults
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetUserAgreementInfo
@@ -998,9 +3090,21 @@ namespace CG
 	class USteamCoreWebAsyncActionGetUserAgreementInfo : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetUserAgreementInfo* GetUserAgreementInfoAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID);
+
+		class USteamCoreWebAsyncActionGetUserAgreementInfo* GetUserAgreementInfoAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetUserInfo
@@ -1009,9 +3113,21 @@ namespace CG
 	class USteamCoreWebAsyncActionGetUserInfo : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetUserInfo* GetUserInfoAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t Ipaddress);
+
+		class USteamCoreWebAsyncActionGetUserInfo* GetUserInfoAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t Ipaddress
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionInitTxn
@@ -1020,9 +3136,65 @@ namespace CG
 	class USteamCoreWebAsyncActionInitTxn : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionInitTxn* InitTxnAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& OrderId, const class FString& SteamID, int32_t AppID, const class FString& Language, const class FString& Currency, const class FString& UserSession, const class FString& Ipaddress, TArray<int32_t> ItemId, TArray<int32_t> Quantity, TArray<class FString> Amount, TArray<class FString> Description, TArray<class FString> Category, TArray<int32_t> AssociatedBundle, TArray<class FString> BillingType, TArray<class FString> StartDate, TArray<class FString> EndDate, TArray<class FString> Period, TArray<int32_t> Frequency, TArray<class FString> RecurringAmt, TArray<int32_t> BundleCount, TArray<int32_t> BundleId, TArray<int32_t> BundleQty, TArray<class FString> BundleDesc, TArray<class FString> BundleCategory);
+
+		class USteamCoreWebAsyncActionInitTxn* InitTxnAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& OrderId
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& Language
+, 
+const class FString& Currency
+, 
+const class FString& UserSession
+, 
+const class FString& Ipaddress
+, 
+TArray<int32_t> ItemId
+, 
+TArray<int32_t> Quantity
+, 
+TArray<class FString> Amount
+, 
+TArray<class FString> Description
+, 
+TArray<class FString> Category
+, 
+TArray<int32_t> AssociatedBundle
+, 
+TArray<class FString> BillingType
+, 
+TArray<class FString> StartDate
+, 
+TArray<class FString> EndDate
+, 
+TArray<class FString> Period
+, 
+TArray<int32_t> Frequency
+, 
+TArray<class FString> RecurringAmt
+, 
+TArray<int32_t> BundleCount
+, 
+TArray<int32_t> BundleId
+, 
+TArray<int32_t> BundleQty
+, 
+TArray<class FString> BundleDesc
+, 
+TArray<class FString> BundleCategory
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionProcessAgreement
@@ -1031,9 +3203,29 @@ namespace CG
 	class USteamCoreWebAsyncActionProcessAgreement : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionProcessAgreement* ProcessAgreementAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& OrderId, const class FString& SteamID, const class FString& AgreementId, int32_t AppID, int32_t Amount, const class FString& Currency);
+
+		class USteamCoreWebAsyncActionProcessAgreement* ProcessAgreementAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& OrderId
+, 
+const class FString& SteamID
+, 
+const class FString& AgreementId
+, 
+int32_t AppID
+, 
+int32_t Amount
+, 
+const class FString& Currency
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionQueryTxn
@@ -1042,9 +3234,23 @@ namespace CG
 	class USteamCoreWebAsyncActionQueryTxn : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionQueryTxn* QueryTxnAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& OrderId, const class FString& TransId);
+
+		class USteamCoreWebAsyncActionQueryTxn* QueryTxnAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& OrderId
+, 
+const class FString& TransId
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionRefundTxn
@@ -1053,9 +3259,21 @@ namespace CG
 	class USteamCoreWebAsyncActionRefundTxn : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionRefundTxn* RefundTxnAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& OrderId, int32_t AppID);
+
+		class USteamCoreWebAsyncActionRefundTxn* RefundTxnAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& OrderId
+, 
+int32_t AppID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.WebPlayerService
@@ -1064,14 +3282,71 @@ namespace CG
 	class UWebPlayerService : public USteamCoreWebSubsystem
 	{
 	public:
-		void IsPlayingSharedGame(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppIdPlaying);
-		void GetSteamLevel(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID);
-		void GetRecentlyPlayedGames(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t Count);
-		void GetOwnedGames(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, bool bIncludeAppInfo, bool bIncludePlayedFreeGames, TArray<int32_t> Filter);
-		void GetCommunityBadgeProgress(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t BadgeId);
-		void GetBadges(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID);
+
+		void IsPlayingSharedGame(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppIdPlaying
+);
+
+		void GetSteamLevel(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+);
+
+		void GetRecentlyPlayedGames(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t Count
+);
+
+		void GetOwnedGames(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+bool bIncludeAppInfo
+, 
+bool bIncludePlayedFreeGames
+, 
+TArray<int32_t> Filter
+);
+
+		void GetCommunityBadgeProgress(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t BadgeId
+);
+
+		void GetBadges(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetRecentlyPlayedGames
@@ -1080,9 +3355,21 @@ namespace CG
 	class USteamCoreWebAsyncActionGetRecentlyPlayedGames : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetRecentlyPlayedGames* GetRecentlyPlayedGamesAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t Count);
+
+		class USteamCoreWebAsyncActionGetRecentlyPlayedGames* GetRecentlyPlayedGamesAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t Count
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetOwnedGames
@@ -1091,9 +3378,25 @@ namespace CG
 	class USteamCoreWebAsyncActionGetOwnedGames : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetOwnedGames* GetOwnedGamesAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, bool bIncludeAppInfo, bool bIncludePlayedFreeGames, TArray<int32_t> Filter);
+
+		class USteamCoreWebAsyncActionGetOwnedGames* GetOwnedGamesAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+bool bIncludeAppInfo
+, 
+bool bIncludePlayedFreeGames
+, 
+TArray<int32_t> Filter
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetSteamLevel
@@ -1102,9 +3405,19 @@ namespace CG
 	class USteamCoreWebAsyncActionGetSteamLevel : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetSteamLevel* GetSteamLevelAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID);
+
+		class USteamCoreWebAsyncActionGetSteamLevel* GetSteamLevelAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetBadges
@@ -1113,9 +3426,19 @@ namespace CG
 	class USteamCoreWebAsyncActionGetBadges : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetBadges* GetBadgesAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID);
+
+		class USteamCoreWebAsyncActionGetBadges* GetBadgesAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetCommunityBadgeProgress
@@ -1124,9 +3447,21 @@ namespace CG
 	class USteamCoreWebAsyncActionGetCommunityBadgeProgress : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetCommunityBadgeProgress* GetCommunityBadgeProgressAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t BadgeId);
+
+		class USteamCoreWebAsyncActionGetCommunityBadgeProgress* GetCommunityBadgeProgressAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t BadgeId
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionIsPlayingSharedGame
@@ -1135,9 +3470,21 @@ namespace CG
 	class USteamCoreWebAsyncActionIsPlayingSharedGame : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionIsPlayingSharedGame* IsPlayingSharedGameAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppIdPlaying);
+
+		class USteamCoreWebAsyncActionIsPlayingSharedGame* IsPlayingSharedGameAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppIdPlaying
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.WebPublishedFileService
@@ -1146,13 +3493,129 @@ namespace CG
 	class UWebPublishedFileService : public USteamCoreWebSubsystem
 	{
 	public:
-		void UpdateTags(const class FScriptDelegate& Callback, const class FString& Key, const class FString& PublishedFileID, int32_t AppID, const class FString& AddTags, const class FString& RemoveTags);
-		void UpdateIncompatibleStatus(const class FScriptDelegate& Callback, const class FString& Key, const class FString& PublishedFileID, int32_t AppID, bool bIncompatible);
-		void UpdateBanStatus(const class FScriptDelegate& Callback, const class FString& Key, const class FString& PublishedFileID, int32_t AppID, bool bBanned, const class FString& Reason);
-		void SetDeveloperMetadata(const class FScriptDelegate& Callback, const class FString& Key, const class FString& PublishedFileID, int32_t AppID, const class FString& MetaData);
-		void QueryFiles(const class FScriptDelegate& Callback, const class FString& Key, int32_t QueryType, int32_t Page, const class FString& Cursor, int32_t NumPerPage, int32_t CreatorAppID, int32_t AppID, const class FString& RequiredTags, const class FString& ExcludedTags, bool bMatchAllTags, const class FString& RequiredFlags, const class FString& OmittedFlags, const class FString& SearchText, int32_t FileType, const class FString& ChildPublishedFileId, int32_t Days, bool bIncludeRecentVotesOnly, int32_t CacheMaxAgeSeconds, int32_t Language, const class FString& RequiredKvTags, bool bTotalOnly, bool bIDsOnly, bool bReturnVoteData, bool bReturnTags, bool bReturnKvTags, bool bReturnPreviews, bool bReturnChildren, bool bReturnShortDescription, bool bReturnForSaleData, bool bReturnMetadata, int32_t ReturnPlaytimeStats);
+
+		void UpdateTags(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& PublishedFileID
+, 
+int32_t AppID
+, 
+const class FString& AddTags
+, 
+const class FString& RemoveTags
+);
+
+		void UpdateIncompatibleStatus(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& PublishedFileID
+, 
+int32_t AppID
+, 
+bool bIncompatible
+);
+
+		void UpdateBanStatus(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& PublishedFileID
+, 
+int32_t AppID
+, 
+bool bBanned
+, 
+const class FString& Reason
+);
+
+		void SetDeveloperMetadata(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& PublishedFileID
+, 
+int32_t AppID
+, 
+const class FString& MetaData
+);
+
+		void QueryFiles(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t QueryType
+, 
+int32_t Page
+, 
+const class FString& Cursor
+, 
+int32_t NumPerPage
+, 
+int32_t CreatorAppID
+, 
+int32_t AppID
+, 
+const class FString& RequiredTags
+, 
+const class FString& ExcludedTags
+, 
+bool bMatchAllTags
+, 
+const class FString& RequiredFlags
+, 
+const class FString& OmittedFlags
+, 
+const class FString& SearchText
+, 
+int32_t FileType
+, 
+const class FString& ChildPublishedFileId
+, 
+int32_t Days
+, 
+bool bIncludeRecentVotesOnly
+, 
+int32_t CacheMaxAgeSeconds
+, 
+int32_t Language
+, 
+const class FString& RequiredKvTags
+, 
+bool bTotalOnly
+, 
+bool bIDsOnly
+, 
+bool bReturnVoteData
+, 
+bool bReturnTags
+, 
+bool bReturnKvTags
+, 
+bool bReturnPreviews
+, 
+bool bReturnChildren
+, 
+bool bReturnShortDescription
+, 
+bool bReturnForSaleData
+, 
+bool bReturnMetadata
+, 
+int32_t ReturnPlaytimeStats
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.WebSteamPublishedItemSearch
@@ -1161,12 +3624,99 @@ namespace CG
 	class UWebSteamPublishedItemSearch : public USteamCoreWebSubsystem
 	{
 	public:
-		void ResultSetSummary(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, int32_t StartId, bool bHasAppAdminAccess, int32_t FileType, TArray<class FString> Tag, TArray<class FString> UserTag);
-		void RankedByVote(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, int32_t StartId, int32_t Count, bool bHasAppAdminAccess, int32_t FileType, TArray<class FString> Tag, TArray<class FString> UserTag);
-		void RankedByTrend(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, int32_t StartId, int32_t Count, bool bHasAppAdminAccess, int32_t FileType, int32_t Days, TArray<class FString> Tag, TArray<class FString> UserTag);
-		void RankedByPublicationOrder(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, int32_t StartId, int32_t Count, bool bHasAppAdminAccess, int32_t FileType, TArray<class FString> Tag, TArray<class FString> UserTag);
+
+		void ResultSetSummary(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+int32_t StartId
+, 
+bool bHasAppAdminAccess
+, 
+int32_t FileType
+, 
+TArray<class FString> Tag
+, 
+TArray<class FString> UserTag
+);
+
+		void RankedByVote(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+int32_t StartId
+, 
+int32_t Count
+, 
+bool bHasAppAdminAccess
+, 
+int32_t FileType
+, 
+TArray<class FString> Tag
+, 
+TArray<class FString> UserTag
+);
+
+		void RankedByTrend(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+int32_t StartId
+, 
+int32_t Count
+, 
+bool bHasAppAdminAccess
+, 
+int32_t FileType
+, 
+int32_t Days
+, 
+TArray<class FString> Tag
+, 
+TArray<class FString> UserTag
+);
+
+		void RankedByPublicationOrder(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+int32_t StartId
+, 
+int32_t Count
+, 
+bool bHasAppAdminAccess
+, 
+int32_t FileType
+, 
+TArray<class FString> Tag
+, 
+TArray<class FString> UserTag
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionRankedByPublicationOrder
@@ -1175,9 +3725,33 @@ namespace CG
 	class USteamCoreWebAsyncActionRankedByPublicationOrder : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionRankedByPublicationOrder* RankedByPublicationOrderAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, int32_t StartId, int32_t Count, bool bHasAppAdminAccess, int32_t FileType, TArray<class FString> Tag, TArray<class FString> UserTag);
+
+		class USteamCoreWebAsyncActionRankedByPublicationOrder* RankedByPublicationOrderAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+int32_t StartId
+, 
+int32_t Count
+, 
+bool bHasAppAdminAccess
+, 
+int32_t FileType
+, 
+TArray<class FString> Tag
+, 
+TArray<class FString> UserTag
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionRankedByTrend
@@ -1186,9 +3760,35 @@ namespace CG
 	class USteamCoreWebAsyncActionRankedByTrend : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionRankedByTrend* RankedByTrendAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, int32_t StartId, int32_t Count, bool bHasAppAdminAccess, int32_t FileType, int32_t Days, TArray<class FString> Tag, TArray<class FString> UserTag);
+
+		class USteamCoreWebAsyncActionRankedByTrend* RankedByTrendAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+int32_t StartId
+, 
+int32_t Count
+, 
+bool bHasAppAdminAccess
+, 
+int32_t FileType
+, 
+int32_t Days
+, 
+TArray<class FString> Tag
+, 
+TArray<class FString> UserTag
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionRankedByVote
@@ -1197,9 +3797,33 @@ namespace CG
 	class USteamCoreWebAsyncActionRankedByVote : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionRankedByVote* RankedByVoteAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, int32_t StartId, int32_t Count, bool bHasAppAdminAccess, int32_t FileType, TArray<class FString> Tag, TArray<class FString> UserTag);
+
+		class USteamCoreWebAsyncActionRankedByVote* RankedByVoteAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+int32_t StartId
+, 
+int32_t Count
+, 
+bool bHasAppAdminAccess
+, 
+int32_t FileType
+, 
+TArray<class FString> Tag
+, 
+TArray<class FString> UserTag
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionResultSetSummary
@@ -1208,9 +3832,31 @@ namespace CG
 	class USteamCoreWebAsyncActionResultSetSummary : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionResultSetSummary* ResultSetSummaryAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, int32_t StartId, bool bHasAppAdminAccess, int32_t FileType, TArray<class FString> Tag, TArray<class FString> UserTag);
+
+		class USteamCoreWebAsyncActionResultSetSummary* ResultSetSummaryAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+int32_t StartId
+, 
+bool bHasAppAdminAccess
+, 
+int32_t FileType
+, 
+TArray<class FString> Tag
+, 
+TArray<class FString> UserTag
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.WebPublishedItemVoting
@@ -1219,10 +3865,33 @@ namespace CG
 	class UWebPublishedItemVoting : public USteamCoreWebSubsystem
 	{
 	public:
-		void UserVoteSummary(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, TArray<class FString> PublishedFileIDs);
-		void ItemVoteSummary(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, TArray<class FString> PublishedFileIDs);
+
+		void UserVoteSummary(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+TArray<class FString> PublishedFileIDs
+);
+
+		void ItemVoteSummary(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+TArray<class FString> PublishedFileIDs
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionItemVoteSummary
@@ -1231,9 +3900,23 @@ namespace CG
 	class USteamCoreWebAsyncActionItemVoteSummary : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionItemVoteSummary* ItemVoteSummaryAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, TArray<class FString> PublishedFileIDs);
+
+		class USteamCoreWebAsyncActionItemVoteSummary* ItemVoteSummaryAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+TArray<class FString> PublishedFileIDs
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionUserVoteSummary
@@ -1242,9 +3925,21 @@ namespace CG
 	class USteamCoreWebAsyncActionUserVoteSummary : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionUserVoteSummary* UserVoteSummaryAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, TArray<class FString> PublishedFileIDs);
+
+		class USteamCoreWebAsyncActionUserVoteSummary* UserVoteSummaryAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+TArray<class FString> PublishedFileIDs
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.WebRemoteStorage
@@ -1253,16 +3948,95 @@ namespace CG
 	class UWebRemoteStorage : public USteamCoreWebSubsystem
 	{
 	public:
-		void UnsubscribePublishedFile(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& PublishedFileIDs);
-		void SubscribePublishedFile(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& PublishedFileIDs);
-		void SetUGCUsedByGC(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, const class FString& UGCID, int32_t AppID, bool bUsed);
-		void GetUGCFileDetails(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, const class FString& UGCID, int32_t AppID);
-		void GetPublishedFileDetails(const class FScriptDelegate& Callback, const class FString& PublishedFileIDs);
-		void GetCollectionDetails(const class FScriptDelegate& Callback, TArray<class FString> PublishedFileIDs);
-		void EnumerateUserSubscribedFiles(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, int32_t ListType);
-		void EnumerateUserPublishedFiles(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID);
+
+		void UnsubscribePublishedFile(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& PublishedFileIDs
+);
+
+		void SubscribePublishedFile(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& PublishedFileIDs
+);
+
+		void SetUGCUsedByGC(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+const class FString& UGCID
+, 
+int32_t AppID
+, 
+bool bUsed
+);
+
+		void GetUGCFileDetails(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+const class FString& UGCID
+, 
+int32_t AppID
+);
+
+		void GetPublishedFileDetails(
+const class FScriptDelegate& Callback
+, 
+const class FString& PublishedFileIDs
+);
+
+		void GetCollectionDetails(
+const class FScriptDelegate& Callback
+, 
+TArray<class FString> PublishedFileIDs
+);
+
+		void EnumerateUserSubscribedFiles(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+int32_t ListType
+);
+
+		void EnumerateUserPublishedFiles(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionEnumerateUserPublishedFiles
@@ -1271,9 +4045,21 @@ namespace CG
 	class USteamCoreWebAsyncActionEnumerateUserPublishedFiles : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionEnumerateUserPublishedFiles* EnumerateUserPublishedFilesAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID);
+
+		class USteamCoreWebAsyncActionEnumerateUserPublishedFiles* EnumerateUserPublishedFilesAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionEnumerateUserSubscribedFiles
@@ -1282,9 +4068,23 @@ namespace CG
 	class USteamCoreWebAsyncActionEnumerateUserSubscribedFiles : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionEnumerateUserSubscribedFiles* EnumerateUserSubscribedFilesAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, int32_t ListType);
+
+		class USteamCoreWebAsyncActionEnumerateUserSubscribedFiles* EnumerateUserSubscribedFilesAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+int32_t ListType
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetCollectionDetails
@@ -1293,9 +4093,17 @@ namespace CG
 	class USteamCoreWebAsyncActionGetCollectionDetails : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetCollectionDetails* GetCollectionDetailsAsync(class UObject* WorldContextObject, TArray<class FString> PublishedFileIDs);
+
+		class USteamCoreWebAsyncActionGetCollectionDetails* GetCollectionDetailsAsync(
+class UObject* WorldContextObject
+, 
+TArray<class FString> PublishedFileIDs
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetPublishedFileDetails
@@ -1304,9 +4112,17 @@ namespace CG
 	class USteamCoreWebAsyncActionGetPublishedFileDetails : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetPublishedFileDetails* GetPublishedFileDetailsAsync(class UObject* WorldContextObject, const class FString& PublishedFileIDs);
+
+		class USteamCoreWebAsyncActionGetPublishedFileDetails* GetPublishedFileDetailsAsync(
+class UObject* WorldContextObject
+, 
+const class FString& PublishedFileIDs
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetUGCFileDetails
@@ -1315,9 +4131,23 @@ namespace CG
 	class USteamCoreWebAsyncActionGetUGCFileDetails : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetUGCFileDetails* GetUGCFileDetailsAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, const class FString& UGCID, int32_t AppID);
+
+		class USteamCoreWebAsyncActionGetUGCFileDetails* GetUGCFileDetailsAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+const class FString& UGCID
+, 
+int32_t AppID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionSetUGCUsedByGC
@@ -1326,9 +4156,25 @@ namespace CG
 	class USteamCoreWebAsyncActionSetUGCUsedByGC : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionSetUGCUsedByGC* SetUGCUsedByGCAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, const class FString& UGCID, int32_t AppID, bool bUsed);
+
+		class USteamCoreWebAsyncActionSetUGCUsedByGC* SetUGCUsedByGCAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+const class FString& UGCID
+, 
+int32_t AppID
+, 
+bool bUsed
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionSubscribePublishedFile
@@ -1337,9 +4183,23 @@ namespace CG
 	class USteamCoreWebAsyncActionSubscribePublishedFile : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionSubscribePublishedFile* SubscribePublishedFileAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& PublishedFileIDs);
+
+		class USteamCoreWebAsyncActionSubscribePublishedFile* SubscribePublishedFileAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& PublishedFileIDs
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionUnsubscribePublishedFile
@@ -1348,9 +4208,23 @@ namespace CG
 	class USteamCoreWebAsyncActionUnsubscribePublishedFile : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionUnsubscribePublishedFile* UnsubscribePublishedFileAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& PublishedFileIDs);
+
+		class USteamCoreWebAsyncActionUnsubscribePublishedFile* UnsubscribePublishedFileAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& PublishedFileIDs
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.WebSteamCommunity
@@ -1359,9 +4233,31 @@ namespace CG
 	class UWebSteamCommunity : public USteamCoreWebSubsystem
 	{
 	public:
-		void ReportAbuse(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamIdActor, const class FString& SteamIdTarget, int32_t AppID, int32_t AbuseType, int32_t ContentType, const class FString& Description, const class FString& Gid);
+
+		void ReportAbuse(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamIdActor
+, 
+const class FString& SteamIdTarget
+, 
+int32_t AppID
+, 
+int32_t AbuseType
+, 
+int32_t ContentType
+, 
+const class FString& Description
+, 
+const class FString& Gid
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionReportAbuse
@@ -1370,9 +4266,31 @@ namespace CG
 	class USteamCoreWebAsyncActionReportAbuse : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionReportAbuse* ReportAbuseAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamIdActor, const class FString& SteamIdTarget, int32_t AppID, int32_t AbuseType, int32_t ContentType, const class FString& Description, const class FString& Gid);
+
+		class USteamCoreWebAsyncActionReportAbuse* ReportAbuseAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamIdActor
+, 
+const class FString& SteamIdTarget
+, 
+int32_t AppID
+, 
+int32_t AbuseType
+, 
+int32_t ContentType
+, 
+const class FString& Description
+, 
+const class FString& Gid
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.WebSteamEconomy
@@ -1381,16 +4299,121 @@ namespace CG
 	class UWebSteamEconomy : public USteamCoreWebSubsystem
 	{
 	public:
-		void StartTrade(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamIDd, const class FString& SteamId2);
-		void StartAssetTransaction(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& AssetId, int32_t AssetQuantity, const class FString& Currency, const class FString& Language, const class FString& Ipaddress, const class FString& Referer, bool bClientAuth);
-		void GetMarketPrices(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID);
-		void GetExportedAssetsForUser(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& ContextId);
-		void GetAssetPrices(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& Currency, const class FString& Language);
-		void GetAssetClassInfo(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& Language, int32_t ClassCount, const class FString& ClassId, const class FString& InstanceID);
-		void FinalizeAssetTransaction(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& TxnId, const class FString& Language);
-		void CanTrade(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& TargetId);
+
+		void StartTrade(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamIDd
+, 
+const class FString& SteamId2
+);
+
+		void StartAssetTransaction(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+const class FString& AssetId
+, 
+int32_t AssetQuantity
+, 
+const class FString& Currency
+, 
+const class FString& Language
+, 
+const class FString& Ipaddress
+, 
+const class FString& Referer
+, 
+bool bClientAuth
+);
+
+		void GetMarketPrices(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+);
+
+		void GetExportedAssetsForUser(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& ContextId
+);
+
+		void GetAssetPrices(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& Currency
+, 
+const class FString& Language
+);
+
+		void GetAssetClassInfo(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& Language
+, 
+int32_t ClassCount
+, 
+const class FString& ClassId
+, 
+const class FString& InstanceID
+);
+
+		void FinalizeAssetTransaction(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+const class FString& TxnId
+, 
+const class FString& Language
+);
+
+		void CanTrade(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+const class FString& TargetId
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionCanTrade
@@ -1399,9 +4422,23 @@ namespace CG
 	class USteamCoreWebAsyncActionCanTrade : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionCanTrade* CanTradeAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& TargetId);
+
+		class USteamCoreWebAsyncActionCanTrade* CanTradeAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+const class FString& TargetId
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionFinalizeAssetTransaction
@@ -1410,9 +4447,25 @@ namespace CG
 	class USteamCoreWebAsyncActionFinalizeAssetTransaction : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionFinalizeAssetTransaction* FinalizeAssetTransactionAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& TxnId, const class FString& Language);
+
+		class USteamCoreWebAsyncActionFinalizeAssetTransaction* FinalizeAssetTransactionAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+const class FString& TxnId
+, 
+const class FString& Language
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetAssetClassInfo
@@ -1421,9 +4474,27 @@ namespace CG
 	class USteamCoreWebAsyncActionGetAssetClassInfo : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetAssetClassInfo* GetAssetClassInfoAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& Language, int32_t ClassCount, const class FString& ClassId, const class FString& InstanceID);
+
+		class USteamCoreWebAsyncActionGetAssetClassInfo* GetAssetClassInfoAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& Language
+, 
+int32_t ClassCount
+, 
+const class FString& ClassId
+, 
+const class FString& InstanceID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetAssetPrices
@@ -1432,9 +4503,23 @@ namespace CG
 	class USteamCoreWebAsyncActionGetAssetPrices : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetAssetPrices* GetAssetPricesAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& Currency, const class FString& Language);
+
+		class USteamCoreWebAsyncActionGetAssetPrices* GetAssetPricesAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& Currency
+, 
+const class FString& Language
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetExportedAssetsForUser
@@ -1443,9 +4528,23 @@ namespace CG
 	class USteamCoreWebAsyncActionGetExportedAssetsForUser : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetExportedAssetsForUser* GetExportedAssetsForUserAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& ContextId);
+
+		class USteamCoreWebAsyncActionGetExportedAssetsForUser* GetExportedAssetsForUserAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& ContextId
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetMarketPrices
@@ -1454,9 +4553,19 @@ namespace CG
 	class USteamCoreWebAsyncActionGetMarketPrices : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetMarketPrices* GetMarketPricesAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID);
+
+		class USteamCoreWebAsyncActionGetMarketPrices* GetMarketPricesAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionStartAssetTransaction
@@ -1465,9 +4574,35 @@ namespace CG
 	class USteamCoreWebAsyncActionStartAssetTransaction : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionStartAssetTransaction* StartAssetTransactionAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& AssetId, int32_t AssetQuantity, const class FString& Currency, const class FString& Language, const class FString& Ipaddress, const class FString& Referer, bool bClientAuth);
+
+		class USteamCoreWebAsyncActionStartAssetTransaction* StartAssetTransactionAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+const class FString& AssetId
+, 
+int32_t AssetQuantity
+, 
+const class FString& Currency
+, 
+const class FString& Language
+, 
+const class FString& Ipaddress
+, 
+const class FString& Referer
+, 
+bool bClientAuth
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionStartTrade
@@ -1476,9 +4611,23 @@ namespace CG
 	class USteamCoreWebAsyncActionStartTrade : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionStartTrade* StartTradeAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamId1, const class FString& SteamId2);
+
+		class USteamCoreWebAsyncActionStartTrade* StartTradeAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamId1
+, 
+const class FString& SteamId2
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.WebSteamGameServerStats
@@ -1487,9 +4636,27 @@ namespace CG
 	class UWebSteamGameServerStats : public USteamCoreWebSubsystem
 	{
 	public:
-		void GetGameServerPlayerStatsForGame(const class FScriptDelegate& Callback, const class FString& Key, const class FString& GameID, int32_t AppID, const class FString& RangeStart, const class FString& RangeEnd, int32_t MaxResults);
+
+		void GetGameServerPlayerStatsForGame(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& GameID
+, 
+int32_t AppID
+, 
+const class FString& RangeStart
+, 
+const class FString& RangeEnd
+, 
+int32_t MaxResults
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.WebSteamNews
@@ -1498,10 +4665,41 @@ namespace CG
 	class UWebSteamNews : public USteamCoreWebSubsystem
 	{
 	public:
-		void GetNewsForAppAuthed(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, int32_t MaxLength, TArray<class FString> Feeds, int32_t EndDate, int32_t Count);
-		void GetNewsForApp(const class FScriptDelegate& Callback, int32_t AppID, int32_t MaxLength, TArray<class FString> Feeds, int32_t EndDate, int32_t Count);
+
+		void GetNewsForAppAuthed(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t MaxLength
+, 
+TArray<class FString> Feeds
+, 
+int32_t EndDate
+, 
+int32_t Count
+);
+
+		void GetNewsForApp(
+const class FScriptDelegate& Callback
+, 
+int32_t AppID
+, 
+int32_t MaxLength
+, 
+TArray<class FString> Feeds
+, 
+int32_t EndDate
+, 
+int32_t Count
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetNewsForApp
@@ -1510,9 +4708,25 @@ namespace CG
 	class USteamCoreWebAsyncActionGetNewsForApp : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetNewsForApp* GetNewsForAppAsync(class UObject* WorldContextObject, int32_t AppID, int32_t MaxLength, TArray<class FString> Feeds, int32_t EndDate, int32_t Count);
+
+		class USteamCoreWebAsyncActionGetNewsForApp* GetNewsForAppAsync(
+class UObject* WorldContextObject
+, 
+int32_t AppID
+, 
+int32_t MaxLength
+, 
+TArray<class FString> Feeds
+, 
+int32_t EndDate
+, 
+int32_t Count
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetNewsForAppAuthed
@@ -1521,9 +4735,27 @@ namespace CG
 	class USteamCoreWebAsyncActionGetNewsForAppAuthed : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetNewsForAppAuthed* GetNewsForAppAuthedAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, int32_t MaxLength, TArray<class FString> Feeds, int32_t EndDate, int32_t Count);
+
+		class USteamCoreWebAsyncActionGetNewsForAppAuthed* GetNewsForAppAuthedAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t MaxLength
+, 
+TArray<class FString> Feeds
+, 
+int32_t EndDate
+, 
+int32_t Count
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.WebSteamUser
@@ -1532,18 +4764,109 @@ namespace CG
 	class UWebSteamUser : public USteamCoreWebSubsystem
 	{
 	public:
-		void ResolveVanityURL(const class FScriptDelegate& Callback, const class FString& Key, const class FString& VanityURL, EVanityUrlType URLType);
-		void GrantPackage(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t PackageId, const class FString& Ipaddress, const class FString& ThirdPartyKey, int32_t ThirdPartyAppId);
-		void GetUserGroupList(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID);
-		void GetPublisherAppOwnershipChanges(const class FScriptDelegate& Callback, const class FString& Key, const class FString& PackageRowVersion, const class FString& CDKeyRowVersion);
-		void GetPublisherAppOwnership(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID);
-		void GetPlayerSummaries(const class FScriptDelegate& Callback, const class FString& Key, TArray<class FString> SteamIDs);
-		void GetPlayerBans(const class FScriptDelegate& Callback, const class FString& Key, TArray<class FString> SteamIDs);
-		void GetFriendList(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, const class FString& Relationship);
-		void GetAppPriceInfo(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, TArray<int32_t> AppIDs);
-		void CheckAppOwnership(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID);
+
+		void ResolveVanityURL(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& VanityURL
+, 
+EVanityUrlType URLType
+);
+
+		void GrantPackage(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t PackageId
+, 
+const class FString& Ipaddress
+, 
+const class FString& ThirdPartyKey
+, 
+int32_t ThirdPartyAppId
+);
+
+		void GetUserGroupList(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+);
+
+		void GetPublisherAppOwnershipChanges(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& PackageRowVersion
+, 
+const class FString& CDKeyRowVersion
+);
+
+		void GetPublisherAppOwnership(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+);
+
+		void GetPlayerSummaries(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+TArray<class FString> SteamIDs
+);
+
+		void GetPlayerBans(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+TArray<class FString> SteamIDs
+);
+
+		void GetFriendList(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+const class FString& Relationship
+);
+
+		void GetAppPriceInfo(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+TArray<int32_t> AppIDs
+);
+
+		void CheckAppOwnership(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionCheckAppOwnership
@@ -1552,9 +4875,21 @@ namespace CG
 	class USteamCoreWebAsyncActionCheckAppOwnership : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionCheckAppOwnership* CheckAppOwnershipAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID);
+
+		class USteamCoreWebAsyncActionCheckAppOwnership* CheckAppOwnershipAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetAppPriceInfo
@@ -1563,9 +4898,21 @@ namespace CG
 	class USteamCoreWebAsyncActionGetAppPriceInfo : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetAppPriceInfo* GetAppPriceInfoAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, TArray<int32_t> AppIDs);
+
+		class USteamCoreWebAsyncActionGetAppPriceInfo* GetAppPriceInfoAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+TArray<int32_t> AppIDs
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetFriendList
@@ -1574,9 +4921,21 @@ namespace CG
 	class USteamCoreWebAsyncActionGetFriendList : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetFriendList* GetFriendListAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, const class FString& Relationship);
+
+		class USteamCoreWebAsyncActionGetFriendList* GetFriendListAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+const class FString& Relationship
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetPlayerBans
@@ -1585,9 +4944,19 @@ namespace CG
 	class USteamCoreWebAsyncActionGetPlayerBans : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetPlayerBans* GetPlayerBansAsync(class UObject* WorldContextObject, const class FString& Key, TArray<class FString> SteamIDs);
+
+		class USteamCoreWebAsyncActionGetPlayerBans* GetPlayerBansAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+TArray<class FString> SteamIDs
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetPlayerSummaries
@@ -1596,9 +4965,19 @@ namespace CG
 	class USteamCoreWebAsyncActionGetPlayerSummaries : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetPlayerSummaries* GetPlayerSummariesAsync(class UObject* WorldContextObject, const class FString& Key, TArray<class FString> SteamIDs);
+
+		class USteamCoreWebAsyncActionGetPlayerSummaries* GetPlayerSummariesAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+TArray<class FString> SteamIDs
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetPublisherAppOwnership
@@ -1607,9 +4986,19 @@ namespace CG
 	class USteamCoreWebAsyncActionGetPublisherAppOwnership : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetPublisherAppOwnership* GetPublisherAppOwnershipAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID);
+
+		class USteamCoreWebAsyncActionGetPublisherAppOwnership* GetPublisherAppOwnershipAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetPublisherAppOwnershipChanges
@@ -1618,9 +5007,21 @@ namespace CG
 	class USteamCoreWebAsyncActionGetPublisherAppOwnershipChanges : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetPublisherAppOwnershipChanges* GetPublisherAppOwnershipChangesAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& PackageRowVersion, const class FString& CDKeyRowVersion);
+
+		class USteamCoreWebAsyncActionGetPublisherAppOwnershipChanges* GetPublisherAppOwnershipChangesAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& PackageRowVersion
+, 
+const class FString& CDKeyRowVersion
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetUserGroupList
@@ -1629,9 +5030,19 @@ namespace CG
 	class USteamCoreWebAsyncActionGetUserGroupList : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetUserGroupList* GetUserGroupListAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID);
+
+		class USteamCoreWebAsyncActionGetUserGroupList* GetUserGroupListAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGrantPackage
@@ -1640,9 +5051,27 @@ namespace CG
 	class USteamCoreWebAsyncActionGrantPackage : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGrantPackage* GrantPackageAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t PackageId, const class FString& Ipaddress, const class FString& ThirdPartyKey, int32_t ThirdPartyAppId);
+
+		class USteamCoreWebAsyncActionGrantPackage* GrantPackageAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t PackageId
+, 
+const class FString& Ipaddress
+, 
+const class FString& ThirdPartyKey
+, 
+int32_t ThirdPartyAppId
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionResolveVanityURL
@@ -1651,9 +5080,21 @@ namespace CG
 	class USteamCoreWebAsyncActionResolveVanityURL : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionResolveVanityURL* ResolveVanityURLAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& VanityURL, EVanityUrlType URLType);
+
+		class USteamCoreWebAsyncActionResolveVanityURL* ResolveVanityURLAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& VanityURL
+, 
+EVanityUrlType URLType
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.WebUserAuth
@@ -1662,10 +5103,31 @@ namespace CG
 	class UWebUserAuth : public USteamCoreWebSubsystem
 	{
 	public:
-		void AuthenticateUserTicket(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& Ticket);
-		void AuthenticateUser(const class FScriptDelegate& Callback, const class FString& SteamID, TArray<unsigned char> SessionKey, TArray<unsigned char> EncryptedLoginKey);
+
+		void AuthenticateUserTicket(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& Ticket
+);
+
+		void AuthenticateUser(
+const class FScriptDelegate& Callback
+, 
+const class FString& SteamID
+, 
+TArray<unsigned char> SessionKey
+, 
+TArray<unsigned char> EncryptedLoginKey
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionAuthenticateUser
@@ -1674,9 +5136,21 @@ namespace CG
 	class USteamCoreWebAsyncActionAuthenticateUser : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionAuthenticateUser* AuthenticateUserAsync(class UObject* WorldContextObject, const class FString& SteamID, TArray<unsigned char> SessionKey, TArray<unsigned char> EncryptedLoginKey);
+
+		class USteamCoreWebAsyncActionAuthenticateUser* AuthenticateUserAsync(
+class UObject* WorldContextObject
+, 
+const class FString& SteamID
+, 
+TArray<unsigned char> SessionKey
+, 
+TArray<unsigned char> EncryptedLoginKey
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionAuthenticateUserTicket
@@ -1685,9 +5159,21 @@ namespace CG
 	class USteamCoreWebAsyncActionAuthenticateUserTicket : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionAuthenticateUserTicket* AuthenticateUserTicketAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& Ticket);
+
+		class USteamCoreWebAsyncActionAuthenticateUserTicket* AuthenticateUserTicketAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& Ticket
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.WebUserStats
@@ -1696,15 +5182,83 @@ namespace CG
 	class UWebUserStats : public USteamCoreWebSubsystem
 	{
 	public:
-		void SetUserStatsForGame(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, TArray<class FString> Names, TArray<int32_t> Values);
-		void GetUserStatsForGame(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID);
-		void GetSchemaForGame(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& Language);
-		void GetPlayerAchievements(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& Language);
-		void GetNumberOfCurrentPlayers(const class FScriptDelegate& Callback, int32_t AppID);
-		void GetGlobalStatsForGame(const class FScriptDelegate& Callback, int32_t AppID, TArray<class FString> Names, int32_t StartDate, int32_t EndDate);
-		void GetGlobalAchievementPercentagesForApp(const class FScriptDelegate& Callback, const class FString& GameID);
+
+		void SetUserStatsForGame(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+TArray<class FString> Names
+, 
+TArray<int32_t> Values
+);
+
+		void GetUserStatsForGame(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+);
+
+		void GetSchemaForGame(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& Language
+);
+
+		void GetPlayerAchievements(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& Language
+);
+
+		void GetNumberOfCurrentPlayers(
+const class FScriptDelegate& Callback
+, 
+int32_t AppID
+);
+
+		void GetGlobalStatsForGame(
+const class FScriptDelegate& Callback
+, 
+int32_t AppID
+, 
+TArray<class FString> Names
+, 
+int32_t StartDate
+, 
+int32_t EndDate
+);
+
+		void GetGlobalAchievementPercentagesForApp(
+const class FScriptDelegate& Callback
+, 
+const class FString& GameID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetGlobalAchievementPercentagesForApp
@@ -1713,9 +5267,17 @@ namespace CG
 	class USteamCoreWebAsyncActionGetGlobalAchievementPercentagesForApp : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetGlobalAchievementPercentagesForApp* GetGlobalAchievementPercentagesForAppAsync(class UObject* WorldContextObject, const class FString& GameID);
+
+		class USteamCoreWebAsyncActionGetGlobalAchievementPercentagesForApp* GetGlobalAchievementPercentagesForAppAsync(
+class UObject* WorldContextObject
+, 
+const class FString& GameID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetGlobalStatsForGame
@@ -1724,9 +5286,23 @@ namespace CG
 	class USteamCoreWebAsyncActionGetGlobalStatsForGame : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetGlobalStatsForGame* GetGlobalStatsForGameAsync(class UObject* WorldContextObject, int32_t AppID, TArray<class FString> Names, int32_t StartDate, int32_t EndDate);
+
+		class USteamCoreWebAsyncActionGetGlobalStatsForGame* GetGlobalStatsForGameAsync(
+class UObject* WorldContextObject
+, 
+int32_t AppID
+, 
+TArray<class FString> Names
+, 
+int32_t StartDate
+, 
+int32_t EndDate
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetNumberOfCurrentPlayers
@@ -1735,9 +5311,17 @@ namespace CG
 	class USteamCoreWebAsyncActionGetNumberOfCurrentPlayers : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetNumberOfCurrentPlayers* GetNumberOfCurrentPlayersAsync(class UObject* WorldContextObject, int32_t AppID);
+
+		class USteamCoreWebAsyncActionGetNumberOfCurrentPlayers* GetNumberOfCurrentPlayersAsync(
+class UObject* WorldContextObject
+, 
+int32_t AppID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetPlayerAchievements
@@ -1746,9 +5330,23 @@ namespace CG
 	class USteamCoreWebAsyncActionGetPlayerAchievements : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetPlayerAchievements* GetPlayerAchievementsAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& Language);
+
+		class USteamCoreWebAsyncActionGetPlayerAchievements* GetPlayerAchievementsAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& Language
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetSchemaForGame
@@ -1757,9 +5355,23 @@ namespace CG
 	class USteamCoreWebAsyncActionGetSchemaForGame : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetSchemaForGame* GetSchemaForGameAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& Language);
+
+		class USteamCoreWebAsyncActionGetSchemaForGame* GetSchemaForGameAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& Language
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionGetUserStatsForGame
@@ -1768,9 +5380,21 @@ namespace CG
 	class USteamCoreWebAsyncActionGetUserStatsForGame : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionGetUserStatsForGame* GetUserStatsForGameAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID);
+
+		class USteamCoreWebAsyncActionGetUserStatsForGame* GetUserStatsForGameAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SteamCoreWeb.SteamCoreWebAsyncActionSetUserStatsForGame
@@ -1779,7 +5403,21 @@ namespace CG
 	class USteamCoreWebAsyncActionSetUserStatsForGame : public USteamCoreWebAsyncAction
 	{
 	public:
-		class USteamCoreWebAsyncActionSetUserStatsForGame* SetUserStatsForGameAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, TArray<class FString> Names, TArray<int32_t> Values);
+
+		class USteamCoreWebAsyncActionSetUserStatsForGame* SetUserStatsForGameAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+TArray<class FString> Names
+, 
+TArray<int32_t> Values
+);
+
 		static UClass* StaticClass();
 	};
 

@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+
 	/**
 	 * Enum LuminRuntimeSettings.ELuminPrivilege
 	 */
@@ -65,6 +66,8 @@ namespace CG
 		MAX                            = 43
 	};
 
+
+
 	/**
 	 * Enum LuminRuntimeSettings.ELuminFrameTimingHint
 	 */
@@ -76,6 +79,8 @@ namespace CG
 		FPS01       = 3,
 		MAX         = 4
 	};
+
+
 
 	/**
 	 * Enum LuminRuntimeSettings.ELuminComponentType
@@ -90,6 +95,8 @@ namespace CG
 		SystemUI       = 5,
 		MAX            = 6
 	};
+
+
 
 	/**
 	 * Enum LuminRuntimeSettings.ELuminComponentSubElementType
@@ -107,6 +114,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+
 	/**
 	 * ScriptStruct LuminRuntimeSettings.LocalizedIconInfo
 	 * Size -> 0x0030
@@ -114,10 +122,18 @@ namespace CG
 	struct FLocalizedIconInfo
 	{
 	public:
-		class FString                                              LanguageCode;                                            // 0x0000(0x0010) Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FDirectoryPath                                      IconModelPath;                                           // 0x0010(0x0010) Edit, Config, GlobalConfig, NativeAccessSpecifierPublic
-		struct FDirectoryPath                                      IconPortalPath;                                          // 0x0020(0x0010) Edit, Config, GlobalConfig, NativeAccessSpecifierPublic
+
+		class FString                                            LanguageCode;                                            // 0x0000(0x0010) Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FDirectoryPath                                    IconModelPath;                                           // 0x0010(0x0010) Edit, Config, GlobalConfig, NativeAccessSpecifierPublic
+
+
+		struct FDirectoryPath                                    IconPortalPath;                                          // 0x0020(0x0010) Edit, Config, GlobalConfig, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct LuminRuntimeSettings.LocalizedIconInfos
@@ -126,8 +142,12 @@ namespace CG
 	struct FLocalizedIconInfos
 	{
 	public:
-		TArray<struct FLocalizedIconInfo>                          IconData;                                                // 0x0000(0x0010) Edit, ZeroConstructor, Config, GlobalConfig, NativeAccessSpecifierPublic
+
+		TArray<struct FLocalizedIconInfo>                        IconData;                                                // 0x0000(0x0010) Edit, ZeroConstructor, Config, GlobalConfig, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct LuminRuntimeSettings.LuminComponentSubElement
@@ -136,10 +156,18 @@ namespace CG
 	struct FLuminComponentSubElement
 	{
 	public:
-		ELuminComponentSubElementType                              ElementType;                                             // 0x0000(0x0001) Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_AXPY[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FString                                              Value;                                                   // 0x0008(0x0010) Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ELuminComponentSubElementType                            ElementType;                                             // 0x0000(0x0001) Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_MRAW[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		class FString                                            Value;                                                   // 0x0008(0x0010) Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct LuminRuntimeSettings.LuminComponentElement
@@ -148,13 +176,27 @@ namespace CG
 	struct FLuminComponentElement
 	{
 	public:
-		class FString                                              Name;                                                    // 0x0000(0x0010) Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                              VisibleName;                                             // 0x0010(0x0010) Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                              ExecutableName;                                          // 0x0020(0x0010) Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ELuminComponentType                                        ComponentType;                                           // 0x0030(0x0001) Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_EREG[0x7];                                   // 0x0031(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<struct FLuminComponentSubElement>                   ExtraComponentSubElements;                               // 0x0038(0x0010) Edit, ZeroConstructor, Config, GlobalConfig, NativeAccessSpecifierPublic
+
+		class FString                                            Name;                                                    // 0x0000(0x0010) Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FString                                            VisibleName;                                             // 0x0010(0x0010) Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FString                                            ExecutableName;                                          // 0x0020(0x0010) Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		ELuminComponentType                                      ComponentType;                                           // 0x0030(0x0001) Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_DVLW[0x7];                                   // 0x0031(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		TArray<struct FLuminComponentSubElement>                 ExtraComponentSubElements;                               // 0x0038(0x0010) Edit, ZeroConstructor, Config, GlobalConfig, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct LuminRuntimeSettings.LocalizedAppName
@@ -163,8 +205,12 @@ namespace CG
 	struct FLocalizedAppName
 	{
 	public:
-		class FString                                              LanguageCode;                                            // 0x0000(0x0010) Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                              AppName;                                                 // 0x0010(0x0010) Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		class FString                                            LanguageCode;                                            // 0x0000(0x0010) Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FString                                            AppName;                                                 // 0x0010(0x0010) Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
 
 }

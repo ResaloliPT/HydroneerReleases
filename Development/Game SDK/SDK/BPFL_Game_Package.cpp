@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,46 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BPFL_Game.BPFL_Game_C.BounceResource
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class ABP_ParentItem_C*                            Item                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		struct FVector                                     DirectionIfNotUp                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		class UObject*                                     __WorldContext                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void UBPFL_Game_C::BounceResource(
+class ABP_ParentItem_C* Item
+, 
+const struct FVector& DirectionIfNotUp
+, 
+class UObject* __WorldContext
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BPFL_Game.BPFL_Game_C.BounceResource");
+		
+		struct
+		{
+			class ABP_ParentItem_C*                            Item;
+			struct FVector                                     DirectionIfNotUp;
+			class UObject*                                     __WorldContext;
+		} params;
+		params.Item = Item;
+		params.DirectionIfNotUp = DirectionIfNotUp;
+		params.__WorldContext = __WorldContext;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20,7 +60,13 @@ namespace CG
 	 * 		class UObject*                                     __WorldContext                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class FString                                      PlayerName                                                 (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 	 */
-	void UBPFL_Game_C::GetPlayerName(int32_t SessionID, class UObject* __WorldContext, class FString* PlayerName)
+	void UBPFL_Game_C::GetPlayerName(
+int32_t SessionID
+, 
+class UObject* __WorldContext
+, 
+class FString* PlayerName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -43,6 +89,8 @@ namespace CG
 			*PlayerName = params.PlayerName;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -55,7 +103,17 @@ namespace CG
 	 * 		class FString                                      Title                                                      (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 	 * 		class FString                                      Description                                                (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 	 */
-	void UBPFL_Game_C::FindMetadata(const class FString& Directory, class UObject* __WorldContext, class FString* Version, class FString* Title, class FString* Description)
+	void UBPFL_Game_C::FindMetadata(
+const class FString& Directory
+, 
+class UObject* __WorldContext
+, 
+class FString* Version
+, 
+class FString* Title
+, 
+class FString* Description
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -84,6 +142,8 @@ namespace CG
 			*Description = params.Description;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -94,7 +154,13 @@ namespace CG
 	 * 		class UObject*                                     __WorldContext                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		TArray<class AActor*>                              AttachedActors                                             (Parm, OutParm)
 	 */
-	void UBPFL_Game_C::GetAllAttachedActors(class UStaticMeshComponent* StaticMesh, class UObject* __WorldContext, TArray<class AActor*>* AttachedActors)
+	void UBPFL_Game_C::GetAllAttachedActors(
+class UStaticMeshComponent* StaticMesh
+, 
+class UObject* __WorldContext
+, 
+TArray<class AActor*>* AttachedActors
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -117,6 +183,8 @@ namespace CG
 			*AttachedActors = params.AttachedActors;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -126,7 +194,11 @@ namespace CG
 	 * 		class UObject*                                     __WorldContext                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class USaveGame_UserData_C*                        UserData                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	 */
-	void UBPFL_Game_C::GetSaveGameUserData(class UObject* __WorldContext, class USaveGame_UserData_C** UserData)
+	void UBPFL_Game_C::GetSaveGameUserData(
+class UObject* __WorldContext
+, 
+class USaveGame_UserData_C** UserData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -147,6 +219,8 @@ namespace CG
 			*UserData = params.UserData;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -157,7 +231,13 @@ namespace CG
 	 * 		class UObject*                                     __WorldContext                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class ABP_GameController_C*                        Controller                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UBPFL_Game_C::GetBP_GameController(int32_t PlayerIndex, class UObject* __WorldContext, class ABP_GameController_C** Controller)
+	void UBPFL_Game_C::GetBP_GameController(
+int32_t PlayerIndex
+, 
+class UObject* __WorldContext
+, 
+class ABP_GameController_C** Controller
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -180,6 +260,8 @@ namespace CG
 			*Controller = params.Controller;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -189,7 +271,11 @@ namespace CG
 	 * 		class UObject*                                     __WorldContext                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class ABP_GameState_C*                             GameState                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UBPFL_Game_C::GetBP_GameState(class UObject* __WorldContext, class ABP_GameState_C** GameState)
+	void UBPFL_Game_C::GetBP_GameState(
+class UObject* __WorldContext
+, 
+class ABP_GameState_C** GameState
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -210,6 +296,8 @@ namespace CG
 			*GameState = params.GameState;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -219,7 +307,11 @@ namespace CG
 	 * 		class UObject*                                     __WorldContext                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class UBP_GameInstance_C*                          GameInstance                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UBPFL_Game_C::GetBP_GameInstance(class UObject* __WorldContext, class UBP_GameInstance_C** GameInstance)
+	void UBPFL_Game_C::GetBP_GameInstance(
+class UObject* __WorldContext
+, 
+class UBP_GameInstance_C** GameInstance
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -240,6 +332,8 @@ namespace CG
 			*GameInstance = params.GameInstance;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -249,7 +343,11 @@ namespace CG
 	 * 		class UObject*                                     __WorldContext                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class AGM_Hydroneer_C*                             GM_Hydroneer                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	 */
-	void UBPFL_Game_C::GetGM_Hydroneer(class UObject* __WorldContext, class AGM_Hydroneer_C** GM_Hydroneer)
+	void UBPFL_Game_C::GetGM_Hydroneer(
+class UObject* __WorldContext
+, 
+class AGM_Hydroneer_C** GM_Hydroneer
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -270,10 +368,12 @@ namespace CG
 			*GM_Hydroneer = params.GM_Hydroneer;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBPFL_Game_C.StaticClass
+	 * 		Name   -> PredefinedFunction UBPFL_Game_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBPFL_Game_C::StaticClass()
@@ -283,6 +383,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass BPFL_Game.BPFL_Game_C");
 		return ptr;
 	}
+
 
 }
 

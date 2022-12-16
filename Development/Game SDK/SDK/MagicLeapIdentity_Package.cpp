@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19,7 +20,11 @@ namespace CG
 	 * 		EMagicLeapIdentityError                            ResultCode                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FMagicLeapIdentityAttribute>         AttributeValue                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UMagicLeapIdentity::RequestIdentityAttributeValueDelegate__DelegateSignature(EMagicLeapIdentityError ResultCode, TArray<struct FMagicLeapIdentityAttribute> AttributeValue)
+	void UMagicLeapIdentity::RequestIdentityAttributeValueDelegate__DelegateSignature(
+EMagicLeapIdentityError ResultCode
+, 
+TArray<struct FMagicLeapIdentityAttribute> AttributeValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -38,6 +43,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -47,7 +54,11 @@ namespace CG
 	 * 		TArray<EMagicLeapIdentityKey>                      RequestedAttributeList                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		class FScriptDelegate                              ResultDelegate                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	EMagicLeapIdentityError UMagicLeapIdentity::RequestAttributeValueAsync(TArray<EMagicLeapIdentityKey> RequestedAttributeList, const class FScriptDelegate& ResultDelegate)
+	EMagicLeapIdentityError UMagicLeapIdentity::RequestAttributeValueAsync(
+TArray<EMagicLeapIdentityKey> RequestedAttributeList
+, 
+const class FScriptDelegate& ResultDelegate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -68,6 +79,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -77,7 +90,11 @@ namespace CG
 	 * 		TArray<EMagicLeapIdentityKey>                      RequestedAttributeList                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FMagicLeapIdentityAttribute>         RequestedAttributeValues                                   (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	EMagicLeapIdentityError UMagicLeapIdentity::RequestAttributeValue(TArray<EMagicLeapIdentityKey> RequestedAttributeList, TArray<struct FMagicLeapIdentityAttribute>* RequestedAttributeValues)
+	EMagicLeapIdentityError UMagicLeapIdentity::RequestAttributeValue(
+TArray<EMagicLeapIdentityKey> RequestedAttributeList
+, 
+TArray<struct FMagicLeapIdentityAttribute>* RequestedAttributeValues
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -100,6 +117,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -109,7 +128,11 @@ namespace CG
 	 * 		EMagicLeapIdentityError                            ResultCode                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<EMagicLeapIdentityKey>                      AttributesUpdatedSuccessfully                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UMagicLeapIdentity::ModifyIdentityAttributeValueDelegate__DelegateSignature(EMagicLeapIdentityError ResultCode, TArray<EMagicLeapIdentityKey> AttributesUpdatedSuccessfully)
+	void UMagicLeapIdentity::ModifyIdentityAttributeValueDelegate__DelegateSignature(
+EMagicLeapIdentityError ResultCode
+, 
+TArray<EMagicLeapIdentityKey> AttributesUpdatedSuccessfully
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -128,6 +151,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -136,7 +161,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FScriptDelegate                              ResultDelegate                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UMagicLeapIdentity::GetAllAvailableAttributesAsync(const class FScriptDelegate& ResultDelegate)
+	void UMagicLeapIdentity::GetAllAvailableAttributesAsync(
+const class FScriptDelegate& ResultDelegate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -153,6 +180,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -161,7 +190,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<EMagicLeapIdentityKey>                      AvailableAttributes                                        (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	EMagicLeapIdentityError UMagicLeapIdentity::GetAllAvailableAttributes(TArray<EMagicLeapIdentityKey>* AvailableAttributes)
+	EMagicLeapIdentityError UMagicLeapIdentity::GetAllAvailableAttributes(
+TArray<EMagicLeapIdentityKey>* AvailableAttributes
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -182,6 +213,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -191,7 +224,11 @@ namespace CG
 	 * 		EMagicLeapIdentityError                            ResultCode                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<EMagicLeapIdentityKey>                      AvailableAttributes                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UMagicLeapIdentity::AvailableIdentityAttributesDelegate__DelegateSignature(EMagicLeapIdentityError ResultCode, TArray<EMagicLeapIdentityKey> AvailableAttributes)
+	void UMagicLeapIdentity::AvailableIdentityAttributesDelegate__DelegateSignature(
+EMagicLeapIdentityError ResultCode
+, 
+TArray<EMagicLeapIdentityKey> AvailableAttributes
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -210,10 +247,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMagicLeapIdentity.StaticClass
+	 * 		Name   -> PredefinedFunction UMagicLeapIdentity.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMagicLeapIdentity::StaticClass()
@@ -223,6 +262,7 @@ namespace CG
 			ptr = UObject::FindClass("Class MagicLeapIdentity.MagicLeapIdentity");
 		return ptr;
 	}
+
 
 }
 

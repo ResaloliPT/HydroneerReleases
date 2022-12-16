@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -30,6 +31,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -52,6 +55,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -60,7 +65,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              VolumeMultiplier                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponent::SetVolumeMultiplier(float VolumeMultiplier)
+	void USynthComponent::SetVolumeMultiplier(
+float VolumeMultiplier
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -77,6 +84,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -86,7 +95,11 @@ namespace CG
 	 * 		class USoundSubmixBase*                            Submix                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              SendLevel                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponent::SetSubmixSend(class USoundSubmixBase* Submix, float SendLevel)
+	void USynthComponent::SetSubmixSend(
+class USoundSubmixBase* Submix
+, 
+float SendLevel
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -105,6 +118,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -113,7 +128,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InLowPassFilterFrequency                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponent::SetLowPassFilterFrequency(float InLowPassFilterFrequency)
+	void USynthComponent::SetLowPassFilterFrequency(
+float InLowPassFilterFrequency
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -130,6 +147,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -138,7 +157,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               InLowPassFilterEnabled                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponent::SetLowPassFilterEnabled(bool InLowPassFilterEnabled)
+	void USynthComponent::SetLowPassFilterEnabled(
+bool InLowPassFilterEnabled
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -154,6 +175,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -178,10 +201,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USynthComponent.StaticClass
+	 * 		Name   -> PredefinedFunction USynthComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USynthComponent::StaticClass()
@@ -192,10 +217,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAudioGenerator.StaticClass
+	 * 		Name   -> PredefinedFunction UAudioGenerator.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAudioGenerator::StaticClass()
@@ -206,6 +233,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -214,7 +243,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InMegabytesToFree                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float UAudioMixerBlueprintLibrary::TrimAudioCache(float InMegabytesToFree)
+	float UAudioMixerBlueprintLibrary::TrimAudioCache(
+float InMegabytesToFree
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -233,6 +264,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -246,7 +279,19 @@ namespace CG
 	 * 		class USoundSubmix*                                SubmixToRecord                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class USoundWave*                                  ExistingSoundWaveToOverwrite                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USoundWave* UAudioMixerBlueprintLibrary::StopRecordingOutput(class UObject* WorldContextObject, EAudioRecordingExportType ExportType, const class FString& Name, const class FString& Path, class USoundSubmix* SubmixToRecord, class USoundWave* ExistingSoundWaveToOverwrite)
+	class USoundWave* UAudioMixerBlueprintLibrary::StopRecordingOutput(
+class UObject* WorldContextObject
+, 
+EAudioRecordingExportType ExportType
+, 
+const class FString& Name
+, 
+const class FString& Path
+, 
+class USoundSubmix* SubmixToRecord
+, 
+class USoundWave* ExistingSoundWaveToOverwrite
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -275,6 +320,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -284,7 +331,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UAudioBus*                                   AudioBus                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAudioMixerBlueprintLibrary::StopAudioBus(class UObject* WorldContextObject, class UAudioBus* AudioBus)
+	void UAudioMixerBlueprintLibrary::StopAudioBus(
+class UObject* WorldContextObject
+, 
+class UAudioBus* AudioBus
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -303,6 +354,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -312,7 +365,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class USoundSubmix*                                SubmixToStopAnalyzing                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAudioMixerBlueprintLibrary::StopAnalyzingOutput(class UObject* WorldContextObject, class USoundSubmix* SubmixToStopAnalyzing)
+	void UAudioMixerBlueprintLibrary::StopAnalyzingOutput(
+class UObject* WorldContextObject
+, 
+class USoundSubmix* SubmixToStopAnalyzing
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -331,6 +388,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -341,7 +400,13 @@ namespace CG
 	 * 		float                                              ExpectedDuration                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class USoundSubmix*                                SubmixToRecord                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAudioMixerBlueprintLibrary::StartRecordingOutput(class UObject* WorldContextObject, float ExpectedDuration, class USoundSubmix* SubmixToRecord)
+	void UAudioMixerBlueprintLibrary::StartRecordingOutput(
+class UObject* WorldContextObject
+, 
+float ExpectedDuration
+, 
+class USoundSubmix* SubmixToRecord
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -362,6 +427,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -371,7 +438,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UAudioBus*                                   AudioBus                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAudioMixerBlueprintLibrary::StartAudioBus(class UObject* WorldContextObject, class UAudioBus* AudioBus)
+	void UAudioMixerBlueprintLibrary::StartAudioBus(
+class UObject* WorldContextObject
+, 
+class UAudioBus* AudioBus
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -390,6 +461,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -404,7 +477,21 @@ namespace CG
 	 * 		float                                              HopSize                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EAudioSpectrumType                                 SpectrumType                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAudioMixerBlueprintLibrary::StartAnalyzingOutput(class UObject* WorldContextObject, class USoundSubmix* SubmixToAnalyze, EFFTSize FFTSize, EFFTPeakInterpolationMethod InterpolationMethod, EFFTWindowType WindowType, float HopSize, EAudioSpectrumType SpectrumType)
+	void UAudioMixerBlueprintLibrary::StartAnalyzingOutput(
+class UObject* WorldContextObject
+, 
+class USoundSubmix* SubmixToAnalyze
+, 
+EFFTSize FFTSize
+, 
+EFFTPeakInterpolationMethod InterpolationMethod
+, 
+EFFTWindowType WindowType
+, 
+float HopSize
+, 
+EAudioSpectrumType SpectrumType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -433,6 +520,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -444,7 +533,15 @@ namespace CG
 	 * 		TArray<class USoundEffectSubmixPreset*>            SubmixEffectPresetChain                                    (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		float                                              FadeTimeSec                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAudioMixerBlueprintLibrary::SetSubmixEffectChainOverride(class UObject* WorldContextObject, class USoundSubmix* SoundSubmix, TArray<class USoundEffectSubmixPreset*> SubmixEffectPresetChain, float FadeTimeSec)
+	void UAudioMixerBlueprintLibrary::SetSubmixEffectChainOverride(
+class UObject* WorldContextObject
+, 
+class USoundSubmix* SoundSubmix
+, 
+TArray<class USoundEffectSubmixPreset*> SubmixEffectPresetChain
+, 
+float FadeTimeSec
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -467,6 +564,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -478,7 +577,15 @@ namespace CG
 	 * 		int32_t                                            EntryIndex                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bBypassed                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAudioMixerBlueprintLibrary::SetBypassSourceEffectChainEntry(class UObject* WorldContextObject, class USoundEffectSourcePresetChain* PresetChain, int32_t EntryIndex, bool bBypassed)
+	void UAudioMixerBlueprintLibrary::SetBypassSourceEffectChainEntry(
+class UObject* WorldContextObject
+, 
+class USoundEffectSourcePresetChain* PresetChain
+, 
+int32_t EntryIndex
+, 
+bool bBypassed
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -501,6 +608,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -510,7 +619,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class USoundSubmix*                                SubmixToPause                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAudioMixerBlueprintLibrary::ResumeRecordingOutput(class UObject* WorldContextObject, class USoundSubmix* SubmixToPause)
+	void UAudioMixerBlueprintLibrary::ResumeRecordingOutput(
+class UObject* WorldContextObject
+, 
+class USoundSubmix* SubmixToPause
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -529,6 +642,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -540,7 +655,15 @@ namespace CG
 	 * 		int32_t                                            SubmixChainIndex                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class USoundEffectSubmixPreset*                    SubmixEffectPreset                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAudioMixerBlueprintLibrary::ReplaceSoundEffectSubmix(class UObject* WorldContextObject, class USoundSubmix* InSoundSubmix, int32_t SubmixChainIndex, class USoundEffectSubmixPreset* SubmixEffectPreset)
+	void UAudioMixerBlueprintLibrary::ReplaceSoundEffectSubmix(
+class UObject* WorldContextObject
+, 
+class USoundSubmix* InSoundSubmix
+, 
+int32_t SubmixChainIndex
+, 
+class USoundEffectSubmixPreset* SubmixEffectPreset
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -563,6 +686,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -573,7 +698,13 @@ namespace CG
 	 * 		class USoundSubmix*                                SoundSubmix                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            SubmixChainIndex                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAudioMixerBlueprintLibrary::RemoveSubmixEffectPresetAtIndex(class UObject* WorldContextObject, class USoundSubmix* SoundSubmix, int32_t SubmixChainIndex)
+	void UAudioMixerBlueprintLibrary::RemoveSubmixEffectPresetAtIndex(
+class UObject* WorldContextObject
+, 
+class USoundSubmix* SoundSubmix
+, 
+int32_t SubmixChainIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -594,6 +725,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -604,7 +737,13 @@ namespace CG
 	 * 		class USoundSubmix*                                SoundSubmix                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class USoundEffectSubmixPreset*                    SubmixEffectPreset                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAudioMixerBlueprintLibrary::RemoveSubmixEffectPreset(class UObject* WorldContextObject, class USoundSubmix* SoundSubmix, class USoundEffectSubmixPreset* SubmixEffectPreset)
+	void UAudioMixerBlueprintLibrary::RemoveSubmixEffectPreset(
+class UObject* WorldContextObject
+, 
+class USoundSubmix* SoundSubmix
+, 
+class USoundEffectSubmixPreset* SubmixEffectPreset
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -625,6 +764,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -635,7 +776,13 @@ namespace CG
 	 * 		class USoundEffectSourcePresetChain*               PresetChain                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            EntryIndex                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAudioMixerBlueprintLibrary::RemoveSourceEffectFromPresetChain(class UObject* WorldContextObject, class USoundEffectSourcePresetChain* PresetChain, int32_t EntryIndex)
+	void UAudioMixerBlueprintLibrary::RemoveSourceEffectFromPresetChain(
+class UObject* WorldContextObject
+, 
+class USoundEffectSourcePresetChain* PresetChain
+, 
+int32_t EntryIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -656,6 +803,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -665,7 +814,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class USoundEffectSubmixPreset*                    SubmixEffectPreset                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAudioMixerBlueprintLibrary::RemoveMasterSubmixEffect(class UObject* WorldContextObject, class USoundEffectSubmixPreset* SubmixEffectPreset)
+	void UAudioMixerBlueprintLibrary::RemoveMasterSubmixEffect(
+class UObject* WorldContextObject
+, 
+class USoundEffectSubmixPreset* SubmixEffectPreset
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -684,6 +837,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -693,7 +848,11 @@ namespace CG
 	 * 		class USoundWave*                                  SoundWave                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FScriptDelegate                              OnLoadCompletion                                           (ConstParm, Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UAudioMixerBlueprintLibrary::PrimeSoundForPlayback(class USoundWave* SoundWave, const class FScriptDelegate& OnLoadCompletion)
+	void UAudioMixerBlueprintLibrary::PrimeSoundForPlayback(
+class USoundWave* SoundWave
+, 
+const class FScriptDelegate& OnLoadCompletion
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -712,6 +871,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -720,7 +881,9 @@ namespace CG
 	 * Parameters:
 	 * 		class USoundCue*                                   SoundCue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAudioMixerBlueprintLibrary::PrimeSoundCueForPlayback(class USoundCue* SoundCue)
+	void UAudioMixerBlueprintLibrary::PrimeSoundCueForPlayback(
+class USoundCue* SoundCue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -737,6 +900,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -746,7 +911,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class USoundSubmix*                                SubmixToPause                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAudioMixerBlueprintLibrary::PauseRecordingOutput(class UObject* WorldContextObject, class USoundSubmix* SubmixToPause)
+	void UAudioMixerBlueprintLibrary::PauseRecordingOutput(
+class UObject* WorldContextObject
+, 
+class USoundSubmix* SubmixToPause
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -765,6 +934,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -776,7 +947,15 @@ namespace CG
 	 * 		int32_t                                            InAttackTimeMsec                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            InReleaseTimeMsec                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<struct FSoundSubmixSpectralAnalysisBandSettings> UAudioMixerBlueprintLibrary::MakePresetSpectralAnalysisBandSettings(EAudioSpectrumBandPresetType InBandPresetType, int32_t InNumBands, int32_t InAttackTimeMsec, int32_t InReleaseTimeMsec)
+	TArray<struct FSoundSubmixSpectralAnalysisBandSettings> UAudioMixerBlueprintLibrary::MakePresetSpectralAnalysisBandSettings(
+EAudioSpectrumBandPresetType InBandPresetType
+, 
+int32_t InNumBands
+, 
+int32_t InAttackTimeMsec
+, 
+int32_t InReleaseTimeMsec
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -801,6 +980,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -813,7 +994,17 @@ namespace CG
 	 * 		int32_t                                            InAttackTimeMsec                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            InReleaseTimeMsec                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<struct FSoundSubmixSpectralAnalysisBandSettings> UAudioMixerBlueprintLibrary::MakeMusicalSpectralAnalysisBandSettings(int32_t InNumSemitones, EMusicalNoteName InStartingMusicalNote, int32_t InStartingOctave, int32_t InAttackTimeMsec, int32_t InReleaseTimeMsec)
+	TArray<struct FSoundSubmixSpectralAnalysisBandSettings> UAudioMixerBlueprintLibrary::MakeMusicalSpectralAnalysisBandSettings(
+int32_t InNumSemitones
+, 
+EMusicalNoteName InStartingMusicalNote
+, 
+int32_t InStartingOctave
+, 
+int32_t InAttackTimeMsec
+, 
+int32_t InReleaseTimeMsec
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -840,6 +1031,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -852,7 +1045,17 @@ namespace CG
 	 * 		int32_t                                            InAttackTimeMsec                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            InReleaseTimeMsec                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<struct FSoundSubmixSpectralAnalysisBandSettings> UAudioMixerBlueprintLibrary::MakeFullSpectrumSpectralAnalysisBandSettings(int32_t InNumBands, float InMinimumFrequency, float InMaximumFrequency, int32_t InAttackTimeMsec, int32_t InReleaseTimeMsec)
+	TArray<struct FSoundSubmixSpectralAnalysisBandSettings> UAudioMixerBlueprintLibrary::MakeFullSpectrumSpectralAnalysisBandSettings(
+int32_t InNumBands
+, 
+float InMinimumFrequency
+, 
+float InMaximumFrequency
+, 
+int32_t InAttackTimeMsec
+, 
+int32_t InReleaseTimeMsec
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -879,6 +1082,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -888,7 +1093,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UAudioBus*                                   AudioBus                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UAudioMixerBlueprintLibrary::IsAudioBusActive(class UObject* WorldContextObject, class UAudioBus* AudioBus)
+	bool UAudioMixerBlueprintLibrary::IsAudioBusActive(
+class UObject* WorldContextObject
+, 
+class UAudioBus* AudioBus
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -909,6 +1118,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -920,7 +1131,15 @@ namespace CG
 	 * 		TArray<float>                                      Phases                                                     (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		class USoundSubmix*                                SubmixToAnalyze                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAudioMixerBlueprintLibrary::GetPhaseForFrequencies(class UObject* WorldContextObject, TArray<float> Frequencies, TArray<float>* Phases, class USoundSubmix* SubmixToAnalyze)
+	void UAudioMixerBlueprintLibrary::GetPhaseForFrequencies(
+class UObject* WorldContextObject
+, 
+TArray<float> Frequencies
+, 
+TArray<float>* Phases
+, 
+class USoundSubmix* SubmixToAnalyze
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -945,6 +1164,8 @@ namespace CG
 			*Phases = params.Phases;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -954,7 +1175,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class USoundEffectSourcePresetChain*               PresetChain                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UAudioMixerBlueprintLibrary::GetNumberOfEntriesInSourceEffectChain(class UObject* WorldContextObject, class USoundEffectSourcePresetChain* PresetChain)
+	int32_t UAudioMixerBlueprintLibrary::GetNumberOfEntriesInSourceEffectChain(
+class UObject* WorldContextObject
+, 
+class USoundEffectSourcePresetChain* PresetChain
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -975,6 +1200,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -986,7 +1213,15 @@ namespace CG
 	 * 		TArray<float>                                      Magnitudes                                                 (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		class USoundSubmix*                                SubmixToAnalyze                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAudioMixerBlueprintLibrary::GetMagnitudeForFrequencies(class UObject* WorldContextObject, TArray<float> Frequencies, TArray<float>* Magnitudes, class USoundSubmix* SubmixToAnalyze)
+	void UAudioMixerBlueprintLibrary::GetMagnitudeForFrequencies(
+class UObject* WorldContextObject
+, 
+TArray<float> Frequencies
+, 
+TArray<float>* Magnitudes
+, 
+class USoundSubmix* SubmixToAnalyze
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1011,6 +1246,8 @@ namespace CG
 			*Magnitudes = params.Magnitudes;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1020,7 +1257,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class USoundSubmix*                                SoundSubmix                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAudioMixerBlueprintLibrary::ClearSubmixEffects(class UObject* WorldContextObject, class USoundSubmix* SoundSubmix)
+	void UAudioMixerBlueprintLibrary::ClearSubmixEffects(
+class UObject* WorldContextObject
+, 
+class USoundSubmix* SoundSubmix
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1039,6 +1280,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1049,7 +1292,13 @@ namespace CG
 	 * 		class USoundSubmix*                                SoundSubmix                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              FadeTimeSec                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAudioMixerBlueprintLibrary::ClearSubmixEffectChainOverride(class UObject* WorldContextObject, class USoundSubmix* SoundSubmix, float FadeTimeSec)
+	void UAudioMixerBlueprintLibrary::ClearSubmixEffectChainOverride(
+class UObject* WorldContextObject
+, 
+class USoundSubmix* SoundSubmix
+, 
+float FadeTimeSec
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1070,6 +1319,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1078,7 +1329,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAudioMixerBlueprintLibrary::ClearMasterSubmixEffects(class UObject* WorldContextObject)
+	void UAudioMixerBlueprintLibrary::ClearMasterSubmixEffects(
+class UObject* WorldContextObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1095,6 +1348,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1105,7 +1360,13 @@ namespace CG
 	 * 		class USoundSubmix*                                SoundSubmix                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class USoundEffectSubmixPreset*                    SubmixEffectPreset                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UAudioMixerBlueprintLibrary::AddSubmixEffect(class UObject* WorldContextObject, class USoundSubmix* SoundSubmix, class USoundEffectSubmixPreset* SubmixEffectPreset)
+	int32_t UAudioMixerBlueprintLibrary::AddSubmixEffect(
+class UObject* WorldContextObject
+, 
+class USoundSubmix* SoundSubmix
+, 
+class USoundEffectSubmixPreset* SubmixEffectPreset
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1128,6 +1389,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1138,7 +1401,13 @@ namespace CG
 	 * 		class USoundEffectSourcePresetChain*               PresetChain                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FSourceEffectChainEntry                     Entry                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UAudioMixerBlueprintLibrary::AddSourceEffectToPresetChain(class UObject* WorldContextObject, class USoundEffectSourcePresetChain* PresetChain, const struct FSourceEffectChainEntry& Entry)
+	void UAudioMixerBlueprintLibrary::AddSourceEffectToPresetChain(
+class UObject* WorldContextObject
+, 
+class USoundEffectSourcePresetChain* PresetChain
+, 
+const struct FSourceEffectChainEntry& Entry
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1159,6 +1428,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1168,7 +1439,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class USoundEffectSubmixPreset*                    SubmixEffectPreset                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAudioMixerBlueprintLibrary::AddMasterSubmixEffect(class UObject* WorldContextObject, class USoundEffectSubmixPreset* SubmixEffectPreset)
+	void UAudioMixerBlueprintLibrary::AddMasterSubmixEffect(
+class UObject* WorldContextObject
+, 
+class USoundEffectSubmixPreset* SubmixEffectPreset
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1187,10 +1462,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAudioMixerBlueprintLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UAudioMixerBlueprintLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAudioMixerBlueprintLibrary::StaticClass()
@@ -1201,6 +1478,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1210,7 +1489,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EQuartzCommandQuantization                         InQuantizationBoundary                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UQuartzClockHandle::UnsubscribeFromTimeDivision(class UObject* WorldContextObject, EQuartzCommandQuantization InQuantizationBoundary)
+	void UQuartzClockHandle::UnsubscribeFromTimeDivision(
+class UObject* WorldContextObject
+, 
+EQuartzCommandQuantization InQuantizationBoundary
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1229,6 +1512,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1237,7 +1522,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UQuartzClockHandle::UnsubscribeFromAllTimeDivisions(class UObject* WorldContextObject)
+	void UQuartzClockHandle::UnsubscribeFromAllTimeDivisions(
+class UObject* WorldContextObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1254,6 +1541,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1264,7 +1553,13 @@ namespace CG
 	 * 		EQuartzCommandQuantization                         InQuantizationBoundary                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FScriptDelegate                              OnQuantizationEvent                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UQuartzClockHandle::SubscribeToQuantizationEvent(class UObject* WorldContextObject, EQuartzCommandQuantization InQuantizationBoundary, const class FScriptDelegate& OnQuantizationEvent)
+	void UQuartzClockHandle::SubscribeToQuantizationEvent(
+class UObject* WorldContextObject
+, 
+EQuartzCommandQuantization InQuantizationBoundary
+, 
+const class FScriptDelegate& OnQuantizationEvent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1285,6 +1580,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1294,7 +1591,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FScriptDelegate                              OnQuantizationEvent                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UQuartzClockHandle::SubscribeToAllQuantizationEvents(class UObject* WorldContextObject, const class FScriptDelegate& OnQuantizationEvent)
+	void UQuartzClockHandle::SubscribeToAllQuantizationEvents(
+class UObject* WorldContextObject
+, 
+const class FScriptDelegate& OnQuantizationEvent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1313,6 +1614,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1324,7 +1627,15 @@ namespace CG
 	 * 		class FScriptDelegate                              Delegate                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
 	 * 		float                                              TicksPerSecond                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UQuartzClockHandle::SetTicksPerSecond(class UObject* WorldContextObject, const struct FQuartzQuantizationBoundary& QuantizationBoundary, const class FScriptDelegate& Delegate, float TicksPerSecond)
+	void UQuartzClockHandle::SetTicksPerSecond(
+class UObject* WorldContextObject
+, 
+const struct FQuartzQuantizationBoundary& QuantizationBoundary
+, 
+const class FScriptDelegate& Delegate
+, 
+float TicksPerSecond
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1347,6 +1658,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1358,7 +1671,15 @@ namespace CG
 	 * 		class FScriptDelegate                              Delegate                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
 	 * 		float                                              ThirtySecondsNotesPerMinute                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UQuartzClockHandle::SetThirtySecondNotesPerMinute(class UObject* WorldContextObject, const struct FQuartzQuantizationBoundary& QuantizationBoundary, const class FScriptDelegate& Delegate, float ThirtySecondsNotesPerMinute)
+	void UQuartzClockHandle::SetThirtySecondNotesPerMinute(
+class UObject* WorldContextObject
+, 
+const struct FQuartzQuantizationBoundary& QuantizationBoundary
+, 
+const class FScriptDelegate& Delegate
+, 
+float ThirtySecondsNotesPerMinute
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1381,6 +1702,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1392,7 +1715,15 @@ namespace CG
 	 * 		class FScriptDelegate                              Delegate                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
 	 * 		float                                              SecondsPerTick                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UQuartzClockHandle::SetSecondsPerTick(class UObject* WorldContextObject, const struct FQuartzQuantizationBoundary& QuantizationBoundary, const class FScriptDelegate& Delegate, float SecondsPerTick)
+	void UQuartzClockHandle::SetSecondsPerTick(
+class UObject* WorldContextObject
+, 
+const struct FQuartzQuantizationBoundary& QuantizationBoundary
+, 
+const class FScriptDelegate& Delegate
+, 
+float SecondsPerTick
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1415,6 +1746,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1426,7 +1759,15 @@ namespace CG
 	 * 		class FScriptDelegate                              Delegate                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
 	 * 		float                                              MillisecondsPerTick                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UQuartzClockHandle::SetMillisecondsPerTick(class UObject* WorldContextObject, const struct FQuartzQuantizationBoundary& QuantizationBoundary, const class FScriptDelegate& Delegate, float MillisecondsPerTick)
+	void UQuartzClockHandle::SetMillisecondsPerTick(
+class UObject* WorldContextObject
+, 
+const struct FQuartzQuantizationBoundary& QuantizationBoundary
+, 
+const class FScriptDelegate& Delegate
+, 
+float MillisecondsPerTick
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1449,6 +1790,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1460,7 +1803,15 @@ namespace CG
 	 * 		class FScriptDelegate                              Delegate                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
 	 * 		float                                              BeatsPerMinute                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UQuartzClockHandle::SetBeatsPerMinute(class UObject* WorldContextObject, const struct FQuartzQuantizationBoundary& QuantizationBoundary, const class FScriptDelegate& Delegate, float BeatsPerMinute)
+	void UQuartzClockHandle::SetBeatsPerMinute(
+class UObject* WorldContextObject
+, 
+const struct FQuartzQuantizationBoundary& QuantizationBoundary
+, 
+const class FScriptDelegate& Delegate
+, 
+float BeatsPerMinute
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1483,6 +1834,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1491,7 +1844,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UQuartzClockHandle::ResumeClock(class UObject* WorldContextObject)
+	void UQuartzClockHandle::ResumeClock(
+class UObject* WorldContextObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1508,6 +1863,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1517,7 +1874,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FScriptDelegate                              InDelegate                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UQuartzClockHandle::ResetTransport(class UObject* WorldContextObject, const class FScriptDelegate& InDelegate)
+	void UQuartzClockHandle::ResetTransport(
+class UObject* WorldContextObject
+, 
+const class FScriptDelegate& InDelegate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1536,6 +1897,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1544,7 +1907,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UQuartzClockHandle::PauseClock(class UObject* WorldContextObject)
+	void UQuartzClockHandle::PauseClock(
+class UObject* WorldContextObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1561,6 +1926,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1569,7 +1936,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float UQuartzClockHandle::GetTicksPerSecond(class UObject* WorldContextObject)
+	float UQuartzClockHandle::GetTicksPerSecond(
+class UObject* WorldContextObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1588,6 +1957,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1596,7 +1967,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float UQuartzClockHandle::GetThirtySecondNotesPerMinute(class UObject* WorldContextObject)
+	float UQuartzClockHandle::GetThirtySecondNotesPerMinute(
+class UObject* WorldContextObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1615,6 +1988,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1623,7 +1998,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float UQuartzClockHandle::GetSecondsPerTick(class UObject* WorldContextObject)
+	float UQuartzClockHandle::GetSecondsPerTick(
+class UObject* WorldContextObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1642,6 +2019,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1650,7 +2029,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float UQuartzClockHandle::GetMillisecondsPerTick(class UObject* WorldContextObject)
+	float UQuartzClockHandle::GetMillisecondsPerTick(
+class UObject* WorldContextObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1669,6 +2050,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1677,7 +2060,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float UQuartzClockHandle::GetBeatsPerMinute(class UObject* WorldContextObject)
+	float UQuartzClockHandle::GetBeatsPerMinute(
+class UObject* WorldContextObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1696,10 +2081,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UQuartzClockHandle.StaticClass
+	 * 		Name   -> PredefinedFunction UQuartzClockHandle.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UQuartzClockHandle::StaticClass()
@@ -1710,6 +2097,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1718,7 +2107,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSubmixEffectDynamicsProcessorSettings      Settings                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void USubmixEffectDynamicsProcessorPreset::SetSettings(const struct FSubmixEffectDynamicsProcessorSettings& Settings)
+	void USubmixEffectDynamicsProcessorPreset::SetSettings(
+const struct FSubmixEffectDynamicsProcessorSettings& Settings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1735,6 +2126,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1743,7 +2136,9 @@ namespace CG
 	 * Parameters:
 	 * 		class USoundSubmix*                                Submix                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USubmixEffectDynamicsProcessorPreset::SetExternalSubmix(class USoundSubmix* Submix)
+	void USubmixEffectDynamicsProcessorPreset::SetExternalSubmix(
+class USoundSubmix* Submix
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1760,10 +2155,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USubmixEffectDynamicsProcessorPreset.StaticClass
+	 * 		Name   -> PredefinedFunction USubmixEffectDynamicsProcessorPreset.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USubmixEffectDynamicsProcessorPreset::StaticClass()
@@ -1774,6 +2171,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1782,7 +2181,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSubmixEffectSubmixEQSettings               InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void USubmixEffectSubmixEQPreset::SetSettings(const struct FSubmixEffectSubmixEQSettings& InSettings)
+	void USubmixEffectSubmixEQPreset::SetSettings(
+const struct FSubmixEffectSubmixEQSettings& InSettings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1799,10 +2200,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USubmixEffectSubmixEQPreset.StaticClass
+	 * 		Name   -> PredefinedFunction USubmixEffectSubmixEQPreset.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USubmixEffectSubmixEQPreset::StaticClass()
@@ -1812,6 +2215,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AudioMixer.SubmixEffectSubmixEQPreset");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1823,7 +2228,13 @@ namespace CG
 	 * 		float                                              WetLevel                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              DryLevel                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USubmixEffectReverbPreset::SetSettingsWithReverbEffect(class UReverbEffect* InReverbEffect, float WetLevel, float DryLevel)
+	void USubmixEffectReverbPreset::SetSettingsWithReverbEffect(
+class UReverbEffect* InReverbEffect
+, 
+float WetLevel
+, 
+float DryLevel
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1844,6 +2255,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1852,7 +2265,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSubmixEffectReverbSettings                 InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void USubmixEffectReverbPreset::SetSettings(const struct FSubmixEffectReverbSettings& InSettings)
+	void USubmixEffectReverbPreset::SetSettings(
+const struct FSubmixEffectReverbSettings& InSettings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1869,10 +2284,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USubmixEffectReverbPreset.StaticClass
+	 * 		Name   -> PredefinedFunction USubmixEffectReverbPreset.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USubmixEffectReverbPreset::StaticClass()
@@ -1883,6 +2300,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1891,7 +2310,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float UQuartzSubsystem::GetRoundTripMinLatency(class UObject* WorldContextObject)
+	float UQuartzSubsystem::GetRoundTripMinLatency(
+class UObject* WorldContextObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1910,6 +2331,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1918,7 +2341,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float UQuartzSubsystem::GetRoundTripMaxLatency(class UObject* WorldContextObject)
+	float UQuartzSubsystem::GetRoundTripMaxLatency(
+class UObject* WorldContextObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1937,6 +2362,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1945,7 +2372,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float UQuartzSubsystem::GetRoundTripAverageLatency(class UObject* WorldContextObject)
+	float UQuartzSubsystem::GetRoundTripAverageLatency(
+class UObject* WorldContextObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1964,6 +2393,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1973,7 +2404,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FName                                        ClockName                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UQuartzClockHandle* UQuartzSubsystem::GetHandleForClock(class UObject* WorldContextObject, const class FName& ClockName)
+	class UQuartzClockHandle* UQuartzSubsystem::GetHandleForClock(
+class UObject* WorldContextObject
+, 
+const class FName& ClockName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1994,6 +2429,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2002,7 +2439,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float UQuartzSubsystem::GetGameThreadToAudioRenderThreadMinLatency(class UObject* WorldContextObject)
+	float UQuartzSubsystem::GetGameThreadToAudioRenderThreadMinLatency(
+class UObject* WorldContextObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2021,6 +2460,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2029,7 +2470,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float UQuartzSubsystem::GetGameThreadToAudioRenderThreadMaxLatency(class UObject* WorldContextObject)
+	float UQuartzSubsystem::GetGameThreadToAudioRenderThreadMaxLatency(
+class UObject* WorldContextObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2048,6 +2491,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2056,7 +2501,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float UQuartzSubsystem::GetGameThreadToAudioRenderThreadAverageLatency(class UObject* WorldContextObject)
+	float UQuartzSubsystem::GetGameThreadToAudioRenderThreadAverageLatency(
+class UObject* WorldContextObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2074,6 +2521,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2098,6 +2547,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2120,6 +2571,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2144,6 +2597,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2153,7 +2608,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FName                                        ClockName                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UQuartzSubsystem::DoesClockExist(class UObject* WorldContextObject, const class FName& ClockName)
+	bool UQuartzSubsystem::DoesClockExist(
+class UObject* WorldContextObject
+, 
+const class FName& ClockName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2174,6 +2633,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2185,7 +2646,15 @@ namespace CG
 	 * 		struct FQuartzClockSettings                        InSettings                                                 (Parm, NativeAccessSpecifierPublic)
 	 * 		bool                                               bOverrideSettingsIfClockExists                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UQuartzClockHandle* UQuartzSubsystem::CreateNewClock(class UObject* WorldContextObject, const class FName& ClockName, const struct FQuartzClockSettings& InSettings, bool bOverrideSettingsIfClockExists)
+	class UQuartzClockHandle* UQuartzSubsystem::CreateNewClock(
+class UObject* WorldContextObject
+, 
+const class FName& ClockName
+, 
+const struct FQuartzClockSettings& InSettings
+, 
+bool bOverrideSettingsIfClockExists
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2210,10 +2679,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UQuartzSubsystem.StaticClass
+	 * 		Name   -> PredefinedFunction UQuartzSubsystem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UQuartzSubsystem::StaticClass()
@@ -2224,10 +2695,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USynthSound.StaticClass
+	 * 		Name   -> PredefinedFunction USynthSound.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USynthSound::StaticClass()
@@ -2237,6 +2710,7 @@ namespace CG
 			ptr = UObject::FindClass("Class AudioMixer.SynthSound");
 		return ptr;
 	}
+
 
 }
 

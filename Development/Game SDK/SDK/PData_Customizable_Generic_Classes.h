@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * BlueprintGeneratedClass PData_Customizable_Generic.PData_Customizable_Generic_C
 	 * Size -> 0x0028 (FullSize[0x0098] - InheritedSize[0x0070])
@@ -21,9 +22,12 @@ namespace CG
 	class UPData_Customizable_Generic_C : public UPData_Customizable_Base_C
 	{
 	public:
-		unsigned char                                              Mesh[0x28];                                              // 0x0070(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
+
+		unsigned char                                            Mesh[0x28];                                              // 0x0070(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
 

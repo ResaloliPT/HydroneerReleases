@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamAuthComponentModuleInterface.StaticClass
+	 * 		Name   -> PredefinedFunction USteamAuthComponentModuleInterface.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamAuthComponentModuleInterface::StaticClass()
@@ -24,10 +25,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamNetConnection.StaticClass
+	 * 		Name   -> PredefinedFunction USteamNetConnection.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamNetConnection::StaticClass()
@@ -38,10 +41,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamNetDriver.StaticClass
+	 * 		Name   -> PredefinedFunction USteamNetDriver.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamNetDriver::StaticClass()
@@ -51,6 +56,7 @@ namespace CG
 			ptr = UObject::FindClass("Class OnlineSubsystemSteam.SteamNetDriver");
 		return ptr;
 	}
+
 
 }
 

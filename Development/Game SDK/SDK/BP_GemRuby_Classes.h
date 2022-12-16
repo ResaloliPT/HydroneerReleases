@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,13 +14,15 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * BlueprintGeneratedClass BP_GemRuby.BP_GemRuby_C
-	 * Size -> 0x0000 (FullSize[0x0379] - InheritedSize[0x0379])
+	 * Size -> 0x0000 (FullSize[0x03E8] - InheritedSize[0x03E8])
 	 */
 	class ABP_GemRuby_C : public ABP_ParentResource_C
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
 

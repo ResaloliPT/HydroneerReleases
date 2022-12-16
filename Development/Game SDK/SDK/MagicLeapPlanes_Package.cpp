@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -33,10 +34,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMagicLeapPlanesComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UMagicLeapPlanesComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMagicLeapPlanesComponent::StaticClass()
@@ -46,6 +49,8 @@ namespace CG
 			ptr = UObject::FindClass("Class MagicLeapPlanes.MagicLeapPlanesComponent");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -57,7 +62,13 @@ namespace CG
 	 * 		TArray<EMagicLeapPlaneQueryFlags>                  InFlagsToReorder                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		TArray<EMagicLeapPlaneQueryFlags>                  OutReorderedFlags                                          (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UMagicLeapPlanesFunctionLibrary::ReorderPlaneFlags(TArray<EMagicLeapPlaneQueryFlags> InPriority, TArray<EMagicLeapPlaneQueryFlags> InFlagsToReorder, TArray<EMagicLeapPlaneQueryFlags>* OutReorderedFlags)
+	void UMagicLeapPlanesFunctionLibrary::ReorderPlaneFlags(
+TArray<EMagicLeapPlaneQueryFlags> InPriority
+, 
+TArray<EMagicLeapPlaneQueryFlags> InFlagsToReorder
+, 
+TArray<EMagicLeapPlaneQueryFlags>* OutReorderedFlags
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -80,6 +91,8 @@ namespace CG
 			*OutReorderedFlags = params.OutReorderedFlags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -88,7 +101,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FGuid                                       Handle                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapPlanesFunctionLibrary::RemovePersistentQuery(const struct FGuid& Handle)
+	bool UMagicLeapPlanesFunctionLibrary::RemovePersistentQuery(
+const struct FGuid& Handle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -107,6 +122,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -117,7 +134,13 @@ namespace CG
 	 * 		TArray<EMagicLeapPlaneQueryFlags>                  InResultFlags                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		TArray<EMagicLeapPlaneQueryFlags>                  OutFlags                                                   (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UMagicLeapPlanesFunctionLibrary::RemoveFlagsNotInQuery(TArray<EMagicLeapPlaneQueryFlags> InQueryFlags, TArray<EMagicLeapPlaneQueryFlags> InResultFlags, TArray<EMagicLeapPlaneQueryFlags>* OutFlags)
+	void UMagicLeapPlanesFunctionLibrary::RemoveFlagsNotInQuery(
+TArray<EMagicLeapPlaneQueryFlags> InQueryFlags
+, 
+TArray<EMagicLeapPlaneQueryFlags> InResultFlags
+, 
+TArray<EMagicLeapPlaneQueryFlags>* OutFlags
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -140,6 +163,8 @@ namespace CG
 			*OutFlags = params.OutFlags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -149,7 +174,11 @@ namespace CG
 	 * 		struct FMagicLeapPlanesQuery                       Query                                                      (ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	 * 		class FScriptDelegate                              ResultDelegate                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapPlanesFunctionLibrary::PlanesQueryBeginAsync(const struct FMagicLeapPlanesQuery& Query, const class FScriptDelegate& ResultDelegate)
+	bool UMagicLeapPlanesFunctionLibrary::PlanesQueryBeginAsync(
+const struct FMagicLeapPlanesQuery& Query
+, 
+const class FScriptDelegate& ResultDelegate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -170,6 +199,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -180,7 +211,13 @@ namespace CG
 	 * 		struct FGuid                                       Handle                                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FScriptDelegate                              ResultDelegate                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapPlanesFunctionLibrary::PlanesPersistentQueryBeginAsync(const struct FMagicLeapPlanesQuery& Query, const struct FGuid& Handle, const class FScriptDelegate& ResultDelegate)
+	bool UMagicLeapPlanesFunctionLibrary::PlanesPersistentQueryBeginAsync(
+const struct FMagicLeapPlanesQuery& Query
+, 
+const struct FGuid& Handle
+, 
+const class FScriptDelegate& ResultDelegate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -202,6 +239,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -226,6 +265,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -235,7 +276,11 @@ namespace CG
 	 * 		class AActor*                                      ContentActor                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FMagicLeapPlaneResult                       PlaneResult                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	struct FTransform UMagicLeapPlanesFunctionLibrary::GetContentScale(class AActor* ContentActor, const struct FMagicLeapPlaneResult& PlaneResult)
+	struct FTransform UMagicLeapPlanesFunctionLibrary::GetContentScale(
+class AActor* ContentActor
+, 
+const struct FMagicLeapPlaneResult& PlaneResult
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -255,6 +300,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -279,6 +326,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -302,6 +351,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -310,7 +361,9 @@ namespace CG
 	 * Parameters:
 	 * 		EMagicLeapPlaneQueryType                           PersistentQueryType                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FGuid UMagicLeapPlanesFunctionLibrary::AddPersistentQuery(EMagicLeapPlaneQueryType PersistentQueryType)
+	struct FGuid UMagicLeapPlanesFunctionLibrary::AddPersistentQuery(
+EMagicLeapPlaneQueryType PersistentQueryType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -329,10 +382,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMagicLeapPlanesFunctionLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UMagicLeapPlanesFunctionLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMagicLeapPlanesFunctionLibrary::StaticClass()
@@ -342,6 +397,7 @@ namespace CG
 			ptr = UObject::FindClass("Class MagicLeapPlanes.MagicLeapPlanesFunctionLibrary");
 		return ptr;
 	}
+
 
 }
 

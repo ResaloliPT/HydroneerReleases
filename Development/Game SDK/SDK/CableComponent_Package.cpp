@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ACableActor.StaticClass
+	 * 		Name   -> PredefinedFunction ACableActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ACableActor::StaticClass()
@@ -24,6 +25,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -33,7 +36,11 @@ namespace CG
 	 * 		class USceneComponent*                             Component                                                  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FName                                        SocketName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UCableComponent::SetAttachEndToComponent(class USceneComponent* Component, const class FName& SocketName)
+	void UCableComponent::SetAttachEndToComponent(
+class USceneComponent* Component
+, 
+const class FName& SocketName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -52,6 +59,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -62,7 +71,13 @@ namespace CG
 	 * 		class FName                                        ComponentProperty                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FName                                        SocketName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UCableComponent::SetAttachEndTo(class AActor* Actor, const class FName& ComponentProperty, const class FName& SocketName)
+	void UCableComponent::SetAttachEndTo(
+class AActor* Actor
+, 
+const class FName& ComponentProperty
+, 
+const class FName& SocketName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -83,6 +98,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -91,7 +108,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<struct FVector>                             Locations                                                  (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UCableComponent::GetCableParticleLocations(TArray<struct FVector>* Locations)
+	void UCableComponent::GetCableParticleLocations(
+TArray<struct FVector>* Locations
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -109,6 +128,8 @@ namespace CG
 		if (Locations != nullptr)
 			*Locations = params.Locations;
 	}
+
+
 
 	/**
 	 * Function:
@@ -133,6 +154,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -156,10 +179,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UCableComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UCableComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UCableComponent::StaticClass()
@@ -169,6 +194,7 @@ namespace CG
 			ptr = UObject::FindClass("Class CableComponent.CableComponent");
 		return ptr;
 	}
+
 
 }
 

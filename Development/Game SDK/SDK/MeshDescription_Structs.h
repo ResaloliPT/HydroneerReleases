@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+
 	/**
 	 * Enum MeshDescription.EComputeNTBsOptions
 	 */
@@ -29,6 +30,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+
 	/**
 	 * ScriptStruct MeshDescription.ElementID
 	 * Size -> 0x0004
@@ -36,8 +38,12 @@ namespace CG
 	struct FElementID
 	{
 	public:
-		int32_t                                                    IDValue;                                                 // 0x0000(0x0004) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
+		int32_t                                                  IDValue;                                                 // 0x0000(0x0004) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
 	};
+
+
 
 	/**
 	 * ScriptStruct MeshDescription.PolygonGroupID
@@ -46,12 +52,16 @@ namespace CG
 	struct FPolygonGroupID : public FElementID
 	{	};
 
+
+
 	/**
 	 * ScriptStruct MeshDescription.PolygonID
 	 * Size -> 0x0000 (FullSize[0x0004] - InheritedSize[0x0004])
 	 */
 	struct FPolygonID : public FElementID
 	{	};
+
+
 
 	/**
 	 * ScriptStruct MeshDescription.VertexID
@@ -60,6 +70,8 @@ namespace CG
 	struct FVertexID : public FElementID
 	{	};
 
+
+
 	/**
 	 * ScriptStruct MeshDescription.VertexInstanceID
 	 * Size -> 0x0000 (FullSize[0x0004] - InheritedSize[0x0004])
@@ -67,12 +79,16 @@ namespace CG
 	struct FVertexInstanceID : public FElementID
 	{	};
 
+
+
 	/**
 	 * ScriptStruct MeshDescription.EdgeID
 	 * Size -> 0x0000 (FullSize[0x0004] - InheritedSize[0x0004])
 	 */
 	struct FEdgeID : public FElementID
 	{	};
+
+
 
 	/**
 	 * ScriptStruct MeshDescription.TriangleID

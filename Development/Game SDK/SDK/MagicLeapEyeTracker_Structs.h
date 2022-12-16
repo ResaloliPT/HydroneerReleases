@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+
 	/**
 	 * Enum MagicLeapEyeTracker.EMagicLeapEyeTrackingCalibrationStatus
 	 */
@@ -24,6 +25,8 @@ namespace CG
 		Good = 2,
 		MAX  = 3
 	};
+
+
 
 	/**
 	 * Enum MagicLeapEyeTracker.EMagicLeapEyeTrackingStatus
@@ -41,6 +44,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+
 	/**
 	 * ScriptStruct MagicLeapEyeTracker.MagicLeapEyeBlinkState
 	 * Size -> 0x0002
@@ -48,8 +52,12 @@ namespace CG
 	struct FMagicLeapEyeBlinkState
 	{
 	public:
-		bool                                                       LeftEyeBlinked;                                          // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       RightEyeBlinked;                                         // 0x0001(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		bool                                                     LeftEyeBlinked;                                          // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     RightEyeBlinked;                                         // 0x0001(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
 
 }

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UClothConfigNv.StaticClass
+	 * 		Name   -> PredefinedFunction UClothConfigNv.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UClothConfigNv::StaticClass()
@@ -24,10 +25,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UClothingSimulationFactoryNv.StaticClass
+	 * 		Name   -> PredefinedFunction UClothingSimulationFactoryNv.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UClothingSimulationFactoryNv::StaticClass()
@@ -38,6 +41,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -46,7 +51,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InStiffness                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UClothingSimulationInteractorNv::SetAnimDriveDamperStiffness(float InStiffness)
+	void UClothingSimulationInteractorNv::SetAnimDriveDamperStiffness(
+float InStiffness
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -63,10 +70,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UClothingSimulationInteractorNv.StaticClass
+	 * 		Name   -> PredefinedFunction UClothingSimulationInteractorNv.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UClothingSimulationInteractorNv::StaticClass()
@@ -77,10 +86,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UClothPhysicalMeshDataNv_Legacy.StaticClass
+	 * 		Name   -> PredefinedFunction UClothPhysicalMeshDataNv_Legacy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UClothPhysicalMeshDataNv_Legacy::StaticClass()
@@ -90,6 +101,7 @@ namespace CG
 			ptr = UObject::FindClass("Class ClothingSystemRuntimeNv.ClothPhysicalMeshDataNv_Legacy");
 		return ptr;
 	}
+
 
 }
 

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEditableMeshAdapter.StaticClass
+	 * 		Name   -> PredefinedFunction UEditableMeshAdapter.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEditableMeshAdapter::StaticClass()
@@ -24,10 +25,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEditableGeometryCollectionAdapter.StaticClass
+	 * 		Name   -> PredefinedFunction UEditableGeometryCollectionAdapter.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEditableGeometryCollectionAdapter::StaticClass()
@@ -38,6 +41,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -47,7 +52,11 @@ namespace CG
 	 * 		TArray<struct FVertexID>                           VertexIDs                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		struct FVertexID                                   OutNewVertexID                                             (Parm, OutParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::WeldVertices(TArray<struct FVertexID> VertexIDs, struct FVertexID* OutNewVertexID)
+	void UEditableMesh::WeldVertices(
+TArray<struct FVertexID> VertexIDs
+, 
+struct FVertexID* OutNewVertexID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -68,6 +77,8 @@ namespace CG
 			*OutNewVertexID = params.OutNewVertexID;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -78,7 +89,13 @@ namespace CG
 	 * 		bool                                               bOutWasVertexRemoved                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FEdgeID                                     OutNewEdgeID                                               (Parm, OutParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::TryToRemoveVertex(const struct FVertexID& VertexID, bool* bOutWasVertexRemoved, struct FEdgeID* OutNewEdgeID)
+	void UEditableMesh::TryToRemoveVertex(
+const struct FVertexID& VertexID
+, 
+bool* bOutWasVertexRemoved
+, 
+struct FEdgeID* OutNewEdgeID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -102,6 +119,8 @@ namespace CG
 			*OutNewEdgeID = params.OutNewEdgeID;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -112,7 +131,13 @@ namespace CG
 	 * 		bool                                               bOutWasEdgeRemoved                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FPolygonID                                  OutNewPolygonID                                            (Parm, OutParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::TryToRemovePolygonEdge(const struct FEdgeID& EdgeID, bool* bOutWasEdgeRemoved, struct FPolygonID* OutNewPolygonID)
+	void UEditableMesh::TryToRemovePolygonEdge(
+const struct FEdgeID& EdgeID
+, 
+bool* bOutWasEdgeRemoved
+, 
+struct FPolygonID* OutNewPolygonID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -136,6 +161,8 @@ namespace CG
 			*OutNewPolygonID = params.OutNewPolygonID;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -145,7 +172,11 @@ namespace CG
 	 * 		TArray<struct FPolygonID>                          PolygonIDs                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FPolygonID>                          OutNewTrianglePolygons                                     (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::TriangulatePolygons(TArray<struct FPolygonID> PolygonIDs, TArray<struct FPolygonID>* OutNewTrianglePolygons)
+	void UEditableMesh::TriangulatePolygons(
+TArray<struct FPolygonID> PolygonIDs
+, 
+TArray<struct FPolygonID>* OutNewTrianglePolygons
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -166,6 +197,8 @@ namespace CG
 			*OutNewTrianglePolygons = params.OutNewTrianglePolygons;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -176,7 +209,13 @@ namespace CG
 	 * 		ETriangleTessellationMode                          TriangleTessellationMode                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FPolygonID>                          OutNewPolygonIDs                                           (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::TessellatePolygons(TArray<struct FPolygonID> PolygonIDs, ETriangleTessellationMode TriangleTessellationMode, TArray<struct FPolygonID>* OutNewPolygonIDs)
+	void UEditableMesh::TessellatePolygons(
+TArray<struct FPolygonID> PolygonIDs
+, 
+ETriangleTessellationMode TriangleTessellationMode
+, 
+TArray<struct FPolygonID>* OutNewPolygonIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -199,6 +238,8 @@ namespace CG
 			*OutNewPolygonIDs = params.OutNewPolygonIDs;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -208,7 +249,11 @@ namespace CG
 	 * 		EMeshModificationType                              MeshModificationType                                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EMeshTopologyChange                                MeshTopologyChange                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::StartModification(EMeshModificationType MeshModificationType, EMeshTopologyChange MeshTopologyChange)
+	void UEditableMesh::StartModification(
+EMeshModificationType MeshModificationType
+, 
+EMeshTopologyChange MeshTopologyChange
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -227,6 +272,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -236,7 +283,11 @@ namespace CG
 	 * 		TArray<struct FPolygonToSplit>                     PolygonsToSplit                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FEdgeID>                             OutNewEdgeIDs                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::SplitPolygons(TArray<struct FPolygonToSplit> PolygonsToSplit, TArray<struct FEdgeID>* OutNewEdgeIDs)
+	void UEditableMesh::SplitPolygons(
+TArray<struct FPolygonToSplit> PolygonsToSplit
+, 
+TArray<struct FEdgeID>* OutNewEdgeIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -257,6 +308,8 @@ namespace CG
 			*OutNewEdgeIDs = params.OutNewEdgeIDs;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -268,7 +321,15 @@ namespace CG
 	 * 		TArray<struct FPolygonID>                          PolygonIDs2                                                (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FEdgeID>                             BoundaryIDs                                                (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::SplitPolygonalMesh(const struct FPlane& InPlane, TArray<struct FPolygonID>* PolygonIDs1, TArray<struct FPolygonID>* PolygonIDs2, TArray<struct FEdgeID>* BoundaryIDs)
+	void UEditableMesh::SplitPolygonalMesh(
+const struct FPlane& InPlane
+, 
+TArray<struct FPolygonID>* PolygonIDs1
+, 
+TArray<struct FPolygonID>* PolygonIDs2
+, 
+TArray<struct FEdgeID>* BoundaryIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -295,6 +356,8 @@ namespace CG
 			*BoundaryIDs = params.BoundaryIDs;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -305,7 +368,13 @@ namespace CG
 	 * 		TArray<float>                                      Splits                                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FVertexID>                           OutNewVertexIDs                                            (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::SplitEdge(const struct FEdgeID& EdgeID, TArray<float> Splits, TArray<struct FVertexID>* OutNewVertexIDs)
+	void UEditableMesh::SplitEdge(
+const struct FEdgeID& EdgeID
+, 
+TArray<float> Splits
+, 
+TArray<struct FVertexID>* OutNewVertexIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -328,6 +397,8 @@ namespace CG
 			*OutNewVertexIDs = params.OutNewVertexIDs;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -337,7 +408,11 @@ namespace CG
 	 * 		TArray<struct FVertexID>                           VertexIDs                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		TArray<float>                                      VerticesNewCornerSharpness                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::SetVerticesCornerSharpness(TArray<struct FVertexID> VertexIDs, TArray<float> VerticesNewCornerSharpness)
+	void UEditableMesh::SetVerticesCornerSharpness(
+TArray<struct FVertexID> VertexIDs
+, 
+TArray<float> VerticesNewCornerSharpness
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -356,6 +431,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -364,7 +441,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<struct FAttributesForVertex>                AttributesForVertices                                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::SetVerticesAttributes(TArray<struct FAttributesForVertex> AttributesForVertices)
+	void UEditableMesh::SetVerticesAttributes(
+TArray<struct FAttributesForVertex> AttributesForVertices
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -381,6 +460,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -389,7 +470,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<struct FAttributesForVertexInstance>        AttributesForVertexInstances                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::SetVertexInstancesAttributes(TArray<struct FAttributesForVertexInstance> AttributesForVertexInstances)
+	void UEditableMesh::SetVertexInstancesAttributes(
+TArray<struct FAttributesForVertexInstance> AttributesForVertexInstances
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -406,6 +489,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -414,7 +499,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            NumTexCoords                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::SetTextureCoordinateCount(int32_t NumTexCoords)
+	void UEditableMesh::SetTextureCoordinateCount(
+int32_t NumTexCoords
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -431,6 +518,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -439,7 +528,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            NewSubdivisionCount                                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::SetSubdivisionCount(int32_t NewSubdivisionCount)
+	void UEditableMesh::SetSubdivisionCount(
+int32_t NewSubdivisionCount
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -456,6 +547,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -464,7 +557,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<struct FVertexAttributesForPolygon>         VertexAttributesForPolygons                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::SetPolygonsVertexAttributes(TArray<struct FVertexAttributesForPolygon> VertexAttributesForPolygons)
+	void UEditableMesh::SetPolygonsVertexAttributes(
+TArray<struct FVertexAttributesForPolygon> VertexAttributesForPolygons
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -481,6 +576,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -490,7 +587,11 @@ namespace CG
 	 * 		TArray<struct FEdgeID>                             EdgeIDs                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		float                                              MaxDotProductForSoftEdge                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::SetEdgesHardnessAutomatically(TArray<struct FEdgeID> EdgeIDs, float MaxDotProductForSoftEdge)
+	void UEditableMesh::SetEdgesHardnessAutomatically(
+TArray<struct FEdgeID> EdgeIDs
+, 
+float MaxDotProductForSoftEdge
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -509,6 +610,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -518,7 +621,11 @@ namespace CG
 	 * 		TArray<struct FEdgeID>                             EdgeIDs                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		TArray<bool>                                       EdgesNewIsHard                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::SetEdgesHardness(TArray<struct FEdgeID> EdgeIDs, TArray<bool> EdgesNewIsHard)
+	void UEditableMesh::SetEdgesHardness(
+TArray<struct FEdgeID> EdgeIDs
+, 
+TArray<bool> EdgesNewIsHard
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -537,6 +644,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -546,7 +655,11 @@ namespace CG
 	 * 		TArray<struct FEdgeID>                             EdgeIDs                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		TArray<float>                                      EdgesNewCreaseSharpness                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::SetEdgesCreaseSharpness(TArray<struct FEdgeID> EdgeIDs, TArray<float> EdgesNewCreaseSharpness)
+	void UEditableMesh::SetEdgesCreaseSharpness(
+TArray<struct FEdgeID> EdgeIDs
+, 
+TArray<float> EdgesNewCreaseSharpness
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -565,6 +678,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -573,7 +688,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<struct FAttributesForEdge>                  AttributesForEdges                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::SetEdgesAttributes(TArray<struct FAttributesForEdge> AttributesForEdges)
+	void UEditableMesh::SetEdgesAttributes(
+TArray<struct FAttributesForEdge> AttributesForEdges
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -590,6 +707,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -598,7 +717,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bInAllowUndo                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::SetAllowUndo(bool bInAllowUndo)
+	void UEditableMesh::SetAllowUndo(
+bool bInAllowUndo
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -615,6 +736,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -623,7 +746,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bInAllowSpatialDatabase                                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::SetAllowSpatialDatabase(bool bInAllowSpatialDatabase)
+	void UEditableMesh::SetAllowSpatialDatabase(
+bool bInAllowSpatialDatabase
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -640,6 +765,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -648,7 +775,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bInAllowCompact                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::SetAllowCompact(bool bInAllowCompact)
+	void UEditableMesh::SetAllowCompact(
+bool bInAllowCompact
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -665,6 +794,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -674,7 +805,11 @@ namespace CG
 	 * 		struct FPlane                                      InPlane                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FPolygonID>                          OutPolygons                                                (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::SearchSpatialDatabaseForPolygonsPotentiallyIntersectingPlane(const struct FPlane& InPlane, TArray<struct FPolygonID>* OutPolygons)
+	void UEditableMesh::SearchSpatialDatabaseForPolygonsPotentiallyIntersectingPlane(
+const struct FPlane& InPlane
+, 
+TArray<struct FPolygonID>* OutPolygons
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -695,6 +830,8 @@ namespace CG
 			*OutPolygons = params.OutPolygons;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -705,7 +842,13 @@ namespace CG
 	 * 		struct FVector                                     LineSegmentEnd                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FPolygonID>                          OutPolygons                                                (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::SearchSpatialDatabaseForPolygonsPotentiallyIntersectingLineSegment(const struct FVector& LineSegmentStart, const struct FVector& LineSegmentEnd, TArray<struct FPolygonID>* OutPolygons)
+	void UEditableMesh::SearchSpatialDatabaseForPolygonsPotentiallyIntersectingLineSegment(
+const struct FVector& LineSegmentStart
+, 
+const struct FVector& LineSegmentEnd
+, 
+TArray<struct FPolygonID>* OutPolygons
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -728,6 +871,8 @@ namespace CG
 			*OutPolygons = params.OutPolygons;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -737,7 +882,11 @@ namespace CG
 	 * 		TArray<struct FPlane>                              Planes                                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FPolygonID>                          OutPolygons                                                (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::SearchSpatialDatabaseForPolygonsInVolume(TArray<struct FPlane> Planes, TArray<struct FPolygonID>* OutPolygons)
+	void UEditableMesh::SearchSpatialDatabaseForPolygonsInVolume(
+TArray<struct FPlane> Planes
+, 
+TArray<struct FPolygonID>* OutPolygons
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -757,6 +906,8 @@ namespace CG
 		if (OutPolygons != nullptr)
 			*OutPolygons = params.OutPolygons;
 	}
+
+
 
 	/**
 	 * Function:
@@ -781,6 +932,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -801,6 +954,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -823,6 +978,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -831,7 +988,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<struct FPolygonID>                          OutNewPolygonIDs                                           (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::QuadrangulateMesh(TArray<struct FPolygonID>* OutNewPolygonIDs)
+	void UEditableMesh::QuadrangulateMesh(
+TArray<struct FPolygonID>* OutNewPolygonIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -849,6 +1008,8 @@ namespace CG
 		if (OutNewPolygonIDs != nullptr)
 			*OutNewPolygonIDs = params.OutNewPolygonIDs;
 	}
+
+
 
 	/**
 	 * Function:
@@ -871,6 +1032,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -879,7 +1042,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<struct FVertexToMove>                       VerticesToMove                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::MoveVertices(TArray<struct FVertexToMove> VerticesToMove)
+	void UEditableMesh::MoveVertices(
+TArray<struct FVertexToMove> VerticesToMove
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -896,6 +1061,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -904,7 +1071,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            VertexIndex                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVertexID UEditableMesh::MakeVertexID(int32_t VertexIndex)
+	struct FVertexID UEditableMesh::MakeVertexID(
+int32_t VertexIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -923,6 +1092,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -931,7 +1102,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            PolygonIndex                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FPolygonID UEditableMesh::MakePolygonID(int32_t PolygonIndex)
+	struct FPolygonID UEditableMesh::MakePolygonID(
+int32_t PolygonIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -950,6 +1123,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -958,7 +1133,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            PolygonGroupIndex                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FPolygonGroupID UEditableMesh::MakePolygonGroupID(int32_t PolygonGroupIndex)
+	struct FPolygonGroupID UEditableMesh::MakePolygonGroupID(
+int32_t PolygonGroupIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -977,6 +1154,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -985,7 +1164,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EdgeIndex                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FEdgeID UEditableMesh::MakeEdgeID(int32_t EdgeIndex)
+	struct FEdgeID UEditableMesh::MakeEdgeID(
+int32_t EdgeIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1004,6 +1185,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1012,7 +1195,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVertexID                                   VertexID                                                   (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UEditableMesh::IsValidVertex(const struct FVertexID& VertexID)
+	bool UEditableMesh::IsValidVertex(
+const struct FVertexID& VertexID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1031,6 +1216,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1039,7 +1226,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FPolygonGroupID                             PolygonGroupID                                             (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UEditableMesh::IsValidPolygonGroup(const struct FPolygonGroupID& PolygonGroupID)
+	bool UEditableMesh::IsValidPolygonGroup(
+const struct FPolygonGroupID& PolygonGroupID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1058,6 +1247,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1066,7 +1257,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FPolygonID                                  PolygonID                                                  (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UEditableMesh::IsValidPolygon(const struct FPolygonID& PolygonID)
+	bool UEditableMesh::IsValidPolygon(
+const struct FPolygonID& PolygonID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1085,6 +1278,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1093,7 +1288,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FEdgeID                                     EdgeID                                                     (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UEditableMesh::IsValidEdge(const struct FEdgeID& EdgeID)
+	bool UEditableMesh::IsValidEdge(
+const struct FEdgeID& EdgeID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1111,6 +1308,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1135,6 +1334,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1157,6 +1358,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1181,6 +1384,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1189,7 +1394,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVertexID                                   VertexID                                                   (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UEditableMesh::IsOrphanedVertex(const struct FVertexID& VertexID)
+	bool UEditableMesh::IsOrphanedVertex(
+const struct FVertexID& VertexID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1207,6 +1414,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1231,6 +1440,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1253,6 +1464,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1277,6 +1490,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1299,6 +1514,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1323,6 +1540,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1345,6 +1564,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1369,6 +1590,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1392,6 +1615,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1405,7 +1630,19 @@ namespace CG
 	 * 		TArray<struct FPolygonID>                          OutNewCenterPolygonIDs                                     (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FPolygonID>                          OutNewSidePolygonIDs                                       (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::InsetPolygons(TArray<struct FPolygonID> PolygonIDs, float InsetFixedDistance, float InsetProgressTowardCenter, EInsetPolygonsMode Mode, TArray<struct FPolygonID>* OutNewCenterPolygonIDs, TArray<struct FPolygonID>* OutNewSidePolygonIDs)
+	void UEditableMesh::InsetPolygons(
+TArray<struct FPolygonID> PolygonIDs
+, 
+float InsetFixedDistance
+, 
+float InsetProgressTowardCenter
+, 
+EInsetPolygonsMode Mode
+, 
+TArray<struct FPolygonID>* OutNewCenterPolygonIDs
+, 
+TArray<struct FPolygonID>* OutNewSidePolygonIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1435,6 +1672,8 @@ namespace CG
 			*OutNewSidePolygonIDs = params.OutNewSidePolygonIDs;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1445,7 +1684,13 @@ namespace CG
 	 * 		TArray<float>                                      Splits                                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FEdgeID>                             OutNewEdgeIDs                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::InsertEdgeLoop(const struct FEdgeID& EdgeID, TArray<float> Splits, TArray<struct FEdgeID>* OutNewEdgeIDs)
+	void UEditableMesh::InsertEdgeLoop(
+const struct FEdgeID& EdgeID
+, 
+TArray<float> Splits
+, 
+TArray<struct FEdgeID>* OutNewEdgeIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1468,6 +1713,8 @@ namespace CG
 			*OutNewEdgeIDs = params.OutNewEdgeIDs;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1489,6 +1736,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1499,7 +1748,13 @@ namespace CG
 	 * 		struct FVertexID                                   NextVertexID                                               (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bOutEdgeWindingIsReversed                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FEdgeID UEditableMesh::GetVertexPairEdge(const struct FVertexID& VertexID, const struct FVertexID& NextVertexID, bool* bOutEdgeWindingIsReversed)
+	struct FEdgeID UEditableMesh::GetVertexPairEdge(
+const struct FVertexID& VertexID
+, 
+const struct FVertexID& NextVertexID
+, 
+bool* bOutEdgeWindingIsReversed
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1524,6 +1779,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1532,7 +1789,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVertexInstanceID                           VertexInstanceID                                           (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVertexID UEditableMesh::GetVertexInstanceVertex(const struct FVertexInstanceID& VertexInstanceID)
+	struct FVertexID UEditableMesh::GetVertexInstanceVertex(
+const struct FVertexInstanceID& VertexInstanceID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1550,6 +1809,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1574,6 +1835,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1583,7 +1846,11 @@ namespace CG
 	 * 		struct FVertexInstanceID                           VertexInstanceID                                           (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FPolygonID>                          OutConnectedPolygonIDs                                     (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::GetVertexInstanceConnectedPolygons(const struct FVertexInstanceID& VertexInstanceID, TArray<struct FPolygonID>* OutConnectedPolygonIDs)
+	void UEditableMesh::GetVertexInstanceConnectedPolygons(
+const struct FVertexInstanceID& VertexInstanceID
+, 
+TArray<struct FPolygonID>* OutConnectedPolygonIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1604,6 +1871,8 @@ namespace CG
 			*OutConnectedPolygonIDs = params.OutConnectedPolygonIDs;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1612,7 +1881,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVertexInstanceID                           VertexInstanceID                                           (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UEditableMesh::GetVertexInstanceConnectedPolygonCount(const struct FVertexInstanceID& VertexInstanceID)
+	int32_t UEditableMesh::GetVertexInstanceConnectedPolygonCount(
+const struct FVertexInstanceID& VertexInstanceID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1631,6 +1902,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1640,7 +1913,11 @@ namespace CG
 	 * 		struct FVertexInstanceID                           VertexInstanceID                                           (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            ConnectedPolygonNumber                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FPolygonID UEditableMesh::GetVertexInstanceConnectedPolygon(const struct FVertexInstanceID& VertexInstanceID, int32_t ConnectedPolygonNumber)
+	struct FPolygonID UEditableMesh::GetVertexInstanceConnectedPolygon(
+const struct FVertexInstanceID& VertexInstanceID
+, 
+int32_t ConnectedPolygonNumber
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1660,6 +1937,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1684,6 +1963,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1693,7 +1974,11 @@ namespace CG
 	 * 		struct FVertexID                                   VertexID                                                   (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FPolygonID>                          OutConnectedPolygonIDs                                     (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::GetVertexConnectedPolygons(const struct FVertexID& VertexID, TArray<struct FPolygonID>* OutConnectedPolygonIDs)
+	void UEditableMesh::GetVertexConnectedPolygons(
+const struct FVertexID& VertexID
+, 
+TArray<struct FPolygonID>* OutConnectedPolygonIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1714,6 +1999,8 @@ namespace CG
 			*OutConnectedPolygonIDs = params.OutConnectedPolygonIDs;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1723,7 +2010,11 @@ namespace CG
 	 * 		struct FVertexID                                   VertexID                                                   (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FEdgeID>                             OutConnectedEdgeIDs                                        (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::GetVertexConnectedEdges(const struct FVertexID& VertexID, TArray<struct FEdgeID>* OutConnectedEdgeIDs)
+	void UEditableMesh::GetVertexConnectedEdges(
+const struct FVertexID& VertexID
+, 
+TArray<struct FEdgeID>* OutConnectedEdgeIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1744,6 +2035,8 @@ namespace CG
 			*OutConnectedEdgeIDs = params.OutConnectedEdgeIDs;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1752,7 +2045,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVertexID                                   VertexID                                                   (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UEditableMesh::GetVertexConnectedEdgeCount(const struct FVertexID& VertexID)
+	int32_t UEditableMesh::GetVertexConnectedEdgeCount(
+const struct FVertexID& VertexID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1771,6 +2066,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1780,7 +2077,11 @@ namespace CG
 	 * 		struct FVertexID                                   VertexID                                                   (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            ConnectedEdgeNumber                                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FEdgeID UEditableMesh::GetVertexConnectedEdge(const struct FVertexID& VertexID, int32_t ConnectedEdgeNumber)
+	struct FEdgeID UEditableMesh::GetVertexConnectedEdge(
+const struct FVertexID& VertexID
+, 
+int32_t ConnectedEdgeNumber
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1801,6 +2102,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1810,7 +2113,11 @@ namespace CG
 	 * 		struct FVertexID                                   VertexID                                                   (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FVertexID>                           OutAdjacentVertexIDs                                       (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::GetVertexAdjacentVertices(const struct FVertexID& VertexID, TArray<struct FVertexID>* OutAdjacentVertexIDs)
+	void UEditableMesh::GetVertexAdjacentVertices(
+const struct FVertexID& VertexID
+, 
+TArray<struct FVertexID>* OutAdjacentVertexIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1830,6 +2137,8 @@ namespace CG
 		if (OutAdjacentVertexIDs != nullptr)
 			*OutAdjacentVertexIDs = params.OutAdjacentVertexIDs;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1854,6 +2163,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1876,6 +2187,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1900,6 +2213,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1908,7 +2223,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FPolygonID                                  PolygonID                                                  (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UEditableMesh::GetPolygonTriangulatedTriangleCount(const struct FPolygonID& PolygonID)
+	int32_t UEditableMesh::GetPolygonTriangulatedTriangleCount(
+const struct FPolygonID& PolygonID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1927,6 +2244,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1936,7 +2255,11 @@ namespace CG
 	 * 		struct FPolygonID                                  PolygonID                                                  (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            PolygonTriangleNumber                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FTriangleID UEditableMesh::GetPolygonTriangulatedTriangle(const struct FPolygonID& PolygonID, int32_t PolygonTriangleNumber)
+	struct FTriangleID UEditableMesh::GetPolygonTriangulatedTriangle(
+const struct FPolygonID& PolygonID
+, 
+int32_t PolygonTriangleNumber
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1957,6 +2280,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1966,7 +2291,11 @@ namespace CG
 	 * 		struct FPolygonID                                  PolygonID                                                  (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FVertexID>                           OutPolygonPerimeterVertexIDs                               (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::GetPolygonPerimeterVertices(const struct FPolygonID& PolygonID, TArray<struct FVertexID>* OutPolygonPerimeterVertexIDs)
+	void UEditableMesh::GetPolygonPerimeterVertices(
+const struct FPolygonID& PolygonID
+, 
+TArray<struct FVertexID>* OutPolygonPerimeterVertexIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1987,6 +2316,8 @@ namespace CG
 			*OutPolygonPerimeterVertexIDs = params.OutPolygonPerimeterVertexIDs;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1996,7 +2327,11 @@ namespace CG
 	 * 		struct FPolygonID                                  PolygonID                                                  (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FVertexInstanceID>                   OutPolygonPerimeterVertexInstanceIDs                       (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::GetPolygonPerimeterVertexInstances(const struct FPolygonID& PolygonID, TArray<struct FVertexInstanceID>* OutPolygonPerimeterVertexInstanceIDs)
+	void UEditableMesh::GetPolygonPerimeterVertexInstances(
+const struct FPolygonID& PolygonID
+, 
+TArray<struct FVertexInstanceID>* OutPolygonPerimeterVertexInstanceIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2017,6 +2352,8 @@ namespace CG
 			*OutPolygonPerimeterVertexInstanceIDs = params.OutPolygonPerimeterVertexInstanceIDs;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2026,7 +2363,11 @@ namespace CG
 	 * 		struct FPolygonID                                  PolygonID                                                  (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            PolygonVertexNumber                                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVertexInstanceID UEditableMesh::GetPolygonPerimeterVertexInstance(const struct FPolygonID& PolygonID, int32_t PolygonVertexNumber)
+	struct FVertexInstanceID UEditableMesh::GetPolygonPerimeterVertexInstance(
+const struct FPolygonID& PolygonID
+, 
+int32_t PolygonVertexNumber
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2047,6 +2388,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2055,7 +2398,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FPolygonID                                  PolygonID                                                  (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UEditableMesh::GetPolygonPerimeterVertexCount(const struct FPolygonID& PolygonID)
+	int32_t UEditableMesh::GetPolygonPerimeterVertexCount(
+const struct FPolygonID& PolygonID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2074,6 +2419,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2083,7 +2430,11 @@ namespace CG
 	 * 		struct FPolygonID                                  PolygonID                                                  (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            PolygonVertexNumber                                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVertexID UEditableMesh::GetPolygonPerimeterVertex(const struct FPolygonID& PolygonID, int32_t PolygonVertexNumber)
+	struct FVertexID UEditableMesh::GetPolygonPerimeterVertex(
+const struct FPolygonID& PolygonID
+, 
+int32_t PolygonVertexNumber
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2104,6 +2455,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2113,7 +2466,11 @@ namespace CG
 	 * 		struct FPolygonID                                  PolygonID                                                  (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FEdgeID>                             OutPolygonPerimeterEdgeIDs                                 (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::GetPolygonPerimeterEdges(const struct FPolygonID& PolygonID, TArray<struct FEdgeID>* OutPolygonPerimeterEdgeIDs)
+	void UEditableMesh::GetPolygonPerimeterEdges(
+const struct FPolygonID& PolygonID
+, 
+TArray<struct FEdgeID>* OutPolygonPerimeterEdgeIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2134,6 +2491,8 @@ namespace CG
 			*OutPolygonPerimeterEdgeIDs = params.OutPolygonPerimeterEdgeIDs;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2142,7 +2501,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FPolygonID                                  PolygonID                                                  (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UEditableMesh::GetPolygonPerimeterEdgeCount(const struct FPolygonID& PolygonID)
+	int32_t UEditableMesh::GetPolygonPerimeterEdgeCount(
+const struct FPolygonID& PolygonID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2161,6 +2522,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2171,7 +2534,13 @@ namespace CG
 	 * 		int32_t                                            PerimeterEdgeNumber                                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bOutEdgeWindingIsReversedForPolygon                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FEdgeID UEditableMesh::GetPolygonPerimeterEdge(const struct FPolygonID& PolygonID, int32_t PerimeterEdgeNumber, bool* bOutEdgeWindingIsReversedForPolygon)
+	struct FEdgeID UEditableMesh::GetPolygonPerimeterEdge(
+const struct FPolygonID& PolygonID
+, 
+int32_t PerimeterEdgeNumber
+, 
+bool* bOutEdgeWindingIsReversedForPolygon
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2196,6 +2565,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2205,7 +2576,11 @@ namespace CG
 	 * 		struct FPolygonGroupID                             PolygonGroupID                                             (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            PolygonNumber                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FPolygonID UEditableMesh::GetPolygonInGroup(const struct FPolygonGroupID& PolygonGroupID, int32_t PolygonNumber)
+	struct FPolygonID UEditableMesh::GetPolygonInGroup(
+const struct FPolygonGroupID& PolygonGroupID
+, 
+int32_t PolygonNumber
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2225,6 +2600,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2249,6 +2626,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2257,7 +2636,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FPolygonGroupID                             PolygonGroupID                                             (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UEditableMesh::GetPolygonCountInGroup(const struct FPolygonGroupID& PolygonGroupID)
+	int32_t UEditableMesh::GetPolygonCountInGroup(
+const struct FPolygonGroupID& PolygonGroupID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2275,6 +2656,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2299,6 +2682,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2308,7 +2693,11 @@ namespace CG
 	 * 		struct FPolygonID                                  PolygonID                                                  (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FPolygonID>                          OutAdjacentPolygons                                        (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::GetPolygonAdjacentPolygons(const struct FPolygonID& PolygonID, TArray<struct FPolygonID>* OutAdjacentPolygons)
+	void UEditableMesh::GetPolygonAdjacentPolygons(
+const struct FPolygonID& PolygonID
+, 
+TArray<struct FPolygonID>* OutAdjacentPolygons
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2329,6 +2718,8 @@ namespace CG
 			*OutAdjacentPolygons = params.OutAdjacentPolygons;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2337,7 +2728,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FPolygonID                                  PolygonID                                                  (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FPolygonGroupID UEditableMesh::GetGroupForPolygon(const struct FPolygonID& PolygonID)
+	struct FPolygonGroupID UEditableMesh::GetGroupForPolygon(
+const struct FPolygonID& PolygonID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2355,6 +2748,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2379,6 +2774,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2389,7 +2786,13 @@ namespace CG
 	 * 		struct FVertexID                                   OutEdgeVertexID0                                           (Parm, OutParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVertexID                                   OutEdgeVertexID1                                           (Parm, OutParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::GetEdgeVertices(const struct FEdgeID& EdgeID, struct FVertexID* OutEdgeVertexID0, struct FVertexID* OutEdgeVertexID1)
+	void UEditableMesh::GetEdgeVertices(
+const struct FEdgeID& EdgeID
+, 
+struct FVertexID* OutEdgeVertexID0
+, 
+struct FVertexID* OutEdgeVertexID1
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2413,6 +2816,8 @@ namespace CG
 			*OutEdgeVertexID1 = params.OutEdgeVertexID1;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2422,7 +2827,11 @@ namespace CG
 	 * 		struct FEdgeID                                     EdgeID                                                     (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            EdgeVertexNumber                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVertexID UEditableMesh::GetEdgeVertex(const struct FEdgeID& EdgeID, int32_t EdgeVertexNumber)
+	struct FVertexID UEditableMesh::GetEdgeVertex(
+const struct FEdgeID& EdgeID
+, 
+int32_t EdgeVertexNumber
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2443,6 +2852,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2452,7 +2863,11 @@ namespace CG
 	 * 		struct FVertexID                                   VertexID0                                                  (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVertexID                                   VertexID1                                                  (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FEdgeID UEditableMesh::GetEdgeThatConnectsVertices(const struct FVertexID& VertexID0, const struct FVertexID& VertexID1)
+	struct FEdgeID UEditableMesh::GetEdgeThatConnectsVertices(
+const struct FVertexID& VertexID0
+, 
+const struct FVertexID& VertexID1
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2473,6 +2888,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2482,7 +2899,11 @@ namespace CG
 	 * 		struct FEdgeID                                     EdgeID                                                     (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FEdgeID>                             EdgeLoopIDs                                                (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::GetEdgeLoopElements(const struct FEdgeID& EdgeID, TArray<struct FEdgeID>* EdgeLoopIDs)
+	void UEditableMesh::GetEdgeLoopElements(
+const struct FEdgeID& EdgeID
+, 
+TArray<struct FEdgeID>* EdgeLoopIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2502,6 +2923,8 @@ namespace CG
 		if (EdgeLoopIDs != nullptr)
 			*EdgeLoopIDs = params.EdgeLoopIDs;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2526,6 +2949,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2535,7 +2960,11 @@ namespace CG
 	 * 		struct FEdgeID                                     EdgeID                                                     (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FPolygonID>                          OutConnectedPolygonIDs                                     (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::GetEdgeConnectedPolygons(const struct FEdgeID& EdgeID, TArray<struct FPolygonID>* OutConnectedPolygonIDs)
+	void UEditableMesh::GetEdgeConnectedPolygons(
+const struct FEdgeID& EdgeID
+, 
+TArray<struct FPolygonID>* OutConnectedPolygonIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2556,6 +2985,8 @@ namespace CG
 			*OutConnectedPolygonIDs = params.OutConnectedPolygonIDs;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2564,7 +2995,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FEdgeID                                     EdgeID                                                     (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UEditableMesh::GetEdgeConnectedPolygonCount(const struct FEdgeID& EdgeID)
+	int32_t UEditableMesh::GetEdgeConnectedPolygonCount(
+const struct FEdgeID& EdgeID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2583,6 +3016,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2592,7 +3027,11 @@ namespace CG
 	 * 		struct FEdgeID                                     EdgeID                                                     (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            ConnectedPolygonNumber                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FPolygonID UEditableMesh::GetEdgeConnectedPolygon(const struct FEdgeID& EdgeID, int32_t ConnectedPolygonNumber)
+	struct FPolygonID UEditableMesh::GetEdgeConnectedPolygon(
+const struct FEdgeID& EdgeID
+, 
+int32_t ConnectedPolygonNumber
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2613,6 +3052,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2621,7 +3062,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<struct FPolygonID>                          PolygonIDs                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::GeneratePolygonTangentsAndNormals(TArray<struct FPolygonID> PolygonIDs)
+	void UEditableMesh::GeneratePolygonTangentsAndNormals(
+TArray<struct FPolygonID> PolygonIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2638,6 +3081,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2646,7 +3091,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<struct FPolygonID>                          PolygonIDs                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::FlipPolygons(TArray<struct FPolygonID> PolygonIDs)
+	void UEditableMesh::FlipPolygons(
+TArray<struct FPolygonID> PolygonIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2663,6 +3110,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2672,7 +3121,11 @@ namespace CG
 	 * 		struct FPolygonID                                  PolygonID                                                  (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVertexID                                   VertexID                                                   (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UEditableMesh::FindPolygonPerimeterVertexNumberForVertex(const struct FPolygonID& PolygonID, const struct FVertexID& VertexID)
+	int32_t UEditableMesh::FindPolygonPerimeterVertexNumberForVertex(
+const struct FPolygonID& PolygonID
+, 
+const struct FVertexID& VertexID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2693,6 +3146,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2703,7 +3158,13 @@ namespace CG
 	 * 		struct FVertexID                                   EdgeVertexID0                                              (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVertexID                                   EdgeVertexID1                                              (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UEditableMesh::FindPolygonPerimeterEdgeNumberForVertices(const struct FPolygonID& PolygonID, const struct FVertexID& EdgeVertexID0, const struct FVertexID& EdgeVertexID1)
+	int32_t UEditableMesh::FindPolygonPerimeterEdgeNumberForVertices(
+const struct FPolygonID& PolygonID
+, 
+const struct FVertexID& EdgeVertexID0
+, 
+const struct FVertexID& EdgeVertexID1
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2726,6 +3187,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2738,7 +3201,17 @@ namespace CG
 	 * 		TArray<struct FEdgeID>                             OutReversedEdgeIDPathToTake                                (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FPolygonID>                          OutPolygonIDsToSplit                                       (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::FindPolygonLoop(const struct FEdgeID& EdgeID, TArray<struct FEdgeID>* OutEdgeLoopEdgeIDs, TArray<struct FEdgeID>* OutFlippedEdgeIDs, TArray<struct FEdgeID>* OutReversedEdgeIDPathToTake, TArray<struct FPolygonID>* OutPolygonIDsToSplit)
+	void UEditableMesh::FindPolygonLoop(
+const struct FEdgeID& EdgeID
+, 
+TArray<struct FEdgeID>* OutEdgeLoopEdgeIDs
+, 
+TArray<struct FEdgeID>* OutFlippedEdgeIDs
+, 
+TArray<struct FEdgeID>* OutReversedEdgeIDPathToTake
+, 
+TArray<struct FPolygonID>* OutPolygonIDsToSplit
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2768,6 +3241,8 @@ namespace CG
 			*OutPolygonIDsToSplit = params.OutPolygonIDsToSplit;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2779,7 +3254,15 @@ namespace CG
 	 * 		bool                                               bKeepNeighborsTogether                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FPolygonID>                          OutNewExtrudedFrontPolygons                                (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::ExtrudePolygons(TArray<struct FPolygonID> Polygons, float ExtrudeDistance, bool bKeepNeighborsTogether, TArray<struct FPolygonID>* OutNewExtrudedFrontPolygons)
+	void UEditableMesh::ExtrudePolygons(
+TArray<struct FPolygonID> Polygons
+, 
+float ExtrudeDistance
+, 
+bool bKeepNeighborsTogether
+, 
+TArray<struct FPolygonID>* OutNewExtrudedFrontPolygons
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2804,6 +3287,8 @@ namespace CG
 			*OutNewExtrudedFrontPolygons = params.OutNewExtrudedFrontPolygons;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2815,7 +3300,15 @@ namespace CG
 	 * 		struct FVector                                     ReferencePosition                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FVertexID>                           OutNewExtendedVertexIDs                                    (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::ExtendVertices(TArray<struct FVertexID> VertexIDs, bool bOnlyExtendClosestEdge, const struct FVector& ReferencePosition, TArray<struct FVertexID>* OutNewExtendedVertexIDs)
+	void UEditableMesh::ExtendVertices(
+TArray<struct FVertexID> VertexIDs
+, 
+bool bOnlyExtendClosestEdge
+, 
+const struct FVector& ReferencePosition
+, 
+TArray<struct FVertexID>* OutNewExtendedVertexIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2840,6 +3333,8 @@ namespace CG
 			*OutNewExtendedVertexIDs = params.OutNewExtendedVertexIDs;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2850,7 +3345,13 @@ namespace CG
 	 * 		bool                                               bWeldNeighbors                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FEdgeID>                             OutNewExtendedEdgeIDs                                      (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::ExtendEdges(TArray<struct FEdgeID> EdgeIDs, bool bWeldNeighbors, TArray<struct FEdgeID>* OutNewExtendedEdgeIDs)
+	void UEditableMesh::ExtendEdges(
+TArray<struct FEdgeID> EdgeIDs
+, 
+bool bWeldNeighbors
+, 
+TArray<struct FEdgeID>* OutNewExtendedEdgeIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2873,6 +3374,8 @@ namespace CG
 			*OutNewExtendedEdgeIDs = params.OutNewExtendedEdgeIDs;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2881,7 +3384,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bFromUndo                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::EndModification(bool bFromUndo)
+	void UEditableMesh::EndModification(
+bool bFromUndo
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2898,6 +3403,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2907,7 +3414,11 @@ namespace CG
 	 * 		TArray<struct FVertexInstanceID>                   VertexInstanceIDsToDelete                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		bool                                               bDeleteOrphanedVertices                                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::DeleteVertexInstances(TArray<struct FVertexInstanceID> VertexInstanceIDsToDelete, bool bDeleteOrphanedVertices)
+	void UEditableMesh::DeleteVertexInstances(
+TArray<struct FVertexInstanceID> VertexInstanceIDsToDelete
+, 
+bool bDeleteOrphanedVertices
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2926,6 +3437,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2938,7 +3451,17 @@ namespace CG
 	 * 		bool                                               bDeleteOrphanedVertexInstances                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bDeleteEmptyPolygonGroups                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::DeleteVertexAndConnectedEdgesAndPolygons(const struct FVertexID& VertexID, bool bDeleteOrphanedEdges, bool bDeleteOrphanedVertices, bool bDeleteOrphanedVertexInstances, bool bDeleteEmptyPolygonGroups)
+	void UEditableMesh::DeleteVertexAndConnectedEdgesAndPolygons(
+const struct FVertexID& VertexID
+, 
+bool bDeleteOrphanedEdges
+, 
+bool bDeleteOrphanedVertices
+, 
+bool bDeleteOrphanedVertexInstances
+, 
+bool bDeleteEmptyPolygonGroups
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2963,6 +3486,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2975,7 +3500,17 @@ namespace CG
 	 * 		bool                                               bDeleteOrphanedVertexInstances                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bDeleteEmptyPolygonGroups                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::DeletePolygons(TArray<struct FPolygonID> PolygonIDsToDelete, bool bDeleteOrphanedEdges, bool bDeleteOrphanedVertices, bool bDeleteOrphanedVertexInstances, bool bDeleteEmptyPolygonGroups)
+	void UEditableMesh::DeletePolygons(
+TArray<struct FPolygonID> PolygonIDsToDelete
+, 
+bool bDeleteOrphanedEdges
+, 
+bool bDeleteOrphanedVertices
+, 
+bool bDeleteOrphanedVertexInstances
+, 
+bool bDeleteEmptyPolygonGroups
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3000,6 +3535,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3008,7 +3545,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<struct FPolygonGroupID>                     PolygonGroupIDs                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::DeletePolygonGroups(TArray<struct FPolygonGroupID> PolygonGroupIDs)
+	void UEditableMesh::DeletePolygonGroups(
+TArray<struct FPolygonGroupID> PolygonGroupIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3025,6 +3564,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3033,7 +3574,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<struct FVertexID>                           VertexIDsToDelete                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::DeleteOrphanVertices(TArray<struct FVertexID> VertexIDsToDelete)
+	void UEditableMesh::DeleteOrphanVertices(
+TArray<struct FVertexID> VertexIDsToDelete
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3050,6 +3593,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3059,7 +3604,11 @@ namespace CG
 	 * 		TArray<struct FEdgeID>                             EdgeIDsToDelete                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		bool                                               bDeleteOrphanedVertices                                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::DeleteEdges(TArray<struct FEdgeID> EdgeIDsToDelete, bool bDeleteOrphanedVertices)
+	void UEditableMesh::DeleteEdges(
+TArray<struct FEdgeID> EdgeIDsToDelete
+, 
+bool bDeleteOrphanedVertices
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3078,6 +3627,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3090,7 +3641,17 @@ namespace CG
 	 * 		bool                                               bDeleteOrphanedVertexInstances                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bDeleteEmptyPolygonGroups                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::DeleteEdgeAndConnectedPolygons(const struct FEdgeID& EdgeID, bool bDeleteOrphanedEdges, bool bDeleteOrphanedVertices, bool bDeleteOrphanedVertexInstances, bool bDeleteEmptyPolygonGroups)
+	void UEditableMesh::DeleteEdgeAndConnectedPolygons(
+const struct FEdgeID& EdgeID
+, 
+bool bDeleteOrphanedEdges
+, 
+bool bDeleteOrphanedVertices
+, 
+bool bDeleteOrphanedVertexInstances
+, 
+bool bDeleteEmptyPolygonGroups
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3115,6 +3676,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3124,7 +3687,11 @@ namespace CG
 	 * 		TArray<struct FVertexToCreate>                     VerticesToCreate                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FVertexID>                           OutNewVertexIDs                                            (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::CreateVertices(TArray<struct FVertexToCreate> VerticesToCreate, TArray<struct FVertexID>* OutNewVertexIDs)
+	void UEditableMesh::CreateVertices(
+TArray<struct FVertexToCreate> VerticesToCreate
+, 
+TArray<struct FVertexID>* OutNewVertexIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3145,6 +3712,8 @@ namespace CG
 			*OutNewVertexIDs = params.OutNewVertexIDs;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3154,7 +3723,11 @@ namespace CG
 	 * 		TArray<struct FVertexInstanceToCreate>             VertexInstancesToCreate                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FVertexInstanceID>                   OutNewVertexInstanceIDs                                    (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::CreateVertexInstances(TArray<struct FVertexInstanceToCreate> VertexInstancesToCreate, TArray<struct FVertexInstanceID>* OutNewVertexInstanceIDs)
+	void UEditableMesh::CreateVertexInstances(
+TArray<struct FVertexInstanceToCreate> VertexInstancesToCreate
+, 
+TArray<struct FVertexInstanceID>* OutNewVertexInstanceIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3175,6 +3748,8 @@ namespace CG
 			*OutNewVertexInstanceIDs = params.OutNewVertexInstanceIDs;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3185,7 +3760,13 @@ namespace CG
 	 * 		TArray<struct FPolygonID>                          OutNewPolygonIDs                                           (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FEdgeID>                             OutNewEdgeIDs                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::CreatePolygons(TArray<struct FPolygonToCreate> PolygonsToCreate, TArray<struct FPolygonID>* OutNewPolygonIDs, TArray<struct FEdgeID>* OutNewEdgeIDs)
+	void UEditableMesh::CreatePolygons(
+TArray<struct FPolygonToCreate> PolygonsToCreate
+, 
+TArray<struct FPolygonID>* OutNewPolygonIDs
+, 
+TArray<struct FEdgeID>* OutNewEdgeIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3209,6 +3790,8 @@ namespace CG
 			*OutNewEdgeIDs = params.OutNewEdgeIDs;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3218,7 +3801,11 @@ namespace CG
 	 * 		TArray<struct FPolygonGroupToCreate>               PolygonGroupsToCreate                                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FPolygonGroupID>                     OutNewPolygonGroupIDs                                      (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::CreatePolygonGroups(TArray<struct FPolygonGroupToCreate> PolygonGroupsToCreate, TArray<struct FPolygonGroupID>* OutNewPolygonGroupIDs)
+	void UEditableMesh::CreatePolygonGroups(
+TArray<struct FPolygonGroupToCreate> PolygonGroupsToCreate
+, 
+TArray<struct FPolygonGroupID>* OutNewPolygonGroupIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3239,6 +3826,8 @@ namespace CG
 			*OutNewPolygonGroupIDs = params.OutNewPolygonGroupIDs;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3248,7 +3837,11 @@ namespace CG
 	 * 		struct FPolygonID                                  PolygonID                                                  (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FEdgeID>                             OutNewEdgeIDs                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::CreateMissingPolygonPerimeterEdges(const struct FPolygonID& PolygonID, TArray<struct FEdgeID>* OutNewEdgeIDs)
+	void UEditableMesh::CreateMissingPolygonPerimeterEdges(
+const struct FPolygonID& PolygonID
+, 
+TArray<struct FEdgeID>* OutNewEdgeIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3269,6 +3862,8 @@ namespace CG
 			*OutNewEdgeIDs = params.OutNewEdgeIDs;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3278,7 +3873,11 @@ namespace CG
 	 * 		int32_t                                            NumVerticesToCreate                                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FVertexID>                           OutNewVertexIDs                                            (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::CreateEmptyVertexRange(int32_t NumVerticesToCreate, TArray<struct FVertexID>* OutNewVertexIDs)
+	void UEditableMesh::CreateEmptyVertexRange(
+int32_t NumVerticesToCreate
+, 
+TArray<struct FVertexID>* OutNewVertexIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3299,6 +3898,8 @@ namespace CG
 			*OutNewVertexIDs = params.OutNewVertexIDs;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3308,7 +3909,11 @@ namespace CG
 	 * 		TArray<struct FEdgeToCreate>                       EdgesToCreate                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FEdgeID>                             OutNewEdgeIDs                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::CreateEdges(TArray<struct FEdgeToCreate> EdgesToCreate, TArray<struct FEdgeID>* OutNewEdgeIDs)
+	void UEditableMesh::CreateEdges(
+TArray<struct FEdgeToCreate> EdgesToCreate
+, 
+TArray<struct FEdgeID>* OutNewEdgeIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3329,6 +3934,8 @@ namespace CG
 			*OutNewEdgeIDs = params.OutNewEdgeIDs;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3338,7 +3945,11 @@ namespace CG
 	 * 		TArray<struct FPolygonID>                          PolygonIDs                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FEdgeID>                             OutSharedEdgeIDs                                           (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::ComputePolygonsSharedEdges(TArray<struct FPolygonID> PolygonIDs, TArray<struct FEdgeID>* OutSharedEdgeIDs)
+	void UEditableMesh::ComputePolygonsSharedEdges(
+TArray<struct FPolygonID> PolygonIDs
+, 
+TArray<struct FEdgeID>* OutSharedEdgeIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3359,6 +3970,8 @@ namespace CG
 			*OutSharedEdgeIDs = params.OutSharedEdgeIDs;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3367,7 +3980,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FPolygonID                                  PolygonID                                                  (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FPlane UEditableMesh::ComputePolygonPlane(const struct FPolygonID& PolygonID)
+	struct FPlane UEditableMesh::ComputePolygonPlane(
+const struct FPolygonID& PolygonID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3386,6 +4001,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3394,7 +4011,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FPolygonID                                  PolygonID                                                  (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVector UEditableMesh::ComputePolygonNormal(const struct FPolygonID& PolygonID)
+	struct FVector UEditableMesh::ComputePolygonNormal(
+const struct FPolygonID& PolygonID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3413,6 +4032,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3421,7 +4042,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FPolygonID                                  PolygonID                                                  (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVector UEditableMesh::ComputePolygonCenter(const struct FPolygonID& PolygonID)
+	struct FVector UEditableMesh::ComputePolygonCenter(
+const struct FPolygonID& PolygonID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3439,6 +4062,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3463,6 +4088,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3486,6 +4113,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3494,7 +4123,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UPrimitiveComponent*                         ComponentToInstanceTo                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UEditableMesh* UEditableMesh::CommitInstance(class UPrimitiveComponent* ComponentToInstanceTo)
+	class UEditableMesh* UEditableMesh::CommitInstance(
+class UPrimitiveComponent* ComponentToInstanceTo
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3512,6 +4143,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3534,6 +4167,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3542,7 +4177,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<struct FChangeVertexInstancesForPolygon>    VertexInstancesForPolygons                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::ChangePolygonsVertexInstances(TArray<struct FChangeVertexInstancesForPolygon> VertexInstancesForPolygons)
+	void UEditableMesh::ChangePolygonsVertexInstances(
+TArray<struct FChangeVertexInstancesForPolygon> VertexInstancesForPolygons
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3559,6 +4196,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3571,7 +4210,17 @@ namespace CG
 	 * 		TArray<struct FPolygonID>                          OutNewCenterPolygonIDs                                     (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FPolygonID>                          OutNewSidePolygonIDs                                       (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::BevelPolygons(TArray<struct FPolygonID> PolygonIDs, float BevelFixedDistance, float BevelProgressTowardCenter, TArray<struct FPolygonID>* OutNewCenterPolygonIDs, TArray<struct FPolygonID>* OutNewSidePolygonIDs)
+	void UEditableMesh::BevelPolygons(
+TArray<struct FPolygonID> PolygonIDs
+, 
+float BevelFixedDistance
+, 
+float BevelProgressTowardCenter
+, 
+TArray<struct FPolygonID>* OutNewCenterPolygonIDs
+, 
+TArray<struct FPolygonID>* OutNewSidePolygonIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3599,6 +4248,8 @@ namespace CG
 			*OutNewSidePolygonIDs = params.OutNewSidePolygonIDs;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3608,7 +4259,11 @@ namespace CG
 	 * 		TArray<struct FPolygonGroupForPolygon>             PolygonGroupForPolygons                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		bool                                               bDeleteOrphanedPolygonGroups                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEditableMesh::AssignPolygonsToPolygonGroups(TArray<struct FPolygonGroupForPolygon> PolygonGroupForPolygons, bool bDeleteOrphanedPolygonGroups)
+	void UEditableMesh::AssignPolygonsToPolygonGroups(
+TArray<struct FPolygonGroupForPolygon> PolygonGroupForPolygons
+, 
+bool bDeleteOrphanedPolygonGroups
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3626,6 +4281,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3650,10 +4307,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEditableMesh.StaticClass
+	 * 		Name   -> PredefinedFunction UEditableMesh.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEditableMesh::StaticClass()
@@ -3664,6 +4323,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3673,7 +4334,11 @@ namespace CG
 	 * 		class UPrimitiveComponent*                         PrimitiveComponent                                         (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            LODIndex                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UEditableMesh* UEditableMeshFactory::MakeEditableMesh(class UPrimitiveComponent* PrimitiveComponent, int32_t LODIndex)
+	class UEditableMesh* UEditableMeshFactory::MakeEditableMesh(
+class UPrimitiveComponent* PrimitiveComponent
+, 
+int32_t LODIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3694,10 +4359,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEditableMeshFactory.StaticClass
+	 * 		Name   -> PredefinedFunction UEditableMeshFactory.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEditableMeshFactory::StaticClass()
@@ -3708,10 +4375,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEditableStaticMeshAdapter.StaticClass
+	 * 		Name   -> PredefinedFunction UEditableStaticMeshAdapter.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEditableStaticMeshAdapter::StaticClass()
@@ -3721,6 +4390,7 @@ namespace CG
 			ptr = UObject::FindClass("Class EditableMesh.EditableStaticMeshAdapter");
 		return ptr;
 	}
+
 
 }
 

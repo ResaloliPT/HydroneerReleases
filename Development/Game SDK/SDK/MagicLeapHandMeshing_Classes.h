@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * Class MagicLeapHandMeshing.MagicLeapHandMeshingComponent
 	 * Size -> 0x0000 (FullSize[0x00B0] - InheritedSize[0x00B0])
@@ -21,11 +22,23 @@ namespace CG
 	class UMagicLeapHandMeshingComponent : public UActorComponent
 	{
 	public:
-		void SetUseWeightedNormals(bool bInUseWeightedNormals);
-		bool DisconnectMRMesh(class UMRMeshComponent* InMRMeshPtr);
-		bool ConnectMRMesh(class UMRMeshComponent* InMRMeshPtr);
+
+		void SetUseWeightedNormals(
+bool bInUseWeightedNormals
+);
+
+		bool DisconnectMRMesh(
+class UMRMeshComponent* InMRMeshPtr
+);
+
+		bool ConnectMRMesh(
+class UMRMeshComponent* InMRMeshPtr
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class MagicLeapHandMeshing.MagicLeapHandMeshingFunctionLibrary
@@ -34,10 +47,19 @@ namespace CG
 	class UMagicLeapHandMeshingFunctionLibrary : public UBlueprintFunctionLibrary
 	{
 	public:
-		bool DisconnectMRMesh(class UMRMeshComponent* InMRMeshPtr);
+
+		bool DisconnectMRMesh(
+class UMRMeshComponent* InMRMeshPtr
+);
+
 		bool DestroyClient();
+
 		bool CreateClient();
-		bool ConnectMRMesh(class UMRMeshComponent* InMRMeshPtr);
+
+		bool ConnectMRMesh(
+class UMRMeshComponent* InMRMeshPtr
+);
+
 		static UClass* StaticClass();
 	};
 

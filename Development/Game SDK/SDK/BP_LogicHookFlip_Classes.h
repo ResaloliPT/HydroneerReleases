@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,14 +14,23 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * BlueprintGeneratedClass BP_LogicHookFlip.BP_LogicHookFlip_C
-	 * Size -> 0x0000 (FullSize[0x03C8] - InheritedSize[0x03C8])
+	 * Size -> 0x0000 (FullSize[0x0428] - InheritedSize[0x0428])
 	 */
 	class ABP_LogicHookFlip_C : public ABP_ParentHook_C
 	{
 	public:
-		void HookFunctionality(class ABP_ParentItem_C* HookedTo, class USceneComponent* Component, bool* CanPass_);
+
+		void HookFunctionality(
+class ABP_ParentItem_C* HookedTo
+, 
+class USceneComponent* Component
+, 
+bool* CanPass
+);
+
 		static UClass* StaticClass();
 	};
 

@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+
 	/**
 	 * ScriptStruct PropertyPath.PropertyPathSegment
 	 * Size -> 0x0028
@@ -21,12 +22,24 @@ namespace CG
 	struct FPropertyPathSegment
 	{
 	public:
-		class FName                                                Name;                                                    // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    ArrayIndex;                                              // 0x0008(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_DGKL[0x4];                                   // 0x000C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class UStruct*                                             Struct;                                                  // 0x0010(0x0008) ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_J0NA[0x10];                                  // 0x0018(0x0010) MISSED OFFSET (PADDING)
+
+		class FName                                              Name;                                                    // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  ArrayIndex;                                              // 0x0008(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_RXE3[0x4];                                   // 0x000C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		class UStruct*                                           Struct;                                                  // 0x0010(0x0008) ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+
+		unsigned char                                            UnknownData_OBI5[0x10];                                  // 0x0018(0x0010) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct PropertyPath.CachedPropertyPath
@@ -35,10 +48,18 @@ namespace CG
 	struct FCachedPropertyPath
 	{
 	public:
-		TArray<struct FPropertyPathSegment>                        Segments;                                                // 0x0000(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_C54D[0x8];                                   // 0x0010(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class UFunction*                                           CachedFunction;                                          // 0x0018(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_0NPK[0x8];                                   // 0x0020(0x0008) MISSED OFFSET (PADDING)
+
+		TArray<struct FPropertyPathSegment>                      Segments;                                                // 0x0000(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
+
+
+		unsigned char                                            UnknownData_LN54[0x8];                                   // 0x0010(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		class UFunction*                                         CachedFunction;                                          // 0x0018(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+
+		unsigned char                                            UnknownData_FYOP[0x8];                                   // 0x0020(0x0008) MISSED OFFSET (PADDING)
+
 	};
 
 }

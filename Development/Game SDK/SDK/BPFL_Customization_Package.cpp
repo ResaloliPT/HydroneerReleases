@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19,7 +20,11 @@ namespace CG
 	 * 		class UObject*                                     __WorldContext                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		struct FS_CharacterStyle                           Style                                                      (Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UBPFL_Customization_C::RandomStyle(class UObject* __WorldContext, struct FS_CharacterStyle* Style)
+	void UBPFL_Customization_C::RandomStyle(
+class UObject* __WorldContext
+, 
+struct FS_CharacterStyle* Style
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -40,6 +45,8 @@ namespace CG
 			*Style = params.Style;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -49,7 +56,11 @@ namespace CG
 	 * 		class UObject*                                     __WorldContext                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class FName                                        SkinColor                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UBPFL_Customization_C::RandomSkinColor(class UObject* __WorldContext, class FName* SkinColor)
+	void UBPFL_Customization_C::RandomSkinColor(
+class UObject* __WorldContext
+, 
+class FName* SkinColor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -70,6 +81,8 @@ namespace CG
 			*SkinColor = params.SkinColor;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -79,7 +92,11 @@ namespace CG
 	 * 		class UObject*                                     __WorldContext                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class FName                                        HairColor                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UBPFL_Customization_C::RandomHairColor(class UObject* __WorldContext, class FName* HairColor)
+	void UBPFL_Customization_C::RandomHairColor(
+class UObject* __WorldContext
+, 
+class FName* HairColor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -100,6 +117,8 @@ namespace CG
 			*HairColor = params.HairColor;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -110,7 +129,13 @@ namespace CG
 	 * 		class UObject*                                     __WorldContext                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		int32_t                                            BeardIndex                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UBPFL_Customization_C::RandomBeardMesh(const struct FS_CharacterStyle& Style, class UObject* __WorldContext, int32_t* BeardIndex)
+	void UBPFL_Customization_C::RandomBeardMesh(
+const struct FS_CharacterStyle& Style
+, 
+class UObject* __WorldContext
+, 
+int32_t* BeardIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -133,6 +158,8 @@ namespace CG
 			*BeardIndex = params.BeardIndex;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -143,7 +170,13 @@ namespace CG
 	 * 		class UObject*                                     __WorldContext                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		int32_t                                            HairIndex                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UBPFL_Customization_C::RandomHairMesh(const struct FS_CharacterStyle& Style, class UObject* __WorldContext, int32_t* HairIndex)
+	void UBPFL_Customization_C::RandomHairMesh(
+const struct FS_CharacterStyle& Style
+, 
+class UObject* __WorldContext
+, 
+int32_t* HairIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -166,6 +199,8 @@ namespace CG
 			*HairIndex = params.HairIndex;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -176,7 +211,13 @@ namespace CG
 	 * 		class UObject*                                     __WorldContext                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class UPData_Head_C*                               HeadData                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UBPFL_Customization_C::GetCurrentHead(const struct FS_CharacterStyle& Style, class UObject* __WorldContext, class UPData_Head_C** HeadData)
+	void UBPFL_Customization_C::GetCurrentHead(
+const struct FS_CharacterStyle& Style
+, 
+class UObject* __WorldContext
+, 
+class UPData_Head_C** HeadData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -199,6 +240,8 @@ namespace CG
 			*HeadData = params.HeadData;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -208,7 +251,11 @@ namespace CG
 	 * 		class UObject*                                     __WorldContext                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class FName                                        ClothingColor                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UBPFL_Customization_C::RandomClothingColor(class UObject* __WorldContext, class FName* ClothingColor)
+	void UBPFL_Customization_C::RandomClothingColor(
+class UObject* __WorldContext
+, 
+class FName* ClothingColor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -229,6 +276,8 @@ namespace CG
 			*ClothingColor = params.ClothingColor;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -239,7 +288,13 @@ namespace CG
 	 * 		class UObject*                                     __WorldContext                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		int32_t                                            ClothingIndex                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UBPFL_Customization_C::RandomClothingMesh(const struct FS_CharacterStyle& Style, class UObject* __WorldContext, int32_t* ClothingIndex)
+	void UBPFL_Customization_C::RandomClothingMesh(
+const struct FS_CharacterStyle& Style
+, 
+class UObject* __WorldContext
+, 
+int32_t* ClothingIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -262,6 +317,8 @@ namespace CG
 			*ClothingIndex = params.ClothingIndex;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -275,7 +332,19 @@ namespace CG
 	 * 		TArray<class UPData_Beard_C*>                      Beards                                                     (Parm, OutParm)
 	 * 		TArray<class UPData_ClothingSet_C*>                ClothingSets                                               (Parm, OutParm)
 	 */
-	void UBPFL_Customization_C::GetRelevantCustomizationOptions(const struct FS_CharacterStyle& Style, class UObject* __WorldContext, TArray<class UPData_Head_C*>* Heads, TArray<class UPData_Hair_C*>* Hair, TArray<class UPData_Beard_C*>* Beards, TArray<class UPData_ClothingSet_C*>* ClothingSets)
+	void UBPFL_Customization_C::GetRelevantCustomizationOptions(
+const struct FS_CharacterStyle& Style
+, 
+class UObject* __WorldContext
+, 
+TArray<class UPData_Head_C*>* Heads
+, 
+TArray<class UPData_Hair_C*>* Hair
+, 
+TArray<class UPData_Beard_C*>* Beards
+, 
+TArray<class UPData_ClothingSet_C*>* ClothingSets
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -307,6 +376,8 @@ namespace CG
 			*ClothingSets = params.ClothingSets;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -317,7 +388,13 @@ namespace CG
 	 * 		class UObject*                                     __WorldContext                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		struct FS_Character_Customization                  Options                                                    (Parm, OutParm, HasGetValueTypeHash)
 	 */
-	void UBPFL_Customization_C::GetCustomizationOptions(const struct FS_CharacterStyle& Style, class UObject* __WorldContext, struct FS_Character_Customization* Options)
+	void UBPFL_Customization_C::GetCustomizationOptions(
+const struct FS_CharacterStyle& Style
+, 
+class UObject* __WorldContext
+, 
+struct FS_Character_Customization* Options
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -340,10 +417,12 @@ namespace CG
 			*Options = params.Options;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBPFL_Customization_C.StaticClass
+	 * 		Name   -> PredefinedFunction UBPFL_Customization_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBPFL_Customization_C::StaticClass()
@@ -353,6 +432,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass BPFL_Customization.BPFL_Customization_C");
 		return ptr;
 	}
+
 
 }
 

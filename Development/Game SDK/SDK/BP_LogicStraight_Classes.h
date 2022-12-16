@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,20 +14,34 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * BlueprintGeneratedClass BP_LogicStraight.BP_LogicStraight_C
-	 * Size -> 0x0018 (FullSize[0x03F0] - InheritedSize[0x03D8])
+	 * Size -> 0x0018 (FullSize[0x0450] - InheritedSize[0x0438])
 	 */
 	class ABP_LogicStraight_C : public ABP_ParentLogic_C
 	{
 	public:
-		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x03D8(0x0008) ZeroConstructor, Transient, DuplicateTransient
-		class UBoxComponent*                                       X_Box;                                                   // 0x03E0(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
-		class UBoxComponent*                                       X_Box2;                                                  // 0x03E8(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+
+		struct FPointerToUberGraphFrame                          UberGraphFrame;                                          // 0x0438(0x0008) ZeroConstructor, Transient, DuplicateTransient
+
+
+		class UBoxComponent*                                     X_Box;                                                   // 0x0440(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, UObjectWrapper, HasGetValueTypeHash
+
+
+		class UBoxComponent*                                     X_Box2;                                                  // 0x0448(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, UObjectWrapper, HasGetValueTypeHash
+
 
 	public:
-		void OverrideLogicIn(class USceneComponent* Component);
-		void ExecuteUbergraph_BP_LogicStraight(int32_t EntryPoint);
+
+		void OverrideLogicIn(
+class USceneComponent* Component
+);
+
+		void ExecuteUbergraph_BP_LogicStraight(
+int32_t EntryPoint
+);
+
 		static UClass* StaticClass();
 	};
 

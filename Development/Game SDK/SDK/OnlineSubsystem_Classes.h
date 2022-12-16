@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * Class OnlineSubsystem.NamedInterfaces
 	 * Size -> 0x0038 (FullSize[0x0060] - InheritedSize[0x0028])
@@ -21,13 +22,22 @@ namespace CG
 	class UNamedInterfaces : public UObject
 	{
 	public:
-		TArray<struct FNamedInterface>                             NamedInterfaces;                                         // 0x0028(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
-		TArray<struct FNamedInterfaceDef>                          NamedInterfaceDefs;                                      // 0x0038(0x0010) ZeroConstructor, Config, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_BCTV[0x18];                                  // 0x0048(0x0018) MISSED OFFSET (PADDING)
+
+		TArray<struct FNamedInterface>                           NamedInterfaces;                                         // 0x0028(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
+
+
+		TArray<struct FNamedInterfaceDef>                        NamedInterfaceDefs;                                      // 0x0038(0x0010) ZeroConstructor, Config, NativeAccessSpecifierPrivate
+
+
+		unsigned char                                            UnknownData_OKY2[0x18];                                  // 0x0048(0x0018) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class OnlineSubsystem.TurnBasedMatchInterface
@@ -36,8 +46,17 @@ namespace CG
 	class UTurnBasedMatchInterface : public UInterface
 	{
 	public:
-		void OnMatchReceivedTurn(const class FString& Match, bool bDidBecomeActive);
-		void OnMatchEnded(const class FString& Match);
+
+		void OnMatchReceivedTurn(
+const class FString& Match
+, 
+bool bDidBecomeActive
+);
+
+		void OnMatchEnded(
+const class FString& Match
+);
+
 		static UClass* StaticClass();
 	};
 

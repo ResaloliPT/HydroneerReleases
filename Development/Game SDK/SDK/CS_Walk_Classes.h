@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * BlueprintGeneratedClass CS_Walk.CS_Walk_C
 	 * Size -> 0x0000 (FullSize[0x0180] - InheritedSize[0x0180])
@@ -21,6 +22,7 @@ namespace CG
 	class UCS_Walk_C : public UMatineeCameraShake
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
 

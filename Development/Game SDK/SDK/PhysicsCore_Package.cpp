@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBodySetupCore.StaticClass
+	 * 		Name   -> PredefinedFunction UBodySetupCore.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBodySetupCore::StaticClass()
@@ -24,10 +25,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UChaosPhysicalMaterial.StaticClass
+	 * 		Name   -> PredefinedFunction UChaosPhysicalMaterial.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UChaosPhysicalMaterial::StaticClass()
@@ -38,10 +41,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPhysicalMaterial.StaticClass
+	 * 		Name   -> PredefinedFunction UPhysicalMaterial.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPhysicalMaterial::StaticClass()
@@ -52,10 +57,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPhysicalMaterialPropertyBase.StaticClass
+	 * 		Name   -> PredefinedFunction UPhysicalMaterialPropertyBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPhysicalMaterialPropertyBase::StaticClass()
@@ -66,10 +73,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPhysicsSettingsCore.StaticClass
+	 * 		Name   -> PredefinedFunction UPhysicsSettingsCore.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPhysicsSettingsCore::StaticClass()
@@ -79,6 +88,7 @@ namespace CG
 			ptr = UObject::FindClass("Class PhysicsCore.PhysicsSettingsCore");
 		return ptr;
 	}
+
 
 }
 

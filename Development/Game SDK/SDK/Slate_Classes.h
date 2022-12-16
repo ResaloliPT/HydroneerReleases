@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * Class Slate.ButtonWidgetStyle
 	 * Size -> 0x0278 (FullSize[0x02A8] - InheritedSize[0x0030])
@@ -21,11 +22,16 @@ namespace CG
 	class UButtonWidgetStyle : public USlateWidgetStyleContainerBase
 	{
 	public:
-		struct FButtonStyle                                        ButtonStyle;                                             // 0x0030(0x0278) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+
+		struct FButtonStyle                                      ButtonStyle;                                             // 0x0030(0x0278) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class Slate.CheckBoxWidgetStyle
@@ -34,11 +40,16 @@ namespace CG
 	class UCheckBoxWidgetStyle : public USlateWidgetStyleContainerBase
 	{
 	public:
-		struct FCheckBoxStyle                                      CheckBoxStyle;                                           // 0x0030(0x0580) Edit, NativeAccessSpecifierPublic
+
+		struct FCheckBoxStyle                                    CheckBoxStyle;                                           // 0x0030(0x0580) Edit, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class Slate.ComboBoxWidgetStyle
@@ -47,11 +58,16 @@ namespace CG
 	class UComboBoxWidgetStyle : public USlateWidgetStyleContainerBase
 	{
 	public:
-		struct FComboBoxStyle                                      ComboBoxStyle;                                           // 0x0030(0x03F0) Edit, NativeAccessSpecifierPublic
+
+		struct FComboBoxStyle                                    ComboBoxStyle;                                           // 0x0030(0x03F0) Edit, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class Slate.ComboButtonWidgetStyle
@@ -60,11 +76,16 @@ namespace CG
 	class UComboButtonWidgetStyle : public USlateWidgetStyleContainerBase
 	{
 	public:
-		struct FComboButtonStyle                                   ComboButtonStyle;                                        // 0x0030(0x03B8) Edit, NativeAccessSpecifierPublic
+
+		struct FComboButtonStyle                                 ComboButtonStyle;                                        // 0x0030(0x03B8) Edit, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class Slate.EditableTextBoxWidgetStyle
@@ -73,11 +94,16 @@ namespace CG
 	class UEditableTextBoxWidgetStyle : public USlateWidgetStyleContainerBase
 	{
 	public:
-		struct FEditableTextBoxStyle                               EditableTextBoxStyle;                                    // 0x0030(0x07F8) Edit, NativeAccessSpecifierPublic
+
+		struct FEditableTextBoxStyle                             EditableTextBoxStyle;                                    // 0x0030(0x07F8) Edit, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class Slate.EditableTextWidgetStyle
@@ -86,11 +112,16 @@ namespace CG
 	class UEditableTextWidgetStyle : public USlateWidgetStyleContainerBase
 	{
 	public:
-		struct FEditableTextStyle                                  EditableTextStyle;                                       // 0x0030(0x0220) Edit, NativeAccessSpecifierPublic
+
+		struct FEditableTextStyle                                EditableTextStyle;                                       // 0x0030(0x0220) Edit, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class Slate.ProgressWidgetStyle
@@ -99,11 +130,16 @@ namespace CG
 	class UProgressWidgetStyle : public USlateWidgetStyleContainerBase
 	{
 	public:
-		struct FProgressBarStyle                                   ProgressBarStyle;                                        // 0x0030(0x01A0) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+
+		struct FProgressBarStyle                                 ProgressBarStyle;                                        // 0x0030(0x01A0) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class Slate.ScrollBarWidgetStyle
@@ -112,11 +148,16 @@ namespace CG
 	class UScrollBarWidgetStyle : public USlateWidgetStyleContainerBase
 	{
 	public:
-		struct FScrollBarStyle                                     ScrollBarStyle;                                          // 0x0030(0x04D0) Edit, NativeAccessSpecifierPublic
+
+		struct FScrollBarStyle                                   ScrollBarStyle;                                          // 0x0030(0x04D0) Edit, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class Slate.ScrollBoxWidgetStyle
@@ -125,11 +166,16 @@ namespace CG
 	class UScrollBoxWidgetStyle : public USlateWidgetStyleContainerBase
 	{
 	public:
-		struct FScrollBoxStyle                                     ScrollBoxStyle;                                          // 0x0030(0x0228) Edit, NativeAccessSpecifierPublic
+
+		struct FScrollBoxStyle                                   ScrollBoxStyle;                                          // 0x0030(0x0228) Edit, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class Slate.SlateSettings
@@ -138,12 +184,19 @@ namespace CG
 	class USlateSettings : public UObject
 	{
 	public:
-		bool                                                       bExplicitCanvasChildZOrder;                              // 0x0028(0x0001) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_IRHW[0x7];                                   // 0x0029(0x0007) MISSED OFFSET (PADDING)
+
+		bool                                                     bExplicitCanvasChildZOrder;                              // 0x0028(0x0001) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_IA8Q[0x7];                                   // 0x0029(0x0007) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class Slate.SpinBoxWidgetStyle
@@ -152,11 +205,16 @@ namespace CG
 	class USpinBoxWidgetStyle : public USlateWidgetStyleContainerBase
 	{
 	public:
-		struct FSpinBoxStyle                                       SpinBoxStyle;                                            // 0x0030(0x02E8) Edit, NativeAccessSpecifierPublic
+
+		struct FSpinBoxStyle                                     SpinBoxStyle;                                            // 0x0030(0x02E8) Edit, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class Slate.TextBlockWidgetStyle
@@ -165,11 +223,16 @@ namespace CG
 	class UTextBlockWidgetStyle : public USlateWidgetStyleContainerBase
 	{
 	public:
-		struct FTextBlockStyle                                     TextBlockStyle;                                          // 0x0030(0x0270) Edit, NativeAccessSpecifierPublic
+
+		struct FTextBlockStyle                                   TextBlockStyle;                                          // 0x0030(0x0270) Edit, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class Slate.ToolMenuBase
@@ -178,6 +241,7 @@ namespace CG
 	class UToolMenuBase : public UObject
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
 

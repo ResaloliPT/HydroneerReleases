@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,193 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.Owchie
+	 * 		Flags  -> ()
+	 */
+	void ABP_Character_HydroGuy_C::Owchie()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.Owchie");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.Hrrm
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              PlayerVoicePitch                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_Character_HydroGuy_C::Hrrm(
+float PlayerVoicePitch
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.Hrrm");
+		
+		struct
+		{
+			float                                              PlayerVoicePitch;
+		} params;
+		params.PlayerVoicePitch = PlayerVoicePitch;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.ToggleOwnerNoSee
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               bNewOwnerNoSee                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 */
+	void ABP_Character_HydroGuy_C::ToggleOwnerNoSee(
+bool bNewOwnerNoSee
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.ToggleOwnerNoSee");
+		
+		struct
+		{
+			bool                                               bNewOwnerNoSee;
+		} params;
+		params.bNewOwnerNoSee = bNewOwnerNoSee;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.CalculateVehicleHandIK
+	 * 		Flags  -> ()
+	 */
+	void ABP_Character_HydroGuy_C::CalculateVehicleHandIK()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.CalculateVehicleHandIK");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.SetCharacterVehicle
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class ABP_ParentVehicle_C*                         Vehicle                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		bool                                               UseHandIK                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		class USceneComponent*                             HandleR                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		class USceneComponent*                             HandleL                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		class USceneComponent*                             SteerPivot                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		bool                                               HasVehiclePose                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		E_Vehicle                                          VehicleType                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_Character_HydroGuy_C::SetCharacterVehicle(
+class ABP_ParentVehicle_C* Vehicle
+, 
+bool UseHandIK
+, 
+class USceneComponent* HandleR
+, 
+class USceneComponent* HandleL
+, 
+class USceneComponent* SteerPivot
+, 
+bool HasVehiclePose
+, 
+E_Vehicle VehicleType
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.SetCharacterVehicle");
+		
+		struct
+		{
+			class ABP_ParentVehicle_C*                         Vehicle;
+			bool                                               UseHandIK;
+			class USceneComponent*                             HandleR;
+			class USceneComponent*                             HandleL;
+			class USceneComponent*                             SteerPivot;
+			bool                                               HasVehiclePose;
+			E_Vehicle                                          VehicleType;
+		} params;
+		params.Vehicle = Vehicle;
+		params.UseHandIK = UseHandIK;
+		params.HandleR = HandleR;
+		params.HandleL = HandleL;
+		params.SteerPivot = SteerPivot;
+		params.HasVehiclePose = HasVehiclePose;
+		params.VehicleType = VehicleType;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.RandomizeFaceTransforms
+	 * 		Flags  -> ()
+	 */
+	void ABP_Character_HydroGuy_C::RandomizeFaceTransforms()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.RandomizeFaceTransforms");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18,7 +205,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<class UActorComponent*>                     Components                                                 (Parm, OutParm, ContainsInstancedReference)
 	 */
-	void ABP_Character_HydroGuy_C::ComponentsToSave(TArray<class UActorComponent*>* Components)
+	void ABP_Character_HydroGuy_C::ComponentsToSave(
+TArray<class UActorComponent*>* Components
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -36,6 +225,8 @@ namespace CG
 		if (Components != nullptr)
 			*Components = params.Components;
 	}
+
+
 
 	/**
 	 * Function:
@@ -60,6 +251,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -81,15 +274,19 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_Character_HydroGuy.BP_Character_HydroGuy_C.ToggleFree
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               isFree_                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               isFree                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_Character_HydroGuy_C::ToggleFree(bool isFree_)
+	void ABP_Character_HydroGuy_C::ToggleFree(
+bool isFree
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -97,14 +294,16 @@ namespace CG
 		
 		struct
 		{
-			bool                                               isFree_;
+			bool                                               isFree;
 		} params;
-		params.isFree_ = isFree_;
+		params.isFree = isFree;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -115,7 +314,11 @@ namespace CG
 	 * 		class FName                                        Socket                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		bool                                               Result                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_Character_HydroGuy_C::IsProxyTwoHanded_(const class FName& Socket, bool* Result)
+	void ABP_Character_HydroGuy_C::IsProxyTwoHanded(
+const class FName& Socket
+, 
+bool* Result
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -136,6 +339,8 @@ namespace CG
 			*Result = params.Result;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -144,7 +349,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UAnimMontage*                                AnimMontage                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_Character_HydroGuy_C::PlayMontage(class UAnimMontage* AnimMontage)
+	void ABP_Character_HydroGuy_C::PlayMontage(
+class UAnimMontage* AnimMontage
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -161,6 +368,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -170,7 +379,11 @@ namespace CG
 	 * 		class FName                                        ColorParameter                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	 * 		class FName                                        Color                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_Character_HydroGuy_C::GetClothingColor(const class FName& ColorParameter, class FName* Color)
+	void ABP_Character_HydroGuy_C::GetClothingColor(
+const class FName& ColorParameter
+, 
+class FName* Color
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -190,6 +403,8 @@ namespace CG
 		if (Color != nullptr)
 			*Color = params.Color;
 	}
+
+
 
 	/**
 	 * Function:
@@ -212,6 +427,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -232,6 +449,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -254,6 +473,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -274,6 +495,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -296,6 +519,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -316,6 +541,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -338,6 +565,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -359,6 +588,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -366,9 +597,13 @@ namespace CG
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		class ABP_ParentItem_C*                            ProxyItem                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		bool                                               Attach_                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               Attach                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_Character_HydroGuy_C::UpdateProxyItem(class ABP_ParentItem_C* ProxyItem, bool Attach_)
+	void ABP_Character_HydroGuy_C::UpdateProxyItem(
+class ABP_ParentItem_C* ProxyItem
+, 
+bool Attach
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -377,15 +612,17 @@ namespace CG
 		struct
 		{
 			class ABP_ParentItem_C*                            ProxyItem;
-			bool                                               Attach_;
+			bool                                               Attach;
 		} params;
 		params.ProxyItem = ProxyItem;
-		params.Attach_ = Attach_;
+		params.Attach = Attach;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -395,7 +632,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        Hair_Color_ID                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_Character_HydroGuy_C::UpdateHairColor(const class FName& Hair_Color_ID)
+	void ABP_Character_HydroGuy_C::UpdateHairColor(
+const class FName& Hair_Color_ID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -412,6 +651,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -420,7 +661,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            BeardIndex                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_Character_HydroGuy_C::UpdateBeardMesh(int32_t BeardIndex)
+	void ABP_Character_HydroGuy_C::UpdateBeardMesh(
+int32_t BeardIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -437,6 +680,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -445,7 +690,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UPData_Head_C*                               Output                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_Character_HydroGuy_C::GetCurrentHead(class UPData_Head_C** Output)
+	void ABP_Character_HydroGuy_C::GetCurrentHead(
+class UPData_Head_C** Output
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -464,6 +711,8 @@ namespace CG
 			*Output = params.Output;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -474,7 +723,13 @@ namespace CG
 	 * 		int32_t                                            MaterialSlot                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class UMaterialInstanceDynamic*                    DynamicMaterial                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_Character_HydroGuy_C::CreateDynamicDefaultMaterial(class USkeletalMeshComponent* Mesh, int32_t MaterialSlot, class UMaterialInstanceDynamic** DynamicMaterial)
+	void ABP_Character_HydroGuy_C::CreateDynamicDefaultMaterial(
+class USkeletalMeshComponent* Mesh
+, 
+int32_t MaterialSlot
+, 
+class UMaterialInstanceDynamic** DynamicMaterial
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -497,6 +752,8 @@ namespace CG
 			*DynamicMaterial = params.DynamicMaterial;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -507,7 +764,13 @@ namespace CG
 	 * 		int32_t                                            MaterialSlot                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	 * 		class UMaterialInterface*                          Material                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_Character_HydroGuy_C::GetMeshDefaultMaterial(class USkinnedMeshComponent* MeshComponent, int32_t MaterialSlot, class UMaterialInterface** Material)
+	void ABP_Character_HydroGuy_C::GetMeshDefaultMaterial(
+class USkinnedMeshComponent* MeshComponent
+, 
+int32_t MaterialSlot
+, 
+class UMaterialInterface** Material
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -530,6 +793,8 @@ namespace CG
 			*Material = params.Material;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -551,6 +816,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -559,7 +826,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            HairIndex                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_Character_HydroGuy_C::UpdateHairMesh(int32_t HairIndex)
+	void ABP_Character_HydroGuy_C::UpdateHairMesh(
+int32_t HairIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -575,6 +844,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -597,6 +868,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -605,7 +878,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        Clothing_Color                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_Character_HydroGuy_C::UpdateClothingPantsColor(const class FName& Clothing_Color)
+	void ABP_Character_HydroGuy_C::UpdateClothingPantsColor(
+const class FName& Clothing_Color
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -622,6 +897,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -629,9 +906,13 @@ namespace CG
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		TArray<E_MeshParts>                                MeshParts                                                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	 * 		bool                                               Hide_                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               Hide                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_Character_HydroGuy_C::ToggleHideMeshParts(TArray<E_MeshParts>* MeshParts, bool Hide_)
+	void ABP_Character_HydroGuy_C::ToggleHideMeshParts(
+TArray<E_MeshParts>* MeshParts
+, 
+bool Hide
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -640,9 +921,9 @@ namespace CG
 		struct
 		{
 			TArray<E_MeshParts>                                MeshParts;
-			bool                                               Hide_;
+			bool                                               Hide;
 		} params;
-		params.Hide_ = Hide_;
+		params.Hide = Hide;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -652,6 +933,8 @@ namespace CG
 			*MeshParts = params.MeshParts;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -660,7 +943,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        Clothing_Color                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_Character_HydroGuy_C::UpdateClothingShirtColor(const class FName& Clothing_Color)
+	void ABP_Character_HydroGuy_C::UpdateClothingShirtColor(
+const class FName& Clothing_Color
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -677,6 +962,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -686,7 +973,11 @@ namespace CG
 	 * 		class FName                                        ColorParameter                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class FName                                        Color                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_Character_HydroGuy_C::UpdateClothingColor(const class FName& ColorParameter, const class FName& Color)
+	void ABP_Character_HydroGuy_C::UpdateClothingColor(
+const class FName& ColorParameter
+, 
+const class FName& Color
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -705,6 +996,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -713,7 +1006,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            PantsIndex                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_Character_HydroGuy_C::UpdateClothingPantsMesh(int32_t PantsIndex)
+	void ABP_Character_HydroGuy_C::UpdateClothingPantsMesh(
+int32_t PantsIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -730,6 +1025,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -738,7 +1035,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Shirt_Index                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_Character_HydroGuy_C::UpdateClothingShirtMesh(int32_t Shirt_Index)
+	void ABP_Character_HydroGuy_C::UpdateClothingShirtMesh(
+int32_t Shirt_Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -754,6 +1053,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -776,6 +1077,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -788,7 +1091,17 @@ namespace CG
 	 * 		TArray<E_MeshParts>                                UnhideMeshParts                                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	 * 		TArray<E_MeshParts>                                HideMeshParts                                              (Parm, OutParm)
 	 */
-	void ABP_Character_HydroGuy_C::UpdateClothingMesh(class USkeletalMeshComponent* MeshClothing, E_ClothingSlots Slot, int32_t ClothingIndex, TArray<E_MeshParts>* UnhideMeshParts, TArray<E_MeshParts>* HideMeshParts)
+	void ABP_Character_HydroGuy_C::UpdateClothingMesh(
+class USkeletalMeshComponent* MeshClothing
+, 
+E_ClothingSlots Slot
+, 
+int32_t ClothingIndex
+, 
+TArray<E_MeshParts>* UnhideMeshParts
+, 
+TArray<E_MeshParts>* HideMeshParts
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -816,6 +1129,8 @@ namespace CG
 			*HideMeshParts = params.HideMeshParts;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -824,7 +1139,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        SkinColorID                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_Character_HydroGuy_C::UpdateSkinColor(const class FName& SkinColorID)
+	void ABP_Character_HydroGuy_C::UpdateSkinColor(
+const class FName& SkinColorID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -841,6 +1158,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -849,7 +1168,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            HeadIndex                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_Character_HydroGuy_C::UpdateHeadMesh(int32_t HeadIndex)
+	void ABP_Character_HydroGuy_C::UpdateHeadMesh(
+int32_t HeadIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -865,6 +1186,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -887,6 +1210,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -895,7 +1220,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        BodyID                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_Character_HydroGuy_C::UpdateBodyMesh(const class FName& BodyID)
+	void ABP_Character_HydroGuy_C::UpdateBodyMesh(
+const class FName& BodyID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -911,6 +1238,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -933,6 +1262,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -954,6 +1285,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -962,7 +1295,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FS_CharacterStyle                           Style                                                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_Character_HydroGuy_C::InitStyle(const struct FS_CharacterStyle& Style)
+	void ABP_Character_HydroGuy_C::InitStyle(
+const struct FS_CharacterStyle& Style
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -978,6 +1313,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1000,6 +1337,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1008,7 +1347,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              DeltaSeconds                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_Character_HydroGuy_C::ReceiveTick(float DeltaSeconds)
+	void ABP_Character_HydroGuy_C::ReceiveTick(
+float DeltaSeconds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1025,6 +1366,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1033,7 +1376,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_Character_HydroGuy_C::ExecuteUbergraph_BP_Character_HydroGuy(int32_t EntryPoint)
+	void ABP_Character_HydroGuy_C::ExecuteUbergraph_BP_Character_HydroGuy(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1050,10 +1395,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ABP_Character_HydroGuy_C.StaticClass
+	 * 		Name   -> PredefinedFunction ABP_Character_HydroGuy_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ABP_Character_HydroGuy_C::StaticClass()
@@ -1063,6 +1410,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass BP_Character_HydroGuy.BP_Character_HydroGuy_C");
 		return ptr;
 	}
+
 
 }
 

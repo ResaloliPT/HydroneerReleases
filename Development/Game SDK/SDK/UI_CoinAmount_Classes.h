@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,19 +14,36 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * WidgetBlueprintGeneratedClass UI_CoinAmount.UI_CoinAmount_C
-	 * Size -> 0x0010 (FullSize[0x0270] - InheritedSize[0x0260])
+	 * Size -> 0x0011 (FullSize[0x0271] - InheritedSize[0x0260])
 	 */
 	class UUI_CoinAmount_C : public UUserWidget
 	{
 	public:
-		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x0260(0x0008) ZeroConstructor, Transient, DuplicateTransient, UObjectWrapper
-		class UTextBlock*                                          Text;                                                    // 0x0268(0x0008) BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash
+
+		struct FPointerToUberGraphFrame                          UberGraphFrame;                                          // 0x0260(0x0008) ZeroConstructor, Transient, DuplicateTransient, UObjectWrapper
+
+
+		class UTextBlock*                                        Text;                                                    // 0x0268(0x0008) BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash
+
+
+		E_CurrencyType                                           CurrencyType;                                            // 0x0270(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash
+
 
 	public:
-		void SetText(const class FText& InText);
-		void ExecuteUbergraph_UI_CoinAmount(int32_t EntryPoint);
+
+		void SetText(
+const class FText& InText
+);
+
+		void Construct();
+
+		void ExecuteUbergraph_UI_CoinAmount(
+int32_t EntryPoint
+);
+
 		static UClass* StaticClass();
 	};
 

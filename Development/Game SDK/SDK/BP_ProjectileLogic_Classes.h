@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * BlueprintGeneratedClass BP_ProjectileLogic.BP_ProjectileLogic_C
 	 * Size -> 0x0020 (FullSize[0x0240] - InheritedSize[0x0220])
@@ -21,15 +22,39 @@ namespace CG
 	class ABP_ProjectileLogic_C : public AActor
 	{
 	public:
-		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x0220(0x0008) ZeroConstructor, Transient, DuplicateTransient, UObjectWrapper
-		class UParticleSystemComponent*                            ParticleSystem;                                          // 0x0228(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
-		class UStaticMeshComponent*                                StaticMesh;                                              // 0x0230(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
-		class USceneComponent*                                     DefaultSceneRoot;                                        // 0x0238(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+
+		struct FPointerToUberGraphFrame                          UberGraphFrame;                                          // 0x0220(0x0008) ZeroConstructor, Transient, DuplicateTransient, UObjectWrapper
+
+
+		class UParticleSystemComponent*                          ParticleSystem;                                          // 0x0228(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+
+
+		class UStaticMeshComponent*                              StaticMesh;                                              // 0x0230(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+
+
+		class USceneComponent*                                   DefaultSceneRoot;                                        // 0x0238(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+
 
 	public:
-		void BndEvt__StaticMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
+
+		void BndEvt__StaticMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(
+class UPrimitiveComponent* HitComponent
+, 
+class AActor* OtherActor
+, 
+class UPrimitiveComponent* OtherComp
+, 
+const struct FVector& NormalImpulse
+, 
+const struct FHitResult& Hit
+);
+
 		void ReceiveBeginPlay();
-		void ExecuteUbergraph_BP_ProjectileLogic(int32_t EntryPoint);
+
+		void ExecuteUbergraph_BP_ProjectileLogic(
+int32_t EntryPoint
+);
+
 		static UClass* StaticClass();
 	};
 

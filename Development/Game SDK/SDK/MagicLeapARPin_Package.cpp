@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -31,6 +32,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -40,7 +43,11 @@ namespace CG
 	 * 		class UClass*                                      InPinDataClass                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               OutPinDataValid                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UMagicLeapARPinSaveGame* UMagicLeapARPinComponent::TryGetPinData(class UClass* InPinDataClass, bool* OutPinDataValid)
+	class UMagicLeapARPinSaveGame* UMagicLeapARPinComponent::TryGetPinData(
+class UClass* InPinDataClass
+, 
+bool* OutPinDataValid
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -62,6 +69,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -86,6 +95,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -94,7 +105,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FGuid                                       PinId                                                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapARPinComponent::PinToID(const struct FGuid& PinId)
+	bool UMagicLeapARPinComponent::PinToID(
+const struct FGuid& PinId
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -112,6 +125,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -134,6 +149,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -142,7 +159,9 @@ namespace CG
 	 * Parameters:
 	 * 		class USceneComponent*                             ComponentToPin                                             (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapARPinComponent::PinSceneComponent(class USceneComponent* ComponentToPin)
+	bool UMagicLeapARPinComponent::PinSceneComponent(
+class USceneComponent* ComponentToPin
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -160,6 +179,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -184,6 +205,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -192,7 +215,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AActor*                                      ActorToPin                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapARPinComponent::PinActor(class AActor* ActorToPin)
+	bool UMagicLeapARPinComponent::PinActor(
+class AActor* ActorToPin
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -211,6 +236,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -219,7 +246,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bRestoredOrSynced                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMagicLeapARPinComponent::PersistentEntityPinned__DelegateSignature(bool bRestoredOrSynced)
+	void UMagicLeapARPinComponent::PersistentEntityPinned__DelegateSignature(
+bool bRestoredOrSynced
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -235,6 +264,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -257,6 +288,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -265,7 +298,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bDataRestored                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMagicLeapARPinComponent::MagicLeapARPinDataLoadAttemptCompleted__DelegateSignature(bool bDataRestored)
+	void UMagicLeapARPinComponent::MagicLeapARPinDataLoadAttemptCompleted__DelegateSignature(
+bool bDataRestored
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -281,6 +316,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -305,6 +342,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -313,7 +352,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FMagicLeapARPinState                        State                                                      (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapARPinComponent::GetPinState(struct FMagicLeapARPinState* State)
+	bool UMagicLeapARPinComponent::GetPinState(
+struct FMagicLeapARPinState* State
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -334,6 +375,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -342,7 +385,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FGuid                                       PinId                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapARPinComponent::GetPinnedPinID(struct FGuid* PinId)
+	bool UMagicLeapARPinComponent::GetPinnedPinID(
+struct FGuid* PinId
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -363,6 +408,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -371,7 +418,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UClass*                                      PinDataClass                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UMagicLeapARPinSaveGame* UMagicLeapARPinComponent::GetPinData(class UClass* PinDataClass)
+	class UMagicLeapARPinSaveGame* UMagicLeapARPinComponent::GetPinData(
+class UClass* PinDataClass
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -389,6 +438,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -410,6 +461,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -434,10 +487,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMagicLeapARPinComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UMagicLeapARPinComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMagicLeapARPinComponent::StaticClass()
@@ -448,6 +503,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -456,7 +513,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FScriptDelegate                              Delegate                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UMagicLeapARPinFunctionLibrary::UnBindToOnMagicLeapContentBindingFoundDelegate(const class FScriptDelegate& Delegate)
+	void UMagicLeapARPinFunctionLibrary::UnBindToOnMagicLeapContentBindingFoundDelegate(
+const class FScriptDelegate& Delegate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -473,6 +532,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -481,7 +542,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FScriptDelegate                              Delegate                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UMagicLeapARPinFunctionLibrary::UnBindToOnMagicLeapARPinUpdatedDelegate(const class FScriptDelegate& Delegate)
+	void UMagicLeapARPinFunctionLibrary::UnBindToOnMagicLeapARPinUpdatedDelegate(
+const class FScriptDelegate& Delegate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -498,6 +561,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -506,7 +571,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FMagicLeapARPinQuery                        InGlobalFilter                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	EMagicLeapPassableWorldError UMagicLeapARPinFunctionLibrary::SetGlobalQueryFilter(const struct FMagicLeapARPinQuery& InGlobalFilter)
+	EMagicLeapPassableWorldError UMagicLeapARPinFunctionLibrary::SetGlobalQueryFilter(
+const struct FMagicLeapARPinQuery& InGlobalFilter
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -525,6 +592,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -533,7 +602,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            UserIndex                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMagicLeapARPinFunctionLibrary::SetContentBindingSaveGameUserIndex(int32_t UserIndex)
+	void UMagicLeapARPinFunctionLibrary::SetContentBindingSaveGameUserIndex(
+int32_t UserIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -550,6 +621,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -559,7 +632,11 @@ namespace CG
 	 * 		struct FMagicLeapARPinQuery                        Query                                                      (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FGuid>                               Pins                                                       (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	EMagicLeapPassableWorldError UMagicLeapARPinFunctionLibrary::QueryARPins(const struct FMagicLeapARPinQuery& Query, TArray<struct FGuid>* Pins)
+	EMagicLeapPassableWorldError UMagicLeapARPinFunctionLibrary::QueryARPins(
+const struct FMagicLeapARPinQuery& Query
+, 
+TArray<struct FGuid>* Pins
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -582,6 +659,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -591,7 +670,11 @@ namespace CG
 	 * 		class FString                                      PinIdString                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FGuid                                       ARPinId                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapARPinFunctionLibrary::ParseStringToARPinId(const class FString& PinIdString, struct FGuid* ARPinId)
+	bool UMagicLeapARPinFunctionLibrary::ParseStringToARPinId(
+const class FString& PinIdString
+, 
+struct FGuid* ARPinId
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -613,6 +696,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -637,6 +722,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -645,7 +732,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Count                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	EMagicLeapPassableWorldError UMagicLeapARPinFunctionLibrary::GetNumAvailableARPins(int32_t* Count)
+	EMagicLeapPassableWorldError UMagicLeapARPinFunctionLibrary::GetNumAvailableARPins(
+int32_t* Count
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -666,6 +755,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -674,7 +765,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FMagicLeapARPinQuery                        CurrentGlobalFilter                                        (Parm, OutParm, NativeAccessSpecifierPublic)
 	 */
-	EMagicLeapPassableWorldError UMagicLeapARPinFunctionLibrary::GetGlobalQueryFilter(struct FMagicLeapARPinQuery* CurrentGlobalFilter)
+	EMagicLeapPassableWorldError UMagicLeapARPinFunctionLibrary::GetGlobalQueryFilter(
+struct FMagicLeapARPinQuery* CurrentGlobalFilter
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -694,6 +787,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -718,6 +813,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -727,7 +824,11 @@ namespace CG
 	 * 		struct FVector                                     SearchPoint                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FGuid                                       PinId                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	EMagicLeapPassableWorldError UMagicLeapARPinFunctionLibrary::GetClosestARPin(const struct FVector& SearchPoint, struct FGuid* PinId)
+	EMagicLeapPassableWorldError UMagicLeapARPinFunctionLibrary::GetClosestARPin(
+const struct FVector& SearchPoint
+, 
+struct FGuid* PinId
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -750,6 +851,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -759,7 +862,11 @@ namespace CG
 	 * 		int32_t                                            NumRequested                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FGuid>                               Pins                                                       (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	EMagicLeapPassableWorldError UMagicLeapARPinFunctionLibrary::GetAvailableARPins(int32_t NumRequested, TArray<struct FGuid>* Pins)
+	EMagicLeapPassableWorldError UMagicLeapARPinFunctionLibrary::GetAvailableARPins(
+int32_t NumRequested
+, 
+TArray<struct FGuid>* Pins
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -782,6 +889,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -790,7 +899,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FMagicLeapARPinState                        State                                                      (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	class FString UMagicLeapARPinFunctionLibrary::GetARPinStateToString(const struct FMagicLeapARPinState& State)
+	class FString UMagicLeapARPinFunctionLibrary::GetARPinStateToString(
+const struct FMagicLeapARPinState& State
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -809,6 +920,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -818,7 +931,11 @@ namespace CG
 	 * 		struct FGuid                                       PinId                                                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FMagicLeapARPinState                        State                                                      (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	EMagicLeapPassableWorldError UMagicLeapARPinFunctionLibrary::GetARPinState(const struct FGuid& PinId, struct FMagicLeapARPinState* State)
+	EMagicLeapPassableWorldError UMagicLeapARPinFunctionLibrary::GetARPinState(
+const struct FGuid& PinId
+, 
+struct FMagicLeapARPinState* State
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -841,6 +958,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -852,7 +971,15 @@ namespace CG
 	 * 		struct FRotator                                    Orientation                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               PinFoundInEnvironment                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapARPinFunctionLibrary::GetARPinPositionAndOrientation_TrackingSpace(const struct FGuid& PinId, struct FVector* Position, struct FRotator* Orientation, bool* PinFoundInEnvironment)
+	bool UMagicLeapARPinFunctionLibrary::GetARPinPositionAndOrientation_TrackingSpace(
+const struct FGuid& PinId
+, 
+struct FVector* Position
+, 
+struct FRotator* Orientation
+, 
+bool* PinFoundInEnvironment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -881,6 +1008,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -892,7 +1021,15 @@ namespace CG
 	 * 		struct FRotator                                    Orientation                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               PinFoundInEnvironment                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapARPinFunctionLibrary::GetARPinPositionAndOrientation(const struct FGuid& PinId, struct FVector* Position, struct FRotator* Orientation, bool* PinFoundInEnvironment)
+	bool UMagicLeapARPinFunctionLibrary::GetARPinPositionAndOrientation(
+const struct FGuid& PinId
+, 
+struct FVector* Position
+, 
+struct FRotator* Orientation
+, 
+bool* PinFoundInEnvironment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -921,6 +1058,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -943,6 +1082,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -967,6 +1108,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -975,7 +1118,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FScriptDelegate                              Delegate                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UMagicLeapARPinFunctionLibrary::BindToOnMagicLeapContentBindingFoundDelegate(const class FScriptDelegate& Delegate)
+	void UMagicLeapARPinFunctionLibrary::BindToOnMagicLeapContentBindingFoundDelegate(
+const class FScriptDelegate& Delegate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -992,6 +1137,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1000,7 +1147,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FScriptDelegate                              Delegate                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UMagicLeapARPinFunctionLibrary::BindToOnMagicLeapARPinUpdatedDelegate(const class FScriptDelegate& Delegate)
+	void UMagicLeapARPinFunctionLibrary::BindToOnMagicLeapARPinUpdatedDelegate(
+const class FScriptDelegate& Delegate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1017,6 +1166,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1025,7 +1176,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FGuid                                       ARPinId                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UMagicLeapARPinFunctionLibrary::ARPinIdToString(const struct FGuid& ARPinId)
+	class FString UMagicLeapARPinFunctionLibrary::ARPinIdToString(
+const struct FGuid& ARPinId
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1044,10 +1197,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMagicLeapARPinFunctionLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UMagicLeapARPinFunctionLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMagicLeapARPinFunctionLibrary::StaticClass()
@@ -1057,6 +1212,8 @@ namespace CG
 			ptr = UObject::FindClass("Class MagicLeapARPin.MagicLeapARPinFunctionLibrary");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1079,10 +1236,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AMagicLeapARPinInfoActorBase.StaticClass
+	 * 		Name   -> PredefinedFunction AMagicLeapARPinInfoActorBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AMagicLeapARPinInfoActorBase::StaticClass()
@@ -1093,6 +1252,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1101,7 +1262,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               InVisibilityOverride                                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void AMagicLeapARPinRenderer::SetVisibilityOverride(bool InVisibilityOverride)
+	void AMagicLeapARPinRenderer::SetVisibilityOverride(
+bool InVisibilityOverride
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1118,10 +1281,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AMagicLeapARPinRenderer.StaticClass
+	 * 		Name   -> PredefinedFunction AMagicLeapARPinRenderer.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AMagicLeapARPinRenderer::StaticClass()
@@ -1132,10 +1297,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMagicLeapARPinSettings.StaticClass
+	 * 		Name   -> PredefinedFunction UMagicLeapARPinSettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMagicLeapARPinSettings::StaticClass()
@@ -1146,10 +1313,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMagicLeapARPinSaveGame.StaticClass
+	 * 		Name   -> PredefinedFunction UMagicLeapARPinSaveGame.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMagicLeapARPinSaveGame::StaticClass()
@@ -1160,10 +1329,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMagicLeapARPinContentBindings.StaticClass
+	 * 		Name   -> PredefinedFunction UMagicLeapARPinContentBindings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMagicLeapARPinContentBindings::StaticClass()
@@ -1173,6 +1344,7 @@ namespace CG
 			ptr = UObject::FindClass("Class MagicLeapARPin.MagicLeapARPinContentBindings");
 		return ptr;
 	}
+
 
 }
 

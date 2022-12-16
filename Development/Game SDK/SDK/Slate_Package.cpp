@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UButtonWidgetStyle.StaticClass
+	 * 		Name   -> PredefinedFunction UButtonWidgetStyle.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UButtonWidgetStyle::StaticClass()
@@ -24,10 +25,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UCheckBoxWidgetStyle.StaticClass
+	 * 		Name   -> PredefinedFunction UCheckBoxWidgetStyle.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UCheckBoxWidgetStyle::StaticClass()
@@ -38,10 +41,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UComboBoxWidgetStyle.StaticClass
+	 * 		Name   -> PredefinedFunction UComboBoxWidgetStyle.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UComboBoxWidgetStyle::StaticClass()
@@ -52,10 +57,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UComboButtonWidgetStyle.StaticClass
+	 * 		Name   -> PredefinedFunction UComboButtonWidgetStyle.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UComboButtonWidgetStyle::StaticClass()
@@ -66,10 +73,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEditableTextBoxWidgetStyle.StaticClass
+	 * 		Name   -> PredefinedFunction UEditableTextBoxWidgetStyle.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEditableTextBoxWidgetStyle::StaticClass()
@@ -80,10 +89,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEditableTextWidgetStyle.StaticClass
+	 * 		Name   -> PredefinedFunction UEditableTextWidgetStyle.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEditableTextWidgetStyle::StaticClass()
@@ -94,10 +105,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UProgressWidgetStyle.StaticClass
+	 * 		Name   -> PredefinedFunction UProgressWidgetStyle.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UProgressWidgetStyle::StaticClass()
@@ -108,10 +121,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UScrollBarWidgetStyle.StaticClass
+	 * 		Name   -> PredefinedFunction UScrollBarWidgetStyle.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UScrollBarWidgetStyle::StaticClass()
@@ -122,10 +137,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UScrollBoxWidgetStyle.StaticClass
+	 * 		Name   -> PredefinedFunction UScrollBoxWidgetStyle.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UScrollBoxWidgetStyle::StaticClass()
@@ -136,10 +153,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USlateSettings.StaticClass
+	 * 		Name   -> PredefinedFunction USlateSettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USlateSettings::StaticClass()
@@ -150,10 +169,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USpinBoxWidgetStyle.StaticClass
+	 * 		Name   -> PredefinedFunction USpinBoxWidgetStyle.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USpinBoxWidgetStyle::StaticClass()
@@ -164,10 +185,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UTextBlockWidgetStyle.StaticClass
+	 * 		Name   -> PredefinedFunction UTextBlockWidgetStyle.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UTextBlockWidgetStyle::StaticClass()
@@ -178,10 +201,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UToolMenuBase.StaticClass
+	 * 		Name   -> PredefinedFunction UToolMenuBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UToolMenuBase::StaticClass()
@@ -191,6 +216,7 @@ namespace CG
 			ptr = UObject::FindClass("Class Slate.ToolMenuBase");
 		return ptr;
 	}
+
 
 }
 

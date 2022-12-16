@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18,7 +19,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_ParentHook_C*                            Hook                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UBPI_Hook_C::RemovePart(class ABP_ParentHook_C* Hook)
+	void UBPI_Hook_C::RemovePart(
+class ABP_ParentHook_C* Hook
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -35,6 +38,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -43,7 +48,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_ParentHook_C*                            Hook                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UBPI_Hook_C::AttachPart(class ABP_ParentHook_C* Hook)
+	void UBPI_Hook_C::AttachPart(
+class ABP_ParentHook_C* Hook
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -60,10 +67,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBPI_Hook_C.StaticClass
+	 * 		Name   -> PredefinedFunction UBPI_Hook_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBPI_Hook_C::StaticClass()
@@ -73,6 +82,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass BPI_Hook.BPI_Hook_C");
 		return ptr;
 	}
+
 
 }
 

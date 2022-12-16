@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -30,6 +31,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -52,6 +55,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -73,10 +78,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGameplayTask.StaticClass
+	 * 		Name   -> PredefinedFunction UGameplayTask.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGameplayTask::StaticClass()
@@ -86,6 +93,8 @@ namespace CG
 			ptr = UObject::FindClass("Class GameplayTasks.GameplayTask");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -97,7 +106,13 @@ namespace CG
 	 * 		unsigned char                                      Priority                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FName                                        TaskInstanceName                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UGameplayTask_ClaimResource* UGameplayTask_ClaimResource::ClaimResources(TArray<class UClass*> ResourceClasses, unsigned char Priority, const class FName& TaskInstanceName)
+	class UGameplayTask_ClaimResource* UGameplayTask_ClaimResource::ClaimResources(
+TArray<class UClass*> ResourceClasses
+, 
+unsigned char Priority
+, 
+const class FName& TaskInstanceName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -120,6 +135,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -130,7 +147,13 @@ namespace CG
 	 * 		unsigned char                                      Priority                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FName                                        TaskInstanceName                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UGameplayTask_ClaimResource* UGameplayTask_ClaimResource::ClaimResource(class UClass* ResourceClass, unsigned char Priority, const class FName& TaskInstanceName)
+	class UGameplayTask_ClaimResource* UGameplayTask_ClaimResource::ClaimResource(
+class UClass* ResourceClass
+, 
+unsigned char Priority
+, 
+const class FName& TaskInstanceName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -153,10 +176,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGameplayTask_ClaimResource.StaticClass
+	 * 		Name   -> PredefinedFunction UGameplayTask_ClaimResource.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGameplayTask_ClaimResource::StaticClass()
@@ -166,6 +191,8 @@ namespace CG
 			ptr = UObject::FindClass("Class GameplayTasks.GameplayTask_ClaimResource");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -178,7 +205,15 @@ namespace CG
 	 * 		class UClass*                                      Class                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bSpawnOnlyOnAuthority                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UGameplayTask_SpawnActor* UGameplayTask_SpawnActor::SpawnActor(const struct FVector& SpawnLocation, const struct FRotator& SpawnRotation, class UClass* Class, bool bSpawnOnlyOnAuthority)
+	class UGameplayTask_SpawnActor* UGameplayTask_SpawnActor::SpawnActor(
+const struct FVector& SpawnLocation
+, 
+const struct FRotator& SpawnRotation
+, 
+class UClass* Class
+, 
+bool bSpawnOnlyOnAuthority
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -203,6 +238,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -212,7 +249,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class AActor*                                      SpawnedActor                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGameplayTask_SpawnActor::FinishSpawningActor(class UObject* WorldContextObject, class AActor* SpawnedActor)
+	void UGameplayTask_SpawnActor::FinishSpawningActor(
+class UObject* WorldContextObject
+, 
+class AActor* SpawnedActor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -231,6 +272,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -240,7 +283,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class AActor*                                      SpawnedActor                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UGameplayTask_SpawnActor::BeginSpawningActor(class UObject* WorldContextObject, class AActor** SpawnedActor)
+	bool UGameplayTask_SpawnActor::BeginSpawningActor(
+class UObject* WorldContextObject
+, 
+class AActor** SpawnedActor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -263,10 +310,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGameplayTask_SpawnActor.StaticClass
+	 * 		Name   -> PredefinedFunction UGameplayTask_SpawnActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGameplayTask_SpawnActor::StaticClass()
@@ -277,10 +326,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGameplayTask_TimeLimitedExecution.StaticClass
+	 * 		Name   -> PredefinedFunction UGameplayTask_TimeLimitedExecution.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGameplayTask_TimeLimitedExecution::StaticClass()
@@ -291,6 +342,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -300,7 +353,11 @@ namespace CG
 	 * 		float                                              Time                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		unsigned char                                      Priority                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UGameplayTask_WaitDelay* UGameplayTask_WaitDelay::TaskWaitDelay(float Time, unsigned char Priority)
+	class UGameplayTask_WaitDelay* UGameplayTask_WaitDelay::TaskWaitDelay(
+float Time
+, 
+unsigned char Priority
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -320,6 +377,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -342,10 +401,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGameplayTask_WaitDelay.StaticClass
+	 * 		Name   -> PredefinedFunction UGameplayTask_WaitDelay.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGameplayTask_WaitDelay::StaticClass()
@@ -356,10 +417,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGameplayTaskOwnerInterface.StaticClass
+	 * 		Name   -> PredefinedFunction UGameplayTaskOwnerInterface.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGameplayTaskOwnerInterface::StaticClass()
@@ -370,10 +433,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGameplayTaskResource.StaticClass
+	 * 		Name   -> PredefinedFunction UGameplayTaskResource.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGameplayTaskResource::StaticClass()
@@ -383,6 +448,8 @@ namespace CG
 			ptr = UObject::FindClass("Class GameplayTasks.GameplayTaskResource");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -405,6 +472,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -416,7 +485,15 @@ namespace CG
 	 * 		TArray<class UClass*>                              AdditionalRequiredResources                                (Parm, ZeroConstructor, AdvancedDisplay, UObjectWrapper, NativeAccessSpecifierPublic)
 	 * 		TArray<class UClass*>                              AdditionalClaimedResources                                 (Parm, ZeroConstructor, AdvancedDisplay, UObjectWrapper, NativeAccessSpecifierPublic)
 	 */
-	EGameplayTaskRunResult UGameplayTasksComponent::K2_RunGameplayTask(class UGameplayTask* Task, unsigned char Priority, TArray<class UClass*> AdditionalRequiredResources, TArray<class UClass*> AdditionalClaimedResources)
+	EGameplayTaskRunResult UGameplayTasksComponent::K2_RunGameplayTask(
+class UGameplayTask* Task
+, 
+unsigned char Priority
+, 
+TArray<class UClass*> AdditionalRequiredResources
+, 
+TArray<class UClass*> AdditionalClaimedResources
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -441,10 +518,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGameplayTasksComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UGameplayTasksComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGameplayTasksComponent::StaticClass()
@@ -454,6 +533,7 @@ namespace CG
 			ptr = UObject::FindClass("Class GameplayTasks.GameplayTasksComponent");
 		return ptr;
 	}
+
 
 }
 

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AAROriginActor.StaticClass
+	 * 		Name   -> PredefinedFunction AAROriginActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AAROriginActor::StaticClass()
@@ -23,6 +24,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AugmentedReality.AROriginActor");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -47,6 +50,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -69,6 +74,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -93,6 +100,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -115,6 +124,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -139,6 +150,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -147,7 +160,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<unsigned char>                              WorldMapData                                               (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UARSessionConfig::SetWorldMapData(TArray<unsigned char> WorldMapData)
+	void UARSessionConfig::SetWorldMapData(
+TArray<unsigned char> WorldMapData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -164,6 +179,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -172,7 +189,9 @@ namespace CG
 	 * Parameters:
 	 * 		EARSessionTrackingFeature                          InSessionTrackingFeature                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UARSessionConfig::SetSessionTrackingFeatureToEnable(EARSessionTrackingFeature InSessionTrackingFeature)
+	void UARSessionConfig::SetSessionTrackingFeatureToEnable(
+EARSessionTrackingFeature InSessionTrackingFeature
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -189,6 +208,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -197,7 +218,9 @@ namespace CG
 	 * Parameters:
 	 * 		EARSceneReconstruction                             InSceneReconstructionMethod                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UARSessionConfig::SetSceneReconstructionMethod(EARSceneReconstruction InSceneReconstructionMethod)
+	void UARSessionConfig::SetSceneReconstructionMethod(
+EARSceneReconstruction InSceneReconstructionMethod
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -214,6 +237,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -222,7 +247,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bNewValue                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UARSessionConfig::SetResetTrackedObjects(bool bNewValue)
+	void UARSessionConfig::SetResetTrackedObjects(
+bool bNewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -239,6 +266,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -247,7 +276,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bNewValue                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UARSessionConfig::SetResetCameraTracking(bool bNewValue)
+	void UARSessionConfig::SetResetCameraTracking(
+bool bNewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -264,6 +295,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -272,7 +305,9 @@ namespace CG
 	 * Parameters:
 	 * 		EARFaceTrackingUpdate                              InUpdate                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UARSessionConfig::SetFaceTrackingUpdate(EARFaceTrackingUpdate InUpdate)
+	void UARSessionConfig::SetFaceTrackingUpdate(
+EARFaceTrackingUpdate InUpdate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -289,6 +324,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -297,7 +334,9 @@ namespace CG
 	 * Parameters:
 	 * 		EARFaceTrackingDirection                           InDirection                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UARSessionConfig::SetFaceTrackingDirection(EARFaceTrackingDirection InDirection)
+	void UARSessionConfig::SetFaceTrackingDirection(
+EARFaceTrackingDirection InDirection
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -314,6 +353,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -322,7 +363,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bNewValue                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UARSessionConfig::SetEnableAutoFocus(bool bNewValue)
+	void UARSessionConfig::SetEnableAutoFocus(
+bool bNewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -339,6 +382,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -347,7 +392,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FARVideoFormat                              NewFormat                                                  (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UARSessionConfig::SetDesiredVideoFormat(const struct FARVideoFormat& NewFormat)
+	void UARSessionConfig::SetDesiredVideoFormat(
+const struct FARVideoFormat& NewFormat
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -364,6 +411,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -372,7 +421,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<class UARCandidateObject*>                  InCandidateObjects                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UARSessionConfig::SetCandidateObjectList(TArray<class UARCandidateObject*> InCandidateObjects)
+	void UARSessionConfig::SetCandidateObjectList(
+TArray<class UARCandidateObject*> InCandidateObjects
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -388,6 +439,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -412,6 +465,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -434,6 +489,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -458,6 +515,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -480,6 +539,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -504,6 +565,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -526,6 +589,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -550,6 +615,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -572,6 +639,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -596,6 +665,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -618,6 +689,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -642,6 +715,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -664,6 +739,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -688,6 +765,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -710,6 +789,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -734,6 +815,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -742,7 +825,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UARCandidateObject*                          CandidateObject                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UARSessionConfig::AddCandidateObject(class UARCandidateObject* CandidateObject)
+	void UARSessionConfig::AddCandidateObject(
+class UARCandidateObject* CandidateObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -759,6 +844,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -767,7 +854,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UARCandidateImage*                           NewCandidateImage                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UARSessionConfig::AddCandidateImage(class UARCandidateImage* NewCandidateImage)
+	void UARSessionConfig::AddCandidateImage(
+class UARCandidateImage* NewCandidateImage
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -784,10 +873,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARSessionConfig.StaticClass
+	 * 		Name   -> PredefinedFunction UARSessionConfig.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARSessionConfig::StaticClass()
@@ -798,10 +889,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARLightEstimate.StaticClass
+	 * 		Name   -> PredefinedFunction UARLightEstimate.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARLightEstimate::StaticClass()
@@ -811,6 +904,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AugmentedReality.ARLightEstimate");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -835,6 +930,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -857,6 +954,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -881,10 +980,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARBasicLightEstimate.StaticClass
+	 * 		Name   -> PredefinedFunction UARBasicLightEstimate.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARBasicLightEstimate::StaticClass()
@@ -894,6 +995,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AugmentedReality.ARBasicLightEstimate");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -918,6 +1021,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -940,6 +1045,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -964,6 +1071,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -986,6 +1095,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1010,10 +1121,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARCandidateImage.StaticClass
+	 * 		Name   -> PredefinedFunction UARCandidateImage.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARCandidateImage::StaticClass()
@@ -1024,6 +1137,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1033,7 +1148,11 @@ namespace CG
 	 * 		class UClass*                                      InComponentClass                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FGuid                                       NativeID                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UARComponent* AARActor::AddARComponent(class UClass* InComponentClass, const struct FGuid& NativeID)
+	class UARComponent* AARActor::AddARComponent(
+class UClass* InComponentClass
+, 
+const struct FGuid& NativeID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1054,10 +1173,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AARActor.StaticClass
+	 * 		Name   -> PredefinedFunction AARActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AARActor::StaticClass()
@@ -1068,6 +1189,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1076,7 +1199,9 @@ namespace CG
 	 * Parameters:
 	 * 		class USceneComponent*                             ComponentToUnpin                                           (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UARBlueprintLibrary::UnpinComponent(class USceneComponent* ComponentToUnpin)
+	void UARBlueprintLibrary::UnpinComponent(
+class USceneComponent* ComponentToUnpin
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1093,6 +1218,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1102,7 +1229,11 @@ namespace CG
 	 * 		bool                                               bOnOff                                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EARCaptureType                                     CaptureType                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UARBlueprintLibrary::ToggleARCapture(bool bOnOff, EARCaptureType CaptureType)
+	bool UARBlueprintLibrary::ToggleARCapture(
+bool bOnOff
+, 
+EARCaptureType CaptureType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1122,6 +1253,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1144,6 +1277,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1152,7 +1287,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UARSessionConfig*                            SessionConfig                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UARBlueprintLibrary::StartARSession(class UARSessionConfig* SessionConfig)
+	void UARBlueprintLibrary::StartARSession(
+class UARSessionConfig* SessionConfig
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1169,6 +1306,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1177,7 +1316,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bOnOff                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UARBlueprintLibrary::SetEnabledXRCamera(bool bOnOff)
+	void UARBlueprintLibrary::SetEnabledXRCamera(
+bool bOnOff
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1194,6 +1335,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1202,7 +1345,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InWorldScale                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UARBlueprintLibrary::SetARWorldScale(float InWorldScale)
+	void UARBlueprintLibrary::SetARWorldScale(
+float InWorldScale
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1219,6 +1364,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1230,7 +1377,15 @@ namespace CG
 	 * 		bool                                               bIsTransformInWorldSpace                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bMaintainUpDirection                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UARBlueprintLibrary::SetARWorldOriginLocationAndRotation(const struct FVector& OriginLocation, const struct FRotator& OriginRotation, bool bIsTransformInWorldSpace, bool bMaintainUpDirection)
+	void UARBlueprintLibrary::SetARWorldOriginLocationAndRotation(
+const struct FVector& OriginLocation
+, 
+const struct FRotator& OriginRotation
+, 
+bool bIsTransformInWorldSpace
+, 
+bool bMaintainUpDirection
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1253,6 +1408,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1261,7 +1418,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FTransform                                  InAlignmentTransform                                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UARBlueprintLibrary::SetAlignmentTransform(const struct FTransform& InAlignmentTransform)
+	void UARBlueprintLibrary::SetAlignmentTransform(
+const struct FTransform& InAlignmentTransform
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1278,6 +1437,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1287,7 +1448,11 @@ namespace CG
 	 * 		class FName                                        InSaveName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UARPin*                                      InPin                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UARBlueprintLibrary::SaveARPinToLocalStore(const class FName& InSaveName, class UARPin* InPin)
+	bool UARBlueprintLibrary::SaveARPinToLocalStore(
+const class FName& InSaveName
+, 
+class UARPin* InPin
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1308,6 +1473,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1316,7 +1483,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FIntPoint                                   InSize                                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FIntPoint UARBlueprintLibrary::ResizeXRCamera(const struct FIntPoint& InSize)
+	struct FIntPoint UARBlueprintLibrary::ResizeXRCamera(
+const struct FIntPoint& InSize
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1335,6 +1504,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1343,7 +1514,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UARPin*                                      PinToRemove                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UARBlueprintLibrary::RemovePin(class UARPin* PinToRemove)
+	void UARBlueprintLibrary::RemovePin(
+class UARPin* PinToRemove
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1360,6 +1533,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1368,7 +1543,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        InSaveName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UARBlueprintLibrary::RemoveARPinFromLocalStore(const class FName& InSaveName)
+	void UARBlueprintLibrary::RemoveARPinFromLocalStore(
+const class FName& InSaveName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1384,6 +1561,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1406,6 +1585,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1416,7 +1597,13 @@ namespace CG
 	 * 		struct FARTraceResult                              TraceResult                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		class FName                                        DebugName                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UARPin* UARBlueprintLibrary::PinComponentToTraceResult(class USceneComponent* ComponentToPin, const struct FARTraceResult& TraceResult, const class FName& DebugName)
+	class UARPin* UARBlueprintLibrary::PinComponentToTraceResult(
+class USceneComponent* ComponentToPin
+, 
+const struct FARTraceResult& TraceResult
+, 
+const class FName& DebugName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1439,6 +1626,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1448,7 +1637,11 @@ namespace CG
 	 * 		class USceneComponent*                             ComponentToPin                                             (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UARPin*                                      Pin                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UARBlueprintLibrary::PinComponentToARPin(class USceneComponent* ComponentToPin, class UARPin* Pin)
+	bool UARBlueprintLibrary::PinComponentToARPin(
+class USceneComponent* ComponentToPin
+, 
+class UARPin* Pin
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1469,6 +1662,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1480,7 +1675,15 @@ namespace CG
 	 * 		class UARTrackedGeometry*                          TrackedGeometry                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FName                                        DebugName                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UARPin* UARBlueprintLibrary::PinComponent(class USceneComponent* ComponentToPin, const struct FTransform& PinToWorldTransform, class UARTrackedGeometry* TrackedGeometry, const class FName& DebugName)
+	class UARPin* UARBlueprintLibrary::PinComponent(
+class USceneComponent* ComponentToPin
+, 
+const struct FTransform& PinToWorldTransform
+, 
+class UARTrackedGeometry* TrackedGeometry
+, 
+const class FName& DebugName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1505,6 +1708,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1525,6 +1730,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1549,6 +1756,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1562,7 +1771,19 @@ namespace CG
 	 * 		bool                                               bTestPlaneExtents                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bTestPlaneBoundaryPolygon                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<struct FARTraceResult> UARBlueprintLibrary::LineTraceTrackedObjects3D(const struct FVector& Start, const struct FVector& End, bool bTestFeaturePoints, bool bTestGroundPlane, bool bTestPlaneExtents, bool bTestPlaneBoundaryPolygon)
+	TArray<struct FARTraceResult> UARBlueprintLibrary::LineTraceTrackedObjects3D(
+const struct FVector& Start
+, 
+const struct FVector& End
+, 
+bool bTestFeaturePoints
+, 
+bool bTestGroundPlane
+, 
+bool bTestPlaneExtents
+, 
+bool bTestPlaneBoundaryPolygon
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1591,6 +1812,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1603,7 +1826,17 @@ namespace CG
 	 * 		bool                                               bTestPlaneExtents                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bTestPlaneBoundaryPolygon                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<struct FARTraceResult> UARBlueprintLibrary::LineTraceTrackedObjects(const struct FVector2D& ScreenCoord, bool bTestFeaturePoints, bool bTestGroundPlane, bool bTestPlaneExtents, bool bTestPlaneBoundaryPolygon)
+	TArray<struct FARTraceResult> UARBlueprintLibrary::LineTraceTrackedObjects(
+const struct FVector2D& ScreenCoord
+, 
+bool bTestFeaturePoints
+, 
+bool bTestGroundPlane
+, 
+bool bTestPlaneExtents
+, 
+bool bTestPlaneBoundaryPolygon
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1630,6 +1863,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1638,7 +1873,9 @@ namespace CG
 	 * Parameters:
 	 * 		EARSessionType                                     SessionType                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UARBlueprintLibrary::IsSessionTypeSupported(EARSessionType SessionType)
+	bool UARBlueprintLibrary::IsSessionTypeSupported(
+EARSessionType SessionType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1657,6 +1894,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1666,7 +1905,11 @@ namespace CG
 	 * 		EARSessionType                                     SessionType                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EARSessionTrackingFeature                          SessionTrackingFeature                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UARBlueprintLibrary::IsSessionTrackingFeatureSupported(EARSessionType SessionType, EARSessionTrackingFeature SessionTrackingFeature)
+	bool UARBlueprintLibrary::IsSessionTrackingFeatureSupported(
+EARSessionType SessionType
+, 
+EARSessionTrackingFeature SessionTrackingFeature
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1687,6 +1930,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1696,7 +1941,11 @@ namespace CG
 	 * 		EARSessionType                                     SessionType                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EARSceneReconstruction                             SceneReconstructionMethod                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UARBlueprintLibrary::IsSceneReconstructionSupported(EARSessionType SessionType, EARSceneReconstruction SceneReconstructionMethod)
+	bool UARBlueprintLibrary::IsSceneReconstructionSupported(
+EARSessionType SessionType
+, 
+EARSceneReconstruction SceneReconstructionMethod
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1716,6 +1965,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1740,6 +1991,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1762,6 +2015,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1786,6 +2041,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1808,6 +2065,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1832,6 +2091,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1855,6 +2116,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1863,7 +2126,9 @@ namespace CG
 	 * Parameters:
 	 * 		EARSessionType                                     SessionType                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<struct FARVideoFormat> UARBlueprintLibrary::GetSupportedVideoFormats(EARSessionType SessionType)
+	TArray<struct FARVideoFormat> UARBlueprintLibrary::GetSupportedVideoFormats(
+EARSessionType SessionType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1881,6 +2146,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1905,6 +2172,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1927,6 +2196,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1951,6 +2222,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1974,6 +2247,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1985,7 +2260,15 @@ namespace CG
 	 * 		struct FVector                                     OutClassificationLocation                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              MaxLocationDiff                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UARBlueprintLibrary::GetObjectClassificationAtLocation(const struct FVector& InWorldLocation, EARObjectClassification* OutClassification, struct FVector* OutClassificationLocation, float MaxLocationDiff)
+	bool UARBlueprintLibrary::GetObjectClassificationAtLocation(
+const struct FVector& InWorldLocation
+, 
+EARObjectClassification* OutClassification
+, 
+struct FVector* OutClassificationLocation
+, 
+float MaxLocationDiff
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2013,6 +2296,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2035,6 +2320,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2059,6 +2346,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2067,7 +2356,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FARCameraIntrinsics                         OutCameraIntrinsics                                        (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	bool UARBlueprintLibrary::GetCameraIntrinsics(struct FARCameraIntrinsics* OutCameraIntrinsics)
+	bool UARBlueprintLibrary::GetCameraIntrinsics(
+struct FARCameraIntrinsics* OutCameraIntrinsics
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2087,6 +2378,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2111,6 +2404,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2133,6 +2428,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2157,6 +2454,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2165,7 +2464,9 @@ namespace CG
 	 * Parameters:
 	 * 		EARTextureType                                     TextureType                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UARTexture* UARBlueprintLibrary::GetARTexture(EARTextureType TextureType)
+	class UARTexture* UARBlueprintLibrary::GetARTexture(
+EARTextureType TextureType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2183,6 +2484,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2207,6 +2510,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2229,6 +2534,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2253,6 +2560,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2275,6 +2584,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2299,6 +2610,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2321,6 +2634,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2345,6 +2660,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2368,6 +2685,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2376,7 +2695,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UClass*                                      GeometryClass                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<class UARTrackedGeometry*> UARBlueprintLibrary::GetAllGeometriesByClass(class UClass* GeometryClass)
+	TArray<class UARTrackedGeometry*> UARBlueprintLibrary::GetAllGeometriesByClass(
+class UClass* GeometryClass
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2394,6 +2715,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2418,6 +2741,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2441,6 +2766,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2449,7 +2776,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      PointName                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<class UARTrackedPoint*> UARBlueprintLibrary::FindTrackedPointsByName(const class FString& PointName)
+	TArray<class UARTrackedPoint*> UARBlueprintLibrary::FindTrackedPointsByName(
+const class FString& PointName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2468,6 +2797,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2480,7 +2811,17 @@ namespace CG
 	 * 		float                                              OutlineThickness                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              PersistForSeconds                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UARBlueprintLibrary::DebugDrawTrackedGeometry(class UARTrackedGeometry* TrackedGeometry, class UObject* WorldContextObject, const struct FLinearColor& Color, float OutlineThickness, float PersistForSeconds)
+	void UARBlueprintLibrary::DebugDrawTrackedGeometry(
+class UARTrackedGeometry* TrackedGeometry
+, 
+class UObject* WorldContextObject
+, 
+const struct FLinearColor& Color
+, 
+float OutlineThickness
+, 
+float PersistForSeconds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2505,6 +2846,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2517,7 +2860,17 @@ namespace CG
 	 * 		float                                              Scale                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              PersistForSeconds                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UARBlueprintLibrary::DebugDrawPin(class UARPin* ARPin, class UObject* WorldContextObject, const struct FLinearColor& Color, float Scale, float PersistForSeconds)
+	void UARBlueprintLibrary::DebugDrawPin(
+class UARPin* ARPin
+, 
+class UObject* WorldContextObject
+, 
+const struct FLinearColor& Color
+, 
+float Scale
+, 
+float PersistForSeconds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2542,6 +2895,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2552,7 +2907,13 @@ namespace CG
 	 * 		TArray<struct FVector>                             EndPoints                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		struct FVector                                     ClosestIntersection                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UARBlueprintLibrary::CalculateClosestIntersection(TArray<struct FVector> StartPoints, TArray<struct FVector> EndPoints, struct FVector* ClosestIntersection)
+	void UARBlueprintLibrary::CalculateClosestIntersection(
+TArray<struct FVector> StartPoints
+, 
+TArray<struct FVector> EndPoints
+, 
+struct FVector* ClosestIntersection
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2575,6 +2936,8 @@ namespace CG
 			*ClosestIntersection = params.ClosestIntersection;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2585,7 +2948,13 @@ namespace CG
 	 * 		struct FTransform                                  TransformInSecondCoordinateSystem                          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FTransform                                  AlignmentTransform                                         (Parm, OutParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UARBlueprintLibrary::CalculateAlignmentTransform(const struct FTransform& TransformInFirstCoordinateSystem, const struct FTransform& TransformInSecondCoordinateSystem, struct FTransform* AlignmentTransform)
+	void UARBlueprintLibrary::CalculateAlignmentTransform(
+const struct FTransform& TransformInFirstCoordinateSystem
+, 
+const struct FTransform& TransformInSecondCoordinateSystem
+, 
+struct FTransform* AlignmentTransform
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2608,6 +2977,8 @@ namespace CG
 			*AlignmentTransform = params.AlignmentTransform;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2618,7 +2989,13 @@ namespace CG
 	 * 		class FString                                      PointName                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bDeletePointsWithSameName                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UARBlueprintLibrary::AddTrackedPointWithName(const struct FTransform& WorldTransform, const class FString& PointName, bool bDeletePointsWithSameName)
+	bool UARBlueprintLibrary::AddTrackedPointWithName(
+const struct FTransform& WorldTransform
+, 
+const class FString& PointName
+, 
+bool bDeletePointsWithSameName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2641,6 +3018,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2652,7 +3031,15 @@ namespace CG
 	 * 		class FString                                      FriendlyName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              PhysicalWidth                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UARCandidateImage* UARBlueprintLibrary::AddRuntimeCandidateImage(class UARSessionConfig* SessionConfig, class UTexture2D* CandidateTexture, const class FString& FriendlyName, float PhysicalWidth)
+	class UARCandidateImage* UARBlueprintLibrary::AddRuntimeCandidateImage(
+class UARSessionConfig* SessionConfig
+, 
+class UTexture2D* CandidateTexture
+, 
+const class FString& FriendlyName
+, 
+float PhysicalWidth
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2677,6 +3064,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2686,7 +3075,11 @@ namespace CG
 	 * 		struct FVector                                     Location                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector                                     Extent                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UARBlueprintLibrary::AddManualEnvironmentCaptureProbe(const struct FVector& Location, const struct FVector& Extent)
+	bool UARBlueprintLibrary::AddManualEnvironmentCaptureProbe(
+const struct FVector& Location
+, 
+const struct FVector& Extent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2707,10 +3100,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARBlueprintLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UARBlueprintLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARBlueprintLibrary::StaticClass()
@@ -2721,6 +3116,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2729,7 +3126,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FARTraceResult                              TraceResult                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	class UARTrackedGeometry* UARTraceResultLibrary::GetTrackedGeometry(const struct FARTraceResult& TraceResult)
+	class UARTrackedGeometry* UARTraceResultLibrary::GetTrackedGeometry(
+const struct FARTraceResult& TraceResult
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2748,6 +3147,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2756,7 +3157,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FARTraceResult                              TraceResult                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	EARLineTraceChannels UARTraceResultLibrary::GetTraceChannel(const struct FARTraceResult& TraceResult)
+	EARLineTraceChannels UARTraceResultLibrary::GetTraceChannel(
+const struct FARTraceResult& TraceResult
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2775,6 +3178,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2783,7 +3188,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FARTraceResult                              TraceResult                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	struct FTransform UARTraceResultLibrary::GetLocalTransform(const struct FARTraceResult& TraceResult)
+	struct FTransform UARTraceResultLibrary::GetLocalTransform(
+const struct FARTraceResult& TraceResult
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2802,6 +3209,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2810,7 +3219,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FARTraceResult                              TraceResult                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	struct FTransform UARTraceResultLibrary::GetLocalToWorldTransform(const struct FARTraceResult& TraceResult)
+	struct FTransform UARTraceResultLibrary::GetLocalToWorldTransform(
+const struct FARTraceResult& TraceResult
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2829,6 +3240,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2837,7 +3250,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FARTraceResult                              TraceResult                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	struct FTransform UARTraceResultLibrary::GetLocalToTrackingTransform(const struct FARTraceResult& TraceResult)
+	struct FTransform UARTraceResultLibrary::GetLocalToTrackingTransform(
+const struct FARTraceResult& TraceResult
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2856,6 +3271,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2864,7 +3281,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FARTraceResult                              TraceResult                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	float UARTraceResultLibrary::GetDistanceFromCamera(const struct FARTraceResult& TraceResult)
+	float UARTraceResultLibrary::GetDistanceFromCamera(
+const struct FARTraceResult& TraceResult
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2883,10 +3302,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARTraceResultLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UARTraceResultLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARTraceResultLibrary::StaticClass()
@@ -2897,10 +3318,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARBaseAsyncTaskBlueprintProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UARBaseAsyncTaskBlueprintProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARBaseAsyncTaskBlueprintProxy::StaticClass()
@@ -2911,6 +3334,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2919,7 +3344,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UARSaveWorldAsyncTaskBlueprintProxy* UARSaveWorldAsyncTaskBlueprintProxy::ARSaveWorld(class UObject* WorldContextObject)
+	class UARSaveWorldAsyncTaskBlueprintProxy* UARSaveWorldAsyncTaskBlueprintProxy::ARSaveWorld(
+class UObject* WorldContextObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2938,10 +3365,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARSaveWorldAsyncTaskBlueprintProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UARSaveWorldAsyncTaskBlueprintProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARSaveWorldAsyncTaskBlueprintProxy::StaticClass()
@@ -2951,6 +3380,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AugmentedReality.ARSaveWorldAsyncTaskBlueprintProxy");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2962,7 +3393,13 @@ namespace CG
 	 * 		struct FVector                                     Location                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector                                     Extent                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UARGetCandidateObjectAsyncTaskBlueprintProxy* UARGetCandidateObjectAsyncTaskBlueprintProxy::ARGetCandidateObject(class UObject* WorldContextObject, const struct FVector& Location, const struct FVector& Extent)
+	class UARGetCandidateObjectAsyncTaskBlueprintProxy* UARGetCandidateObjectAsyncTaskBlueprintProxy::ARGetCandidateObject(
+class UObject* WorldContextObject
+, 
+const struct FVector& Location
+, 
+const struct FVector& Extent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2985,10 +3422,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARGetCandidateObjectAsyncTaskBlueprintProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UARGetCandidateObjectAsyncTaskBlueprintProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARGetCandidateObjectAsyncTaskBlueprintProxy::StaticClass()
@@ -2998,6 +3437,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AugmentedReality.ARGetCandidateObjectAsyncTaskBlueprintProxy");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3020,6 +3461,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3028,7 +3471,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FGuid                                       NativeID                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UARComponent::SetNativeID(const struct FGuid& NativeID)
+	void UARComponent::SetNativeID(
+const struct FGuid& NativeID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3044,6 +3489,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3066,6 +3513,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3086,6 +3535,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3110,10 +3561,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UARComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARComponent::StaticClass()
@@ -3124,6 +3577,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3132,7 +3587,9 @@ namespace CG
 	 * Parameters:
 	 * 		EPlaneComponentDebugMode                           NewDebugMode                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UARPlaneComponent::SetPlaneComponentDebugMode(EPlaneComponentDebugMode NewDebugMode)
+	void UARPlaneComponent::SetPlaneComponentDebugMode(
+EPlaneComponentDebugMode NewDebugMode
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3149,6 +3606,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3157,7 +3616,9 @@ namespace CG
 	 * Parameters:
 	 * 		TMap<EARObjectClassification, struct FLinearColor> InColors                                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UARPlaneComponent::SetObjectClassificationDebugColors(TMap<EARObjectClassification, struct FLinearColor> InColors)
+	void UARPlaneComponent::SetObjectClassificationDebugColors(
+TMap<EARObjectClassification, struct FLinearColor> InColors
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3174,6 +3635,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3182,7 +3645,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FARPlaneUpdatePayload                       NewPayload                                                 (ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UARPlaneComponent::ServerUpdatePayload(const struct FARPlaneUpdatePayload& NewPayload)
+	void UARPlaneComponent::ServerUpdatePayload(
+const struct FARPlaneUpdatePayload& NewPayload
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3199,6 +3664,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3207,7 +3674,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FARPlaneUpdatePayload                       Payload                                                    (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UARPlaneComponent::ReceiveUpdate(const struct FARPlaneUpdatePayload& Payload)
+	void UARPlaneComponent::ReceiveUpdate(
+const struct FARPlaneUpdatePayload& Payload
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3224,6 +3693,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3232,7 +3703,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FARPlaneUpdatePayload                       Payload                                                    (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UARPlaneComponent::ReceiveAdd(const struct FARPlaneUpdatePayload& Payload)
+	void UARPlaneComponent::ReceiveAdd(
+const struct FARPlaneUpdatePayload& Payload
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3248,6 +3721,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3272,10 +3747,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARPlaneComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UARPlaneComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARPlaneComponent::StaticClass()
@@ -3286,6 +3763,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3294,7 +3773,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FARPointUpdatePayload                       NewPayload                                                 (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UARPointComponent::ServerUpdatePayload(const struct FARPointUpdatePayload& NewPayload)
+	void UARPointComponent::ServerUpdatePayload(
+const struct FARPointUpdatePayload& NewPayload
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3311,6 +3792,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3319,7 +3802,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FARPointUpdatePayload                       Payload                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UARPointComponent::ReceiveUpdate(const struct FARPointUpdatePayload& Payload)
+	void UARPointComponent::ReceiveUpdate(
+const struct FARPointUpdatePayload& Payload
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3336,6 +3821,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3344,7 +3831,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FARPointUpdatePayload                       Payload                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UARPointComponent::ReceiveAdd(const struct FARPointUpdatePayload& Payload)
+	void UARPointComponent::ReceiveAdd(
+const struct FARPointUpdatePayload& Payload
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3361,10 +3850,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARPointComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UARPointComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARPointComponent::StaticClass()
@@ -3375,6 +3866,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3383,7 +3876,9 @@ namespace CG
 	 * Parameters:
 	 * 		EFaceComponentDebugMode                            NewDebugMode                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UARFaceComponent::SetFaceComponentDebugMode(EFaceComponentDebugMode NewDebugMode)
+	void UARFaceComponent::SetFaceComponentDebugMode(
+EFaceComponentDebugMode NewDebugMode
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3400,6 +3895,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3408,7 +3905,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FARFaceUpdatePayload                        NewPayload                                                 (ConstParm, Parm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UARFaceComponent::ServerUpdatePayload(const struct FARFaceUpdatePayload& NewPayload)
+	void UARFaceComponent::ServerUpdatePayload(
+const struct FARFaceUpdatePayload& NewPayload
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3425,6 +3924,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3433,7 +3934,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FARFaceUpdatePayload                        Payload                                                    (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UARFaceComponent::ReceiveUpdate(const struct FARFaceUpdatePayload& Payload)
+	void UARFaceComponent::ReceiveUpdate(
+const struct FARFaceUpdatePayload& Payload
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3450,6 +3953,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3458,7 +3963,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FARFaceUpdatePayload                        Payload                                                    (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UARFaceComponent::ReceiveAdd(const struct FARFaceUpdatePayload& Payload)
+	void UARFaceComponent::ReceiveAdd(
+const struct FARFaceUpdatePayload& Payload
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3475,10 +3982,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARFaceComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UARFaceComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARFaceComponent::StaticClass()
@@ -3489,6 +3998,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3497,7 +4008,9 @@ namespace CG
 	 * Parameters:
 	 * 		EImageComponentDebugMode                           NewDebugMode                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UARImageComponent::SetImageComponentDebugMode(EImageComponentDebugMode NewDebugMode)
+	void UARImageComponent::SetImageComponentDebugMode(
+EImageComponentDebugMode NewDebugMode
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3514,6 +4027,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3522,7 +4037,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FARImageUpdatePayload                       NewPayload                                                 (ConstParm, Parm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UARImageComponent::ServerUpdatePayload(const struct FARImageUpdatePayload& NewPayload)
+	void UARImageComponent::ServerUpdatePayload(
+const struct FARImageUpdatePayload& NewPayload
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3539,6 +4056,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3547,7 +4066,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FARImageUpdatePayload                       Payload                                                    (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UARImageComponent::ReceiveUpdate(const struct FARImageUpdatePayload& Payload)
+	void UARImageComponent::ReceiveUpdate(
+const struct FARImageUpdatePayload& Payload
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3564,6 +4085,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3572,7 +4095,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FARImageUpdatePayload                       Payload                                                    (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UARImageComponent::ReceiveAdd(const struct FARImageUpdatePayload& Payload)
+	void UARImageComponent::ReceiveAdd(
+const struct FARImageUpdatePayload& Payload
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3589,10 +4114,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARImageComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UARImageComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARImageComponent::StaticClass()
@@ -3603,6 +4130,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3611,7 +4140,9 @@ namespace CG
 	 * Parameters:
 	 * 		EQRCodeComponentDebugMode                          NewDebugMode                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UARQRCodeComponent::SetQRCodeComponentDebugMode(EQRCodeComponentDebugMode NewDebugMode)
+	void UARQRCodeComponent::SetQRCodeComponentDebugMode(
+EQRCodeComponentDebugMode NewDebugMode
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3628,6 +4159,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3636,7 +4169,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FARQRCodeUpdatePayload                      NewPayload                                                 (ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UARQRCodeComponent::ServerUpdatePayload(const struct FARQRCodeUpdatePayload& NewPayload)
+	void UARQRCodeComponent::ServerUpdatePayload(
+const struct FARQRCodeUpdatePayload& NewPayload
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3653,6 +4188,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3661,7 +4198,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FARQRCodeUpdatePayload                      Payload                                                    (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UARQRCodeComponent::ReceiveUpdate(const struct FARQRCodeUpdatePayload& Payload)
+	void UARQRCodeComponent::ReceiveUpdate(
+const struct FARQRCodeUpdatePayload& Payload
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3678,6 +4217,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3686,7 +4227,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FARQRCodeUpdatePayload                      Payload                                                    (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UARQRCodeComponent::ReceiveAdd(const struct FARQRCodeUpdatePayload& Payload)
+	void UARQRCodeComponent::ReceiveAdd(
+const struct FARQRCodeUpdatePayload& Payload
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3703,10 +4246,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARQRCodeComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UARQRCodeComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARQRCodeComponent::StaticClass()
@@ -3717,6 +4262,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3725,7 +4272,9 @@ namespace CG
 	 * Parameters:
 	 * 		EPoseComponentDebugMode                            NewDebugMode                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UARPoseComponent::SetPoseComponentDebugMode(EPoseComponentDebugMode NewDebugMode)
+	void UARPoseComponent::SetPoseComponentDebugMode(
+EPoseComponentDebugMode NewDebugMode
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3742,6 +4291,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3750,7 +4301,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FARPoseUpdatePayload                        NewPayload                                                 (ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UARPoseComponent::ServerUpdatePayload(const struct FARPoseUpdatePayload& NewPayload)
+	void UARPoseComponent::ServerUpdatePayload(
+const struct FARPoseUpdatePayload& NewPayload
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3767,6 +4320,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3775,7 +4330,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FARPoseUpdatePayload                        Payload                                                    (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UARPoseComponent::ReceiveUpdate(const struct FARPoseUpdatePayload& Payload)
+	void UARPoseComponent::ReceiveUpdate(
+const struct FARPoseUpdatePayload& Payload
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3792,6 +4349,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3800,7 +4359,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FARPoseUpdatePayload                        Payload                                                    (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UARPoseComponent::ReceiveAdd(const struct FARPoseUpdatePayload& Payload)
+	void UARPoseComponent::ReceiveAdd(
+const struct FARPoseUpdatePayload& Payload
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3817,10 +4378,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARPoseComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UARPoseComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARPoseComponent::StaticClass()
@@ -3831,6 +4394,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3839,7 +4404,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FAREnvironmentProbeUpdatePayload            NewPayload                                                 (ConstParm, Parm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UAREnvironmentProbeComponent::ServerUpdatePayload(const struct FAREnvironmentProbeUpdatePayload& NewPayload)
+	void UAREnvironmentProbeComponent::ServerUpdatePayload(
+const struct FAREnvironmentProbeUpdatePayload& NewPayload
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3856,6 +4423,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3864,7 +4433,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FAREnvironmentProbeUpdatePayload            Payload                                                    (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UAREnvironmentProbeComponent::ReceiveUpdate(const struct FAREnvironmentProbeUpdatePayload& Payload)
+	void UAREnvironmentProbeComponent::ReceiveUpdate(
+const struct FAREnvironmentProbeUpdatePayload& Payload
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3881,6 +4452,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3889,7 +4462,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FAREnvironmentProbeUpdatePayload            Payload                                                    (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UAREnvironmentProbeComponent::ReceiveAdd(const struct FAREnvironmentProbeUpdatePayload& Payload)
+	void UAREnvironmentProbeComponent::ReceiveAdd(
+const struct FAREnvironmentProbeUpdatePayload& Payload
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3906,10 +4481,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAREnvironmentProbeComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UAREnvironmentProbeComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAREnvironmentProbeComponent::StaticClass()
@@ -3920,6 +4497,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3928,7 +4507,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FARObjectUpdatePayload                      NewPayload                                                 (ConstParm, Parm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UARObjectComponent::ServerUpdatePayload(const struct FARObjectUpdatePayload& NewPayload)
+	void UARObjectComponent::ServerUpdatePayload(
+const struct FARObjectUpdatePayload& NewPayload
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3945,6 +4526,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3953,7 +4536,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FARObjectUpdatePayload                      Payload                                                    (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UARObjectComponent::ReceiveUpdate(const struct FARObjectUpdatePayload& Payload)
+	void UARObjectComponent::ReceiveUpdate(
+const struct FARObjectUpdatePayload& Payload
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3970,6 +4555,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3978,7 +4565,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FARObjectUpdatePayload                      Payload                                                    (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UARObjectComponent::ReceiveAdd(const struct FARObjectUpdatePayload& Payload)
+	void UARObjectComponent::ReceiveAdd(
+const struct FARObjectUpdatePayload& Payload
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3995,10 +4584,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARObjectComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UARObjectComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARObjectComponent::StaticClass()
@@ -4009,6 +4600,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4017,7 +4610,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FARMeshUpdatePayload                        NewPayload                                                 (ConstParm, Parm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UARMeshComponent::ServerUpdatePayload(const struct FARMeshUpdatePayload& NewPayload)
+	void UARMeshComponent::ServerUpdatePayload(
+const struct FARMeshUpdatePayload& NewPayload
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4034,6 +4629,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4042,7 +4639,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FARMeshUpdatePayload                        Payload                                                    (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UARMeshComponent::ReceiveUpdate(const struct FARMeshUpdatePayload& Payload)
+	void UARMeshComponent::ReceiveUpdate(
+const struct FARMeshUpdatePayload& Payload
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4059,6 +4658,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4067,7 +4668,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FARMeshUpdatePayload                        Payload                                                    (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UARMeshComponent::ReceiveAdd(const struct FARMeshUpdatePayload& Payload)
+	void UARMeshComponent::ReceiveAdd(
+const struct FARMeshUpdatePayload& Payload
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4084,10 +4687,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARMeshComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UARMeshComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARMeshComponent::StaticClass()
@@ -4098,6 +4703,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4106,7 +4713,9 @@ namespace CG
 	 * Parameters:
 	 * 		EGeoAnchorComponentDebugMode                       NewDebugMode                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UARGeoAnchorComponent::SetGeoAnchorComponentDebugMode(EGeoAnchorComponentDebugMode NewDebugMode)
+	void UARGeoAnchorComponent::SetGeoAnchorComponentDebugMode(
+EGeoAnchorComponentDebugMode NewDebugMode
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4123,6 +4732,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4131,7 +4742,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FARGeoAnchorUpdatePayload                   NewPayload                                                 (ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UARGeoAnchorComponent::ServerUpdatePayload(const struct FARGeoAnchorUpdatePayload& NewPayload)
+	void UARGeoAnchorComponent::ServerUpdatePayload(
+const struct FARGeoAnchorUpdatePayload& NewPayload
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4148,6 +4761,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4156,7 +4771,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FARGeoAnchorUpdatePayload                   Payload                                                    (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UARGeoAnchorComponent::ReceiveUpdate(const struct FARGeoAnchorUpdatePayload& Payload)
+	void UARGeoAnchorComponent::ReceiveUpdate(
+const struct FARGeoAnchorUpdatePayload& Payload
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4173,6 +4790,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4181,7 +4800,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FARGeoAnchorUpdatePayload                   Payload                                                    (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UARGeoAnchorComponent::ReceiveAdd(const struct FARGeoAnchorUpdatePayload& Payload)
+	void UARGeoAnchorComponent::ReceiveAdd(
+const struct FARGeoAnchorUpdatePayload& Payload
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4198,10 +4819,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARGeoAnchorComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UARGeoAnchorComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARGeoAnchorComponent::StaticClass()
@@ -4211,6 +4834,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AugmentedReality.ARGeoAnchorComponent");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4222,7 +4847,13 @@ namespace CG
 	 * 		class UARSessionConfig*                            SessionConfig                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FLatentActionInfo                           LatentInfo                                                 (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UARDependencyHandler::StartARSessionLatent(class UObject* WorldContextObject, class UARSessionConfig* SessionConfig, const struct FLatentActionInfo& LatentInfo)
+	void UARDependencyHandler::StartARSessionLatent(
+class UObject* WorldContextObject
+, 
+class UARSessionConfig* SessionConfig
+, 
+const struct FLatentActionInfo& LatentInfo
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4243,6 +4874,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4254,7 +4887,15 @@ namespace CG
 	 * 		struct FLatentActionInfo                           LatentInfo                                                 (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		EARServicePermissionRequestResult                  OutPermissionResult                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UARDependencyHandler::RequestARSessionPermission(class UObject* WorldContextObject, class UARSessionConfig* SessionConfig, const struct FLatentActionInfo& LatentInfo, EARServicePermissionRequestResult* OutPermissionResult)
+	void UARDependencyHandler::RequestARSessionPermission(
+class UObject* WorldContextObject
+, 
+class UARSessionConfig* SessionConfig
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+EARServicePermissionRequestResult* OutPermissionResult
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4279,6 +4920,8 @@ namespace CG
 			*OutPermissionResult = params.OutPermissionResult;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4289,7 +4932,13 @@ namespace CG
 	 * 		struct FLatentActionInfo                           LatentInfo                                                 (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		EARServiceInstallRequestResult                     OutInstallResult                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UARDependencyHandler::InstallARService(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, EARServiceInstallRequestResult* OutInstallResult)
+	void UARDependencyHandler::InstallARService(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+EARServiceInstallRequestResult* OutInstallResult
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4311,6 +4960,8 @@ namespace CG
 		if (OutInstallResult != nullptr)
 			*OutInstallResult = params.OutInstallResult;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4335,6 +4986,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4345,7 +4998,13 @@ namespace CG
 	 * 		struct FLatentActionInfo                           LatentInfo                                                 (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		EARServiceAvailability                             OutAvailability                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UARDependencyHandler::CheckARServiceAvailability(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, EARServiceAvailability* OutAvailability)
+	void UARDependencyHandler::CheckARServiceAvailability(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+EARServiceAvailability* OutAvailability
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4368,10 +5027,12 @@ namespace CG
 			*OutAvailability = params.OutAvailability;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARDependencyHandler.StaticClass
+	 * 		Name   -> PredefinedFunction UARDependencyHandler.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARDependencyHandler::StaticClass()
@@ -4381,6 +5042,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AugmentedReality.ARDependencyHandler");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4405,6 +5068,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4427,6 +5092,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4451,6 +5118,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4474,6 +5143,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4485,7 +5156,15 @@ namespace CG
 	 * 		float                                              AltitudeMeters                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      OptionalAnchorName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UARGeoTrackingSupport::AddGeoAnchorAtLocationWithAltitude(float Longitude, float Latitude, float AltitudeMeters, const class FString& OptionalAnchorName)
+	bool UARGeoTrackingSupport::AddGeoAnchorAtLocationWithAltitude(
+float Longitude
+, 
+float Latitude
+, 
+float AltitudeMeters
+, 
+const class FString& OptionalAnchorName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4510,6 +5189,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4520,7 +5201,13 @@ namespace CG
 	 * 		float                                              Latitude                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      OptionalAnchorName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UARGeoTrackingSupport::AddGeoAnchorAtLocation(float Longitude, float Latitude, const class FString& OptionalAnchorName)
+	bool UARGeoTrackingSupport::AddGeoAnchorAtLocation(
+float Longitude
+, 
+float Latitude
+, 
+const class FString& OptionalAnchorName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4543,10 +5230,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARGeoTrackingSupport.StaticClass
+	 * 		Name   -> PredefinedFunction UARGeoTrackingSupport.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARGeoTrackingSupport::StaticClass()
@@ -4557,6 +5246,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4566,7 +5257,11 @@ namespace CG
 	 * 		bool                                               bIsAvailable                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Error                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy::GeoTrackingAvailabilityDelegate__DelegateSignature(bool bIsAvailable, const class FString& Error)
+	void UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy::GeoTrackingAvailabilityDelegate__DelegateSignature(
+bool bIsAvailable
+, 
+const class FString& Error
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4585,6 +5280,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4595,7 +5292,13 @@ namespace CG
 	 * 		float                                              Longitude                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Latitude                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy* UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy::CheckGeoTrackingAvailabilityAtLocation(class UObject* WorldContextObject, float Longitude, float Latitude)
+	class UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy* UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy::CheckGeoTrackingAvailabilityAtLocation(
+class UObject* WorldContextObject
+, 
+float Longitude
+, 
+float Latitude
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4618,6 +5321,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4626,7 +5331,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy* UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy::CheckGeoTrackingAvailability(class UObject* WorldContextObject)
+	class UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy* UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy::CheckGeoTrackingAvailability(
+class UObject* WorldContextObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4645,10 +5352,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy::StaticClass()
@@ -4658,6 +5367,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AugmentedReality.CheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4670,7 +5381,15 @@ namespace CG
 	 * 		float                                              Altitude                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Error                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGetGeoLocationAsyncTaskBlueprintProxy::GetGeoLocationDelegate__DelegateSignature(float Longitude, float Latitude, float Altitude, const class FString& Error)
+	void UGetGeoLocationAsyncTaskBlueprintProxy::GetGeoLocationDelegate__DelegateSignature(
+float Longitude
+, 
+float Latitude
+, 
+float Altitude
+, 
+const class FString& Error
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4693,6 +5412,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4702,7 +5423,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector                                     WorldPosition                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UGetGeoLocationAsyncTaskBlueprintProxy* UGetGeoLocationAsyncTaskBlueprintProxy::GetGeoLocationAtWorldPosition(class UObject* WorldContextObject, const struct FVector& WorldPosition)
+	class UGetGeoLocationAsyncTaskBlueprintProxy* UGetGeoLocationAsyncTaskBlueprintProxy::GetGeoLocationAtWorldPosition(
+class UObject* WorldContextObject
+, 
+const struct FVector& WorldPosition
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4723,10 +5448,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGetGeoLocationAsyncTaskBlueprintProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UGetGeoLocationAsyncTaskBlueprintProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGetGeoLocationAsyncTaskBlueprintProxy::StaticClass()
@@ -4737,6 +5464,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4746,7 +5475,11 @@ namespace CG
 	 * 		class UClass*                                      ComponentClass                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FGuid                                       NativeID                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UARLifeCycleComponent::ServerSpawnARActor(class UClass* ComponentClass, const struct FGuid& NativeID)
+	void UARLifeCycleComponent::ServerSpawnARActor(
+class UClass* ComponentClass
+, 
+const struct FGuid& NativeID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4765,6 +5498,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4773,7 +5508,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AARActor*                                    Actor                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UARLifeCycleComponent::ServerDestroyARActor(class AARActor* Actor)
+	void UARLifeCycleComponent::ServerDestroyARActor(
+class AARActor* Actor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4790,6 +5527,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4798,7 +5537,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AARActor*                                    Actor                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UARLifeCycleComponent::InstanceARActorToBeDestroyedDelegate__DelegateSignature(class AARActor* Actor)
+	void UARLifeCycleComponent::InstanceARActorToBeDestroyedDelegate__DelegateSignature(
+class AARActor* Actor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4815,6 +5556,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4825,7 +5568,13 @@ namespace CG
 	 * 		struct FGuid                                       NativeID                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class AARActor*                                    SpawnedActor                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UARLifeCycleComponent::InstanceARActorSpawnedDelegate__DelegateSignature(class UClass* ComponentClass, const struct FGuid& NativeID, class AARActor* SpawnedActor)
+	void UARLifeCycleComponent::InstanceARActorSpawnedDelegate__DelegateSignature(
+class UClass* ComponentClass
+, 
+const struct FGuid& NativeID
+, 
+class AARActor* SpawnedActor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4846,10 +5595,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARLifeCycleComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UARLifeCycleComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARLifeCycleComponent::StaticClass()
@@ -4859,6 +5610,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AugmentedReality.ARLifeCycleComponent");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4883,6 +5636,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4905,6 +5660,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4929,6 +5686,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4951,6 +5710,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4975,6 +5736,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4998,6 +5761,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5009,7 +5774,15 @@ namespace CG
 	 * 		float                                              Scale                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              PersistForSeconds                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UARPin::DebugDraw(class UWorld* World, const struct FLinearColor& Color, float Scale, float PersistForSeconds)
+	void UARPin::DebugDraw(
+class UWorld* World
+, 
+const struct FLinearColor& Color
+, 
+float Scale
+, 
+float PersistForSeconds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5032,10 +5805,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARPin.StaticClass
+	 * 		Name   -> PredefinedFunction UARPin.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARPin::StaticClass()
@@ -5046,6 +5821,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5054,7 +5831,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<unsigned char>                              ImageData                                                  (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void AARSharedWorldGameMode::SetPreviewImageData(TArray<unsigned char> ImageData)
+	void AARSharedWorldGameMode::SetPreviewImageData(
+TArray<unsigned char> ImageData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5070,6 +5849,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5092,6 +5873,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5100,7 +5883,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<unsigned char>                              ARWorldData                                                (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void AARSharedWorldGameMode::SetARSharedWorldData(TArray<unsigned char> ARWorldData)
+	void AARSharedWorldGameMode::SetARSharedWorldData(
+TArray<unsigned char> ARWorldData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5116,6 +5901,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5140,10 +5927,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AARSharedWorldGameMode.StaticClass
+	 * 		Name   -> PredefinedFunction AARSharedWorldGameMode.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AARSharedWorldGameMode::StaticClass()
@@ -5153,6 +5942,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AugmentedReality.ARSharedWorldGameMode");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5175,10 +5966,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AARSharedWorldGameState.StaticClass
+	 * 		Name   -> PredefinedFunction AARSharedWorldGameState.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AARSharedWorldGameState::StaticClass()
@@ -5188,6 +5981,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AugmentedReality.ARSharedWorldGameState");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5210,6 +6005,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5219,7 +6016,11 @@ namespace CG
 	 * 		int32_t                                            Offset                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<unsigned char>                              Buffer                                                     (ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void AARSharedWorldPlayerController::ClientUpdatePreviewImageData(int32_t Offset, TArray<unsigned char> Buffer)
+	void AARSharedWorldPlayerController::ClientUpdatePreviewImageData(
+int32_t Offset
+, 
+TArray<unsigned char> Buffer
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5238,6 +6039,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5247,7 +6050,11 @@ namespace CG
 	 * 		int32_t                                            Offset                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<unsigned char>                              Buffer                                                     (ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void AARSharedWorldPlayerController::ClientUpdateARWorldData(int32_t Offset, TArray<unsigned char> Buffer)
+	void AARSharedWorldPlayerController::ClientUpdateARWorldData(
+int32_t Offset
+, 
+TArray<unsigned char> Buffer
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5266,6 +6073,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5275,7 +6084,11 @@ namespace CG
 	 * 		int32_t                                            PreviewImageSize                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            ARWorldDataSize                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void AARSharedWorldPlayerController::ClientInitSharedWorld(int32_t PreviewImageSize, int32_t ARWorldDataSize)
+	void AARSharedWorldPlayerController::ClientInitSharedWorld(
+int32_t PreviewImageSize
+, 
+int32_t ARWorldDataSize
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5294,10 +6107,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AARSharedWorldPlayerController.StaticClass
+	 * 		Name   -> PredefinedFunction AARSharedWorldPlayerController.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AARSharedWorldPlayerController::StaticClass()
@@ -5308,6 +6123,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5316,7 +6133,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UAREnvironmentCaptureProbe*                  InCaptureProbe                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void AARSkyLight::SetEnvironmentCaptureProbe(class UAREnvironmentCaptureProbe* InCaptureProbe)
+	void AARSkyLight::SetEnvironmentCaptureProbe(
+class UAREnvironmentCaptureProbe* InCaptureProbe
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5333,10 +6152,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AARSkyLight.StaticClass
+	 * 		Name   -> PredefinedFunction AARSkyLight.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AARSkyLight::StaticClass()
@@ -5347,10 +6168,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARTexture.StaticClass
+	 * 		Name   -> PredefinedFunction UARTexture.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARTexture::StaticClass()
@@ -5361,10 +6184,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARTextureCameraImage.StaticClass
+	 * 		Name   -> PredefinedFunction UARTextureCameraImage.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARTextureCameraImage::StaticClass()
@@ -5375,10 +6200,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARTextureCameraDepth.StaticClass
+	 * 		Name   -> PredefinedFunction UARTextureCameraDepth.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARTextureCameraDepth::StaticClass()
@@ -5389,10 +6216,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAREnvironmentCaptureProbeTexture.StaticClass
+	 * 		Name   -> PredefinedFunction UAREnvironmentCaptureProbeTexture.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAREnvironmentCaptureProbeTexture::StaticClass()
@@ -5403,10 +6232,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARTraceResultDummy.StaticClass
+	 * 		Name   -> PredefinedFunction UARTraceResultDummy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARTraceResultDummy::StaticClass()
@@ -5416,6 +6247,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AugmentedReality.ARTraceResultDummy");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5440,6 +6273,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5462,6 +6297,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5486,6 +6323,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5508,6 +6347,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5532,6 +6373,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5554,6 +6397,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5578,6 +6423,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5600,6 +6447,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5624,6 +6473,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5647,10 +6498,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARTrackedGeometry.StaticClass
+	 * 		Name   -> PredefinedFunction UARTrackedGeometry.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARTrackedGeometry::StaticClass()
@@ -5660,6 +6513,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AugmentedReality.ARTrackedGeometry");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5684,6 +6539,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5706,6 +6563,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5730,6 +6589,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5752,6 +6613,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5776,10 +6639,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARPlaneGeometry.StaticClass
+	 * 		Name   -> PredefinedFunction UARPlaneGeometry.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARPlaneGeometry::StaticClass()
@@ -5790,10 +6655,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARTrackedPoint.StaticClass
+	 * 		Name   -> PredefinedFunction UARTrackedPoint.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARTrackedPoint::StaticClass()
@@ -5803,6 +6670,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AugmentedReality.ARTrackedPoint");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5827,6 +6696,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5850,10 +6721,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARTrackedImage.StaticClass
+	 * 		Name   -> PredefinedFunction UARTrackedImage.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARTrackedImage::StaticClass()
@@ -5864,10 +6737,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARTrackedQRCode.StaticClass
+	 * 		Name   -> PredefinedFunction UARTrackedQRCode.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARTrackedQRCode::StaticClass()
@@ -5878,6 +6753,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5886,7 +6763,9 @@ namespace CG
 	 * Parameters:
 	 * 		EAREye                                             Eye                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FTransform UARFaceGeometry::GetWorldSpaceEyeTransform(EAREye Eye)
+	struct FTransform UARFaceGeometry::GetWorldSpaceEyeTransform(
+EAREye Eye
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5905,6 +6784,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5913,7 +6794,9 @@ namespace CG
 	 * Parameters:
 	 * 		EAREye                                             Eye                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FTransform UARFaceGeometry::GetLocalSpaceEyeTransform(EAREye Eye)
+	struct FTransform UARFaceGeometry::GetLocalSpaceEyeTransform(
+EAREye Eye
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5932,6 +6815,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5940,7 +6825,9 @@ namespace CG
 	 * Parameters:
 	 * 		EARFaceBlendShape                                  BlendShape                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float UARFaceGeometry::GetBlendShapeValue(EARFaceBlendShape BlendShape)
+	float UARFaceGeometry::GetBlendShapeValue(
+EARFaceBlendShape BlendShape
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5958,6 +6845,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5982,10 +6871,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARFaceGeometry.StaticClass
+	 * 		Name   -> PredefinedFunction UARFaceGeometry.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARFaceGeometry::StaticClass()
@@ -5995,6 +6886,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AugmentedReality.ARFaceGeometry");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -6019,6 +6912,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6042,10 +6937,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAREnvironmentCaptureProbe.StaticClass
+	 * 		Name   -> PredefinedFunction UAREnvironmentCaptureProbe.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAREnvironmentCaptureProbe::StaticClass()
@@ -6055,6 +6952,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AugmentedReality.AREnvironmentCaptureProbe");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -6079,10 +6978,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARTrackedObject.StaticClass
+	 * 		Name   -> PredefinedFunction UARTrackedObject.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARTrackedObject::StaticClass()
@@ -6092,6 +6993,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AugmentedReality.ARTrackedObject");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -6116,10 +7019,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARTrackedPose.StaticClass
+	 * 		Name   -> PredefinedFunction UARTrackedPose.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARTrackedPose::StaticClass()
@@ -6129,6 +7034,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AugmentedReality.ARTrackedPose");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -6141,7 +7048,15 @@ namespace CG
 	 * 		struct FVector                                     OutClassificationLocation                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              MaxLocationDiff                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UARMeshGeometry::GetObjectClassificationAtLocation(const struct FVector& InWorldLocation, EARObjectClassification* OutClassification, struct FVector* OutClassificationLocation, float MaxLocationDiff)
+	bool UARMeshGeometry::GetObjectClassificationAtLocation(
+const struct FVector& InWorldLocation
+, 
+EARObjectClassification* OutClassification
+, 
+struct FVector* OutClassificationLocation
+, 
+float MaxLocationDiff
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6169,10 +7084,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARMeshGeometry.StaticClass
+	 * 		Name   -> PredefinedFunction UARMeshGeometry.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARMeshGeometry::StaticClass()
@@ -6182,6 +7099,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AugmentedReality.ARMeshGeometry");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -6206,6 +7125,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6228,6 +7149,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -6252,6 +7175,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6275,10 +7200,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARGeoAnchor.StaticClass
+	 * 		Name   -> PredefinedFunction UARGeoAnchor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARGeoAnchor::StaticClass()
@@ -6289,10 +7216,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARTrackableNotifyComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UARTrackableNotifyComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARTrackableNotifyComponent::StaticClass()
@@ -6303,10 +7232,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARTypesDummyClass.StaticClass
+	 * 		Name   -> PredefinedFunction UARTypesDummyClass.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARTypesDummyClass::StaticClass()
@@ -6317,6 +7248,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6325,7 +7258,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      NewName                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UARCandidateObject::SetFriendlyName(const class FString& NewName)
+	void UARCandidateObject::SetFriendlyName(
+const class FString& NewName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6342,6 +7277,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6350,7 +7287,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<unsigned char>                              InCandidateObject                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UARCandidateObject::SetCandidateObjectData(TArray<unsigned char> InCandidateObject)
+	void UARCandidateObject::SetCandidateObjectData(
+TArray<unsigned char> InCandidateObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6367,6 +7306,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6375,7 +7316,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FBox                                        InBoundingBox                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UARCandidateObject::SetBoundingBox(const struct FBox& InBoundingBox)
+	void UARCandidateObject::SetBoundingBox(
+const struct FBox& InBoundingBox
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6391,6 +7334,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -6415,6 +7360,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6437,6 +7384,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -6461,10 +7410,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UARCandidateObject.StaticClass
+	 * 		Name   -> PredefinedFunction UARCandidateObject.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UARCandidateObject::StaticClass()
@@ -6474,6 +7425,7 @@ namespace CG
 			ptr = UObject::FindClass("Class AugmentedReality.ARCandidateObject");
 		return ptr;
 	}
+
 
 }
 

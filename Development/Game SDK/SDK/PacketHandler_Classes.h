@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * Class PacketHandler.HandlerComponentFactory
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
@@ -21,8 +22,11 @@ namespace CG
 	class UHandlerComponentFactory : public UObject
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class PacketHandler.PacketHandlerProfileConfig
@@ -31,9 +35,12 @@ namespace CG
 	class UPacketHandlerProfileConfig : public UObject
 	{
 	public:
-		TArray<class FString>                                      Components;                                              // 0x0028(0x0010) ZeroConstructor, Config, NativeAccessSpecifierPublic
+
+		TArray<class FString>                                    Components;                                              // 0x0028(0x0010) ZeroConstructor, Config, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
 

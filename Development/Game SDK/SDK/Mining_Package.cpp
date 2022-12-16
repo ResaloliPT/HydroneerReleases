@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UCGameEngine.StaticClass
+	 * 		Name   -> PredefinedFunction UCGameEngine.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UCGameEngine::StaticClass()
@@ -24,10 +25,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UCGameInstance.StaticClass
+	 * 		Name   -> PredefinedFunction UCGameInstance.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UCGameInstance::StaticClass()
@@ -38,6 +41,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -47,7 +52,11 @@ namespace CG
 	 * 		class FString                                      ClassStringName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UClass*                                      OutClass                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UCHydroneerLibrary::StringToClassRef(const class FString& ClassStringName, class UClass** OutClass)
+	bool UCHydroneerLibrary::StringToClassRef(
+const class FString& ClassStringName
+, 
+class UClass** OutClass
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -70,6 +79,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -79,7 +90,11 @@ namespace CG
 	 * 		bool                                               bNewCastHiddenShadow                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UPrimitiveComponent*                         Target                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UCHydroneerLibrary::SetHiddenShadow(bool bNewCastHiddenShadow, class UPrimitiveComponent* Target)
+	void UCHydroneerLibrary::SetHiddenShadow(
+bool bNewCastHiddenShadow
+, 
+class UPrimitiveComponent* Target
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -98,6 +113,42 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Mining.CHydroneerLibrary.SetCanAffectNavigation
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               bCanAffectNavigation                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UPrimitiveComponent*                         Target                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	void UCHydroneerLibrary::SetCanAffectNavigation(
+bool bCanAffectNavigation
+, 
+class UPrimitiveComponent* Target
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function Mining.CHydroneerLibrary.SetCanAffectNavigation");
+		
+		struct
+		{
+			bool                                               bCanAffectNavigation;
+			class UPrimitiveComponent*                         Target;
+		} params;
+		params.bCanAffectNavigation = bCanAffectNavigation;
+		params.Target = Target;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -106,7 +157,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Filename                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UCHydroneerLibrary::SanitizeString(const class FString& Filename)
+	class FString UCHydroneerLibrary::SanitizeString(
+const class FString& Filename
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -125,6 +178,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -134,7 +189,11 @@ namespace CG
 	 * 		class FString                                      OriginalSaveName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      NewSaveName                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UCHydroneerLibrary::RenameSave(const class FString& OriginalSaveName, const class FString& NewSaveName)
+	bool UCHydroneerLibrary::RenameSave(
+const class FString& OriginalSaveName
+, 
+const class FString& NewSaveName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -155,6 +214,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -163,7 +224,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bReload                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UCHydroneerLibrary::ReloadInput(bool bReload)
+	void UCHydroneerLibrary::ReloadInput(
+bool bReload
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -179,6 +242,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -203,6 +268,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -212,7 +279,11 @@ namespace CG
 	 * 		class FString                                      SaveName                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<class FString>                              OutBackups                                                 (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UCHydroneerLibrary::GetSaveBackupNames(const class FString& SaveName, TArray<class FString>* OutBackups)
+	void UCHydroneerLibrary::GetSaveBackupNames(
+const class FString& SaveName
+, 
+TArray<class FString>* OutBackups
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -233,6 +304,8 @@ namespace CG
 			*OutBackups = params.OutBackups;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -241,7 +314,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      SaveName                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UCHydroneerLibrary::GetHighestCurrentSaveIndex(const class FString& SaveName)
+	int32_t UCHydroneerLibrary::GetHighestCurrentSaveIndex(
+const class FString& SaveName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -260,6 +335,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -268,7 +345,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FAssetData                                  Asset                                                      (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UClass* UCHydroneerLibrary::GetBlueprintAssetClass(const struct FAssetData& Asset)
+	class UClass* UCHydroneerLibrary::GetBlueprintAssetClass(
+const struct FAssetData& Asset
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -286,6 +365,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -310,6 +391,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -318,7 +401,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      FilePath                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<class FString> UCHydroneerLibrary::FindFolders(const class FString& FilePath)
+	TArray<class FString> UCHydroneerLibrary::FindFolders(
+const class FString& FilePath
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -337,6 +422,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -346,7 +433,11 @@ namespace CG
 	 * 		class FString                                      OldDirectory                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      NewDirectory                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UCHydroneerLibrary::CopyOverDirectory(const class FString& OldDirectory, const class FString& NewDirectory)
+	void UCHydroneerLibrary::CopyOverDirectory(
+const class FString& OldDirectory
+, 
+const class FString& NewDirectory
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -365,6 +456,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -375,7 +468,13 @@ namespace CG
 	 * 		bool                                               bIncrementSave                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            MaxIncrements                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UCHydroneerLibrary::BackupSave(const class FString& SaveName, bool bIncrementSave, int32_t MaxIncrements)
+	void UCHydroneerLibrary::BackupSave(
+const class FString& SaveName
+, 
+bool bIncrementSave
+, 
+int32_t MaxIncrements
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -396,10 +495,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UCHydroneerLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UCHydroneerLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UCHydroneerLibrary::StaticClass()
@@ -409,6 +510,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Mining.CHydroneerLibrary");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -433,10 +536,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UCHydroneerProjectSettings.StaticClass
+	 * 		Name   -> PredefinedFunction UCHydroneerProjectSettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UCHydroneerProjectSettings::StaticClass()
@@ -447,6 +552,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -455,7 +562,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      ModName                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UCModdingSubsystem::UnloadMod(const class FString& ModName)
+	void UCModdingSubsystem::UnloadMod(
+const class FString& ModName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -471,6 +580,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -493,6 +604,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -501,7 +614,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      ModName                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UCModdingSubsystem::LoadMod(const class FString& ModName)
+	void UCModdingSubsystem::LoadMod(
+const class FString& ModName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -517,6 +632,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -538,6 +655,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -562,6 +681,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -584,6 +705,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -608,6 +731,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -631,10 +756,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UCModdingSubsystem.StaticClass
+	 * 		Name   -> PredefinedFunction UCModdingSubsystem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UCModdingSubsystem::StaticClass()
@@ -645,10 +772,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULocalCableComponent.StaticClass
+	 * 		Name   -> PredefinedFunction ULocalCableComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULocalCableComponent::StaticClass()
@@ -658,6 +787,7 @@ namespace CG
 			ptr = UObject::FindClass("Class Mining.LocalCableComponent");
 		return ptr;
 	}
+
 
 }
 

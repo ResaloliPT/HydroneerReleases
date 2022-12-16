@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * Class MagicLeapEyeTracker.MagicLeapEyeTrackerFunctionLibrary
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
@@ -21,8 +22,13 @@ namespace CG
 	class UMagicLeapEyeTrackerFunctionLibrary : public UBlueprintFunctionLibrary
 	{
 	public:
-		bool GetEyeBlinkState(struct FMagicLeapEyeBlinkState* BlinkState);
+
+		bool GetEyeBlinkState(
+struct FMagicLeapEyeBlinkState* BlinkState
+);
+
 		EMagicLeapEyeTrackingCalibrationStatus GetCalibrationStatus();
+
 		static UClass* StaticClass();
 	};
 

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWeb.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWeb.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWeb::StaticClass()
@@ -24,10 +25,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebSubsystem.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebSubsystem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebSubsystem::StaticClass()
@@ -38,6 +41,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -47,7 +52,11 @@ namespace CG
 	 * 		class FString                                      Data                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreWebAsyncAction::HandleCallback(const class FString& Data, bool bWasSuccessful)
+	void USteamCoreWebAsyncAction::HandleCallback(
+const class FString& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -66,10 +75,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncAction.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncAction.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncAction::StaticClass()
@@ -80,10 +91,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebSettings.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebSettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebSettings::StaticClass()
@@ -94,6 +107,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -103,7 +118,11 @@ namespace CG
 	 * 		class FString                                      JsonString                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FSteamCoreJson>                      Data                                                       (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	bool USteamWebUtilities::ParseJson(const class FString& JsonString, TArray<struct FSteamCoreJson>* Data)
+	bool USteamWebUtilities::ParseJson(
+const class FString& JsonString
+, 
+TArray<struct FSteamCoreJson>* Data
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -125,6 +144,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -149,6 +170,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -171,6 +194,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -195,6 +220,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -206,7 +233,15 @@ namespace CG
 	 * 		TArray<class FString>                              Values                                                     (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		ESteamJsonResult                                   Result                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamWebUtilities::FindJsonStrings(const class FString& JsonString, const class FString& Key, TArray<class FString>* Values, ESteamJsonResult* Result)
+	void USteamWebUtilities::FindJsonStrings(
+const class FString& JsonString
+, 
+const class FString& Key
+, 
+TArray<class FString>* Values
+, 
+ESteamJsonResult* Result
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -232,6 +267,8 @@ namespace CG
 			*Result = params.Result;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -243,7 +280,15 @@ namespace CG
 	 * 		class FString                                      Value                                                      (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ESteamJsonResult                                   Result                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamWebUtilities::FindJsonString(const class FString& JsonString, const class FString& Key, class FString* Value, ESteamJsonResult* Result)
+	void USteamWebUtilities::FindJsonString(
+const class FString& JsonString
+, 
+const class FString& Key
+, 
+class FString* Value
+, 
+ESteamJsonResult* Result
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -269,6 +314,8 @@ namespace CG
 			*Result = params.Result;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -280,7 +327,15 @@ namespace CG
 	 * 		TArray<int32_t>                                    Values                                                     (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		ESteamJsonResult                                   Result                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamWebUtilities::FindJsonNumbers(const class FString& JsonString, const class FString& Key, TArray<int32_t>* Values, ESteamJsonResult* Result)
+	void USteamWebUtilities::FindJsonNumbers(
+const class FString& JsonString
+, 
+const class FString& Key
+, 
+TArray<int32_t>* Values
+, 
+ESteamJsonResult* Result
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -306,6 +361,8 @@ namespace CG
 			*Result = params.Result;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -317,7 +374,15 @@ namespace CG
 	 * 		int32_t                                            Value                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ESteamJsonResult                                   Result                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamWebUtilities::FindJsonNumber(const class FString& JsonString, const class FString& Key, int32_t* Value, ESteamJsonResult* Result)
+	void USteamWebUtilities::FindJsonNumber(
+const class FString& JsonString
+, 
+const class FString& Key
+, 
+int32_t* Value
+, 
+ESteamJsonResult* Result
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -343,6 +408,8 @@ namespace CG
 			*Result = params.Result;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -354,7 +421,15 @@ namespace CG
 	 * 		TArray<bool>                                       bValues                                                    (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		ESteamJsonResult                                   Result                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamWebUtilities::FindJsonBools(const class FString& JsonString, const class FString& Key, TArray<bool>* bValues, ESteamJsonResult* Result)
+	void USteamWebUtilities::FindJsonBools(
+const class FString& JsonString
+, 
+const class FString& Key
+, 
+TArray<bool>* bValues
+, 
+ESteamJsonResult* Result
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -380,6 +455,8 @@ namespace CG
 			*Result = params.Result;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -391,7 +468,15 @@ namespace CG
 	 * 		bool                                               bValue                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ESteamJsonResult                                   Result                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamWebUtilities::FindJsonBool(const class FString& JsonString, const class FString& Key, bool* bValue, ESteamJsonResult* Result)
+	void USteamWebUtilities::FindJsonBool(
+const class FString& JsonString
+, 
+const class FString& Key
+, 
+bool* bValue
+, 
+ESteamJsonResult* Result
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -417,10 +502,12 @@ namespace CG
 			*Result = params.Result;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamWebUtilities.StaticClass
+	 * 		Name   -> PredefinedFunction USteamWebUtilities.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamWebUtilities::StaticClass()
@@ -430,6 +517,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamWebUtilities");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -441,7 +530,13 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Version                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebApps::UpToDateCheck(const class FScriptDelegate& Callback, int32_t AppID, int32_t Version)
+	void UWebApps::UpToDateCheck(
+const class FScriptDelegate& Callback
+, 
+int32_t AppID
+, 
+int32_t Version
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -462,6 +557,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -475,7 +572,19 @@ namespace CG
 	 * 		class FString                                      BetaKey                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Description                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebApps::SetAppBuildLive(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, int32_t BuildID, const class FString& BetaKey, const class FString& Description)
+	void UWebApps::SetAppBuildLive(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t BuildID
+, 
+const class FString& BetaKey
+, 
+const class FString& Description
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -502,6 +611,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -511,7 +622,11 @@ namespace CG
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Addr                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebApps::GetServersAtAddress(const class FScriptDelegate& Callback, const class FString& Addr)
+	void UWebApps::GetServersAtAddress(
+const class FScriptDelegate& Callback
+, 
+const class FString& Addr
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -530,6 +645,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -541,7 +658,15 @@ namespace CG
 	 * 		class FString                                      Filter                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Limit                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebApps::GetServerList(const class FScriptDelegate& Callback, const class FString& Key, const class FString& Filter, int32_t Limit)
+	void UWebApps::GetServerList(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& Filter
+, 
+int32_t Limit
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -564,6 +689,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -574,7 +701,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebApps::GetPlayersBanned(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID)
+	void UWebApps::GetPlayersBanned(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -595,6 +728,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -610,7 +745,23 @@ namespace CG
 	 * 		bool                                               bIncludeBans                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            ReportidMin                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebApps::GetCheatingReports(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, int32_t TimeBegin, int32_t TimeEnd, bool bIncludeReports, bool bIncludeBans, int32_t ReportidMin)
+	void UWebApps::GetCheatingReports(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t TimeBegin
+, 
+int32_t TimeEnd
+, 
+bool bIncludeReports
+, 
+bool bIncludeBans
+, 
+int32_t ReportidMin
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -641,6 +792,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -650,7 +803,11 @@ namespace CG
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebApps::GetAppList(const class FScriptDelegate& Callback, const class FString& Key)
+	void UWebApps::GetAppList(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -669,6 +826,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -679,7 +838,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebApps::GetAppDepotVersions(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID)
+	void UWebApps::GetAppDepotVersions(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -700,6 +865,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -711,7 +878,15 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Count                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebApps::GetAppBuilds(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, int32_t Count)
+	void UWebApps::GetAppBuilds(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t Count
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -734,6 +909,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -744,7 +921,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebApps::GetAppBetas(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID)
+	void UWebApps::GetAppBetas(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -765,10 +948,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWebApps.StaticClass
+	 * 		Name   -> PredefinedFunction UWebApps.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWebApps::StaticClass()
@@ -778,6 +963,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.WebApps");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -789,7 +976,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreAppsAsyncActionGetAppBetas* USteamCoreAppsAsyncActionGetAppBetas::GetAppBetasAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID)
+	class USteamCoreAppsAsyncActionGetAppBetas* USteamCoreAppsAsyncActionGetAppBetas::GetAppBetasAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -812,10 +1005,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreAppsAsyncActionGetAppBetas.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreAppsAsyncActionGetAppBetas.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreAppsAsyncActionGetAppBetas::StaticClass()
@@ -825,6 +1020,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreAppsAsyncActionGetAppBetas");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -837,7 +1034,15 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Count                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreAppsAsyncActionGetAppBuilds* USteamCoreAppsAsyncActionGetAppBuilds::GetAppBuildsAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, int32_t Count)
+	class USteamCoreAppsAsyncActionGetAppBuilds* USteamCoreAppsAsyncActionGetAppBuilds::GetAppBuildsAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t Count
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -862,10 +1067,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreAppsAsyncActionGetAppBuilds.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreAppsAsyncActionGetAppBuilds.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreAppsAsyncActionGetAppBuilds::StaticClass()
@@ -875,6 +1082,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreAppsAsyncActionGetAppBuilds");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -886,7 +1095,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreAppsAsyncActionGetAppDepotVersions* USteamCoreAppsAsyncActionGetAppDepotVersions::GetAppDepotVersionsAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID)
+	class USteamCoreAppsAsyncActionGetAppDepotVersions* USteamCoreAppsAsyncActionGetAppDepotVersions::GetAppDepotVersionsAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -909,10 +1124,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreAppsAsyncActionGetAppDepotVersions.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreAppsAsyncActionGetAppDepotVersions.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreAppsAsyncActionGetAppDepotVersions::StaticClass()
@@ -923,6 +1140,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -932,7 +1151,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreAppsAsyncActionGetAppList* USteamCoreAppsAsyncActionGetAppList::GetAppListAsync(class UObject* WorldContextObject, const class FString& Key)
+	class USteamCoreAppsAsyncActionGetAppList* USteamCoreAppsAsyncActionGetAppList::GetAppListAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -953,10 +1176,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreAppsAsyncActionGetAppList.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreAppsAsyncActionGetAppList.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreAppsAsyncActionGetAppList::StaticClass()
@@ -966,6 +1191,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreAppsAsyncActionGetAppList");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -982,7 +1209,23 @@ namespace CG
 	 * 		bool                                               bIncludeBans                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            ReportidMin                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreAppsAsyncActionGetCheatingReports* USteamCoreAppsAsyncActionGetCheatingReports::GetCheatingReportsAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, int32_t TimeBegin, int32_t TimeEnd, bool bIncludeReports, bool bIncludeBans, int32_t ReportidMin)
+	class USteamCoreAppsAsyncActionGetCheatingReports* USteamCoreAppsAsyncActionGetCheatingReports::GetCheatingReportsAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t TimeBegin
+, 
+int32_t TimeEnd
+, 
+bool bIncludeReports
+, 
+bool bIncludeBans
+, 
+int32_t ReportidMin
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1015,10 +1258,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreAppsAsyncActionGetCheatingReports.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreAppsAsyncActionGetCheatingReports.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreAppsAsyncActionGetCheatingReports::StaticClass()
@@ -1028,6 +1273,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreAppsAsyncActionGetCheatingReports");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1039,7 +1286,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreAppsAsyncActionGetPlayersBanned* USteamCoreAppsAsyncActionGetPlayersBanned::GetPlayersBannedAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID)
+	class USteamCoreAppsAsyncActionGetPlayersBanned* USteamCoreAppsAsyncActionGetPlayersBanned::GetPlayersBannedAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1062,10 +1315,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreAppsAsyncActionGetPlayersBanned.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreAppsAsyncActionGetPlayersBanned.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreAppsAsyncActionGetPlayersBanned::StaticClass()
@@ -1075,6 +1330,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreAppsAsyncActionGetPlayersBanned");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1087,7 +1344,15 @@ namespace CG
 	 * 		class FString                                      Filter                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Limit                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreAppsAsyncActionGetServerList* USteamCoreAppsAsyncActionGetServerList::GetServerListAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& Filter, int32_t Limit)
+	class USteamCoreAppsAsyncActionGetServerList* USteamCoreAppsAsyncActionGetServerList::GetServerListAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& Filter
+, 
+int32_t Limit
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1112,10 +1377,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreAppsAsyncActionGetServerList.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreAppsAsyncActionGetServerList.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreAppsAsyncActionGetServerList::StaticClass()
@@ -1126,6 +1393,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1135,7 +1404,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Addr                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreAppsAsyncActionGetServersAtAddress* USteamCoreAppsAsyncActionGetServersAtAddress::GetServersAtAddressAsync(class UObject* WorldContextObject, const class FString& Addr)
+	class USteamCoreAppsAsyncActionGetServersAtAddress* USteamCoreAppsAsyncActionGetServersAtAddress::GetServersAtAddressAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Addr
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1156,10 +1429,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreAppsAsyncActionGetServersAtAddress.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreAppsAsyncActionGetServersAtAddress.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreAppsAsyncActionGetServersAtAddress::StaticClass()
@@ -1169,6 +1444,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreAppsAsyncActionGetServersAtAddress");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1183,7 +1460,19 @@ namespace CG
 	 * 		class FString                                      BetaKey                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Description                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreAppsAsyncActionSetAppBuildLive* USteamCoreAppsAsyncActionSetAppBuildLive::SetAppBuildLiveAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, int32_t BuildID, const class FString& BetaKey, const class FString& Description)
+	class USteamCoreAppsAsyncActionSetAppBuildLive* USteamCoreAppsAsyncActionSetAppBuildLive::SetAppBuildLiveAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t BuildID
+, 
+const class FString& BetaKey
+, 
+const class FString& Description
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1212,10 +1501,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreAppsAsyncActionSetAppBuildLive.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreAppsAsyncActionSetAppBuildLive.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreAppsAsyncActionSetAppBuildLive::StaticClass()
@@ -1225,6 +1516,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreAppsAsyncActionSetAppBuildLive");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1236,7 +1529,13 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Version                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreAppsAsyncActionUpToDateCheck* USteamCoreAppsAsyncActionUpToDateCheck::UpToDateCheckAsync(class UObject* WorldContextObject, int32_t AppID, int32_t Version)
+	class USteamCoreAppsAsyncActionUpToDateCheck* USteamCoreAppsAsyncActionUpToDateCheck::UpToDateCheckAsync(
+class UObject* WorldContextObject
+, 
+int32_t AppID
+, 
+int32_t Version
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1259,10 +1558,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreAppsAsyncActionUpToDateCheck.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreAppsAsyncActionUpToDateCheck.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreAppsAsyncActionUpToDateCheck::StaticClass()
@@ -1272,6 +1573,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreAppsAsyncActionUpToDateCheck");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1286,7 +1589,19 @@ namespace CG
 	 * 		class FString                                      BroadcastId                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      FrameData                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebBroadcastService::PostGameDataFrame(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& BroadcastId, const class FString& FrameData)
+	void UWebBroadcastService::PostGameDataFrame(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+const class FString& BroadcastId
+, 
+const class FString& FrameData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1313,10 +1628,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWebBroadcastService.StaticClass
+	 * 		Name   -> PredefinedFunction UWebBroadcastService.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWebBroadcastService::StaticClass()
@@ -1326,6 +1643,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.WebBroadcastService");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1340,7 +1659,19 @@ namespace CG
 	 * 		class FString                                      BroadcastId                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      FrameData                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionPostGameDataFrame* USteamCoreWebAsyncActionPostGameDataFrame::PostGameDataFrameAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& BroadcastId, const class FString& FrameData)
+	class USteamCoreWebAsyncActionPostGameDataFrame* USteamCoreWebAsyncActionPostGameDataFrame::PostGameDataFrameAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+const class FString& BroadcastId
+, 
+const class FString& FrameData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1369,10 +1700,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionPostGameDataFrame.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionPostGameDataFrame.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionPostGameDataFrame::StaticClass()
@@ -1382,6 +1715,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionPostGameDataFrame");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1394,7 +1729,15 @@ namespace CG
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebCheatReporting::StartSecureMultiplayerSession(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID)
+	void UWebCheatReporting::StartSecureMultiplayerSession(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1417,6 +1760,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1429,7 +1774,17 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SessionID                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebCheatReporting::RequestVacStatusForUser(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& SessionID)
+	void UWebCheatReporting::RequestVacStatusForUser(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& SessionID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1454,6 +1809,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1469,7 +1826,23 @@ namespace CG
 	 * 		int32_t                                            Duration                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bDelayBan                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebCheatReporting::RequestPlayerGameBan(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& ReportID, const class FString& CheatDescription, int32_t Duration, bool bDelayBan)
+	void UWebCheatReporting::RequestPlayerGameBan(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& ReportID
+, 
+const class FString& CheatDescription
+, 
+int32_t Duration
+, 
+bool bDelayBan
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1500,6 +1873,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1520,7 +1895,33 @@ namespace CG
 	 * 		int32_t                                            SuspicionStartTime                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Severity                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebCheatReporting::ReportPlayerCheating(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& SteamIdReporter, const class FString& AppData, bool bHeuristic, bool bDetection, bool bPlayerReport, bool bNoReportID, int32_t GameMode, int32_t SuspicionStartTime, int32_t Severity)
+	void UWebCheatReporting::ReportPlayerCheating(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+const class FString& SteamIdReporter
+, 
+const class FString& AppData
+, 
+bool bHeuristic
+, 
+bool bDetection
+, 
+bool bPlayerReport
+, 
+bool bNoReportID
+, 
+int32_t GameMode
+, 
+int32_t SuspicionStartTime
+, 
+int32_t Severity
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1561,6 +1962,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1582,7 +1985,35 @@ namespace CG
 	 * 		class FString                                      CheatParam1                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      CheatParam2                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebCheatReporting::ReportCheatData(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& PathAndFileName, const class FString& WebCheatURL, const class FString& TimeNow, const class FString& TimeStarted, const class FString& TimeStopped, const class FString& CheatName, int32_t GameProcessId, int32_t CheatProcessId, const class FString& CheatParam1, const class FString& CheatParam2)
+	void UWebCheatReporting::ReportCheatData(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& PathAndFileName
+, 
+const class FString& WebCheatURL
+, 
+const class FString& TimeNow
+, 
+const class FString& TimeStarted
+, 
+const class FString& TimeStopped
+, 
+const class FString& CheatName
+, 
+int32_t GameProcessId
+, 
+int32_t CheatProcessId
+, 
+const class FString& CheatParam1
+, 
+const class FString& CheatParam2
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1625,6 +2056,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1636,7 +2069,15 @@ namespace CG
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebCheatReporting::RemovePlayerGameBan(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID)
+	void UWebCheatReporting::RemovePlayerGameBan(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1659,6 +2100,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1675,7 +2118,25 @@ namespace CG
 	 * 		bool                                               bIncludeBans                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebCheatReporting::GetCheatingReports(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, int32_t TimeEnd, int32_t TimeBegin, const class FString& ReportidMin, bool bIncludeReports, bool bIncludeBans, const class FString& SteamID)
+	void UWebCheatReporting::GetCheatingReports(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t TimeEnd
+, 
+int32_t TimeBegin
+, 
+const class FString& ReportidMin
+, 
+bool bIncludeReports
+, 
+bool bIncludeBans
+, 
+const class FString& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1708,6 +2169,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1720,7 +2183,17 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SessionID                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebCheatReporting::EndSecureMultiplayerSession(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& SessionID)
+	void UWebCheatReporting::EndSecureMultiplayerSession(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& SessionID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1745,10 +2218,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWebCheatReporting.StaticClass
+	 * 		Name   -> PredefinedFunction UWebCheatReporting.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWebCheatReporting::StaticClass()
@@ -1758,6 +2233,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.WebCheatReporting");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1779,7 +2256,33 @@ namespace CG
 	 * 		int32_t                                            SuspicionStartTime                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Severity                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionReportPlayerCheating* USteamCoreWebAsyncActionReportPlayerCheating::ReportPlayerCheatingAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& SteamIdReporter, const class FString& AppData, bool bHeuristic, bool bDetection, bool bPlayerReport, bool bNoReportID, int32_t GameMode, int32_t SuspicionStartTime, int32_t Severity)
+	class USteamCoreWebAsyncActionReportPlayerCheating* USteamCoreWebAsyncActionReportPlayerCheating::ReportPlayerCheatingAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+const class FString& SteamIdReporter
+, 
+const class FString& AppData
+, 
+bool bHeuristic
+, 
+bool bDetection
+, 
+bool bPlayerReport
+, 
+bool bNoReportID
+, 
+int32_t GameMode
+, 
+int32_t SuspicionStartTime
+, 
+int32_t Severity
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1822,10 +2325,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionReportPlayerCheating.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionReportPlayerCheating.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionReportPlayerCheating::StaticClass()
@@ -1835,6 +2340,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionReportPlayerCheating");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1851,7 +2358,23 @@ namespace CG
 	 * 		int32_t                                            Duration                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bDelayBan                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionRequestPlayerGameBan* USteamCoreWebAsyncActionRequestPlayerGameBan::RequestPlayerGameBanAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& ReportID, const class FString& CheatDescription, int32_t Duration, bool bDelayBan)
+	class USteamCoreWebAsyncActionRequestPlayerGameBan* USteamCoreWebAsyncActionRequestPlayerGameBan::RequestPlayerGameBanAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& ReportID
+, 
+const class FString& CheatDescription
+, 
+int32_t Duration
+, 
+bool bDelayBan
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1884,10 +2407,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionRequestPlayerGameBan.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionRequestPlayerGameBan.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionRequestPlayerGameBan::StaticClass()
@@ -1897,6 +2422,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionRequestPlayerGameBan");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1909,7 +2436,15 @@ namespace CG
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionRemovePlayerGameBan* USteamCoreWebAsyncActionRemovePlayerGameBan::RemovePlayerGameBanAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID)
+	class USteamCoreWebAsyncActionRemovePlayerGameBan* USteamCoreWebAsyncActionRemovePlayerGameBan::RemovePlayerGameBanAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1934,10 +2469,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionRemovePlayerGameBan.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionRemovePlayerGameBan.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionRemovePlayerGameBan::StaticClass()
@@ -1947,6 +2484,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionRemovePlayerGameBan");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1964,7 +2503,25 @@ namespace CG
 	 * 		bool                                               bIncludeBans                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetCheatingReports* USteamCoreWebAsyncActionGetCheatingReports::GetCheatingReportsAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, int32_t TimeEnd, int32_t TimeBegin, const class FString& ReportidMin, bool bIncludeReports, bool bIncludeBans, const class FString& SteamID)
+	class USteamCoreWebAsyncActionGetCheatingReports* USteamCoreWebAsyncActionGetCheatingReports::GetCheatingReportsAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t TimeEnd
+, 
+int32_t TimeBegin
+, 
+const class FString& ReportidMin
+, 
+bool bIncludeReports
+, 
+bool bIncludeBans
+, 
+const class FString& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1999,10 +2556,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetCheatingReports.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetCheatingReports.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetCheatingReports::StaticClass()
@@ -2012,6 +2571,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetCheatingReports");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2034,7 +2595,35 @@ namespace CG
 	 * 		class FString                                      CheatParam1                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      CheatParam2                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionReportCheatData* USteamCoreWebAsyncActionReportCheatData::ReportCheatDataAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& PathAndFileName, const class FString& WebCheatURL, const class FString& TimeNow, const class FString& TimeStarted, const class FString& TimeStopped, const class FString& CheatName, int32_t GameProcessId, int32_t CheatProcessId, const class FString& CheatParam1, const class FString& CheatParam2)
+	class USteamCoreWebAsyncActionReportCheatData* USteamCoreWebAsyncActionReportCheatData::ReportCheatDataAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& PathAndFileName
+, 
+const class FString& WebCheatURL
+, 
+const class FString& TimeNow
+, 
+const class FString& TimeStarted
+, 
+const class FString& TimeStopped
+, 
+const class FString& CheatName
+, 
+int32_t GameProcessId
+, 
+int32_t CheatProcessId
+, 
+const class FString& CheatParam1
+, 
+const class FString& CheatParam2
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2079,10 +2668,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionReportCheatData.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionReportCheatData.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionReportCheatData::StaticClass()
@@ -2092,6 +2683,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionReportCheatData");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2105,7 +2698,17 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SessionID                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionRequestVacStatusForUser* USteamCoreWebAsyncActionRequestVacStatusForUser::RequestVacStatusForUserAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& SessionID)
+	class USteamCoreWebAsyncActionRequestVacStatusForUser* USteamCoreWebAsyncActionRequestVacStatusForUser::RequestVacStatusForUserAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& SessionID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2132,10 +2735,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionRequestVacStatusForUser.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionRequestVacStatusForUser.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionRequestVacStatusForUser::StaticClass()
@@ -2145,6 +2750,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionRequestVacStatusForUser");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2157,7 +2764,15 @@ namespace CG
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionStartSecureMultiplayerSession* USteamCoreWebAsyncActionStartSecureMultiplayerSession::StartSecureMultiplayerSessionAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID)
+	class USteamCoreWebAsyncActionStartSecureMultiplayerSession* USteamCoreWebAsyncActionStartSecureMultiplayerSession::StartSecureMultiplayerSessionAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2182,10 +2797,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionStartSecureMultiplayerSession.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionStartSecureMultiplayerSession.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionStartSecureMultiplayerSession::StaticClass()
@@ -2195,6 +2812,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionStartSecureMultiplayerSession");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2208,7 +2827,17 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SessionID                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionEndSecureMultiplayerSession* USteamCoreWebAsyncActionEndSecureMultiplayerSession::EndSecureMultiplayerSessionAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& SessionID)
+	class USteamCoreWebAsyncActionEndSecureMultiplayerSession* USteamCoreWebAsyncActionEndSecureMultiplayerSession::EndSecureMultiplayerSessionAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& SessionID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2235,10 +2864,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionEndSecureMultiplayerSession.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionEndSecureMultiplayerSession.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionEndSecureMultiplayerSession::StaticClass()
@@ -2248,6 +2879,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionEndSecureMultiplayerSession");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2263,7 +2896,21 @@ namespace CG
 	 * 		int32_t                                            FilterAppId                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            ECurrency                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebEconMarketService::GetPopular(const class FScriptDelegate& Callback, const class FString& Key, const class FString& Language, int32_t Rows, int32_t Start, int32_t FilterAppId, int32_t ECurrency)
+	void UWebEconMarketService::GetPopular(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& Language
+, 
+int32_t Rows
+, 
+int32_t Start
+, 
+int32_t FilterAppId
+, 
+int32_t ECurrency
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2292,6 +2939,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2302,7 +2951,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebEconMarketService::GetMarketEligibility(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID)
+	void UWebEconMarketService::GetMarketEligibility(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2323,6 +2978,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2334,7 +2991,15 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      ListingId                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebEconMarketService::GetAssetID(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& ListingId)
+	void UWebEconMarketService::GetAssetID(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& ListingId
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2357,6 +3022,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2369,7 +3036,17 @@ namespace CG
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bSynchronous                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebEconMarketService::CancelAppListingsForUser(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, bool bSynchronous)
+	void UWebEconMarketService::CancelAppListingsForUser(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+bool bSynchronous
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2394,10 +3071,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWebEconMarketService.StaticClass
+	 * 		Name   -> PredefinedFunction UWebEconMarketService.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWebEconMarketService::StaticClass()
@@ -2407,6 +3086,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.WebEconMarketService");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2418,7 +3099,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetMarketEligibility* USteamCoreWebAsyncActionGetMarketEligibility::GetMarketEligibilityAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID)
+	class USteamCoreWebAsyncActionGetMarketEligibility* USteamCoreWebAsyncActionGetMarketEligibility::GetMarketEligibilityAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2441,10 +3128,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetMarketEligibility.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetMarketEligibility.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetMarketEligibility::StaticClass()
@@ -2454,6 +3143,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetMarketEligibility");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2467,7 +3158,17 @@ namespace CG
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bSynchronous                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionCancelAppListingsForUser* USteamCoreWebAsyncActionCancelAppListingsForUser::CancelAppListingsForUserAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, bool bSynchronous)
+	class USteamCoreWebAsyncActionCancelAppListingsForUser* USteamCoreWebAsyncActionCancelAppListingsForUser::CancelAppListingsForUserAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+bool bSynchronous
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2494,10 +3195,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionCancelAppListingsForUser.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionCancelAppListingsForUser.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionCancelAppListingsForUser::StaticClass()
@@ -2507,6 +3210,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionCancelAppListingsForUser");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2519,7 +3224,15 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      ListingId                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetAssetID* USteamCoreWebAsyncActionGetAssetID::GetAssetIDAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& ListingId)
+	class USteamCoreWebAsyncActionGetAssetID* USteamCoreWebAsyncActionGetAssetID::GetAssetIDAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& ListingId
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2544,10 +3257,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetAssetID.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetAssetID.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetAssetID::StaticClass()
@@ -2557,6 +3272,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetAssetID");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2572,7 +3289,21 @@ namespace CG
 	 * 		int32_t                                            FilterAppId                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            ECurrency                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetPopular* USteamCoreWebAsyncActionGetPopular::GetPopularAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& Language, int32_t Rows, int32_t Start, int32_t FilterAppId, int32_t ECurrency)
+	class USteamCoreWebAsyncActionGetPopular* USteamCoreWebAsyncActionGetPopular::GetPopularAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& Language
+, 
+int32_t Rows
+, 
+int32_t Start
+, 
+int32_t FilterAppId
+, 
+int32_t ECurrency
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2603,10 +3334,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetPopular.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetPopular.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetPopular::StaticClass()
@@ -2616,6 +3349,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetPopular");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2627,7 +3362,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            TimeLastVisit                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebEconService::GetTradeOffersSummary(const class FScriptDelegate& Callback, const class FString& Key, int32_t TimeLastVisit)
+	void UWebEconService::GetTradeOffersSummary(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t TimeLastVisit
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2648,6 +3389,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2664,7 +3407,25 @@ namespace CG
 	 * 		bool                                               bHistoricalOnly                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            TimeHistoricalCutoff                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebEconService::GetTradeOffers(const class FScriptDelegate& Callback, const class FString& Key, bool bGetSentOffers, bool bGetReceivedOffers, bool bGetDescriptions, const class FString& Language, bool bActiveOnly, bool bHistoricalOnly, int32_t TimeHistoricalCutoff)
+	void UWebEconService::GetTradeOffers(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+bool bGetSentOffers
+, 
+bool bGetReceivedOffers
+, 
+bool bGetDescriptions
+, 
+const class FString& Language
+, 
+bool bActiveOnly
+, 
+bool bHistoricalOnly
+, 
+int32_t TimeHistoricalCutoff
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2697,6 +3458,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2708,7 +3471,15 @@ namespace CG
 	 * 		class FString                                      TradeOfferId                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Language                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebEconService::GetTradeOffer(const class FScriptDelegate& Callback, const class FString& Key, const class FString& TradeOfferId, const class FString& Language)
+	void UWebEconService::GetTradeOffer(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& TradeOfferId
+, 
+const class FString& Language
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2731,6 +3502,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2748,7 +3521,27 @@ namespace CG
 	 * 		bool                                               bIncludeFailed                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bIncludeTotal                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebEconService::GetTradeHistory(const class FScriptDelegate& Callback, const class FString& Key, int32_t MaxTrades, int32_t StartAfterTime, const class FString& StartAfterTradeId, bool bNavigatingBack, bool bGetDescriptions, const class FString& Language, bool bIncludeFailed, bool bIncludeTotal)
+	void UWebEconService::GetTradeHistory(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t MaxTrades
+, 
+int32_t StartAfterTime
+, 
+const class FString& StartAfterTradeId
+, 
+bool bNavigatingBack
+, 
+bool bGetDescriptions
+, 
+const class FString& Language
+, 
+bool bIncludeFailed
+, 
+bool bIncludeTotal
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2783,6 +3576,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2795,7 +3590,17 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      ContextId                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebEconService::FlushInventoryCache(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& ContextId)
+	void UWebEconService::FlushInventoryCache(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& ContextId
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2820,6 +3625,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2830,7 +3637,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebEconService::FlushContextCache(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID)
+	void UWebEconService::FlushContextCache(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2851,6 +3664,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2861,7 +3676,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebEconService::FlushAssetAppearanceCache(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID)
+	void UWebEconService::FlushAssetAppearanceCache(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2882,6 +3703,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2892,7 +3715,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      TradeOfferId                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebEconService::DeclineTradeOffer(const class FScriptDelegate& Callback, const class FString& Key, const class FString& TradeOfferId)
+	void UWebEconService::DeclineTradeOffer(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& TradeOfferId
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2913,6 +3742,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2923,7 +3754,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      TradeOfferId                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebEconService::CancelTradeOffer(const class FScriptDelegate& Callback, const class FString& Key, const class FString& TradeOfferId)
+	void UWebEconService::CancelTradeOffer(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& TradeOfferId
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2944,10 +3781,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWebEconService.StaticClass
+	 * 		Name   -> PredefinedFunction UWebEconService.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWebEconService::StaticClass()
@@ -2957,6 +3796,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.WebEconService");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2975,7 +3816,27 @@ namespace CG
 	 * 		bool                                               bIncludeFailed                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bIncludeTotal                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetTradeHistory* USteamCoreWebAsyncActionGetTradeHistory::GetTradeHistoryAsync(class UObject* WorldContextObject, const class FString& Key, int32_t MaxTrades, int32_t StartAfterTime, const class FString& StartAfterTradeId, bool bNavigatingBack, bool bGetDescriptions, const class FString& Language, bool bIncludeFailed, bool bIncludeTotal)
+	class USteamCoreWebAsyncActionGetTradeHistory* USteamCoreWebAsyncActionGetTradeHistory::GetTradeHistoryAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t MaxTrades
+, 
+int32_t StartAfterTime
+, 
+const class FString& StartAfterTradeId
+, 
+bool bNavigatingBack
+, 
+bool bGetDescriptions
+, 
+const class FString& Language
+, 
+bool bIncludeFailed
+, 
+bool bIncludeTotal
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3012,10 +3873,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetTradeHistory.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetTradeHistory.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetTradeHistory::StaticClass()
@@ -3025,6 +3888,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetTradeHistory");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3038,7 +3903,17 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      ContextId                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionFlushInventoryCache* USteamCoreWebAsyncActionFlushInventoryCache::FlushInventoryCacheAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& ContextId)
+	class USteamCoreWebAsyncActionFlushInventoryCache* USteamCoreWebAsyncActionFlushInventoryCache::FlushInventoryCacheAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& ContextId
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3065,10 +3940,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionFlushInventoryCache.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionFlushInventoryCache.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionFlushInventoryCache::StaticClass()
@@ -3078,6 +3955,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionFlushInventoryCache");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3089,7 +3968,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionFlushAssetAppearanceCache* USteamCoreWebAsyncActionFlushAssetAppearanceCache::FlushAssetAppearanceCacheAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID)
+	class USteamCoreWebAsyncActionFlushAssetAppearanceCache* USteamCoreWebAsyncActionFlushAssetAppearanceCache::FlushAssetAppearanceCacheAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3112,10 +3997,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionFlushAssetAppearanceCache.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionFlushAssetAppearanceCache.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionFlushAssetAppearanceCache::StaticClass()
@@ -3125,6 +4012,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionFlushAssetAppearanceCache");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3136,7 +4025,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionFlushContextCache* USteamCoreWebAsyncActionFlushContextCache::FlushContextCacheAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID)
+	class USteamCoreWebAsyncActionFlushContextCache* USteamCoreWebAsyncActionFlushContextCache::FlushContextCacheAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3159,10 +4054,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionFlushContextCache.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionFlushContextCache.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionFlushContextCache::StaticClass()
@@ -3172,6 +4069,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionFlushContextCache");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3189,7 +4088,25 @@ namespace CG
 	 * 		bool                                               bHistoricalOnly                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            TimeHistoricalCutoff                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetTradeOffers* USteamCoreWebAsyncActionGetTradeOffers::GetTradeOffersAsync(class UObject* WorldContextObject, const class FString& Key, bool bGetSentOffers, bool bGetReceivedOffers, bool bGetDescriptions, const class FString& Language, bool bActiveOnly, bool bHistoricalOnly, int32_t TimeHistoricalCutoff)
+	class USteamCoreWebAsyncActionGetTradeOffers* USteamCoreWebAsyncActionGetTradeOffers::GetTradeOffersAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+bool bGetSentOffers
+, 
+bool bGetReceivedOffers
+, 
+bool bGetDescriptions
+, 
+const class FString& Language
+, 
+bool bActiveOnly
+, 
+bool bHistoricalOnly
+, 
+int32_t TimeHistoricalCutoff
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3224,10 +4141,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetTradeOffers.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetTradeOffers.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetTradeOffers::StaticClass()
@@ -3237,6 +4156,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetTradeOffers");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3249,7 +4170,15 @@ namespace CG
 	 * 		class FString                                      TradeOfferId                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Language                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetTradeOffer* USteamCoreWebAsyncActionGetTradeOffer::GetTradeOfferAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& TradeOfferId, const class FString& Language)
+	class USteamCoreWebAsyncActionGetTradeOffer* USteamCoreWebAsyncActionGetTradeOffer::GetTradeOfferAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& TradeOfferId
+, 
+const class FString& Language
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3274,10 +4203,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetTradeOffer.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetTradeOffer.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetTradeOffer::StaticClass()
@@ -3287,6 +4218,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetTradeOffer");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3298,7 +4231,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            TimeLastVisit                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetTradeOffersSummary* USteamCoreWebAsyncActionGetTradeOffersSummary::GetTradeOffersSummaryAsync(class UObject* WorldContextObject, const class FString& Key, int32_t TimeLastVisit)
+	class USteamCoreWebAsyncActionGetTradeOffersSummary* USteamCoreWebAsyncActionGetTradeOffersSummary::GetTradeOffersSummaryAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t TimeLastVisit
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3321,10 +4260,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetTradeOffersSummary.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetTradeOffersSummary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetTradeOffersSummary::StaticClass()
@@ -3334,6 +4275,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetTradeOffersSummary");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3345,7 +4288,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      TradeOfferId                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionDeclineTradeOffer* USteamCoreWebAsyncActionDeclineTradeOffer::DeclineTradeOfferAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& TradeOfferId)
+	class USteamCoreWebAsyncActionDeclineTradeOffer* USteamCoreWebAsyncActionDeclineTradeOffer::DeclineTradeOfferAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& TradeOfferId
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3368,10 +4317,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionDeclineTradeOffer.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionDeclineTradeOffer.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionDeclineTradeOffer::StaticClass()
@@ -3381,6 +4332,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionDeclineTradeOffer");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3392,7 +4345,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      TradeOfferId                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionCancelTradeOffer* USteamCoreWebAsyncActionCancelTradeOffer::CancelTradeOfferAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& TradeOfferId)
+	class USteamCoreWebAsyncActionCancelTradeOffer* USteamCoreWebAsyncActionCancelTradeOffer::CancelTradeOfferAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& TradeOfferId
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3415,10 +4374,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionCancelTradeOffer.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionCancelTradeOffer.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionCancelTradeOffer::StaticClass()
@@ -3428,6 +4389,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionCancelTradeOffer");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3450,6 +4413,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3462,7 +4427,17 @@ namespace CG
 	 * 		class FString                                      AssetId                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      ContextId                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebGameInventory::SupportGetAssetHistory(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& AssetId, const class FString& ContextId)
+	void UWebGameInventory::SupportGetAssetHistory(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& AssetId
+, 
+const class FString& ContextId
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3487,6 +4462,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3500,7 +4477,19 @@ namespace CG
 	 * 		class FString                                      ContextId                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            ActorId                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebGameInventory::HistoryExecuteCommands(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& ContextId, int32_t ActorId)
+	void UWebGameInventory::HistoryExecuteCommands(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+const class FString& ContextId
+, 
+int32_t ActorId
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3527,6 +4516,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3541,7 +4532,21 @@ namespace CG
 	 * 		int32_t                                            StartTime                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            EndTime                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebGameInventory::GetUserHistory(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& ContextId, int32_t StartTime, int32_t EndTime)
+	void UWebGameInventory::GetUserHistory(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+const class FString& ContextId
+, 
+int32_t StartTime
+, 
+int32_t EndTime
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3570,6 +4575,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3584,7 +4591,21 @@ namespace CG
 	 * 		class FString                                      ContextId                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Arguments                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebGameInventory::GetHistoryCommandDetails(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& Command, const class FString& ContextId, const class FString& Arguments)
+	void UWebGameInventory::GetHistoryCommandDetails(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+const class FString& Command
+, 
+const class FString& ContextId
+, 
+const class FString& Arguments
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3613,10 +4634,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWebGameInventory.StaticClass
+	 * 		Name   -> PredefinedFunction UWebGameInventory.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWebGameInventory::StaticClass()
@@ -3626,6 +4649,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.WebGameInventory");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3641,7 +4666,21 @@ namespace CG
 	 * 		class FString                                      ContextId                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Arguments                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetHistoryCommandDetails* USteamCoreWebAsyncActionGetHistoryCommandDetails::GetHistoryCommandDetailsAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& Command, const class FString& ContextId, const class FString& Arguments)
+	class USteamCoreWebAsyncActionGetHistoryCommandDetails* USteamCoreWebAsyncActionGetHistoryCommandDetails::GetHistoryCommandDetailsAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+const class FString& Command
+, 
+const class FString& ContextId
+, 
+const class FString& Arguments
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3672,10 +4711,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetHistoryCommandDetails.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetHistoryCommandDetails.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetHistoryCommandDetails::StaticClass()
@@ -3685,6 +4726,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetHistoryCommandDetails");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3700,7 +4743,21 @@ namespace CG
 	 * 		int32_t                                            StartTime                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            EndTime                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetUserHistory* USteamCoreWebAsyncActionGetUserHistory::GetUserHistoryAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& ContextId, int32_t StartTime, int32_t EndTime)
+	class USteamCoreWebAsyncActionGetUserHistory* USteamCoreWebAsyncActionGetUserHistory::GetUserHistoryAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+const class FString& ContextId
+, 
+int32_t StartTime
+, 
+int32_t EndTime
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3731,10 +4788,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetUserHistory.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetUserHistory.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetUserHistory::StaticClass()
@@ -3744,6 +4803,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetUserHistory");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3758,7 +4819,19 @@ namespace CG
 	 * 		class FString                                      ContextId                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            ActorId                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionHistoryExecuteCommand* USteamCoreWebAsyncActionHistoryExecuteCommand::HistoryExecuteCommandAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& ContextId, int32_t ActorId)
+	class USteamCoreWebAsyncActionHistoryExecuteCommand* USteamCoreWebAsyncActionHistoryExecuteCommand::HistoryExecuteCommandAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+const class FString& ContextId
+, 
+int32_t ActorId
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3787,10 +4860,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionHistoryExecuteCommand.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionHistoryExecuteCommand.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionHistoryExecuteCommand::StaticClass()
@@ -3800,6 +4875,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionHistoryExecuteCommand");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3813,7 +4890,17 @@ namespace CG
 	 * 		class FString                                      AssetId                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      ContextId                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionSupportGetAssetHistory* USteamCoreWebAsyncActionSupportGetAssetHistory::SupportGetAssetHistoryAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& AssetId, const class FString& ContextId)
+	class USteamCoreWebAsyncActionSupportGetAssetHistory* USteamCoreWebAsyncActionSupportGetAssetHistory::SupportGetAssetHistoryAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& AssetId
+, 
+const class FString& ContextId
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3840,10 +4927,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionSupportGetAssetHistory.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionSupportGetAssetHistory.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionSupportGetAssetHistory::StaticClass()
@@ -3853,6 +4942,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionSupportGetAssetHistory");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3868,7 +4959,21 @@ namespace CG
 	 * 		class FString                                      Users                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebGameNotificationsService::UpdateSession(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SessionID, int32_t AppID, const class FString& Title, const class FString& Users, const class FString& SteamID)
+	void UWebGameNotificationsService::UpdateSession(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SessionID
+, 
+int32_t AppID
+, 
+const class FString& Title
+, 
+const class FString& Users
+, 
+const class FString& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3897,6 +5002,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3908,7 +5015,15 @@ namespace CG
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebGameNotificationsService::RequestNotifications(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID)
+	void UWebGameNotificationsService::RequestNotifications(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3931,6 +5046,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3943,7 +5060,17 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Language                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebGameNotificationsService::GetSessionDetailsForApp(const class FScriptDelegate& Callback, const class FString& Key, const class FString& Sessions, int32_t AppID, const class FString& Language)
+	void UWebGameNotificationsService::GetSessionDetailsForApp(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& Sessions
+, 
+int32_t AppID
+, 
+const class FString& Language
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3968,6 +5095,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3982,7 +5111,21 @@ namespace CG
 	 * 		bool                                               bIncludeAuthUserMessage                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Language                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebGameNotificationsService::EnumerateSessionsForApp(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, bool bIncludeAllUserMessages, bool bIncludeAuthUserMessage, const class FString& Language)
+	void UWebGameNotificationsService::EnumerateSessionsForApp(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+bool bIncludeAllUserMessages
+, 
+bool bIncludeAuthUserMessage
+, 
+const class FString& Language
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4011,6 +5154,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4022,7 +5167,15 @@ namespace CG
 	 * 		class FString                                      SessionID                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebGameNotificationsService::DeleteSessionBatch(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SessionID, int32_t AppID)
+	void UWebGameNotificationsService::DeleteSessionBatch(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SessionID
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4045,6 +5198,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4057,7 +5212,17 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebGameNotificationsService::DeleteSession(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SessionID, int32_t AppID, const class FString& SteamID)
+	void UWebGameNotificationsService::DeleteSession(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SessionID
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4082,6 +5247,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4096,7 +5263,21 @@ namespace CG
 	 * 		class FString                                      Users                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebGameNotificationsService::CreateSession(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& Context, const class FString& Title, const class FString& Users, const class FString& SteamID)
+	void UWebGameNotificationsService::CreateSession(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& Context
+, 
+const class FString& Title
+, 
+const class FString& Users
+, 
+const class FString& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4125,10 +5306,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWebGameNotificationsService.StaticClass
+	 * 		Name   -> PredefinedFunction UWebGameNotificationsService.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWebGameNotificationsService::StaticClass()
@@ -4138,6 +5321,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.WebGameNotificationsService");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4153,7 +5338,21 @@ namespace CG
 	 * 		class FString                                      Users                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionCreateSession* USteamCoreWebAsyncActionCreateSession::CreateSessionAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& Context, const class FString& Title, const class FString& Users, const class FString& SteamID)
+	class USteamCoreWebAsyncActionCreateSession* USteamCoreWebAsyncActionCreateSession::CreateSessionAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& Context
+, 
+const class FString& Title
+, 
+const class FString& Users
+, 
+const class FString& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4184,10 +5383,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionCreateSession.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionCreateSession.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionCreateSession::StaticClass()
@@ -4197,6 +5398,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionCreateSession");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4212,7 +5415,21 @@ namespace CG
 	 * 		class FString                                      Users                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionUpdateSession* USteamCoreWebAsyncActionUpdateSession::UpdateSessionAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SessionID, int32_t AppID, const class FString& Title, const class FString& Users, const class FString& SteamID)
+	class USteamCoreWebAsyncActionUpdateSession* USteamCoreWebAsyncActionUpdateSession::UpdateSessionAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SessionID
+, 
+int32_t AppID
+, 
+const class FString& Title
+, 
+const class FString& Users
+, 
+const class FString& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4243,10 +5460,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionUpdateSession.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionUpdateSession.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionUpdateSession::StaticClass()
@@ -4256,6 +5475,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionUpdateSession");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4271,7 +5492,21 @@ namespace CG
 	 * 		bool                                               bIncludeAuthUserMessage                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Language                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionEnumerateSessionsForApp* USteamCoreWebAsyncActionEnumerateSessionsForApp::EnumerateSessionsForAppAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, bool bIncludeAllUserMessages, bool bIncludeAuthUserMessage, const class FString& Language)
+	class USteamCoreWebAsyncActionEnumerateSessionsForApp* USteamCoreWebAsyncActionEnumerateSessionsForApp::EnumerateSessionsForAppAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+bool bIncludeAllUserMessages
+, 
+bool bIncludeAuthUserMessage
+, 
+const class FString& Language
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4302,10 +5537,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionEnumerateSessionsForApp.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionEnumerateSessionsForApp.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionEnumerateSessionsForApp::StaticClass()
@@ -4315,6 +5552,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionEnumerateSessionsForApp");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4328,7 +5567,17 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Language                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetSessionDetailsForApp* USteamCoreWebAsyncActionGetSessionDetailsForApp::GetSessionDetailsForAppAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& Sessions, int32_t AppID, const class FString& Language)
+	class USteamCoreWebAsyncActionGetSessionDetailsForApp* USteamCoreWebAsyncActionGetSessionDetailsForApp::GetSessionDetailsForAppAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& Sessions
+, 
+int32_t AppID
+, 
+const class FString& Language
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4355,10 +5604,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetSessionDetailsForApp.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetSessionDetailsForApp.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetSessionDetailsForApp::StaticClass()
@@ -4368,6 +5619,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetSessionDetailsForApp");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4380,7 +5633,15 @@ namespace CG
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionRequestNotifications* USteamCoreWebAsyncActionRequestNotifications::RequestNotificationsAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID)
+	class USteamCoreWebAsyncActionRequestNotifications* USteamCoreWebAsyncActionRequestNotifications::RequestNotificationsAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4405,10 +5666,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionRequestNotifications.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionRequestNotifications.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionRequestNotifications::StaticClass()
@@ -4418,6 +5681,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionRequestNotifications");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4431,7 +5696,17 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionDeleteSession* USteamCoreWebAsyncActionDeleteSession::DeleteSessionAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SessionID, int32_t AppID, const class FString& SteamID)
+	class USteamCoreWebAsyncActionDeleteSession* USteamCoreWebAsyncActionDeleteSession::DeleteSessionAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SessionID
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4458,10 +5733,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionDeleteSession.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionDeleteSession.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionDeleteSession::StaticClass()
@@ -4471,6 +5748,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionDeleteSession");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4483,7 +5762,15 @@ namespace CG
 	 * 		class FString                                      SessionID                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionDeleteSessionBatch* USteamCoreWebAsyncActionDeleteSessionBatch::DeleteSessionBatchAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SessionID, int32_t AppID)
+	class USteamCoreWebAsyncActionDeleteSessionBatch* USteamCoreWebAsyncActionDeleteSessionBatch::DeleteSessionBatchAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SessionID
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4508,10 +5795,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionDeleteSessionBatch.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionDeleteSessionBatch.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionDeleteSessionBatch::StaticClass()
@@ -4521,6 +5810,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionDeleteSessionBatch");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4533,7 +5824,15 @@ namespace CG
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Memo                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebGameServersService::SetMemo(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, const class FString& Memo)
+	void UWebGameServersService::SetMemo(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+const class FString& Memo
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4556,6 +5855,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4568,7 +5869,17 @@ namespace CG
 	 * 		bool                                               bBanned                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            banSeconds                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebGameServersService::SetBanStatus(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, bool bBanned, int32_t banSeconds)
+	void UWebGameServersService::SetBanStatus(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+bool bBanned
+, 
+int32_t banSeconds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4593,6 +5904,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4603,7 +5916,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebGameServersService::ResetLoginToken(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID)
+	void UWebGameServersService::ResetLoginToken(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4624,6 +5943,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4634,7 +5955,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      LoginToken                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebGameServersService::QueryLoginToken(const class FScriptDelegate& Callback, const class FString& Key, const class FString& LoginToken)
+	void UWebGameServersService::QueryLoginToken(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& LoginToken
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4655,6 +5982,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4665,7 +5994,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      ServerIP                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebGameServersService::GetServerSteamIDsByIP(const class FScriptDelegate& Callback, const class FString& Key, const class FString& ServerIP)
+	void UWebGameServersService::GetServerSteamIDsByIP(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& ServerIP
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4686,6 +6021,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4696,7 +6033,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      ServerSteamId                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebGameServersService::GetServerIPsBySteamID(const class FScriptDelegate& Callback, const class FString& Key, const class FString& ServerSteamId)
+	void UWebGameServersService::GetServerIPsBySteamID(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& ServerSteamId
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4717,6 +6060,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4727,7 +6072,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebGameServersService::GetAccountPublicInfo(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID)
+	void UWebGameServersService::GetAccountPublicInfo(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4748,6 +6099,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4757,7 +6110,11 @@ namespace CG
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebGameServersService::GetAccountList(const class FScriptDelegate& Callback, const class FString& Key)
+	void UWebGameServersService::GetAccountList(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4776,6 +6133,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4786,7 +6145,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebGameServersService::DeleteAccount(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID)
+	void UWebGameServersService::DeleteAccount(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4807,6 +6172,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4818,7 +6185,15 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Memo                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebGameServersService::CreateAccount(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& Memo)
+	void UWebGameServersService::CreateAccount(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& Memo
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4841,10 +6216,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWebGameServersService.StaticClass
+	 * 		Name   -> PredefinedFunction UWebGameServersService.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWebGameServersService::StaticClass()
@@ -4854,6 +6231,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.WebGameServersService");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4869,7 +6248,21 @@ namespace CG
 	 * 		int32_t                                            Timestamp                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Updates                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebInventoryService::ModifyItems(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& InputJson, const class FString& SteamID, int32_t Timestamp, const class FString& Updates)
+	void UWebInventoryService::ModifyItems(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& InputJson
+, 
+const class FString& SteamID
+, 
+int32_t Timestamp
+, 
+const class FString& Updates
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4898,6 +6291,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4911,7 +6306,19 @@ namespace CG
 	 * 		TArray<int32_t>                                    ItemdefIDs                                                 (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bForce                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebInventoryService::GetQuantity(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, TArray<int32_t> ItemdefIDs, bool bForce)
+	void UWebInventoryService::GetQuantity(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+TArray<int32_t> ItemdefIDs
+, 
+bool bForce
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4938,6 +6345,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4948,7 +6357,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Currency                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebInventoryService::GetPriceSheet(const class FScriptDelegate& Callback, const class FString& Key, int32_t Currency)
+	void UWebInventoryService::GetPriceSheet(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t Currency
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4969,6 +6384,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4983,7 +6400,21 @@ namespace CG
 	 * 		TArray<int32_t>                                    WorkshopIDs                                                (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            CacheMaxAgeSeconds                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebInventoryService::GetItemDefs(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& ModifiedSince, TArray<int32_t> ItemdefIDs, TArray<int32_t> WorkshopIDs, int32_t CacheMaxAgeSeconds)
+	void UWebInventoryService::GetItemDefs(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& ModifiedSince
+, 
+TArray<int32_t> ItemdefIDs
+, 
+TArray<int32_t> WorkshopIDs
+, 
+int32_t CacheMaxAgeSeconds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5012,6 +6443,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5023,7 +6456,15 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebInventoryService::GetInventory(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID)
+	void UWebInventoryService::GetInventory(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5046,6 +6487,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5060,7 +6503,21 @@ namespace CG
 	 * 		TArray<int32_t>                                    MaterialsQuantity                                          (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		class FString                                      OutputItemdefId                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebInventoryService::ExchangeItem(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, TArray<int32_t> MaterialsItemID, TArray<int32_t> MaterialsQuantity, const class FString& OutputItemdefId)
+	void UWebInventoryService::ExchangeItem(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+TArray<int32_t> MaterialsItemID
+, 
+TArray<int32_t> MaterialsQuantity
+, 
+const class FString& OutputItemdefId
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5089,6 +6546,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5103,7 +6562,21 @@ namespace CG
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      RequestID                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebInventoryService::ConsumeItem(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& ItemId, const class FString& Quantity, const class FString& SteamID, const class FString& RequestID)
+	void UWebInventoryService::ConsumeItem(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& ItemId
+, 
+const class FString& Quantity
+, 
+const class FString& SteamID
+, 
+const class FString& RequestID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5132,6 +6605,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5145,7 +6620,19 @@ namespace CG
 	 * 		TArray<int32_t>                                    ItemdefIDs                                                 (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bForce                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebInventoryService::Consolidate(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, TArray<int32_t> ItemdefIDs, bool bForce)
+	void UWebInventoryService::Consolidate(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+TArray<int32_t> ItemdefIDs
+, 
+bool bForce
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5172,6 +6659,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5187,7 +6676,23 @@ namespace CG
 	 * 		bool                                               bNotify                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      RequestID                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebInventoryService::AddPromoItem(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, int32_t ItemdefId, const class FString& ItemPropsJson, const class FString& SteamID, bool bNotify, const class FString& RequestID)
+	void UWebInventoryService::AddPromoItem(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t ItemdefId
+, 
+const class FString& ItemPropsJson
+, 
+const class FString& SteamID
+, 
+bool bNotify
+, 
+const class FString& RequestID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5218,6 +6723,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5234,7 +6741,25 @@ namespace CG
 	 * 		class FString                                      RequestID                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bTradeRestriction                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebInventoryService::AddItem(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, TArray<int32_t> ItemdefId, const class FString& ItemPropsJson, const class FString& SteamID, bool bNotify, const class FString& RequestID, bool bTradeRestriction)
+	void UWebInventoryService::AddItem(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+TArray<int32_t> ItemdefId
+, 
+const class FString& ItemPropsJson
+, 
+const class FString& SteamID
+, 
+bool bNotify
+, 
+const class FString& RequestID
+, 
+bool bTradeRestriction
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5267,10 +6792,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWebInventoryService.StaticClass
+	 * 		Name   -> PredefinedFunction UWebInventoryService.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWebInventoryService::StaticClass()
@@ -5280,6 +6807,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.WebInventoryService");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5297,7 +6826,25 @@ namespace CG
 	 * 		class FString                                      RequestID                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bTradeRestriction                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionAddItem* USteamCoreWebAsyncActionAddItem::AddItemAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, TArray<int32_t> ItemdefId, const class FString& ItemPropsJson, const class FString& SteamID, bool bNotify, const class FString& RequestID, bool bTradeRestriction)
+	class USteamCoreWebAsyncActionAddItem* USteamCoreWebAsyncActionAddItem::AddItemAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+TArray<int32_t> ItemdefId
+, 
+const class FString& ItemPropsJson
+, 
+const class FString& SteamID
+, 
+bool bNotify
+, 
+const class FString& RequestID
+, 
+bool bTradeRestriction
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5332,10 +6879,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionAddItem.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionAddItem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionAddItem::StaticClass()
@@ -5345,6 +6894,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionAddItem");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5361,7 +6912,23 @@ namespace CG
 	 * 		bool                                               bNotify                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      RequestID                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionAddPromoItem* USteamCoreWebAsyncActionAddPromoItem::AddPromoItemAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, int32_t ItemdefId, const class FString& ItemPropsJson, const class FString& SteamID, bool bNotify, const class FString& RequestID)
+	class USteamCoreWebAsyncActionAddPromoItem* USteamCoreWebAsyncActionAddPromoItem::AddPromoItemAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t ItemdefId
+, 
+const class FString& ItemPropsJson
+, 
+const class FString& SteamID
+, 
+bool bNotify
+, 
+const class FString& RequestID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5394,10 +6961,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionAddPromoItem.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionAddPromoItem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionAddPromoItem::StaticClass()
@@ -5407,6 +6976,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionAddPromoItem");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5422,7 +6993,21 @@ namespace CG
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      RequestID                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionConsumeItem* USteamCoreWebAsyncActionConsumeItem::ConsumeItemAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& ItemId, const class FString& Quantity, const class FString& SteamID, const class FString& RequestID)
+	class USteamCoreWebAsyncActionConsumeItem* USteamCoreWebAsyncActionConsumeItem::ConsumeItemAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& ItemId
+, 
+const class FString& Quantity
+, 
+const class FString& SteamID
+, 
+const class FString& RequestID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5453,10 +7038,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionConsumeItem.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionConsumeItem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionConsumeItem::StaticClass()
@@ -5466,6 +7053,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionConsumeItem");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5481,7 +7070,21 @@ namespace CG
 	 * 		TArray<int32_t>                                    MaterialsQuantity                                          (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		class FString                                      OutputItemdefId                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionExchangeItem* USteamCoreWebAsyncActionExchangeItem::ExchangeItemAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, TArray<int32_t> MaterialsItemID, TArray<int32_t> MaterialsQuantity, const class FString& OutputItemdefId)
+	class USteamCoreWebAsyncActionExchangeItem* USteamCoreWebAsyncActionExchangeItem::ExchangeItemAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+TArray<int32_t> MaterialsItemID
+, 
+TArray<int32_t> MaterialsQuantity
+, 
+const class FString& OutputItemdefId
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5512,10 +7115,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionExchangeItem.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionExchangeItem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionExchangeItem::StaticClass()
@@ -5525,6 +7130,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionExchangeItem");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5537,7 +7144,15 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetInventory* USteamCoreWebAsyncActionGetInventory::GetInventoryAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID)
+	class USteamCoreWebAsyncActionGetInventory* USteamCoreWebAsyncActionGetInventory::GetInventoryAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5562,10 +7177,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetInventory.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetInventory.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetInventory::StaticClass()
@@ -5575,6 +7192,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetInventory");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5590,7 +7209,21 @@ namespace CG
 	 * 		TArray<int32_t>                                    WorkshopIDs                                                (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            CacheMaxAgeSeconds                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetItemDefs* USteamCoreWebAsyncActionGetItemDefs::GetItemDefsAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& ModifiedSince, TArray<int32_t> ItemdefIDs, TArray<int32_t> WorkshopIDs, int32_t CacheMaxAgeSeconds)
+	class USteamCoreWebAsyncActionGetItemDefs* USteamCoreWebAsyncActionGetItemDefs::GetItemDefsAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& ModifiedSince
+, 
+TArray<int32_t> ItemdefIDs
+, 
+TArray<int32_t> WorkshopIDs
+, 
+int32_t CacheMaxAgeSeconds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5621,10 +7254,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetItemDefs.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetItemDefs.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetItemDefs::StaticClass()
@@ -5634,6 +7269,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetItemDefs");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5645,7 +7282,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Currency                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetPriceSheet* USteamCoreWebAsyncActionGetPriceSheet::GetPriceSheetAsync(class UObject* WorldContextObject, const class FString& Key, int32_t Currency)
+	class USteamCoreWebAsyncActionGetPriceSheet* USteamCoreWebAsyncActionGetPriceSheet::GetPriceSheetAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t Currency
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5668,10 +7311,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetPriceSheet.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetPriceSheet.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetPriceSheet::StaticClass()
@@ -5681,6 +7326,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetPriceSheet");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5695,7 +7342,19 @@ namespace CG
 	 * 		TArray<int32_t>                                    ItemdefIDs                                                 (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bForce                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionConsolidate* USteamCoreWebAsyncActionConsolidate::ConsolidateAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, TArray<int32_t> ItemdefIDs, bool bForce)
+	class USteamCoreWebAsyncActionConsolidate* USteamCoreWebAsyncActionConsolidate::ConsolidateAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+TArray<int32_t> ItemdefIDs
+, 
+bool bForce
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5724,10 +7383,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionConsolidate.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionConsolidate.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionConsolidate::StaticClass()
@@ -5737,6 +7398,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionConsolidate");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5751,7 +7414,19 @@ namespace CG
 	 * 		TArray<int32_t>                                    ItemdefIDs                                                 (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bForce                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetQuantity* USteamCoreWebAsyncActionGetQuantity::GetQuantityAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, TArray<int32_t> ItemdefIDs, bool bForce)
+	class USteamCoreWebAsyncActionGetQuantity* USteamCoreWebAsyncActionGetQuantity::GetQuantityAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+TArray<int32_t> ItemdefIDs
+, 
+bool bForce
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5780,10 +7455,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetQuantity.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetQuantity.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetQuantity::StaticClass()
@@ -5793,6 +7470,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetQuantity");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5808,7 +7487,21 @@ namespace CG
 	 * 		int32_t                                            Timestamp                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Updates                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionModifyItems* USteamCoreWebAsyncActionModifyItems::ModifyItemsAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& InputJson, const class FString& SteamID, int32_t Timestamp, const class FString& Updates)
+	class USteamCoreWebAsyncActionModifyItems* USteamCoreWebAsyncActionModifyItems::ModifyItemsAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& InputJson
+, 
+const class FString& SteamID
+, 
+int32_t Timestamp
+, 
+const class FString& Updates
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5839,10 +7532,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionModifyItems.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionModifyItems.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionModifyItems::StaticClass()
@@ -5852,6 +7547,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionModifyItems");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5868,7 +7565,23 @@ namespace CG
 	 * 		TArray<unsigned char>                              Details                                                    (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		class FString                                      ScoreMethod                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebLeaderboards::SetLeaderboardScore(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, int32_t LeaderbordId, const class FString& SteamID, int32_t Score, TArray<unsigned char> Details, const class FString& ScoreMethod)
+	void UWebLeaderboards::SetLeaderboardScore(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t LeaderbordId
+, 
+const class FString& SteamID
+, 
+int32_t Score
+, 
+TArray<unsigned char> Details
+, 
+const class FString& ScoreMethod
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5899,6 +7612,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5910,7 +7625,15 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            LeaderboardId                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebLeaderboards::ResetLeaderboard(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, int32_t LeaderboardId)
+	void UWebLeaderboards::ResetLeaderboard(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t LeaderboardId
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5933,6 +7656,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5943,7 +7668,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebLeaderboards::GetLeaderboardsForGame(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID)
+	void UWebLeaderboards::GetLeaderboardsForGame(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5964,6 +7695,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5979,7 +7712,23 @@ namespace CG
 	 * 		int32_t                                            DataRequest                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebLeaderboards::GetLeaderboardEntries(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, int32_t RangeStart, int32_t RangeEnd, int32_t LeaderboardId, int32_t DataRequest, const class FString& SteamID)
+	void UWebLeaderboards::GetLeaderboardEntries(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t RangeStart
+, 
+int32_t RangeEnd
+, 
+int32_t LeaderboardId
+, 
+int32_t DataRequest
+, 
+const class FString& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6010,6 +7759,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6026,7 +7777,25 @@ namespace CG
 	 * 		bool                                               bOnlyTrustedWrites                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bOnlyFriendsReads                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebLeaderboards::FindOrCreateLeaderboard(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& Name, const class FString& SortMethod, const class FString& DisplayType, bool bCreateIfNotFound, bool bOnlyTrustedWrites, bool bOnlyFriendsReads)
+	void UWebLeaderboards::FindOrCreateLeaderboard(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& Name
+, 
+const class FString& SortMethod
+, 
+const class FString& DisplayType
+, 
+bool bCreateIfNotFound
+, 
+bool bOnlyTrustedWrites
+, 
+bool bOnlyFriendsReads
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6059,6 +7828,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6070,7 +7841,15 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Name                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebLeaderboards::DeleteLeaderboard(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& Name)
+	void UWebLeaderboards::DeleteLeaderboard(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& Name
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6093,10 +7872,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWebLeaderboards.StaticClass
+	 * 		Name   -> PredefinedFunction UWebLeaderboards.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWebLeaderboards::StaticClass()
@@ -6106,6 +7887,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.WebLeaderboards");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -6118,7 +7901,15 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Name                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionDeleteLeaderboard* USteamCoreWebAsyncActionDeleteLeaderboard::DeleteLeaderboardAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& Name)
+	class USteamCoreWebAsyncActionDeleteLeaderboard* USteamCoreWebAsyncActionDeleteLeaderboard::DeleteLeaderboardAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& Name
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6143,10 +7934,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionDeleteLeaderboard.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionDeleteLeaderboard.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionDeleteLeaderboard::StaticClass()
@@ -6156,6 +7949,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionDeleteLeaderboard");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -6173,7 +7968,25 @@ namespace CG
 	 * 		bool                                               bOnlyTrustedWrites                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bOnlyFriendsReads                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionFindOrCreateLeaderboard* USteamCoreWebAsyncActionFindOrCreateLeaderboard::FindOrCreateLeaderboardAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& Name, const class FString& SortMethod, const class FString& DisplayType, bool bCreateIfNotFound, bool bOnlyTrustedWrites, bool bOnlyFriendsReads)
+	class USteamCoreWebAsyncActionFindOrCreateLeaderboard* USteamCoreWebAsyncActionFindOrCreateLeaderboard::FindOrCreateLeaderboardAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& Name
+, 
+const class FString& SortMethod
+, 
+const class FString& DisplayType
+, 
+bool bCreateIfNotFound
+, 
+bool bOnlyTrustedWrites
+, 
+bool bOnlyFriendsReads
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6208,10 +8021,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionFindOrCreateLeaderboard.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionFindOrCreateLeaderboard.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionFindOrCreateLeaderboard::StaticClass()
@@ -6221,6 +8036,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionFindOrCreateLeaderboard");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -6237,7 +8054,23 @@ namespace CG
 	 * 		int32_t                                            DataRequest                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetLeaderboardEntries* USteamCoreWebAsyncActionGetLeaderboardEntries::GetLeaderboardEntriesAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, int32_t RangeStart, int32_t RangeEnd, int32_t LeaderboardId, int32_t DataRequest, const class FString& SteamID)
+	class USteamCoreWebAsyncActionGetLeaderboardEntries* USteamCoreWebAsyncActionGetLeaderboardEntries::GetLeaderboardEntriesAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t RangeStart
+, 
+int32_t RangeEnd
+, 
+int32_t LeaderboardId
+, 
+int32_t DataRequest
+, 
+const class FString& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6270,10 +8103,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetLeaderboardEntries.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetLeaderboardEntries.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetLeaderboardEntries::StaticClass()
@@ -6283,6 +8118,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetLeaderboardEntries");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -6294,7 +8131,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetLeaderboardsForGame* USteamCoreWebAsyncActionGetLeaderboardsForGame::GetLeaderboardsForGameAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID)
+	class USteamCoreWebAsyncActionGetLeaderboardsForGame* USteamCoreWebAsyncActionGetLeaderboardsForGame::GetLeaderboardsForGameAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6317,10 +8160,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetLeaderboardsForGame.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetLeaderboardsForGame.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetLeaderboardsForGame::StaticClass()
@@ -6330,6 +8175,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetLeaderboardsForGame");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -6342,7 +8189,15 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            LeaderboardId                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionResetLeaderboard* USteamCoreWebAsyncActionResetLeaderboard::ResetLeaderboardAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, int32_t LeaderboardId)
+	class USteamCoreWebAsyncActionResetLeaderboard* USteamCoreWebAsyncActionResetLeaderboard::ResetLeaderboardAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t LeaderboardId
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6367,10 +8222,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionResetLeaderboard.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionResetLeaderboard.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionResetLeaderboard::StaticClass()
@@ -6380,6 +8237,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionResetLeaderboard");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -6396,7 +8255,23 @@ namespace CG
 	 * 		TArray<unsigned char>                              Details                                                    (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		class FString                                      ScoreMethod                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionSetLeaderboardScore* USteamCoreWebAsyncActionSetLeaderboardScore::SetLeaderboardScoreAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, int32_t LeaderboardId, const class FString& SteamID, int32_t Score, TArray<unsigned char> Details, const class FString& ScoreMethod)
+	class USteamCoreWebAsyncActionSetLeaderboardScore* USteamCoreWebAsyncActionSetLeaderboardScore::SetLeaderboardScoreAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t LeaderboardId
+, 
+const class FString& SteamID
+, 
+int32_t Score
+, 
+TArray<unsigned char> Details
+, 
+const class FString& ScoreMethod
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6429,10 +8304,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionSetLeaderboardScore.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionSetLeaderboardScore.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionSetLeaderboardScore::StaticClass()
@@ -6442,6 +8319,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionSetLeaderboardScore");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -6456,7 +8335,19 @@ namespace CG
 	 * 		class FString                                      SteamIDLobby                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      InputJson                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebLobbyMatchmakingService::RemoveUserFromLobby(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamIdToRemove, const class FString& SteamIDLobby, const class FString& InputJson)
+	void UWebLobbyMatchmakingService::RemoveUserFromLobby(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamIdToRemove
+, 
+const class FString& SteamIDLobby
+, 
+const class FString& InputJson
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6483,6 +8374,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6499,7 +8392,25 @@ namespace CG
 	 * 		TArray<class FString>                              SteamIdInvitedMembers                                      (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		class FString                                      LobbyMetaData                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebLobbyMatchmakingService::CreateLobby(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, int32_t MaxMembers, ESteamCoreWebLobbyType LobbyType, const class FString& LobbyName, const class FString& InputJson, TArray<class FString> SteamIdInvitedMembers, const class FString& LobbyMetaData)
+	void UWebLobbyMatchmakingService::CreateLobby(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t MaxMembers
+, 
+ESteamCoreWebLobbyType LobbyType
+, 
+const class FString& LobbyName
+, 
+const class FString& InputJson
+, 
+TArray<class FString> SteamIdInvitedMembers
+, 
+const class FString& LobbyMetaData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6532,10 +8443,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWebLobbyMatchmakingService.StaticClass
+	 * 		Name   -> PredefinedFunction UWebLobbyMatchmakingService.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWebLobbyMatchmakingService::StaticClass()
@@ -6545,6 +8458,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.WebLobbyMatchmakingService");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -6557,7 +8472,15 @@ namespace CG
 	 * 		class FString                                      OrderId                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebMicroTxn::RefundTxn(const class FScriptDelegate& Callback, const class FString& Key, const class FString& OrderId, int32_t AppID)
+	void UWebMicroTxn::RefundTxn(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& OrderId
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6580,6 +8503,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6592,7 +8517,17 @@ namespace CG
 	 * 		class FString                                      OrderId                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      TransId                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebMicroTxn::QueryTxn(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& OrderId, const class FString& TransId)
+	void UWebMicroTxn::QueryTxn(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& OrderId
+, 
+const class FString& TransId
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6617,6 +8552,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6632,7 +8569,23 @@ namespace CG
 	 * 		int32_t                                            Amount                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Currency                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebMicroTxn::ProcessAgreement(const class FScriptDelegate& Callback, const class FString& Key, const class FString& OrderId, const class FString& SteamID, const class FString& AgreementId, int32_t AppID, int32_t Amount, const class FString& Currency)
+	void UWebMicroTxn::ProcessAgreement(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& OrderId
+, 
+const class FString& SteamID
+, 
+const class FString& AgreementId
+, 
+int32_t AppID
+, 
+int32_t Amount
+, 
+const class FString& Currency
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6663,6 +8616,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6685,6 +8640,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -6719,7 +8676,59 @@ namespace CG
 	 * 		TArray<class FString>                              BundleDesc                                                 (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		TArray<class FString>                              BundleCategory                                             (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UWebMicroTxn::InitTxn(const class FScriptDelegate& Callback, const class FString& Key, const class FString& OrderId, const class FString& SteamID, int32_t AppID, const class FString& Language, const class FString& Currency, const class FString& UserSession, const class FString& Ipaddress, TArray<int32_t> ItemId, TArray<int32_t> Quantity, TArray<class FString> Amount, TArray<class FString> Description, TArray<class FString> Category, TArray<int32_t> AssociatedBundle, TArray<class FString> BillingType, TArray<class FString> StartDate, TArray<class FString> EndDate, TArray<class FString> Period, TArray<int32_t> Frequency, TArray<class FString> RecurringAmt, TArray<int32_t> BundleCount, TArray<int32_t> BundleId, TArray<int32_t> BundleQty, TArray<class FString> BundleDesc, TArray<class FString> BundleCategory)
+	void UWebMicroTxn::InitTxn(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& OrderId
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& Language
+, 
+const class FString& Currency
+, 
+const class FString& UserSession
+, 
+const class FString& Ipaddress
+, 
+TArray<int32_t> ItemId
+, 
+TArray<int32_t> Quantity
+, 
+TArray<class FString> Amount
+, 
+TArray<class FString> Description
+, 
+TArray<class FString> Category
+, 
+TArray<int32_t> AssociatedBundle
+, 
+TArray<class FString> BillingType
+, 
+TArray<class FString> StartDate
+, 
+TArray<class FString> EndDate
+, 
+TArray<class FString> Period
+, 
+TArray<int32_t> Frequency
+, 
+TArray<class FString> RecurringAmt
+, 
+TArray<int32_t> BundleCount
+, 
+TArray<int32_t> BundleId
+, 
+TArray<int32_t> BundleQty
+, 
+TArray<class FString> BundleDesc
+, 
+TArray<class FString> BundleCategory
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6786,6 +8795,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6797,7 +8808,15 @@ namespace CG
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Ipaddress                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebMicroTxn::GetUserInfo(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t Ipaddress)
+	void UWebMicroTxn::GetUserInfo(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t Ipaddress
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6820,6 +8839,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6831,7 +8852,15 @@ namespace CG
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebMicroTxn::GetUserAgreementInfo(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID)
+	void UWebMicroTxn::GetUserAgreementInfo(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6854,6 +8883,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6867,7 +8898,19 @@ namespace CG
 	 * 		class FString                                      Type                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            MaxResults                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebMicroTxn::GetReport(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& Time, const class FString& Type, int32_t MaxResults)
+	void UWebMicroTxn::GetReport(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& Time
+, 
+const class FString& Type
+, 
+int32_t MaxResults
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6894,6 +8937,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6905,7 +8950,15 @@ namespace CG
 	 * 		class FString                                      OrderId                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebMicroTxn::FinalizeTxn(const class FScriptDelegate& Callback, const class FString& Key, const class FString& OrderId, int32_t AppID)
+	void UWebMicroTxn::FinalizeTxn(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& OrderId
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6928,6 +8981,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6940,7 +8995,17 @@ namespace CG
 	 * 		class FString                                      AgreementId                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebMicroTxn::CancelAgreement(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, const class FString& AgreementId, int32_t AppID)
+	void UWebMicroTxn::CancelAgreement(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+const class FString& AgreementId
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6965,6 +9030,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6978,7 +9045,19 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      NextProcessDate                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebMicroTxn::AdjustAgreement(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, const class FString& AgreementId, int32_t AppID, const class FString& NextProcessDate)
+	void UWebMicroTxn::AdjustAgreement(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+const class FString& AgreementId
+, 
+int32_t AppID
+, 
+const class FString& NextProcessDate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7005,10 +9084,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWebMicroTxn.StaticClass
+	 * 		Name   -> PredefinedFunction UWebMicroTxn.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWebMicroTxn::StaticClass()
@@ -7018,6 +9099,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.WebMicroTxn");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7032,7 +9115,19 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      NextProcessDate                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionAdjustAgreement* USteamCoreWebAsyncActionAdjustAgreement::AdjustAgreementAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, const class FString& AgreementId, int32_t AppID, const class FString& NextProcessDate)
+	class USteamCoreWebAsyncActionAdjustAgreement* USteamCoreWebAsyncActionAdjustAgreement::AdjustAgreementAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+const class FString& AgreementId
+, 
+int32_t AppID
+, 
+const class FString& NextProcessDate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7061,10 +9156,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionAdjustAgreement.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionAdjustAgreement.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionAdjustAgreement::StaticClass()
@@ -7074,6 +9171,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionAdjustAgreement");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7087,7 +9186,17 @@ namespace CG
 	 * 		class FString                                      AgreementId                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionCancelAgreement* USteamCoreWebAsyncActionCancelAgreement::CancelAgreementAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, const class FString& AgreementId, int32_t AppID)
+	class USteamCoreWebAsyncActionCancelAgreement* USteamCoreWebAsyncActionCancelAgreement::CancelAgreementAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+const class FString& AgreementId
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7114,10 +9223,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionCancelAgreement.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionCancelAgreement.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionCancelAgreement::StaticClass()
@@ -7127,6 +9238,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionCancelAgreement");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7139,7 +9252,15 @@ namespace CG
 	 * 		class FString                                      OrderId                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionFinalizeTxn* USteamCoreWebAsyncActionFinalizeTxn::FinalizeTxnAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& OrderId, int32_t AppID)
+	class USteamCoreWebAsyncActionFinalizeTxn* USteamCoreWebAsyncActionFinalizeTxn::FinalizeTxnAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& OrderId
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7164,10 +9285,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionFinalizeTxn.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionFinalizeTxn.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionFinalizeTxn::StaticClass()
@@ -7177,6 +9300,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionFinalizeTxn");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7191,7 +9316,19 @@ namespace CG
 	 * 		class FString                                      Type                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            MaxResults                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetReport* USteamCoreWebAsyncActionGetReport::GetReportAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& Time, const class FString& Type, int32_t MaxResults)
+	class USteamCoreWebAsyncActionGetReport* USteamCoreWebAsyncActionGetReport::GetReportAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& Time
+, 
+const class FString& Type
+, 
+int32_t MaxResults
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7220,10 +9357,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetReport.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetReport.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetReport::StaticClass()
@@ -7233,6 +9372,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetReport");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7245,7 +9386,15 @@ namespace CG
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetUserAgreementInfo* USteamCoreWebAsyncActionGetUserAgreementInfo::GetUserAgreementInfoAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID)
+	class USteamCoreWebAsyncActionGetUserAgreementInfo* USteamCoreWebAsyncActionGetUserAgreementInfo::GetUserAgreementInfoAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7270,10 +9419,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetUserAgreementInfo.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetUserAgreementInfo.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetUserAgreementInfo::StaticClass()
@@ -7283,6 +9434,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetUserAgreementInfo");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7295,7 +9448,15 @@ namespace CG
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Ipaddress                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetUserInfo* USteamCoreWebAsyncActionGetUserInfo::GetUserInfoAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t Ipaddress)
+	class USteamCoreWebAsyncActionGetUserInfo* USteamCoreWebAsyncActionGetUserInfo::GetUserInfoAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t Ipaddress
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7320,10 +9481,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetUserInfo.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetUserInfo.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetUserInfo::StaticClass()
@@ -7333,6 +9496,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetUserInfo");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7367,7 +9532,59 @@ namespace CG
 	 * 		TArray<class FString>                              BundleDesc                                                 (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		TArray<class FString>                              BundleCategory                                             (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionInitTxn* USteamCoreWebAsyncActionInitTxn::InitTxnAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& OrderId, const class FString& SteamID, int32_t AppID, const class FString& Language, const class FString& Currency, const class FString& UserSession, const class FString& Ipaddress, TArray<int32_t> ItemId, TArray<int32_t> Quantity, TArray<class FString> Amount, TArray<class FString> Description, TArray<class FString> Category, TArray<int32_t> AssociatedBundle, TArray<class FString> BillingType, TArray<class FString> StartDate, TArray<class FString> EndDate, TArray<class FString> Period, TArray<int32_t> Frequency, TArray<class FString> RecurringAmt, TArray<int32_t> BundleCount, TArray<int32_t> BundleId, TArray<int32_t> BundleQty, TArray<class FString> BundleDesc, TArray<class FString> BundleCategory)
+	class USteamCoreWebAsyncActionInitTxn* USteamCoreWebAsyncActionInitTxn::InitTxnAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& OrderId
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& Language
+, 
+const class FString& Currency
+, 
+const class FString& UserSession
+, 
+const class FString& Ipaddress
+, 
+TArray<int32_t> ItemId
+, 
+TArray<int32_t> Quantity
+, 
+TArray<class FString> Amount
+, 
+TArray<class FString> Description
+, 
+TArray<class FString> Category
+, 
+TArray<int32_t> AssociatedBundle
+, 
+TArray<class FString> BillingType
+, 
+TArray<class FString> StartDate
+, 
+TArray<class FString> EndDate
+, 
+TArray<class FString> Period
+, 
+TArray<int32_t> Frequency
+, 
+TArray<class FString> RecurringAmt
+, 
+TArray<int32_t> BundleCount
+, 
+TArray<int32_t> BundleId
+, 
+TArray<int32_t> BundleQty
+, 
+TArray<class FString> BundleDesc
+, 
+TArray<class FString> BundleCategory
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7436,10 +9653,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionInitTxn.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionInitTxn.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionInitTxn::StaticClass()
@@ -7449,6 +9668,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionInitTxn");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7465,7 +9686,23 @@ namespace CG
 	 * 		int32_t                                            Amount                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Currency                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionProcessAgreement* USteamCoreWebAsyncActionProcessAgreement::ProcessAgreementAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& OrderId, const class FString& SteamID, const class FString& AgreementId, int32_t AppID, int32_t Amount, const class FString& Currency)
+	class USteamCoreWebAsyncActionProcessAgreement* USteamCoreWebAsyncActionProcessAgreement::ProcessAgreementAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& OrderId
+, 
+const class FString& SteamID
+, 
+const class FString& AgreementId
+, 
+int32_t AppID
+, 
+int32_t Amount
+, 
+const class FString& Currency
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7498,10 +9735,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionProcessAgreement.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionProcessAgreement.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionProcessAgreement::StaticClass()
@@ -7511,6 +9750,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionProcessAgreement");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7524,7 +9765,17 @@ namespace CG
 	 * 		class FString                                      OrderId                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      TransId                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionQueryTxn* USteamCoreWebAsyncActionQueryTxn::QueryTxnAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& OrderId, const class FString& TransId)
+	class USteamCoreWebAsyncActionQueryTxn* USteamCoreWebAsyncActionQueryTxn::QueryTxnAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& OrderId
+, 
+const class FString& TransId
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7551,10 +9802,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionQueryTxn.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionQueryTxn.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionQueryTxn::StaticClass()
@@ -7564,6 +9817,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionQueryTxn");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7576,7 +9831,15 @@ namespace CG
 	 * 		class FString                                      OrderId                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionRefundTxn* USteamCoreWebAsyncActionRefundTxn::RefundTxnAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& OrderId, int32_t AppID)
+	class USteamCoreWebAsyncActionRefundTxn* USteamCoreWebAsyncActionRefundTxn::RefundTxnAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& OrderId
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7601,10 +9864,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionRefundTxn.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionRefundTxn.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionRefundTxn::StaticClass()
@@ -7614,6 +9879,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionRefundTxn");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7626,7 +9893,15 @@ namespace CG
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppIdPlaying                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebPlayerService::IsPlayingSharedGame(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppIdPlaying)
+	void UWebPlayerService::IsPlayingSharedGame(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppIdPlaying
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7649,6 +9924,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7659,7 +9936,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebPlayerService::GetSteamLevel(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID)
+	void UWebPlayerService::GetSteamLevel(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7680,6 +9963,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7691,7 +9976,15 @@ namespace CG
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Count                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebPlayerService::GetRecentlyPlayedGames(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t Count)
+	void UWebPlayerService::GetRecentlyPlayedGames(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t Count
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7714,6 +10007,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7727,7 +10022,19 @@ namespace CG
 	 * 		bool                                               bIncludePlayedFreeGames                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<int32_t>                                    Filter                                                     (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UWebPlayerService::GetOwnedGames(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, bool bIncludeAppInfo, bool bIncludePlayedFreeGames, TArray<int32_t> Filter)
+	void UWebPlayerService::GetOwnedGames(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+bool bIncludeAppInfo
+, 
+bool bIncludePlayedFreeGames
+, 
+TArray<int32_t> Filter
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7754,6 +10061,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7765,7 +10074,15 @@ namespace CG
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            BadgeId                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebPlayerService::GetCommunityBadgeProgress(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t BadgeId)
+	void UWebPlayerService::GetCommunityBadgeProgress(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t BadgeId
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7788,6 +10105,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7798,7 +10117,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebPlayerService::GetBadges(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID)
+	void UWebPlayerService::GetBadges(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7819,10 +10144,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWebPlayerService.StaticClass
+	 * 		Name   -> PredefinedFunction UWebPlayerService.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWebPlayerService::StaticClass()
@@ -7832,6 +10159,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.WebPlayerService");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7844,7 +10173,15 @@ namespace CG
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Count                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetRecentlyPlayedGames* USteamCoreWebAsyncActionGetRecentlyPlayedGames::GetRecentlyPlayedGamesAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t Count)
+	class USteamCoreWebAsyncActionGetRecentlyPlayedGames* USteamCoreWebAsyncActionGetRecentlyPlayedGames::GetRecentlyPlayedGamesAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t Count
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7869,10 +10206,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetRecentlyPlayedGames.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetRecentlyPlayedGames.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetRecentlyPlayedGames::StaticClass()
@@ -7882,6 +10221,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetRecentlyPlayedGames");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7896,7 +10237,19 @@ namespace CG
 	 * 		bool                                               bIncludePlayedFreeGames                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<int32_t>                                    Filter                                                     (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetOwnedGames* USteamCoreWebAsyncActionGetOwnedGames::GetOwnedGamesAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, bool bIncludeAppInfo, bool bIncludePlayedFreeGames, TArray<int32_t> Filter)
+	class USteamCoreWebAsyncActionGetOwnedGames* USteamCoreWebAsyncActionGetOwnedGames::GetOwnedGamesAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+bool bIncludeAppInfo
+, 
+bool bIncludePlayedFreeGames
+, 
+TArray<int32_t> Filter
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7925,10 +10278,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetOwnedGames.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetOwnedGames.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetOwnedGames::StaticClass()
@@ -7938,6 +10293,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetOwnedGames");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7949,7 +10306,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetSteamLevel* USteamCoreWebAsyncActionGetSteamLevel::GetSteamLevelAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID)
+	class USteamCoreWebAsyncActionGetSteamLevel* USteamCoreWebAsyncActionGetSteamLevel::GetSteamLevelAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7972,10 +10335,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetSteamLevel.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetSteamLevel.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetSteamLevel::StaticClass()
@@ -7985,6 +10350,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetSteamLevel");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7996,7 +10363,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetBadges* USteamCoreWebAsyncActionGetBadges::GetBadgesAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID)
+	class USteamCoreWebAsyncActionGetBadges* USteamCoreWebAsyncActionGetBadges::GetBadgesAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8019,10 +10392,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetBadges.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetBadges.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetBadges::StaticClass()
@@ -8032,6 +10407,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetBadges");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -8044,7 +10421,15 @@ namespace CG
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            BadgeId                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetCommunityBadgeProgress* USteamCoreWebAsyncActionGetCommunityBadgeProgress::GetCommunityBadgeProgressAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t BadgeId)
+	class USteamCoreWebAsyncActionGetCommunityBadgeProgress* USteamCoreWebAsyncActionGetCommunityBadgeProgress::GetCommunityBadgeProgressAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t BadgeId
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8069,10 +10454,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetCommunityBadgeProgress.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetCommunityBadgeProgress.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetCommunityBadgeProgress::StaticClass()
@@ -8082,6 +10469,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetCommunityBadgeProgress");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -8094,7 +10483,15 @@ namespace CG
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppIdPlaying                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionIsPlayingSharedGame* USteamCoreWebAsyncActionIsPlayingSharedGame::IsPlayingSharedGameAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppIdPlaying)
+	class USteamCoreWebAsyncActionIsPlayingSharedGame* USteamCoreWebAsyncActionIsPlayingSharedGame::IsPlayingSharedGameAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppIdPlaying
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8119,10 +10516,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionIsPlayingSharedGame.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionIsPlayingSharedGame.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionIsPlayingSharedGame::StaticClass()
@@ -8132,6 +10531,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionIsPlayingSharedGame");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -8146,7 +10547,19 @@ namespace CG
 	 * 		class FString                                      AddTags                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      RemoveTags                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebPublishedFileService::UpdateTags(const class FScriptDelegate& Callback, const class FString& Key, const class FString& PublishedFileID, int32_t AppID, const class FString& AddTags, const class FString& RemoveTags)
+	void UWebPublishedFileService::UpdateTags(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& PublishedFileID
+, 
+int32_t AppID
+, 
+const class FString& AddTags
+, 
+const class FString& RemoveTags
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8173,6 +10586,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8185,7 +10600,17 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bIncompatible                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebPublishedFileService::UpdateIncompatibleStatus(const class FScriptDelegate& Callback, const class FString& Key, const class FString& PublishedFileID, int32_t AppID, bool bIncompatible)
+	void UWebPublishedFileService::UpdateIncompatibleStatus(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& PublishedFileID
+, 
+int32_t AppID
+, 
+bool bIncompatible
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8210,6 +10635,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8223,7 +10650,19 @@ namespace CG
 	 * 		bool                                               bBanned                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Reason                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebPublishedFileService::UpdateBanStatus(const class FScriptDelegate& Callback, const class FString& Key, const class FString& PublishedFileID, int32_t AppID, bool bBanned, const class FString& Reason)
+	void UWebPublishedFileService::UpdateBanStatus(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& PublishedFileID
+, 
+int32_t AppID
+, 
+bool bBanned
+, 
+const class FString& Reason
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8250,6 +10689,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8262,7 +10703,17 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      MetaData                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebPublishedFileService::SetDeveloperMetadata(const class FScriptDelegate& Callback, const class FString& Key, const class FString& PublishedFileID, int32_t AppID, const class FString& MetaData)
+	void UWebPublishedFileService::SetDeveloperMetadata(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& PublishedFileID
+, 
+int32_t AppID
+, 
+const class FString& MetaData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8286,6 +10737,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -8326,7 +10779,71 @@ namespace CG
 	 * 		bool                                               bReturnMetadata                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            ReturnPlaytimeStats                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebPublishedFileService::QueryFiles(const class FScriptDelegate& Callback, const class FString& Key, int32_t QueryType, int32_t Page, const class FString& Cursor, int32_t NumPerPage, int32_t CreatorAppID, int32_t AppID, const class FString& RequiredTags, const class FString& ExcludedTags, bool bMatchAllTags, const class FString& RequiredFlags, const class FString& OmittedFlags, const class FString& SearchText, int32_t FileType, const class FString& ChildPublishedFileId, int32_t Days, bool bIncludeRecentVotesOnly, int32_t CacheMaxAgeSeconds, int32_t Language, const class FString& RequiredKvTags, bool bTotalOnly, bool bIDsOnly, bool bReturnVoteData, bool bReturnTags, bool bReturnKvTags, bool bReturnPreviews, bool bReturnChildren, bool bReturnShortDescription, bool bReturnForSaleData, bool bReturnMetadata, int32_t ReturnPlaytimeStats)
+	void UWebPublishedFileService::QueryFiles(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t QueryType
+, 
+int32_t Page
+, 
+const class FString& Cursor
+, 
+int32_t NumPerPage
+, 
+int32_t CreatorAppID
+, 
+int32_t AppID
+, 
+const class FString& RequiredTags
+, 
+const class FString& ExcludedTags
+, 
+bool bMatchAllTags
+, 
+const class FString& RequiredFlags
+, 
+const class FString& OmittedFlags
+, 
+const class FString& SearchText
+, 
+int32_t FileType
+, 
+const class FString& ChildPublishedFileId
+, 
+int32_t Days
+, 
+bool bIncludeRecentVotesOnly
+, 
+int32_t CacheMaxAgeSeconds
+, 
+int32_t Language
+, 
+const class FString& RequiredKvTags
+, 
+bool bTotalOnly
+, 
+bool bIDsOnly
+, 
+bool bReturnVoteData
+, 
+bool bReturnTags
+, 
+bool bReturnKvTags
+, 
+bool bReturnPreviews
+, 
+bool bReturnChildren
+, 
+bool bReturnShortDescription
+, 
+bool bReturnForSaleData
+, 
+bool bReturnMetadata
+, 
+int32_t ReturnPlaytimeStats
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8405,10 +10922,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWebPublishedFileService.StaticClass
+	 * 		Name   -> PredefinedFunction UWebPublishedFileService.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWebPublishedFileService::StaticClass()
@@ -8418,6 +10937,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.WebPublishedFileService");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -8435,7 +10956,25 @@ namespace CG
 	 * 		TArray<class FString>                              Tag                                                        (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		TArray<class FString>                              UserTag                                                    (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UWebSteamPublishedItemSearch::ResultSetSummary(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, int32_t StartId, bool bHasAppAdminAccess, int32_t FileType, TArray<class FString> Tag, TArray<class FString> UserTag)
+	void UWebSteamPublishedItemSearch::ResultSetSummary(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+int32_t StartId
+, 
+bool bHasAppAdminAccess
+, 
+int32_t FileType
+, 
+TArray<class FString> Tag
+, 
+TArray<class FString> UserTag
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8468,6 +11007,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8485,7 +11026,27 @@ namespace CG
 	 * 		TArray<class FString>                              Tag                                                        (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		TArray<class FString>                              UserTag                                                    (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UWebSteamPublishedItemSearch::RankedByVote(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, int32_t StartId, int32_t Count, bool bHasAppAdminAccess, int32_t FileType, TArray<class FString> Tag, TArray<class FString> UserTag)
+	void UWebSteamPublishedItemSearch::RankedByVote(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+int32_t StartId
+, 
+int32_t Count
+, 
+bool bHasAppAdminAccess
+, 
+int32_t FileType
+, 
+TArray<class FString> Tag
+, 
+TArray<class FString> UserTag
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8520,6 +11081,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8538,7 +11101,29 @@ namespace CG
 	 * 		TArray<class FString>                              Tag                                                        (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		TArray<class FString>                              UserTag                                                    (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UWebSteamPublishedItemSearch::RankedByTrend(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, int32_t StartId, int32_t Count, bool bHasAppAdminAccess, int32_t FileType, int32_t Days, TArray<class FString> Tag, TArray<class FString> UserTag)
+	void UWebSteamPublishedItemSearch::RankedByTrend(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+int32_t StartId
+, 
+int32_t Count
+, 
+bool bHasAppAdminAccess
+, 
+int32_t FileType
+, 
+int32_t Days
+, 
+TArray<class FString> Tag
+, 
+TArray<class FString> UserTag
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8575,6 +11160,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8592,7 +11179,27 @@ namespace CG
 	 * 		TArray<class FString>                              Tag                                                        (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		TArray<class FString>                              UserTag                                                    (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UWebSteamPublishedItemSearch::RankedByPublicationOrder(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, int32_t StartId, int32_t Count, bool bHasAppAdminAccess, int32_t FileType, TArray<class FString> Tag, TArray<class FString> UserTag)
+	void UWebSteamPublishedItemSearch::RankedByPublicationOrder(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+int32_t StartId
+, 
+int32_t Count
+, 
+bool bHasAppAdminAccess
+, 
+int32_t FileType
+, 
+TArray<class FString> Tag
+, 
+TArray<class FString> UserTag
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8627,10 +11234,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWebSteamPublishedItemSearch.StaticClass
+	 * 		Name   -> PredefinedFunction UWebSteamPublishedItemSearch.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWebSteamPublishedItemSearch::StaticClass()
@@ -8640,6 +11249,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.WebSteamPublishedItemSearch");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -8658,7 +11269,27 @@ namespace CG
 	 * 		TArray<class FString>                              Tag                                                        (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		TArray<class FString>                              UserTag                                                    (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionRankedByPublicationOrder* USteamCoreWebAsyncActionRankedByPublicationOrder::RankedByPublicationOrderAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, int32_t StartId, int32_t Count, bool bHasAppAdminAccess, int32_t FileType, TArray<class FString> Tag, TArray<class FString> UserTag)
+	class USteamCoreWebAsyncActionRankedByPublicationOrder* USteamCoreWebAsyncActionRankedByPublicationOrder::RankedByPublicationOrderAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+int32_t StartId
+, 
+int32_t Count
+, 
+bool bHasAppAdminAccess
+, 
+int32_t FileType
+, 
+TArray<class FString> Tag
+, 
+TArray<class FString> UserTag
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8695,10 +11326,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionRankedByPublicationOrder.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionRankedByPublicationOrder.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionRankedByPublicationOrder::StaticClass()
@@ -8708,6 +11341,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionRankedByPublicationOrder");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -8727,7 +11362,29 @@ namespace CG
 	 * 		TArray<class FString>                              Tag                                                        (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		TArray<class FString>                              UserTag                                                    (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionRankedByTrend* USteamCoreWebAsyncActionRankedByTrend::RankedByTrendAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, int32_t StartId, int32_t Count, bool bHasAppAdminAccess, int32_t FileType, int32_t Days, TArray<class FString> Tag, TArray<class FString> UserTag)
+	class USteamCoreWebAsyncActionRankedByTrend* USteamCoreWebAsyncActionRankedByTrend::RankedByTrendAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+int32_t StartId
+, 
+int32_t Count
+, 
+bool bHasAppAdminAccess
+, 
+int32_t FileType
+, 
+int32_t Days
+, 
+TArray<class FString> Tag
+, 
+TArray<class FString> UserTag
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8766,10 +11423,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionRankedByTrend.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionRankedByTrend.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionRankedByTrend::StaticClass()
@@ -8779,6 +11438,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionRankedByTrend");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -8797,7 +11458,27 @@ namespace CG
 	 * 		TArray<class FString>                              Tag                                                        (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		TArray<class FString>                              UserTag                                                    (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionRankedByVote* USteamCoreWebAsyncActionRankedByVote::RankedByVoteAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, int32_t StartId, int32_t Count, bool bHasAppAdminAccess, int32_t FileType, TArray<class FString> Tag, TArray<class FString> UserTag)
+	class USteamCoreWebAsyncActionRankedByVote* USteamCoreWebAsyncActionRankedByVote::RankedByVoteAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+int32_t StartId
+, 
+int32_t Count
+, 
+bool bHasAppAdminAccess
+, 
+int32_t FileType
+, 
+TArray<class FString> Tag
+, 
+TArray<class FString> UserTag
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8834,10 +11515,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionRankedByVote.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionRankedByVote.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionRankedByVote::StaticClass()
@@ -8847,6 +11530,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionRankedByVote");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -8864,7 +11549,25 @@ namespace CG
 	 * 		TArray<class FString>                              Tag                                                        (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		TArray<class FString>                              UserTag                                                    (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionResultSetSummary* USteamCoreWebAsyncActionResultSetSummary::ResultSetSummaryAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, int32_t StartId, bool bHasAppAdminAccess, int32_t FileType, TArray<class FString> Tag, TArray<class FString> UserTag)
+	class USteamCoreWebAsyncActionResultSetSummary* USteamCoreWebAsyncActionResultSetSummary::ResultSetSummaryAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+int32_t StartId
+, 
+bool bHasAppAdminAccess
+, 
+int32_t FileType
+, 
+TArray<class FString> Tag
+, 
+TArray<class FString> UserTag
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8899,10 +11602,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionResultSetSummary.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionResultSetSummary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionResultSetSummary::StaticClass()
@@ -8912,6 +11617,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionResultSetSummary");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -8924,7 +11631,15 @@ namespace CG
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<class FString>                              PublishedFileIDs                                           (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UWebPublishedItemVoting::UserVoteSummary(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, TArray<class FString> PublishedFileIDs)
+	void UWebPublishedItemVoting::UserVoteSummary(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+TArray<class FString> PublishedFileIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8947,6 +11662,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8959,7 +11676,17 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<class FString>                              PublishedFileIDs                                           (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UWebPublishedItemVoting::ItemVoteSummary(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, TArray<class FString> PublishedFileIDs)
+	void UWebPublishedItemVoting::ItemVoteSummary(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+TArray<class FString> PublishedFileIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8984,10 +11711,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWebPublishedItemVoting.StaticClass
+	 * 		Name   -> PredefinedFunction UWebPublishedItemVoting.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWebPublishedItemVoting::StaticClass()
@@ -8997,6 +11726,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.WebPublishedItemVoting");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -9010,7 +11741,17 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<class FString>                              PublishedFileIDs                                           (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionItemVoteSummary* USteamCoreWebAsyncActionItemVoteSummary::ItemVoteSummaryAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, TArray<class FString> PublishedFileIDs)
+	class USteamCoreWebAsyncActionItemVoteSummary* USteamCoreWebAsyncActionItemVoteSummary::ItemVoteSummaryAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+TArray<class FString> PublishedFileIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9037,10 +11778,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionItemVoteSummary.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionItemVoteSummary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionItemVoteSummary::StaticClass()
@@ -9050,6 +11793,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionItemVoteSummary");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -9062,7 +11807,15 @@ namespace CG
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<class FString>                              PublishedFileIDs                                           (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionUserVoteSummary* USteamCoreWebAsyncActionUserVoteSummary::UserVoteSummaryAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, TArray<class FString> PublishedFileIDs)
+	class USteamCoreWebAsyncActionUserVoteSummary* USteamCoreWebAsyncActionUserVoteSummary::UserVoteSummaryAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+TArray<class FString> PublishedFileIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9087,10 +11840,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionUserVoteSummary.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionUserVoteSummary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionUserVoteSummary::StaticClass()
@@ -9100,6 +11855,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionUserVoteSummary");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -9113,7 +11870,17 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      PublishedFileIDs                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebRemoteStorage::UnsubscribePublishedFile(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& PublishedFileIDs)
+	void UWebRemoteStorage::UnsubscribePublishedFile(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& PublishedFileIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9138,6 +11905,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9150,7 +11919,17 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      PublishedFileIDs                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebRemoteStorage::SubscribePublishedFile(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& PublishedFileIDs)
+	void UWebRemoteStorage::SubscribePublishedFile(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& PublishedFileIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9175,6 +11954,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9188,7 +11969,19 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bUsed                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebRemoteStorage::SetUGCUsedByGC(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, const class FString& UGCID, int32_t AppID, bool bUsed)
+	void UWebRemoteStorage::SetUGCUsedByGC(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+const class FString& UGCID
+, 
+int32_t AppID
+, 
+bool bUsed
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9215,6 +12008,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9227,7 +12022,17 @@ namespace CG
 	 * 		class FString                                      UGCID                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebRemoteStorage::GetUGCFileDetails(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, const class FString& UGCID, int32_t AppID)
+	void UWebRemoteStorage::GetUGCFileDetails(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+const class FString& UGCID
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9252,6 +12057,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9261,7 +12068,11 @@ namespace CG
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		class FString                                      PublishedFileIDs                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebRemoteStorage::GetPublishedFileDetails(const class FScriptDelegate& Callback, const class FString& PublishedFileIDs)
+	void UWebRemoteStorage::GetPublishedFileDetails(
+const class FScriptDelegate& Callback
+, 
+const class FString& PublishedFileIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9280,6 +12091,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9289,7 +12102,11 @@ namespace CG
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		TArray<class FString>                              PublishedFileIDs                                           (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UWebRemoteStorage::GetCollectionDetails(const class FScriptDelegate& Callback, TArray<class FString> PublishedFileIDs)
+	void UWebRemoteStorage::GetCollectionDetails(
+const class FScriptDelegate& Callback
+, 
+TArray<class FString> PublishedFileIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9308,6 +12125,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9320,7 +12139,17 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            ListType                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebRemoteStorage::EnumerateUserSubscribedFiles(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, int32_t ListType)
+	void UWebRemoteStorage::EnumerateUserSubscribedFiles(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+int32_t ListType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9345,6 +12174,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9356,7 +12187,15 @@ namespace CG
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebRemoteStorage::EnumerateUserPublishedFiles(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID)
+	void UWebRemoteStorage::EnumerateUserPublishedFiles(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9379,10 +12218,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWebRemoteStorage.StaticClass
+	 * 		Name   -> PredefinedFunction UWebRemoteStorage.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWebRemoteStorage::StaticClass()
@@ -9392,6 +12233,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.WebRemoteStorage");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -9404,7 +12247,15 @@ namespace CG
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionEnumerateUserPublishedFiles* USteamCoreWebAsyncActionEnumerateUserPublishedFiles::EnumerateUserPublishedFilesAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID)
+	class USteamCoreWebAsyncActionEnumerateUserPublishedFiles* USteamCoreWebAsyncActionEnumerateUserPublishedFiles::EnumerateUserPublishedFilesAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9429,10 +12280,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionEnumerateUserPublishedFiles.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionEnumerateUserPublishedFiles.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionEnumerateUserPublishedFiles::StaticClass()
@@ -9442,6 +12295,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionEnumerateUserPublishedFiles");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -9455,7 +12310,17 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            ListType                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionEnumerateUserSubscribedFiles* USteamCoreWebAsyncActionEnumerateUserSubscribedFiles::EnumerateUserSubscribedFilesAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, int32_t ListType)
+	class USteamCoreWebAsyncActionEnumerateUserSubscribedFiles* USteamCoreWebAsyncActionEnumerateUserSubscribedFiles::EnumerateUserSubscribedFilesAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+int32_t ListType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9482,10 +12347,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionEnumerateUserSubscribedFiles.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionEnumerateUserSubscribedFiles.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionEnumerateUserSubscribedFiles::StaticClass()
@@ -9496,6 +12363,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9505,7 +12374,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<class FString>                              PublishedFileIDs                                           (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetCollectionDetails* USteamCoreWebAsyncActionGetCollectionDetails::GetCollectionDetailsAsync(class UObject* WorldContextObject, TArray<class FString> PublishedFileIDs)
+	class USteamCoreWebAsyncActionGetCollectionDetails* USteamCoreWebAsyncActionGetCollectionDetails::GetCollectionDetailsAsync(
+class UObject* WorldContextObject
+, 
+TArray<class FString> PublishedFileIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9526,10 +12399,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetCollectionDetails.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetCollectionDetails.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetCollectionDetails::StaticClass()
@@ -9540,6 +12415,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9549,7 +12426,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      PublishedFileIDs                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetPublishedFileDetails* USteamCoreWebAsyncActionGetPublishedFileDetails::GetPublishedFileDetailsAsync(class UObject* WorldContextObject, const class FString& PublishedFileIDs)
+	class USteamCoreWebAsyncActionGetPublishedFileDetails* USteamCoreWebAsyncActionGetPublishedFileDetails::GetPublishedFileDetailsAsync(
+class UObject* WorldContextObject
+, 
+const class FString& PublishedFileIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9570,10 +12451,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetPublishedFileDetails.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetPublishedFileDetails.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetPublishedFileDetails::StaticClass()
@@ -9583,6 +12466,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetPublishedFileDetails");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -9596,7 +12481,17 @@ namespace CG
 	 * 		class FString                                      UGCID                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetUGCFileDetails* USteamCoreWebAsyncActionGetUGCFileDetails::GetUGCFileDetailsAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, const class FString& UGCID, int32_t AppID)
+	class USteamCoreWebAsyncActionGetUGCFileDetails* USteamCoreWebAsyncActionGetUGCFileDetails::GetUGCFileDetailsAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+const class FString& UGCID
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9623,10 +12518,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetUGCFileDetails.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetUGCFileDetails.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetUGCFileDetails::StaticClass()
@@ -9636,6 +12533,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetUGCFileDetails");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -9650,7 +12549,19 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bUsed                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionSetUGCUsedByGC* USteamCoreWebAsyncActionSetUGCUsedByGC::SetUGCUsedByGCAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, const class FString& UGCID, int32_t AppID, bool bUsed)
+	class USteamCoreWebAsyncActionSetUGCUsedByGC* USteamCoreWebAsyncActionSetUGCUsedByGC::SetUGCUsedByGCAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+const class FString& UGCID
+, 
+int32_t AppID
+, 
+bool bUsed
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9679,10 +12590,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionSetUGCUsedByGC.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionSetUGCUsedByGC.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionSetUGCUsedByGC::StaticClass()
@@ -9692,6 +12605,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionSetUGCUsedByGC");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -9705,7 +12620,17 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      PublishedFileIDs                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionSubscribePublishedFile* USteamCoreWebAsyncActionSubscribePublishedFile::SubscribePublishedFileAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& PublishedFileIDs)
+	class USteamCoreWebAsyncActionSubscribePublishedFile* USteamCoreWebAsyncActionSubscribePublishedFile::SubscribePublishedFileAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& PublishedFileIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9732,10 +12657,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionSubscribePublishedFile.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionSubscribePublishedFile.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionSubscribePublishedFile::StaticClass()
@@ -9745,6 +12672,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionSubscribePublishedFile");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -9758,7 +12687,17 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      PublishedFileIDs                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionUnsubscribePublishedFile* USteamCoreWebAsyncActionUnsubscribePublishedFile::UnsubscribePublishedFileAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& PublishedFileIDs)
+	class USteamCoreWebAsyncActionUnsubscribePublishedFile* USteamCoreWebAsyncActionUnsubscribePublishedFile::UnsubscribePublishedFileAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& PublishedFileIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9785,10 +12724,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionUnsubscribePublishedFile.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionUnsubscribePublishedFile.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionUnsubscribePublishedFile::StaticClass()
@@ -9798,6 +12739,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionUnsubscribePublishedFile");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -9815,7 +12758,25 @@ namespace CG
 	 * 		class FString                                      Description                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Gid                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebSteamCommunity::ReportAbuse(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamIdActor, const class FString& SteamIdTarget, int32_t AppID, int32_t AbuseType, int32_t ContentType, const class FString& Description, const class FString& Gid)
+	void UWebSteamCommunity::ReportAbuse(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamIdActor
+, 
+const class FString& SteamIdTarget
+, 
+int32_t AppID
+, 
+int32_t AbuseType
+, 
+int32_t ContentType
+, 
+const class FString& Description
+, 
+const class FString& Gid
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9848,10 +12809,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWebSteamCommunity.StaticClass
+	 * 		Name   -> PredefinedFunction UWebSteamCommunity.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWebSteamCommunity::StaticClass()
@@ -9861,6 +12824,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.WebSteamCommunity");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -9878,7 +12843,25 @@ namespace CG
 	 * 		class FString                                      Description                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Gid                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionReportAbuse* USteamCoreWebAsyncActionReportAbuse::ReportAbuseAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamIdActor, const class FString& SteamIdTarget, int32_t AppID, int32_t AbuseType, int32_t ContentType, const class FString& Description, const class FString& Gid)
+	class USteamCoreWebAsyncActionReportAbuse* USteamCoreWebAsyncActionReportAbuse::ReportAbuseAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamIdActor
+, 
+const class FString& SteamIdTarget
+, 
+int32_t AppID
+, 
+int32_t AbuseType
+, 
+int32_t ContentType
+, 
+const class FString& Description
+, 
+const class FString& Gid
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9913,10 +12896,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionReportAbuse.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionReportAbuse.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionReportAbuse::StaticClass()
@@ -9926,6 +12911,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionReportAbuse");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -9939,7 +12926,17 @@ namespace CG
 	 * 		class FString                                      SteamIDd                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SteamId2                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebSteamEconomy::StartTrade(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamIDd, const class FString& SteamId2)
+	void UWebSteamEconomy::StartTrade(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamIDd
+, 
+const class FString& SteamId2
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9964,6 +12961,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9982,7 +12981,29 @@ namespace CG
 	 * 		class FString                                      Referer                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bClientAuth                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebSteamEconomy::StartAssetTransaction(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& AssetId, int32_t AssetQuantity, const class FString& Currency, const class FString& Language, const class FString& Ipaddress, const class FString& Referer, bool bClientAuth)
+	void UWebSteamEconomy::StartAssetTransaction(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+const class FString& AssetId
+, 
+int32_t AssetQuantity
+, 
+const class FString& Currency
+, 
+const class FString& Language
+, 
+const class FString& Ipaddress
+, 
+const class FString& Referer
+, 
+bool bClientAuth
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10019,6 +13040,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10029,7 +13052,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebSteamEconomy::GetMarketPrices(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID)
+	void UWebSteamEconomy::GetMarketPrices(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10050,6 +13079,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10062,7 +13093,17 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      ContextId                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebSteamEconomy::GetExportedAssetsForUser(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& ContextId)
+	void UWebSteamEconomy::GetExportedAssetsForUser(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& ContextId
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10087,6 +13128,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10099,7 +13142,17 @@ namespace CG
 	 * 		class FString                                      Currency                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Language                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebSteamEconomy::GetAssetPrices(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& Currency, const class FString& Language)
+	void UWebSteamEconomy::GetAssetPrices(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& Currency
+, 
+const class FString& Language
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10124,6 +13177,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10138,7 +13193,21 @@ namespace CG
 	 * 		class FString                                      ClassId                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      InstanceID                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebSteamEconomy::GetAssetClassInfo(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& Language, int32_t ClassCount, const class FString& ClassId, const class FString& InstanceID)
+	void UWebSteamEconomy::GetAssetClassInfo(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& Language
+, 
+int32_t ClassCount
+, 
+const class FString& ClassId
+, 
+const class FString& InstanceID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10167,6 +13236,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10180,7 +13251,19 @@ namespace CG
 	 * 		class FString                                      TxnId                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Language                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebSteamEconomy::FinalizeAssetTransaction(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& TxnId, const class FString& Language)
+	void UWebSteamEconomy::FinalizeAssetTransaction(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+const class FString& TxnId
+, 
+const class FString& Language
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10207,6 +13290,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10219,7 +13304,17 @@ namespace CG
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      TargetId                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebSteamEconomy::CanTrade(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& TargetId)
+	void UWebSteamEconomy::CanTrade(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+const class FString& TargetId
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10244,10 +13339,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWebSteamEconomy.StaticClass
+	 * 		Name   -> PredefinedFunction UWebSteamEconomy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWebSteamEconomy::StaticClass()
@@ -10257,6 +13354,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.WebSteamEconomy");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -10270,7 +13369,17 @@ namespace CG
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      TargetId                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionCanTrade* USteamCoreWebAsyncActionCanTrade::CanTradeAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& TargetId)
+	class USteamCoreWebAsyncActionCanTrade* USteamCoreWebAsyncActionCanTrade::CanTradeAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+const class FString& TargetId
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10297,10 +13406,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionCanTrade.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionCanTrade.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionCanTrade::StaticClass()
@@ -10310,6 +13421,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionCanTrade");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -10324,7 +13437,19 @@ namespace CG
 	 * 		class FString                                      TxnId                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Language                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionFinalizeAssetTransaction* USteamCoreWebAsyncActionFinalizeAssetTransaction::FinalizeAssetTransactionAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& TxnId, const class FString& Language)
+	class USteamCoreWebAsyncActionFinalizeAssetTransaction* USteamCoreWebAsyncActionFinalizeAssetTransaction::FinalizeAssetTransactionAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+const class FString& TxnId
+, 
+const class FString& Language
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10353,10 +13478,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionFinalizeAssetTransaction.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionFinalizeAssetTransaction.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionFinalizeAssetTransaction::StaticClass()
@@ -10366,6 +13493,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionFinalizeAssetTransaction");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -10381,7 +13510,21 @@ namespace CG
 	 * 		class FString                                      ClassId                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      InstanceID                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetAssetClassInfo* USteamCoreWebAsyncActionGetAssetClassInfo::GetAssetClassInfoAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& Language, int32_t ClassCount, const class FString& ClassId, const class FString& InstanceID)
+	class USteamCoreWebAsyncActionGetAssetClassInfo* USteamCoreWebAsyncActionGetAssetClassInfo::GetAssetClassInfoAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& Language
+, 
+int32_t ClassCount
+, 
+const class FString& ClassId
+, 
+const class FString& InstanceID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10412,10 +13555,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetAssetClassInfo.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetAssetClassInfo.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetAssetClassInfo::StaticClass()
@@ -10425,6 +13570,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetAssetClassInfo");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -10438,7 +13585,17 @@ namespace CG
 	 * 		class FString                                      Currency                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Language                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetAssetPrices* USteamCoreWebAsyncActionGetAssetPrices::GetAssetPricesAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& Currency, const class FString& Language)
+	class USteamCoreWebAsyncActionGetAssetPrices* USteamCoreWebAsyncActionGetAssetPrices::GetAssetPricesAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& Currency
+, 
+const class FString& Language
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10465,10 +13622,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetAssetPrices.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetAssetPrices.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetAssetPrices::StaticClass()
@@ -10478,6 +13637,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetAssetPrices");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -10491,7 +13652,17 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      ContextId                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetExportedAssetsForUser* USteamCoreWebAsyncActionGetExportedAssetsForUser::GetExportedAssetsForUserAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& ContextId)
+	class USteamCoreWebAsyncActionGetExportedAssetsForUser* USteamCoreWebAsyncActionGetExportedAssetsForUser::GetExportedAssetsForUserAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& ContextId
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10518,10 +13689,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetExportedAssetsForUser.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetExportedAssetsForUser.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetExportedAssetsForUser::StaticClass()
@@ -10531,6 +13704,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetExportedAssetsForUser");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -10542,7 +13717,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetMarketPrices* USteamCoreWebAsyncActionGetMarketPrices::GetMarketPricesAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID)
+	class USteamCoreWebAsyncActionGetMarketPrices* USteamCoreWebAsyncActionGetMarketPrices::GetMarketPricesAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10565,10 +13746,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetMarketPrices.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetMarketPrices.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetMarketPrices::StaticClass()
@@ -10578,6 +13761,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetMarketPrices");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -10597,7 +13782,29 @@ namespace CG
 	 * 		class FString                                      Referer                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bClientAuth                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionStartAssetTransaction* USteamCoreWebAsyncActionStartAssetTransaction::StartAssetTransactionAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamID, const class FString& AssetId, int32_t AssetQuantity, const class FString& Currency, const class FString& Language, const class FString& Ipaddress, const class FString& Referer, bool bClientAuth)
+	class USteamCoreWebAsyncActionStartAssetTransaction* USteamCoreWebAsyncActionStartAssetTransaction::StartAssetTransactionAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamID
+, 
+const class FString& AssetId
+, 
+int32_t AssetQuantity
+, 
+const class FString& Currency
+, 
+const class FString& Language
+, 
+const class FString& Ipaddress
+, 
+const class FString& Referer
+, 
+bool bClientAuth
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10636,10 +13843,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionStartAssetTransaction.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionStartAssetTransaction.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionStartAssetTransaction::StaticClass()
@@ -10649,6 +13858,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionStartAssetTransaction");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -10662,7 +13873,17 @@ namespace CG
 	 * 		class FString                                      SteamId1                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SteamId2                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionStartTrade* USteamCoreWebAsyncActionStartTrade::StartTradeAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& SteamId1, const class FString& SteamId2)
+	class USteamCoreWebAsyncActionStartTrade* USteamCoreWebAsyncActionStartTrade::StartTradeAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& SteamId1
+, 
+const class FString& SteamId2
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10689,10 +13910,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionStartTrade.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionStartTrade.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionStartTrade::StaticClass()
@@ -10702,6 +13925,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionStartTrade");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -10717,7 +13942,21 @@ namespace CG
 	 * 		class FString                                      RangeEnd                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            MaxResults                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebSteamGameServerStats::GetGameServerPlayerStatsForGame(const class FScriptDelegate& Callback, const class FString& Key, const class FString& GameID, int32_t AppID, const class FString& RangeStart, const class FString& RangeEnd, int32_t MaxResults)
+	void UWebSteamGameServerStats::GetGameServerPlayerStatsForGame(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& GameID
+, 
+int32_t AppID
+, 
+const class FString& RangeStart
+, 
+const class FString& RangeEnd
+, 
+int32_t MaxResults
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10746,10 +13985,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWebSteamGameServerStats.StaticClass
+	 * 		Name   -> PredefinedFunction UWebSteamGameServerStats.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWebSteamGameServerStats::StaticClass()
@@ -10759,6 +14000,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.WebSteamGameServerStats");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -10774,7 +14017,21 @@ namespace CG
 	 * 		int32_t                                            EndDate                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Count                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebSteamNews::GetNewsForAppAuthed(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, int32_t MaxLength, TArray<class FString> Feeds, int32_t EndDate, int32_t Count)
+	void UWebSteamNews::GetNewsForAppAuthed(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t MaxLength
+, 
+TArray<class FString> Feeds
+, 
+int32_t EndDate
+, 
+int32_t Count
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10803,6 +14060,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10816,7 +14075,19 @@ namespace CG
 	 * 		int32_t                                            EndDate                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Count                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebSteamNews::GetNewsForApp(const class FScriptDelegate& Callback, int32_t AppID, int32_t MaxLength, TArray<class FString> Feeds, int32_t EndDate, int32_t Count)
+	void UWebSteamNews::GetNewsForApp(
+const class FScriptDelegate& Callback
+, 
+int32_t AppID
+, 
+int32_t MaxLength
+, 
+TArray<class FString> Feeds
+, 
+int32_t EndDate
+, 
+int32_t Count
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10843,10 +14114,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWebSteamNews.StaticClass
+	 * 		Name   -> PredefinedFunction UWebSteamNews.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWebSteamNews::StaticClass()
@@ -10856,6 +14129,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.WebSteamNews");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -10870,7 +14145,19 @@ namespace CG
 	 * 		int32_t                                            EndDate                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Count                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetNewsForApp* USteamCoreWebAsyncActionGetNewsForApp::GetNewsForAppAsync(class UObject* WorldContextObject, int32_t AppID, int32_t MaxLength, TArray<class FString> Feeds, int32_t EndDate, int32_t Count)
+	class USteamCoreWebAsyncActionGetNewsForApp* USteamCoreWebAsyncActionGetNewsForApp::GetNewsForAppAsync(
+class UObject* WorldContextObject
+, 
+int32_t AppID
+, 
+int32_t MaxLength
+, 
+TArray<class FString> Feeds
+, 
+int32_t EndDate
+, 
+int32_t Count
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10899,10 +14186,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetNewsForApp.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetNewsForApp.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetNewsForApp::StaticClass()
@@ -10912,6 +14201,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetNewsForApp");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -10927,7 +14218,21 @@ namespace CG
 	 * 		int32_t                                            EndDate                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Count                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetNewsForAppAuthed* USteamCoreWebAsyncActionGetNewsForAppAuthed::GetNewsForAppAuthedAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, int32_t MaxLength, TArray<class FString> Feeds, int32_t EndDate, int32_t Count)
+	class USteamCoreWebAsyncActionGetNewsForAppAuthed* USteamCoreWebAsyncActionGetNewsForAppAuthed::GetNewsForAppAuthedAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+int32_t MaxLength
+, 
+TArray<class FString> Feeds
+, 
+int32_t EndDate
+, 
+int32_t Count
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10958,10 +14263,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetNewsForAppAuthed.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetNewsForAppAuthed.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetNewsForAppAuthed::StaticClass()
@@ -10971,6 +14278,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetNewsForAppAuthed");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -10983,7 +14292,15 @@ namespace CG
 	 * 		class FString                                      VanityURL                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EVanityUrlType                                     URLType                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebSteamUser::ResolveVanityURL(const class FScriptDelegate& Callback, const class FString& Key, const class FString& VanityURL, EVanityUrlType URLType)
+	void UWebSteamUser::ResolveVanityURL(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& VanityURL
+, 
+EVanityUrlType URLType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11006,6 +14323,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11020,7 +14339,21 @@ namespace CG
 	 * 		class FString                                      ThirdPartyKey                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            ThirdPartyAppId                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebSteamUser::GrantPackage(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t PackageId, const class FString& Ipaddress, const class FString& ThirdPartyKey, int32_t ThirdPartyAppId)
+	void UWebSteamUser::GrantPackage(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t PackageId
+, 
+const class FString& Ipaddress
+, 
+const class FString& ThirdPartyKey
+, 
+int32_t ThirdPartyAppId
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11049,6 +14382,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11059,7 +14394,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebSteamUser::GetUserGroupList(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID)
+	void UWebSteamUser::GetUserGroupList(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11080,6 +14421,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11091,7 +14434,15 @@ namespace CG
 	 * 		class FString                                      PackageRowVersion                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      CDKeyRowVersion                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebSteamUser::GetPublisherAppOwnershipChanges(const class FScriptDelegate& Callback, const class FString& Key, const class FString& PackageRowVersion, const class FString& CDKeyRowVersion)
+	void UWebSteamUser::GetPublisherAppOwnershipChanges(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& PackageRowVersion
+, 
+const class FString& CDKeyRowVersion
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11114,6 +14465,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11124,7 +14477,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebSteamUser::GetPublisherAppOwnership(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID)
+	void UWebSteamUser::GetPublisherAppOwnership(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11145,6 +14504,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11155,7 +14516,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<class FString>                              SteamIDs                                                   (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UWebSteamUser::GetPlayerSummaries(const class FScriptDelegate& Callback, const class FString& Key, TArray<class FString> SteamIDs)
+	void UWebSteamUser::GetPlayerSummaries(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+TArray<class FString> SteamIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11176,6 +14543,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11186,7 +14555,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<class FString>                              SteamIDs                                                   (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UWebSteamUser::GetPlayerBans(const class FScriptDelegate& Callback, const class FString& Key, TArray<class FString> SteamIDs)
+	void UWebSteamUser::GetPlayerBans(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+TArray<class FString> SteamIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11207,6 +14582,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11218,7 +14595,15 @@ namespace CG
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Relationship                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebSteamUser::GetFriendList(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, const class FString& Relationship)
+	void UWebSteamUser::GetFriendList(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+const class FString& Relationship
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11241,6 +14626,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11252,7 +14639,15 @@ namespace CG
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<int32_t>                                    AppIDs                                                     (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UWebSteamUser::GetAppPriceInfo(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, TArray<int32_t> AppIDs)
+	void UWebSteamUser::GetAppPriceInfo(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+TArray<int32_t> AppIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11275,6 +14670,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11286,7 +14683,15 @@ namespace CG
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebSteamUser::CheckAppOwnership(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID)
+	void UWebSteamUser::CheckAppOwnership(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11309,10 +14714,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWebSteamUser.StaticClass
+	 * 		Name   -> PredefinedFunction UWebSteamUser.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWebSteamUser::StaticClass()
@@ -11322,6 +14729,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.WebSteamUser");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -11334,7 +14743,15 @@ namespace CG
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionCheckAppOwnership* USteamCoreWebAsyncActionCheckAppOwnership::CheckAppOwnershipAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID)
+	class USteamCoreWebAsyncActionCheckAppOwnership* USteamCoreWebAsyncActionCheckAppOwnership::CheckAppOwnershipAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11359,10 +14776,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionCheckAppOwnership.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionCheckAppOwnership.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionCheckAppOwnership::StaticClass()
@@ -11372,6 +14791,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionCheckAppOwnership");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -11384,7 +14805,15 @@ namespace CG
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<int32_t>                                    AppIDs                                                     (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetAppPriceInfo* USteamCoreWebAsyncActionGetAppPriceInfo::GetAppPriceInfoAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, TArray<int32_t> AppIDs)
+	class USteamCoreWebAsyncActionGetAppPriceInfo* USteamCoreWebAsyncActionGetAppPriceInfo::GetAppPriceInfoAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+TArray<int32_t> AppIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11409,10 +14838,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetAppPriceInfo.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetAppPriceInfo.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetAppPriceInfo::StaticClass()
@@ -11422,6 +14853,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetAppPriceInfo");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -11434,7 +14867,15 @@ namespace CG
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Relationship                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetFriendList* USteamCoreWebAsyncActionGetFriendList::GetFriendListAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, const class FString& Relationship)
+	class USteamCoreWebAsyncActionGetFriendList* USteamCoreWebAsyncActionGetFriendList::GetFriendListAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+const class FString& Relationship
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11459,10 +14900,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetFriendList.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetFriendList.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetFriendList::StaticClass()
@@ -11472,6 +14915,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetFriendList");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -11483,7 +14928,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<class FString>                              SteamIDs                                                   (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetPlayerBans* USteamCoreWebAsyncActionGetPlayerBans::GetPlayerBansAsync(class UObject* WorldContextObject, const class FString& Key, TArray<class FString> SteamIDs)
+	class USteamCoreWebAsyncActionGetPlayerBans* USteamCoreWebAsyncActionGetPlayerBans::GetPlayerBansAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+TArray<class FString> SteamIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11506,10 +14957,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetPlayerBans.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetPlayerBans.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetPlayerBans::StaticClass()
@@ -11519,6 +14972,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetPlayerBans");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -11530,7 +14985,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<class FString>                              SteamIDs                                                   (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetPlayerSummaries* USteamCoreWebAsyncActionGetPlayerSummaries::GetPlayerSummariesAsync(class UObject* WorldContextObject, const class FString& Key, TArray<class FString> SteamIDs)
+	class USteamCoreWebAsyncActionGetPlayerSummaries* USteamCoreWebAsyncActionGetPlayerSummaries::GetPlayerSummariesAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+TArray<class FString> SteamIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11553,10 +15014,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetPlayerSummaries.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetPlayerSummaries.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetPlayerSummaries::StaticClass()
@@ -11566,6 +15029,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetPlayerSummaries");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -11577,7 +15042,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetPublisherAppOwnership* USteamCoreWebAsyncActionGetPublisherAppOwnership::GetPublisherAppOwnershipAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID)
+	class USteamCoreWebAsyncActionGetPublisherAppOwnership* USteamCoreWebAsyncActionGetPublisherAppOwnership::GetPublisherAppOwnershipAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11600,10 +15071,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetPublisherAppOwnership.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetPublisherAppOwnership.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetPublisherAppOwnership::StaticClass()
@@ -11613,6 +15086,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetPublisherAppOwnership");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -11625,7 +15100,15 @@ namespace CG
 	 * 		class FString                                      PackageRowVersion                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      CDKeyRowVersion                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetPublisherAppOwnershipChanges* USteamCoreWebAsyncActionGetPublisherAppOwnershipChanges::GetPublisherAppOwnershipChangesAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& PackageRowVersion, const class FString& CDKeyRowVersion)
+	class USteamCoreWebAsyncActionGetPublisherAppOwnershipChanges* USteamCoreWebAsyncActionGetPublisherAppOwnershipChanges::GetPublisherAppOwnershipChangesAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& PackageRowVersion
+, 
+const class FString& CDKeyRowVersion
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11650,10 +15133,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetPublisherAppOwnershipChanges.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetPublisherAppOwnershipChanges.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetPublisherAppOwnershipChanges::StaticClass()
@@ -11663,6 +15148,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetPublisherAppOwnershipChanges");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -11674,7 +15161,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetUserGroupList* USteamCoreWebAsyncActionGetUserGroupList::GetUserGroupListAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID)
+	class USteamCoreWebAsyncActionGetUserGroupList* USteamCoreWebAsyncActionGetUserGroupList::GetUserGroupListAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11697,10 +15190,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetUserGroupList.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetUserGroupList.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetUserGroupList::StaticClass()
@@ -11710,6 +15205,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetUserGroupList");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -11725,7 +15222,21 @@ namespace CG
 	 * 		class FString                                      ThirdPartyKey                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            ThirdPartyAppId                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGrantPackage* USteamCoreWebAsyncActionGrantPackage::GrantPackageAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t PackageId, const class FString& Ipaddress, const class FString& ThirdPartyKey, int32_t ThirdPartyAppId)
+	class USteamCoreWebAsyncActionGrantPackage* USteamCoreWebAsyncActionGrantPackage::GrantPackageAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t PackageId
+, 
+const class FString& Ipaddress
+, 
+const class FString& ThirdPartyKey
+, 
+int32_t ThirdPartyAppId
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11756,10 +15267,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGrantPackage.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGrantPackage.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGrantPackage::StaticClass()
@@ -11769,6 +15282,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGrantPackage");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -11781,7 +15296,15 @@ namespace CG
 	 * 		class FString                                      VanityURL                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EVanityUrlType                                     URLType                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionResolveVanityURL* USteamCoreWebAsyncActionResolveVanityURL::ResolveVanityURLAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& VanityURL, EVanityUrlType URLType)
+	class USteamCoreWebAsyncActionResolveVanityURL* USteamCoreWebAsyncActionResolveVanityURL::ResolveVanityURLAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& VanityURL
+, 
+EVanityUrlType URLType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11806,10 +15329,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionResolveVanityURL.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionResolveVanityURL.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionResolveVanityURL::StaticClass()
@@ -11819,6 +15344,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionResolveVanityURL");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -11831,7 +15358,15 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Ticket                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebUserAuth::AuthenticateUserTicket(const class FScriptDelegate& Callback, const class FString& Key, int32_t AppID, const class FString& Ticket)
+	void UWebUserAuth::AuthenticateUserTicket(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& Ticket
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11854,6 +15389,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11865,7 +15402,15 @@ namespace CG
 	 * 		TArray<unsigned char>                              SessionKey                                                 (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		TArray<unsigned char>                              EncryptedLoginKey                                          (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UWebUserAuth::AuthenticateUser(const class FScriptDelegate& Callback, const class FString& SteamID, TArray<unsigned char> SessionKey, TArray<unsigned char> EncryptedLoginKey)
+	void UWebUserAuth::AuthenticateUser(
+const class FScriptDelegate& Callback
+, 
+const class FString& SteamID
+, 
+TArray<unsigned char> SessionKey
+, 
+TArray<unsigned char> EncryptedLoginKey
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11888,10 +15433,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWebUserAuth.StaticClass
+	 * 		Name   -> PredefinedFunction UWebUserAuth.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWebUserAuth::StaticClass()
@@ -11901,6 +15448,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.WebUserAuth");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -11913,7 +15462,15 @@ namespace CG
 	 * 		TArray<unsigned char>                              SessionKey                                                 (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		TArray<unsigned char>                              EncryptedLoginKey                                          (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionAuthenticateUser* USteamCoreWebAsyncActionAuthenticateUser::AuthenticateUserAsync(class UObject* WorldContextObject, const class FString& SteamID, TArray<unsigned char> SessionKey, TArray<unsigned char> EncryptedLoginKey)
+	class USteamCoreWebAsyncActionAuthenticateUser* USteamCoreWebAsyncActionAuthenticateUser::AuthenticateUserAsync(
+class UObject* WorldContextObject
+, 
+const class FString& SteamID
+, 
+TArray<unsigned char> SessionKey
+, 
+TArray<unsigned char> EncryptedLoginKey
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11938,10 +15495,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionAuthenticateUser.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionAuthenticateUser.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionAuthenticateUser::StaticClass()
@@ -11951,6 +15510,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionAuthenticateUser");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -11963,7 +15524,15 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Ticket                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionAuthenticateUserTicket* USteamCoreWebAsyncActionAuthenticateUserTicket::AuthenticateUserTicketAsync(class UObject* WorldContextObject, const class FString& Key, int32_t AppID, const class FString& Ticket)
+	class USteamCoreWebAsyncActionAuthenticateUserTicket* USteamCoreWebAsyncActionAuthenticateUserTicket::AuthenticateUserTicketAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+int32_t AppID
+, 
+const class FString& Ticket
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11988,10 +15557,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionAuthenticateUserTicket.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionAuthenticateUserTicket.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionAuthenticateUserTicket::StaticClass()
@@ -12001,6 +15572,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionAuthenticateUserTicket");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -12015,7 +15588,19 @@ namespace CG
 	 * 		TArray<class FString>                              Names                                                      (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		TArray<int32_t>                                    Values                                                     (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UWebUserStats::SetUserStatsForGame(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, TArray<class FString> Names, TArray<int32_t> Values)
+	void UWebUserStats::SetUserStatsForGame(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+TArray<class FString> Names
+, 
+TArray<int32_t> Values
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12042,6 +15627,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12053,7 +15640,15 @@ namespace CG
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebUserStats::GetUserStatsForGame(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID)
+	void UWebUserStats::GetUserStatsForGame(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12076,6 +15671,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12088,7 +15685,17 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Language                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebUserStats::GetSchemaForGame(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& Language)
+	void UWebUserStats::GetSchemaForGame(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& Language
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12113,6 +15720,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12125,7 +15734,17 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Language                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebUserStats::GetPlayerAchievements(const class FScriptDelegate& Callback, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& Language)
+	void UWebUserStats::GetPlayerAchievements(
+const class FScriptDelegate& Callback
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& Language
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12150,6 +15769,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12159,7 +15780,11 @@ namespace CG
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebUserStats::GetNumberOfCurrentPlayers(const class FScriptDelegate& Callback, int32_t AppID)
+	void UWebUserStats::GetNumberOfCurrentPlayers(
+const class FScriptDelegate& Callback
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12178,6 +15803,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12190,7 +15817,17 @@ namespace CG
 	 * 		int32_t                                            StartDate                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            EndDate                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebUserStats::GetGlobalStatsForGame(const class FScriptDelegate& Callback, int32_t AppID, TArray<class FString> Names, int32_t StartDate, int32_t EndDate)
+	void UWebUserStats::GetGlobalStatsForGame(
+const class FScriptDelegate& Callback
+, 
+int32_t AppID
+, 
+TArray<class FString> Names
+, 
+int32_t StartDate
+, 
+int32_t EndDate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12215,6 +15852,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12224,7 +15863,11 @@ namespace CG
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		class FString                                      GameID                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWebUserStats::GetGlobalAchievementPercentagesForApp(const class FScriptDelegate& Callback, const class FString& GameID)
+	void UWebUserStats::GetGlobalAchievementPercentagesForApp(
+const class FScriptDelegate& Callback
+, 
+const class FString& GameID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12243,10 +15886,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWebUserStats.StaticClass
+	 * 		Name   -> PredefinedFunction UWebUserStats.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWebUserStats::StaticClass()
@@ -12257,6 +15902,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12266,7 +15913,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      GameID                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetGlobalAchievementPercentagesForApp* USteamCoreWebAsyncActionGetGlobalAchievementPercentagesForApp::GetGlobalAchievementPercentagesForAppAsync(class UObject* WorldContextObject, const class FString& GameID)
+	class USteamCoreWebAsyncActionGetGlobalAchievementPercentagesForApp* USteamCoreWebAsyncActionGetGlobalAchievementPercentagesForApp::GetGlobalAchievementPercentagesForAppAsync(
+class UObject* WorldContextObject
+, 
+const class FString& GameID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12287,10 +15938,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetGlobalAchievementPercentagesForApp.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetGlobalAchievementPercentagesForApp.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetGlobalAchievementPercentagesForApp::StaticClass()
@@ -12300,6 +15953,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetGlobalAchievementPercentagesForApp");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -12313,7 +15968,17 @@ namespace CG
 	 * 		int32_t                                            StartDate                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            EndDate                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetGlobalStatsForGame* USteamCoreWebAsyncActionGetGlobalStatsForGame::GetGlobalStatsForGameAsync(class UObject* WorldContextObject, int32_t AppID, TArray<class FString> Names, int32_t StartDate, int32_t EndDate)
+	class USteamCoreWebAsyncActionGetGlobalStatsForGame* USteamCoreWebAsyncActionGetGlobalStatsForGame::GetGlobalStatsForGameAsync(
+class UObject* WorldContextObject
+, 
+int32_t AppID
+, 
+TArray<class FString> Names
+, 
+int32_t StartDate
+, 
+int32_t EndDate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12340,10 +16005,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetGlobalStatsForGame.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetGlobalStatsForGame.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetGlobalStatsForGame::StaticClass()
@@ -12354,6 +16021,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12363,7 +16032,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetNumberOfCurrentPlayers* USteamCoreWebAsyncActionGetNumberOfCurrentPlayers::GetNumberOfCurrentPlayersAsync(class UObject* WorldContextObject, int32_t AppID)
+	class USteamCoreWebAsyncActionGetNumberOfCurrentPlayers* USteamCoreWebAsyncActionGetNumberOfCurrentPlayers::GetNumberOfCurrentPlayersAsync(
+class UObject* WorldContextObject
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12384,10 +16057,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetNumberOfCurrentPlayers.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetNumberOfCurrentPlayers.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetNumberOfCurrentPlayers::StaticClass()
@@ -12397,6 +16072,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetNumberOfCurrentPlayers");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -12410,7 +16087,17 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Language                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetPlayerAchievements* USteamCoreWebAsyncActionGetPlayerAchievements::GetPlayerAchievementsAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& Language)
+	class USteamCoreWebAsyncActionGetPlayerAchievements* USteamCoreWebAsyncActionGetPlayerAchievements::GetPlayerAchievementsAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& Language
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12437,10 +16124,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetPlayerAchievements.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetPlayerAchievements.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetPlayerAchievements::StaticClass()
@@ -12450,6 +16139,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetPlayerAchievements");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -12463,7 +16154,17 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Language                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetSchemaForGame* USteamCoreWebAsyncActionGetSchemaForGame::GetSchemaForGameAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, const class FString& Language)
+	class USteamCoreWebAsyncActionGetSchemaForGame* USteamCoreWebAsyncActionGetSchemaForGame::GetSchemaForGameAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+const class FString& Language
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12490,10 +16191,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetSchemaForGame.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetSchemaForGame.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetSchemaForGame::StaticClass()
@@ -12503,6 +16206,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetSchemaForGame");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -12515,7 +16220,15 @@ namespace CG
 	 * 		class FString                                      SteamID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionGetUserStatsForGame* USteamCoreWebAsyncActionGetUserStatsForGame::GetUserStatsForGameAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID)
+	class USteamCoreWebAsyncActionGetUserStatsForGame* USteamCoreWebAsyncActionGetUserStatsForGame::GetUserStatsForGameAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12540,10 +16253,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionGetUserStatsForGame.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionGetUserStatsForGame.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionGetUserStatsForGame::StaticClass()
@@ -12553,6 +16268,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionGetUserStatsForGame");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -12567,7 +16284,19 @@ namespace CG
 	 * 		TArray<class FString>                              Names                                                      (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		TArray<int32_t>                                    Values                                                     (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreWebAsyncActionSetUserStatsForGame* USteamCoreWebAsyncActionSetUserStatsForGame::SetUserStatsForGameAsync(class UObject* WorldContextObject, const class FString& Key, const class FString& SteamID, int32_t AppID, TArray<class FString> Names, TArray<int32_t> Values)
+	class USteamCoreWebAsyncActionSetUserStatsForGame* USteamCoreWebAsyncActionSetUserStatsForGame::SetUserStatsForGameAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Key
+, 
+const class FString& SteamID
+, 
+int32_t AppID
+, 
+TArray<class FString> Names
+, 
+TArray<int32_t> Values
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12596,10 +16325,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreWebAsyncActionSetUserStatsForGame.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreWebAsyncActionSetUserStatsForGame.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreWebAsyncActionSetUserStatsForGame::StaticClass()
@@ -12609,6 +16340,7 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCoreWeb.SteamCoreWebAsyncActionSetUserStatsForGame");
 		return ptr;
 	}
+
 
 }
 

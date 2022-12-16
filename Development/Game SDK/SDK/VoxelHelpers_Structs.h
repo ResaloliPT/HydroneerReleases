@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+
 	/**
 	 * ScriptStruct VoxelHelpers.MaterialPackInput
 	 * Size -> 0x001C
@@ -21,9 +22,15 @@ namespace CG
 	struct FMaterialPackInput
 	{
 	public:
-		class FName                                                InputName;                                               // 0x0000(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FExpressionInput                                    Input;                                                   // 0x0008(0x000C) NoDestructor, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_9W41[0x8];                                   // 0x0014(0x0008) MISSED OFFSET (PADDING)
+
+		class FName                                              InputName;                                               // 0x0000(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FExpressionInput                                  Input;                                                   // 0x0008(0x000C) NoDestructor, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_MMUS[0x8];                                   // 0x0014(0x0008) MISSED OFFSET (PADDING)
+
 	};
 
 }

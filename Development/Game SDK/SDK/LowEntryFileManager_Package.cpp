@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19,7 +20,11 @@ namespace CG
 	 * 		class ULowEntryFileManagerDirectory*               NewDirectory                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               OverrideExistingFiles                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerDirectory::MoveTo(class ULowEntryFileManagerDirectory* NewDirectory, bool OverrideExistingFiles)
+	void ULowEntryFileManagerDirectory::MoveTo(
+class ULowEntryFileManagerDirectory* NewDirectory
+, 
+bool OverrideExistingFiles
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -37,6 +42,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -61,6 +68,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -69,7 +78,9 @@ namespace CG
 	 * Parameters:
 	 * 		ELowEntryFileManagerYesNo                          Branch                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerDirectory::IsRoot(ELowEntryFileManagerYesNo* Branch)
+	void ULowEntryFileManagerDirectory::IsRoot(
+ELowEntryFileManagerYesNo* Branch
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -87,6 +98,8 @@ namespace CG
 		if (Branch != nullptr)
 			*Branch = params.Branch;
 	}
+
+
 
 	/**
 	 * Function:
@@ -111,6 +124,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -119,7 +134,9 @@ namespace CG
 	 * Parameters:
 	 * 		ELowEntryFileManagerYesNo                          Branch                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerDirectory::IsEmpty(ELowEntryFileManagerYesNo* Branch)
+	void ULowEntryFileManagerDirectory::IsEmpty(
+ELowEntryFileManagerYesNo* Branch
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -137,6 +154,8 @@ namespace CG
 		if (Branch != nullptr)
 			*Branch = params.Branch;
 	}
+
+
 
 	/**
 	 * Function:
@@ -161,6 +180,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -183,6 +204,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -207,6 +230,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -230,6 +255,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -238,7 +265,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      File                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class ULowEntryFileManagerFile* ULowEntryFileManagerDirectory::GetFile(const class FString& File)
+	class ULowEntryFileManagerFile* ULowEntryFileManagerDirectory::GetFile(
+const class FString& File
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -257,6 +286,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -265,7 +296,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Directory_                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class ULowEntryFileManagerDirectory* ULowEntryFileManagerDirectory::GetDirectory(const class FString& Directory_)
+	class ULowEntryFileManagerDirectory* ULowEntryFileManagerDirectory::GetDirectory(
+const class FString& Directory_
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -283,6 +316,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -307,6 +342,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -329,6 +366,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -353,6 +392,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -361,7 +402,9 @@ namespace CG
 	 * Parameters:
 	 * 		ELowEntryFileManagerYesNo                          Branch                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerDirectory::Exists(ELowEntryFileManagerYesNo* Branch)
+	void ULowEntryFileManagerDirectory::Exists(
+ELowEntryFileManagerYesNo* Branch
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -379,6 +422,8 @@ namespace CG
 		if (Branch != nullptr)
 			*Branch = params.Branch;
 	}
+
+
 
 	/**
 	 * Function:
@@ -401,6 +446,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -422,6 +469,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -431,7 +480,11 @@ namespace CG
 	 * 		class ULowEntryFileManagerDirectory*               NewDirectory                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               OverrideExistingFiles                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerDirectory::CopyTo(class ULowEntryFileManagerDirectory* NewDirectory, bool OverrideExistingFiles)
+	void ULowEntryFileManagerDirectory::CopyTo(
+class ULowEntryFileManagerDirectory* NewDirectory
+, 
+bool OverrideExistingFiles
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -449,6 +502,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -471,10 +526,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULowEntryFileManagerDirectory.StaticClass
+	 * 		Name   -> PredefinedFunction ULowEntryFileManagerDirectory.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULowEntryFileManagerDirectory::StaticClass()
@@ -484,6 +541,8 @@ namespace CG
 			ptr = UObject::FindClass("Class LowEntryFileManager.LowEntryFileManagerDirectory");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -508,6 +567,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -516,7 +577,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FDateTime                                   Timestamp                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerFile::SetTimestamp(const struct FDateTime& Timestamp)
+	void ULowEntryFileManagerFile::SetTimestamp(
+const struct FDateTime& Timestamp
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -533,6 +596,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -541,7 +606,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               ReadOnly                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerFile::SetReadOnly(bool ReadOnly)
+	void ULowEntryFileManagerFile::SetReadOnly(
+bool ReadOnly
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -558,6 +625,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -566,7 +635,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<unsigned char>                              Data                                                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerFile::SetData(TArray<unsigned char> Data)
+	void ULowEntryFileManagerFile::SetData(
+TArray<unsigned char> Data
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -583,6 +654,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -591,7 +664,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ULowEntryFileManagerFile*                    NewFile                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerFile::MoveTo(class ULowEntryFileManagerFile* NewFile)
+	void ULowEntryFileManagerFile::MoveTo(
+class ULowEntryFileManagerFile* NewFile
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -607,6 +682,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -631,6 +708,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -639,7 +718,9 @@ namespace CG
 	 * Parameters:
 	 * 		ELowEntryFileManagerYesNo                          Branch                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerFile::IsReadOnly(ELowEntryFileManagerYesNo* Branch)
+	void ULowEntryFileManagerFile::IsReadOnly(
+ELowEntryFileManagerYesNo* Branch
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -657,6 +738,8 @@ namespace CG
 		if (Branch != nullptr)
 			*Branch = params.Branch;
 	}
+
+
 
 	/**
 	 * Function:
@@ -681,6 +764,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -689,7 +774,9 @@ namespace CG
 	 * Parameters:
 	 * 		ELowEntryFileManagerYesNo                          Branch                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerFile::IsEmpty(ELowEntryFileManagerYesNo* Branch)
+	void ULowEntryFileManagerFile::IsEmpty(
+ELowEntryFileManagerYesNo* Branch
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -707,6 +794,8 @@ namespace CG
 		if (Branch != nullptr)
 			*Branch = params.Branch;
 	}
+
+
 
 	/**
 	 * Function:
@@ -731,6 +820,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -753,6 +844,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -777,6 +870,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -799,6 +894,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -823,6 +920,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -845,6 +944,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -869,6 +970,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -891,6 +994,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -915,6 +1020,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -938,6 +1045,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -946,7 +1055,9 @@ namespace CG
 	 * Parameters:
 	 * 		ELowEntryFileManagerYesNo                          Branch                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerFile::Exists(ELowEntryFileManagerYesNo* Branch)
+	void ULowEntryFileManagerFile::Exists(
+ELowEntryFileManagerYesNo* Branch
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -965,6 +1076,8 @@ namespace CG
 			*Branch = params.Branch;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -978,7 +1091,19 @@ namespace CG
 	 * 		int32_t                                            Priority                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class ULowEntryFileManagerDirectory*               OptionalWorkingDirectory                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerFile::ExecuteAsync(const class FString& Parameters, bool* Success, int32_t* ProcessID, bool Hidden, int32_t Priority, class ULowEntryFileManagerDirectory* OptionalWorkingDirectory)
+	void ULowEntryFileManagerFile::ExecuteAsync(
+const class FString& Parameters
+, 
+bool* Success
+, 
+int32_t* ProcessID
+, 
+bool Hidden
+, 
+int32_t Priority
+, 
+class ULowEntryFileManagerDirectory* OptionalWorkingDirectory
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1008,6 +1133,8 @@ namespace CG
 			*ProcessID = params.ProcessID;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1020,7 +1147,17 @@ namespace CG
 	 * 		class FString                                      StdOut                                                     (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      StdErr                                                     (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerFile::Execute(const class FString& Parameters, bool* Success, int32_t* ReturnCode, class FString* StdOut, class FString* StdErr)
+	void ULowEntryFileManagerFile::Execute(
+const class FString& Parameters
+, 
+bool* Success
+, 
+int32_t* ReturnCode
+, 
+class FString* StdOut
+, 
+class FString* StdErr
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1050,6 +1187,8 @@ namespace CG
 			*StdErr = params.StdErr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1070,6 +1209,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1092,6 +1233,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1100,7 +1243,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ULowEntryFileManagerFile*                    NewFile                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerFile::CopyTo(class ULowEntryFileManagerFile* NewFile)
+	void ULowEntryFileManagerFile::CopyTo(
+class ULowEntryFileManagerFile* NewFile
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1116,6 +1261,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1138,6 +1285,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1146,7 +1295,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<unsigned char>                              Data                                                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerFile::AppendData(TArray<unsigned char> Data)
+	void ULowEntryFileManagerFile::AppendData(
+TArray<unsigned char> Data
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1163,10 +1314,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULowEntryFileManagerFile.StaticClass
+	 * 		Name   -> PredefinedFunction ULowEntryFileManagerFile.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULowEntryFileManagerFile::StaticClass()
@@ -1176,6 +1329,8 @@ namespace CG
 			ptr = UObject::FindClass("Class LowEntryFileManager.LowEntryFileManagerFile");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1187,7 +1342,13 @@ namespace CG
 	 * 		class FString                                      PathPart                                                   (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      NamePart                                                   (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerLibrary::SplitPath(const class FString& Path, class FString* PathPart, class FString* NamePart)
+	void ULowEntryFileManagerLibrary::SplitPath(
+const class FString& Path
+, 
+class FString* PathPart
+, 
+class FString* NamePart
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1211,6 +1372,8 @@ namespace CG
 			*NamePart = params.NamePart;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1221,7 +1384,13 @@ namespace CG
 	 * 		class FString                                      NamePart                                                   (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      ExtensionPart                                              (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerLibrary::SplitName(const class FString& Name, class FString* NamePart, class FString* ExtensionPart)
+	void ULowEntryFileManagerLibrary::SplitName(
+const class FString& Name
+, 
+class FString* NamePart
+, 
+class FString* ExtensionPart
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1245,6 +1414,8 @@ namespace CG
 			*ExtensionPart = params.ExtensionPart;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1254,7 +1425,11 @@ namespace CG
 	 * 		class FString                                      File                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FDateTime                                   Timestamp                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerLibrary::SetFileTimestamp(const class FString& File, const struct FDateTime& Timestamp)
+	void ULowEntryFileManagerLibrary::SetFileTimestamp(
+const class FString& File
+, 
+const struct FDateTime& Timestamp
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1273,6 +1448,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1282,7 +1459,11 @@ namespace CG
 	 * 		class FString                                      File                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               ReadOnly                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerLibrary::SetFileReadOnly(const class FString& File, bool ReadOnly)
+	void ULowEntryFileManagerLibrary::SetFileReadOnly(
+const class FString& File
+, 
+bool ReadOnly
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1301,6 +1482,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1310,7 +1493,11 @@ namespace CG
 	 * 		class FString                                      File                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<unsigned char>                              Data                                                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerLibrary::SetFileData(const class FString& File, TArray<unsigned char> Data)
+	void ULowEntryFileManagerLibrary::SetFileData(
+const class FString& File
+, 
+TArray<unsigned char> Data
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1329,6 +1516,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1338,7 +1527,11 @@ namespace CG
 	 * 		class FString                                      String                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      ReplacementCharacter                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString ULowEntryFileManagerLibrary::ReplaceInvalidPathCharacters(const class FString& String, const class FString& ReplacementCharacter)
+	class FString ULowEntryFileManagerLibrary::ReplaceInvalidPathCharacters(
+const class FString& String
+, 
+const class FString& ReplacementCharacter
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1359,6 +1552,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1368,7 +1563,11 @@ namespace CG
 	 * 		class FString                                      String                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      ReplacementCharacter                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString ULowEntryFileManagerLibrary::ReplaceInvalidFilenameCharacters(const class FString& String, const class FString& ReplacementCharacter)
+	class FString ULowEntryFileManagerLibrary::ReplaceInvalidFilenameCharacters(
+const class FString& String
+, 
+const class FString& ReplacementCharacter
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1389,6 +1588,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1397,7 +1598,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      String                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString ULowEntryFileManagerLibrary::ReplaceBackslashesBySlashes(const class FString& String)
+	class FString ULowEntryFileManagerLibrary::ReplaceBackslashesBySlashes(
+const class FString& String
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1416,6 +1619,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1424,7 +1629,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      String                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString ULowEntryFileManagerLibrary::RemoveInvalidPathCharacters(const class FString& String)
+	class FString ULowEntryFileManagerLibrary::RemoveInvalidPathCharacters(
+const class FString& String
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1443,6 +1650,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1451,7 +1660,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      String                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString ULowEntryFileManagerLibrary::RemoveInvalidFilenameCharacters(const class FString& String)
+	class FString ULowEntryFileManagerLibrary::RemoveInvalidFilenameCharacters(
+const class FString& String
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1470,6 +1681,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1478,7 +1691,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      RelativePath                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString ULowEntryFileManagerLibrary::RelativeToAbsolutePath(const class FString& RelativePath)
+	class FString ULowEntryFileManagerLibrary::RelativeToAbsolutePath(
+const class FString& RelativePath
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1497,6 +1712,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1506,7 +1723,11 @@ namespace CG
 	 * 		class FString                                      File                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      to                                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerLibrary::MoveFile(const class FString& File, const class FString& to)
+	void ULowEntryFileManagerLibrary::MoveFile(
+const class FString& File
+, 
+const class FString& to
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1525,6 +1746,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1535,7 +1758,13 @@ namespace CG
 	 * 		class FString                                      to                                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               OverrideExistingFiles                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerLibrary::MoveDirectory(const class FString& Directory, const class FString& to, bool OverrideExistingFiles)
+	void ULowEntryFileManagerLibrary::MoveDirectory(
+const class FString& Directory
+, 
+const class FString& to
+, 
+bool OverrideExistingFiles
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1556,6 +1785,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1564,7 +1795,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      File                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool ULowEntryFileManagerLibrary::IsFileReadOnlyBool(const class FString& File)
+	bool ULowEntryFileManagerLibrary::IsFileReadOnlyBool(
+const class FString& File
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1583,6 +1816,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1592,7 +1827,11 @@ namespace CG
 	 * 		class FString                                      File                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ELowEntryFileManagerYesNo                          Branch                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerLibrary::IsFileReadOnly(const class FString& File, ELowEntryFileManagerYesNo* Branch)
+	void ULowEntryFileManagerLibrary::IsFileReadOnly(
+const class FString& File
+, 
+ELowEntryFileManagerYesNo* Branch
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1613,6 +1852,8 @@ namespace CG
 			*Branch = params.Branch;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1621,7 +1862,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      File                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool ULowEntryFileManagerLibrary::IsFileEmptyBool(const class FString& File)
+	bool ULowEntryFileManagerLibrary::IsFileEmptyBool(
+const class FString& File
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1640,6 +1883,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1649,7 +1894,11 @@ namespace CG
 	 * 		class FString                                      File                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ELowEntryFileManagerYesNo                          Branch                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerLibrary::IsFileEmpty(const class FString& File, ELowEntryFileManagerYesNo* Branch)
+	void ULowEntryFileManagerLibrary::IsFileEmpty(
+const class FString& File
+, 
+ELowEntryFileManagerYesNo* Branch
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1670,6 +1919,8 @@ namespace CG
 			*Branch = params.Branch;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1678,7 +1929,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Directory                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool ULowEntryFileManagerLibrary::IsDirectoryEmptyBool(const class FString& Directory)
+	bool ULowEntryFileManagerLibrary::IsDirectoryEmptyBool(
+const class FString& Directory
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1697,6 +1950,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1706,7 +1961,11 @@ namespace CG
 	 * 		class FString                                      Directory                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ELowEntryFileManagerYesNo                          Branch                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerLibrary::IsDirectoryEmpty(const class FString& Directory, ELowEntryFileManagerYesNo* Branch)
+	void ULowEntryFileManagerLibrary::IsDirectoryEmpty(
+const class FString& Directory
+, 
+ELowEntryFileManagerYesNo* Branch
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1726,6 +1985,8 @@ namespace CG
 		if (Branch != nullptr)
 			*Branch = params.Branch;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1750,6 +2011,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1758,7 +2021,9 @@ namespace CG
 	 * Parameters:
 	 * 		ELowEntryFileManagerYesNo                          Branch                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerLibrary::HasDiskPaths(ELowEntryFileManagerYesNo* Branch)
+	void ULowEntryFileManagerLibrary::HasDiskPaths(
+ELowEntryFileManagerYesNo* Branch
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1776,6 +2041,8 @@ namespace CG
 		if (Branch != nullptr)
 			*Branch = params.Branch;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1800,6 +2067,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1822,6 +2091,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1846,6 +2117,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1868,6 +2141,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1892,6 +2167,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1914,6 +2191,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1938,6 +2217,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1946,7 +2227,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      File                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FDateTime ULowEntryFileManagerLibrary::GetFileTimestamp(const class FString& File)
+	struct FDateTime ULowEntryFileManagerLibrary::GetFileTimestamp(
+const class FString& File
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1965,6 +2248,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1973,7 +2258,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      File                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t ULowEntryFileManagerLibrary::GetFileSize(const class FString& File)
+	int32_t ULowEntryFileManagerLibrary::GetFileSize(
+const class FString& File
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1992,6 +2279,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2000,7 +2289,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Directory                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<class FString> ULowEntryFileManagerLibrary::GetFiles(const class FString& Directory)
+	TArray<class FString> ULowEntryFileManagerLibrary::GetFiles(
+const class FString& Directory
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2019,6 +2310,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2027,7 +2320,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Directory                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<class FString> ULowEntryFileManagerLibrary::GetFileNames(const class FString& Directory)
+	TArray<class FString> ULowEntryFileManagerLibrary::GetFileNames(
+const class FString& Directory
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2046,6 +2341,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2054,7 +2351,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      File                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<unsigned char> ULowEntryFileManagerLibrary::GetFileData(const class FString& File)
+	TArray<unsigned char> ULowEntryFileManagerLibrary::GetFileData(
+const class FString& File
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2073,6 +2372,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2081,7 +2382,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      File                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FDateTime ULowEntryFileManagerLibrary::GetFileAccessTimestamp(const class FString& File)
+	struct FDateTime ULowEntryFileManagerLibrary::GetFileAccessTimestamp(
+const class FString& File
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2099,6 +2402,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2123,6 +2428,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2145,6 +2452,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2169,6 +2478,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2192,6 +2503,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2200,7 +2513,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Directory                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<class FString> ULowEntryFileManagerLibrary::GetDirectoryNames(const class FString& Directory)
+	TArray<class FString> ULowEntryFileManagerLibrary::GetDirectoryNames(
+const class FString& Directory
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2219,6 +2534,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2227,7 +2544,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Path                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class ULowEntryFileManagerDirectory* ULowEntryFileManagerLibrary::GetDirectory(const class FString& Path)
+	class ULowEntryFileManagerDirectory* ULowEntryFileManagerLibrary::GetDirectory(
+const class FString& Path
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2246,6 +2565,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2254,7 +2575,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Directory                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<class FString> ULowEntryFileManagerLibrary::GetDirectories(const class FString& Directory)
+	TArray<class FString> ULowEntryFileManagerLibrary::GetDirectories(
+const class FString& Directory
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2272,6 +2595,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2296,6 +2621,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2319,6 +2646,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2327,7 +2656,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      File                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool ULowEntryFileManagerLibrary::FileExistsBool(const class FString& File)
+	bool ULowEntryFileManagerLibrary::FileExistsBool(
+const class FString& File
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2346,6 +2677,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2355,7 +2688,11 @@ namespace CG
 	 * 		class FString                                      File                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ELowEntryFileManagerYesNo                          Branch                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerLibrary::FileExists(const class FString& File, ELowEntryFileManagerYesNo* Branch)
+	void ULowEntryFileManagerLibrary::FileExists(
+const class FString& File
+, 
+ELowEntryFileManagerYesNo* Branch
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2376,6 +2713,8 @@ namespace CG
 			*Branch = params.Branch;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2390,7 +2729,21 @@ namespace CG
 	 * 		int32_t                                            Priority                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      OptionalWorkingDirectory                                   (Parm, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerLibrary::ExecuteFileAsync(const class FString& File, const class FString& Parameters, bool* Success, int32_t* ProcessID, bool Hidden, int32_t Priority, const class FString& OptionalWorkingDirectory)
+	void ULowEntryFileManagerLibrary::ExecuteFileAsync(
+const class FString& File
+, 
+const class FString& Parameters
+, 
+bool* Success
+, 
+int32_t* ProcessID
+, 
+bool Hidden
+, 
+int32_t Priority
+, 
+const class FString& OptionalWorkingDirectory
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2422,6 +2775,8 @@ namespace CG
 			*ProcessID = params.ProcessID;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2435,7 +2790,19 @@ namespace CG
 	 * 		class FString                                      StdOut                                                     (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      StdErr                                                     (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerLibrary::ExecuteFile(const class FString& File, const class FString& Parameters, bool* Success, int32_t* ReturnCode, class FString* StdOut, class FString* StdErr)
+	void ULowEntryFileManagerLibrary::ExecuteFile(
+const class FString& File
+, 
+const class FString& Parameters
+, 
+bool* Success
+, 
+int32_t* ReturnCode
+, 
+class FString* StdOut
+, 
+class FString* StdErr
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2467,6 +2834,8 @@ namespace CG
 			*StdErr = params.StdErr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2475,7 +2844,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Directory                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool ULowEntryFileManagerLibrary::DirectoryExistsBool(const class FString& Directory)
+	bool ULowEntryFileManagerLibrary::DirectoryExistsBool(
+const class FString& Directory
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2494,6 +2865,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2503,7 +2876,11 @@ namespace CG
 	 * 		class FString                                      Directory                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ELowEntryFileManagerYesNo                          Branch                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerLibrary::DirectoryExists(const class FString& Directory, ELowEntryFileManagerYesNo* Branch)
+	void ULowEntryFileManagerLibrary::DirectoryExists(
+const class FString& Directory
+, 
+ELowEntryFileManagerYesNo* Branch
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2524,6 +2901,8 @@ namespace CG
 			*Branch = params.Branch;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2532,7 +2911,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      File                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerLibrary::DeleteFile(const class FString& File)
+	void ULowEntryFileManagerLibrary::DeleteFile(
+const class FString& File
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2549,6 +2930,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2557,7 +2940,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Directory                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerLibrary::DeleteDirectory(const class FString& Directory)
+	void ULowEntryFileManagerLibrary::DeleteDirectory(
+const class FString& Directory
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2574,6 +2959,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2582,7 +2969,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Path                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerLibrary::CreateParentDirectory(const class FString& Path)
+	void ULowEntryFileManagerLibrary::CreateParentDirectory(
+const class FString& Path
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2599,6 +2988,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2607,7 +2998,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      File                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerLibrary::CreateNewFile(const class FString& File)
+	void ULowEntryFileManagerLibrary::CreateNewFile(
+const class FString& File
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2624,6 +3017,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2632,7 +3027,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Directory                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerLibrary::CreateNewDirectory(const class FString& Directory)
+	void ULowEntryFileManagerLibrary::CreateNewDirectory(
+const class FString& Directory
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2649,6 +3046,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2658,7 +3057,11 @@ namespace CG
 	 * 		class FString                                      File                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      to                                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerLibrary::CopyFile(const class FString& File, const class FString& to)
+	void ULowEntryFileManagerLibrary::CopyFile(
+const class FString& File
+, 
+const class FString& to
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2677,6 +3080,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2687,7 +3092,13 @@ namespace CG
 	 * 		class FString                                      to                                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               OverrideExistingFiles                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerLibrary::CopyDirectory(const class FString& Directory, const class FString& to, bool OverrideExistingFiles)
+	void ULowEntryFileManagerLibrary::CopyDirectory(
+const class FString& Directory
+, 
+const class FString& to
+, 
+bool OverrideExistingFiles
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2708,6 +3119,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2716,7 +3129,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      File                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerLibrary::ClearFile(const class FString& File)
+	void ULowEntryFileManagerLibrary::ClearFile(
+const class FString& File
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2733,6 +3148,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2741,7 +3158,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Directory                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerLibrary::ClearDirectory(const class FString& Directory)
+	void ULowEntryFileManagerLibrary::ClearDirectory(
+const class FString& Directory
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2758,6 +3177,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2767,7 +3188,11 @@ namespace CG
 	 * 		class FString                                      File                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<unsigned char>                              Data                                                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void ULowEntryFileManagerLibrary::AppendFileData(const class FString& File, TArray<unsigned char> Data)
+	void ULowEntryFileManagerLibrary::AppendFileData(
+const class FString& File
+, 
+TArray<unsigned char> Data
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2786,10 +3211,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULowEntryFileManagerLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction ULowEntryFileManagerLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULowEntryFileManagerLibrary::StaticClass()
@@ -2799,6 +3226,7 @@ namespace CG
 			ptr = UObject::FindClass("Class LowEntryFileManager.LowEntryFileManagerLibrary");
 		return ptr;
 	}
+
 
 }
 

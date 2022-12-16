@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * BlueprintGeneratedClass DmgTypeBP_Environmental.DmgTypeBP_Environmental_C
 	 * Size -> 0x0000 (FullSize[0x0040] - InheritedSize[0x0040])
@@ -21,6 +22,7 @@ namespace CG
 	class UDmgTypeBP_Environmental_C : public UDamageType
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
 

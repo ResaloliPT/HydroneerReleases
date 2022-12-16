@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -31,6 +32,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -39,7 +42,9 @@ namespace CG
 	 * Parameters:
 	 * 		class APlayerController*                           Player                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UInputLabel::MappingsChanged(class APlayerController* Player)
+	void UInputLabel::MappingsChanged(
+class APlayerController* Player
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -56,10 +61,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UInputLabel.StaticClass
+	 * 		Name   -> PredefinedFunction UInputLabel.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UInputLabel::StaticClass()
@@ -70,10 +77,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UActionLabel.StaticClass
+	 * 		Name   -> PredefinedFunction UActionLabel.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UActionLabel::StaticClass()
@@ -83,6 +92,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AutoSettingsInput.ActionLabel");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -105,6 +116,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -126,6 +139,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -134,7 +149,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FCapturedInput                              CapturedInput                                              (Parm, NativeAccessSpecifierPublic)
 	 */
-	void UInputMapping::ChordCaptured(const struct FCapturedInput& CapturedInput)
+	void UInputMapping::ChordCaptured(
+const struct FCapturedInput& CapturedInput
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -151,6 +168,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -159,7 +178,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FCapturedInput                              CapturedInput                                              (Parm, NativeAccessSpecifierPublic)
 	 */
-	void UInputMapping::BindChord(const struct FCapturedInput& CapturedInput)
+	void UInputMapping::BindChord(
+const struct FCapturedInput& CapturedInput
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -176,10 +197,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UInputMapping.StaticClass
+	 * 		Name   -> PredefinedFunction UInputMapping.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UInputMapping::StaticClass()
@@ -190,10 +213,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UActionMapping.StaticClass
+	 * 		Name   -> PredefinedFunction UActionMapping.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UActionMapping::StaticClass()
@@ -204,10 +229,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAutoSettingsInputConfig.StaticClass
+	 * 		Name   -> PredefinedFunction UAutoSettingsInputConfig.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAutoSettingsInputConfig::StaticClass()
@@ -218,10 +245,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAutoSettingsInputConfigInterface.StaticClass
+	 * 		Name   -> PredefinedFunction UAutoSettingsInputConfigInterface.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAutoSettingsInputConfigInterface::StaticClass()
@@ -232,6 +261,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -240,7 +271,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FGameplayTagContainer                       KeyIconTags                                                (Parm, NativeAccessSpecifierPublic)
 	 */
-	TArray<class UTexture*> UAutoSettingsInputProjectConfig::LoadKeyIcons(const struct FGameplayTagContainer& KeyIconTags)
+	TArray<class UTexture*> UAutoSettingsInputProjectConfig::LoadKeyIcons(
+const struct FGameplayTagContainer& KeyIconTags
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -259,6 +292,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -267,7 +302,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FGameplayTag UAutoSettingsInputProjectConfig::GetKeyGroupStatic(const struct FKey& Key)
+	struct FGameplayTag UAutoSettingsInputProjectConfig::GetKeyGroupStatic(
+const struct FKey& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -286,6 +323,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -294,7 +333,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FText UAutoSettingsInputProjectConfig::GetKeyFriendlyNameStatic(const struct FKey& Key)
+	class FText UAutoSettingsInputProjectConfig::GetKeyFriendlyNameStatic(
+const struct FKey& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -313,10 +354,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAutoSettingsInputProjectConfig.StaticClass
+	 * 		Name   -> PredefinedFunction UAutoSettingsInputProjectConfig.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAutoSettingsInputProjectConfig::StaticClass()
@@ -327,10 +370,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAutoSettingsInputSubsystem.StaticClass
+	 * 		Name   -> PredefinedFunction UAutoSettingsInputSubsystem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAutoSettingsInputSubsystem::StaticClass()
@@ -341,10 +386,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAutoSettingsInputValidationSubsystem.StaticClass
+	 * 		Name   -> PredefinedFunction UAutoSettingsInputValidationSubsystem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAutoSettingsInputValidationSubsystem::StaticClass()
@@ -355,6 +402,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -363,7 +412,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FPlayerInputMappings                        InputMappings                                              (Parm, NativeAccessSpecifierPublic)
 	 */
-	void UAutoSettingsPlayer::SaveInputMappings(const struct FPlayerInputMappings& InputMappings)
+	void UAutoSettingsPlayer::SaveInputMappings(
+const struct FPlayerInputMappings& InputMappings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -379,6 +430,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -403,6 +456,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -411,7 +466,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FPlayerInputMappings                        InputMappings                                              (Parm, OutParm, NativeAccessSpecifierPublic)
 	 */
-	bool UAutoSettingsPlayer::GetInputMappings(struct FPlayerInputMappings* InputMappings)
+	bool UAutoSettingsPlayer::GetInputMappings(
+struct FPlayerInputMappings* InputMappings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -431,6 +488,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -455,10 +514,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAutoSettingsPlayer.StaticClass
+	 * 		Name   -> PredefinedFunction UAutoSettingsPlayer.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAutoSettingsPlayer::StaticClass()
@@ -469,10 +530,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAxisLabel.StaticClass
+	 * 		Name   -> PredefinedFunction UAxisLabel.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAxisLabel::StaticClass()
@@ -483,10 +546,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAxisMapping.StaticClass
+	 * 		Name   -> PredefinedFunction UAxisMapping.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAxisMapping::StaticClass()
@@ -496,6 +561,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AutoSettingsInput.AxisMapping");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -520,6 +587,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -528,7 +597,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UBindCapturePrompt*                          PromptWidget                                               (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBindCaptureButton::InitializePrompt(class UBindCapturePrompt* PromptWidget)
+	void UBindCaptureButton::InitializePrompt(
+class UBindCapturePrompt* PromptWidget
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -545,6 +616,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -553,7 +626,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FCapturedInput                              CapturedInput                                              (Parm, NativeAccessSpecifierPublic)
 	 */
-	void UBindCaptureButton::ChordCaptured(const struct FCapturedInput& CapturedInput)
+	void UBindCaptureButton::ChordCaptured(
+const struct FCapturedInput& CapturedInput
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -570,10 +645,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBindCaptureButton.StaticClass
+	 * 		Name   -> PredefinedFunction UBindCaptureButton.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBindCaptureButton::StaticClass()
@@ -584,6 +661,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -592,7 +671,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FKey                                        PrimaryKey                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UBindCapturePrompt::IsKeyAllowed(const struct FKey& PrimaryKey)
+	bool UBindCapturePrompt::IsKeyAllowed(
+const struct FKey& PrimaryKey
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -610,6 +691,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -634,6 +717,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -655,10 +740,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBindCapturePrompt.StaticClass
+	 * 		Name   -> PredefinedFunction UBindCapturePrompt.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBindCapturePrompt::StaticClass()
@@ -669,6 +756,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -677,7 +766,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FGameplayTagContainer                       InGlobalIconTags                                           (Parm, NativeAccessSpecifierPublic)
 	 */
-	void UGlobalKeyIconTagManager::SetGlobalKeyIconTags(const struct FGameplayTagContainer& InGlobalIconTags)
+	void UGlobalKeyIconTagManager::SetGlobalKeyIconTags(
+const struct FGameplayTagContainer& InGlobalIconTags
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -694,6 +785,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -704,7 +797,13 @@ namespace CG
 	 * 		struct FGameplayTagContainer                       IconTags                                                   (Parm, NativeAccessSpecifierPublic)
 	 * 		float                                              AxisScale                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UTexture* UGlobalKeyIconTagManager::GetIconForKey(const struct FKey& InKey, const struct FGameplayTagContainer& IconTags, float AxisScale)
+	class UTexture* UGlobalKeyIconTagManager::GetIconForKey(
+const struct FKey& InKey
+, 
+const struct FGameplayTagContainer& IconTags
+, 
+float AxisScale
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -727,10 +826,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGlobalKeyIconTagManager.StaticClass
+	 * 		Name   -> PredefinedFunction UGlobalKeyIconTagManager.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGlobalKeyIconTagManager::StaticClass()
@@ -741,6 +842,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -750,7 +853,11 @@ namespace CG
 	 * 		class APlayerController*                           Player                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FGameplayTag                                KeyGroup                                                   (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UInputMappingManager::SetPlayerKeyGroupStatic(class APlayerController* Player, const struct FGameplayTag& KeyGroup)
+	void UInputMappingManager::SetPlayerKeyGroupStatic(
+class APlayerController* Player
+, 
+const struct FGameplayTag& KeyGroup
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -769,6 +876,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -778,7 +887,11 @@ namespace CG
 	 * 		class APlayerController*                           Player                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FInputMappingPreset                         Preset                                                     (Parm, NativeAccessSpecifierPublic)
 	 */
-	void UInputMappingManager::SetPlayerInputPresetStatic(class APlayerController* Player, const struct FInputMappingPreset& Preset)
+	void UInputMappingManager::SetPlayerInputPresetStatic(
+class APlayerController* Player
+, 
+const struct FInputMappingPreset& Preset
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -797,6 +910,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -806,7 +921,11 @@ namespace CG
 	 * 		class APlayerController*                           Player                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FGameplayTag                                PresetTag                                                  (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UInputMappingManager::SetPlayerInputPresetByTag(class APlayerController* Player, const struct FGameplayTag& PresetTag)
+	void UInputMappingManager::SetPlayerInputPresetByTag(
+class APlayerController* Player
+, 
+const struct FGameplayTag& PresetTag
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -825,6 +944,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -833,7 +954,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AActor*                                      DestroyedActor                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UInputMappingManager::OnRegisteredPlayerControllerDestroyed(class AActor* DestroyedActor)
+	void UInputMappingManager::OnRegisteredPlayerControllerDestroyed(
+class AActor* DestroyedActor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -850,6 +973,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -858,7 +983,9 @@ namespace CG
 	 * Parameters:
 	 * 		class APlayerController*                           Player                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UInputMappingManager::InitializePlayerInputOverridesStatic(class APlayerController* Player)
+	bool UInputMappingManager::InitializePlayerInputOverridesStatic(
+class APlayerController* Player
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -877,6 +1004,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -888,7 +1017,15 @@ namespace CG
 	 * 		TArray<struct FInputActionKeyMapping>              Actions                                                    (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FInputAxisKeyMapping>                Axes                                                       (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UInputMappingManager::GetPlayerMappingsByKey(class APlayerController* Player, const struct FKey& Key, TArray<struct FInputActionKeyMapping>* Actions, TArray<struct FInputAxisKeyMapping>* Axes)
+	void UInputMappingManager::GetPlayerMappingsByKey(
+class APlayerController* Player
+, 
+const struct FKey& Key
+, 
+TArray<struct FInputActionKeyMapping>* Actions
+, 
+TArray<struct FInputAxisKeyMapping>* Axes
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -914,6 +1051,8 @@ namespace CG
 			*Axes = params.Axes;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -922,7 +1061,9 @@ namespace CG
 	 * Parameters:
 	 * 		class APlayerController*                           Player                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FPlayerInputMappings UInputMappingManager::GetPlayerInputMappingsStatic(class APlayerController* Player)
+	struct FPlayerInputMappings UInputMappingManager::GetPlayerInputMappingsStatic(
+class APlayerController* Player
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -941,6 +1082,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -952,7 +1095,15 @@ namespace CG
 	 * 		float                                              Scale                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            MappingGroup                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FInputAxisKeyMapping UInputMappingManager::GetPlayerAxisMappingStatic(class APlayerController* Player, const class FName& AxisName, float Scale, int32_t MappingGroup)
+	struct FInputAxisKeyMapping UInputMappingManager::GetPlayerAxisMappingStatic(
+class APlayerController* Player
+, 
+const class FName& AxisName
+, 
+float Scale
+, 
+int32_t MappingGroup
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -977,6 +1128,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -990,7 +1143,19 @@ namespace CG
 	 * 		struct FGameplayTag                                KeyGroup                                                   (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bUsePlayerKeyGroup                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<struct FInputAxisKeyMapping> UInputMappingManager::GetPlayerAxisMappings(class APlayerController* Player, const class FName& AxisName, float Scale, int32_t MappingGroup, const struct FGameplayTag& KeyGroup, bool bUsePlayerKeyGroup)
+	TArray<struct FInputAxisKeyMapping> UInputMappingManager::GetPlayerAxisMappings(
+class APlayerController* Player
+, 
+const class FName& AxisName
+, 
+float Scale
+, 
+int32_t MappingGroup
+, 
+const struct FGameplayTag& KeyGroup
+, 
+bool bUsePlayerKeyGroup
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1019,6 +1184,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1032,7 +1199,19 @@ namespace CG
 	 * 		struct FGameplayTag                                KeyGroup                                                   (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bUsePlayerKeyGroup                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FInputAxisKeyMapping UInputMappingManager::GetPlayerAxisMapping(class APlayerController* Player, const class FName& AxisName, float Scale, int32_t MappingGroup, const struct FGameplayTag& KeyGroup, bool bUsePlayerKeyGroup)
+	struct FInputAxisKeyMapping UInputMappingManager::GetPlayerAxisMapping(
+class APlayerController* Player
+, 
+const class FName& AxisName
+, 
+float Scale
+, 
+int32_t MappingGroup
+, 
+const struct FGameplayTag& KeyGroup
+, 
+bool bUsePlayerKeyGroup
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1061,6 +1240,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1071,7 +1252,13 @@ namespace CG
 	 * 		class FName                                        ActionName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            MappingGroup                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FInputActionKeyMapping UInputMappingManager::GetPlayerActionMappingStatic(class APlayerController* Player, const class FName& ActionName, int32_t MappingGroup)
+	struct FInputActionKeyMapping UInputMappingManager::GetPlayerActionMappingStatic(
+class APlayerController* Player
+, 
+const class FName& ActionName
+, 
+int32_t MappingGroup
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1094,6 +1281,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1106,7 +1295,17 @@ namespace CG
 	 * 		struct FGameplayTag                                KeyGroup                                                   (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bUsePlayerKeyGroup                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<struct FInputActionKeyMapping> UInputMappingManager::GetPlayerActionMappings(class APlayerController* Player, const class FName& ActionName, int32_t MappingGroup, const struct FGameplayTag& KeyGroup, bool bUsePlayerKeyGroup)
+	TArray<struct FInputActionKeyMapping> UInputMappingManager::GetPlayerActionMappings(
+class APlayerController* Player
+, 
+const class FName& ActionName
+, 
+int32_t MappingGroup
+, 
+const struct FGameplayTag& KeyGroup
+, 
+bool bUsePlayerKeyGroup
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1133,6 +1332,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1145,7 +1346,17 @@ namespace CG
 	 * 		struct FGameplayTag                                KeyGroup                                                   (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bUsePlayerKeyGroup                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FInputActionKeyMapping UInputMappingManager::GetPlayerActionMapping(class APlayerController* Player, const class FName& ActionName, int32_t MappingGroup, const struct FGameplayTag& KeyGroup, bool bUsePlayerKeyGroup)
+	struct FInputActionKeyMapping UInputMappingManager::GetPlayerActionMapping(
+class APlayerController* Player
+, 
+const class FName& ActionName
+, 
+int32_t MappingGroup
+, 
+const struct FGameplayTag& KeyGroup
+, 
+bool bUsePlayerKeyGroup
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1172,6 +1383,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1195,6 +1408,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1206,7 +1421,15 @@ namespace CG
 	 * 		int32_t                                            MappingGroup                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bAnyKeyGroup                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UInputMappingManager::AddPlayerAxisOverrideStatic(class APlayerController* Player, const struct FInputAxisKeyMapping& NewMapping, int32_t MappingGroup, bool bAnyKeyGroup)
+	void UInputMappingManager::AddPlayerAxisOverrideStatic(
+class APlayerController* Player
+, 
+const struct FInputAxisKeyMapping& NewMapping
+, 
+int32_t MappingGroup
+, 
+bool bAnyKeyGroup
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1229,6 +1452,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1240,7 +1465,15 @@ namespace CG
 	 * 		int32_t                                            MappingGroup                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bAnyKeyGroup                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UInputMappingManager::AddPlayerAxisOverride(class APlayerController* Player, const struct FInputAxisKeyMapping& NewMapping, int32_t MappingGroup, bool bAnyKeyGroup)
+	void UInputMappingManager::AddPlayerAxisOverride(
+class APlayerController* Player
+, 
+const struct FInputAxisKeyMapping& NewMapping
+, 
+int32_t MappingGroup
+, 
+bool bAnyKeyGroup
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1263,6 +1496,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1274,7 +1509,15 @@ namespace CG
 	 * 		int32_t                                            MappingGroup                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bAnyKeyGroup                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UInputMappingManager::AddPlayerActionOverrideStatic(class APlayerController* Player, const struct FInputActionKeyMapping& NewMapping, int32_t MappingGroup, bool bAnyKeyGroup)
+	void UInputMappingManager::AddPlayerActionOverrideStatic(
+class APlayerController* Player
+, 
+const struct FInputActionKeyMapping& NewMapping
+, 
+int32_t MappingGroup
+, 
+bool bAnyKeyGroup
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1297,6 +1540,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1308,7 +1553,15 @@ namespace CG
 	 * 		int32_t                                            MappingGroup                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bAnyKeyGroup                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UInputMappingManager::AddPlayerActionOverride(class APlayerController* Player, const struct FInputActionKeyMapping& NewMapping, int32_t MappingGroup, bool bAnyKeyGroup)
+	void UInputMappingManager::AddPlayerActionOverride(
+class APlayerController* Player
+, 
+const struct FInputActionKeyMapping& NewMapping
+, 
+int32_t MappingGroup
+, 
+bool bAnyKeyGroup
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1331,10 +1584,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UInputMappingManager.StaticClass
+	 * 		Name   -> PredefinedFunction UInputMappingManager.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UInputMappingManager::StaticClass()
@@ -1344,6 +1599,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AutoSettingsInput.InputMappingManager");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1366,6 +1623,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1386,6 +1645,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1410,6 +1671,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1432,6 +1695,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1456,6 +1721,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1478,6 +1745,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1502,6 +1771,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1524,6 +1795,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1548,10 +1821,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UKeyLabel.StaticClass
+	 * 		Name   -> PredefinedFunction UKeyLabel.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UKeyLabel::StaticClass()
@@ -1561,6 +1836,7 @@ namespace CG
 			ptr = UObject::FindClass("Class AutoSettingsInput.KeyLabel");
 		return ptr;
 	}
+
 
 }
 

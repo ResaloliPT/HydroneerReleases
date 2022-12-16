@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * Class VoxelNiagara.NiagaraDataInterfaceVoxelDataAsset
 	 * Size -> 0x0008 (FullSize[0x0040] - InheritedSize[0x0038])
@@ -21,9 +22,12 @@ namespace CG
 	class UNiagaraDataInterfaceVoxelDataAsset : public UNiagaraDataInterface
 	{
 	public:
-		class UVoxelDataAsset*                                     Asset;                                                   // 0x0038(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		class UVoxelDataAsset*                                   Asset;                                                   // 0x0038(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
 

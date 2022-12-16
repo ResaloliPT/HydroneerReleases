@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -31,6 +32,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -39,7 +42,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UDefaultKeyLabel_C::ExecuteUbergraph_DefaultKeyLabel(int32_t EntryPoint)
+	void UDefaultKeyLabel_C::ExecuteUbergraph_DefaultKeyLabel(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -56,10 +61,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDefaultKeyLabel_C.StaticClass
+	 * 		Name   -> PredefinedFunction UDefaultKeyLabel_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDefaultKeyLabel_C::StaticClass()
@@ -69,6 +76,7 @@ namespace CG
 			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass DefaultKeyLabel.DefaultKeyLabel_C");
 		return ptr;
 	}
+
 
 }
 

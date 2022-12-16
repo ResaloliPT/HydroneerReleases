@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+
 	/**
 	 * Enum SteamCoreWeb.ESteamJsonResult
 	 */
@@ -23,6 +24,8 @@ namespace CG
 		NotFound = 1,
 		MAX      = 2
 	};
+
+
 
 	/**
 	 * Enum SteamCoreWeb.ESteamValueType
@@ -34,6 +37,8 @@ namespace CG
 		BOOL   = 2,
 		MAX    = 3
 	};
+
+
 
 	/**
 	 * Enum SteamCoreWeb.ESubsystemWeb
@@ -69,6 +74,8 @@ namespace CG
 		MAX                 = 26
 	};
 
+
+
 	/**
 	 * Enum SteamCoreWeb.ESteamCoreWebLobbyType
 	 */
@@ -80,6 +87,8 @@ namespace CG
 		TypeInvisible = 3,
 		MAX           = 4
 	};
+
+
 
 	/**
 	 * Enum SteamCoreWeb.EVanityUrlType
@@ -95,6 +104,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+
 	/**
 	 * ScriptStruct SteamCoreWeb.SteamCoreJson
 	 * Size -> 0x0028
@@ -102,12 +112,24 @@ namespace CG
 	struct FSteamCoreJson
 	{
 	public:
-		class FString                                              Key;                                                     // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                              String;                                                  // 0x0010(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    Number;                                                  // 0x0020(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       _bool_;                                                  // 0x0024(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESteamValueType                                            Type;                                                    // 0x0025(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_6FEV[0x2];                                   // 0x0026(0x0002) MISSED OFFSET (PADDING)
+
+		class FString                                            Key;                                                     // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FString                                            String;                                                  // 0x0010(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  Number;                                                  // 0x0020(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     _bool_;                                                  // 0x0024(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		ESteamValueType                                          Type;                                                    // 0x0025(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_61VQ[0x2];                                   // 0x0026(0x0002) MISSED OFFSET (PADDING)
+
 	};
 
 }

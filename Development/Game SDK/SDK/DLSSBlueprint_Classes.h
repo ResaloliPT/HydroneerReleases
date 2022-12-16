@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * Class DLSSBlueprint.DLSSLibrary
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
@@ -21,18 +22,61 @@ namespace CG
 	class UDLSSLibrary : public UBlueprintFunctionLibrary
 	{
 	public:
-		void SetDLSSSharpness(float Sharpness);
-		void SetDLSSMode(EUDLSSMode DLSSMode);
+
+		void SetDLSSSharpness(
+float Sharpness
+);
+
+		void SetDLSSMode(
+EUDLSSMode DLSSMode
+);
+
 		EUDLSSSupport QueryDLSSSupport();
+
 		bool IsDLSSSupported();
-		bool IsDLSSModeSupported(EUDLSSMode DLSSMode);
+
+		bool IsDLSSModeSupported(
+EUDLSSMode DLSSMode
+);
+
 		TArray<EUDLSSMode> GetSupportedDLSSModes();
+
 		float GetDLSSSharpness();
-		void GetDLSSScreenPercentageRange(float* MinScreenPercentage, float* MaxScreenPercentage);
-		void GetDLSSModeInformation(EUDLSSMode DLSSMode, const struct FVector2D& ScreenResolution, bool* bIsSupported, float* OptimalScreenPercentage, bool* bIsFixedScreenPercentage, float* MinScreenPercentage, float* MaxScreenPercentage, float* OptimalSharpness);
+
+		void GetDLSSScreenPercentageRange(
+float* MinScreenPercentage
+, 
+float* MaxScreenPercentage
+);
+
+		void GetDLSSModeInformation(
+EUDLSSMode DLSSMode
+, 
+const struct FVector2D& ScreenResolution
+, 
+bool* bIsSupported
+, 
+float* OptimalScreenPercentage
+, 
+bool* bIsFixedScreenPercentage
+, 
+float* MinScreenPercentage
+, 
+float* MaxScreenPercentage
+, 
+float* OptimalSharpness
+);
+
 		EUDLSSMode GetDLSSMode();
-		void GetDLSSMinimumDriverVersion(int32_t* MinDriverVersionMajor, int32_t* MinDriverVersionMinor);
+
+		void GetDLSSMinimumDriverVersion(
+int32_t* MinDriverVersionMajor
+, 
+int32_t* MinDriverVersionMinor
+);
+
 		EUDLSSMode GetDefaultDLSSMode();
+
 		static UClass* StaticClass();
 	};
 

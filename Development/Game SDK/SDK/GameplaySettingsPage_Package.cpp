@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -31,6 +32,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -39,7 +42,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Value                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	 */
-	void UGameplaySettingsPage_C::LocationIndicatorSwatchSelected(const class FString& Value)
+	void UGameplaySettingsPage_C::LocationIndicatorSwatchSelected(
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -56,6 +61,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -64,7 +71,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UGameplaySettingsPage_C::ExecuteUbergraph_GameplaySettingsPage(int32_t EntryPoint)
+	void UGameplaySettingsPage_C::ExecuteUbergraph_GameplaySettingsPage(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -81,10 +90,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGameplaySettingsPage_C.StaticClass
+	 * 		Name   -> PredefinedFunction UGameplaySettingsPage_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGameplaySettingsPage_C::StaticClass()
@@ -94,6 +105,7 @@ namespace CG
 			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass GameplaySettingsPage.GameplaySettingsPage_C");
 		return ptr;
 	}
+
 
 }
 

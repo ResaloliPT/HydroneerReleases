@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+
 	/**
 	 * Enum ChaosCloth.EChaosClothTetherMode
 	 */
@@ -25,6 +26,8 @@ namespace CG
 		MaxChaosClothTetherMode      = 3,
 		MAX                          = 4
 	};
+
+
 
 	/**
 	 * Enum ChaosCloth.EChaosWeightMapTarget

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,15 +10,67 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentCutVeg.BP_ParentCutVeg_C.SetResourceMesh
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentCutVeg_C::SetResourceMesh()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentCutVeg.BP_ParentCutVeg_C.SetResourceMesh");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentCutVeg.BP_ParentCutVeg_C.UserConstructionScript
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentCutVeg_C::UserConstructionScript()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentCutVeg.BP_ParentCutVeg_C.UserConstructionScript");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_ParentCutVeg.BP_ParentCutVeg_C.InWater
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               WaterBody_                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               WaterBody                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		class UPrimitiveComponent*                         Comp                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentCutVeg_C::InWater(bool WaterBody_)
+	void ABP_ParentCutVeg_C::InWater(
+bool WaterBody
+, 
+class UPrimitiveComponent* Comp
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -26,14 +78,18 @@ namespace CG
 		
 		struct
 		{
-			bool                                               WaterBody_;
+			bool                                               WaterBody;
+			class UPrimitiveComponent*                         Comp;
 		} params;
-		params.WaterBody_ = WaterBody_;
+		params.WaterBody = WaterBody;
+		params.Comp = Comp;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -56,6 +112,54 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentCutVeg.BP_ParentCutVeg_C.HasNoWater
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentCutVeg_C::HasNoWater()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentCutVeg.BP_ParentCutVeg_C.HasNoWater");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentCutVeg.BP_ParentCutVeg_C.HasWater
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentCutVeg_C::HasWater()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentCutVeg.BP_ParentCutVeg_C.HasWater");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -64,7 +168,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              Heat                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentCutVeg_C::HeatUpdated(float Heat)
+	void ABP_ParentCutVeg_C::HeatUpdated(
+float Heat
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -80,6 +186,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -102,15 +210,19 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_ParentCutVeg.BP_ParentCutVeg_C.InFire
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               SlowBurn_                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               SlowBurn                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_ParentCutVeg_C::InFire(bool SlowBurn_)
+	void ABP_ParentCutVeg_C::InFire(
+bool SlowBurn
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -118,14 +230,16 @@ namespace CG
 		
 		struct
 		{
-			bool                                               SlowBurn_;
+			bool                                               SlowBurn;
 		} params;
-		params.SlowBurn_ = SlowBurn_;
+		params.SlowBurn = SlowBurn;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -148,6 +262,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -163,7 +279,23 @@ namespace CG
 	 * 		struct FVector                                     NormalImpulse                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		struct FHitResult                                  Hit                                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	 */
-	void ABP_ParentCutVeg_C::ReceiveHit(class UPrimitiveComponent* MyComp, class AActor* Other, class UPrimitiveComponent* OtherComp, bool bSelfMoved, const struct FVector& HitLocation, const struct FVector& HitNormal, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
+	void ABP_ParentCutVeg_C::ReceiveHit(
+class UPrimitiveComponent* MyComp
+, 
+class AActor* Other
+, 
+class UPrimitiveComponent* OtherComp
+, 
+bool bSelfMoved
+, 
+const struct FVector& HitLocation
+, 
+const struct FVector& HitNormal
+, 
+const struct FVector& NormalImpulse
+, 
+const struct FHitResult& Hit
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -194,6 +326,31 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentCutVeg.BP_ParentCutVeg_C.ActorLoaded
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentCutVeg_C::ActorLoaded()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentCutVeg.BP_ParentCutVeg_C.ActorLoaded");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -202,7 +359,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentCutVeg_C::ExecuteUbergraph_BP_ParentCutVeg(int32_t EntryPoint)
+	void ABP_ParentCutVeg_C::ExecuteUbergraph_BP_ParentCutVeg(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -219,10 +378,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ABP_ParentCutVeg_C.StaticClass
+	 * 		Name   -> PredefinedFunction ABP_ParentCutVeg_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ABP_ParentCutVeg_C::StaticClass()
@@ -232,6 +393,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentCutVeg.BP_ParentCutVeg_C");
 		return ptr;
 	}
+
 
 }
 

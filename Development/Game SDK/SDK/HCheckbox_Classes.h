@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * BlueprintGeneratedClass HCheckbox.HCheckbox_C
 	 * Size -> 0x0000 (FullSize[0x0770] - InheritedSize[0x0770])
@@ -21,6 +22,7 @@ namespace CG
 	class UHCheckbox_C : public UCheckBox
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
 

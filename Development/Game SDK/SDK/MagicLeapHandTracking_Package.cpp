@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULiveLinkMagicLeapHandTrackingSourceFactory.StaticClass
+	 * 		Name   -> PredefinedFunction ULiveLinkMagicLeapHandTrackingSourceFactory.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULiveLinkMagicLeapHandTrackingSourceFactory::StaticClass()
@@ -24,6 +25,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -33,7 +36,11 @@ namespace CG
 	 * 		EMagicLeapHandTrackingGesture                      Gesture                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Confidence                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMagicLeapHandTrackingFunctionLibrary::SetStaticGestureConfidenceThreshold(EMagicLeapHandTrackingGesture Gesture, float Confidence)
+	void UMagicLeapHandTrackingFunctionLibrary::SetStaticGestureConfidenceThreshold(
+EMagicLeapHandTrackingGesture Gesture
+, 
+float Confidence
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -52,6 +59,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -63,7 +72,15 @@ namespace CG
 	 * 		EMagicLeapHandTrackingGestureFilterLevel           GestureFilterLevel                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bTrackingEnabled                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapHandTrackingFunctionLibrary::SetConfiguration(TArray<EMagicLeapHandTrackingGesture> StaticGesturesToActivate, EMagicLeapHandTrackingKeypointFilterLevel KeypointsFilterLevel, EMagicLeapHandTrackingGestureFilterLevel GestureFilterLevel, bool bTrackingEnabled)
+	bool UMagicLeapHandTrackingFunctionLibrary::SetConfiguration(
+TArray<EMagicLeapHandTrackingGesture> StaticGesturesToActivate
+, 
+EMagicLeapHandTrackingKeypointFilterLevel KeypointsFilterLevel
+, 
+EMagicLeapHandTrackingGestureFilterLevel GestureFilterLevel
+, 
+bool bTrackingEnabled
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -88,6 +105,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -96,7 +115,9 @@ namespace CG
 	 * Parameters:
 	 * 		EControllerHand                                    Hand                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapHandTrackingFunctionLibrary::IsHoldingControl(EControllerHand Hand)
+	bool UMagicLeapHandTrackingFunctionLibrary::IsHoldingControl(
+EControllerHand Hand
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -115,6 +136,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -123,7 +146,9 @@ namespace CG
 	 * Parameters:
 	 * 		EMagicLeapHandTrackingGesture                      Gesture                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float UMagicLeapHandTrackingFunctionLibrary::GetStaticGestureConfidenceThreshold(EMagicLeapHandTrackingGesture Gesture)
+	float UMagicLeapHandTrackingFunctionLibrary::GetStaticGestureConfidenceThreshold(
+EMagicLeapHandTrackingGesture Gesture
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -142,6 +167,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -152,7 +179,13 @@ namespace CG
 	 * 		EMagicLeapHandTrackingKeypoint                     Keypoint                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FName                                        OutMotionSource                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapHandTrackingFunctionLibrary::GetMotionSourceForHandKeypoint(EControllerHand Hand, EMagicLeapHandTrackingKeypoint Keypoint, class FName* OutMotionSource)
+	bool UMagicLeapHandTrackingFunctionLibrary::GetMotionSourceForHandKeypoint(
+EControllerHand Hand
+, 
+EMagicLeapHandTrackingKeypoint Keypoint
+, 
+class FName* OutMotionSource
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -177,6 +210,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -185,7 +220,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FLiveLinkSourceHandle                       SourceHandle                                               (Parm, OutParm, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapHandTrackingFunctionLibrary::GetMagicLeapHandTrackingLiveLinkSource(struct FLiveLinkSourceHandle* SourceHandle)
+	bool UMagicLeapHandTrackingFunctionLibrary::GetMagicLeapHandTrackingLiveLinkSource(
+struct FLiveLinkSourceHandle* SourceHandle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -206,6 +243,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -216,7 +255,13 @@ namespace CG
 	 * 		EMagicLeapGestureTransformSpace                    TransformSpace                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FTransform                                  Secondary                                                  (Parm, OutParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapHandTrackingFunctionLibrary::GetHandThumbTip(EControllerHand Hand, EMagicLeapGestureTransformSpace TransformSpace, struct FTransform* Secondary)
+	bool UMagicLeapHandTrackingFunctionLibrary::GetHandThumbTip(
+EControllerHand Hand
+, 
+EMagicLeapGestureTransformSpace TransformSpace
+, 
+struct FTransform* Secondary
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -241,6 +286,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -250,7 +297,11 @@ namespace CG
 	 * 		class FName                                        MotionSource                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EMagicLeapHandTrackingKeypoint                     OutKeyPoint                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapHandTrackingFunctionLibrary::GetHandKeypointForMotionSource(const class FName& MotionSource, EMagicLeapHandTrackingKeypoint* OutKeyPoint)
+	bool UMagicLeapHandTrackingFunctionLibrary::GetHandKeypointForMotionSource(
+const class FName& MotionSource
+, 
+EMagicLeapHandTrackingKeypoint* OutKeyPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -273,6 +324,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -283,7 +336,13 @@ namespace CG
 	 * 		EMagicLeapGestureTransformSpace                    TransformSpace                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FTransform                                  Pointer                                                    (Parm, OutParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapHandTrackingFunctionLibrary::GetHandIndexFingerTip(EControllerHand Hand, EMagicLeapGestureTransformSpace TransformSpace, struct FTransform* Pointer)
+	bool UMagicLeapHandTrackingFunctionLibrary::GetHandIndexFingerTip(
+EControllerHand Hand
+, 
+EMagicLeapGestureTransformSpace TransformSpace
+, 
+struct FTransform* Pointer
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -308,6 +367,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -317,7 +378,11 @@ namespace CG
 	 * 		EControllerHand                                    Hand                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector                                     HandCenterNormalized                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapHandTrackingFunctionLibrary::GetHandCenterNormalized(EControllerHand Hand, struct FVector* HandCenterNormalized)
+	bool UMagicLeapHandTrackingFunctionLibrary::GetHandCenterNormalized(
+EControllerHand Hand
+, 
+struct FVector* HandCenterNormalized
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -340,6 +405,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -349,7 +416,11 @@ namespace CG
 	 * 		EControllerHand                                    Hand                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FTransform                                  HandCenter                                                 (Parm, OutParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapHandTrackingFunctionLibrary::GetHandCenter(EControllerHand Hand, struct FTransform* HandCenter)
+	bool UMagicLeapHandTrackingFunctionLibrary::GetHandCenter(
+EControllerHand Hand
+, 
+struct FTransform* HandCenter
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -372,6 +443,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -383,7 +456,15 @@ namespace CG
 	 * 		EMagicLeapGestureTransformSpace                    TransformSpace                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FTransform                                  Transform                                                  (Parm, OutParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapHandTrackingFunctionLibrary::GetGestureKeypointTransform(EControllerHand Hand, EMagicLeapHandTrackingKeypoint Keypoint, EMagicLeapGestureTransformSpace TransformSpace, struct FTransform* Transform)
+	bool UMagicLeapHandTrackingFunctionLibrary::GetGestureKeypointTransform(
+EControllerHand Hand
+, 
+EMagicLeapHandTrackingKeypoint Keypoint
+, 
+EMagicLeapGestureTransformSpace TransformSpace
+, 
+struct FTransform* Transform
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -410,6 +491,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -419,7 +502,11 @@ namespace CG
 	 * 		EControllerHand                                    Hand                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FTransform>                          Keypoints                                                  (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapHandTrackingFunctionLibrary::GetGestureKeypoints(EControllerHand Hand, TArray<struct FTransform>* Keypoints)
+	bool UMagicLeapHandTrackingFunctionLibrary::GetGestureKeypoints(
+EControllerHand Hand
+, 
+TArray<struct FTransform>* Keypoints
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -442,6 +529,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -451,7 +540,11 @@ namespace CG
 	 * 		EControllerHand                                    Hand                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Confidence                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapHandTrackingFunctionLibrary::GetCurrentGestureConfidence(EControllerHand Hand, float* Confidence)
+	bool UMagicLeapHandTrackingFunctionLibrary::GetCurrentGestureConfidence(
+EControllerHand Hand
+, 
+float* Confidence
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -474,6 +567,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -483,7 +578,11 @@ namespace CG
 	 * 		EControllerHand                                    Hand                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EMagicLeapHandTrackingGesture                      Gesture                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapHandTrackingFunctionLibrary::GetCurrentGesture(EControllerHand Hand, EMagicLeapHandTrackingGesture* Gesture)
+	bool UMagicLeapHandTrackingFunctionLibrary::GetCurrentGesture(
+EControllerHand Hand
+, 
+EMagicLeapHandTrackingGesture* Gesture
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -506,6 +605,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -517,7 +618,15 @@ namespace CG
 	 * 		EMagicLeapHandTrackingGestureFilterLevel           GestureFilterLevel                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bTrackingEnabled                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapHandTrackingFunctionLibrary::GetConfiguration(TArray<EMagicLeapHandTrackingGesture>* ActiveStaticGestures, EMagicLeapHandTrackingKeypointFilterLevel* KeypointsFilterLevel, EMagicLeapHandTrackingGestureFilterLevel* GestureFilterLevel, bool* bTrackingEnabled)
+	bool UMagicLeapHandTrackingFunctionLibrary::GetConfiguration(
+TArray<EMagicLeapHandTrackingGesture>* ActiveStaticGestures
+, 
+EMagicLeapHandTrackingKeypointFilterLevel* KeypointsFilterLevel
+, 
+EMagicLeapHandTrackingGestureFilterLevel* GestureFilterLevel
+, 
+bool* bTrackingEnabled
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -547,10 +656,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMagicLeapHandTrackingFunctionLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UMagicLeapHandTrackingFunctionLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMagicLeapHandTrackingFunctionLibrary::StaticClass()
@@ -560,6 +671,7 @@ namespace CG
 			ptr = UObject::FindClass("Class MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary");
 		return ptr;
 	}
+
 
 }
 

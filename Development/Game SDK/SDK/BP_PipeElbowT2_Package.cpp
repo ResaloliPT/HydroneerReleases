@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ABP_PipeElbowT2_C.StaticClass
+	 * 		Name   -> PredefinedFunction ABP_PipeElbowT2_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ABP_PipeElbowT2_C::StaticClass()
@@ -23,6 +24,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass BP_PipeElbowT2.BP_PipeElbowT2_C");
 		return ptr;
 	}
+
 
 }
 

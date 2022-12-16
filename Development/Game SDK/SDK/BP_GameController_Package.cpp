@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18,7 +19,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<class UActorComponent*>                     Components                                                 (Parm, OutParm, ContainsInstancedReference)
 	 */
-	void ABP_GameController_C::ComponentsToSave(TArray<class UActorComponent*>* Components)
+	void ABP_GameController_C::ComponentsToSave(
+TArray<class UActorComponent*>* Components
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -36,6 +39,83 @@ namespace CG
 		if (Components != nullptr)
 			*Components = params.Components;
 	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_GameController.BP_GameController_C.GetBoxBoundsInVoxel
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class AVoxelWorld*                                 VoxelWorld                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		struct FVector                                     Location                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		float                                              Bounds                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	struct FVoxelIntBox ABP_GameController_C::GetBoxBoundsInVoxel(
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVector& Location
+, 
+float Bounds
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.GetBoxBoundsInVoxel");
+		
+		struct
+		{
+			class AVoxelWorld*                                 VoxelWorld;
+			struct FVector                                     Location;
+			float                                              Bounds;
+		} params;
+		params.VoxelWorld = VoxelWorld;
+		params.Location = Location;
+		params.Bounds = Bounds;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_GameController.BP_GameController_C.Scan for Items in Voxel Dirt
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FVector                                     Location                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		float                                              Rad                                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_GameController_C::Scan_for_Items_in_Voxel_Dirt(
+const struct FVector& Location
+, 
+float Rad
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.Scan for Items in Voxel Dirt");
+		
+		struct
+		{
+			struct FVector                                     Location;
+			float                                              Rad;
+		} params;
+		params.Location = Location;
+		params.Rad = Rad;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
 
 	/**
 	 * Function:
@@ -58,6 +138,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -78,6 +160,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -102,6 +186,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -110,7 +196,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      SaveSlot                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::DeleteSaveFile(const class FString& SaveSlot)
+	void ABP_GameController_C::DeleteSaveFile(
+const class FString& SaveSlot
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -127,6 +215,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -135,7 +225,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      SourceString                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	 */
-	class FString ABP_GameController_C::FormatCloudPathToLocalPath(const class FString& SourceString)
+	class FString ABP_GameController_C::FormatCloudPathToLocalPath(
+const class FString& SourceString
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -154,6 +246,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -164,7 +258,13 @@ namespace CG
 	 * 		class FString                                      FilePath                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	 * 		class FString                                      CloudPath                                                  (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::FormatSaveSlotCloudPath(const class FString& SaveSlot, const class FString& FilePath, class FString* CloudPath)
+	void ABP_GameController_C::FormatSaveSlotCloudPath(
+const class FString& SaveSlot
+, 
+const class FString& FilePath
+, 
+class FString* CloudPath
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -187,6 +287,8 @@ namespace CG
 			*CloudPath = params.CloudPath;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -195,10 +297,18 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      CloudFilePath                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	 * 		class FString                                      LocalFilePath                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	 * 		bool                                               Conflict_                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               Conflict                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 * 		TArray<unsigned char>                              Data                                                       (Parm, OutParm)
 	 */
-	void ABP_GameController_C::GetFileDataFromCloud(const class FString& CloudFilePath, const class FString& LocalFilePath, bool* Conflict_, TArray<unsigned char>* Data)
+	void ABP_GameController_C::GetFileDataFromCloud(
+const class FString& CloudFilePath
+, 
+const class FString& LocalFilePath
+, 
+bool* Conflict
+, 
+TArray<unsigned char>* Data
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -208,7 +318,7 @@ namespace CG
 		{
 			class FString                                      CloudFilePath;
 			class FString                                      LocalFilePath;
-			bool                                               Conflict_;
+			bool                                               Conflict;
 			TArray<unsigned char>                              Data;
 		} params;
 		params.CloudFilePath = CloudFilePath;
@@ -218,11 +328,13 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 		
-		if (Conflict_ != nullptr)
-			*Conflict_ = params.Conflict_;
+		if (Conflict != nullptr)
+			*Conflict = params.Conflict;
 		if (Data != nullptr)
 			*Data = params.Data;
 	}
+
+
 
 	/**
 	 * Function:
@@ -230,7 +342,7 @@ namespace CG
 	 * 		Name   -> Function BP_GameController.BP_GameController_C.IsMainController?
 	 * 		Flags  -> ()
 	 */
-	bool ABP_GameController_C::IsMainController_()
+	bool ABP_GameController_C::IsMainController()
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -246,6 +358,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -268,6 +382,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -277,7 +393,11 @@ namespace CG
 	 * 		class FString                                      SaveSlot                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	 * 		TArray<class FString>                              Files                                                      (Parm, OutParm)
 	 */
-	void ABP_GameController_C::GetSaveSlotFiles(const class FString& SaveSlot, TArray<class FString>* Files)
+	void ABP_GameController_C::GetSaveSlotFiles(
+const class FString& SaveSlot
+, 
+TArray<class FString>* Files
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -298,6 +418,8 @@ namespace CG
 			*Files = params.Files;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -306,7 +428,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      SaveSlot                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	 */
-	class FString ABP_GameController_C::GetSaveSlotDirectory(const class FString& SaveSlot)
+	class FString ABP_GameController_C::GetSaveSlotDirectory(
+const class FString& SaveSlot
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -324,6 +448,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -348,18 +474,28 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_GameController.BP_GameController_C.LoadCurrentFilesFromCloud
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               Override_                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	 * 		bool                                               Conflict_                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               Override                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               Conflict                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 * 		class FText                                        CloudTime                                                  (Parm, OutParm)
 	 * 		class FText                                        LocalTime                                                  (Parm, OutParm)
 	 */
-	void ABP_GameController_C::LoadCurrentFilesFromCloud(bool Override_, bool* Conflict_, class FText* CloudTime, class FText* LocalTime)
+	void ABP_GameController_C::LoadCurrentFilesFromCloud(
+bool Override
+, 
+bool* Conflict
+, 
+class FText* CloudTime
+, 
+class FText* LocalTime
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -367,24 +503,26 @@ namespace CG
 		
 		struct
 		{
-			bool                                               Override_;
-			bool                                               Conflict_;
+			bool                                               Override;
+			bool                                               Conflict;
 			class FText                                        CloudTime;
 			class FText                                        LocalTime;
 		} params;
-		params.Override_ = Override_;
+		params.Override = Override;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 		
-		if (Conflict_ != nullptr)
-			*Conflict_ = params.Conflict_;
+		if (Conflict != nullptr)
+			*Conflict = params.Conflict;
 		if (CloudTime != nullptr)
 			*CloudTime = params.CloudTime;
 		if (LocalTime != nullptr)
 			*LocalTime = params.LocalTime;
 	}
+
+
 
 	/**
 	 * Function:
@@ -407,6 +545,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -428,15 +568,19 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_GameController.BP_GameController_C.ToggleMenuFocusTimer
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               On_                                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               On                                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_GameController_C::ToggleMenuFocusTimer(bool On_)
+	void ABP_GameController_C::ToggleMenuFocusTimer(
+bool On
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -444,14 +588,16 @@ namespace CG
 		
 		struct
 		{
-			bool                                               On_;
+			bool                                               On;
 		} params;
-		params.On_ = On_;
+		params.On = On;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -463,7 +609,13 @@ namespace CG
 	 * 		float                                              ExtentX                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		float                                              ExtentY                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::ScanForItemsOnTop(const struct FVector& Location, float ExtentX, float ExtentY)
+	void ABP_GameController_C::ScanForItemsOnTop(
+const struct FVector& Location
+, 
+float ExtentX
+, 
+float ExtentY
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -484,6 +636,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -492,7 +646,9 @@ namespace CG
 	 * Parameters:
 	 * 		E_Crosshairs                                       Crosshair                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::SetHUD_Crosshair(E_Crosshairs Crosshair)
+	void ABP_GameController_C::SetHUD_Crosshair(
+E_Crosshairs Crosshair
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -509,6 +665,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -517,7 +675,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector                                     Location                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::BoxTraceForRelics(const struct FVector& Location)
+	void ABP_GameController_C::BoxTraceForRelics(
+const struct FVector& Location
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -533,6 +693,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -555,6 +717,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -575,6 +739,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -597,6 +763,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -618,6 +786,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -626,7 +796,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_WorldStore_C*                            Store                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::PlayerIsThief(class ABP_WorldStore_C* Store)
+	void ABP_GameController_C::PlayerIsThief(
+class ABP_WorldStore_C* Store
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -643,6 +815,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -651,7 +825,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_ParentItem_C*                            Item                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::Spawn_Store_Item(class ABP_ParentItem_C* Item)
+	void ABP_GameController_C::Spawn_Store_Item(
+class ABP_ParentItem_C* Item
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -668,15 +844,19 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_GameController.BP_GameController_C.ChangeBuildRotation
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		int32_t                                            XYZ_                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		int32_t                                            XYZ                                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::ChangeBuildRotation(int32_t XYZ_)
+	void ABP_GameController_C::ChangeBuildRotation(
+int32_t XYZ
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -684,14 +864,16 @@ namespace CG
 		
 		struct
 		{
-			int32_t                                            XYZ_;
+			int32_t                                            XYZ;
 		} params;
-		params.XYZ_ = XYZ_;
+		params.XYZ = XYZ;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -714,6 +896,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -722,7 +906,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FHitResult                                  OutHit                                                     (Parm, OutParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	 */
-	bool ABP_GameController_C::LineTraceFromCharacter(struct FHitResult* OutHit)
+	bool ABP_GameController_C::LineTraceFromCharacter(
+struct FHitResult* OutHit
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -742,6 +928,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -764,6 +952,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -785,6 +975,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -793,7 +985,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_ParentItem_C*                            Item                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::PickUpItem(class ABP_ParentItem_C* Item)
+	void ABP_GameController_C::PickUpItem(
+class ABP_ParentItem_C* Item
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -809,6 +1003,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -831,6 +1027,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -852,6 +1050,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -861,7 +1061,11 @@ namespace CG
 	 * 		struct FVector                                     Location1                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		struct FVector                                     Location2                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::RemoveDirtVehicle(const struct FVector& Location1, const struct FVector& Location2)
+	void ABP_GameController_C::RemoveDirtVehicle(
+const struct FVector& Location1
+, 
+const struct FVector& Location2
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -880,6 +1084,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -888,7 +1094,9 @@ namespace CG
 	 * Parameters:
 	 * 		E_CameraShakes                                     Type                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::CameraShake(E_CameraShakes Type)
+	void ABP_GameController_C::CameraShake(
+E_CameraShakes Type
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -905,6 +1113,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -914,7 +1124,11 @@ namespace CG
 	 * 		struct FVector                                     Position                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		float                                              Radius                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::RemoveDirtLine(const struct FVector& Position, float Radius)
+	void ABP_GameController_C::RemoveDirtLine(
+const struct FVector& Position
+, 
+float Radius
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -933,6 +1147,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -941,7 +1157,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AActor*                                      Vehicle                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::ExitVehicle(class AActor* Vehicle)
+	void ABP_GameController_C::ExitVehicle(
+class AActor* Vehicle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -958,6 +1176,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -966,7 +1186,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AActor*                                      Vehicle                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::EnterNewVehicle(class AActor* Vehicle)
+	void ABP_GameController_C::EnterNewVehicle(
+class AActor* Vehicle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -982,6 +1204,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1004,6 +1228,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1012,7 +1238,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AActor*                                      Actor                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::HighlightObject(class AActor* Actor)
+	void ABP_GameController_C::HighlightObject(
+class AActor* Actor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1029,6 +1257,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1038,7 +1268,11 @@ namespace CG
 	 * 		struct FHitResult                                  Hit                                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	 * 		bool                                               Result                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_GameController_C::TryHighlightObject(const struct FHitResult& Hit, bool* Result)
+	void ABP_GameController_C::TryHighlightObject(
+const struct FHitResult& Hit
+, 
+bool* Result
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1058,6 +1292,8 @@ namespace CG
 		if (Result != nullptr)
 			*Result = params.Result;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1080,6 +1316,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1101,6 +1339,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1109,7 +1349,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UUserWidget*                                 OpenUI                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::PostOpenUI(class UUserWidget* OpenUI)
+	void ABP_GameController_C::PostOpenUI(
+class UUserWidget* OpenUI
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1125,6 +1367,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1147,6 +1391,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1155,7 +1401,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               TrueDrop                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_GameController_C::DropItem(bool* TrueDrop)
+	void ABP_GameController_C::DropItem(
+bool* TrueDrop
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1173,6 +1421,8 @@ namespace CG
 		if (TrueDrop != nullptr)
 			*TrueDrop = params.TrueDrop;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1195,6 +1445,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1215,6 +1467,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1237,6 +1491,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1258,6 +1514,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1266,7 +1524,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::InpActEvt_MouseScrollDown_K2Node_InputKeyEvent_3(const struct FKey& Key)
+	void ABP_GameController_C::InpActEvt_MouseScrollDown_K2Node_InputKeyEvent_3(
+const struct FKey& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1283,6 +1543,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1291,7 +1553,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::InpActEvt_MouseScrollUp_K2Node_InputKeyEvent_2(const struct FKey& Key)
+	void ABP_GameController_C::InpActEvt_MouseScrollUp_K2Node_InputKeyEvent_2(
+const struct FKey& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1308,6 +1572,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1316,7 +1582,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::InpActEvt_Rotate_K2Node_InputActionEvent_14(const struct FKey& Key)
+	void ABP_GameController_C::InpActEvt_Rotate_K2Node_InputActionEvent_14(
+const struct FKey& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1333,6 +1601,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1341,7 +1611,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::InpActEvt_Rotate2_K2Node_InputActionEvent_13(const struct FKey& Key)
+	void ABP_GameController_C::InpActEvt_Rotate2_K2Node_InputActionEvent_13(
+const struct FKey& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1358,6 +1630,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1366,7 +1640,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::InpActEvt_Pickup_K2Node_InputActionEvent_12(const struct FKey& Key)
+	void ABP_GameController_C::InpActEvt_Pickup_K2Node_InputActionEvent_12(
+const struct FKey& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1383,6 +1659,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1391,7 +1669,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::InpActEvt_Pickup_K2Node_InputActionEvent_11(const struct FKey& Key)
+	void ABP_GameController_C::InpActEvt_Pickup_K2Node_InputActionEvent_11(
+const struct FKey& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1408,6 +1688,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1416,7 +1698,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::InpActEvt_VehicleKey_K2Node_InputActionEvent_10(const struct FKey& Key)
+	void ABP_GameController_C::InpActEvt_VehicleKey_K2Node_InputActionEvent_10(
+const struct FKey& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1433,6 +1717,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1441,7 +1727,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::InpActEvt_Rotate3_K2Node_InputActionEvent_9(const struct FKey& Key)
+	void ABP_GameController_C::InpActEvt_Rotate3_K2Node_InputActionEvent_9(
+const struct FKey& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1458,6 +1746,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1466,7 +1756,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::InpActEvt_Wiki_K2Node_InputActionEvent_8(const struct FKey& Key)
+	void ABP_GameController_C::InpActEvt_Wiki_K2Node_InputActionEvent_8(
+const struct FKey& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1483,6 +1775,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1491,7 +1785,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::InpActEvt_RMB_K2Node_InputActionEvent_7(const struct FKey& Key)
+	void ABP_GameController_C::InpActEvt_RMB_K2Node_InputActionEvent_7(
+const struct FKey& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1508,6 +1804,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1516,7 +1814,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::InpActEvt_RMB_K2Node_InputActionEvent_6(const struct FKey& Key)
+	void ABP_GameController_C::InpActEvt_RMB_K2Node_InputActionEvent_6(
+const struct FKey& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1532,6 +1832,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1554,6 +1856,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1562,7 +1866,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::InpActEvt_LMB_K2Node_InputActionEvent_5(const struct FKey& Key)
+	void ABP_GameController_C::InpActEvt_LMB_K2Node_InputActionEvent_5(
+const struct FKey& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1579,6 +1885,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1587,7 +1895,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::InpActEvt_LMB_K2Node_InputActionEvent_4(const struct FKey& Key)
+	void ABP_GameController_C::InpActEvt_LMB_K2Node_InputActionEvent_4(
+const struct FKey& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1604,6 +1914,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1612,7 +1924,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::InpActEvt_AnyKey_K2Node_InputKeyEvent_1(const struct FKey& Key)
+	void ABP_GameController_C::InpActEvt_AnyKey_K2Node_InputKeyEvent_1(
+const struct FKey& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1629,6 +1943,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1637,7 +1953,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::InpActEvt_EscMenu_K2Node_InputActionEvent_3(const struct FKey& Key)
+	void ABP_GameController_C::InpActEvt_EscMenu_K2Node_InputActionEvent_3(
+const struct FKey& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1654,6 +1972,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1662,7 +1982,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::InpActEvt_RotationMod_K2Node_InputActionEvent_2(const struct FKey& Key)
+	void ABP_GameController_C::InpActEvt_RotationMod_K2Node_InputActionEvent_2(
+const struct FKey& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1679,6 +2001,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1687,7 +2011,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::InpActEvt_RotationMod_K2Node_InputActionEvent_1(const struct FKey& Key)
+	void ABP_GameController_C::InpActEvt_RotationMod_K2Node_InputActionEvent_1(
+const struct FKey& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1704,16 +2030,22 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_GameController.BP_GameController_C.MoveDirt
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               PickUp_                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               PickUp                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 * 		float                                              Radius                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::MoveDirt(bool PickUp_, float Radius)
+	void ABP_GameController_C::MoveDirt(
+bool PickUp
+, 
+float Radius
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1721,16 +2053,18 @@ namespace CG
 		
 		struct
 		{
-			bool                                               PickUp_;
+			bool                                               PickUp;
 			float                                              Radius;
 		} params;
-		params.PickUp_ = PickUp_;
+		params.PickUp = PickUp;
 		params.Radius = Radius;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1753,6 +2087,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1774,6 +2110,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1783,7 +2121,11 @@ namespace CG
 	 * 		struct FVoxelIntBox                                Remove                                                     (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 	 * 		struct FVoxelIntBox                                Add                                                        (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::LevelTerrain(const struct FVoxelIntBox& Remove, const struct FVoxelIntBox& Add)
+	void ABP_GameController_C::LevelTerrain(
+const struct FVoxelIntBox& Remove
+, 
+const struct FVoxelIntBox& Add
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1802,6 +2144,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1811,7 +2155,11 @@ namespace CG
 	 * 		struct FVector                                     Location                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		float                                              Radius                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::RemoveDirtByLocation(const struct FVector& Location, float Radius)
+	void ABP_GameController_C::RemoveDirtByLocation(
+const struct FVector& Location
+, 
+float Radius
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1830,6 +2178,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1839,7 +2189,11 @@ namespace CG
 	 * 		struct FVector                                     Location1                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		struct FVector                                     Location2                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::VehicleRemoveDirt(const struct FVector& Location1, const struct FVector& Location2)
+	void ABP_GameController_C::VehicleRemoveDirt(
+const struct FVector& Location1
+, 
+const struct FVector& Location2
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1857,6 +2211,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1879,6 +2235,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1899,6 +2257,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1921,6 +2281,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1929,7 +2291,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_ParentItem_C*                            Item                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::PositioningItem(class ABP_ParentItem_C* Item)
+	void ABP_GameController_C::PositioningItem(
+class ABP_ParentItem_C* Item
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1946,167 +2310,7 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_GameController.BP_GameController_C.ToggleScreenshotCam
-	 * 		Flags  -> ()
-	 */
-	void ABP_GameController_C::ToggleScreenshotCam()
-	{
-		static UFunction* fn = nullptr;
-		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.ToggleScreenshotCam");
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
 
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_GameController.BP_GameController_C.ChangeTime
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              Amount                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 */
-	void ABP_GameController_C::ChangeTime(float Amount)
-	{
-		static UFunction* fn = nullptr;
-		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.ChangeTime");
-		
-		struct
-		{
-			float                                              Amount;
-		} params;
-		params.Amount = Amount;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_GameController.BP_GameController_C.TogglePauseTime
-	 * 		Flags  -> ()
-	 */
-	void ABP_GameController_C::TogglePauseTime()
-	{
-		static UFunction* fn = nullptr;
-		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.TogglePauseTime");
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_GameController.BP_GameController_C.LerpToCharacter
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class ABP_ParentItem_C*                            Item                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		class USceneComponent*                             Socket_Component                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 */
-	void ABP_GameController_C::LerpToCharacter(class ABP_ParentItem_C* Item, class USceneComponent* Socket_Component)
-	{
-		static UFunction* fn = nullptr;
-		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.LerpToCharacter");
-		
-		struct
-		{
-			class ABP_ParentItem_C*                            Item;
-			class USceneComponent*                             Socket_Component;
-		} params;
-		params.Item = Item;
-		params.Socket_Component = Socket_Component;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_GameController.BP_GameController_C.PickupLerpTimer
-	 * 		Flags  -> ()
-	 */
-	void ABP_GameController_C::PickupLerpTimer()
-	{
-		static UFunction* fn = nullptr;
-		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.PickupLerpTimer");
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_GameController.BP_GameController_C.EMS Save
-	 * 		Flags  -> ()
-	 */
-	void ABP_GameController_C::EMS_Save()
-	{
-		static UFunction* fn = nullptr;
-		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.EMS Save");
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_GameController.BP_GameController_C.StartAutosaverTimer
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              Time                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 */
-	void ABP_GameController_C::StartAutosaverTimer(float Time)
-	{
-		static UFunction* fn = nullptr;
-		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.StartAutosaverTimer");
-		
-		struct
-		{
-			float                                              Time;
-		} params;
-		params.Time = Time;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
 
 	/**
 	 * Function:
@@ -2116,7 +2320,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              DeltaSeconds                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::ReceiveTick(float DeltaSeconds)
+	void ABP_GameController_C::ReceiveTick(
+float DeltaSeconds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2132,6 +2338,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2154,17 +2362,19 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_GameController.BP_GameController_C.StartGameLerp
+	 * 		Name   -> Function BP_GameController.BP_GameController_C.ToggleScreenshotCam
 	 * 		Flags  -> ()
 	 */
-	void ABP_GameController_C::StartGameLerp()
+	void ABP_GameController_C::ToggleScreenshotCam()
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.StartGameLerp");
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.ToggleScreenshotCam");
 		
 		struct
 		{
@@ -2174,6 +2384,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2196,6 +2408,192 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_GameController.BP_GameController_C.ChangeTime
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              Amount                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_GameController_C::ChangeTime(
+float Amount
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.ChangeTime");
+		
+		struct
+		{
+			float                                              Amount;
+		} params;
+		params.Amount = Amount;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_GameController.BP_GameController_C.TogglePauseTime
+	 * 		Flags  -> ()
+	 */
+	void ABP_GameController_C::TogglePauseTime()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.TogglePauseTime");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_GameController.BP_GameController_C.LerpToCharacter
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class ABP_ParentItem_C*                            Item                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		class USceneComponent*                             Socket_Component                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_GameController_C::LerpToCharacter(
+class ABP_ParentItem_C* Item
+, 
+class USceneComponent* Socket_Component
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.LerpToCharacter");
+		
+		struct
+		{
+			class ABP_ParentItem_C*                            Item;
+			class USceneComponent*                             Socket_Component;
+		} params;
+		params.Item = Item;
+		params.Socket_Component = Socket_Component;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_GameController.BP_GameController_C.PickupLerpTimer
+	 * 		Flags  -> ()
+	 */
+	void ABP_GameController_C::PickupLerpTimer()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.PickupLerpTimer");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_GameController.BP_GameController_C.EMS Save
+	 * 		Flags  -> ()
+	 */
+	void ABP_GameController_C::EMS_Save()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.EMS Save");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_GameController.BP_GameController_C.StartAutosaverTimer
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              Time                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_GameController_C::StartAutosaverTimer(
+float Time
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.StartAutosaverTimer");
+		
+		struct
+		{
+			float                                              Time;
+		} params;
+		params.Time = Time;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_GameController.BP_GameController_C.StartGameLerp
+	 * 		Flags  -> ()
+	 */
+	void ABP_GameController_C::StartGameLerp()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameController.BP_GameController_C.StartGameLerp");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2217,6 +2615,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2225,7 +2625,9 @@ namespace CG
 	 * Parameters:
 	 * 		class APawn*                                       PossessedPawn                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::ReceivePossess(class APawn* PossessedPawn)
+	void ABP_GameController_C::ReceivePossess(
+class APawn* PossessedPawn
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2242,6 +2644,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2250,7 +2654,9 @@ namespace CG
 	 * Parameters:
 	 * 		class APawn*                                       UnpossessedPawn                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::ReceiveUnPossess(class APawn* UnpossessedPawn)
+	void ABP_GameController_C::ReceiveUnPossess(
+class APawn* UnpossessedPawn
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2266,6 +2672,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2288,6 +2696,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2296,7 +2706,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::SensitivityChanged(float NewValue)
+	void ABP_GameController_C::SensitivityChanged(
+float NewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2312,6 +2724,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2334,6 +2748,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2342,7 +2758,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              AxisValue                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::InpAxisEvt_MouseRight_K2Node_InputAxisEvent_1(float AxisValue)
+	void ABP_GameController_C::InpAxisEvt_MouseRight_K2Node_InputAxisEvent_1(
+float AxisValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2358,6 +2776,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2380,6 +2800,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2388,7 +2810,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::AutosaveChanged(float NewValue)
+	void ABP_GameController_C::AutosaveChanged(
+float NewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2405,6 +2829,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2413,7 +2839,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameController_C::ExecuteUbergraph_BP_GameController(int32_t EntryPoint)
+	void ABP_GameController_C::ExecuteUbergraph_BP_GameController(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2430,10 +2858,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ABP_GameController_C.StaticClass
+	 * 		Name   -> PredefinedFunction ABP_GameController_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ABP_GameController_C::StaticClass()
@@ -2443,6 +2873,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass BP_GameController.BP_GameController_C");
 		return ptr;
 	}
+
 
 }
 

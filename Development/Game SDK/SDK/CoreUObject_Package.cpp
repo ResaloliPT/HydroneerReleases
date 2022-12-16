@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,11 +10,14 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Static Fields
 	// --------------------------------------------------
-	class TUObjectArray*                                        UObject::GObjects = nullptr;                             // 0x0000(0x0008) PREDEFINED PROPERTY
+
+	class TUObjectArray*                                      UObject::GObjects = nullptr;                             // 0x0000(0x0008) PREDEFINED PROPERTY
+
 
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -23,10 +26,12 @@ namespace CG
 	 */
 	FRotator::FRotator()
 	{
-		Pitch = 0;
-		Yaw = 0;
-		Roll = 0;
+		Pitch = 0f;
+		Yaw = 0f;
+		Roll = 0f;
 	}
+
+
 
 	/**
 	 * Function:
@@ -38,13 +43,38 @@ namespace CG
 	 * 		float                                              yaw
 	 * 		float                                              roll
 	 */
-	FRotator::FRotator(float pitch, float yaw, float roll)
+	FRotator::FRotator(
+float pitch
+, 
+float yaw
+, 
+float roll
+)
 	{
 		Pitch = pitch;
 		Yaw = yaw;
 		Roll = roll;
 	}
 
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              scalar
+	 */
+	FRotator FRotator::operator +(
+float scalar
+) const
+	{
+		return FRotator(Pitch + scalar, Yaw + scalar, Roll + scalar);
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -53,11 +83,32 @@ namespace CG
 	 * Parameters:
 	 * 		const FRotator&                                    other
 	 */
-	FRotator FRotator::operator +(const FRotator& other) const
+	FRotator FRotator::operator +(
+const FRotator& other
+) const
 	{
 		return FRotator(Pitch + other.Pitch, Yaw + other.Yaw, Roll + other.Roll);
 	}
 
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              scalar
+	 */
+	FRotator FRotator::operator -(
+float scalar
+) const
+	{
+		return FRotator(Pitch - scalar, Yaw - scalar, Roll - scalar);
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -66,11 +117,15 @@ namespace CG
 	 * Parameters:
 	 * 		const FRotator&                                    other
 	 */
-	FRotator FRotator::operator -(const FRotator& other) const
+	FRotator FRotator::operator -(
+const FRotator& other
+) const
 	{
 		return FRotator(Pitch - other.Pitch, Yaw - other.Yaw, Roll - other.Roll);
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -79,11 +134,15 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              scalar
 	 */
-	FRotator FRotator::operator *(float scalar) const
+	FRotator FRotator::operator *(
+float scalar
+) const
 	{
 		return FRotator(Pitch * scalar, Yaw * scalar, Roll * scalar);
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -92,10 +151,14 @@ namespace CG
 	 * Parameters:
 	 * 		const FRotator&                                    other
 	 */
-	FRotator FRotator::operator *(const FRotator& other) const
+	FRotator FRotator::operator *(
+const FRotator& other
+) const
 	{
 		return FRotator(Pitch * other.Pitch, Yaw * other.Yaw, Roll * other.Roll);
 	}
+
+
 
 	/**
 	 * Function:
@@ -105,11 +168,15 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              scalar
 	 */
-	FRotator FRotator::operator /(float scalar) const
+	FRotator FRotator::operator /(
+float scalar
+) const
 	{
 		return FRotator(Pitch / scalar, Yaw / scalar, Roll / scalar);
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -118,23 +185,14 @@ namespace CG
 	 * Parameters:
 	 * 		const FRotator&                                    other
 	 */
-	FRotator FRotator::operator /(const FRotator& other) const
+	FRotator FRotator::operator /(
+const FRotator& other
+) const
 	{
 		return FRotator(Pitch / other.Pitch, Yaw / other.Yaw, Roll / other.Roll);
 	}
 
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> 
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		const FRotator&                                    other
-	 */
-	FRotator& FRotator::operator =(const FRotator& other)
-	{
-		Pitch = other.Pitch; Yaw = other.Yaw; Roll = other.Roll; return *this;
-	}
+
 
 	/**
 	 * Function:
@@ -144,7 +202,46 @@ namespace CG
 	 * Parameters:
 	 * 		const FRotator&                                    other
 	 */
-	FRotator& FRotator::operator +=(const FRotator& other)
+	FRotator& FRotator::operator =(
+const FRotator& other
+)
+	{
+		Pitch = other.Pitch; Yaw = other.Yaw; Roll = other.Roll; return *this;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              scalar
+	 */
+	FRotator& FRotator::operator +=(
+float scalar
+)
+	{
+		Pitch += scalar;
+		Yaw += scalar;
+		Roll += scalar;
+		return *this;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		const FRotator&                                    other
+	 */
+	FRotator& FRotator::operator +=(
+const FRotator& other
+)
 	{
 		Pitch += other.Pitch;
 		Yaw += other.Yaw;
@@ -152,6 +249,28 @@ namespace CG
 		return *this;
 	}
 
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              scalar
+	 */
+	FRotator& FRotator::operator -=(
+float scalar
+)
+	{
+		Pitch -= scalar;
+		Yaw -= scalar;
+		Roll -= scalar;
+		return *this;
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -160,13 +279,37 @@ namespace CG
 	 * Parameters:
 	 * 		const FRotator&                                    other
 	 */
-	FRotator& FRotator::operator -=(const FRotator& other)
+	FRotator& FRotator::operator -=(
+const FRotator& other
+)
 	{
 		Pitch -= other.Pitch;
 		Yaw -= other.Yaw;
 		Roll -= other.Roll;
 		return *this;
 	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		const FRotator&                                    other
+	 */
+	FRotator& FRotator::operator *=(
+const FRotator& other
+)
+	{
+		Pitch *= other.Pitch;
+		Yaw *= other.Yaw;
+		Roll *= other.Roll;
+		return *this;
+	}
+
+
 
 	/**
 	 * Function:
@@ -176,13 +319,57 @@ namespace CG
 	 * Parameters:
 	 * 		const float                                        other
 	 */
-	FRotator& FRotator::operator *=(const float other)
+	FRotator& FRotator::operator *=(
+const float other
+)
 	{
 		Pitch *= other;
 		Yaw *= other;
 		Roll *= other;
 		return *this;
 	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		const FRotator&                                    other
+	 */
+	FRotator& FRotator::operator /=(
+const FRotator& other
+)
+	{
+		Pitch /= other.Pitch;
+		Yaw /= other.Yaw;
+		Roll /= other.Roll;
+		return *this;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		const float                                        other
+	 */
+	FRotator& FRotator::operator /=(
+const float other
+)
+	{
+		Pitch /= other;
+		Yaw /= other;
+		Roll /= other;
+		return *this;
+	}
+
+
 
 	/**
 	 * Function:
@@ -195,6 +382,8 @@ namespace CG
 		return sqrt(Pitch * Pitch + Yaw * Yaw + Roll * Roll);
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -204,21 +393,23 @@ namespace CG
 	FRotator FRotator::Clamp() const
 	{
 		FRotator r = { Pitch, Yaw, Roll };
-		if (r.Yaw > 180.f)
-			r.Yaw -= 360.f;
-		else if (r.Yaw < -180.f)
-			r.Yaw += 360.f;
-		if (r.Pitch > 180.f)
-			r.Pitch -= 360.f;
-		else if (r.Pitch < -180.f)
-			r.Pitch += 360.f;
-		if (r.Pitch < -89.f)
-			r.Pitch = -89.f;
-		else if (r.Pitch > 89.f)
-			r.Pitch = 89.f;
-		r.Roll = 0.f;
+		if (r.Yaw > 180.0f)
+			r.Yaw -= 360.0f;
+		else if (r.Yaw < -180.0f)
+			r.Yaw += 360.0f;
+		if (r.Pitch > 180.0f)
+			r.Pitch -= 360.0f;
+		else if (r.Pitch < -180.0f)
+			r.Pitch += 360.0f;
+		if (r.Pitch < -89.0f)
+			r.Pitch = -89.0f;
+		else if (r.Pitch > 89.0f)
+			r.Pitch = 89.0f;
+		r.Roll = 0.0f;
 		return r;
 	}
+
+
 
 	/**
 	 * Function:
@@ -233,6 +424,8 @@ namespace CG
 		Z = 0;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -243,13 +436,38 @@ namespace CG
 	 * 		float                                              y
 	 * 		float                                              z
 	 */
-	FVector::FVector(float x, float y, float z)
+	FVector::FVector(
+float x
+, 
+float y
+, 
+float z
+)
 	{
 		X = x;
 		Y = y;
 		Z = z;
 	}
 
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              scalar
+	 */
+	FVector FVector::operator +(
+float scalar
+) const
+	{
+		return FVector(X + scalar, Y + scalar, Z + scalar);
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -258,11 +476,32 @@ namespace CG
 	 * Parameters:
 	 * 		const FVector&                                     other
 	 */
-	FVector FVector::operator +(const FVector& other) const
+	FVector FVector::operator +(
+const FVector& other
+) const
 	{
 		return FVector(X + other.X, Y + other.Y, Z + other.Z);
 	}
 
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              scalar
+	 */
+	FVector FVector::operator -(
+float scalar
+) const
+	{
+		return FVector(X - scalar, Y - scalar, Z - scalar);
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -271,11 +510,15 @@ namespace CG
 	 * Parameters:
 	 * 		const FVector&                                     other
 	 */
-	FVector FVector::operator -(const FVector& other) const
+	FVector FVector::operator -(
+const FVector& other
+) const
 	{
 		return FVector(X - other.X, Y - other.Y, Z - other.Z);
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -284,11 +527,15 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              scalar
 	 */
-	FVector FVector::operator *(float scalar) const
+	FVector FVector::operator *(
+float scalar
+) const
 	{
 		return FVector(X * scalar, Y * scalar, Z * scalar);
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -297,10 +544,14 @@ namespace CG
 	 * Parameters:
 	 * 		const FVector&                                     other
 	 */
-	FVector FVector::operator *(const FVector& other) const
+	FVector FVector::operator *(
+const FVector& other
+) const
 	{
 		return FVector(X * other.X, Y * other.Y, Z * other.Z);
 	}
+
+
 
 	/**
 	 * Function:
@@ -310,23 +561,14 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              scalar
 	 */
-	FVector FVector::operator /(float scalar) const
+	FVector FVector::operator /(
+float scalar
+) const
 	{
 		return FVector(X / scalar, Y / scalar, Z / scalar);
 	}
 
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> 
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		const FVector&                                     other
-	 */
-	FVector FVector::operator /(const FVector& other) const
-	{
-		return FVector(X / other.X, Y / other.Y, Z / other.Z);
-	}
+
 
 	/**
 	 * Function:
@@ -336,7 +578,26 @@ namespace CG
 	 * Parameters:
 	 * 		const FVector&                                     other
 	 */
-	FVector& FVector::operator =(const FVector& other)
+	FVector FVector::operator /(
+const FVector& other
+) const
+	{
+		return FVector(X / other.X, Y / other.Y, Z / other.Z);
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		const FVector&                                     other
+	 */
+	FVector& FVector::operator =(
+const FVector& other
+)
 	{
 		X = other.X;
 		Y = other.Y;
@@ -344,6 +605,28 @@ namespace CG
 		return *this;
 	}
 
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              scalar
+	 */
+	FVector& FVector::operator +=(
+float scalar
+)
+	{
+		X += scalar;
+		Y += scalar;
+		Z += scalar;
+		return *this;
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -352,7 +635,9 @@ namespace CG
 	 * Parameters:
 	 * 		const FVector&                                     other
 	 */
-	FVector& FVector::operator +=(const FVector& other)
+	FVector& FVector::operator +=(
+const FVector& other
+)
 	{
 		X += other.X;
 		Y += other.Y;
@@ -360,6 +645,28 @@ namespace CG
 		return *this;
 	}
 
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              scalar
+	 */
+	FVector& FVector::operator -=(
+float scalar
+)
+	{
+		X -= scalar;
+		Y -= scalar;
+		Z -= scalar;
+		return *this;
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -368,7 +675,9 @@ namespace CG
 	 * Parameters:
 	 * 		const FVector&                                     other
 	 */
-	FVector& FVector::operator -=(const FVector& other)
+	FVector& FVector::operator -=(
+const FVector& other
+)
 	{
 		X -= other.X;
 		Y -= other.Y;
@@ -376,21 +685,86 @@ namespace CG
 		return *this;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> 
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		const float                                        other
+	 * 		const FVector&                                     other
 	 */
-	FVector& FVector::operator *=(const float other)
+	FVector& FVector::operator *=(
+const FVector& other
+)
 	{
-		X *= other;
-		Y *= other;
-		Z *= other;
+		X *= other.X;
+		Y *= other.Y;
+		Z *= other.Z;
 		return *this;
 	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              scalar
+	 */
+	FVector& FVector::operator *=(
+float scalar
+)
+	{
+		X *= scalar;
+		Y *= scalar;
+		Z *= scalar;
+		return *this;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 */
+	bool FVector::IsValid()
+	{
+		return X == 0.0f && Y == 0.0f;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		FVector&                                           angle
+	 */
+	void FVector::Normalize360(
+FVector& angle
+)
+	{
+		const float maxX1 = 80.0f;
+		
+		while (angle.X > maxX1)
+			angle.X -= 180.0f;
+		while (angle.X < -maxX1)
+			angle.X += 180.0f;
+		while (angle.Y > 180.0f)
+			angle.Y -= 360.0f;
+		while (angle.Y < -180.0f)
+			angle.Y += 360.0f;
+	}
+
+
 
 	/**
 	 * Function:
@@ -400,10 +774,14 @@ namespace CG
 	 * Parameters:
 	 * 		const FVector&                                     b
 	 */
-	float FVector::Dot(const FVector& b) const
+	float FVector::Dot(
+const FVector& b
+) const
 	{
 		return (X * b.X) + (Y * b.Y) + (Z * b.Z);
 	}
+
+
 
 	/**
 	 * Function:
@@ -416,6 +794,8 @@ namespace CG
 		return Dot(*this);
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -426,6 +806,8 @@ namespace CG
 	{
 		return std::sqrtf(MagnitudeSqr());
 	}
+
+
 
 	/**
 	 * Function:
@@ -438,6 +820,8 @@ namespace CG
 		const float fMagnitude = Magnitude();
 		return FVector(X / fMagnitude, Y / fMagnitude, Z / fMagnitude);
 	}
+
+
 
 	/**
 	 * Function:
@@ -452,6 +836,8 @@ namespace CG
 		return FRotator(asinf(Z / Magnitude()) * 180.0f / PI, atan2f(Y, X) * 180.0f / PI, 0.0f);
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -460,10 +846,31 @@ namespace CG
 	 * Parameters:
 	 * 		const FVector&                                     v
 	 */
-	float FVector::Distance(const FVector& v) const
+	float FVector::Distance(
+const FVector& v
+) const
 	{
-		return float(sqrtf(powf(v.X - X, 2.0) + powf(v.Y - Y, 2.0) + powf(v.Z - Z, 2.0)));
+		return float(sqrtf(powf(v.X - X, 2.0f) + powf(v.Y - Y, 2.0f) + powf(v.Z - Z, 2.0f)));
 	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		FVector&                                           v
+	 */
+	float FVector::DistanceMeter(
+FVector& v
+) const
+	{
+		return Distance(v) * 0.01f;
+	}
+
+
 
 	/**
 	 * Function:
@@ -477,6 +884,8 @@ namespace CG
 		Y = 0;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -486,12 +895,48 @@ namespace CG
 	 * 		float                                              x
 	 * 		float                                              y
 	 */
-	FVector2D::FVector2D(float x, float y)
+	FVector2D::FVector2D(
+float x
+, 
+float y
+)
 	{
 		X = x;
 		Y = y;
 	}
 
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 */
+	bool FVector2D::IsValid()
+	{
+		return X == 0 && Y == 0;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		FVector2D&                                         v
+	 */
+	float FVector2D::Distance(
+FVector2D& v
+) const
+	{
+		return powf(v.X - X, 2) + powf(v.Y - Y, 2);
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -500,11 +945,49 @@ namespace CG
 	 * Parameters:
 	 * 		const FVector2D&                                   other
 	 */
-	FVector2D FVector2D::operator +(const FVector2D& other) const
+	FVector2D FVector2D::operator +(
+const FVector2D& other
+) const
 	{
 		return FVector2D(X + other.X, Y + other.Y);
 	}
 
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              scalar
+	 */
+	FVector2D FVector2D::operator +(
+float scalar
+) const
+	{
+		return FVector2D(X + scalar, Y + scalar);
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              scalar
+	 */
+	FVector2D FVector2D::operator -(
+float scalar
+) const
+	{
+		return FVector2D(X - scalar, Y - scalar);
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -513,11 +996,15 @@ namespace CG
 	 * Parameters:
 	 * 		const FVector2D&                                   other
 	 */
-	FVector2D FVector2D::operator -(const FVector2D& other) const
+	FVector2D FVector2D::operator -(
+const FVector2D& other
+) const
 	{
 		return FVector2D(X - other.X, Y - other.Y);
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -526,11 +1013,15 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              scalar
 	 */
-	FVector2D FVector2D::operator *(float scalar) const
+	FVector2D FVector2D::operator *(
+float scalar
+) const
 	{
 		return FVector2D(X * scalar, Y * scalar);
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -539,10 +1030,14 @@ namespace CG
 	 * Parameters:
 	 * 		const FVector2D&                                   other
 	 */
-	FVector2D FVector2D::operator *(const FVector2D& other) const
+	FVector2D FVector2D::operator *(
+const FVector2D& other
+) const
 	{
 		return FVector2D(X * other.X, Y * other.Y);
 	}
+
+
 
 	/**
 	 * Function:
@@ -552,23 +1047,14 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              scalar
 	 */
-	FVector2D FVector2D::operator /(float scalar) const
+	FVector2D FVector2D::operator /(
+float scalar
+) const
 	{
 		return FVector2D(X / scalar, Y / scalar);
 	}
 
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> 
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		const FVector2D&                                   other
-	 */
-	FVector2D FVector2D::operator /(const FVector2D& other) const
-	{
-		return FVector2D(X / other.X, Y / other.Y);
-	}
+
 
 	/**
 	 * Function:
@@ -578,13 +1064,53 @@ namespace CG
 	 * Parameters:
 	 * 		const FVector2D&                                   other
 	 */
-	FVector2D& FVector2D::operator =(const FVector2D& other)
+	FVector2D FVector2D::operator /(
+const FVector2D& other
+) const
+	{
+		return FVector2D(X / other.X, Y / other.Y);
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		const FVector2D&                                   other
+	 */
+	FVector2D& FVector2D::operator =(
+const FVector2D& other
+)
 	{
 		X = other.X;
 		Y = other.Y;
 		return *this;
 	}
 
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              scalar
+	 */
+	FVector2D& FVector2D::operator +=(
+float scalar
+)
+	{
+		X += scalar;
+		Y += scalar;
+		return *this;
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -593,13 +1119,36 @@ namespace CG
 	 * Parameters:
 	 * 		const FVector2D&                                   other
 	 */
-	FVector2D& FVector2D::operator +=(const FVector2D& other)
+	FVector2D& FVector2D::operator +=(
+const FVector2D& other
+)
 	{
 		X += other.X;
 		Y += other.Y;
 		return *this;
 	}
 
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              scalar
+	 */
+	FVector2D& FVector2D::operator -=(
+float scalar
+)
+	{
+		X -= scalar;
+		Y -= scalar;
+		return *this;
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -608,12 +1157,16 @@ namespace CG
 	 * Parameters:
 	 * 		const FVector2D&                                   other
 	 */
-	FVector2D& FVector2D::operator -=(const FVector2D& other)
+	FVector2D& FVector2D::operator -=(
+const FVector2D& other
+)
 	{
 		X -= other.X;
 		Y -= other.Y;
 		return *this;
 	}
+
+
 
 	/**
 	 * Function:
@@ -621,14 +1174,37 @@ namespace CG
 	 * 		Name   -> 
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		const float                                        other
+	 * 		const FVector2D&                                   other
 	 */
-	FVector2D& FVector2D::operator *=(const float other)
+	FVector2D& FVector2D::operator *=(
+const FVector2D& other
+)
 	{
-		X *= other;
-		Y *= other;
+		X *= other.X;
+		Y *= other.Y;
 		return *this;
 	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              scalar
+	 */
+	FVector2D& FVector2D::operator *=(
+float scalar
+)
+	{
+		X *= scalar;
+		Y *= scalar;
+		return *this;
+	}
+
+
 
 	/**
 	 * Function:
@@ -644,6 +1220,8 @@ namespace CG
 		A = 0;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -655,13 +1233,23 @@ namespace CG
 	 * 		float                                              b
 	 * 		float                                              a
 	 */
-	FLinearColor::FLinearColor(float r, float g, float b, float a)
+	FLinearColor::FLinearColor(
+float r
+, 
+float g
+, 
+float b
+, 
+float a
+)
 	{
 		R = r;
 		G = g;
 		B = b;
 		A = a;
 	}
+
+
 
 	/**
 	 * Function:
@@ -671,7 +1259,9 @@ namespace CG
 	 * Parameters:
 	 * 		const FMatrix&                                     other
 	 */
-	FMatrix FMatrix::operator *(const FMatrix& other) const
+	FMatrix FMatrix::operator *(
+const FMatrix& other
+) const
 	{
 		FMatrix ret;
 		
@@ -697,6 +1287,8 @@ namespace CG
 		
 		return ret;
 	}
+
+
 
 	/**
 	 * Function:
@@ -757,6 +1349,8 @@ namespace CG
 		return OutMatrix;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -767,6 +1361,8 @@ namespace CG
 	{
 		return *GObjects;
 	}
+
+
 
 	/**
 	 * Function:
@@ -784,6 +1380,8 @@ namespace CG
 			return name;
 		return name.substr(pos + 1);
 	}
+
+
 
 	/**
 	 * Function:
@@ -809,6 +1407,8 @@ namespace CG
 		return name;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -817,10 +1417,14 @@ namespace CG
 	 * Parameters:
 	 * 		const std::string&                                 name
 	 */
-	UClass* UObject::FindClass(const std::string& name)
+	UClass* UObject::FindClass(
+const std::string& name
+)
 	{
 		return FindObject<UClass>(name);
 	}
+
+
 
 	/**
 	 * Function:
@@ -830,7 +1434,9 @@ namespace CG
 	 * Parameters:
 	 * 		UClass*                                            cmp
 	 */
-	bool UObject::IsA(UClass* cmp) const
+	bool UObject::IsA(
+UClass* cmp
+) const
 	{
 		for (auto super = Class; super; super = static_cast<UClass*>(super->SuperField))
 		{
@@ -841,6 +1447,8 @@ namespace CG
 		return false;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -849,7 +1457,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UObject::ExecuteUbergraph(int32_t EntryPoint)
+	void UObject::ExecuteUbergraph(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -866,6 +1476,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -875,15 +1487,21 @@ namespace CG
 	 * 		class UFunction*                                   function
 	 * 		void*                                              parms
 	 */
-	void UObject::ProcessEvent(class UFunction* function, void* parms)
+	void UObject::ProcessEvent(
+class UFunction* function
+, 
+void* parms
+)
 	{
-		GetVFunction<void(*)(UObject*, class UFunction*, void*)>(this, 0x43)(this, function, parms);
+		GetVFunction<void(*)(UObject*, class UFunction*, void*)>(this, PROCESS_EVENTS_INDEX)(this, function, parms);
 	}
+
+
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UObject.StaticClass
+	 * 		Name   -> PredefinedFunction UObject.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UObject::StaticClass()
@@ -894,10 +1512,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UInterface.StaticClass
+	 * 		Name   -> PredefinedFunction UInterface.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UInterface::StaticClass()
@@ -908,10 +1528,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGCObjectReferencer.StaticClass
+	 * 		Name   -> PredefinedFunction UGCObjectReferencer.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGCObjectReferencer::StaticClass()
@@ -922,10 +1544,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UTextBuffer.StaticClass
+	 * 		Name   -> PredefinedFunction UTextBuffer.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UTextBuffer::StaticClass()
@@ -936,10 +1560,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UField.StaticClass
+	 * 		Name   -> PredefinedFunction UField.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UField::StaticClass()
@@ -950,10 +1576,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UStruct.StaticClass
+	 * 		Name   -> PredefinedFunction UStruct.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UStruct::StaticClass()
@@ -964,10 +1592,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UScriptStruct.StaticClass
+	 * 		Name   -> PredefinedFunction UScriptStruct.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UScriptStruct::StaticClass()
@@ -978,10 +1608,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPackage.StaticClass
+	 * 		Name   -> PredefinedFunction UPackage.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPackage::StaticClass()
@@ -992,6 +1624,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1000,14 +1634,15 @@ namespace CG
 	 */
 	UObject* UClass::CreateDefaultObject()
 	{
-		// return nullptr;
-		return GetVFunction<UObject*(*)(UClass*)>(this, 0x73)(this);
+		return GetVFunction<UObject*(*)(UClass*)>(this, CREATE_DEFAULT_OBJECT_INDEX)(this);
 	}
+
+
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UClass.StaticClass
+	 * 		Name   -> PredefinedFunction UClass.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UClass::StaticClass()
@@ -1018,10 +1653,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UFunction.StaticClass
+	 * 		Name   -> PredefinedFunction UFunction.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UFunction::StaticClass()
@@ -1032,10 +1669,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDelegateFunction.StaticClass
+	 * 		Name   -> PredefinedFunction UDelegateFunction.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDelegateFunction::StaticClass()
@@ -1046,10 +1685,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USparseDelegateFunction.StaticClass
+	 * 		Name   -> PredefinedFunction USparseDelegateFunction.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USparseDelegateFunction::StaticClass()
@@ -1060,10 +1701,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDynamicClass.StaticClass
+	 * 		Name   -> PredefinedFunction UDynamicClass.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDynamicClass::StaticClass()
@@ -1074,10 +1717,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPackageMap.StaticClass
+	 * 		Name   -> PredefinedFunction UPackageMap.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPackageMap::StaticClass()
@@ -1088,10 +1733,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnum.StaticClass
+	 * 		Name   -> PredefinedFunction UEnum.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnum::StaticClass()
@@ -1102,10 +1749,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULinkerPlaceholderClass.StaticClass
+	 * 		Name   -> PredefinedFunction ULinkerPlaceholderClass.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULinkerPlaceholderClass::StaticClass()
@@ -1116,10 +1765,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULinkerPlaceholderExportObject.StaticClass
+	 * 		Name   -> PredefinedFunction ULinkerPlaceholderExportObject.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULinkerPlaceholderExportObject::StaticClass()
@@ -1130,10 +1781,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULinkerPlaceholderFunction.StaticClass
+	 * 		Name   -> PredefinedFunction ULinkerPlaceholderFunction.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULinkerPlaceholderFunction::StaticClass()
@@ -1144,10 +1797,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMetaData.StaticClass
+	 * 		Name   -> PredefinedFunction UMetaData.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMetaData::StaticClass()
@@ -1158,10 +1813,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UObjectRedirector.StaticClass
+	 * 		Name   -> PredefinedFunction UObjectRedirector.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UObjectRedirector::StaticClass()
@@ -1172,10 +1829,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UProperty.StaticClass
+	 * 		Name   -> PredefinedFunction UProperty.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UProperty::StaticClass()
@@ -1186,10 +1845,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnumProperty.StaticClass
+	 * 		Name   -> PredefinedFunction UEnumProperty.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnumProperty::StaticClass()
@@ -1200,10 +1861,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UArrayProperty.StaticClass
+	 * 		Name   -> PredefinedFunction UArrayProperty.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UArrayProperty::StaticClass()
@@ -1214,10 +1877,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UObjectPropertyBase.StaticClass
+	 * 		Name   -> PredefinedFunction UObjectPropertyBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UObjectPropertyBase::StaticClass()
@@ -1228,10 +1893,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBoolProperty.StaticClass
+	 * 		Name   -> PredefinedFunction UBoolProperty.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBoolProperty::StaticClass()
@@ -1242,10 +1909,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNumericProperty.StaticClass
+	 * 		Name   -> PredefinedFunction UNumericProperty.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNumericProperty::StaticClass()
@@ -1256,10 +1925,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UByteProperty.StaticClass
+	 * 		Name   -> PredefinedFunction UByteProperty.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UByteProperty::StaticClass()
@@ -1270,10 +1941,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UObjectProperty.StaticClass
+	 * 		Name   -> PredefinedFunction UObjectProperty.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UObjectProperty::StaticClass()
@@ -1284,10 +1957,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UClassProperty.StaticClass
+	 * 		Name   -> PredefinedFunction UClassProperty.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UClassProperty::StaticClass()
@@ -1298,10 +1973,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDelegateProperty.StaticClass
+	 * 		Name   -> PredefinedFunction UDelegateProperty.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDelegateProperty::StaticClass()
@@ -1312,10 +1989,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDoubleProperty.StaticClass
+	 * 		Name   -> PredefinedFunction UDoubleProperty.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDoubleProperty::StaticClass()
@@ -1326,10 +2005,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UFloatProperty.StaticClass
+	 * 		Name   -> PredefinedFunction UFloatProperty.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UFloatProperty::StaticClass()
@@ -1340,10 +2021,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UIntProperty.StaticClass
+	 * 		Name   -> PredefinedFunction UIntProperty.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UIntProperty::StaticClass()
@@ -1354,10 +2037,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UInt8Property.StaticClass
+	 * 		Name   -> PredefinedFunction UInt8Property.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UInt8Property::StaticClass()
@@ -1368,10 +2053,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UInt16Property.StaticClass
+	 * 		Name   -> PredefinedFunction UInt16Property.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UInt16Property::StaticClass()
@@ -1382,10 +2069,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UInt64Property.StaticClass
+	 * 		Name   -> PredefinedFunction UInt64Property.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UInt64Property::StaticClass()
@@ -1396,10 +2085,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UInterfaceProperty.StaticClass
+	 * 		Name   -> PredefinedFunction UInterfaceProperty.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UInterfaceProperty::StaticClass()
@@ -1410,10 +2101,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULazyObjectProperty.StaticClass
+	 * 		Name   -> PredefinedFunction ULazyObjectProperty.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULazyObjectProperty::StaticClass()
@@ -1424,10 +2117,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMapProperty.StaticClass
+	 * 		Name   -> PredefinedFunction UMapProperty.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMapProperty::StaticClass()
@@ -1438,10 +2133,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMulticastDelegateProperty.StaticClass
+	 * 		Name   -> PredefinedFunction UMulticastDelegateProperty.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMulticastDelegateProperty::StaticClass()
@@ -1452,10 +2149,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMulticastInlineDelegateProperty.StaticClass
+	 * 		Name   -> PredefinedFunction UMulticastInlineDelegateProperty.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMulticastInlineDelegateProperty::StaticClass()
@@ -1466,10 +2165,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMulticastSparseDelegateProperty.StaticClass
+	 * 		Name   -> PredefinedFunction UMulticastSparseDelegateProperty.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMulticastSparseDelegateProperty::StaticClass()
@@ -1480,10 +2181,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNameProperty.StaticClass
+	 * 		Name   -> PredefinedFunction UNameProperty.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNameProperty::StaticClass()
@@ -1494,10 +2197,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USetProperty.StaticClass
+	 * 		Name   -> PredefinedFunction USetProperty.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USetProperty::StaticClass()
@@ -1508,10 +2213,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USoftObjectProperty.StaticClass
+	 * 		Name   -> PredefinedFunction USoftObjectProperty.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USoftObjectProperty::StaticClass()
@@ -1522,10 +2229,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USoftClassProperty.StaticClass
+	 * 		Name   -> PredefinedFunction USoftClassProperty.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USoftClassProperty::StaticClass()
@@ -1536,10 +2245,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UStrProperty.StaticClass
+	 * 		Name   -> PredefinedFunction UStrProperty.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UStrProperty::StaticClass()
@@ -1550,10 +2261,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UStructProperty.StaticClass
+	 * 		Name   -> PredefinedFunction UStructProperty.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UStructProperty::StaticClass()
@@ -1564,10 +2277,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UUInt16Property.StaticClass
+	 * 		Name   -> PredefinedFunction UUInt16Property.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UUInt16Property::StaticClass()
@@ -1578,10 +2293,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UUInt32Property.StaticClass
+	 * 		Name   -> PredefinedFunction UUInt32Property.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UUInt32Property::StaticClass()
@@ -1592,10 +2309,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UUInt64Property.StaticClass
+	 * 		Name   -> PredefinedFunction UUInt64Property.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UUInt64Property::StaticClass()
@@ -1606,10 +2325,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWeakObjectProperty.StaticClass
+	 * 		Name   -> PredefinedFunction UWeakObjectProperty.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWeakObjectProperty::StaticClass()
@@ -1620,10 +2341,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UTextProperty.StaticClass
+	 * 		Name   -> PredefinedFunction UTextProperty.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UTextProperty::StaticClass()
@@ -1634,10 +2357,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPropertyWrapper.StaticClass
+	 * 		Name   -> PredefinedFunction UPropertyWrapper.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPropertyWrapper::StaticClass()
@@ -1648,10 +2373,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMulticastDelegatePropertyWrapper.StaticClass
+	 * 		Name   -> PredefinedFunction UMulticastDelegatePropertyWrapper.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMulticastDelegatePropertyWrapper::StaticClass()
@@ -1662,10 +2389,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMulticastInlineDelegatePropertyWrapper.StaticClass
+	 * 		Name   -> PredefinedFunction UMulticastInlineDelegatePropertyWrapper.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMulticastInlineDelegatePropertyWrapper::StaticClass()
@@ -1675,6 +2404,7 @@ namespace CG
 			ptr = UObject::FindClass("Class CoreUObject.MulticastInlineDelegatePropertyWrapper");
 		return ptr;
 	}
+
 
 }
 

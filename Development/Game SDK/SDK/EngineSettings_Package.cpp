@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UConsoleSettings.StaticClass
+	 * 		Name   -> PredefinedFunction UConsoleSettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UConsoleSettings::StaticClass()
@@ -24,6 +25,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -32,7 +35,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bSkipFirstPlayer                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGameMapsSettings::SetSkipAssigningGamepadToPlayer1(bool bSkipFirstPlayer)
+	void UGameMapsSettings::SetSkipAssigningGamepadToPlayer1(
+bool bSkipFirstPlayer
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -48,6 +53,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -72,6 +79,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -95,10 +104,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGameMapsSettings.StaticClass
+	 * 		Name   -> PredefinedFunction UGameMapsSettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGameMapsSettings::StaticClass()
@@ -109,10 +120,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGameNetworkManagerSettings.StaticClass
+	 * 		Name   -> PredefinedFunction UGameNetworkManagerSettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGameNetworkManagerSettings::StaticClass()
@@ -123,10 +136,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGameSessionSettings.StaticClass
+	 * 		Name   -> PredefinedFunction UGameSessionSettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGameSessionSettings::StaticClass()
@@ -137,10 +152,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGeneralEngineSettings.StaticClass
+	 * 		Name   -> PredefinedFunction UGeneralEngineSettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGeneralEngineSettings::StaticClass()
@@ -151,10 +168,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGeneralProjectSettings.StaticClass
+	 * 		Name   -> PredefinedFunction UGeneralProjectSettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGeneralProjectSettings::StaticClass()
@@ -165,10 +184,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UHudSettings.StaticClass
+	 * 		Name   -> PredefinedFunction UHudSettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UHudSettings::StaticClass()
@@ -178,6 +199,7 @@ namespace CG
 			ptr = UObject::FindClass("Class EngineSettings.HudSettings");
 		return ptr;
 	}
+
 
 }
 

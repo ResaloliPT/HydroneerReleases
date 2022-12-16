@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+
 	/**
 	 * Enum PropertyAccess.EPropertyAccessCopyBatch
 	 */
@@ -26,6 +27,8 @@ namespace CG
 		Count             = 4,
 		MAX               = 5
 	};
+
+
 
 	/**
 	 * Enum PropertyAccess.EPropertyAccessCopyType
@@ -52,6 +55,8 @@ namespace CG
 		MAX                 = 17
 	};
 
+
+
 	/**
 	 * Enum PropertyAccess.EPropertyAccessObjectType
 	 */
@@ -63,6 +68,8 @@ namespace CG
 		SoftObject = 3,
 		MAX        = 4
 	};
+
+
 
 	/**
 	 * Enum PropertyAccess.EPropertyAccessIndirectionType
@@ -80,6 +87,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+
 	/**
 	 * ScriptStruct PropertyAccess.PropertyAccessSegment
 	 * Size -> 0x0040
@@ -87,14 +95,30 @@ namespace CG
 	struct FPropertyAccessSegment
 	{
 	public:
-		class FName                                                Name;                                                    // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		class UStruct*                                             Struct;                                                  // 0x0008(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                              Property[0x20];                                          // 0x0010(0x0020) UNKNOWN PROPERTY: FieldPathProperty
-		class UFunction*                                           Function;                                                // 0x0030(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		int32_t                                                    ArrayIndex;                                              // 0x0038(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		uint16_t                                                   Flags;                                                   // 0x003C(0x0002) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_KVE8[0x2];                                   // 0x003E(0x0002) MISSED OFFSET (PADDING)
+
+		class FName                                              Name;                                                    // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+
+		class UStruct*                                           Struct;                                                  // 0x0008(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+
+		unsigned char                                            Property[0x20];                                          // 0x0010(0x0020) UNKNOWN PROPERTY: FieldPathProperty
+
+
+		class UFunction*                                         Function;                                                // 0x0030(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+
+		int32_t                                                  ArrayIndex;                                              // 0x0038(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+
+		uint16_t                                                 Flags;                                                   // 0x003C(0x0002) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+
+		unsigned char                                            UnknownData_TBC2[0x2];                                   // 0x003E(0x0002) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct PropertyAccess.PropertyAccessPath
@@ -103,11 +127,21 @@ namespace CG
 	struct FPropertyAccessPath
 	{
 	public:
-		int32_t                                                    PathSegmentStartIndex;                                   // 0x0000(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		int32_t                                                    PathSegmentCount;                                        // 0x0004(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                              bHasEvents : 1;                                          // 0x0008(0x0001) BIT_FIELD NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_SI4X[0x3];                                   // 0x0009(0x0003) MISSED OFFSET (PADDING)
+
+		int32_t                                                  PathSegmentStartIndex;                                   // 0x0000(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+
+		int32_t                                                  PathSegmentCount;                                        // 0x0004(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+
+		bool                                                     bHasEvents : 1;                                          // 0x0008(0x0001) BIT_FIELD NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+
+		unsigned char                                            UnknownData_LA1R[0x3];                                   // 0x0009(0x0003) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct PropertyAccess.PropertyAccessCopy
@@ -116,12 +150,24 @@ namespace CG
 	struct FPropertyAccessCopy
 	{
 	public:
-		int32_t                                                    AccessIndex;                                             // 0x0000(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		int32_t                                                    DestAccessStartIndex;                                    // 0x0004(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		int32_t                                                    DestAccessEndIndex;                                      // 0x0008(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		EPropertyAccessCopyType                                    Type;                                                    // 0x000C(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_2OHD[0x3];                                   // 0x000D(0x0003) MISSED OFFSET (PADDING)
+
+		int32_t                                                  AccessIndex;                                             // 0x0000(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+
+		int32_t                                                  DestAccessStartIndex;                                    // 0x0004(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+
+		int32_t                                                  DestAccessEndIndex;                                      // 0x0008(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+
+		EPropertyAccessCopyType                                  Type;                                                    // 0x000C(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+
+		unsigned char                                            UnknownData_SJFQ[0x3];                                   // 0x000D(0x0003) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct PropertyAccess.PropertyAccessCopyBatch
@@ -130,8 +176,12 @@ namespace CG
 	struct FPropertyAccessCopyBatch
 	{
 	public:
-		TArray<struct FPropertyAccessCopy>                         Copies;                                                  // 0x0000(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
+
+		TArray<struct FPropertyAccessCopy>                       Copies;                                                  // 0x0000(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
+
 	};
+
+
 
 	/**
 	 * ScriptStruct PropertyAccess.PropertyAccessIndirectionChain
@@ -140,12 +190,24 @@ namespace CG
 	struct FPropertyAccessIndirectionChain
 	{
 	public:
-		unsigned char                                              Property[0x20];                                          // 0x0000(0x0020) UNKNOWN PROPERTY: FieldPathProperty
-		int32_t                                                    IndirectionStartIndex;                                   // 0x0020(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		int32_t                                                    IndirectionEndIndex;                                     // 0x0024(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		int32_t                                                    EventId;                                                 // 0x0028(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_MNHJ[0x4];                                   // 0x002C(0x0004) MISSED OFFSET (PADDING)
+
+		unsigned char                                            Property[0x20];                                          // 0x0000(0x0020) UNKNOWN PROPERTY: FieldPathProperty
+
+
+		int32_t                                                  IndirectionStartIndex;                                   // 0x0020(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+
+		int32_t                                                  IndirectionEndIndex;                                     // 0x0024(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+
+		int32_t                                                  EventId;                                                 // 0x0028(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+
+		unsigned char                                            UnknownData_11CX[0x4];                                   // 0x002C(0x0004) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct PropertyAccess.PropertyAccessIndirection
@@ -154,16 +216,36 @@ namespace CG
 	struct FPropertyAccessIndirection
 	{
 	public:
-		unsigned char                                              ArrayProperty[0x20];                                     // 0x0000(0x0020) UNKNOWN PROPERTY: FieldPathProperty
-		class UFunction*                                           Function;                                                // 0x0020(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		int32_t                                                    ReturnBufferSize;                                        // 0x0028(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		int32_t                                                    ReturnBufferAlignment;                                   // 0x002C(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		int32_t                                                    ArrayIndex;                                              // 0x0030(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		uint32_t                                                   Offset;                                                  // 0x0034(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		EPropertyAccessObjectType                                  ObjectType;                                              // 0x0038(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		EPropertyAccessIndirectionType                             Type;                                                    // 0x0039(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_GVTK[0x6];                                   // 0x003A(0x0006) MISSED OFFSET (PADDING)
+
+		unsigned char                                            ArrayProperty[0x20];                                     // 0x0000(0x0020) UNKNOWN PROPERTY: FieldPathProperty
+
+
+		class UFunction*                                         Function;                                                // 0x0020(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+
+		int32_t                                                  ReturnBufferSize;                                        // 0x0028(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+
+		int32_t                                                  ReturnBufferAlignment;                                   // 0x002C(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+
+		int32_t                                                  ArrayIndex;                                              // 0x0030(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+
+		uint32_t                                                 Offset;                                                  // 0x0034(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+
+		EPropertyAccessObjectType                                ObjectType;                                              // 0x0038(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+
+		EPropertyAccessIndirectionType                           Type;                                                    // 0x0039(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+
+		unsigned char                                            UnknownData_JX21[0x6];                                   // 0x003A(0x0006) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct PropertyAccess.PropertyAccessLibrary
@@ -172,15 +254,33 @@ namespace CG
 	struct FPropertyAccessLibrary
 	{
 	public:
-		TArray<struct FPropertyAccessSegment>                      PathSegments;                                            // 0x0000(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
-		TArray<struct FPropertyAccessPath>                         SrcPaths;                                                // 0x0010(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
-		TArray<struct FPropertyAccessPath>                         DestPaths;                                               // 0x0020(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
-		struct FPropertyAccessCopyBatch                            CopyBatches[0x4];                                        // 0x0030(0x0040) NativeAccessSpecifierPrivate
-		TArray<struct FPropertyAccessIndirectionChain>             SrcAccesses;                                             // 0x0070(0x0010) ZeroConstructor, Transient, NativeAccessSpecifierPrivate
-		TArray<struct FPropertyAccessIndirectionChain>             DestAccesses;                                            // 0x0080(0x0010) ZeroConstructor, Transient, NativeAccessSpecifierPrivate
-		TArray<struct FPropertyAccessIndirection>                  Indirections;                                            // 0x0090(0x0010) ZeroConstructor, Transient, NativeAccessSpecifierPrivate
-		TArray<int32_t>                                            EventAccessIndices;                                      // 0x00A0(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_K0BG[0x18];                                  // 0x00B0(0x0018) MISSED OFFSET (PADDING)
+
+		TArray<struct FPropertyAccessSegment>                    PathSegments;                                            // 0x0000(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
+
+
+		TArray<struct FPropertyAccessPath>                       SrcPaths;                                                // 0x0010(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
+
+
+		TArray<struct FPropertyAccessPath>                       DestPaths;                                               // 0x0020(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
+
+
+		struct FPropertyAccessCopyBatch                          CopyBatches[0x4];                                        // 0x0030(0x0040) NativeAccessSpecifierPrivate
+
+
+		TArray<struct FPropertyAccessIndirectionChain>           SrcAccesses;                                             // 0x0070(0x0010) ZeroConstructor, Transient, NativeAccessSpecifierPrivate
+
+
+		TArray<struct FPropertyAccessIndirectionChain>           DestAccesses;                                            // 0x0080(0x0010) ZeroConstructor, Transient, NativeAccessSpecifierPrivate
+
+
+		TArray<struct FPropertyAccessIndirection>                Indirections;                                            // 0x0090(0x0010) ZeroConstructor, Transient, NativeAccessSpecifierPrivate
+
+
+		TArray<int32_t>                                          EventAccessIndices;                                      // 0x00A0(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
+
+
+		unsigned char                                            UnknownData_XYFS[0x18];                                  // 0x00B0(0x0018) MISSED OFFSET (PADDING)
+
 	};
 
 }

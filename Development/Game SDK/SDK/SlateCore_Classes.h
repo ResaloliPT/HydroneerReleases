@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * Class SlateCore.FontBulkData
 	 * Size -> 0x0050 (FullSize[0x0078] - InheritedSize[0x0028])
@@ -21,11 +22,16 @@ namespace CG
 	class UFontBulkData : public UObject
 	{
 	public:
-		unsigned char                                              UnknownData_X1O2[0x50];                                  // 0x0028(0x0050) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_6D5U[0x50];                                  // 0x0028(0x0050) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SlateCore.FontFaceInterface
@@ -34,8 +40,11 @@ namespace CG
 	class UFontFaceInterface : public UInterface
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SlateCore.FontProviderInterface
@@ -44,8 +53,11 @@ namespace CG
 	class UFontProviderInterface : public UInterface
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SlateCore.SlateTypes
@@ -54,8 +66,11 @@ namespace CG
 	class USlateTypes : public UObject
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SlateCore.SlateWidgetStyleAsset
@@ -64,11 +79,16 @@ namespace CG
 	class USlateWidgetStyleAsset : public UObject
 	{
 	public:
-		class USlateWidgetStyleContainerBase*                      CustomStyle;                                             // 0x0028(0x0008) Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		class USlateWidgetStyleContainerBase*                    CustomStyle;                                             // 0x0028(0x0008) Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SlateCore.SlateWidgetStyleContainerBase
@@ -77,11 +97,16 @@ namespace CG
 	class USlateWidgetStyleContainerBase : public UObject
 	{
 	public:
-		unsigned char                                              UnknownData_ZHVZ[0x8];                                   // 0x0028(0x0008) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_EIDC[0x8];                                   // 0x0028(0x0008) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class SlateCore.SlateWidgetStyleContainerInterface
@@ -90,6 +115,7 @@ namespace CG
 	class USlateWidgetStyleContainerInterface : public UInterface
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
 

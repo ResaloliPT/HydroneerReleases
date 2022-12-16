@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+
 	/**
 	 * Enum TimeManagement.EFrameNumberDisplayFormats
 	 */
@@ -27,6 +28,8 @@ namespace CG
 		MAX                  = 5
 	};
 
+
+
 	/**
 	 * Enum TimeManagement.ETimedDataInputState
 	 */
@@ -37,6 +40,8 @@ namespace CG
 		Disconnected = 2,
 		MAX          = 3
 	};
+
+
 
 	/**
 	 * Enum TimeManagement.ETimedDataInputEvaluationType
@@ -52,6 +57,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+
 	/**
 	 * ScriptStruct TimeManagement.TimedDataInputEvaluationData
 	 * Size -> 0x0008
@@ -59,9 +65,15 @@ namespace CG
 	struct FTimedDataInputEvaluationData
 	{
 	public:
-		float                                                      DistanceToNewestSampleSeconds;                           // 0x0000(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      DistanceToOldestSampleSeconds;                           // 0x0004(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		float                                                    DistanceToNewestSampleSeconds;                           // 0x0000(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    DistanceToOldestSampleSeconds;                           // 0x0004(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct TimeManagement.TimedDataChannelSampleTime
@@ -70,7 +82,9 @@ namespace CG
 	struct FTimedDataChannelSampleTime
 	{
 	public:
-		unsigned char                                              UnknownData_RCWR[0x18];                                  // 0x0000(0x0018) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_GVWN[0x18];                                  // 0x0000(0x0018) MISSED OFFSET (PADDING)
+
 	};
 
 }

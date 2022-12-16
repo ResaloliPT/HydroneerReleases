@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,19 +14,33 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * Class CustomMeshComponent.CustomMeshComponent
-	 * Size -> 0x0010 (FullSize[0x0480] - InheritedSize[0x0470])
+	 * Size -> 0x0018 (FullSize[0x0480] - InheritedSize[0x0468])
 	 */
 	class UCustomMeshComponent : public UMeshComponent
 	{
 	public:
-		unsigned char                                              UnknownData_1ZSB[0x10];                                  // 0x0470(0x0010) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_19B1[0x8];                                   // 0x0468(0x0008) Fix Super Size
+
+
+		unsigned char                                            UnknownData_N9MZ[0x10];                                  // 0x0470(0x0010) MISSED OFFSET (PADDING)
+
 
 	public:
-		bool SetCustomMeshTriangles(TArray<struct FCustomMeshTriangle> Triangles);
+
+		bool SetCustomMeshTriangles(
+TArray<struct FCustomMeshTriangle> Triangles
+);
+
 		void ClearCustomMeshTriangles();
-		void AddCustomMeshTriangles(TArray<struct FCustomMeshTriangle> Triangles);
+
+		void AddCustomMeshTriangles(
+TArray<struct FCustomMeshTriangle> Triangles
+);
+
 		static UClass* StaticClass();
 	};
 

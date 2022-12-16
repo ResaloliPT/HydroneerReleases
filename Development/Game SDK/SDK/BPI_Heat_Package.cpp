@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -31,15 +32,19 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BPI_Heat.BPI_Heat_C.InFire
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               SlowBurn_                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               SlowBurn                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void UBPI_Heat_C::InFire(bool SlowBurn_)
+	void UBPI_Heat_C::InFire(
+bool SlowBurn
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -47,14 +52,16 @@ namespace CG
 		
 		struct
 		{
-			bool                                               SlowBurn_;
+			bool                                               SlowBurn;
 		} params;
-		params.SlowBurn_ = SlowBurn_;
+		params.SlowBurn = SlowBurn;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -77,6 +84,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -85,7 +94,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              Heat                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UBPI_Heat_C::HeatUpdated(float Heat)
+	void UBPI_Heat_C::HeatUpdated(
+float Heat
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -102,10 +113,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBPI_Heat_C.StaticClass
+	 * 		Name   -> PredefinedFunction UBPI_Heat_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBPI_Heat_C::StaticClass()
@@ -115,6 +128,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass BPI_Heat.BPI_Heat_C");
 		return ptr;
 	}
+
 
 }
 

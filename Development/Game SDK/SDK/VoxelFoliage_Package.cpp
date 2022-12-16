@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelFoliage.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelFoliage.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelFoliage::StaticClass()
@@ -24,10 +25,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AVoxelFoliageActor.StaticClass
+	 * 		Name   -> PredefinedFunction AVoxelFoliageActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AVoxelFoliageActor::StaticClass()
@@ -38,10 +41,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelFoliageBiomeType.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelFoliageBiomeType.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelFoliageBiomeType::StaticClass()
@@ -52,10 +57,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelFoliageBiome.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelFoliageBiome.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelFoliageBiome::StaticClass()
@@ -65,6 +72,8 @@ namespace CG
 			ptr = UObject::FindClass("Class VoxelFoliage.VoxelFoliageBiome");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -77,7 +86,15 @@ namespace CG
 	 * 		struct FVoxelIntBox                                Bounds                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EVoxelSpawnerActorSpawnType                        SpawnType                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelFoliageBlueprintLibrary::SpawnVoxelSpawnerActorsInArea(TArray<class AVoxelFoliageActor*>* OutActors, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, EVoxelSpawnerActorSpawnType SpawnType)
+	void UVoxelFoliageBlueprintLibrary::SpawnVoxelSpawnerActorsInArea(
+TArray<class AVoxelFoliageActor*>* OutActors
+, 
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+, 
+EVoxelSpawnerActorSpawnType SpawnType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -102,6 +119,8 @@ namespace CG
 			*OutActors = params.OutActors;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -112,7 +131,13 @@ namespace CG
 	 * 		class UVoxelHierarchicalInstancedStaticMeshComponent* Component                                                  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            InstanceIndex                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class AVoxelFoliageActor* UVoxelFoliageBlueprintLibrary::SpawnVoxelSpawnerActorByInstanceIndex(class AVoxelWorld* World, class UVoxelHierarchicalInstancedStaticMeshComponent* Component, int32_t InstanceIndex)
+	class AVoxelFoliageActor* UVoxelFoliageBlueprintLibrary::SpawnVoxelSpawnerActorByInstanceIndex(
+class AVoxelWorld* World
+, 
+class UVoxelHierarchicalInstancedStaticMeshComponent* Component
+, 
+int32_t InstanceIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -135,6 +160,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -144,7 +171,11 @@ namespace CG
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelFoliageSave                           Save                                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelFoliageBlueprintLibrary::LoadFromSpawnersSave(class AVoxelWorld* World, const struct FVoxelFoliageSave& Save)
+	void UVoxelFoliageBlueprintLibrary::LoadFromSpawnersSave(
+class AVoxelWorld* World
+, 
+const struct FVoxelFoliageSave& Save
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -163,6 +194,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -171,7 +204,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelFoliageSave UVoxelFoliageBlueprintLibrary::GetSpawnersSave(class AVoxelWorld* World)
+	struct FVoxelFoliageSave UVoxelFoliageBlueprintLibrary::GetSpawnersSave(
+class AVoxelWorld* World
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -190,6 +225,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -202,7 +239,17 @@ namespace CG
 	 * 		struct FVoxelInstancedMeshKey                      MeshKey                                                    (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector                                     FloatingDetectionOffset                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelFoliageBlueprintLibrary::AddInstances(class AVoxelWorld* World, TArray<struct FTransform> Transforms, TArray<float> CustomData, const struct FVoxelInstancedMeshKey& MeshKey, const struct FVector& FloatingDetectionOffset)
+	void UVoxelFoliageBlueprintLibrary::AddInstances(
+class AVoxelWorld* World
+, 
+TArray<struct FTransform> Transforms
+, 
+TArray<float> CustomData
+, 
+const struct FVoxelInstancedMeshKey& MeshKey
+, 
+const struct FVector& FloatingDetectionOffset
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -227,10 +274,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelFoliageBlueprintLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelFoliageBlueprintLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelFoliageBlueprintLibrary::StaticClass()
@@ -241,10 +290,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelFoliageCollection.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelFoliageCollection.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelFoliageCollection::StaticClass()
@@ -255,10 +306,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelFoliageDebugSubsystemProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelFoliageDebugSubsystemProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelFoliageDebugSubsystemProxy::StaticClass()
@@ -269,10 +322,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelFoliageSubsystemProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelFoliageSubsystemProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelFoliageSubsystemProxy::StaticClass()
@@ -283,10 +338,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelHierarchicalInstancedStaticMeshComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelHierarchicalInstancedStaticMeshComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelHierarchicalInstancedStaticMeshComponent::StaticClass()
@@ -297,10 +354,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelInstancedMeshSubsystemProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelInstancedMeshSubsystemProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelInstancedMeshSubsystemProxy::StaticClass()
@@ -310,6 +369,7 @@ namespace CG
 			ptr = UObject::FindClass("Class VoxelFoliage.VoxelInstancedMeshSubsystemProxy");
 		return ptr;
 	}
+
 
 }
 

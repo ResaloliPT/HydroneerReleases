@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * Class NetCore.NetAnalyticsAggregatorConfig
 	 * Size -> 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
@@ -21,9 +22,12 @@ namespace CG
 	class UNetAnalyticsAggregatorConfig : public UObject
 	{
 	public:
-		TArray<struct FNetAnalyticsDataConfig>                     NetAnalyticsData;                                        // 0x0028(0x0010) ZeroConstructor, Config, NativeAccessSpecifierPublic
+
+		TArray<struct FNetAnalyticsDataConfig>                   NetAnalyticsData;                                        // 0x0028(0x0010) ZeroConstructor, Config, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
 

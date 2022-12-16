@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19,7 +20,11 @@ namespace CG
 	 * 		EControllerHand                                    Hand                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FName                                        MotionSource                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapControllerFunctionLibrary::SetMotionSourceForHand(EControllerHand Hand, const class FName& MotionSource)
+	bool UMagicLeapControllerFunctionLibrary::SetMotionSourceForHand(
+EControllerHand Hand
+, 
+const class FName& MotionSource
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -40,6 +45,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -48,7 +55,9 @@ namespace CG
 	 * Parameters:
 	 * 		EMagicLeapControllerTrackingMode                   TrackingMode                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapControllerFunctionLibrary::SetControllerTrackingMode(EMagicLeapControllerTrackingMode TrackingMode)
+	bool UMagicLeapControllerFunctionLibrary::SetControllerTrackingMode(
+EMagicLeapControllerTrackingMode TrackingMode
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -67,6 +76,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -78,7 +89,15 @@ namespace CG
 	 * 		EMagicLeapControllerLEDColor                       LEDColor                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              DurationInSec                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapControllerFunctionLibrary::PlayLEDPattern(const class FName& MotionSource, EMagicLeapControllerLEDPattern LEDPattern, EMagicLeapControllerLEDColor LEDColor, float DurationInSec)
+	bool UMagicLeapControllerFunctionLibrary::PlayLEDPattern(
+const class FName& MotionSource
+, 
+EMagicLeapControllerLEDPattern LEDPattern
+, 
+EMagicLeapControllerLEDColor LEDColor
+, 
+float DurationInSec
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -103,6 +122,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -116,7 +137,19 @@ namespace CG
 	 * 		EMagicLeapControllerLEDColor                       LEDColor                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              DurationInSec                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapControllerFunctionLibrary::PlayLEDEffect(const class FName& MotionSource, EMagicLeapControllerLEDEffect LEDEffect, EMagicLeapControllerLEDSpeed LEDSpeed, EMagicLeapControllerLEDPattern LEDPattern, EMagicLeapControllerLEDColor LEDColor, float DurationInSec)
+	bool UMagicLeapControllerFunctionLibrary::PlayLEDEffect(
+const class FName& MotionSource
+, 
+EMagicLeapControllerLEDEffect LEDEffect
+, 
+EMagicLeapControllerLEDSpeed LEDSpeed
+, 
+EMagicLeapControllerLEDPattern LEDPattern
+, 
+EMagicLeapControllerLEDColor LEDColor
+, 
+float DurationInSec
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -145,6 +178,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -155,7 +190,13 @@ namespace CG
 	 * 		EMagicLeapControllerHapticPattern                  HapticPattern                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EMagicLeapControllerHapticIntensity                Intensity                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapControllerFunctionLibrary::PlayHapticPattern(const class FName& MotionSource, EMagicLeapControllerHapticPattern HapticPattern, EMagicLeapControllerHapticIntensity Intensity)
+	bool UMagicLeapControllerFunctionLibrary::PlayHapticPattern(
+const class FName& MotionSource
+, 
+EMagicLeapControllerHapticPattern HapticPattern
+, 
+EMagicLeapControllerHapticIntensity Intensity
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -178,6 +219,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -191,7 +234,19 @@ namespace CG
 	 * 		EMagicLeapControllerLEDColor                       LEDColor                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              DurationInSec                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapControllerFunctionLibrary::PlayControllerLEDEffect(EControllerHand Hand, EMagicLeapControllerLEDEffect LEDEffect, EMagicLeapControllerLEDSpeed LEDSpeed, EMagicLeapControllerLEDPattern LEDPattern, EMagicLeapControllerLEDColor LEDColor, float DurationInSec)
+	bool UMagicLeapControllerFunctionLibrary::PlayControllerLEDEffect(
+EControllerHand Hand
+, 
+EMagicLeapControllerLEDEffect LEDEffect
+, 
+EMagicLeapControllerLEDSpeed LEDSpeed
+, 
+EMagicLeapControllerLEDPattern LEDPattern
+, 
+EMagicLeapControllerLEDColor LEDColor
+, 
+float DurationInSec
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -220,6 +275,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -231,7 +288,15 @@ namespace CG
 	 * 		EMagicLeapControllerLEDColor                       LEDColor                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              DurationInSec                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapControllerFunctionLibrary::PlayControllerLED(EControllerHand Hand, EMagicLeapControllerLEDPattern LEDPattern, EMagicLeapControllerLEDColor LEDColor, float DurationInSec)
+	bool UMagicLeapControllerFunctionLibrary::PlayControllerLED(
+EControllerHand Hand
+, 
+EMagicLeapControllerLEDPattern LEDPattern
+, 
+EMagicLeapControllerLEDColor LEDColor
+, 
+float DurationInSec
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -256,6 +321,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -266,7 +333,13 @@ namespace CG
 	 * 		EMagicLeapControllerHapticPattern                  HapticPattern                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EMagicLeapControllerHapticIntensity                Intensity                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapControllerFunctionLibrary::PlayControllerHapticFeedback(EControllerHand Hand, EMagicLeapControllerHapticPattern HapticPattern, EMagicLeapControllerHapticIntensity Intensity)
+	bool UMagicLeapControllerFunctionLibrary::PlayControllerHapticFeedback(
+EControllerHand Hand
+, 
+EMagicLeapControllerHapticPattern HapticPattern
+, 
+EMagicLeapControllerHapticIntensity Intensity
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -288,6 +361,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -312,6 +387,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -320,7 +397,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        MotionSource                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapControllerFunctionLibrary::IsMLControllerConnected(const class FName& MotionSource)
+	bool UMagicLeapControllerFunctionLibrary::IsMLControllerConnected(
+const class FName& MotionSource
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -338,6 +417,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -360,6 +441,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -368,7 +451,9 @@ namespace CG
 	 * Parameters:
 	 * 		EControllerHand                                    Hand                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FName UMagicLeapControllerFunctionLibrary::GetMotionSourceForHand(EControllerHand Hand)
+	class FName UMagicLeapControllerFunctionLibrary::GetMotionSourceForHand(
+EControllerHand Hand
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -387,6 +472,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -395,7 +482,9 @@ namespace CG
 	 * Parameters:
 	 * 		EControllerHand                                    Hand                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	EMagicLeapControllerType UMagicLeapControllerFunctionLibrary::GetMLControllerType(EControllerHand Hand)
+	EMagicLeapControllerType UMagicLeapControllerFunctionLibrary::GetMLControllerType(
+EControllerHand Hand
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -414,6 +503,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -422,7 +513,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        MotionSource                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	EControllerHand UMagicLeapControllerFunctionLibrary::GetHandForMotionSource(const class FName& MotionSource)
+	EControllerHand UMagicLeapControllerFunctionLibrary::GetHandForMotionSource(
+const class FName& MotionSource
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -441,6 +534,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -449,7 +544,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        MotionSource                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	EMagicLeapControllerType UMagicLeapControllerFunctionLibrary::GetControllerType(const class FName& MotionSource)
+	EMagicLeapControllerType UMagicLeapControllerFunctionLibrary::GetControllerType(
+const class FName& MotionSource
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -467,6 +564,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -491,6 +590,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -500,7 +601,11 @@ namespace CG
 	 * 		int32_t                                            ControllerIndex                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EControllerHand                                    Hand                                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapControllerFunctionLibrary::GetControllerMapping(int32_t ControllerIndex, EControllerHand* Hand)
+	bool UMagicLeapControllerFunctionLibrary::GetControllerMapping(
+int32_t ControllerIndex
+, 
+EControllerHand* Hand
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -523,10 +628,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMagicLeapControllerFunctionLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UMagicLeapControllerFunctionLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMagicLeapControllerFunctionLibrary::StaticClass()
@@ -537,10 +644,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMagicLeapTouchpadGesturesComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UMagicLeapTouchpadGesturesComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMagicLeapTouchpadGesturesComponent::StaticClass()
@@ -550,6 +659,7 @@ namespace CG
 			ptr = UObject::FindClass("Class MagicLeapController.MagicLeapTouchpadGesturesComponent");
 		return ptr;
 	}
+
 
 }
 

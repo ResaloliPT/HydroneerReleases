@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAssetRegistryImpl.StaticClass
+	 * 		Name   -> PredefinedFunction UAssetRegistryImpl.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAssetRegistryImpl::StaticClass()
@@ -24,6 +25,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -32,7 +35,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FAssetData                                  InAssetData                                                (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FSoftObjectPath UAssetRegistryHelpers::ToSoftObjectPath(const struct FAssetData& InAssetData)
+	struct FSoftObjectPath UAssetRegistryHelpers::ToSoftObjectPath(
+const struct FAssetData& InAssetData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -51,6 +56,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -60,7 +67,11 @@ namespace CG
 	 * 		struct FARFilter                                   InFilter                                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FTagAndValue>                        InTagsAndValues                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	struct FARFilter UAssetRegistryHelpers::SetFilterTagsAndValues(const struct FARFilter& InFilter, TArray<struct FTagAndValue> InTagsAndValues)
+	struct FARFilter UAssetRegistryHelpers::SetFilterTagsAndValues(
+const struct FARFilter& InFilter
+, 
+TArray<struct FTagAndValue> InTagsAndValues
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -81,6 +92,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -89,7 +102,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FAssetData                                  InAssetData                                                (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UAssetRegistryHelpers::IsValid(const struct FAssetData& InAssetData)
+	bool UAssetRegistryHelpers::IsValid(
+const struct FAssetData& InAssetData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -108,6 +123,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -116,7 +133,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FAssetData                                  InAssetData                                                (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UAssetRegistryHelpers::IsUAsset(const struct FAssetData& InAssetData)
+	bool UAssetRegistryHelpers::IsUAsset(
+const struct FAssetData& InAssetData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -135,6 +154,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -143,7 +164,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FAssetData                                  InAssetData                                                (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UAssetRegistryHelpers::IsRedirector(const struct FAssetData& InAssetData)
+	bool UAssetRegistryHelpers::IsRedirector(
+const struct FAssetData& InAssetData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -162,6 +185,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -170,7 +195,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FAssetData                                  InAssetData                                                (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UAssetRegistryHelpers::IsAssetLoaded(const struct FAssetData& InAssetData)
+	bool UAssetRegistryHelpers::IsAssetLoaded(
+const struct FAssetData& InAssetData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -189,6 +216,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -199,7 +228,13 @@ namespace CG
 	 * 		class FName                                        InTagName                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      OutTagValue                                                (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UAssetRegistryHelpers::GetTagValue(const struct FAssetData& InAssetData, const class FName& InTagName, class FString* OutTagValue)
+	bool UAssetRegistryHelpers::GetTagValue(
+const struct FAssetData& InAssetData
+, 
+const class FName& InTagName
+, 
+class FString* OutTagValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -224,6 +259,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -232,7 +269,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FAssetData                                  InAssetData                                                (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UAssetRegistryHelpers::GetFullName(const struct FAssetData& InAssetData)
+	class FString UAssetRegistryHelpers::GetFullName(
+const struct FAssetData& InAssetData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -251,6 +290,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -259,7 +300,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FAssetData                                  InAssetData                                                (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UAssetRegistryHelpers::GetExportTextName(const struct FAssetData& InAssetData)
+	class FString UAssetRegistryHelpers::GetExportTextName(
+const struct FAssetData& InAssetData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -278,6 +321,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -286,7 +331,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FAssetData                                  InAssetData                                                (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UClass* UAssetRegistryHelpers::GetClass(const struct FAssetData& InAssetData)
+	class UClass* UAssetRegistryHelpers::GetClass(
+const struct FAssetData& InAssetData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -304,6 +351,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -326,6 +375,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -334,7 +385,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FAssetData                                  InAssetData                                                (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UObject* UAssetRegistryHelpers::GetAsset(const struct FAssetData& InAssetData)
+	class UObject* UAssetRegistryHelpers::GetAsset(
+const struct FAssetData& InAssetData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -353,6 +406,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -362,7 +417,11 @@ namespace CG
 	 * 		class UObject*                                     InAsset                                                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bAllowBlueprintClass                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FAssetData UAssetRegistryHelpers::CreateAssetData(class UObject* InAsset, bool bAllowBlueprintClass)
+	struct FAssetData UAssetRegistryHelpers::CreateAssetData(
+class UObject* InAsset
+, 
+bool bAllowBlueprintClass
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -383,10 +442,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAssetRegistryHelpers.StaticClass
+	 * 		Name   -> PredefinedFunction UAssetRegistryHelpers.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAssetRegistryHelpers::StaticClass()
@@ -396,6 +457,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AssetRegistry.AssetRegistryHelpers");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -418,6 +481,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -427,7 +492,11 @@ namespace CG
 	 * 		TArray<struct FAssetData>                          AssetDataList                                              (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		struct FARFilter                                   Filter                                                     (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UAssetRegistry::UseFilterToExcludeAssets(TArray<struct FAssetData>* AssetDataList, const struct FARFilter& Filter)
+	void UAssetRegistry::UseFilterToExcludeAssets(
+TArray<struct FAssetData>* AssetDataList
+, 
+const struct FARFilter& Filter
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -448,6 +517,8 @@ namespace CG
 			*AssetDataList = params.AssetDataList;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -456,7 +527,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bSynchronousSearch                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAssetRegistry::SearchAllAssets(bool bSynchronousSearch)
+	void UAssetRegistry::SearchAllAssets(
+bool bSynchronousSearch
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -473,6 +546,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -482,7 +557,11 @@ namespace CG
 	 * 		TArray<class FString>                              InPaths                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		bool                                               bForceRescan                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAssetRegistry::ScanPathsSynchronous(TArray<class FString> InPaths, bool bForceRescan)
+	void UAssetRegistry::ScanPathsSynchronous(
+TArray<class FString> InPaths
+, 
+bool bForceRescan
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -501,6 +580,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -509,7 +590,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<class FString>                              InFilePaths                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UAssetRegistry::ScanModifiedAssetFiles(TArray<class FString> InFilePaths)
+	void UAssetRegistry::ScanModifiedAssetFiles(
+TArray<class FString> InFilePaths
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -526,6 +609,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -535,7 +620,11 @@ namespace CG
 	 * 		TArray<class FString>                              InFilePaths                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		bool                                               bForceRescan                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAssetRegistry::ScanFilesSynchronous(TArray<class FString> InFilePaths, bool bForceRescan)
+	void UAssetRegistry::ScanFilesSynchronous(
+TArray<class FString> InFilePaths
+, 
+bool bForceRescan
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -554,6 +643,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -563,7 +654,11 @@ namespace CG
 	 * 		TArray<struct FAssetData>                          AssetDataList                                              (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		struct FARFilter                                   Filter                                                     (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UAssetRegistry::RunAssetsThroughFilter(TArray<struct FAssetData>* AssetDataList, const struct FARFilter& Filter)
+	void UAssetRegistry::RunAssetsThroughFilter(
+TArray<struct FAssetData>* AssetDataList
+, 
+const struct FARFilter& Filter
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -584,6 +679,8 @@ namespace CG
 			*AssetDataList = params.AssetDataList;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -592,7 +689,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      PathToPrioritize                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAssetRegistry::PrioritizeSearchPath(const class FString& PathToPrioritize)
+	void UAssetRegistry::PrioritizeSearchPath(
+const class FString& PathToPrioritize
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -609,6 +708,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -619,7 +720,13 @@ namespace CG
 	 * 		struct FAssetRegistryDependencyOptions             ReferenceOptions                                           (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		TArray<class FName>                                OutReferencers                                             (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	bool UAssetRegistry::K2_GetReferencers(const class FName& PackageName, const struct FAssetRegistryDependencyOptions& ReferenceOptions, TArray<class FName>* OutReferencers)
+	bool UAssetRegistry::K2_GetReferencers(
+const class FName& PackageName
+, 
+const struct FAssetRegistryDependencyOptions& ReferenceOptions
+, 
+TArray<class FName>* OutReferencers
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -644,6 +751,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -654,7 +763,13 @@ namespace CG
 	 * 		struct FAssetRegistryDependencyOptions             DependencyOptions                                          (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		TArray<class FName>                                OutDependencies                                            (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	bool UAssetRegistry::K2_GetDependencies(const class FName& PackageName, const struct FAssetRegistryDependencyOptions& DependencyOptions, TArray<class FName>* OutDependencies)
+	bool UAssetRegistry::K2_GetDependencies(
+const class FName& PackageName
+, 
+const struct FAssetRegistryDependencyOptions& DependencyOptions
+, 
+TArray<class FName>* OutDependencies
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -679,6 +794,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -702,6 +819,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -711,7 +830,11 @@ namespace CG
 	 * 		class FName                                        PackagePath                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bRecursive                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UAssetRegistry::HasAssets(const class FName& PackagePath, bool bRecursive)
+	bool UAssetRegistry::HasAssets(
+const class FName& PackagePath
+, 
+bool bRecursive
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -732,6 +855,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -742,7 +867,13 @@ namespace CG
 	 * 		TArray<class FString>                              OutPathList                                                (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bInRecurse                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAssetRegistry::GetSubPaths(const class FString& InBasePath, TArray<class FString>* OutPathList, bool bInRecurse)
+	void UAssetRegistry::GetSubPaths(
+const class FString& InBasePath
+, 
+TArray<class FString>* OutPathList
+, 
+bool bInRecurse
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -765,6 +896,8 @@ namespace CG
 			*OutPathList = params.OutPathList;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -776,7 +909,15 @@ namespace CG
 	 * 		bool                                               bRecursive                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bIncludeOnlyOnDiskAssets                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UAssetRegistry::GetAssetsByPath(const class FName& PackagePath, TArray<struct FAssetData>* OutAssetData, bool bRecursive, bool bIncludeOnlyOnDiskAssets)
+	bool UAssetRegistry::GetAssetsByPath(
+const class FName& PackagePath
+, 
+TArray<struct FAssetData>* OutAssetData
+, 
+bool bRecursive
+, 
+bool bIncludeOnlyOnDiskAssets
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -803,6 +944,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -813,7 +956,13 @@ namespace CG
 	 * 		TArray<struct FAssetData>                          OutAssetData                                               (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bIncludeOnlyOnDiskAssets                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UAssetRegistry::GetAssetsByPackageName(const class FName& PackageName, TArray<struct FAssetData>* OutAssetData, bool bIncludeOnlyOnDiskAssets)
+	bool UAssetRegistry::GetAssetsByPackageName(
+const class FName& PackageName
+, 
+TArray<struct FAssetData>* OutAssetData
+, 
+bool bIncludeOnlyOnDiskAssets
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -838,6 +987,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -848,7 +999,13 @@ namespace CG
 	 * 		TArray<struct FAssetData>                          OutAssetData                                               (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bSearchSubClasses                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UAssetRegistry::GetAssetsByClass(const class FName& ClassName, TArray<struct FAssetData>* OutAssetData, bool bSearchSubClasses)
+	bool UAssetRegistry::GetAssetsByClass(
+const class FName& ClassName
+, 
+TArray<struct FAssetData>* OutAssetData
+, 
+bool bSearchSubClasses
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -873,6 +1030,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -882,7 +1041,11 @@ namespace CG
 	 * 		struct FARFilter                                   Filter                                                     (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FAssetData>                          OutAssetData                                               (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	bool UAssetRegistry::GetAssets(const struct FARFilter& Filter, TArray<struct FAssetData>* OutAssetData)
+	bool UAssetRegistry::GetAssets(
+const struct FARFilter& Filter
+, 
+TArray<struct FAssetData>* OutAssetData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -905,6 +1068,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -914,7 +1079,11 @@ namespace CG
 	 * 		class FName                                        ObjectPath                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bIncludeOnlyOnDiskAssets                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FAssetData UAssetRegistry::GetAssetByObjectPath(const class FName& ObjectPath, bool bIncludeOnlyOnDiskAssets)
+	struct FAssetData UAssetRegistry::GetAssetByObjectPath(
+const class FName& ObjectPath
+, 
+bool bIncludeOnlyOnDiskAssets
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -935,6 +1104,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -943,7 +1114,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<class FString>                              OutPathList                                                (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UAssetRegistry::GetAllCachedPaths(TArray<class FString>* OutPathList)
+	void UAssetRegistry::GetAllCachedPaths(
+TArray<class FString>* OutPathList
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -962,6 +1135,8 @@ namespace CG
 			*OutPathList = params.OutPathList;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -971,7 +1146,11 @@ namespace CG
 	 * 		TArray<struct FAssetData>                          OutAssetData                                               (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bIncludeOnlyOnDiskAssets                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UAssetRegistry::GetAllAssets(TArray<struct FAssetData>* OutAssetData, bool bIncludeOnlyOnDiskAssets)
+	bool UAssetRegistry::GetAllAssets(
+TArray<struct FAssetData>* OutAssetData
+, 
+bool bIncludeOnlyOnDiskAssets
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -994,10 +1173,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAssetRegistry.StaticClass
+	 * 		Name   -> PredefinedFunction UAssetRegistry.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAssetRegistry::StaticClass()
@@ -1007,6 +1188,7 @@ namespace CG
 			ptr = UObject::FindClass("Class AssetRegistry.AssetRegistry");
 		return ptr;
 	}
+
 
 }
 

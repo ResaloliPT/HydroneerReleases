@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,13 +14,15 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * BlueprintGeneratedClass BP_RelicSpyglass.BP_RelicSpyglass_C
-	 * Size -> 0x0000 (FullSize[0x0360] - InheritedSize[0x0360])
+	 * Size -> 0x0000 (FullSize[0x03C0] - InheritedSize[0x03C0])
 	 */
 	class ABP_RelicSpyglass_C : public ABP_RelicParent_C
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
 

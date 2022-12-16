@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USoundfieldEncodingSettingsBase.StaticClass
+	 * 		Name   -> PredefinedFunction USoundfieldEncodingSettingsBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USoundfieldEncodingSettingsBase::StaticClass()
@@ -24,10 +25,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAudioEndpointSettingsBase.StaticClass
+	 * 		Name   -> PredefinedFunction UAudioEndpointSettingsBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAudioEndpointSettingsBase::StaticClass()
@@ -38,10 +41,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USpatializationPluginSourceSettingsBase.StaticClass
+	 * 		Name   -> PredefinedFunction USpatializationPluginSourceSettingsBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USpatializationPluginSourceSettingsBase::StaticClass()
@@ -52,10 +57,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UOcclusionPluginSourceSettingsBase.StaticClass
+	 * 		Name   -> PredefinedFunction UOcclusionPluginSourceSettingsBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UOcclusionPluginSourceSettingsBase::StaticClass()
@@ -66,10 +73,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UReverbPluginSourceSettingsBase.StaticClass
+	 * 		Name   -> PredefinedFunction UReverbPluginSourceSettingsBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UReverbPluginSourceSettingsBase::StaticClass()
@@ -80,10 +89,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USoundModulatorBase.StaticClass
+	 * 		Name   -> PredefinedFunction USoundModulatorBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USoundModulatorBase::StaticClass()
@@ -94,10 +105,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USoundfieldEndpointSettingsBase.StaticClass
+	 * 		Name   -> PredefinedFunction USoundfieldEndpointSettingsBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USoundfieldEndpointSettingsBase::StaticClass()
@@ -108,10 +121,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USoundfieldEffectSettingsBase.StaticClass
+	 * 		Name   -> PredefinedFunction USoundfieldEffectSettingsBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USoundfieldEffectSettingsBase::StaticClass()
@@ -122,10 +137,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USoundfieldEffectBase.StaticClass
+	 * 		Name   -> PredefinedFunction USoundfieldEffectBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USoundfieldEffectBase::StaticClass()
@@ -135,6 +152,7 @@ namespace CG
 			ptr = UObject::FindClass("Class AudioExtensions.SoundfieldEffectBase");
 		return ptr;
 	}
+
 
 }
 

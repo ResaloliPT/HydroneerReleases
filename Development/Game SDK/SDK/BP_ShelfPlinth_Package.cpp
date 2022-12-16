@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -31,10 +32,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ABP_ShelfPlinth_C.StaticClass
+	 * 		Name   -> PredefinedFunction ABP_ShelfPlinth_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ABP_ShelfPlinth_C::StaticClass()
@@ -44,6 +47,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ShelfPlinth.BP_ShelfPlinth_C");
 		return ptr;
 	}
+
 
 }
 

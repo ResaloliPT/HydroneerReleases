@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * Class Overlay.Overlays
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
@@ -21,8 +22,11 @@ namespace CG
 	class UOverlays : public UObject
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class Overlay.BasicOverlays
@@ -31,11 +35,16 @@ namespace CG
 	class UBasicOverlays : public UOverlays
 	{
 	public:
-		TArray<struct FOverlayItem>                                Overlays;                                                // 0x0028(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPublic
+
+		TArray<struct FOverlayItem>                              Overlays;                                                // 0x0028(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class Overlay.LocalizedOverlays
@@ -44,10 +53,15 @@ namespace CG
 	class ULocalizedOverlays : public UOverlays
 	{
 	public:
-		class UBasicOverlays*                                      DefaultOverlays;                                         // 0x0028(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		TMap<class FString, class UBasicOverlays*>                 LocaleToOverlaysMap;                                     // 0x0030(0x0050) Edit, NativeAccessSpecifierPublic
+
+		class UBasicOverlays*                                    DefaultOverlays;                                         // 0x0028(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		TMap<class FString, class UBasicOverlays*>               LocaleToOverlaysMap;                                     // 0x0030(0x0050) Edit, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
 

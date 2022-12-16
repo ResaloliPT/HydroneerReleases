@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+
 	/**
 	 * Enum ActorSequence.EActorSequenceObjectReferenceType
 	 */
@@ -28,6 +29,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+
 	/**
 	 * ScriptStruct ActorSequence.ActorSequenceObjectReference
 	 * Size -> 0x0028
@@ -35,12 +37,24 @@ namespace CG
 	struct FActorSequenceObjectReference
 	{
 	public:
-		EActorSequenceObjectReferenceType                          Type;                                                    // 0x0000(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_3QTW[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FGuid                                               ActorId;                                                 // 0x0004(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_SENG[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FString                                              PathToComponent;                                         // 0x0018(0x0010) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+		EActorSequenceObjectReferenceType                        Type;                                                    // 0x0000(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+
+		unsigned char                                            UnknownData_S2GH[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FGuid                                             ActorId;                                                 // 0x0004(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+
+		unsigned char                                            UnknownData_N4QC[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		class FString                                            PathToComponent;                                         // 0x0018(0x0010) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
 	};
+
+
 
 	/**
 	 * ScriptStruct ActorSequence.ActorSequenceObjectReferences
@@ -49,8 +63,12 @@ namespace CG
 	struct FActorSequenceObjectReferences
 	{
 	public:
-		TArray<struct FActorSequenceObjectReference>               Array;                                                   // 0x0000(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+
+		TArray<struct FActorSequenceObjectReference>             Array;                                                   // 0x0000(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct ActorSequence.ActorSequenceObjectReferenceMap
@@ -59,8 +77,12 @@ namespace CG
 	struct FActorSequenceObjectReferenceMap
 	{
 	public:
-		TArray<struct FGuid>                                       BindingIds;                                              // 0x0000(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
-		TArray<struct FActorSequenceObjectReferences>              References;                                              // 0x0010(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
+
+		TArray<struct FGuid>                                     BindingIds;                                              // 0x0000(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
+
+
+		TArray<struct FActorSequenceObjectReferences>            References;                                              // 0x0010(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
+
 	};
 
 }

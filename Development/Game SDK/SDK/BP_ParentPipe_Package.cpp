@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19,7 +20,11 @@ namespace CG
 	 * 		struct FVector                                     DebugLoc                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		struct FLinearColor                                LineColor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentPipe_C::PipeDebug(const struct FVector& DebugLoc, const struct FLinearColor& LineColor)
+	void ABP_ParentPipe_C::PipeDebug(
+const struct FVector& DebugLoc
+, 
+const struct FLinearColor& LineColor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -38,6 +43,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -46,7 +53,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              Pressure                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentPipe_C::ConveyPressure(float Pressure)
+	void ABP_ParentPipe_C::ConveyPressure(
+float Pressure
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -63,6 +72,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -73,7 +84,13 @@ namespace CG
 	 * 		float                                              PressureToPass                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class USceneComponent*                             WaterOut                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentPipe_C::Pressure_Check(class ABP_ParentPipe_C* Pipe, float PressureToPass, class USceneComponent* WaterOut)
+	void ABP_ParentPipe_C::Pressure_Check(
+class ABP_ParentPipe_C* Pipe
+, 
+float PressureToPass
+, 
+class USceneComponent* WaterOut
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -94,6 +111,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -101,9 +120,13 @@ namespace CG
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		class USceneComponent*                             Component                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		bool                                               CanPass_                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               CanPass                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_ParentPipe_C::AttachmentFunctionalityCheck(class USceneComponent* Component, bool* CanPass_)
+	void ABP_ParentPipe_C::AttachmentFunctionalityCheck(
+class USceneComponent* Component
+, 
+bool* CanPass
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -112,7 +135,7 @@ namespace CG
 		struct
 		{
 			class USceneComponent*                             Component;
-			bool                                               CanPass_;
+			bool                                               CanPass;
 		} params;
 		params.Component = Component;
 		
@@ -120,9 +143,11 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 		
-		if (CanPass_ != nullptr)
-			*CanPass_ = params.CanPass_;
+		if (CanPass != nullptr)
+			*CanPass = params.CanPass;
 	}
+
+
 
 	/**
 	 * Function:
@@ -133,7 +158,11 @@ namespace CG
 	 * 		class USceneComponent*                             Component                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		float                                              RootPressure                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentPipe_C::OverrideWaterIn(class USceneComponent* Component, float RootPressure)
+	void ABP_ParentPipe_C::OverrideWaterIn(
+class USceneComponent* Component
+, 
+float RootPressure
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -152,6 +181,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -161,7 +192,11 @@ namespace CG
 	 * 		struct FVector                                     SpawnLocation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		struct FRotator                                    SpawnRotation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_ParentPipe_C::SpawnWater(const struct FVector& SpawnLocation, const struct FRotator& SpawnRotation)
+	void ABP_ParentPipe_C::SpawnWater(
+const struct FVector& SpawnLocation
+, 
+const struct FRotator& SpawnRotation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -179,6 +214,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -201,6 +238,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -221,6 +260,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -243,6 +284,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -252,7 +295,11 @@ namespace CG
 	 * 		class USceneComponent*                             Component                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		float                                              RootPressure                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentPipe_C::WaterIn(class USceneComponent* Component, float RootPressure)
+	void ABP_ParentPipe_C::WaterIn(
+class USceneComponent* Component
+, 
+float RootPressure
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -271,6 +318,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -282,7 +331,15 @@ namespace CG
 	 * 		float                                              Pressure                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		float                                              RootPressure                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentPipe_C::CastWaterOut(class USceneComponent* OutComponent, int32_t Quality, float Pressure, float RootPressure)
+	void ABP_ParentPipe_C::CastWaterOut(
+class USceneComponent* OutComponent
+, 
+int32_t Quality
+, 
+float Pressure
+, 
+float RootPressure
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -305,6 +362,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -326,6 +385,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -334,7 +395,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentPipe_C::ExecuteUbergraph_BP_ParentPipe(int32_t EntryPoint)
+	void ABP_ParentPipe_C::ExecuteUbergraph_BP_ParentPipe(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -351,10 +414,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ABP_ParentPipe_C.StaticClass
+	 * 		Name   -> PredefinedFunction ABP_ParentPipe_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ABP_ParentPipe_C::StaticClass()
@@ -364,6 +429,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentPipe.BP_ParentPipe_C");
 		return ptr;
 	}
+
 
 }
 

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAutoSettingsConfig.StaticClass
+	 * 		Name   -> PredefinedFunction UAutoSettingsConfig.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAutoSettingsConfig::StaticClass()
@@ -24,6 +25,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -32,7 +35,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Value                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAutoSettingWidget::UpdateSelection(const class FString& Value)
+	void UAutoSettingWidget::UpdateSelection(
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -48,6 +53,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -69,6 +76,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -93,6 +102,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -116,6 +127,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -137,6 +150,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -146,7 +161,11 @@ namespace CG
 	 * 		class FString                                      Value                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bSaveIfPossible                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAutoSettingWidget::ApplySettingValue(const class FString& Value, bool bSaveIfPossible)
+	void UAutoSettingWidget::ApplySettingValue(
+const class FString& Value
+, 
+bool bSaveIfPossible
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -164,6 +183,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -186,10 +207,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAutoSettingWidget.StaticClass
+	 * 		Name   -> PredefinedFunction UAutoSettingWidget.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAutoSettingWidget::StaticClass()
@@ -200,6 +223,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -208,7 +233,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               State                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UToggleSetting::UpdateToggleState(bool State)
+	void UToggleSetting::UpdateToggleState(
+bool State
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -225,6 +252,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -233,7 +262,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               State                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UToggleSetting::ToggleStateUpdated(bool State)
+	void UToggleSetting::ToggleStateUpdated(
+bool State
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -250,10 +281,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UToggleSetting.StaticClass
+	 * 		Name   -> PredefinedFunction UToggleSetting.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UToggleSetting::StaticClass()
@@ -264,6 +297,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -272,7 +307,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               IsChecked                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UCheckBoxSetting::CheckBoxStateChanged(bool IsChecked)
+	void UCheckBoxSetting::CheckBoxStateChanged(
+bool IsChecked
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -289,10 +326,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UCheckBoxSetting.StaticClass
+	 * 		Name   -> PredefinedFunction UCheckBoxSetting.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UCheckBoxSetting::StaticClass()
@@ -303,6 +342,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -311,7 +352,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<struct FSettingOption>                      InOptions                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void USelectSetting::UpdateOptions(TArray<struct FSettingOption> InOptions)
+	void USelectSetting::UpdateOptions(
+TArray<struct FSettingOption> InOptions
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -327,6 +370,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -349,10 +394,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USelectSetting.StaticClass
+	 * 		Name   -> PredefinedFunction USelectSetting.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USelectSetting::StaticClass()
@@ -363,6 +410,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -372,7 +421,11 @@ namespace CG
 	 * 		class FString                                      SelectedItem                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ESelectInfo                                        SelectionType                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UComboBoxSetting::ComboBoxSelectionChanged(const class FString& SelectedItem, ESelectInfo SelectionType)
+	void UComboBoxSetting::ComboBoxSelectionChanged(
+const class FString& SelectedItem
+, 
+ESelectInfo SelectionType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -391,10 +444,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UComboBoxSetting.StaticClass
+	 * 		Name   -> PredefinedFunction UComboBoxSetting.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UComboBoxSetting::StaticClass()
@@ -405,6 +460,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -414,7 +471,11 @@ namespace CG
 	 * 		class FName                                        Name                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Value                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UConsoleUtils::SetStringCVar(const class FName& Name, const class FString& Value)
+	void UConsoleUtils::SetStringCVar(
+const class FName& Name
+, 
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -433,6 +494,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -442,7 +505,11 @@ namespace CG
 	 * 		class FName                                        Name                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Value                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UConsoleUtils::SetIntCVar(const class FName& Name, int32_t Value)
+	void UConsoleUtils::SetIntCVar(
+const class FName& Name
+, 
+int32_t Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -461,6 +528,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -470,7 +539,11 @@ namespace CG
 	 * 		class FName                                        Name                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Value                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UConsoleUtils::SetFloatCVar(const class FName& Name, float Value)
+	void UConsoleUtils::SetFloatCVar(
+const class FName& Name
+, 
+float Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -489,6 +562,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -498,7 +573,11 @@ namespace CG
 	 * 		class FName                                        Name                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               Value                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UConsoleUtils::SetBoolCVar(const class FName& Name, bool Value)
+	void UConsoleUtils::SetBoolCVar(
+const class FName& Name
+, 
+bool Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -517,6 +596,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -525,7 +606,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        Name                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UConsoleUtils::IsCVarRegistered(const class FName& Name)
+	bool UConsoleUtils::IsCVarRegistered(
+const class FName& Name
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -544,6 +627,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -552,7 +637,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        Name                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UConsoleUtils::GetStringCVar(const class FName& Name)
+	class FString UConsoleUtils::GetStringCVar(
+const class FName& Name
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -571,6 +658,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -579,7 +668,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        Name                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UConsoleUtils::GetIntCVar(const class FName& Name)
+	int32_t UConsoleUtils::GetIntCVar(
+const class FName& Name
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -598,6 +689,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -606,7 +699,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        Name                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float UConsoleUtils::GetFloatCVar(const class FName& Name)
+	float UConsoleUtils::GetFloatCVar(
+const class FName& Name
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -625,6 +720,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -633,7 +730,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        Name                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UConsoleUtils::GetBoolCVar(const class FName& Name)
+	bool UConsoleUtils::GetBoolCVar(
+const class FName& Name
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -652,10 +751,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UConsoleUtils.StaticClass
+	 * 		Name   -> PredefinedFunction UConsoleUtils.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UConsoleUtils::StaticClass()
@@ -666,10 +767,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UCVarChangeListener.StaticClass
+	 * 		Name   -> PredefinedFunction UCVarChangeListener.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UCVarChangeListener::StaticClass()
@@ -679,6 +782,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AutoSettings.CVarChangeListener");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -690,7 +795,13 @@ namespace CG
 	 * 		class FScriptDelegate                              ChangedCallback                                            (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               CallbackImmediately                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UCVarChangeListenerManager::AddStringCVarCallbackStatic(const class FName& Name, const class FScriptDelegate& ChangedCallback, bool CallbackImmediately)
+	void UCVarChangeListenerManager::AddStringCVarCallbackStatic(
+const class FName& Name
+, 
+const class FScriptDelegate& ChangedCallback
+, 
+bool CallbackImmediately
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -711,6 +822,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -721,7 +834,13 @@ namespace CG
 	 * 		class FScriptDelegate                              ChangedCallback                                            (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               CallbackImmediately                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UCVarChangeListenerManager::AddIntCVarCallbackStatic(const class FName& Name, const class FScriptDelegate& ChangedCallback, bool CallbackImmediately)
+	void UCVarChangeListenerManager::AddIntCVarCallbackStatic(
+const class FName& Name
+, 
+const class FScriptDelegate& ChangedCallback
+, 
+bool CallbackImmediately
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -742,6 +861,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -752,7 +873,13 @@ namespace CG
 	 * 		class FScriptDelegate                              ChangedCallback                                            (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               CallbackImmediately                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UCVarChangeListenerManager::AddFloatCVarCallbackStatic(const class FName& Name, const class FScriptDelegate& ChangedCallback, bool CallbackImmediately)
+	void UCVarChangeListenerManager::AddFloatCVarCallbackStatic(
+const class FName& Name
+, 
+const class FScriptDelegate& ChangedCallback
+, 
+bool CallbackImmediately
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -773,6 +900,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -783,7 +912,13 @@ namespace CG
 	 * 		class FScriptDelegate                              ChangedCallback                                            (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               CallbackImmediately                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UCVarChangeListenerManager::AddBoolCVarCallbackStatic(const class FName& Name, const class FScriptDelegate& ChangedCallback, bool CallbackImmediately)
+	void UCVarChangeListenerManager::AddBoolCVarCallbackStatic(
+const class FName& Name
+, 
+const class FScriptDelegate& ChangedCallback
+, 
+bool CallbackImmediately
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -804,10 +939,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UCVarChangeListenerManager.StaticClass
+	 * 		Name   -> PredefinedFunction UCVarChangeListenerManager.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UCVarChangeListenerManager::StaticClass()
@@ -818,6 +955,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -827,7 +966,11 @@ namespace CG
 	 * 		float                                              NormalizedValue                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              RawValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USliderSetting::UpdateSliderValue(float NormalizedValue, float RawValue)
+	void USliderSetting::UpdateSliderValue(
+float NormalizedValue
+, 
+float RawValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -846,6 +989,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -854,7 +999,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              NormalizedValue                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USliderSetting::SliderValueUpdated(float NormalizedValue)
+	void USliderSetting::SliderValueUpdated(
+float NormalizedValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -870,6 +1017,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -894,6 +1043,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -902,7 +1053,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              RawValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float USliderSetting::RawValueToNormalized(float RawValue)
+	float USliderSetting::RawValueToNormalized(
+float RawValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -921,6 +1074,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -930,7 +1085,11 @@ namespace CG
 	 * 		float                                              NormalizedValue                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              RawValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USliderSetting::OnSliderValueUpdated(float NormalizedValue, float RawValue)
+	void USliderSetting::OnSliderValueUpdated(
+float NormalizedValue
+, 
+float RawValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -949,6 +1108,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -957,7 +1118,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              NormalizedValue                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float USliderSetting::NormalizedValueToRaw(float NormalizedValue)
+	float USliderSetting::NormalizedValueToRaw(
+float NormalizedValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -976,6 +1139,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -984,7 +1149,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              RawValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float USliderSetting::ClampRawValue(float RawValue)
+	float USliderSetting::ClampRawValue(
+float RawValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1003,10 +1170,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USliderSetting.StaticClass
+	 * 		Name   -> PredefinedFunction USliderSetting.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USliderSetting::StaticClass()
@@ -1017,6 +1186,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1025,7 +1196,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              NewValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNativeSliderSetting::SliderValueChanged(float NewValue)
+	void UNativeSliderSetting::SliderValueChanged(
+float NewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1041,6 +1214,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1063,6 +1238,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1084,10 +1261,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNativeSliderSetting.StaticClass
+	 * 		Name   -> PredefinedFunction UNativeSliderSetting.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNativeSliderSetting::StaticClass()
@@ -1098,6 +1277,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1106,7 +1287,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               InSelected                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void URadioButton::UpdateSelected(bool InSelected)
+	void URadioButton::UpdateSelected(
+bool InSelected
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1123,6 +1306,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1131,7 +1316,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FText                                        InLabel                                                    (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void URadioButton::UpdateLabel(const class FText& InLabel)
+	void URadioButton::UpdateLabel(
+const class FText& InLabel
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1147,6 +1334,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1169,6 +1358,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1177,7 +1368,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      InValue                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void URadioButton::SetValue(const class FString& InValue)
+	void URadioButton::SetValue(
+const class FString& InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1194,6 +1387,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1202,7 +1397,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               InSelected                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void URadioButton::SetSelected(bool InSelected)
+	void URadioButton::SetSelected(
+bool InSelected
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1219,6 +1416,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1227,7 +1426,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FText                                        InLabel                                                    (Parm, NativeAccessSpecifierPublic)
 	 */
-	void URadioButton::SetLabel(const class FText& InLabel)
+	void URadioButton::SetLabel(
+const class FText& InLabel
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1243,6 +1444,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1267,6 +1470,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1289,6 +1494,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1313,10 +1520,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction URadioButton.StaticClass
+	 * 		Name   -> PredefinedFunction URadioButton.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* URadioButton::StaticClass()
@@ -1327,6 +1536,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1335,7 +1546,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<struct FSettingOption>                      InOptions                                                  (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void URadioSelect::SetOptions(TArray<struct FSettingOption> InOptions)
+	void URadioSelect::SetOptions(
+TArray<struct FSettingOption> InOptions
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1352,6 +1565,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1360,7 +1575,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Value                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void URadioSelect::Select(const class FString& Value)
+	void URadioSelect::Select(
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1377,6 +1594,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1386,7 +1605,11 @@ namespace CG
 	 * 		class URadioButton*                                Button                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UPanelSlot*                                  NewSlot                                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void URadioSelect::OnButtonCreated(class URadioButton* Button, class UPanelSlot* NewSlot)
+	void URadioSelect::OnButtonCreated(
+class URadioButton* Button
+, 
+class UPanelSlot* NewSlot
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1404,6 +1627,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1428,6 +1653,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1451,6 +1678,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1459,7 +1688,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Value                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void URadioSelect::ButtonSelected(const class FString& Value)
+	void URadioSelect::ButtonSelected(
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1476,10 +1707,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction URadioSelect.StaticClass
+	 * 		Name   -> PredefinedFunction URadioSelect.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* URadioSelect::StaticClass()
@@ -1490,6 +1723,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1498,7 +1733,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Value                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void URadioSelectSetting::RadioSelectionChanged(const class FString& Value)
+	void URadioSelectSetting::RadioSelectionChanged(
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1515,10 +1752,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction URadioSelectSetting.StaticClass
+	 * 		Name   -> PredefinedFunction URadioSelectSetting.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* URadioSelectSetting::StaticClass()
@@ -1528,6 +1767,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AutoSettings.RadioSelectSetting");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1552,10 +1793,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USettingOptionFactory.StaticClass
+	 * 		Name   -> PredefinedFunction USettingOptionFactory.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USettingOptionFactory::StaticClass()
@@ -1566,10 +1809,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UResolutionOptionFactory.StaticClass
+	 * 		Name   -> PredefinedFunction UResolutionOptionFactory.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UResolutionOptionFactory::StaticClass()
@@ -1580,10 +1825,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UResolutionStringUtils.StaticClass
+	 * 		Name   -> PredefinedFunction UResolutionStringUtils.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UResolutionStringUtils::StaticClass()
@@ -1594,6 +1841,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1603,7 +1852,11 @@ namespace CG
 	 * 		class FString                                      SettingValue                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      ConsoleValue                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString USettingValueMask::RecombineValues(const class FString& SettingValue, const class FString& ConsoleValue)
+	class FString USettingValueMask::RecombineValues(
+const class FString& SettingValue
+, 
+const class FString& ConsoleValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1624,6 +1877,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1632,7 +1887,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      ConsoleValue                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString USettingValueMask::MaskValue(const class FString& ConsoleValue)
+	class FString USettingValueMask::MaskValue(
+const class FString& ConsoleValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1651,10 +1908,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USettingValueMask.StaticClass
+	 * 		Name   -> PredefinedFunction USettingValueMask.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USettingValueMask::StaticClass()
@@ -1665,10 +1924,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UResolutionValueMask.StaticClass
+	 * 		Name   -> PredefinedFunction UResolutionValueMask.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UResolutionValueMask::StaticClass()
@@ -1679,6 +1940,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1688,7 +1951,11 @@ namespace CG
 	 * 		class UUserWidget*                                 UserWidget                                                 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UWidget*                                     Parent                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USettingContainerUtils::SaveChildSettings(class UUserWidget* UserWidget, class UWidget* Parent)
+	void USettingContainerUtils::SaveChildSettings(
+class UUserWidget* UserWidget
+, 
+class UWidget* Parent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1707,6 +1974,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1716,7 +1985,11 @@ namespace CG
 	 * 		class UUserWidget*                                 UserWidget                                                 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UWidget*                                     Parent                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<class UAutoSettingWidget*> USettingContainerUtils::GetChildSettings(class UUserWidget* UserWidget, class UWidget* Parent)
+	TArray<class UAutoSettingWidget*> USettingContainerUtils::GetChildSettings(
+class UUserWidget* UserWidget
+, 
+class UWidget* Parent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1737,6 +2010,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1746,7 +2021,11 @@ namespace CG
 	 * 		class UUserWidget*                                 UserWidget                                                 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UWidget*                                     Parent                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool USettingContainerUtils::DoesAnyChildSettingHaveUnsavedChange(class UUserWidget* UserWidget, class UWidget* Parent)
+	bool USettingContainerUtils::DoesAnyChildSettingHaveUnsavedChange(
+class UUserWidget* UserWidget
+, 
+class UWidget* Parent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1767,6 +2046,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1776,7 +2057,11 @@ namespace CG
 	 * 		class UUserWidget*                                 UserWidget                                                 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UWidget*                                     Parent                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool USettingContainerUtils::DoesAnyChildSettingHaveUnappliedChange(class UUserWidget* UserWidget, class UWidget* Parent)
+	bool USettingContainerUtils::DoesAnyChildSettingHaveUnappliedChange(
+class UUserWidget* UserWidget
+, 
+class UWidget* Parent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1797,6 +2082,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1806,7 +2093,11 @@ namespace CG
 	 * 		class UUserWidget*                                 UserWidget                                                 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UWidget*                                     Parent                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USettingContainerUtils::CancelChildSettings(class UUserWidget* UserWidget, class UWidget* Parent)
+	void USettingContainerUtils::CancelChildSettings(
+class UUserWidget* UserWidget
+, 
+class UWidget* Parent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1825,6 +2116,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1834,7 +2127,11 @@ namespace CG
 	 * 		class UUserWidget*                                 UserWidget                                                 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UWidget*                                     Parent                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USettingContainerUtils::ApplyChildSettings(class UUserWidget* UserWidget, class UWidget* Parent)
+	void USettingContainerUtils::ApplyChildSettings(
+class UUserWidget* UserWidget
+, 
+class UWidget* Parent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1853,10 +2150,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USettingContainerUtils.StaticClass
+	 * 		Name   -> PredefinedFunction USettingContainerUtils.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USettingContainerUtils::StaticClass()
@@ -1867,6 +2166,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1875,7 +2176,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FAutoSettingData                            SettingData                                                (Parm, NativeAccessSpecifierPublic)
 	 */
-	void USettingsManager::SaveSettingStatic(const struct FAutoSettingData& SettingData)
+	void USettingsManager::SaveSettingStatic(
+const struct FAutoSettingData& SettingData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1892,6 +2195,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1904,7 +2209,17 @@ namespace CG
 	 * 		class FScriptDelegate                              ChangedCallback                                            (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               CallbackImmediately                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USettingsManager::RegisterStringCVarSettingWithCallback(const class FName& Name, const class FString& DefaultValue, const class FString& Help, const class FScriptDelegate& ChangedCallback, bool CallbackImmediately)
+	void USettingsManager::RegisterStringCVarSettingWithCallback(
+const class FName& Name
+, 
+const class FString& DefaultValue
+, 
+const class FString& Help
+, 
+const class FScriptDelegate& ChangedCallback
+, 
+bool CallbackImmediately
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1929,6 +2244,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1939,7 +2256,13 @@ namespace CG
 	 * 		class FString                                      DefaultValue                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Help                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USettingsManager::RegisterStringCVarSetting(const class FName& Name, const class FString& DefaultValue, const class FString& Help)
+	void USettingsManager::RegisterStringCVarSetting(
+const class FName& Name
+, 
+const class FString& DefaultValue
+, 
+const class FString& Help
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1960,6 +2283,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1972,7 +2297,17 @@ namespace CG
 	 * 		class FScriptDelegate                              ChangedCallback                                            (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               CallbackImmediately                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USettingsManager::RegisterIntCVarSettingWithCallback(const class FName& Name, int32_t DefaultValue, const class FString& Help, const class FScriptDelegate& ChangedCallback, bool CallbackImmediately)
+	void USettingsManager::RegisterIntCVarSettingWithCallback(
+const class FName& Name
+, 
+int32_t DefaultValue
+, 
+const class FString& Help
+, 
+const class FScriptDelegate& ChangedCallback
+, 
+bool CallbackImmediately
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1997,6 +2332,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2007,7 +2344,13 @@ namespace CG
 	 * 		int32_t                                            DefaultValue                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Help                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USettingsManager::RegisterIntCVarSetting(const class FName& Name, int32_t DefaultValue, const class FString& Help)
+	void USettingsManager::RegisterIntCVarSetting(
+const class FName& Name
+, 
+int32_t DefaultValue
+, 
+const class FString& Help
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2028,6 +2371,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2040,7 +2385,17 @@ namespace CG
 	 * 		class FScriptDelegate                              ChangedCallback                                            (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               CallbackImmediately                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USettingsManager::RegisterFloatCVarSettingWithCallback(const class FName& Name, float DefaultValue, const class FString& Help, const class FScriptDelegate& ChangedCallback, bool CallbackImmediately)
+	void USettingsManager::RegisterFloatCVarSettingWithCallback(
+const class FName& Name
+, 
+float DefaultValue
+, 
+const class FString& Help
+, 
+const class FScriptDelegate& ChangedCallback
+, 
+bool CallbackImmediately
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2065,6 +2420,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2075,7 +2432,13 @@ namespace CG
 	 * 		float                                              DefaultValue                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Help                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USettingsManager::RegisterFloatCVarSetting(const class FName& Name, float DefaultValue, const class FString& Help)
+	void USettingsManager::RegisterFloatCVarSetting(
+const class FName& Name
+, 
+float DefaultValue
+, 
+const class FString& Help
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2096,6 +2459,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2108,7 +2473,17 @@ namespace CG
 	 * 		class FScriptDelegate                              ChangedCallback                                            (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               CallbackImmediately                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USettingsManager::RegisterBoolCVarSettingWithCallback(const class FName& Name, bool DefaultValue, const class FString& Help, const class FScriptDelegate& ChangedCallback, bool CallbackImmediately)
+	void USettingsManager::RegisterBoolCVarSettingWithCallback(
+const class FName& Name
+, 
+bool DefaultValue
+, 
+const class FString& Help
+, 
+const class FScriptDelegate& ChangedCallback
+, 
+bool CallbackImmediately
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2133,6 +2508,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2143,7 +2520,13 @@ namespace CG
 	 * 		bool                                               DefaultValue                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Help                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USettingsManager::RegisterBoolCVarSetting(const class FName& Name, bool DefaultValue, const class FString& Help)
+	void USettingsManager::RegisterBoolCVarSetting(
+const class FName& Name
+, 
+bool DefaultValue
+, 
+const class FString& Help
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2164,6 +2547,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2173,7 +2558,11 @@ namespace CG
 	 * 		class FName                                        Key                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bPreferConfigValue                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString USettingsManager::GetValue(const class FName& Key, bool bPreferConfigValue)
+	class FString USettingsManager::GetValue(
+const class FName& Key
+, 
+bool bPreferConfigValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2194,6 +2583,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2204,7 +2595,13 @@ namespace CG
 	 * 		float                                              CPUMultiplier                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              GPUMultiplier                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USettingsManager::AutoDetectSettingsStatic(int32_t WorkScale, float CPUMultiplier, float GPUMultiplier)
+	void USettingsManager::AutoDetectSettingsStatic(
+int32_t WorkScale
+, 
+float CPUMultiplier
+, 
+float GPUMultiplier
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2225,6 +2622,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2233,7 +2632,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FAutoSettingData                            SettingData                                                (Parm, NativeAccessSpecifierPublic)
 	 */
-	void USettingsManager::ApplySettingStatic(const struct FAutoSettingData& SettingData)
+	void USettingsManager::ApplySettingStatic(
+const struct FAutoSettingData& SettingData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2250,10 +2651,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USettingsManager.StaticClass
+	 * 		Name   -> PredefinedFunction USettingsManager.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USettingsManager::StaticClass()
@@ -2264,6 +2667,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2272,7 +2677,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Value                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USpinner::SelectValue(const class FString& Value)
+	void USpinner::SelectValue(
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2289,6 +2696,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2297,7 +2706,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USpinner::SelectIndex(int32_t Index)
+	void USpinner::SelectIndex(
+int32_t Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2313,6 +2724,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2335,6 +2748,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2343,7 +2758,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSettingOption                              SelectedOption                                             (Parm, NativeAccessSpecifierPublic)
 	 */
-	void USpinner::OnSelectionChanged(const struct FSettingOption& SelectedOption)
+	void USpinner::OnSelectionChanged(
+const struct FSettingOption& SelectedOption
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2359,6 +2776,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2380,6 +2799,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2404,6 +2825,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2426,6 +2849,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2450,6 +2875,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2473,10 +2900,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USpinner.StaticClass
+	 * 		Name   -> PredefinedFunction USpinner.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USpinner::StaticClass()
@@ -2487,6 +2916,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2495,7 +2926,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Value                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USpinnerSetting::SpinnerSelectionChanged(const class FString& Value)
+	void USpinnerSetting::SpinnerSelectionChanged(
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2512,10 +2945,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USpinnerSetting.StaticClass
+	 * 		Name   -> PredefinedFunction USpinnerSetting.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USpinnerSetting::StaticClass()
@@ -2526,10 +2961,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWindowModeValueMask.StaticClass
+	 * 		Name   -> PredefinedFunction UWindowModeValueMask.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWindowModeValueMask::StaticClass()
@@ -2539,6 +2976,7 @@ namespace CG
 			ptr = UObject::FindClass("Class AutoSettings.WindowModeValueMask");
 		return ptr;
 	}
+
 
 }
 

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,15 +10,60 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UI_WorldMap.UI_WorldMap_C.TransformLocationToMap
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FVector                                     Location                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		float                                              X                                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		float                                              Y                                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void UUI_WorldMap_C::TransformLocationToMap(
+const struct FVector& Location
+, 
+float* X
+, 
+float* Y
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_WorldMap.UI_WorldMap_C.TransformLocationToMap");
+		
+		struct
+		{
+			struct FVector                                     Location;
+			float                                              X;
+			float                                              Y;
+		} params;
+		params.Location = Location;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		if (X != nullptr)
+			*X = params.X;
+		if (Y != nullptr)
+			*Y = params.Y;
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function UI_WorldMap.UI_WorldMap_C.UpdateSelection
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               InUse_                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               InUse                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void UUI_WorldMap_C::UpdateSelection(bool InUse_)
+	void UUI_WorldMap_C::UpdateSelection(
+bool InUse
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -26,14 +71,16 @@ namespace CG
 		
 		struct
 		{
-			bool                                               InUse_;
+			bool                                               InUse;
 		} params;
-		params.InUse_ = InUse_;
+		params.InUse = InUse;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -56,6 +103,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -64,7 +113,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            PlayerIndex                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_WorldMap_C::Activate(int32_t PlayerIndex)
+	void UUI_WorldMap_C::Activate(
+int32_t PlayerIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -80,6 +131,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -102,6 +155,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -110,7 +165,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_WorldMap_C::ExecuteUbergraph_UI_WorldMap(int32_t EntryPoint)
+	void UUI_WorldMap_C::ExecuteUbergraph_UI_WorldMap(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -127,10 +184,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UUI_WorldMap_C.StaticClass
+	 * 		Name   -> PredefinedFunction UUI_WorldMap_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UUI_WorldMap_C::StaticClass()
@@ -140,6 +199,7 @@ namespace CG
 			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_WorldMap.UI_WorldMap_C");
 		return ptr;
 	}
+
 
 }
 

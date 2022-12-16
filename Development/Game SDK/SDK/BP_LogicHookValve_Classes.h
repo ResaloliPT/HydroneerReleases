@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,27 +14,65 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * BlueprintGeneratedClass BP_LogicHookValve.BP_LogicHookValve_C
-	 * Size -> 0x0029 (FullSize[0x03F1] - InheritedSize[0x03C8])
+	 * Size -> 0x0029 (FullSize[0x0451] - InheritedSize[0x0428])
 	 */
 	class ABP_LogicHookValve_C : public ABP_ParentHook_C
 	{
 	public:
-		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x03C8(0x0008) ZeroConstructor, Transient, DuplicateTransient
-		class UStaticMeshComponent*                                TurnyPart;                                               // 0x03D0(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
-		class USceneComponent*                                     Scene;                                                   // 0x03D8(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
-		class UBoxComponent*                                       X_Box;                                                   // 0x03E0(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
-		class UAC_Animator_C*                                      AC_Animator;                                             // 0x03E8(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
-		bool                                                       Open_;                                                   // 0x03F0(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData, NoDestructor
+
+		struct FPointerToUberGraphFrame                          UberGraphFrame;                                          // 0x0428(0x0008) ZeroConstructor, Transient, DuplicateTransient
+
+
+		class UStaticMeshComponent*                              TurnyPart;                                               // 0x0430(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+
+
+		class USceneComponent*                                   Scene;                                                   // 0x0438(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+
+
+		class UBoxComponent*                                     X_Box;                                                   // 0x0440(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+
+
+		class UAC_Animator_C*                                    AC_Animator;                                             // 0x0448(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+
+
+		bool                                                     Open;                                                    // 0x0450(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData, NoDestructor
+
 
 	public:
-		void HookFunctionality(class ABP_ParentItem_C* HookedTo, class USceneComponent* Component, bool* CanPass_);
-		void LMBDownIsTarget(class UPrimitiveComponent* Component, class ABP_ParentItem_C* CarryingItem, class ABP_GameController_C* Insigator);
-		void OverrideLogicIn(const class FString& Logic);
+
+		void HookFunctionality(
+class ABP_ParentItem_C* HookedTo
+, 
+class USceneComponent* Component
+, 
+bool* CanPass
+);
+
+		void LMBDownIsTarget(
+class UPrimitiveComponent* Component
+, 
+class ABP_ParentItem_C* CarryingItem
+, 
+class ABP_GameController_C* Insigator
+);
+
+		void OverrideLogicIn(
+const class FString& Logic
+);
+
 		void ActorLoaded();
-		void ReceiveTick(float DeltaSeconds);
-		void ExecuteUbergraph_BP_LogicHookValve(int32_t EntryPoint);
+
+		void ReceiveTick(
+float DeltaSeconds
+);
+
+		void ExecuteUbergraph_BP_LogicHookValve(
+int32_t EntryPoint
+);
+
 		static UClass* StaticClass();
 	};
 

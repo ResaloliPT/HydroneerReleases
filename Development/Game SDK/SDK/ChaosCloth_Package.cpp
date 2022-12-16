@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UChaosClothConfig.StaticClass
+	 * 		Name   -> PredefinedFunction UChaosClothConfig.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UChaosClothConfig::StaticClass()
@@ -24,10 +25,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UChaosClothSharedSimConfig.StaticClass
+	 * 		Name   -> PredefinedFunction UChaosClothSharedSimConfig.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UChaosClothSharedSimConfig::StaticClass()
@@ -38,10 +41,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UChaosClothingSimulationFactory.StaticClass
+	 * 		Name   -> PredefinedFunction UChaosClothingSimulationFactory.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UChaosClothingSimulationFactory::StaticClass()
@@ -52,10 +57,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UChaosClothingSimulationInteractor.StaticClass
+	 * 		Name   -> PredefinedFunction UChaosClothingSimulationInteractor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UChaosClothingSimulationInteractor::StaticClass()
@@ -65,6 +72,7 @@ namespace CG
 			ptr = UObject::FindClass("Class ChaosCloth.ChaosClothingSimulationInteractor");
 		return ptr;
 	}
+
 
 }
 

@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * Class VoxelGraph.VoxelGraphGeneratorHelper
 	 * Size -> 0x0008 (FullSize[0x0030] - InheritedSize[0x0028])
@@ -21,12 +22,19 @@ namespace CG
 	class UVoxelGraphGeneratorHelper : public UVoxelTransformableGenerator
 	{
 	public:
-		bool                                                       bEnableRangeAnalysis;                                    // 0x0028(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_F7TR[0x7];                                   // 0x0029(0x0007) MISSED OFFSET (PADDING)
+
+		bool                                                     bEnableRangeAnalysis;                                    // 0x0028(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_GW5Q[0x7];                                   // 0x0029(0x0007) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VDI_Capsule_Graph
@@ -35,12 +43,19 @@ namespace CG
 	class UVDI_Capsule_Graph : public UVoxelGraphGeneratorHelper
 	{
 	public:
-		float                                                      Noise_Amplitude;                                         // 0x0030(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    Seed;                                                    // 0x0034(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		float                                                    Noise_Amplitude;                                         // 0x0030(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  Seed;                                                    // 0x0034(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VDI_Example_Crater_Graph
@@ -49,8 +64,11 @@ namespace CG
 	class UVDI_Example_Crater_Graph : public UVoxelGraphGeneratorHelper
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VDI_Ravine_Graph
@@ -59,8 +77,11 @@ namespace CG
 	class UVDI_Ravine_Graph : public UVoxelGraphGeneratorHelper
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VDI_Sphere_Graph
@@ -69,8 +90,11 @@ namespace CG
 	class UVDI_Sphere_Graph : public UVoxelGraphGeneratorHelper
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VG_Example_Craters
@@ -79,12 +103,19 @@ namespace CG
 	class UVG_Example_Craters : public UVoxelGraphGeneratorHelper
 	{
 	public:
-		float                                                      Radius;                                                  // 0x0030(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_IE90[0x4];                                   // 0x0034(0x0004) MISSED OFFSET (PADDING)
+
+		float                                                    Radius;                                                  // 0x0030(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_SHRX[0x4];                                   // 0x0034(0x0004) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VG_Example_Dunes
@@ -93,16 +124,31 @@ namespace CG
 	class UVG_Example_Dunes : public UVoxelGraphGeneratorHelper
 	{
 	public:
-		float                                                      Direction_X;                                             // 0x0030(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Direction_Y;                                             // 0x0034(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Dune_Frequency;                                          // 0x0038(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Height;                                                  // 0x003C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Noise_Frequency;                                         // 0x0040(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_5SGL[0x4];                                   // 0x0044(0x0004) MISSED OFFSET (PADDING)
+
+		float                                                    Direction_X;                                             // 0x0030(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Direction_Y;                                             // 0x0034(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Dune_Frequency;                                          // 0x0038(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Height;                                                  // 0x003C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Noise_Frequency;                                         // 0x0040(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_78Z8[0x4];                                   // 0x0044(0x0004) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VG_Example_Erosion
@@ -111,18 +157,37 @@ namespace CG
 	class UVG_Example_Erosion : public UVoxelGraphGeneratorHelper
 	{
 	public:
-		float                                                      Erosion_Material_Offset;                                 // 0x0030(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Erosion_Material_Strength;                               // 0x0034(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Erosion_Strength;                                        // 0x0038(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Height;                                                  // 0x003C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              Rocks[0x28];                                             // 0x0040(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
-		unsigned char                                              Snow[0x28];                                              // 0x0068(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
-		float                                                      Valleys_Height;                                          // 0x0090(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_URPY[0x4];                                   // 0x0094(0x0004) MISSED OFFSET (PADDING)
+
+		float                                                    Erosion_Material_Offset;                                 // 0x0030(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Erosion_Material_Strength;                               // 0x0034(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Erosion_Strength;                                        // 0x0038(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Height;                                                  // 0x003C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            Rocks[0x28];                                             // 0x0040(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
+
+
+		unsigned char                                            Snow[0x28];                                              // 0x0068(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
+
+
+		float                                                    Valleys_Height;                                          // 0x0090(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_201L[0x4];                                   // 0x0094(0x0004) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VG_Example_FastCraters
@@ -131,8 +196,11 @@ namespace CG
 	class UVG_Example_FastCraters : public UVoxelGraphGeneratorHelper
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VG_Example_MultiIndex
@@ -141,14 +209,25 @@ namespace CG
 	class UVG_Example_MultiIndex : public UVoxelGraphGeneratorHelper
 	{
 	public:
-		unsigned char                                              Layer_1[0x28];                                           // 0x0030(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
-		unsigned char                                              Layer_2[0x28];                                           // 0x0058(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
-		unsigned char                                              Layer_3[0x28];                                           // 0x0080(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
-		unsigned char                                              Layer_4[0x28];                                           // 0x00A8(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
+
+		unsigned char                                            Layer_1[0x28];                                           // 0x0030(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
+
+
+		unsigned char                                            Layer_2[0x28];                                           // 0x0058(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
+
+
+		unsigned char                                            Layer_3[0x28];                                           // 0x0080(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
+
+
+		unsigned char                                            Layer_4[0x28];                                           // 0x00A8(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode
@@ -157,15 +236,28 @@ namespace CG
 	class UVoxelNode : public UObject
 	{
 	public:
-		TArray<struct FVoxelPin>                                   InputPins;                                               // 0x0028(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		TArray<struct FVoxelPin>                                   OutputPins;                                              // 0x0038(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		class UVoxelGraphGenerator*                                Graph;                                                   // 0x0048(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    InputPinCount;                                           // 0x0050(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_YR0S[0x4];                                   // 0x0054(0x0004) MISSED OFFSET (PADDING)
+
+		TArray<struct FVoxelPin>                                 InputPins;                                               // 0x0028(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+
+
+		TArray<struct FVoxelPin>                                 OutputPins;                                              // 0x0038(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+
+
+		class UVoxelGraphGenerator*                              Graph;                                                   // 0x0048(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  InputPinCount;                                           // 0x0050(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_OAUQ[0x4];                                   // 0x0054(0x0004) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNodeHelper
@@ -174,11 +266,16 @@ namespace CG
 	class UVoxelNodeHelper : public UVoxelNode
 	{
 	public:
-		unsigned char                                              UnknownData_4XWU[0x40];                                  // 0x0058(0x0040) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_QCC8[0x40];                                  // 0x0058(0x0040) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelExposedNode
@@ -187,21 +284,46 @@ namespace CG
 	class UVoxelExposedNode : public UVoxelNodeHelper
 	{
 	public:
-		class FString                                              DisplayName;                                             // 0x0098(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FName                                                UniqueName;                                              // 0x00A8(0x0008) Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                              Category;                                                // 0x00B0(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                              Tooltip;                                                 // 0x00C0(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    Priority;                                                // 0x00D0(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_CHCI[0x4];                                   // 0x00D4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FString                                              UIMin;                                                   // 0x00D8(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                              UIMax;                                                   // 0x00E8(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		TMap<class FName, class FString>                           CustomMetaData;                                          // 0x00F8(0x0050) Edit, NativeAccessSpecifierPublic
-		bool                                                       bCanBeRenamed;                                           // 0x0148(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_MSND[0x7];                                   // 0x0149(0x0007) MISSED OFFSET (PADDING)
+
+		class FString                                            DisplayName;                                             // 0x0098(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FName                                              UniqueName;                                              // 0x00A8(0x0008) Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FString                                            Category;                                                // 0x00B0(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FString                                            Tooltip;                                                 // 0x00C0(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  Priority;                                                // 0x00D0(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_1DP2[0x4];                                   // 0x00D4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		class FString                                            UIMin;                                                   // 0x00D8(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FString                                            UIMax;                                                   // 0x00E8(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		TMap<class FName, class FString>                         CustomMetaData;                                          // 0x00F8(0x0050) Edit, NativeAccessSpecifierPublic
+
+
+		bool                                                     bCanBeRenamed;                                           // 0x0148(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+
+		unsigned char                                            UnknownData_65H0[0x7];                                   // 0x0149(0x0007) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelAssetPickerNode
@@ -210,8 +332,11 @@ namespace CG
 	class UVoxelAssetPickerNode : public UVoxelExposedNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelPureNode
@@ -220,8 +345,11 @@ namespace CG
 	class UVoxelPureNode : public UVoxelNodeHelper
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_FLess
@@ -230,8 +358,11 @@ namespace CG
 	class UVoxelNode_FLess : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_FLessEqual
@@ -240,8 +371,11 @@ namespace CG
 	class UVoxelNode_FLessEqual : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_FGreater
@@ -250,8 +384,11 @@ namespace CG
 	class UVoxelNode_FGreater : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_FGreaterEqual
@@ -260,8 +397,11 @@ namespace CG
 	class UVoxelNode_FGreaterEqual : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_FEqual
@@ -270,8 +410,11 @@ namespace CG
 	class UVoxelNode_FEqual : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_FNotEqual
@@ -280,8 +423,11 @@ namespace CG
 	class UVoxelNode_FNotEqual : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_ILess
@@ -290,8 +436,11 @@ namespace CG
 	class UVoxelNode_ILess : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_ILessEqual
@@ -300,8 +449,11 @@ namespace CG
 	class UVoxelNode_ILessEqual : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_IGreater
@@ -310,8 +462,11 @@ namespace CG
 	class UVoxelNode_IGreater : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_IGreaterEqual
@@ -320,8 +475,11 @@ namespace CG
 	class UVoxelNode_IGreaterEqual : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_IEqual
@@ -330,8 +488,11 @@ namespace CG
 	class UVoxelNode_IEqual : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_INotEqual
@@ -340,8 +501,11 @@ namespace CG
 	class UVoxelNode_INotEqual : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_BiomeMapSampler
@@ -350,14 +514,25 @@ namespace CG
 	class UVoxelNode_BiomeMapSampler : public UVoxelExposedNode
 	{
 	public:
-		class UTexture2D*                                          Texture;                                                 // 0x0150(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    Threshold;                                               // 0x0158(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_590K[0x4];                                   // 0x015C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<struct FBiomeMapElement>                            Biomes;                                                  // 0x0160(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPublic
+
+		class UTexture2D*                                        Texture;                                                 // 0x0150(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  Threshold;                                               // 0x0158(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_ZIII[0x4];                                   // 0x015C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		TArray<struct FBiomeMapElement>                          Biomes;                                                  // 0x0160(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_BiomeMerge
@@ -366,13 +541,22 @@ namespace CG
 	class UVoxelNode_BiomeMerge : public UVoxelNode
 	{
 	public:
-		TArray<class FString>                                      Biomes;                                                  // 0x0058(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPublic
-		float                                                      Tolerance;                                               // 0x0068(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_2X5R[0x4];                                   // 0x006C(0x0004) MISSED OFFSET (PADDING)
+
+		TArray<class FString>                                    Biomes;                                                  // 0x0058(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPublic
+
+
+		float                                                    Tolerance;                                               // 0x0068(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_2HM5[0x4];                                   // 0x006C(0x0004) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNodeWithDependencies
@@ -381,8 +565,11 @@ namespace CG
 	class UVoxelNodeWithDependencies : public UVoxelNodeHelper
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNodeWithContext
@@ -391,8 +578,11 @@ namespace CG
 	class UVoxelNodeWithContext : public UVoxelNodeWithDependencies
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_LOD
@@ -401,8 +591,11 @@ namespace CG
 	class UVoxelNode_LOD : public UVoxelNodeWithContext
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_VoxelSize
@@ -411,8 +604,11 @@ namespace CG
 	class UVoxelNode_VoxelSize : public UVoxelNodeHelper
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_WorldSize
@@ -421,8 +617,11 @@ namespace CG
 	class UVoxelNode_WorldSize : public UVoxelNodeHelper
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_CompileTimeConstant
@@ -431,14 +630,25 @@ namespace CG
 	class UVoxelNode_CompileTimeConstant : public UVoxelNodeHelper
 	{
 	public:
-		class FName                                                Name;                                                    // 0x0098(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EVoxelPinCategory                                          Type;                                                    // 0x00A0(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_HBF8[0x7];                                   // 0x00A1(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TMap<class FName, class FString>                           Constants;                                               // 0x00A8(0x0050) Edit, Transient, EditConst, NativeAccessSpecifierPublic
+
+		class FName                                              Name;                                                    // 0x0098(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		EVoxelPinCategory                                        Type;                                                    // 0x00A0(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_WPDC[0x7];                                   // 0x00A1(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		TMap<class FName, class FString>                         Constants;                                               // 0x00A8(0x0050) Edit, Transient, EditConst, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelCoordinateNode
@@ -447,8 +657,11 @@ namespace CG
 	class UVoxelCoordinateNode : public UVoxelNodeWithDependencies
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_XF
@@ -457,8 +670,11 @@ namespace CG
 	class UVoxelNode_XF : public UVoxelCoordinateNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_YF
@@ -467,8 +683,11 @@ namespace CG
 	class UVoxelNode_YF : public UVoxelCoordinateNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_ZF
@@ -477,8 +696,11 @@ namespace CG
 	class UVoxelNode_ZF : public UVoxelCoordinateNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_GlobalX
@@ -487,8 +709,11 @@ namespace CG
 	class UVoxelNode_GlobalX : public UVoxelCoordinateNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_GlobalY
@@ -497,8 +722,11 @@ namespace CG
 	class UVoxelNode_GlobalY : public UVoxelCoordinateNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_GlobalZ
@@ -507,8 +735,11 @@ namespace CG
 	class UVoxelNode_GlobalZ : public UVoxelCoordinateNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_LocalToGlobal
@@ -517,8 +748,11 @@ namespace CG
 	class UVoxelNode_LocalToGlobal : public UVoxelNodeWithContext
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_GlobalToLocal
@@ -527,8 +761,11 @@ namespace CG
 	class UVoxelNode_GlobalToLocal : public UVoxelNodeWithContext
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_TransformVector
@@ -537,8 +774,11 @@ namespace CG
 	class UVoxelNode_TransformVector : public UVoxelNodeWithContext
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_InverseTransformVector
@@ -547,8 +787,11 @@ namespace CG
 	class UVoxelNode_InverseTransformVector : public UVoxelNodeWithContext
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_Curve
@@ -557,11 +800,16 @@ namespace CG
 	class UVoxelNode_Curve : public UVoxelExposedNode
 	{
 	public:
-		class UCurveFloat*                                         Curve;                                                   // 0x0150(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		class UCurveFloat*                                       Curve;                                                   // 0x0150(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_CurveColor
@@ -570,11 +818,16 @@ namespace CG
 	class UVoxelNode_CurveColor : public UVoxelExposedNode
 	{
 	public:
-		class UCurveLinearColor*                                   Curve;                                                   // 0x0150(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		class UCurveLinearColor*                                 Curve;                                                   // 0x0150(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_DataAssetSampler
@@ -583,13 +836,22 @@ namespace CG
 	class UVoxelNode_DataAssetSampler : public UVoxelExposedNode
 	{
 	public:
-		class UVoxelDataAsset*                                     Asset;                                                   // 0x0150(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bBilinearInterpolation;                                  // 0x0158(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_J9U8[0x7];                                   // 0x0159(0x0007) MISSED OFFSET (PADDING)
+
+		class UVoxelDataAsset*                                   Asset;                                                   // 0x0150(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bBilinearInterpolation;                                  // 0x0158(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_VG7A[0x7];                                   // 0x0159(0x0007) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelMaterialNode
@@ -598,8 +860,11 @@ namespace CG
 	class UVoxelMaterialNode : public UVoxelNodeHelper
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_MakeMaterialFromSingleIndex
@@ -608,8 +873,11 @@ namespace CG
 	class UVoxelNode_MakeMaterialFromSingleIndex : public UVoxelMaterialNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_GetDoubleIndex
@@ -618,8 +886,11 @@ namespace CG
 	class UVoxelNode_GetDoubleIndex : public UVoxelMaterialNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_MakeMaterialFromColor
@@ -628,8 +899,11 @@ namespace CG
 	class UVoxelNode_MakeMaterialFromColor : public UVoxelMaterialNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_MakeMaterialFromDoubleIndex
@@ -638,8 +912,11 @@ namespace CG
 	class UVoxelNode_MakeMaterialFromDoubleIndex : public UVoxelMaterialNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_CreateDoubleIndexMaterial
@@ -648,8 +925,11 @@ namespace CG
 	class UVoxelNode_CreateDoubleIndexMaterial : public UVoxelMaterialNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelSetterNode
@@ -658,8 +938,11 @@ namespace CG
 	class UVoxelSetterNode : public UVoxelNodeHelper
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_MaterialSetter
@@ -668,8 +951,11 @@ namespace CG
 	class UVoxelNode_MaterialSetter : public UVoxelSetterNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_SetDoubleIndex
@@ -678,8 +964,11 @@ namespace CG
 	class UVoxelNode_SetDoubleIndex : public UVoxelNode_MaterialSetter
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_WorldGeneratorSampler
@@ -688,12 +977,19 @@ namespace CG
 	class UVoxelNode_WorldGeneratorSampler : public UVoxelExposedNode
 	{
 	public:
-		struct FVoxelGeneratorPicker                               WorldGenerator;                                          // 0x0150(0x0068) Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		TArray<class FName>                                        Seeds;                                                   // 0x01B8(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPublic
+
+		struct FVoxelGeneratorPicker                             WorldGenerator;                                          // 0x0150(0x0068) Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		TArray<class FName>                                      Seeds;                                                   // 0x01B8(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_XI
@@ -702,8 +998,11 @@ namespace CG
 	class UVoxelNode_XI : public UVoxelNodeHelper
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_YI
@@ -712,8 +1011,11 @@ namespace CG
 	class UVoxelNode_YI : public UVoxelNodeHelper
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_ZI
@@ -722,8 +1024,11 @@ namespace CG
 	class UVoxelNode_ZI : public UVoxelNodeHelper
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_PerlinWormDistance
@@ -732,8 +1037,11 @@ namespace CG
 	class UVoxelNode_PerlinWormDistance : public UVoxelNodeHelper
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelExample_Cave
@@ -742,26 +1050,61 @@ namespace CG
 	class UVoxelExample_Cave : public UVoxelGraphGeneratorHelper
 	{
 	public:
-		float                                                      Bottom_Noise_Frequency;                                  // 0x0030(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Bottom_Noise_Scale;                                      // 0x0034(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    Bottom_Noise_Seed;                                       // 0x0038(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    Global_Height_Seed;                                      // 0x003C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    Top_Noise_Seed;                                          // 0x0040(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Top_Noise_Frequency;                                     // 0x0044(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Top_Noise_Scale;                                         // 0x0048(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Bottom_Top_Merge_Smoothness;                             // 0x004C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Global_Height_Merge_Smoothness;                          // 0x0050(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Global_Height_Noise_Frequency;                           // 0x0054(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Global_Height_Noise_Scale;                               // 0x0058(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Global_Height_Offset;                                    // 0x005C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Cave_Height;                                             // 0x0060(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Cave_Radius;                                             // 0x0064(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Cave_Walls_Smoothness;                                   // 0x0068(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_F6RK[0x4];                                   // 0x006C(0x0004) MISSED OFFSET (PADDING)
+
+		float                                                    Bottom_Noise_Frequency;                                  // 0x0030(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Bottom_Noise_Scale;                                      // 0x0034(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  Bottom_Noise_Seed;                                       // 0x0038(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  Global_Height_Seed;                                      // 0x003C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  Top_Noise_Seed;                                          // 0x0040(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Top_Noise_Frequency;                                     // 0x0044(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Top_Noise_Scale;                                         // 0x0048(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Bottom_Top_Merge_Smoothness;                             // 0x004C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Global_Height_Merge_Smoothness;                          // 0x0050(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Global_Height_Noise_Frequency;                           // 0x0054(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Global_Height_Noise_Scale;                               // 0x0058(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Global_Height_Offset;                                    // 0x005C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Cave_Height;                                             // 0x0060(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Cave_Radius;                                             // 0x0064(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Cave_Walls_Smoothness;                                   // 0x0068(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_RYMO[0x4];                                   // 0x006C(0x0004) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelExample_Cliffs
@@ -770,22 +1113,49 @@ namespace CG
 	class UVoxelExample_Cliffs : public UVoxelGraphGeneratorHelper
 	{
 	public:
-		float                                                      Cliffs_Slope;                                            // 0x0030(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Height;                                                  // 0x0034(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Overhangs;                                               // 0x0038(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Base_Shape_Frequency;                                    // 0x003C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Base_Shape_Offset;                                       // 0x0040(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    Base_Shape_Seed;                                         // 0x0044(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    Sides_Noise_Seed;                                        // 0x0048(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    Top_Noise_Seed;                                          // 0x004C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Sides_Noise_Amplitude;                                   // 0x0050(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Sides_Noise_Frequency;                                   // 0x0054(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Top_Noise_Frequency;                                     // 0x0058(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Top_Noise_Scale;                                         // 0x005C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		float                                                    Cliffs_Slope;                                            // 0x0030(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Height;                                                  // 0x0034(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Overhangs;                                               // 0x0038(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Base_Shape_Frequency;                                    // 0x003C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Base_Shape_Offset;                                       // 0x0040(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  Base_Shape_Seed;                                         // 0x0044(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  Sides_Noise_Seed;                                        // 0x0048(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  Top_Noise_Seed;                                          // 0x004C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Sides_Noise_Amplitude;                                   // 0x0050(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Sides_Noise_Frequency;                                   // 0x0054(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Top_Noise_Frequency;                                     // 0x0058(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Top_Noise_Scale;                                         // 0x005C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelExample_FloatingIslandOnion
@@ -794,16 +1164,31 @@ namespace CG
 	class UVoxelExample_FloatingIslandOnion : public UVoxelGraphGeneratorHelper
 	{
 	public:
-		float                                                      Height;                                                  // 0x0030(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Perturb_Amplitude;                                       // 0x0034(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Perturb_Frequency;                                       // 0x0038(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    Seed;                                                    // 0x003C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Top_Noise_Frequency;                                     // 0x0040(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Top_Noise_Height;                                        // 0x0044(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		float                                                    Height;                                                  // 0x0030(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Perturb_Amplitude;                                       // 0x0034(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Perturb_Frequency;                                       // 0x0038(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  Seed;                                                    // 0x003C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Top_Noise_Frequency;                                     // 0x0040(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Top_Noise_Height;                                        // 0x0044(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelExample_HeightmapComposition
@@ -812,20 +1197,43 @@ namespace CG
 	class UVoxelExample_HeightmapComposition : public UVoxelGraphGeneratorHelper
 	{
 	public:
-		float                                                      Depth;                                                   // 0x0030(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       Flip_X;                                                  // 0x0034(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       Flip_Y;                                                  // 0x0035(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_6BB4[0x2];                                   // 0x0036(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		unsigned char                                              heightmap_x0_y0[0x28];                                   // 0x0036(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
-		unsigned char                                              heightmap_x0_y1[0x28];                                   // 0x0060(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
-		unsigned char                                              heightmap_x1_y0[0x28];                                   // 0x0088(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
-		unsigned char                                              heightmap_x1_y1[0x28];                                   // 0x00B0(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
-		float                                                      Size_X;                                                  // 0x00D8(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Size_Y;                                                  // 0x00DC(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		float                                                    Depth;                                                   // 0x0030(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     Flip_X;                                                  // 0x0034(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     Flip_Y;                                                  // 0x0035(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_R7QR[0x2];                                   // 0x0036(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		unsigned char                                            heightmap_x0_y0[0x28];                                   // 0x0038(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
+
+
+		unsigned char                                            heightmap_x0_y1[0x28];                                   // 0x0060(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
+
+
+		unsigned char                                            heightmap_x1_y0[0x28];                                   // 0x0088(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
+
+
+		unsigned char                                            heightmap_x1_y1[0x28];                                   // 0x00B0(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
+
+
+		float                                                    Size_X;                                                  // 0x00D8(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Size_Y;                                                  // 0x00DC(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelExample_HollowPlanet
@@ -834,18 +1242,37 @@ namespace CG
 	class UVoxelExample_HollowPlanet : public UVoxelGraphGeneratorHelper
 	{
 	public:
-		float                                                      Intersection_Smoothness;                                 // 0x0030(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Noise_Bias;                                              // 0x0034(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Noise_Frequency;                                         // 0x0038(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Noise_Scale;                                             // 0x003C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Radius;                                                  // 0x0040(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    Seed;                                                    // 0x0044(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       Use_IQ_Noise;                                            // 0x0048(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_I87H[0x7];                                   // 0x0049(0x0007) MISSED OFFSET (PADDING)
+
+		float                                                    Intersection_Smoothness;                                 // 0x0030(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Noise_Bias;                                              // 0x0034(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Noise_Frequency;                                         // 0x0038(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Noise_Scale;                                             // 0x003C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Radius;                                                  // 0x0040(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  Seed;                                                    // 0x0044(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     Use_IQ_Noise;                                            // 0x0048(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_3EYN[0x7];                                   // 0x0049(0x0007) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelExample_IQNoise
@@ -854,14 +1281,25 @@ namespace CG
 	class UVoxelExample_IQNoise : public UVoxelGraphGeneratorHelper
 	{
 	public:
-		float                                                      Frequency;                                               // 0x0030(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Height;                                                  // 0x0034(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    Seed;                                                    // 0x0038(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_SCIY[0x4];                                   // 0x003C(0x0004) MISSED OFFSET (PADDING)
+
+		float                                                    Frequency;                                               // 0x0030(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Height;                                                  // 0x0034(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  Seed;                                                    // 0x0038(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_O1XF[0x4];                                   // 0x003C(0x0004) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelExample_LayeredPlanet
@@ -870,16 +1308,31 @@ namespace CG
 	class UVoxelExample_LayeredPlanet : public UVoxelGraphGeneratorHelper
 	{
 	public:
-		float                                                      Frequency;                                               // 0x0030(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_8ZTR[0x4];                                   // 0x0034(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		unsigned char                                              None1[0x28];                                             // 0x0034(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
-		int32_t                                                    Seed;                                                    // 0x0060(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       Slice_Mode;                                              // 0x0064(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_NXCN[0x3];                                   // 0x0065(0x0003) MISSED OFFSET (PADDING)
+
+		float                                                    Frequency;                                               // 0x0030(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_KJQP[0x4];                                   // 0x0034(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		unsigned char                                            None1[0x28];                                             // 0x0038(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
+
+
+		int32_t                                                  Seed;                                                    // 0x0060(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     Slice_Mode;                                              // 0x0064(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_XHBA[0x3];                                   // 0x0065(0x0003) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelExample_LayeredWorld
@@ -888,15 +1341,28 @@ namespace CG
 	class UVoxelExample_LayeredWorld : public UVoxelGraphGeneratorHelper
 	{
 	public:
-		float                                                      Frequency;                                               // 0x0030(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_6N4K[0x4];                                   // 0x0034(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		unsigned char                                              None1[0x28];                                             // 0x0034(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
-		int32_t                                                    Seed;                                                    // 0x0060(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_HBHI[0x4];                                   // 0x0064(0x0004) MISSED OFFSET (PADDING)
+
+		float                                                    Frequency;                                               // 0x0030(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_Y2N3[0x4];                                   // 0x0034(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		unsigned char                                            None1[0x28];                                             // 0x0038(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
+
+
+		int32_t                                                  Seed;                                                    // 0x0060(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_B352[0x4];                                   // 0x0064(0x0004) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelExample_Planet
@@ -905,18 +1371,37 @@ namespace CG
 	class UVoxelExample_Planet : public UVoxelGraphGeneratorHelper
 	{
 	public:
-		float                                                      Frequency;                                               // 0x0030(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    Noise_Seed;                                              // 0x0034(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Noise_Strength;                                          // 0x0038(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_I6KD[0x4];                                   // 0x003C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		unsigned char                                              PlanetColorCurve[0x28];                                  // 0x003C(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
-		unsigned char                                              PlanetCurve[0x28];                                       // 0x0068(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
-		float                                                      Radius;                                                  // 0x0090(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_398F[0x4];                                   // 0x0094(0x0004) MISSED OFFSET (PADDING)
+
+		float                                                    Frequency;                                               // 0x0030(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  Noise_Seed;                                              // 0x0034(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Noise_Strength;                                          // 0x0038(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_Q9BL[0x4];                                   // 0x003C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		unsigned char                                            PlanetColorCurve[0x28];                                  // 0x0040(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
+
+
+		unsigned char                                            PlanetCurve[0x28];                                       // 0x0068(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
+
+
+		float                                                    Radius;                                                  // 0x0090(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_8RDZ[0x4];                                   // 0x0094(0x0004) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelExample_Ravines
@@ -925,16 +1410,31 @@ namespace CG
 	class UVoxelExample_Ravines : public UVoxelGraphGeneratorHelper
 	{
 	public:
-		float                                                      _3D_Noise_Frequency;                                     // 0x0030(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    _3D_Noise_Seed;                                          // 0x0034(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Bottom_Transition_Smoothness;                            // 0x0038(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Height;                                                  // 0x003C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Top_Transition_Smoothness;                               // 0x0040(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_4U2Y[0x4];                                   // 0x0044(0x0004) MISSED OFFSET (PADDING)
+
+		float                                                    D_Noise_Frequency;                                       // 0x0030(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  D_Noise_Seed;                                            // 0x0034(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Bottom_Transition_Smoothness;                            // 0x0038(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Height;                                                  // 0x003C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Top_Transition_Smoothness;                               // 0x0040(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_M6MR[0x4];                                   // 0x0044(0x0004) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelExample_RingWorld
@@ -943,38 +1443,97 @@ namespace CG
 	class UVoxelExample_RingWorld : public UVoxelGraphGeneratorHelper
 	{
 	public:
-		float                                                      Radius;                                                  // 0x0030(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      RingEdgesHardness;                                       // 0x0034(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Scale;                                                   // 0x0038(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Thickness;                                               // 0x003C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Width_in_Degrees;                                        // 0x0040(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      RiverDepth;                                              // 0x0044(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      RiverWidth;                                              // 0x0048(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FLinearColor                                        BeachColor;                                              // 0x004C(0x0010) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FLinearColor                                        MountainsColorHigh;                                      // 0x005C(0x0010) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FLinearColor                                        MountainsColorLowHigh;                                   // 0x006C(0x0010) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FLinearColor                                        MountainsColorLowLow;                                    // 0x007C(0x0010) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_4EI9[0x4];                                   // 0x008C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		unsigned char                                              MoutainsMaskCurve[0x28];                                 // 0x008C(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
-		struct FLinearColor                                        PlainsColorHigh;                                         // 0x00B8(0x0010) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FLinearColor                                        PlainsColorLow;                                          // 0x00C8(0x0010) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      PlainsNoiseFrequency;                                    // 0x00D8(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      PlainsNoiseHeight;                                       // 0x00DC(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              PlainsNoiseStrengthCurve[0x28];                          // 0x00E0(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
-		unsigned char                                              RingMainShapeCurve[0x28];                                // 0x0108(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
-		struct FLinearColor                                        RingOuterColor;                                          // 0x0130(0x0010) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FLinearColor                                        RiverColor;                                              // 0x0140(0x0010) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              RiverDepthCurve[0x28];                                   // 0x0150(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
-		float                                                      MountainsNoiseFrequency;                                 // 0x0178(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      MountainsNoiseHeight;                                    // 0x017C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      BaseNoiseFrquency;                                       // 0x0180(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      BaseNoiseHeight;                                         // 0x0184(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      BaseHeight;                                              // 0x0188(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_91VZ[0x4];                                   // 0x018C(0x0004) MISSED OFFSET (PADDING)
+
+		float                                                    Radius;                                                  // 0x0030(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    RingEdgesHardness;                                       // 0x0034(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Scale;                                                   // 0x0038(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Thickness;                                               // 0x003C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Width_in_Degrees;                                        // 0x0040(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    RiverDepth;                                              // 0x0044(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    RiverWidth;                                              // 0x0048(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FLinearColor                                      BeachColor;                                              // 0x004C(0x0010) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FLinearColor                                      MountainsColorHigh;                                      // 0x005C(0x0010) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FLinearColor                                      MountainsColorLowHigh;                                   // 0x006C(0x0010) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FLinearColor                                      MountainsColorLowLow;                                    // 0x007C(0x0010) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_9VB9[0x4];                                   // 0x008C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		unsigned char                                            MoutainsMaskCurve[0x28];                                 // 0x0090(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
+
+
+		struct FLinearColor                                      PlainsColorHigh;                                         // 0x00B8(0x0010) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FLinearColor                                      PlainsColorLow;                                          // 0x00C8(0x0010) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    PlainsNoiseFrequency;                                    // 0x00D8(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    PlainsNoiseHeight;                                       // 0x00DC(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            PlainsNoiseStrengthCurve[0x28];                          // 0x00E0(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
+
+
+		unsigned char                                            RingMainShapeCurve[0x28];                                // 0x0108(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
+
+
+		struct FLinearColor                                      RingOuterColor;                                          // 0x0130(0x0010) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FLinearColor                                      RiverColor;                                              // 0x0140(0x0010) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            RiverDepthCurve[0x28];                                   // 0x0150(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
+
+
+		float                                                    MountainsNoiseFrequency;                                 // 0x0178(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    MountainsNoiseHeight;                                    // 0x017C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    BaseNoiseFrquency;                                       // 0x0180(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    BaseNoiseHeight;                                         // 0x0184(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    BaseHeight;                                              // 0x0188(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_CLC5[0x4];                                   // 0x018C(0x0004) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelExample_Tool_NoisyColors
@@ -983,11 +1542,16 @@ namespace CG
 	class UVoxelExample_Tool_NoisyColors : public UVoxelGraphGeneratorHelper
 	{
 	public:
-		struct FLinearColor                                        Color;                                                   // 0x0030(0x0010) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		struct FLinearColor                                      Color;                                                   // 0x0030(0x0010) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_SetColor
@@ -996,8 +1560,11 @@ namespace CG
 	class UVoxelNode_SetColor : public UVoxelNode_MaterialSetter
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_SetSingleIndex
@@ -1006,8 +1573,11 @@ namespace CG
 	class UVoxelNode_SetSingleIndex : public UVoxelNode_MaterialSetter
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_SetMultiIndexWetness
@@ -1016,8 +1586,11 @@ namespace CG
 	class UVoxelNode_SetMultiIndexWetness : public UVoxelNode_MaterialSetter
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_AddMultiIndex
@@ -1026,8 +1599,11 @@ namespace CG
 	class UVoxelNode_AddMultiIndex : public UVoxelNode_MaterialSetter
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_SetUVs
@@ -1036,13 +1612,22 @@ namespace CG
 	class UVoxelNode_SetUVs : public UVoxelNode_MaterialSetter
 	{
 	public:
-		bool                                                       bSetU;                                                   // 0x0098(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bSetV;                                                   // 0x0099(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_19Q5[0x6];                                   // 0x009A(0x0006) MISSED OFFSET (PADDING)
+
+		bool                                                     bSetU;                                                   // 0x0098(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bSetV;                                                   // 0x0099(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_VPNS[0x6];                                   // 0x009A(0x0006) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_SetNode
@@ -1051,13 +1636,22 @@ namespace CG
 	class UVoxelNode_SetNode : public UVoxelSetterNode
 	{
 	public:
-		uint32_t                                                   Index;                                                   // 0x0098(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		struct FVoxelGraphOutput                                   CachedOutput;                                            // 0x009C(0x0020) NoDestructor, Protected, NativeAccessSpecifierProtected
-		unsigned char                                              UnknownData_9JDD[0x4];                                   // 0x00BC(0x0004) MISSED OFFSET (PADDING)
+
+		uint32_t                                                 Index;                                                   // 0x0098(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
+
+		struct FVoxelGraphOutput                                 CachedOutput;                                            // 0x009C(0x0020) NoDestructor, Protected, NativeAccessSpecifierProtected
+
+
+		unsigned char                                            UnknownData_0T5K[0x4];                                   // 0x00BC(0x0004) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_SetValueNode
@@ -1066,8 +1660,11 @@ namespace CG
 	class UVoxelNode_SetValueNode : public UVoxelNode_SetNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_FunctionSeparator
@@ -1076,8 +1673,11 @@ namespace CG
 	class UVoxelNode_FunctionSeparator : public UVoxelNodeHelper
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_FlowMerge
@@ -1086,11 +1686,16 @@ namespace CG
 	class UVoxelNode_FlowMerge : public UVoxelNode
 	{
 	public:
-		TArray<struct FVoxelNamedDataPin>                          Types;                                                   // 0x0058(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPublic
+
+		TArray<struct FVoxelNamedDataPin>                        Types;                                                   // 0x0058(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_SampleFoliageMaterialIndex
@@ -1099,8 +1704,11 @@ namespace CG
 	class UVoxelNode_SampleFoliageMaterialIndex : public UVoxelNodeWithContext
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_GetBiomeIndex
@@ -1109,11 +1717,16 @@ namespace CG
 	class UVoxelNode_GetBiomeIndex : public UVoxelExposedNode
 	{
 	public:
-		class UVoxelFoliageBiomeBase*                              Biome;                                                   // 0x0150(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		class UVoxelFoliageBiomeBase*                            Biome;                                                   // 0x0150(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_NoiseNode
@@ -1122,17 +1735,34 @@ namespace CG
 	class UVoxelNode_NoiseNode : public UVoxelNodeWithContext
 	{
 	public:
-		float                                                      Frequency;                                               // 0x0098(0x0004) Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EVoxelNoiseInterpolation                                   Interpolation;                                           // 0x009C(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_G0R9[0x3];                                   // 0x009D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		uint32_t                                                   NumberOfSamples;                                         // 0x00A0(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Tolerance;                                               // 0x00A4(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		TArray<struct FVoxelRange>                                 OutputRanges;                                            // 0x00A8(0x0010) Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_NKJG[0x20];                                  // 0x00B8(0x0020) MISSED OFFSET (PADDING)
+
+		float                                                    Frequency;                                               // 0x0098(0x0004) Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		EVoxelNoiseInterpolation                                 Interpolation;                                           // 0x009C(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_Q303[0x3];                                   // 0x009D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		uint32_t                                                 NumberOfSamples;                                         // 0x00A0(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Tolerance;                                               // 0x00A4(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		TArray<struct FVoxelRange>                               OutputRanges;                                            // 0x00A8(0x0010) Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_5HJC[0x20];                                  // 0x00B8(0x0020) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_2DGavoronoiNoise
@@ -1141,12 +1771,19 @@ namespace CG
 	class UVoxelNode_2DGavoronoiNoise : public UVoxelNode_NoiseNode
 	{
 	public:
-		float                                                      Jitter;                                                  // 0x00D8(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_6QNW[0x4];                                   // 0x00DC(0x0004) MISSED OFFSET (PADDING)
+
+		float                                                    Jitter;                                                  // 0x00D8(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+
+		unsigned char                                            UnknownData_YDTF[0x4];                                   // 0x00DC(0x0004) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_NoiseNodeFractal
@@ -1155,16 +1792,31 @@ namespace CG
 	class UVoxelNode_NoiseNodeFractal : public UVoxelNode_NoiseNode
 	{
 	public:
-		int32_t                                                    FractalOctaves;                                          // 0x00D8(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      FractalLacunarity;                                       // 0x00DC(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      FractalGain;                                             // 0x00E0(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EVoxelNoiseFractalType                                     FractalType;                                             // 0x00E4(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_RENR[0x3];                                   // 0x00E5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TMap<class FString, unsigned char>                         LODToOctavesMap;                                         // 0x00E8(0x0050) Edit, NativeAccessSpecifierPublic
+
+		int32_t                                                  FractalOctaves;                                          // 0x00D8(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    FractalLacunarity;                                       // 0x00DC(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    FractalGain;                                             // 0x00E0(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		EVoxelNoiseFractalType                                   FractalType;                                             // 0x00E4(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_E2A0[0x3];                                   // 0x00E5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		TMap<class FString, unsigned char>                       LODToOctavesMap;                                         // 0x00E8(0x0050) Edit, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_2DGavoronoiNoiseFractal
@@ -1173,12 +1825,19 @@ namespace CG
 	class UVoxelNode_2DGavoronoiNoiseFractal : public UVoxelNode_NoiseNodeFractal
 	{
 	public:
-		float                                                      Jitter;                                                  // 0x0138(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_9CN8[0x4];                                   // 0x013C(0x0004) MISSED OFFSET (PADDING)
+
+		float                                                    Jitter;                                                  // 0x0138(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+
+		unsigned char                                            UnknownData_AE80[0x4];                                   // 0x013C(0x0004) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_NoiseNodeWithDerivativeFractal
@@ -1187,12 +1846,19 @@ namespace CG
 	class UVoxelNode_NoiseNodeWithDerivativeFractal : public UVoxelNode_NoiseNodeFractal
 	{
 	public:
-		bool                                                       bComputeDerivative;                                      // 0x0138(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_8SKJ[0x7];                                   // 0x0139(0x0007) MISSED OFFSET (PADDING)
+
+		bool                                                     bComputeDerivative;                                      // 0x0138(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_75R0[0x7];                                   // 0x0139(0x0007) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_2DErosion
@@ -1201,12 +1867,19 @@ namespace CG
 	class UVoxelNode_2DErosion : public UVoxelNode_NoiseNodeWithDerivativeFractal
 	{
 	public:
-		float                                                      Jitter;                                                  // 0x0140(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_3OWA[0x4];                                   // 0x0144(0x0004) MISSED OFFSET (PADDING)
+
+		float                                                    Jitter;                                                  // 0x0140(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_G7UB[0x4];                                   // 0x0144(0x0004) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_GeneratorSamplerBase
@@ -1215,8 +1888,11 @@ namespace CG
 	class UVoxelNode_GeneratorSamplerBase : public UVoxelExposedNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_GeneratorMerge
@@ -1225,16 +1901,31 @@ namespace CG
 	class UVoxelNode_GeneratorMerge : public UVoxelNode_GeneratorSamplerBase
 	{
 	public:
-		TArray<class FName>                                        Outputs;                                                 // 0x0150(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPublic
-		EVoxelMaterialConfig                                       MaterialConfig;                                          // 0x0160(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_WV5R[0x7];                                   // 0x0161(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<struct FVoxelGeneratorPicker>                       Generators;                                              // 0x0168(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPublic
-		float                                                      Tolerance;                                               // 0x0178(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_BDJE[0x4];                                   // 0x017C(0x0004) MISSED OFFSET (PADDING)
+
+		TArray<class FName>                                      Outputs;                                                 // 0x0150(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPublic
+
+
+		EVoxelMaterialConfig                                     MaterialConfig;                                          // 0x0160(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_GWQ6[0x7];                                   // 0x0161(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		TArray<struct FVoxelGeneratorPicker>                     Generators;                                              // 0x0168(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPublic
+
+
+		float                                                    Tolerance;                                               // 0x0178(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_VVAN[0x4];                                   // 0x017C(0x0004) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_SingleGeneratorSamplerBase
@@ -1243,11 +1934,16 @@ namespace CG
 	class UVoxelNode_SingleGeneratorSamplerBase : public UVoxelNode_GeneratorSamplerBase
 	{
 	public:
-		struct FVoxelGeneratorPicker                               Generator;                                               // 0x0150(0x0068) Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		struct FVoxelGeneratorPicker                             Generator;                                               // 0x0150(0x0068) Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_GetGeneratorValue
@@ -1256,8 +1952,11 @@ namespace CG
 	class UVoxelNode_GetGeneratorValue : public UVoxelNode_SingleGeneratorSamplerBase
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_GetGeneratorMaterial
@@ -1266,8 +1965,11 @@ namespace CG
 	class UVoxelNode_GetGeneratorMaterial : public UVoxelNode_SingleGeneratorSamplerBase
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_GetGeneratorCustomOutput
@@ -1276,11 +1978,16 @@ namespace CG
 	class UVoxelNode_GetGeneratorCustomOutput : public UVoxelNode_SingleGeneratorSamplerBase
 	{
 	public:
-		class FName                                                OutputName;                                              // 0x01B8(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+		class FName                                              OutputName;                                              // 0x01B8(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_GetLandscapeCollectionIndex
@@ -1289,11 +1996,16 @@ namespace CG
 	class UVoxelNode_GetLandscapeCollectionIndex : public UVoxelExposedNode
 	{
 	public:
-		class FName                                                LayerName;                                               // 0x0150(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		class FName                                              LayerName;                                               // 0x0150(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_GetMaterialCollectionIndex
@@ -1302,11 +2014,16 @@ namespace CG
 	class UVoxelNode_GetMaterialCollectionIndex : public UVoxelAssetPickerNode
 	{
 	public:
-		class UMaterialInterface*                                  Material;                                                // 0x0150(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		class UMaterialInterface*                                Material;                                                // 0x0150(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_GradientPerturb
@@ -1315,8 +2032,11 @@ namespace CG
 	class UVoxelNode_GradientPerturb : public UVoxelNode_NoiseNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_GradientPerturbFractal
@@ -1325,8 +2045,11 @@ namespace CG
 	class UVoxelNode_GradientPerturbFractal : public UVoxelNode_NoiseNodeFractal
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_2DGradientPerturb
@@ -1335,8 +2058,11 @@ namespace CG
 	class UVoxelNode_2DGradientPerturb : public UVoxelNode_GradientPerturb
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_2DGradientPerturbFractal
@@ -1345,8 +2071,11 @@ namespace CG
 	class UVoxelNode_2DGradientPerturbFractal : public UVoxelNode_GradientPerturbFractal
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_3DGradientPerturb
@@ -1355,8 +2084,11 @@ namespace CG
 	class UVoxelNode_3DGradientPerturb : public UVoxelNode_GradientPerturb
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_3DGradientPerturbFractal
@@ -1365,8 +2097,11 @@ namespace CG
 	class UVoxelNode_3DGradientPerturbFractal : public UVoxelNode_GradientPerturbFractal
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelGraphAssetNode
@@ -1375,11 +2110,16 @@ namespace CG
 	class UVoxelGraphAssetNode : public UVoxelNodeWithContext
 	{
 	public:
-		struct FVoxelGeneratorPicker                               DefaultGenerator;                                        // 0x0098(0x0068) Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		struct FVoxelGeneratorPicker                             DefaultGenerator;                                        // 0x0098(0x0068) Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_EditGetValue
@@ -1388,8 +2128,11 @@ namespace CG
 	class UVoxelNode_EditGetValue : public UVoxelGraphAssetNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_EditGetMaterial
@@ -1398,8 +2141,11 @@ namespace CG
 	class UVoxelNode_EditGetMaterial : public UVoxelGraphAssetNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_EditGetCustomOutput
@@ -1408,11 +2154,16 @@ namespace CG
 	class UVoxelNode_EditGetCustomOutput : public UVoxelGraphAssetNode
 	{
 	public:
-		class FName                                                OutputName;                                              // 0x0100(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		class FName                                              OutputName;                                              // 0x0100(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_EditGetHardness
@@ -1421,8 +2172,11 @@ namespace CG
 	class UVoxelNode_EditGetHardness : public UVoxelNodeHelper
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelGraphDataItemConfig
@@ -1431,11 +2185,16 @@ namespace CG
 	class UVoxelGraphDataItemConfig : public UObject
 	{
 	public:
-		TArray<class FName>                                        Parameters;                                              // 0x0028(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPublic
+
+		TArray<class FName>                                      Parameters;                                              // 0x0028(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelGraphGenerator
@@ -1444,40 +2203,103 @@ namespace CG
 	class UVoxelGraphGenerator : public UVoxelTransformableGenerator
 	{
 	public:
-		class UVoxelGraphOutputsConfig*                            Outputs;                                                 // 0x0028(0x0008) ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		TArray<struct FVoxelGraphOutput>                           CustomOutputs;                                           // 0x0030(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPublic
-		bool                                                       bAutomaticPreview;                                       // 0x0040(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bShowFlowMergeAndFunctionsWarnings;                      // 0x0041(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bUseCppClassInsteadOfGraph;                              // 0x0042(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_8NG4[0x5];                                   // 0x0043(0x0005) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		unsigned char                                              GeneratedCppClass[0x28];                                 // 0x0043(0x0028) UNKNOWN PROPERTY: SoftClassProperty
-		bool                                                       bCompileToCppOnSave;                                     // 0x0070(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_CFMI[0x7];                                   // 0x0071(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FFilePath                                           SaveLocation;                                            // 0x0078(0x0010) Edit, AdvancedDisplay, NativeAccessSpecifierPublic
-		bool                                                       bBuiltinPluginGenerator;                                 // 0x0088(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bEnableRangeAnalysis;                                    // 0x0089(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bEnableDebugGraph;                                       // 0x008A(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bShowFunctions;                                          // 0x008B(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bDetailedErrors;                                         // 0x008C(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bShowPinsIds;                                            // 0x008D(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bShowAxisDependencies;                                   // 0x008E(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EVoxelGraphGeneratorDebugLevel                             DebugLevel;                                              // 0x008F(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                              TargetToDebug;                                           // 0x0090(0x0010) Edit, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    FunctionToDebug;                                         // 0x00A0(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EVoxelFunctionAxisDependencies                             AxisDependenciesToDebug;                                 // 0x00A4(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_FSE4[0x3];                                   // 0x00A5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		float                                                      NodesDepthScaleFactor;                                   // 0x00A8(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bHideDataNodes;                                          // 0x00AC(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_Y4RA[0x3];                                   // 0x00AD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<class UVoxelNode*>                                  AllNodes;                                                // 0x00B0(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		TArray<class UVoxelNode*>                                  DebugNodes;                                              // 0x00C0(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		class UVoxelNode*                                          FirstNode;                                               // 0x00D0(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FGuid                                               FirstNodePinId;                                          // 0x00D8(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UVoxelGraphPreviewSettings*                          PreviewSettings;                                         // 0x00E8(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		class UVoxelGraphOutputsConfig*                          Outputs;                                                 // 0x0028(0x0008) ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		TArray<struct FVoxelGraphOutput>                         CustomOutputs;                                           // 0x0030(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPublic
+
+
+		bool                                                     bAutomaticPreview;                                       // 0x0040(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bShowFlowMergeAndFunctionsWarnings;                      // 0x0041(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bUseCppClassInsteadOfGraph;                              // 0x0042(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_XYMV[0x5];                                   // 0x0043(0x0005) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		unsigned char                                            GeneratedCppClass[0x28];                                 // 0x0048(0x0028) UNKNOWN PROPERTY: SoftClassProperty
+
+
+		bool                                                     bCompileToCppOnSave;                                     // 0x0070(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_P5MO[0x7];                                   // 0x0071(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FFilePath                                         SaveLocation;                                            // 0x0078(0x0010) Edit, AdvancedDisplay, NativeAccessSpecifierPublic
+
+
+		bool                                                     bBuiltinPluginGenerator;                                 // 0x0088(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bEnableRangeAnalysis;                                    // 0x0089(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bEnableDebugGraph;                                       // 0x008A(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bShowFunctions;                                          // 0x008B(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bDetailedErrors;                                         // 0x008C(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bShowPinsIds;                                            // 0x008D(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bShowAxisDependencies;                                   // 0x008E(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		EVoxelGraphGeneratorDebugLevel                           DebugLevel;                                              // 0x008F(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FString                                            TargetToDebug;                                           // 0x0090(0x0010) Edit, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  FunctionToDebug;                                         // 0x00A0(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		EVoxelFunctionAxisDependencies                           AxisDependenciesToDebug;                                 // 0x00A4(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_CKWX[0x3];                                   // 0x00A5(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		float                                                    NodesDepthScaleFactor;                                   // 0x00A8(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bHideDataNodes;                                          // 0x00AC(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_40RT[0x3];                                   // 0x00AD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		TArray<class UVoxelNode*>                                AllNodes;                                                // 0x00B0(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+
+
+		TArray<class UVoxelNode*>                                DebugNodes;                                              // 0x00C0(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+
+
+		class UVoxelNode*                                        FirstNode;                                               // 0x00D0(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FGuid                                             FirstNodePinId;                                          // 0x00D8(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class UVoxelGraphPreviewSettings*                        PreviewSettings;                                         // 0x00E8(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelGraphMacroInputOutputNode
@@ -1486,12 +2308,19 @@ namespace CG
 	class UVoxelGraphMacroInputOutputNode : public UVoxelNode
 	{
 	public:
-		TArray<struct FVoxelGraphMacroPin>                         Pins;                                                    // 0x0058(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPublic
-		class UVoxelGraphMacro*                                    Macro;                                                   // 0x0068(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		TArray<struct FVoxelGraphMacroPin>                       Pins;                                                    // 0x0058(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPublic
+
+
+		class UVoxelGraphMacro*                                  Macro;                                                   // 0x0068(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelGraphMacroInputNode
@@ -1500,8 +2329,11 @@ namespace CG
 	class UVoxelGraphMacroInputNode : public UVoxelGraphMacroInputOutputNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelGraphMacroOutputNode
@@ -1510,8 +2342,11 @@ namespace CG
 	class UVoxelGraphMacroOutputNode : public UVoxelGraphMacroInputOutputNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelGraphMacro
@@ -1520,19 +2355,40 @@ namespace CG
 	class UVoxelGraphMacro : public UVoxelGraphGenerator
 	{
 	public:
-		class FString                                              Tooltip;                                                 // 0x00F0(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                              Keywords;                                                // 0x0100(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                              CustomCategory;                                          // 0x0110(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                              CustomName;                                              // 0x0120(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bShowInContextMenu;                                      // 0x0130(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bVectorOnlyNode;                                         // 0x0131(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_OGMN[0x6];                                   // 0x0132(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class UVoxelGraphMacroInputNode*                           InputNode;                                               // 0x0138(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UVoxelGraphMacroOutputNode*                          OutputNode;                                              // 0x0140(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		class FString                                            Tooltip;                                                 // 0x00F0(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FString                                            Keywords;                                                // 0x0100(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FString                                            CustomCategory;                                          // 0x0110(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FString                                            CustomName;                                              // 0x0120(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bShowInContextMenu;                                      // 0x0130(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bVectorOnlyNode;                                         // 0x0131(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_24H0[0x6];                                   // 0x0132(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		class UVoxelGraphMacroInputNode*                         InputNode;                                               // 0x0138(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class UVoxelGraphMacroOutputNode*                        OutputNode;                                              // 0x0140(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelGraphMacroNode
@@ -1541,11 +2397,16 @@ namespace CG
 	class UVoxelGraphMacroNode : public UVoxelNode
 	{
 	public:
-		class UVoxelGraphMacro*                                    Macro;                                                   // 0x0058(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		class UVoxelGraphMacro*                                  Macro;                                                   // 0x0058(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelGraphOutputsConfig
@@ -1554,11 +2415,16 @@ namespace CG
 	class UVoxelGraphOutputsConfig : public UObject
 	{
 	public:
-		TArray<struct FVoxelGraphOutput>                           Outputs;                                                 // 0x0028(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+
+		TArray<struct FVoxelGraphOutput>                         Outputs;                                                 // 0x0028(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelGraphPreviewSettings
@@ -1567,58 +2433,157 @@ namespace CG
 	class UVoxelGraphPreviewSettings : public UObject
 	{
 	public:
-		bool                                                       bShowStats;                                              // 0x0028(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bShowValues;                                             // 0x0029(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_ZS62[0x6];                                   // 0x002A(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FString                                              MinValue;                                                // 0x0030(0x0010) Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                              MaxValue;                                                // 0x0040(0x0010) Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FVoxelIntBox                                        PreviewedBounds;                                         // 0x0050(0x0018) Edit, EditConst, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EVoxelGraphPreviewAxes                                     LeftToRight;                                             // 0x0068(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EVoxelGraphPreviewAxes                                     BottomToTop;                                             // 0x0069(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_JCYX[0x2];                                   // 0x006A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		int32_t                                                    Resolution;                                              // 0x006C(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    ResolutionMultiplierLog;                                 // 0x0070(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FIntVector                                          Center;                                                  // 0x0074(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FIntVector                                          PreviewedVoxel;                                          // 0x0080(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EVoxelGraphPreviewShowValue                                ShowValue;                                               // 0x008C(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EVoxelMaterialConfig                                       MaterialConfig;                                          // 0x008D(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_V2CG[0x2];                                   // 0x008E(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class UVoxelMaterialCollectionBase*                        MaterialCollection;                                      // 0x0090(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UVoxelPlaceableItemManager*                          PlaceableItemManager;                                    // 0x0098(0x0008) Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      VoxelSize;                                               // 0x00A0(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EVoxelRenderType                                           RenderType;                                              // 0x00A4(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EVoxelGraphPreviewType                                     PreviewType2D;                                           // 0x00A5(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bDrawColoredDistanceField;                               // 0x00A6(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EVoxelGraphMaterialPreviewType                             MaterialPreviewType;                                     // 0x00A7(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    MultiIndexToPreview;                                     // 0x00A8(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_LKDL[0x4];                                   // 0x00AC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<struct FColor>                                      IndexColors;                                             // 0x00B0(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPublic
-		bool                                                       bHybridMaterialRendering;                                // 0x00C0(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_RG2O[0x3];                                   // 0x00C1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		float                                                      CostPercentile;                                          // 0x00C4(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    NumRangeAnalysisChunksPerAxis;                           // 0x00C8(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bHeightmapMode;                                          // 0x00CC(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bHeightBasedColor;                                       // 0x00CD(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bEnableWater;                                            // 0x00CE(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_BFS4[0x1];                                   // 0x00CF(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		float                                                      Height;                                                  // 0x00D0(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FVector                                             LightDirection;                                          // 0x00D4(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      StartBias;                                               // 0x00E0(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    MaxSteps;                                                // 0x00E4(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Brightness;                                              // 0x00E8(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      ShadowDensity;                                           // 0x00EC(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UStaticMesh*                                         Mesh;                                                    // 0x00F0(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UMaterialInterface*                                  HeightmapMaterial;                                       // 0x00F8(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UMaterialInterface*                                  SliceMaterial;                                           // 0x0100(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bAutoNormalize;                                          // 0x0108(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_T92C[0x3];                                   // 0x0109(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		float                                                      NormalizeMinValue;                                       // 0x010C(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      NormalizeMaxValue;                                       // 0x0110(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    LODToPreview;                                            // 0x0114(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		bool                                                     bShowStats;                                              // 0x0028(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bShowValues;                                             // 0x0029(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_N654[0x6];                                   // 0x002A(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		class FString                                            MinValue;                                                // 0x0030(0x0010) Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FString                                            MaxValue;                                                // 0x0040(0x0010) Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FVoxelIntBox                                      PreviewedBounds;                                         // 0x0050(0x0018) Edit, EditConst, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		EVoxelGraphPreviewAxes                                   LeftToRight;                                             // 0x0068(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		EVoxelGraphPreviewAxes                                   BottomToTop;                                             // 0x0069(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_EUHN[0x2];                                   // 0x006A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		int32_t                                                  Resolution;                                              // 0x006C(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  ResolutionMultiplierLog;                                 // 0x0070(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FIntVector                                        Center;                                                  // 0x0074(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FIntVector                                        PreviewedVoxel;                                          // 0x0080(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		EVoxelGraphPreviewShowValue                              ShowValue;                                               // 0x008C(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		EVoxelMaterialConfig                                     MaterialConfig;                                          // 0x008D(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_1OQ9[0x2];                                   // 0x008E(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		class UVoxelMaterialCollectionBase*                      MaterialCollection;                                      // 0x0090(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class UVoxelPlaceableItemManager*                        PlaceableItemManager;                                    // 0x0098(0x0008) Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    VoxelSize;                                               // 0x00A0(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		EVoxelRenderType                                         RenderType;                                              // 0x00A4(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		EVoxelGraphPreviewType                                   PreviewType2D;                                           // 0x00A5(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bDrawColoredDistanceField;                               // 0x00A6(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		EVoxelGraphMaterialPreviewType                           MaterialPreviewType;                                     // 0x00A7(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  MultiIndexToPreview;                                     // 0x00A8(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_MMNM[0x4];                                   // 0x00AC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		TArray<struct FColor>                                    IndexColors;                                             // 0x00B0(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPublic
+
+
+		bool                                                     bHybridMaterialRendering;                                // 0x00C0(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_8RHC[0x3];                                   // 0x00C1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		float                                                    CostPercentile;                                          // 0x00C4(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  NumRangeAnalysisChunksPerAxis;                           // 0x00C8(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bHeightmapMode;                                          // 0x00CC(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bHeightBasedColor;                                       // 0x00CD(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bEnableWater;                                            // 0x00CE(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_GECT[0x1];                                   // 0x00CF(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		float                                                    Height;                                                  // 0x00D0(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FVector                                           LightDirection;                                          // 0x00D4(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    StartBias;                                               // 0x00E0(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  MaxSteps;                                                // 0x00E4(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Brightness;                                              // 0x00E8(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    ShadowDensity;                                           // 0x00EC(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class UStaticMesh*                                       Mesh;                                                    // 0x00F0(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class UMaterialInterface*                                HeightmapMaterial;                                       // 0x00F8(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class UMaterialInterface*                                SliceMaterial;                                           // 0x0100(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bAutoNormalize;                                          // 0x0108(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_RLDZ[0x3];                                   // 0x0109(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		float                                                    NormalizeMinValue;                                       // 0x010C(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    NormalizeMaxValue;                                       // 0x0110(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  LODToPreview;                                            // 0x0114(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_HeightmapSampler
@@ -1627,17 +2592,34 @@ namespace CG
 	class UVoxelNode_HeightmapSampler : public UVoxelExposedNode
 	{
 	public:
-		bool                                                       bFloatHeightmap;                                         // 0x0150(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_FEC1[0x7];                                   // 0x0151(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class UVoxelHeightmapAssetFloat*                           HeightmapFloat;                                          // 0x0158(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UVoxelHeightmapAssetUINT16*                          HeightmapUINT16;                                         // 0x0160(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EVoxelSamplerMode                                          SamplerType;                                             // 0x0168(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bCenter;                                                 // 0x0169(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_SMN7[0x6];                                   // 0x016A(0x0006) MISSED OFFSET (PADDING)
+
+		bool                                                     bFloatHeightmap;                                         // 0x0150(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_D945[0x7];                                   // 0x0151(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		class UVoxelHeightmapAssetFloat*                         HeightmapFloat;                                          // 0x0158(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class UVoxelHeightmapAssetUINT16*                        HeightmapUINT16;                                         // 0x0160(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		EVoxelSamplerMode                                        SamplerType;                                             // 0x0168(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bCenter;                                                 // 0x0169(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_ALDP[0x6];                                   // 0x016A(0x0006) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_HeightSplitter
@@ -1646,12 +2628,19 @@ namespace CG
 	class UVoxelNode_HeightSplitter : public UVoxelNodeHelper
 	{
 	public:
-		int32_t                                                    NumSplits;                                               // 0x0098(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_01GM[0x4];                                   // 0x009C(0x0004) MISSED OFFSET (PADDING)
+
+		int32_t                                                  NumSplits;                                               // 0x0098(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_OIK7[0x4];                                   // 0x009C(0x0004) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_If
@@ -1660,12 +2649,19 @@ namespace CG
 	class UVoxelNode_If : public UVoxelNodeHelper
 	{
 	public:
-		EVoxelNodeIfBranchToUseForRangeAnalysis                    BranchToUseForRangeAnalysis;                             // 0x0098(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_NKD4[0x7];                                   // 0x0099(0x0007) MISSED OFFSET (PADDING)
+
+		EVoxelNodeIfBranchToUseForRangeAnalysis                  BranchToUseForRangeAnalysis;                             // 0x0098(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_QVOS[0x7];                                   // 0x0099(0x0007) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_IfWithDefaultToFalse
@@ -1674,8 +2670,11 @@ namespace CG
 	class UVoxelNode_IfWithDefaultToFalse : public UVoxelNode_If
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_IfWithDefaultToTrue
@@ -1684,8 +2683,11 @@ namespace CG
 	class UVoxelNode_IfWithDefaultToTrue : public UVoxelNode_If
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelLocalVariableBase
@@ -1694,8 +2696,11 @@ namespace CG
 	class UVoxelLocalVariableBase : public UVoxelNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelLocalVariableDeclaration
@@ -1704,15 +2709,28 @@ namespace CG
 	class UVoxelLocalVariableDeclaration : public UVoxelLocalVariableBase
 	{
 	public:
-		class FName                                                Name;                                                    // 0x0058(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EVoxelPortalNodePinCategory                                Category;                                                // 0x0060(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_0PXR[0x3];                                   // 0x0061(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FGuid                                               VariableGuid;                                            // 0x0064(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_70H1[0x4];                                   // 0x0074(0x0004) MISSED OFFSET (PADDING)
+
+		class FName                                              Name;                                                    // 0x0058(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		EVoxelPortalNodePinCategory                              Category;                                                // 0x0060(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_LTVR[0x3];                                   // 0x0061(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FGuid                                             VariableGuid;                                            // 0x0064(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_WSPF[0x4];                                   // 0x0074(0x0004) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelLocalVariableUsage
@@ -1721,13 +2739,22 @@ namespace CG
 	class UVoxelLocalVariableUsage : public UVoxelLocalVariableBase
 	{
 	public:
-		struct FVoxelPortalNodeSelector                            Selector;                                                // 0x0058(0x0008) Deprecated, NoDestructor, NativeAccessSpecifierPublic
-		class UVoxelLocalVariableDeclaration*                      Declaration;                                             // 0x0060(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FGuid                                               DeclarationGuid;                                         // 0x0068(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		struct FVoxelPortalNodeSelector                          Selector;                                                // 0x0058(0x0008) Deprecated, NoDestructor, NativeAccessSpecifierPublic
+
+
+		class UVoxelLocalVariableDeclaration*                    Declaration;                                             // 0x0060(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FGuid                                             DeclarationGuid;                                         // 0x0068(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_GetColor
@@ -1736,8 +2763,11 @@ namespace CG
 	class UVoxelNode_GetColor : public UVoxelMaterialNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_GetIndex
@@ -1746,8 +2776,11 @@ namespace CG
 	class UVoxelNode_GetIndex : public UVoxelMaterialNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_GetUVChannel
@@ -1756,8 +2789,11 @@ namespace CG
 	class UVoxelNode_GetUVChannel : public UVoxelMaterialNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_FMax
@@ -1766,8 +2802,11 @@ namespace CG
 	class UVoxelNode_FMax : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_FMin
@@ -1776,8 +2815,11 @@ namespace CG
 	class UVoxelNode_FMin : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_IMax
@@ -1786,8 +2828,11 @@ namespace CG
 	class UVoxelNode_IMax : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_IMin
@@ -1796,8 +2841,11 @@ namespace CG
 	class UVoxelNode_IMin : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_FAdd
@@ -1806,8 +2854,11 @@ namespace CG
 	class UVoxelNode_FAdd : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_FMultiply
@@ -1816,8 +2867,11 @@ namespace CG
 	class UVoxelNode_FMultiply : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_FSubstract
@@ -1826,8 +2880,11 @@ namespace CG
 	class UVoxelNode_FSubstract : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_FDivide
@@ -1836,8 +2893,11 @@ namespace CG
 	class UVoxelNode_FDivide : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_IAdd
@@ -1846,8 +2906,11 @@ namespace CG
 	class UVoxelNode_IAdd : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_IMultiply
@@ -1856,8 +2919,11 @@ namespace CG
 	class UVoxelNode_IMultiply : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_ISubstract
@@ -1866,8 +2932,11 @@ namespace CG
 	class UVoxelNode_ISubstract : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_IDivide
@@ -1876,8 +2945,11 @@ namespace CG
 	class UVoxelNode_IDivide : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_ILeftBitShift
@@ -1886,8 +2958,11 @@ namespace CG
 	class UVoxelNode_ILeftBitShift : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_IRightBitShift
@@ -1896,8 +2971,11 @@ namespace CG
 	class UVoxelNode_IRightBitShift : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_FloatOfInt
@@ -1906,8 +2984,11 @@ namespace CG
 	class UVoxelNode_FloatOfInt : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_Round
@@ -1916,8 +2997,11 @@ namespace CG
 	class UVoxelNode_Round : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_Lerp
@@ -1926,8 +3010,11 @@ namespace CG
 	class UVoxelNode_Lerp : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_SafeLerp
@@ -1936,8 +3023,11 @@ namespace CG
 	class UVoxelNode_SafeLerp : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_SmoothStep
@@ -1946,8 +3036,11 @@ namespace CG
 	class UVoxelNode_SmoothStep : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_Clamp
@@ -1956,8 +3049,11 @@ namespace CG
 	class UVoxelNode_Clamp : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_BAnd
@@ -1966,8 +3062,11 @@ namespace CG
 	class UVoxelNode_BAnd : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_BOr
@@ -1976,8 +3075,11 @@ namespace CG
 	class UVoxelNode_BOr : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_BNot
@@ -1986,8 +3088,11 @@ namespace CG
 	class UVoxelNode_BNot : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_SwitchInt
@@ -1996,8 +3101,11 @@ namespace CG
 	class UVoxelNode_SwitchInt : public UVoxelNodeHelper
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_SwitchFloat
@@ -2006,8 +3114,11 @@ namespace CG
 	class UVoxelNode_SwitchFloat : public UVoxelNodeHelper
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_SwitchColor
@@ -2016,8 +3127,11 @@ namespace CG
 	class UVoxelNode_SwitchColor : public UVoxelNodeHelper
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_1MinusX
@@ -2026,8 +3140,11 @@ namespace CG
 	class UVoxelNode_1MinusX : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_OneOverX
@@ -2036,8 +3153,11 @@ namespace CG
 	class UVoxelNode_OneOverX : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_MinusX
@@ -2046,8 +3166,11 @@ namespace CG
 	class UVoxelNode_MinusX : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_Sqrt
@@ -2056,8 +3179,11 @@ namespace CG
 	class UVoxelNode_Sqrt : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_Pow
@@ -2066,8 +3192,11 @@ namespace CG
 	class UVoxelNode_Pow : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_IMod
@@ -2076,8 +3205,11 @@ namespace CG
 	class UVoxelNode_IMod : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_FMod
@@ -2086,8 +3218,11 @@ namespace CG
 	class UVoxelNode_FMod : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_FAbs
@@ -2096,8 +3231,11 @@ namespace CG
 	class UVoxelNode_FAbs : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_IAbs
@@ -2106,8 +3244,11 @@ namespace CG
 	class UVoxelNode_IAbs : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_Ceil
@@ -2116,8 +3257,11 @@ namespace CG
 	class UVoxelNode_Ceil : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_Floor
@@ -2126,8 +3270,11 @@ namespace CG
 	class UVoxelNode_Floor : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_VectorLength
@@ -2136,8 +3283,11 @@ namespace CG
 	class UVoxelNode_VectorLength : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_Fraction
@@ -2146,8 +3296,11 @@ namespace CG
 	class UVoxelNode_Fraction : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_FSign
@@ -2156,8 +3309,11 @@ namespace CG
 	class UVoxelNode_FSign : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_ISign
@@ -2166,8 +3322,11 @@ namespace CG
 	class UVoxelNode_ISign : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_InvSqrt
@@ -2176,8 +3335,11 @@ namespace CG
 	class UVoxelNode_InvSqrt : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_Loge
@@ -2186,8 +3348,11 @@ namespace CG
 	class UVoxelNode_Loge : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_Exp
@@ -2196,8 +3361,11 @@ namespace CG
 	class UVoxelNode_Exp : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_Sin
@@ -2206,8 +3374,11 @@ namespace CG
 	class UVoxelNode_Sin : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_Asin
@@ -2216,8 +3387,11 @@ namespace CG
 	class UVoxelNode_Asin : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_Sinh
@@ -2226,8 +3400,11 @@ namespace CG
 	class UVoxelNode_Sinh : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_Cos
@@ -2236,8 +3413,11 @@ namespace CG
 	class UVoxelNode_Cos : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_Acos
@@ -2246,8 +3426,11 @@ namespace CG
 	class UVoxelNode_Acos : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_SinCos
@@ -2256,8 +3439,11 @@ namespace CG
 	class UVoxelNode_SinCos : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_Tan
@@ -2266,8 +3452,11 @@ namespace CG
 	class UVoxelNode_Tan : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_Atan
@@ -2276,8 +3465,11 @@ namespace CG
 	class UVoxelNode_Atan : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_Atan2
@@ -2286,8 +3478,11 @@ namespace CG
 	class UVoxelNode_Atan2 : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_VectorRotateAngleAxis
@@ -2296,8 +3491,11 @@ namespace CG
 	class UVoxelNode_VectorRotateAngleAxis : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_BreakColorInt
@@ -2306,8 +3504,11 @@ namespace CG
 	class UVoxelNode_BreakColorInt : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_BreakColorFloat
@@ -2316,8 +3517,11 @@ namespace CG
 	class UVoxelNode_BreakColorFloat : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_MakeColorInt
@@ -2326,8 +3530,11 @@ namespace CG
 	class UVoxelNode_MakeColorInt : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_MakeColorFloat
@@ -2336,8 +3543,11 @@ namespace CG
 	class UVoxelNode_MakeColorFloat : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_RGBToHSV
@@ -2346,8 +3556,11 @@ namespace CG
 	class UVoxelNode_RGBToHSV : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_HSVToRGB
@@ -2356,8 +3569,11 @@ namespace CG
 	class UVoxelNode_HSVToRGB : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_InverseTransformPositionXZ
@@ -2366,8 +3582,11 @@ namespace CG
 	class UVoxelNode_InverseTransformPositionXZ : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_Pi
@@ -2376,8 +3595,11 @@ namespace CG
 	class UVoxelNode_Pi : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_NormalizeSum
@@ -2386,8 +3608,11 @@ namespace CG
 	class UVoxelNode_NormalizeSum : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelGraphNodeInterface
@@ -2396,12 +3621,19 @@ namespace CG
 	class UVoxelGraphNodeInterface : public UEdGraphNode
 	{
 	public:
-		class FString                                              InfoMsg;                                                 // 0x0098(0x0010) ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                              WarningMsg;                                              // 0x00A8(0x0010) ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		class FString                                            InfoMsg;                                                 // 0x0098(0x0010) ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FString                                            WarningMsg;                                              // 0x00A8(0x0010) ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_NoiseNodeWithDerivative
@@ -2410,12 +3642,19 @@ namespace CG
 	class UVoxelNode_NoiseNodeWithDerivative : public UVoxelNode_NoiseNode
 	{
 	public:
-		bool                                                       bComputeDerivative;                                      // 0x00D8(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_0QB8[0x7];                                   // 0x00D9(0x0007) MISSED OFFSET (PADDING)
+
+		bool                                                     bComputeDerivative;                                      // 0x00D8(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_5P5Z[0x7];                                   // 0x00D9(0x0007) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_2DValueNoise
@@ -2424,8 +3663,11 @@ namespace CG
 	class UVoxelNode_2DValueNoise : public UVoxelNode_NoiseNodeWithDerivative
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_2DValueNoiseFractal
@@ -2434,8 +3676,11 @@ namespace CG
 	class UVoxelNode_2DValueNoiseFractal : public UVoxelNode_NoiseNodeWithDerivativeFractal
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_2DPerlinNoise
@@ -2444,8 +3689,11 @@ namespace CG
 	class UVoxelNode_2DPerlinNoise : public UVoxelNode_NoiseNodeWithDerivative
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_2DPerlinNoiseFractal
@@ -2454,8 +3702,11 @@ namespace CG
 	class UVoxelNode_2DPerlinNoiseFractal : public UVoxelNode_NoiseNodeWithDerivativeFractal
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_2DSimplexNoise
@@ -2464,8 +3715,11 @@ namespace CG
 	class UVoxelNode_2DSimplexNoise : public UVoxelNode_NoiseNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_2DSimplexNoiseFractal
@@ -2474,8 +3728,11 @@ namespace CG
 	class UVoxelNode_2DSimplexNoiseFractal : public UVoxelNode_NoiseNodeFractal
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_2DCubicNoise
@@ -2484,8 +3741,11 @@ namespace CG
 	class UVoxelNode_2DCubicNoise : public UVoxelNode_NoiseNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_2DCubicNoiseFractal
@@ -2494,8 +3754,11 @@ namespace CG
 	class UVoxelNode_2DCubicNoiseFractal : public UVoxelNode_NoiseNodeFractal
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_3DValueNoise
@@ -2504,8 +3767,11 @@ namespace CG
 	class UVoxelNode_3DValueNoise : public UVoxelNode_NoiseNodeWithDerivative
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_3DValueNoiseFractal
@@ -2514,8 +3780,11 @@ namespace CG
 	class UVoxelNode_3DValueNoiseFractal : public UVoxelNode_NoiseNodeWithDerivativeFractal
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_3DPerlinNoise
@@ -2524,8 +3793,11 @@ namespace CG
 	class UVoxelNode_3DPerlinNoise : public UVoxelNode_NoiseNodeWithDerivative
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_3DPerlinNoiseFractal
@@ -2534,8 +3806,11 @@ namespace CG
 	class UVoxelNode_3DPerlinNoiseFractal : public UVoxelNode_NoiseNodeWithDerivativeFractal
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_3DSimplexNoise
@@ -2544,8 +3819,11 @@ namespace CG
 	class UVoxelNode_3DSimplexNoise : public UVoxelNode_NoiseNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_3DSimplexNoiseFractal
@@ -2554,8 +3832,11 @@ namespace CG
 	class UVoxelNode_3DSimplexNoiseFractal : public UVoxelNode_NoiseNodeFractal
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_3DCubicNoise
@@ -2564,8 +3845,11 @@ namespace CG
 	class UVoxelNode_3DCubicNoise : public UVoxelNode_NoiseNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_3DCubicNoiseFractal
@@ -2574,8 +3858,11 @@ namespace CG
 	class UVoxelNode_3DCubicNoiseFractal : public UVoxelNode_NoiseNodeFractal
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_CellularNoise
@@ -2584,14 +3871,25 @@ namespace CG
 	class UVoxelNode_CellularNoise : public UVoxelNode_NoiseNode
 	{
 	public:
-		EVoxelCellularDistanceFunction                             DistanceFunction;                                        // 0x00D8(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EVoxelCellularReturnType                                   ReturnType;                                              // 0x00D9(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_FDY8[0x2];                                   // 0x00DA(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		float                                                      Jitter;                                                  // 0x00DC(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		EVoxelCellularDistanceFunction                           DistanceFunction;                                        // 0x00D8(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		EVoxelCellularReturnType                                 ReturnType;                                              // 0x00D9(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_SCY5[0x2];                                   // 0x00DA(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		float                                                    Jitter;                                                  // 0x00DC(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_2DCellularNoise
@@ -2600,8 +3898,11 @@ namespace CG
 	class UVoxelNode_2DCellularNoise : public UVoxelNode_CellularNoise
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_3DCellularNoise
@@ -2610,8 +3911,11 @@ namespace CG
 	class UVoxelNode_3DCellularNoise : public UVoxelNode_CellularNoise
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_IQNoiseBase
@@ -2620,8 +3924,11 @@ namespace CG
 	class UVoxelNode_IQNoiseBase : public UVoxelNode_NoiseNodeWithDerivativeFractal
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_2DIQNoiseBase
@@ -2630,12 +3937,19 @@ namespace CG
 	class UVoxelNode_2DIQNoiseBase : public UVoxelNode_IQNoiseBase
 	{
 	public:
-		float                                                      Rotation;                                                // 0x0140(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_6QDP[0x4];                                   // 0x0144(0x0004) MISSED OFFSET (PADDING)
+
+		float                                                    Rotation;                                                // 0x0140(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_HJID[0x4];                                   // 0x0144(0x0004) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_2DIQNoise
@@ -2644,8 +3958,11 @@ namespace CG
 	class UVoxelNode_2DIQNoise : public UVoxelNode_2DIQNoiseBase
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_3DIQNoiseBase
@@ -2654,12 +3971,19 @@ namespace CG
 	class UVoxelNode_3DIQNoiseBase : public UVoxelNode_IQNoiseBase
 	{
 	public:
-		struct FRotator                                            Rotation;                                                // 0x0140(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_24IO[0x4];                                   // 0x014C(0x0004) MISSED OFFSET (PADDING)
+
+		struct FRotator                                          Rotation;                                                // 0x0140(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_EAKE[0x4];                                   // 0x014C(0x0004) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_3DIQNoise
@@ -2668,8 +3992,11 @@ namespace CG
 	class UVoxelNode_3DIQNoise : public UVoxelNode_3DIQNoiseBase
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_CraterNoise
@@ -2678,12 +4005,19 @@ namespace CG
 	class UVoxelNode_CraterNoise : public UVoxelNode_NoiseNode
 	{
 	public:
-		float                                                      Jitter;                                                  // 0x00D8(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      FalloffExponent;                                         // 0x00DC(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		float                                                    Jitter;                                                  // 0x00D8(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    FalloffExponent;                                         // 0x00DC(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_CraterNoiseFractal
@@ -2692,12 +4026,19 @@ namespace CG
 	class UVoxelNode_CraterNoiseFractal : public UVoxelNode_NoiseNodeFractal
 	{
 	public:
-		float                                                      Jitter;                                                  // 0x0138(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      FalloffExponent;                                         // 0x013C(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		float                                                    Jitter;                                                  // 0x0138(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    FalloffExponent;                                         // 0x013C(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_2DCraterNoise
@@ -2706,8 +4047,11 @@ namespace CG
 	class UVoxelNode_2DCraterNoise : public UVoxelNode_CraterNoise
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_3DCraterNoise
@@ -2716,8 +4060,11 @@ namespace CG
 	class UVoxelNode_3DCraterNoise : public UVoxelNode_CraterNoise
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_2DCraterNoiseFractal
@@ -2726,8 +4073,11 @@ namespace CG
 	class UVoxelNode_2DCraterNoiseFractal : public UVoxelNode_CraterNoiseFractal
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_3DCraterNoiseFractal
@@ -2736,8 +4086,11 @@ namespace CG
 	class UVoxelNode_3DCraterNoiseFractal : public UVoxelNode_CraterNoiseFractal
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_StaticClampFloat
@@ -2746,12 +4099,19 @@ namespace CG
 	class UVoxelNode_StaticClampFloat : public UVoxelNodeHelper
 	{
 	public:
-		float                                                      Min;                                                     // 0x0098(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Max;                                                     // 0x009C(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		float                                                    Min;                                                     // 0x0098(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Max;                                                     // 0x009C(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_RangeAnalysisDebuggerFloat
@@ -2760,18 +4120,37 @@ namespace CG
 	class UVoxelNode_RangeAnalysisDebuggerFloat : public UVoxelNodeHelper
 	{
 	public:
-		float                                                      Min;                                                     // 0x0098(0x0004) Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Max;                                                     // 0x009C(0x0004) Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      GraphMin;                                                // 0x00A0(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      GraphMax;                                                // 0x00A4(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      GraphStep;                                               // 0x00A8(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_Z2E5[0x4];                                   // 0x00AC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FRuntimeFloatCurve                                  Curve;                                                   // 0x00B0(0x0088) Edit, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_85AA[0x8];                                   // 0x0138(0x0008) MISSED OFFSET (PADDING)
+
+		float                                                    Min;                                                     // 0x0098(0x0004) Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Max;                                                     // 0x009C(0x0004) Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    GraphMin;                                                // 0x00A0(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    GraphMax;                                                // 0x00A4(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    GraphStep;                                               // 0x00A8(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_BL6V[0x4];                                   // 0x00AC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FRuntimeFloatCurve                                Curve;                                                   // 0x00B0(0x0088) Edit, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_4AF0[0x8];                                   // 0x0138(0x0008) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_Sleep
@@ -2780,12 +4159,19 @@ namespace CG
 	class UVoxelNode_Sleep : public UVoxelNodeHelper
 	{
 	public:
-		int32_t                                                    NumberOfLoops;                                           // 0x0098(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_6P1I[0x4];                                   // 0x009C(0x0004) MISSED OFFSET (PADDING)
+
+		int32_t                                                  NumberOfLoops;                                           // 0x0098(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+
+		unsigned char                                            UnknownData_E8ZL[0x4];                                   // 0x009C(0x0004) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_RangeUnion
@@ -2794,8 +4180,11 @@ namespace CG
 	class UVoxelNode_RangeUnion : public UVoxelNodeHelper
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_IsSingleBool
@@ -2804,8 +4193,11 @@ namespace CG
 	class UVoxelNode_IsSingleBool : public UVoxelNodeHelper
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_GetRangeAnalysis
@@ -2814,8 +4206,11 @@ namespace CG
 	class UVoxelNode_GetRangeAnalysis : public UVoxelNodeHelper
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_SmartMin
@@ -2824,8 +4219,11 @@ namespace CG
 	class UVoxelNode_SmartMin : public UVoxelNodeHelper
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_SmartMax
@@ -2834,8 +4232,11 @@ namespace CG
 	class UVoxelNode_SmartMax : public UVoxelNodeHelper
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_FloatParameter
@@ -2844,12 +4245,19 @@ namespace CG
 	class UVoxelNode_FloatParameter : public UVoxelExposedNode
 	{
 	public:
-		float                                                      Value;                                                   // 0x0150(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_WXA4[0x4];                                   // 0x0154(0x0004) MISSED OFFSET (PADDING)
+
+		float                                                    Value;                                                   // 0x0150(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_XB4T[0x4];                                   // 0x0154(0x0004) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_IntParameter
@@ -2858,12 +4266,19 @@ namespace CG
 	class UVoxelNode_IntParameter : public UVoxelExposedNode
 	{
 	public:
-		int32_t                                                    Value;                                                   // 0x0150(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_HGE7[0x4];                                   // 0x0154(0x0004) MISSED OFFSET (PADDING)
+
+		int32_t                                                  Value;                                                   // 0x0150(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_13RY[0x4];                                   // 0x0154(0x0004) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_ColorParameter
@@ -2872,11 +4287,16 @@ namespace CG
 	class UVoxelNode_ColorParameter : public UVoxelExposedNode
 	{
 	public:
-		struct FLinearColor                                        Color;                                                   // 0x0150(0x0010) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		struct FLinearColor                                      Color;                                                   // 0x0150(0x0010) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_BoolParameter
@@ -2885,12 +4305,19 @@ namespace CG
 	class UVoxelNode_BoolParameter : public UVoxelExposedNode
 	{
 	public:
-		bool                                                       Value;                                                   // 0x0150(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_9Y2B[0x7];                                   // 0x0151(0x0007) MISSED OFFSET (PADDING)
+
+		bool                                                     Value;                                                   // 0x0150(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_NDAS[0x7];                                   // 0x0151(0x0007) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_DataItemSample
@@ -2899,13 +4326,22 @@ namespace CG
 	class UVoxelNode_DataItemSample : public UVoxelNodeWithContext
 	{
 	public:
-		int32_t                                                    Mask;                                                    // 0x0098(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EVoxelDataItemCombineMode                                  CombineMode;                                             // 0x009C(0x0001) ELEMENT_SIZE_MISMATCH Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_Z9PD[0x3];                                   // 0x009C(0x0003) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+
+		int32_t                                                  Mask;                                                    // 0x0098(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		EVoxelDataItemCombineMode                                CombineMode;                                             // 0x009C(0x0001) ELEMENT_SIZE_MISMATCH Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_TG4T[0x3];                                   // 0x009D(0x0003) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_DataItemParameters
@@ -2914,12 +4350,19 @@ namespace CG
 	class UVoxelNode_DataItemParameters : public UVoxelNodeWithContext
 	{
 	public:
-		class UVoxelGraphDataItemConfig*                           Config;                                                  // 0x0098(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		TMap<class FName, float>                                   PreviewValues;                                           // 0x00A0(0x0050) Edit, NativeAccessSpecifierPublic
+
+		class UVoxelGraphDataItemConfig*                         Config;                                                  // 0x0098(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		TMap<class FName, float>                                 PreviewValues;                                           // 0x00A0(0x0050) Edit, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_RandomFloat
@@ -2928,12 +4371,19 @@ namespace CG
 	class UVoxelNode_RandomFloat : public UVoxelNodeHelper
 	{
 	public:
-		float                                                      Min;                                                     // 0x0098(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Max;                                                     // 0x009C(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		float                                                    Min;                                                     // 0x0098(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Max;                                                     // 0x009C(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_RandomInt
@@ -2942,12 +4392,19 @@ namespace CG
 	class UVoxelNode_RandomInt : public UVoxelNodeHelper
 	{
 	public:
-		int32_t                                                    Min;                                                     // 0x0098(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    Max;                                                     // 0x009C(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		int32_t                                                  Min;                                                     // 0x0098(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  Max;                                                     // 0x009C(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelSDFNode
@@ -2956,8 +4413,11 @@ namespace CG
 	class UVoxelSDFNode : public UVoxelPureNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_SphereSDF
@@ -2966,8 +4426,11 @@ namespace CG
 	class UVoxelNode_SphereSDF : public UVoxelSDFNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_BoxSDF
@@ -2976,8 +4439,11 @@ namespace CG
 	class UVoxelNode_BoxSDF : public UVoxelSDFNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_RoundBoxSDF
@@ -2986,8 +4452,11 @@ namespace CG
 	class UVoxelNode_RoundBoxSDF : public UVoxelSDFNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_TorusSDF
@@ -2996,8 +4465,11 @@ namespace CG
 	class UVoxelNode_TorusSDF : public UVoxelSDFNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_CappedTorusSDF
@@ -3006,8 +4478,11 @@ namespace CG
 	class UVoxelNode_CappedTorusSDF : public UVoxelSDFNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_LinkSDF
@@ -3016,8 +4491,11 @@ namespace CG
 	class UVoxelNode_LinkSDF : public UVoxelSDFNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_CylinderSDF
@@ -3026,8 +4504,11 @@ namespace CG
 	class UVoxelNode_CylinderSDF : public UVoxelSDFNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_ConeSDF
@@ -3036,8 +4517,11 @@ namespace CG
 	class UVoxelNode_ConeSDF : public UVoxelSDFNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_ConeFastSDF
@@ -3046,8 +4530,11 @@ namespace CG
 	class UVoxelNode_ConeFastSDF : public UVoxelSDFNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_InfiniteConeSDF
@@ -3056,8 +4543,11 @@ namespace CG
 	class UVoxelNode_InfiniteConeSDF : public UVoxelSDFNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_PlaneSDF
@@ -3066,8 +4556,11 @@ namespace CG
 	class UVoxelNode_PlaneSDF : public UVoxelSDFNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_HexPrismSDF
@@ -3076,8 +4569,11 @@ namespace CG
 	class UVoxelNode_HexPrismSDF : public UVoxelSDFNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_TriPrismSDF
@@ -3086,8 +4582,11 @@ namespace CG
 	class UVoxelNode_TriPrismSDF : public UVoxelSDFNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_CapsuleSDF
@@ -3096,8 +4595,11 @@ namespace CG
 	class UVoxelNode_CapsuleSDF : public UVoxelSDFNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_VerticalCapsuleSDF
@@ -3106,8 +4608,11 @@ namespace CG
 	class UVoxelNode_VerticalCapsuleSDF : public UVoxelSDFNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_VerticalCappedCylinderSDF
@@ -3116,8 +4621,11 @@ namespace CG
 	class UVoxelNode_VerticalCappedCylinderSDF : public UVoxelSDFNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_CappedCylinderSDF
@@ -3126,8 +4634,11 @@ namespace CG
 	class UVoxelNode_CappedCylinderSDF : public UVoxelSDFNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_RoundedCylinderSDF
@@ -3136,8 +4647,11 @@ namespace CG
 	class UVoxelNode_RoundedCylinderSDF : public UVoxelSDFNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_VerticalCappedConeSDF
@@ -3146,8 +4660,11 @@ namespace CG
 	class UVoxelNode_VerticalCappedConeSDF : public UVoxelSDFNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_CappedConeSDF
@@ -3156,8 +4673,11 @@ namespace CG
 	class UVoxelNode_CappedConeSDF : public UVoxelSDFNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_SolidAngleSDF
@@ -3166,8 +4686,11 @@ namespace CG
 	class UVoxelNode_SolidAngleSDF : public UVoxelSDFNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_VerticalRoundConeSDF
@@ -3176,8 +4699,11 @@ namespace CG
 	class UVoxelNode_VerticalRoundConeSDF : public UVoxelSDFNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_RoundConeSDF
@@ -3186,8 +4712,11 @@ namespace CG
 	class UVoxelNode_RoundConeSDF : public UVoxelSDFNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_EllipsoidSDF
@@ -3196,8 +4725,11 @@ namespace CG
 	class UVoxelNode_EllipsoidSDF : public UVoxelSDFNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_OctahedronSDF
@@ -3206,8 +4738,11 @@ namespace CG
 	class UVoxelNode_OctahedronSDF : public UVoxelSDFNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_OctahedronFastSDF
@@ -3216,8 +4751,11 @@ namespace CG
 	class UVoxelNode_OctahedronFastSDF : public UVoxelSDFNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_PyramidSDF
@@ -3226,8 +4764,11 @@ namespace CG
 	class UVoxelNode_PyramidSDF : public UVoxelSDFNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_SmoothUnion
@@ -3236,8 +4777,11 @@ namespace CG
 	class UVoxelNode_SmoothUnion : public UVoxelSDFNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_SmoothSubtraction
@@ -3246,8 +4790,11 @@ namespace CG
 	class UVoxelNode_SmoothSubtraction : public UVoxelSDFNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_SmoothIntersection
@@ -3256,8 +4803,11 @@ namespace CG
 	class UVoxelNode_SmoothIntersection : public UVoxelSDFNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelSeedNode
@@ -3266,8 +4816,11 @@ namespace CG
 	class UVoxelSeedNode : public UVoxelNodeHelper
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_Seed
@@ -3276,13 +4829,22 @@ namespace CG
 	class UVoxelNode_Seed : public UVoxelExposedNode
 	{
 	public:
-		int32_t                                                    DefaultValue;                                            // 0x0150(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FName                                                Name;                                                    // 0x0154(0x0008) ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_J8OC[0x4];                                   // 0x015C(0x0004) MISSED OFFSET (PADDING)
+
+		int32_t                                                  DefaultValue;                                            // 0x0150(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FName                                              Name;                                                    // 0x0154(0x0008) ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_AQOB[0x4];                                   // 0x015C(0x0004) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_AddSeeds
@@ -3291,8 +4853,11 @@ namespace CG
 	class UVoxelNode_AddSeeds : public UVoxelSeedNode
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_MakeSeeds
@@ -3301,12 +4866,19 @@ namespace CG
 	class UVoxelNode_MakeSeeds : public UVoxelSeedNode
 	{
 	public:
-		int32_t                                                    NumOutputs;                                              // 0x0098(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_2SX5[0x4];                                   // 0x009C(0x0004) MISSED OFFSET (PADDING)
+
+		int32_t                                                  NumOutputs;                                              // 0x0098(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_M8B4[0x4];                                   // 0x009C(0x0004) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_TextureSampler
@@ -3315,14 +4887,25 @@ namespace CG
 	class UVoxelNode_TextureSampler : public UVoxelExposedNode
 	{
 	public:
-		class UTexture2D*                                          Texture;                                                 // 0x0150(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bBilinearInterpolation;                                  // 0x0158(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EVoxelSamplerMode                                          Mode;                                                    // 0x0159(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_6KNC[0x6];                                   // 0x015A(0x0006) MISSED OFFSET (PADDING)
+
+		class UTexture2D*                                        Texture;                                                 // 0x0150(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bBilinearInterpolation;                                  // 0x0158(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		EVoxelSamplerMode                                        Mode;                                                    // 0x0159(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_QZ6V[0x6];                                   // 0x015A(0x0006) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_VoxelTextureSampler
@@ -3331,14 +4914,25 @@ namespace CG
 	class UVoxelNode_VoxelTextureSampler : public UVoxelExposedNode
 	{
 	public:
-		bool                                                       bBilinearInterpolation;                                  // 0x0150(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EVoxelSamplerMode                                          Mode;                                                    // 0x0151(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_1YCL[0x6];                                   // 0x0152(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FVoxelFloatTexture                                  Texture;                                                 // 0x0158(0x0018) NativeAccessSpecifierPublic
+
+		bool                                                     bBilinearInterpolation;                                  // 0x0150(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		EVoxelSamplerMode                                        Mode;                                                    // 0x0151(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_8TSC[0x6];                                   // 0x0152(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FVoxelFloatTexture                                Texture;                                                 // 0x0158(0x0018) NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_VoronoiNoiseBase
@@ -3347,13 +4941,22 @@ namespace CG
 	class UVoxelNode_VoronoiNoiseBase : public UVoxelNodeHelper
 	{
 	public:
-		bool                                                       bComputeNeighbors;                                       // 0x0098(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_LMJG[0x3];                                   // 0x0099(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		int32_t                                                    Dimension;                                               // 0x009C(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		bool                                                     bComputeNeighbors;                                       // 0x0098(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_YWMJ[0x3];                                   // 0x0099(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		int32_t                                                  Dimension;                                               // 0x009C(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_2DVoronoiNoise
@@ -3362,8 +4965,11 @@ namespace CG
 	class UVoxelNode_2DVoronoiNoise : public UVoxelNode_VoronoiNoiseBase
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_2DWhiteNoise
@@ -3372,8 +4978,11 @@ namespace CG
 	class UVoxelNode_2DWhiteNoise : public UVoxelNodeHelper
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class VoxelGraph.VoxelNode_3DWhiteNoise
@@ -3382,6 +4991,7 @@ namespace CG
 	class UVoxelNode_3DWhiteNoise : public UVoxelNodeHelper
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
 

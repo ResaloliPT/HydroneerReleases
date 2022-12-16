@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+
 	/**
 	 * UserDefinedStruct S_ResourceClassAndWeight.S_ResourceClassAndWeight
 	 * Size -> 0x000C
@@ -21,8 +22,12 @@ namespace CG
 	struct FS_ResourceClassAndWeight
 	{
 	public:
-		class UClass*                                              Resource_3_CDB91F804F0CE0577D10B3BF85DC6D96;             // 0x0000(0x0008) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash
-		float                                                      Weight_9_E0392D0F418E30BE21013C98B25D0507;               // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+
+		class UClass*                                            Resource_3_CDB91F804F0CE0577D10B3BF85DC6D96;             // 0x0000(0x0008) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+
+
+		float                                                    Weight_9_E0392D0F418E30BE21013C98B25D0507;               // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+
 	};
 
 }

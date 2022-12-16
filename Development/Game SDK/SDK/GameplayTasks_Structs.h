@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+
 	/**
 	 * Enum GameplayTasks.ETaskResourceOverlapPolicy
 	 */
@@ -23,6 +24,8 @@ namespace CG
 		StartAtEnd = 1,
 		MAX        = 2
 	};
+
+
 
 	/**
 	 * Enum GameplayTasks.EGameplayTaskState
@@ -36,6 +39,8 @@ namespace CG
 		Finished           = 4,
 		MAX                = 5
 	};
+
+
 
 	/**
 	 * Enum GameplayTasks.EGameplayTaskRunResult
@@ -53,6 +58,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+
 	/**
 	 * ScriptStruct GameplayTasks.GameplayResourceSet
 	 * Size -> 0x0002
@@ -60,7 +66,9 @@ namespace CG
 	struct FGameplayResourceSet
 	{
 	public:
-		unsigned char                                              UnknownData_TRND[0x2];                                   // 0x0000(0x0002) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_MXZG[0x2];                                   // 0x0000(0x0002) MISSED OFFSET (PADDING)
+
 	};
 
 }

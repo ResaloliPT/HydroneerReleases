@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+
 	/**
 	 * Enum AudioSynesthesia.EConstantQFFTSizeEnum
 	 */
@@ -30,6 +31,8 @@ namespace CG
 		Max     = 8
 	};
 
+
+
 	/**
 	 * Enum AudioSynesthesia.EConstantQNormalizationEnum
 	 */
@@ -40,6 +43,8 @@ namespace CG
 		EqualAmplitude     = 2,
 		MAX                = 3
 	};
+
+
 
 	/**
 	 * Enum AudioSynesthesia.ELoudnessNRTCurveTypeEnum

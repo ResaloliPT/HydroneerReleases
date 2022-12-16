@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * Class AudioExtensions.SoundfieldEncodingSettingsBase
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
@@ -21,8 +22,11 @@ namespace CG
 	class USoundfieldEncodingSettingsBase : public UObject
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class AudioExtensions.AudioEndpointSettingsBase
@@ -31,8 +35,11 @@ namespace CG
 	class UAudioEndpointSettingsBase : public UObject
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class AudioExtensions.SpatializationPluginSourceSettingsBase
@@ -41,8 +48,11 @@ namespace CG
 	class USpatializationPluginSourceSettingsBase : public UObject
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class AudioExtensions.OcclusionPluginSourceSettingsBase
@@ -51,8 +61,11 @@ namespace CG
 	class UOcclusionPluginSourceSettingsBase : public UObject
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class AudioExtensions.ReverbPluginSourceSettingsBase
@@ -61,8 +74,11 @@ namespace CG
 	class UReverbPluginSourceSettingsBase : public UObject
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class AudioExtensions.SoundModulatorBase
@@ -71,8 +87,11 @@ namespace CG
 	class USoundModulatorBase : public UObject
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class AudioExtensions.SoundfieldEndpointSettingsBase
@@ -81,8 +100,11 @@ namespace CG
 	class USoundfieldEndpointSettingsBase : public UObject
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class AudioExtensions.SoundfieldEffectSettingsBase
@@ -91,8 +113,11 @@ namespace CG
 	class USoundfieldEffectSettingsBase : public UObject
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class AudioExtensions.SoundfieldEffectBase
@@ -101,9 +126,12 @@ namespace CG
 	class USoundfieldEffectBase : public UObject
 	{
 	public:
-		class USoundfieldEffectSettingsBase*                       Settings;                                                // 0x0028(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		class USoundfieldEffectSettingsBase*                     Settings;                                                // 0x0028(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
 

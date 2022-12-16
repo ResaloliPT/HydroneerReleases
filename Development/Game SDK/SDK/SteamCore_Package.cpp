@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreSubsystem.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreSubsystem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreSubsystem::StaticClass()
@@ -23,6 +24,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.SteamCoreSubsystem");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -47,6 +50,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -56,7 +61,11 @@ namespace CG
 	 * 		TArray<int32_t>                                    AppIDs                                                     (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            MaxAppIDs                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UAppList::GetInstalledApps(TArray<int32_t>* AppIDs, int32_t MaxAppIDs)
+	int32_t UAppList::GetInstalledApps(
+TArray<int32_t>* AppIDs
+, 
+int32_t MaxAppIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -79,6 +88,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -88,7 +99,11 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Name                                                       (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UAppList::GetAppName(int32_t AppID, class FString* Name)
+	int32_t UAppList::GetAppName(
+int32_t AppID
+, 
+class FString* Name
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -111,6 +126,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -120,7 +137,11 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Directory                                                  (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UAppList::GetAppInstallDir(int32_t AppID, class FString* Directory)
+	int32_t UAppList::GetAppInstallDir(
+int32_t AppID
+, 
+class FString* Directory
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -143,6 +164,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -151,7 +174,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UAppList::GetAppBuildId(int32_t AppID)
+	int32_t UAppList::GetAppBuildId(
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -170,10 +195,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAppList.StaticClass
+	 * 		Name   -> PredefinedFunction UAppList.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAppList::StaticClass()
@@ -184,6 +211,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -192,7 +221,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UApps::UninstallDLC(int32_t AppID)
+	void UApps::UninstallDLC(
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -209,6 +240,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -217,7 +250,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bMissingFilesOnly                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UApps::MarkContentCorrupt(bool bMissingFilesOnly)
+	bool UApps::MarkContentCorrupt(
+bool bMissingFilesOnly
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -236,6 +271,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -244,7 +281,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UApps::InstallDLC(int32_t AppID)
+	void UApps::InstallDLC(
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -261,6 +300,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -269,7 +310,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UApps::GetLaunchQueryParam(const class FString& Key)
+	class FString UApps::GetLaunchQueryParam(
+const class FString& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -288,6 +331,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -296,7 +341,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      CommandLine                                                (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UApps::GetLaunchCommandLine(class FString* CommandLine)
+	int32_t UApps::GetLaunchCommandLine(
+class FString* CommandLine
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -317,6 +364,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -327,7 +376,13 @@ namespace CG
 	 * 		int32_t                                            MaxDepots                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<int32_t>                                    Depots                                                     (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	int32_t UApps::GetInstalledDepots(int32_t AppID, int32_t MaxDepots, TArray<int32_t>* Depots)
+	int32_t UApps::GetInstalledDepots(
+int32_t AppID
+, 
+int32_t MaxDepots
+, 
+TArray<int32_t>* Depots
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -352,6 +407,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -361,7 +418,11 @@ namespace CG
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Filename                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UApps::GetFileDetails(const class FScriptDelegate& Callback, const class FString& Filename)
+	void UApps::GetFileDetails(
+const class FScriptDelegate& Callback
+, 
+const class FString& Filename
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -380,6 +441,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -388,7 +451,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UApps::GetEarliestPurchaseUnixTime(int32_t AppID)
+	int32_t UApps::GetEarliestPurchaseUnixTime(
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -407,6 +472,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -417,7 +484,13 @@ namespace CG
 	 * 		int32_t                                            BytesDownloaded                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            BytesTotal                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UApps::GetDlcDownloadProgress(int32_t AppID, int32_t* BytesDownloaded, int32_t* BytesTotal)
+	bool UApps::GetDlcDownloadProgress(
+int32_t AppID
+, 
+int32_t* BytesDownloaded
+, 
+int32_t* BytesTotal
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -443,6 +516,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -465,6 +540,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -489,6 +566,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -497,7 +576,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Name                                                       (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UApps::GetCurrentBetaName(class FString* Name)
+	bool UApps::GetCurrentBetaName(
+class FString* Name
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -517,6 +598,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -541,6 +624,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -564,6 +649,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -573,7 +660,11 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Folder                                                     (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UApps::GetAppInstallDir(int32_t AppID, class FString* Folder)
+	int32_t UApps::GetAppInstallDir(
+int32_t AppID
+, 
+class FString* Folder
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -595,6 +686,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -619,6 +712,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -642,6 +737,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -651,7 +748,11 @@ namespace CG
 	 * 		int32_t                                            SecondsAllowed                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            SecondsPlayed                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UApps::BIsTimedTrial(int32_t* SecondsAllowed, int32_t* SecondsPlayed)
+	bool UApps::BIsTimedTrial(
+int32_t* SecondsAllowed
+, 
+int32_t* SecondsPlayed
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -674,6 +775,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -698,6 +801,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -721,6 +826,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -729,7 +836,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UApps::BIsSubscribedApp(int32_t AppID)
+	bool UApps::BIsSubscribedApp(
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -747,6 +856,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -771,6 +882,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -794,6 +907,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -802,7 +917,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UApps::BIsDlcInstalled(int32_t AppID)
+	bool UApps::BIsDlcInstalled(
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -820,6 +937,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -844,6 +963,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -852,7 +973,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UApps::BIsAppInstalled(int32_t AppID)
+	bool UApps::BIsAppInstalled(
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -871,6 +994,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -882,7 +1007,15 @@ namespace CG
 	 * 		bool                                               bAvailable                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Name                                                       (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UApps::BGetDLCDataByIndex(int32_t DLC, int32_t* AppID, bool* bAvailable, class FString* Name)
+	bool UApps::BGetDLCDataByIndex(
+int32_t DLC
+, 
+int32_t* AppID
+, 
+bool* bAvailable
+, 
+class FString* Name
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -911,10 +1044,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UApps.StaticClass
+	 * 		Name   -> PredefinedFunction UApps.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UApps::StaticClass()
@@ -925,10 +1060,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreAsyncAction.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreAsyncAction.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreAsyncAction::StaticClass()
@@ -939,6 +1076,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -948,7 +1087,11 @@ namespace CG
 	 * 		struct FFileDetailsResult                          Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreAppsAsyncActionGetFileDetails::HandleCallback(const struct FFileDetailsResult& Data, bool bWasSuccessful)
+	void USteamCoreAppsAsyncActionGetFileDetails::HandleCallback(
+const struct FFileDetailsResult& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -967,6 +1110,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -977,7 +1122,13 @@ namespace CG
 	 * 		class FString                                      Filename                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreAppsAsyncActionGetFileDetails* USteamCoreAppsAsyncActionGetFileDetails::GetFileDetailsAsync(class UObject* WorldContextObject, const class FString& Filename, float Timeout)
+	class USteamCoreAppsAsyncActionGetFileDetails* USteamCoreAppsAsyncActionGetFileDetails::GetFileDetailsAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Filename
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1000,10 +1151,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreAppsAsyncActionGetFileDetails.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreAppsAsyncActionGetFileDetails.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreAppsAsyncActionGetFileDetails::StaticClass()
@@ -1014,10 +1167,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ASteamCoreGameMode.StaticClass
+	 * 		Name   -> PredefinedFunction ASteamCoreGameMode.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ASteamCoreGameMode::StaticClass()
@@ -1028,10 +1183,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCore.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCore.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCore::StaticClass()
@@ -1042,10 +1199,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreSettings.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreSettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreSettings::StaticClass()
@@ -1056,6 +1215,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1065,7 +1226,11 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Value                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UFriends::SetRichPresence(const class FString& Key, const class FString& Value)
+	bool UFriends::SetRichPresence(
+const class FString& Key
+, 
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1086,6 +1251,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1094,7 +1261,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamIDUserPlayedWith                                      (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UFriends::SetPlayedWith(const struct FSteamID& SteamIDUserPlayedWith)
+	void UFriends::SetPlayedWith(
+const struct FSteamID& SteamIDUserPlayedWith
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1111,6 +1280,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1120,7 +1291,11 @@ namespace CG
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Name                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UFriends::SetPersonaName(const class FScriptDelegate& Callback, const class FString& Name)
+	void UFriends::SetPersonaName(
+const class FScriptDelegate& Callback
+, 
+const class FString& Name
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1139,6 +1314,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1147,7 +1324,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bInterceptEnabled                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UFriends::SetListenForFriendsMessages(bool bInterceptEnabled)
+	bool UFriends::SetListenForFriendsMessages(
+bool bInterceptEnabled
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1166,6 +1345,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1175,7 +1356,11 @@ namespace CG
 	 * 		struct FSteamID                                    SteamIDUser                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bSpeaking                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UFriends::SetInGameVoiceSpeaking(const struct FSteamID& SteamIDUser, bool bSpeaking)
+	void UFriends::SetInGameVoiceSpeaking(
+const struct FSteamID& SteamIDUser
+, 
+bool bSpeaking
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1194,6 +1379,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1203,7 +1390,11 @@ namespace CG
 	 * 		struct FSteamID                                    SteamIDClanChat                                            (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Text                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UFriends::SendClanChatMessage(const struct FSteamID& SteamIDClanChat, const class FString& Text)
+	bool UFriends::SendClanChatMessage(
+const struct FSteamID& SteamIDClanChat
+, 
+const class FString& Text
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1224,6 +1415,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1233,7 +1426,11 @@ namespace CG
 	 * 		struct FSteamID                                    SteamIDUser                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bRequireNameOnly                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UFriends::RequestUserInformation(const struct FSteamID& SteamIDUser, bool bRequireNameOnly)
+	bool UFriends::RequestUserInformation(
+const struct FSteamID& SteamIDUser
+, 
+bool bRequireNameOnly
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1254,6 +1451,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1262,7 +1461,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamIDFriend                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UFriends::RequestFriendRichPresence(const struct FSteamID& SteamIDFriend)
+	void UFriends::RequestFriendRichPresence(
+const struct FSteamID& SteamIDFriend
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1279,6 +1480,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1288,7 +1491,11 @@ namespace CG
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FSteamID                                    SteamIDClan                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UFriends::RequestClanOfficerList(const class FScriptDelegate& Callback, const struct FSteamID& SteamIDClan)
+	void UFriends::RequestClanOfficerList(
+const class FScriptDelegate& Callback
+, 
+const struct FSteamID& SteamIDClan
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1307,6 +1514,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1316,7 +1525,11 @@ namespace CG
 	 * 		struct FSteamID                                    SteamIDFriend                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      MsgToSend                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UFriends::ReplyToFriendMessage(const struct FSteamID& SteamIDFriend, const class FString& MsgToSend)
+	bool UFriends::ReplyToFriendMessage(
+const struct FSteamID& SteamIDFriend
+, 
+const class FString& MsgToSend
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1337,6 +1550,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1345,7 +1560,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Protocol                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UFriends::RegisterProtocolInOverlayBrowser(const class FString& Protocol)
+	bool UFriends::RegisterProtocolInOverlayBrowser(
+const class FString& Protocol
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1364,6 +1581,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1372,7 +1591,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamIDClanChat                                            (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UFriends::OpenClanChatWindowInSteam(const struct FSteamID& SteamIDClanChat)
+	bool UFriends::OpenClanChatWindowInSteam(
+const struct FSteamID& SteamIDClanChat
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1391,6 +1612,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1399,7 +1622,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamIDClan                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UFriends::LeaveClanChatRoom(const struct FSteamID& SteamIDClan)
+	bool UFriends::LeaveClanChatRoom(
+const struct FSteamID& SteamIDClan
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1418,6 +1643,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1427,7 +1654,11 @@ namespace CG
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FSteamID                                    SteamIDClan                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UFriends::JoinClanChatRoom(const class FScriptDelegate& Callback, const struct FSteamID& SteamIDClan)
+	void UFriends::JoinClanChatRoom(
+const class FScriptDelegate& Callback
+, 
+const struct FSteamID& SteamIDClan
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1446,6 +1677,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1455,7 +1688,11 @@ namespace CG
 	 * 		struct FSteamID                                    SteamIDUser                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FSteamID                                    SteamIDSource                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UFriends::IsUserInSource(const struct FSteamID& SteamIDUser, const struct FSteamID& SteamIDSource)
+	bool UFriends::IsUserInSource(
+const struct FSteamID& SteamIDUser
+, 
+const struct FSteamID& SteamIDSource
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1476,6 +1713,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1485,7 +1724,11 @@ namespace CG
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FSteamID                                    SteamID                                                    (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UFriends::IsFollowing(const class FScriptDelegate& Callback, const struct FSteamID& SteamID)
+	void UFriends::IsFollowing(
+const class FScriptDelegate& Callback
+, 
+const struct FSteamID& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1504,6 +1747,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1512,7 +1757,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamIDClan                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UFriends::IsClanPublic(const struct FSteamID& SteamIDClan)
+	bool UFriends::IsClanPublic(
+const struct FSteamID& SteamIDClan
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1531,6 +1778,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1539,7 +1788,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamIDClan                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UFriends::IsClanOfficialGameGroup(const struct FSteamID& SteamIDClan)
+	bool UFriends::IsClanOfficialGameGroup(
+const struct FSteamID& SteamIDClan
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1558,6 +1809,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1566,7 +1819,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamIDClanChat                                            (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UFriends::IsClanChatWindowOpenInSteam(const struct FSteamID& SteamIDClanChat)
+	bool UFriends::IsClanChatWindowOpenInSteam(
+const struct FSteamID& SteamIDClanChat
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1585,6 +1840,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1594,7 +1851,11 @@ namespace CG
 	 * 		struct FSteamID                                    SteamIDClanChat                                            (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FSteamID                                    SteamIDUser                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UFriends::IsClanChatAdmin(const struct FSteamID& SteamIDClanChat, const struct FSteamID& SteamIDUser)
+	bool UFriends::IsClanChatAdmin(
+const struct FSteamID& SteamIDClanChat
+, 
+const struct FSteamID& SteamIDUser
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1615,6 +1876,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1624,7 +1887,11 @@ namespace CG
 	 * 		struct FSteamID                                    SteamIDFriend                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      ConnectString                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UFriends::InviteUserToGame(const struct FSteamID& SteamIDFriend, const class FString& ConnectString)
+	bool UFriends::InviteUserToGame(
+const struct FSteamID& SteamIDFriend
+, 
+const class FString& ConnectString
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1645,6 +1912,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1654,7 +1923,11 @@ namespace CG
 	 * 		struct FSteamID                                    SteamIDFriend                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<ESteamFriendFlags>                          Flags                                                      (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	bool UFriends::HasFriend(const struct FSteamID& SteamIDFriend, TArray<ESteamFriendFlags> Flags)
+	bool UFriends::HasFriend(
+const struct FSteamID& SteamIDFriend
+, 
+TArray<ESteamFriendFlags> Flags
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1674,6 +1947,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1698,6 +1973,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1706,7 +1983,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamIDFriend                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UTexture2D* UFriends::GetSmallFriendAvatar(const struct FSteamID& SteamIDFriend)
+	class UTexture2D* UFriends::GetSmallFriendAvatar(
+const struct FSteamID& SteamIDFriend
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1725,6 +2004,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1733,7 +2014,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamIDPlayer                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UFriends::GetPlayerNickname_Pure(const struct FSteamID& SteamIDPlayer)
+	class FString UFriends::GetPlayerNickname_Pure(
+const struct FSteamID& SteamIDPlayer
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1752,6 +2035,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1760,7 +2045,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamIDPlayer                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UFriends::GetPlayerNickname(const struct FSteamID& SteamIDPlayer)
+	class FString UFriends::GetPlayerNickname(
+const struct FSteamID& SteamIDPlayer
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1778,6 +2065,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1802,6 +2091,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1824,6 +2115,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1848,6 +2141,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1871,6 +2166,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1879,7 +2176,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamIDFriend                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UTexture2D* UFriends::GetMediumFriendAvatar(const struct FSteamID& SteamIDFriend)
+	class UTexture2D* UFriends::GetMediumFriendAvatar(
+const struct FSteamID& SteamIDFriend
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1898,6 +2197,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1906,7 +2207,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamIDFriend                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UTexture2D* UFriends::GetLargeFriendAvatar(const struct FSteamID& SteamIDFriend)
+	class UTexture2D* UFriends::GetLargeFriendAvatar(
+const struct FSteamID& SteamIDFriend
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1925,6 +2228,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1933,7 +2238,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamIDFriend                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UFriends::GetFriendSteamLevel(const struct FSteamID& SteamIDFriend)
+	int32_t UFriends::GetFriendSteamLevel(
+const struct FSteamID& SteamIDFriend
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1952,6 +2259,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1960,7 +2269,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamFriendsGroupID                        FriendsGroupID                                             (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UFriends::GetFriendsGroupName(const struct FSteamFriendsGroupID& FriendsGroupID)
+	class FString UFriends::GetFriendsGroupName(
+const struct FSteamFriendsGroupID& FriendsGroupID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1979,6 +2290,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1989,7 +2302,13 @@ namespace CG
 	 * 		TArray<struct FSteamID>                            SteamIDMembers                                             (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            MembersCount                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UFriends::GetFriendsGroupMembersList(const struct FSteamFriendsGroupID& FriendsGroupID, TArray<struct FSteamID>* SteamIDMembers, int32_t MembersCount)
+	void UFriends::GetFriendsGroupMembersList(
+const struct FSteamFriendsGroupID& FriendsGroupID
+, 
+TArray<struct FSteamID>* SteamIDMembers
+, 
+int32_t MembersCount
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2012,6 +2331,8 @@ namespace CG
 			*SteamIDMembers = params.SteamIDMembers;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2020,7 +2341,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamFriendsGroupID                        FriendsGroupID                                             (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UFriends::GetFriendsGroupMembersCount(const struct FSteamFriendsGroupID& FriendsGroupID)
+	int32_t UFriends::GetFriendsGroupMembersCount(
+const struct FSteamFriendsGroupID& FriendsGroupID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2039,6 +2362,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2047,7 +2372,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            FriendGroup                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FSteamFriendsGroupID UFriends::GetFriendsGroupIDByIndex(int32_t FriendGroup)
+	struct FSteamFriendsGroupID UFriends::GetFriendsGroupIDByIndex(
+int32_t FriendGroup
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2065,6 +2392,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2089,6 +2418,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2097,7 +2428,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamIDFriend                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UFriends::GetFriendRichPresenceKeyCount(const struct FSteamID& SteamIDFriend)
+	int32_t UFriends::GetFriendRichPresenceKeyCount(
+const struct FSteamID& SteamIDFriend
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2116,6 +2449,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2125,7 +2460,11 @@ namespace CG
 	 * 		struct FSteamID                                    SteamIDFriend                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Key                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UFriends::GetFriendRichPresenceKeyByIndex(const struct FSteamID& SteamIDFriend, int32_t Key)
+	class FString UFriends::GetFriendRichPresenceKeyByIndex(
+const struct FSteamID& SteamIDFriend
+, 
+int32_t Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2146,6 +2485,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2155,7 +2496,11 @@ namespace CG
 	 * 		struct FSteamID                                    SteamIDFriend                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UFriends::GetFriendRichPresence(const struct FSteamID& SteamIDFriend, const class FString& Key)
+	class FString UFriends::GetFriendRichPresence(
+const struct FSteamID& SteamIDFriend
+, 
+const class FString& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2176,6 +2521,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2184,7 +2531,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamIDFriend                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	ESteamFriendRelationship UFriends::GetFriendRelationship(const struct FSteamID& SteamIDFriend)
+	ESteamFriendRelationship UFriends::GetFriendRelationship(
+const struct FSteamID& SteamIDFriend
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2203,6 +2552,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2211,7 +2562,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamIDFriend                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	ESteamPersonaState UFriends::GetFriendPersonaState(const struct FSteamID& SteamIDFriend)
+	ESteamPersonaState UFriends::GetFriendPersonaState(
+const struct FSteamID& SteamIDFriend
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2230,6 +2583,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2239,7 +2594,11 @@ namespace CG
 	 * 		struct FSteamID                                    SteamIDFriend                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            PersonaName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UFriends::GetFriendPersonaNameHistory(const struct FSteamID& SteamIDFriend, int32_t PersonaName)
+	class FString UFriends::GetFriendPersonaNameHistory(
+const struct FSteamID& SteamIDFriend
+, 
+int32_t PersonaName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2260,6 +2619,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2268,7 +2629,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamIDFriend                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UFriends::GetFriendPersonaName(const struct FSteamID& SteamIDFriend)
+	class FString UFriends::GetFriendPersonaName(
+const struct FSteamID& SteamIDFriend
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2287,6 +2650,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2298,7 +2663,15 @@ namespace CG
 	 * 		class FString                                      Text                                                       (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ESteamChatEntryType                                ChatEntryType                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UFriends::GetFriendMessage(const struct FSteamID& SteamIDFriend, int32_t MessageID, class FString* Text, ESteamChatEntryType* ChatEntryType)
+	int32_t UFriends::GetFriendMessage(
+const struct FSteamID& SteamIDFriend
+, 
+int32_t MessageID
+, 
+class FString* Text
+, 
+ESteamChatEntryType* ChatEntryType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2326,6 +2699,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2339,7 +2714,19 @@ namespace CG
 	 * 		int32_t                                            QueryPort                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FSteamID                                    SteamIDLobby                                               (Parm, OutParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UFriends::GetFriendGamePlayed(const struct FSteamID& SteamIDFriend, struct FSteamGameID* GameID, class FString* GameIP, int32_t* ConnectionPort, int32_t* QueryPort, struct FSteamID* SteamIDLobby)
+	bool UFriends::GetFriendGamePlayed(
+const struct FSteamID& SteamIDFriend
+, 
+struct FSteamGameID* GameID
+, 
+class FString* GameIP
+, 
+int32_t* ConnectionPort
+, 
+int32_t* QueryPort
+, 
+struct FSteamID* SteamIDLobby
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2374,6 +2761,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2383,7 +2772,11 @@ namespace CG
 	 * 		struct FSteamID                                    SteamIDSource                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Ifriend                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FSteamID UFriends::GetFriendFromSourceByIndex(const struct FSteamID& SteamIDSource, int32_t Ifriend)
+	struct FSteamID UFriends::GetFriendFromSourceByIndex(
+const struct FSteamID& SteamIDSource
+, 
+int32_t Ifriend
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2404,6 +2797,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2412,7 +2807,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamIDSource                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UFriends::GetFriendCountFromSource(const struct FSteamID& SteamIDSource)
+	int32_t UFriends::GetFriendCountFromSource(
+const struct FSteamID& SteamIDSource
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2431,6 +2828,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2439,7 +2838,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<ESteamFriendFlags>                          Flags                                                      (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	int32_t UFriends::GetFriendCount(TArray<ESteamFriendFlags> Flags)
+	int32_t UFriends::GetFriendCount(
+TArray<ESteamFriendFlags> Flags
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2458,6 +2859,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2466,7 +2869,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamIDFriend                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UFriends::GetFriendCoplayTime(const struct FSteamID& SteamIDFriend)
+	int32_t UFriends::GetFriendCoplayTime(
+const struct FSteamID& SteamIDFriend
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2485,6 +2890,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2493,7 +2900,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamIDFriend                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UFriends::GetFriendCoplayGame(const struct FSteamID& SteamIDFriend)
+	int32_t UFriends::GetFriendCoplayGame(
+const struct FSteamID& SteamIDFriend
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2512,6 +2921,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2521,7 +2932,11 @@ namespace CG
 	 * 		int32_t                                            Ifriend                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<ESteamFriendFlags>                          Flags                                                      (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	struct FSteamID UFriends::GetFriendByIndex(int32_t Ifriend, TArray<ESteamFriendFlags> Flags)
+	struct FSteamID UFriends::GetFriendByIndex(
+int32_t Ifriend
+, 
+TArray<ESteamFriendFlags> Flags
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2542,6 +2957,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2551,7 +2968,11 @@ namespace CG
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FSteamID                                    SteamID                                                    (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UFriends::GetFollowerCount(const class FScriptDelegate& Callback, const struct FSteamID& SteamID)
+	void UFriends::GetFollowerCount(
+const class FScriptDelegate& Callback
+, 
+const struct FSteamID& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2569,6 +2990,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2593,6 +3016,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2601,7 +3026,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            CoplayFriend                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FSteamID UFriends::GetCoplayFriend(int32_t CoplayFriend)
+	struct FSteamID UFriends::GetCoplayFriend(
+int32_t CoplayFriend
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2620,6 +3047,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2628,7 +3057,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamIDClan                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UFriends::GetClanTag(const struct FSteamID& SteamIDClan)
+	class FString UFriends::GetClanTag(
+const struct FSteamID& SteamIDClan
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2647,6 +3078,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2655,7 +3088,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamIDClan                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FSteamID UFriends::GetClanOwner(const struct FSteamID& SteamIDClan)
+	struct FSteamID UFriends::GetClanOwner(
+const struct FSteamID& SteamIDClan
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2674,6 +3109,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2682,7 +3119,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamIDClan                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UFriends::GetClanOfficerCount(const struct FSteamID& SteamIDClan)
+	int32_t UFriends::GetClanOfficerCount(
+const struct FSteamID& SteamIDClan
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2701,6 +3140,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2710,7 +3151,11 @@ namespace CG
 	 * 		struct FSteamID                                    SteamIDClan                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Officer                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FSteamID UFriends::GetClanOfficerByIndex(const struct FSteamID& SteamIDClan, int32_t Officer)
+	struct FSteamID UFriends::GetClanOfficerByIndex(
+const struct FSteamID& SteamIDClan
+, 
+int32_t Officer
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2731,6 +3176,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2739,7 +3186,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamIDClan                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UFriends::GetClanName(const struct FSteamID& SteamIDClan)
+	class FString UFriends::GetClanName(
+const struct FSteamID& SteamIDClan
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2757,6 +3206,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2781,6 +3232,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2793,7 +3246,17 @@ namespace CG
 	 * 		ESteamChatEntryType                                ChatEntryType                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FSteamID                                    SteamIDChatter                                             (Parm, OutParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UFriends::GetClanChatMessage(const struct FSteamID& SteamIDClanChat, int32_t MessageID, class FString* Text, ESteamChatEntryType* ChatEntryType, struct FSteamID* SteamIDChatter)
+	int32_t UFriends::GetClanChatMessage(
+const struct FSteamID& SteamIDClanChat
+, 
+int32_t MessageID
+, 
+class FString* Text
+, 
+ESteamChatEntryType* ChatEntryType
+, 
+struct FSteamID* SteamIDChatter
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2824,6 +3287,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2832,7 +3297,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamIDClan                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UFriends::GetClanChatMemberCount(const struct FSteamID& SteamIDClan)
+	int32_t UFriends::GetClanChatMemberCount(
+const struct FSteamID& SteamIDClan
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2851,6 +3318,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2859,7 +3328,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Clan                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FSteamID UFriends::GetClanByIndex(int32_t Clan)
+	struct FSteamID UFriends::GetClanByIndex(
+int32_t Clan
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2878,6 +3349,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2889,7 +3362,15 @@ namespace CG
 	 * 		int32_t                                            InGame                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Chatting                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UFriends::GetClanActivityCounts(const struct FSteamID& SteamIDClan, int32_t* Online, int32_t* InGame, int32_t* Chatting)
+	bool UFriends::GetClanActivityCounts(
+const struct FSteamID& SteamIDClan
+, 
+int32_t* Online
+, 
+int32_t* InGame
+, 
+int32_t* Chatting
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2918,6 +3399,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2927,7 +3410,11 @@ namespace CG
 	 * 		struct FSteamID                                    SteamIDClan                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            User                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FSteamID UFriends::GetChatMemberByIndex(const struct FSteamID& SteamIDClan, int32_t User)
+	struct FSteamID UFriends::GetChatMemberByIndex(
+const struct FSteamID& SteamIDClan
+, 
+int32_t User
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2948,6 +3435,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2957,7 +3446,11 @@ namespace CG
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            StartIndex                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UFriends::EnumerateFollowingList(const class FScriptDelegate& Callback, int32_t StartIndex)
+	void UFriends::EnumerateFollowingList(
+const class FScriptDelegate& Callback
+, 
+int32_t StartIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2976,6 +3469,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2985,7 +3480,11 @@ namespace CG
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FSteamID>                            SteamIDClans                                               (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UFriends::DownloadClanActivityCounts(const class FScriptDelegate& Callback, TArray<struct FSteamID> SteamIDClans)
+	void UFriends::DownloadClanActivityCounts(
+const class FScriptDelegate& Callback
+, 
+TArray<struct FSteamID> SteamIDClans
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3004,6 +3503,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3012,7 +3513,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamIDClanChat                                            (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UFriends::CloseClanChatWindowInSteam(const struct FSteamID& SteamIDClanChat)
+	bool UFriends::CloseClanChatWindowInSteam(
+const struct FSteamID& SteamIDClanChat
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3030,6 +3533,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3052,6 +3557,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3061,7 +3568,11 @@ namespace CG
 	 * 		class FString                                      URL                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ESteamActivateGameOverlayToWebPageMode             Mode                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UFriends::ActivateGameOverlayToWebPage(const class FString& URL, ESteamActivateGameOverlayToWebPageMode Mode)
+	void UFriends::ActivateGameOverlayToWebPage(
+const class FString& URL
+, 
+ESteamActivateGameOverlayToWebPageMode Mode
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3080,6 +3591,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3089,7 +3602,11 @@ namespace CG
 	 * 		class FString                                      Dialog                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FSteamID                                    SteamID                                                    (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UFriends::ActivateGameOverlayToUser(const class FString& Dialog, const struct FSteamID& SteamID)
+	void UFriends::ActivateGameOverlayToUser(
+const class FString& Dialog
+, 
+const struct FSteamID& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3108,6 +3625,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3117,7 +3636,11 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ESteamOverlayToStoreFlag                           Flag                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UFriends::ActivateGameOverlayToStore(int32_t AppID, ESteamOverlayToStoreFlag Flag)
+	void UFriends::ActivateGameOverlayToStore(
+int32_t AppID
+, 
+ESteamOverlayToStoreFlag Flag
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3136,6 +3659,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3144,7 +3669,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      ConnectString                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UFriends::ActivateGameOverlayInviteDialogConnectString(const class FString& ConnectString)
+	void UFriends::ActivateGameOverlayInviteDialogConnectString(
+const class FString& ConnectString
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3161,6 +3688,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3169,7 +3698,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamIDLobby                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UFriends::ActivateGameOverlayInvitedialog(const struct FSteamID& SteamIDLobby)
+	void UFriends::ActivateGameOverlayInvitedialog(
+const struct FSteamID& SteamIDLobby
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3186,6 +3717,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3194,7 +3727,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Dialog                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UFriends::ActivateGameOverlay(const class FString& Dialog)
+	void UFriends::ActivateGameOverlay(
+const class FString& Dialog
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3211,10 +3746,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UFriends.StaticClass
+	 * 		Name   -> PredefinedFunction UFriends.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UFriends::StaticClass()
@@ -3224,6 +3761,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.Friends");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3235,7 +3774,13 @@ namespace CG
 	 * 		class FString                                      Name                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreFriendsAsyncActionSetPersonaName* USteamCoreFriendsAsyncActionSetPersonaName::SetPersonaNameAsync(class UObject* WorldContextObject, const class FString& Name, float Timeout)
+	class USteamCoreFriendsAsyncActionSetPersonaName* USteamCoreFriendsAsyncActionSetPersonaName::SetPersonaNameAsync(
+class UObject* WorldContextObject
+, 
+const class FString& Name
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3258,6 +3803,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3267,7 +3814,11 @@ namespace CG
 	 * 		struct FSetPersonaNameResponse                     Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreFriendsAsyncActionSetPersonaName::HandleCallback(const struct FSetPersonaNameResponse& Data, bool bWasSuccessful)
+	void USteamCoreFriendsAsyncActionSetPersonaName::HandleCallback(
+const struct FSetPersonaNameResponse& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3286,10 +3837,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreFriendsAsyncActionSetPersonaName.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreFriendsAsyncActionSetPersonaName.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreFriendsAsyncActionSetPersonaName::StaticClass()
@@ -3300,6 +3853,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3309,7 +3864,11 @@ namespace CG
 	 * 		struct FDownloadClanActivityCountsResult           Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreFriendsAsyncActionDownloadClanActivityCounts::HandleCallback(const struct FDownloadClanActivityCountsResult& Data, bool bWasSuccessful)
+	void USteamCoreFriendsAsyncActionDownloadClanActivityCounts::HandleCallback(
+const struct FDownloadClanActivityCountsResult& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3328,6 +3887,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3338,7 +3899,13 @@ namespace CG
 	 * 		TArray<struct FSteamID>                            SteamIDClans                                               (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreFriendsAsyncActionDownloadClanActivityCounts* USteamCoreFriendsAsyncActionDownloadClanActivityCounts::DownloadClanActivityCountsAsync(class UObject* WorldContextObject, TArray<struct FSteamID> SteamIDClans, float Timeout)
+	class USteamCoreFriendsAsyncActionDownloadClanActivityCounts* USteamCoreFriendsAsyncActionDownloadClanActivityCounts::DownloadClanActivityCountsAsync(
+class UObject* WorldContextObject
+, 
+TArray<struct FSteamID> SteamIDClans
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3361,10 +3928,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreFriendsAsyncActionDownloadClanActivityCounts.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreFriendsAsyncActionDownloadClanActivityCounts.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreFriendsAsyncActionDownloadClanActivityCounts::StaticClass()
@@ -3374,6 +3943,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.SteamCoreFriendsAsyncActionDownloadClanActivityCounts");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3385,7 +3956,13 @@ namespace CG
 	 * 		struct FSteamID                                    SteamIDClan                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreFriendsAsyncActionRequestClanOfficerList* USteamCoreFriendsAsyncActionRequestClanOfficerList::RequestClanOfficerListAsync(class UObject* WorldContextObject, const struct FSteamID& SteamIDClan, float Timeout)
+	class USteamCoreFriendsAsyncActionRequestClanOfficerList* USteamCoreFriendsAsyncActionRequestClanOfficerList::RequestClanOfficerListAsync(
+class UObject* WorldContextObject
+, 
+const struct FSteamID& SteamIDClan
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3408,6 +3985,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3417,7 +3996,11 @@ namespace CG
 	 * 		struct FClanOfficerListResponse                    Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreFriendsAsyncActionRequestClanOfficerList::HandleCallback(const struct FClanOfficerListResponse& Data, bool bWasSuccessful)
+	void USteamCoreFriendsAsyncActionRequestClanOfficerList::HandleCallback(
+const struct FClanOfficerListResponse& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3436,10 +4019,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreFriendsAsyncActionRequestClanOfficerList.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreFriendsAsyncActionRequestClanOfficerList.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreFriendsAsyncActionRequestClanOfficerList::StaticClass()
@@ -3449,6 +4034,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.SteamCoreFriendsAsyncActionRequestClanOfficerList");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3460,7 +4047,13 @@ namespace CG
 	 * 		struct FSteamID                                    SteamIDClan                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreFriendsAsyncActionJoinClanChatRoom* USteamCoreFriendsAsyncActionJoinClanChatRoom::JoinClanChatRoomAsync(class UObject* WorldContextObject, const struct FSteamID& SteamIDClan, float Timeout)
+	class USteamCoreFriendsAsyncActionJoinClanChatRoom* USteamCoreFriendsAsyncActionJoinClanChatRoom::JoinClanChatRoomAsync(
+class UObject* WorldContextObject
+, 
+const struct FSteamID& SteamIDClan
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3483,6 +4076,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3492,7 +4087,11 @@ namespace CG
 	 * 		struct FJoinClanChatRoomCompletionResult           Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreFriendsAsyncActionJoinClanChatRoom::HandleCallback(const struct FJoinClanChatRoomCompletionResult& Data, bool bWasSuccessful)
+	void USteamCoreFriendsAsyncActionJoinClanChatRoom::HandleCallback(
+const struct FJoinClanChatRoomCompletionResult& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3511,10 +4110,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreFriendsAsyncActionJoinClanChatRoom.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreFriendsAsyncActionJoinClanChatRoom.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreFriendsAsyncActionJoinClanChatRoom::StaticClass()
@@ -3525,6 +4126,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3534,7 +4137,11 @@ namespace CG
 	 * 		struct FFriendsEnumerateFollowingList              Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreFriendsAsyncActionEnumerateFollowingList::HandleCallback(const struct FFriendsEnumerateFollowingList& Data, bool bWasSuccessful)
+	void USteamCoreFriendsAsyncActionEnumerateFollowingList::HandleCallback(
+const struct FFriendsEnumerateFollowingList& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3553,6 +4160,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3563,7 +4172,13 @@ namespace CG
 	 * 		int32_t                                            StartIndex                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreFriendsAsyncActionEnumerateFollowingList* USteamCoreFriendsAsyncActionEnumerateFollowingList::EnumerateFollowingListAsync(class UObject* WorldContextObject, int32_t StartIndex, float Timeout)
+	class USteamCoreFriendsAsyncActionEnumerateFollowingList* USteamCoreFriendsAsyncActionEnumerateFollowingList::EnumerateFollowingListAsync(
+class UObject* WorldContextObject
+, 
+int32_t StartIndex
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3586,10 +4201,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreFriendsAsyncActionEnumerateFollowingList.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreFriendsAsyncActionEnumerateFollowingList.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreFriendsAsyncActionEnumerateFollowingList::StaticClass()
@@ -3599,6 +4216,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.SteamCoreFriendsAsyncActionEnumerateFollowingList");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3610,7 +4229,13 @@ namespace CG
 	 * 		struct FSteamID                                    SteamID                                                    (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreFriendsAsyncActionIsFollowing* USteamCoreFriendsAsyncActionIsFollowing::IsFollowingAsync(class UObject* WorldContextObject, const struct FSteamID& SteamID, float Timeout)
+	class USteamCoreFriendsAsyncActionIsFollowing* USteamCoreFriendsAsyncActionIsFollowing::IsFollowingAsync(
+class UObject* WorldContextObject
+, 
+const struct FSteamID& SteamID
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3633,6 +4258,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3642,7 +4269,11 @@ namespace CG
 	 * 		struct FFriendsIsFollowing                         Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreFriendsAsyncActionIsFollowing::HandleCallback(const struct FFriendsIsFollowing& Data, bool bWasSuccessful)
+	void USteamCoreFriendsAsyncActionIsFollowing::HandleCallback(
+const struct FFriendsIsFollowing& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3661,10 +4292,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreFriendsAsyncActionIsFollowing.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreFriendsAsyncActionIsFollowing.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreFriendsAsyncActionIsFollowing::StaticClass()
@@ -3675,6 +4308,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3684,7 +4319,11 @@ namespace CG
 	 * 		struct FFriendsGetFollowerCount                    Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreFriendsAsyncActionGetFollowerCount::HandleCallback(const struct FFriendsGetFollowerCount& Data, bool bWasSuccessful)
+	void USteamCoreFriendsAsyncActionGetFollowerCount::HandleCallback(
+const struct FFriendsGetFollowerCount& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3703,6 +4342,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3713,7 +4354,13 @@ namespace CG
 	 * 		struct FSteamID                                    SteamID                                                    (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreFriendsAsyncActionGetFollowerCount* USteamCoreFriendsAsyncActionGetFollowerCount::GetFollowerCountAsync(class UObject* WorldContextObject, const struct FSteamID& SteamID, float Timeout)
+	class USteamCoreFriendsAsyncActionGetFollowerCount* USteamCoreFriendsAsyncActionGetFollowerCount::GetFollowerCountAsync(
+class UObject* WorldContextObject
+, 
+const struct FSteamID& SteamID
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3736,10 +4383,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreFriendsAsyncActionGetFollowerCount.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreFriendsAsyncActionGetFollowerCount.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreFriendsAsyncActionGetFollowerCount::StaticClass()
@@ -3749,6 +4398,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.SteamCoreFriendsAsyncActionGetFollowerCount");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3761,7 +4412,15 @@ namespace CG
 	 * 		bool                                               bRequireNameOnly                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreFriendsAsyncActionRequestUserInformation* USteamCoreFriendsAsyncActionRequestUserInformation::RequestUserInformationAsync(class UObject* WorldContextObject, const struct FSteamID& SteamIDUser, bool bRequireNameOnly, float Timeout)
+	class USteamCoreFriendsAsyncActionRequestUserInformation* USteamCoreFriendsAsyncActionRequestUserInformation::RequestUserInformationAsync(
+class UObject* WorldContextObject
+, 
+const struct FSteamID& SteamIDUser
+, 
+bool bRequireNameOnly
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3786,6 +4445,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3807,10 +4468,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreFriendsAsyncActionRequestUserInformation.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreFriendsAsyncActionRequestUserInformation.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreFriendsAsyncActionRequestUserInformation::StaticClass()
@@ -3820,6 +4483,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.SteamCoreFriendsAsyncActionRequestUserInformation");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3831,7 +4496,13 @@ namespace CG
 	 * 		struct FSteamID                                    SteamIDPlayer                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ESteamPlayerResult                                 PlayerResult                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	ESteamGameSearchErrorCode USteamGameSearch::SubmitPlayerResult(const class FString& UniqueGameID, const struct FSteamID& SteamIDPlayer, ESteamPlayerResult PlayerResult)
+	ESteamGameSearchErrorCode USteamGameSearch::SubmitPlayerResult(
+const class FString& UniqueGameID
+, 
+const struct FSteamID& SteamIDPlayer
+, 
+ESteamPlayerResult PlayerResult
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3854,6 +4525,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3863,7 +4536,11 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<class FString>                              Values                                                     (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	ESteamGameSearchErrorCode USteamGameSearch::SetGameHostParams(const class FString& Key, TArray<class FString> Values)
+	ESteamGameSearchErrorCode USteamGameSearch::SetGameHostParams(
+const class FString& Key
+, 
+TArray<class FString> Values
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3884,6 +4561,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3892,7 +4571,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      ConnectionDetails                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	ESteamGameSearchErrorCode USteamGameSearch::SetConnectionDetails(const class FString& ConnectionDetails)
+	ESteamGameSearchErrorCode USteamGameSearch::SetConnectionDetails(
+const class FString& ConnectionDetails
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3911,6 +4592,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3921,7 +4604,13 @@ namespace CG
 	 * 		int32_t                                            PlayerMin                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            PlayerMax                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	ESteamGameSearchErrorCode USteamGameSearch::SearchForGameWithLobby(const struct FSteamID& SteamIDLobby, int32_t PlayerMin, int32_t PlayerMax)
+	ESteamGameSearchErrorCode USteamGameSearch::SearchForGameWithLobby(
+const struct FSteamID& SteamIDLobby
+, 
+int32_t PlayerMin
+, 
+int32_t PlayerMax
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3944,6 +4633,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3953,7 +4644,11 @@ namespace CG
 	 * 		int32_t                                            PlayerMin                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            PlayerMax                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	ESteamGameSearchErrorCode USteamGameSearch::SearchForGameSolo(int32_t PlayerMin, int32_t PlayerMax)
+	ESteamGameSearchErrorCode USteamGameSearch::SearchForGameSolo(
+int32_t PlayerMin
+, 
+int32_t PlayerMax
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3974,6 +4669,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3984,7 +4681,13 @@ namespace CG
 	 * 		class FString                                      ConnectionDetails                                          (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            NumConnectionDetails                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	ESteamGameSearchErrorCode USteamGameSearch::RetrieveConnectionDetails(const struct FSteamID& SteamIDHost, class FString* ConnectionDetails, int32_t NumConnectionDetails)
+	ESteamGameSearchErrorCode USteamGameSearch::RetrieveConnectionDetails(
+const struct FSteamID& SteamIDHost
+, 
+class FString* ConnectionDetails
+, 
+int32_t NumConnectionDetails
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4009,6 +4712,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4019,7 +4724,13 @@ namespace CG
 	 * 		int32_t                                            PlayerMax                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            MaxTeamSize                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	ESteamGameSearchErrorCode USteamGameSearch::RequestPlayersForGame(int32_t PlayerMin, int32_t PlayerMax, int32_t MaxTeamSize)
+	ESteamGameSearchErrorCode USteamGameSearch::RequestPlayersForGame(
+int32_t PlayerMin
+, 
+int32_t PlayerMax
+, 
+int32_t MaxTeamSize
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4042,6 +4753,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4050,7 +4763,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      UniqueGameID                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	ESteamGameSearchErrorCode USteamGameSearch::HostConfirmGameStart(const class FString& UniqueGameID)
+	ESteamGameSearchErrorCode USteamGameSearch::HostConfirmGameStart(
+const class FString& UniqueGameID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4068,6 +4783,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4092,6 +4809,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4100,7 +4819,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      UniqueGameID                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	ESteamGameSearchErrorCode USteamGameSearch::EndGame(const class FString& UniqueGameID)
+	ESteamGameSearchErrorCode USteamGameSearch::EndGame(
+const class FString& UniqueGameID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4118,6 +4839,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4142,6 +4865,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4165,6 +4890,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4174,7 +4901,11 @@ namespace CG
 	 * 		class FString                                      KeyToFind                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<class FString>                              ValuesToFind                                               (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	ESteamGameSearchErrorCode USteamGameSearch::AddGameSearchParams(const class FString& KeyToFind, TArray<class FString> ValuesToFind)
+	ESteamGameSearchErrorCode USteamGameSearch::AddGameSearchParams(
+const class FString& KeyToFind
+, 
+TArray<class FString> ValuesToFind
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4194,6 +4925,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4218,10 +4951,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamGameSearch.StaticClass
+	 * 		Name   -> PredefinedFunction USteamGameSearch.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamGameSearch::StaticClass()
@@ -4231,6 +4966,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.SteamGameSearch");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4255,6 +4992,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4264,7 +5003,11 @@ namespace CG
 	 * 		struct FSteamID                                    SteamID                                                    (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	ESteamUserHasLicenseForAppResult USteamGameServer::UserHasLicenseForApp(const struct FSteamID& SteamID, int32_t AppID)
+	ESteamUserHasLicenseForAppResult USteamGameServer::UserHasLicenseForApp(
+const struct FSteamID& SteamID
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4285,6 +5028,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4293,7 +5038,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      SpectatorServerName                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamGameServer::SetSpectatorServerName(const class FString& SpectatorServerName)
+	void USteamGameServer::SetSpectatorServerName(
+const class FString& SpectatorServerName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4310,6 +5057,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4318,7 +5067,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            SpectatorPort                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamGameServer::SetSpectatorPort(int32_t SpectatorPort)
+	void USteamGameServer::SetSpectatorPort(
+int32_t SpectatorPort
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4335,6 +5086,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4343,7 +5096,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      ServerName                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamGameServer::SetServerName(const class FString& ServerName)
+	void USteamGameServer::SetServerName(
+const class FString& ServerName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4360,6 +5115,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4368,7 +5125,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Region                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamGameServer::SetRegion(const class FString& Region)
+	void USteamGameServer::SetRegion(
+const class FString& Region
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4385,6 +5144,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4393,7 +5154,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Product                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamGameServer::SetProduct(const class FString& Product)
+	void USteamGameServer::SetProduct(
+const class FString& Product
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4410,6 +5173,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4418,7 +5183,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bPasswordProtected                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamGameServer::SetPasswordProtected(bool bPasswordProtected)
+	void USteamGameServer::SetPasswordProtected(
+bool bPasswordProtected
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4435,6 +5202,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4443,7 +5212,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      ModDir                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamGameServer::SetModDir(const class FString& ModDir)
+	void USteamGameServer::SetModDir(
+const class FString& ModDir
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4460,6 +5231,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4468,7 +5241,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            PlayersMax                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamGameServer::SetMaxPlayerCount(int32_t PlayersMax)
+	void USteamGameServer::SetMaxPlayerCount(
+int32_t PlayersMax
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4485,6 +5260,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4493,7 +5270,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      MapName                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamGameServer::SetMapName(const class FString& MapName)
+	void USteamGameServer::SetMapName(
+const class FString& MapName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4510,6 +5289,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4519,7 +5300,11 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Value                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamGameServer::SetKeyValue(const class FString& Key, const class FString& Value)
+	void USteamGameServer::SetKeyValue(
+const class FString& Key
+, 
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4538,6 +5323,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4546,7 +5333,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            HeartbeatInterval                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamGameServer::SetHeartbeatInterval(int32_t HeartbeatInterval)
+	void USteamGameServer::SetHeartbeatInterval(
+int32_t HeartbeatInterval
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4563,6 +5352,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4571,7 +5362,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      GameTags                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamGameServer::SetGameTags(const class FString& GameTags)
+	void USteamGameServer::SetGameTags(
+const class FString& GameTags
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4588,6 +5381,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4596,7 +5391,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      GameDescription                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamGameServer::SetGameDescription(const class FString& GameDescription)
+	void USteamGameServer::SetGameDescription(
+const class FString& GameDescription
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4613,6 +5410,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4621,7 +5420,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      GameData                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamGameServer::SetGameData(const class FString& GameData)
+	void USteamGameServer::SetGameData(
+const class FString& GameData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4638,6 +5439,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4646,7 +5449,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bDedicated                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamGameServer::SetDedicatedServer(bool bDedicated)
+	void USteamGameServer::SetDedicatedServer(
+bool bDedicated
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4663,6 +5468,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4671,7 +5478,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            BotPlayers                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamGameServer::SetBotPlayerCount(int32_t BotPlayers)
+	void USteamGameServer::SetBotPlayerCount(
+int32_t BotPlayers
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4688,6 +5497,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4697,7 +5508,11 @@ namespace CG
 	 * 		struct FSteamID                                    SteamIDUser                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FSteamID                                    SteamIDGroup                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool USteamGameServer::RequestUserGroupStatus(const struct FSteamID& SteamIDUser, const struct FSteamID& SteamIDGroup)
+	bool USteamGameServer::RequestUserGroupStatus(
+const struct FSteamID& SteamIDUser
+, 
+const struct FSteamID& SteamIDGroup
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4717,6 +5532,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4739,6 +5556,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4747,7 +5566,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Token                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamGameServer::LogOn(const class FString& Token)
+	void USteamGameServer::LogOn(
+const class FString& Token
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4763,6 +5584,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4784,6 +5607,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4808,6 +5633,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4830,6 +5657,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4854,6 +5683,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4876,6 +5707,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4900,6 +5733,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4923,6 +5758,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4931,7 +5768,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<unsigned char>                              Ticket                                                     (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	struct FSteamTicketHandle USteamGameServer::GetAuthSessionTicket(TArray<unsigned char>* Ticket)
+	struct FSteamTicketHandle USteamGameServer::GetAuthSessionTicket(
+TArray<unsigned char>* Ticket
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4951,6 +5790,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4973,6 +5814,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4981,7 +5824,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamID                                                    (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamGameServer::EndAuthSession(const struct FSteamID& SteamID)
+	void USteamGameServer::EndAuthSession(
+const struct FSteamID& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4998,6 +5843,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5006,7 +5853,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bActive                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamGameServer::EnableHeartbeats(bool bActive)
+	void USteamGameServer::EnableHeartbeats(
+bool bActive
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5022,6 +5871,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5046,6 +5897,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5055,7 +5908,11 @@ namespace CG
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FSteamID                                    SteamIDNewPlayer                                           (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamGameServer::ComputeNewPlayerCompatibility(const class FScriptDelegate& Callback, const struct FSteamID& SteamIDNewPlayer)
+	void USteamGameServer::ComputeNewPlayerCompatibility(
+const class FScriptDelegate& Callback
+, 
+const struct FSteamID& SteamIDNewPlayer
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5073,6 +5930,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5095,6 +5954,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5103,7 +5964,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamTicketHandle                          TicketHandle                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamGameServer::CancelAuthTicket(const struct FSteamTicketHandle& TicketHandle)
+	void USteamGameServer::CancelAuthTicket(
+const struct FSteamTicketHandle& TicketHandle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5120,6 +5983,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5130,7 +5995,13 @@ namespace CG
 	 * 		class FString                                      PlayerName                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Score                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool USteamGameServer::BUpdateUserData(const struct FSteamID& SteamIDUser, const class FString& PlayerName, int32_t Score)
+	bool USteamGameServer::BUpdateUserData(
+const struct FSteamID& SteamIDUser
+, 
+const class FString& PlayerName
+, 
+int32_t Score
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5152,6 +6023,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5176,6 +6049,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5199,6 +6074,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5208,7 +6085,11 @@ namespace CG
 	 * 		TArray<unsigned char>                              Ticket                                                     (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		struct FSteamID                                    SteamID                                                    (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	ESteamBeginAuthSessionResult USteamGameServer::BeginAuthSession(TArray<unsigned char> Ticket, const struct FSteamID& SteamID)
+	ESteamBeginAuthSessionResult USteamGameServer::BeginAuthSession(
+TArray<unsigned char> Ticket
+, 
+const struct FSteamID& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5229,6 +6110,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5238,7 +6121,11 @@ namespace CG
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FSteamID                                    SteamIDClan                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamGameServer::AssociateWithClan(const class FScriptDelegate& Callback, const struct FSteamID& SteamIDClan)
+	void USteamGameServer::AssociateWithClan(
+const class FScriptDelegate& Callback
+, 
+const struct FSteamID& SteamIDClan
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5257,10 +6144,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamGameServer.StaticClass
+	 * 		Name   -> PredefinedFunction USteamGameServer.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamGameServer::StaticClass()
@@ -5270,6 +6159,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.SteamGameServer");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5282,7 +6173,15 @@ namespace CG
 	 * 		float                                              CountThisSession                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              SessionLength                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UGameServerStats::UpdateUserAvgRateStat(const struct FSteamID& SteamIDUser, const class FString& Name, float CountThisSession, float SessionLength)
+	bool UGameServerStats::UpdateUserAvgRateStat(
+const struct FSteamID& SteamIDUser
+, 
+const class FString& Name
+, 
+float CountThisSession
+, 
+float SessionLength
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5307,6 +6206,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5317,7 +6218,13 @@ namespace CG
 	 * 		class FString                                      Name                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Data                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UGameServerStats::SetUserStatInt(const struct FSteamID& SteamIDUser, const class FString& Name, int32_t Data)
+	bool UGameServerStats::SetUserStatInt(
+const struct FSteamID& SteamIDUser
+, 
+const class FString& Name
+, 
+int32_t Data
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5340,6 +6247,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5350,7 +6259,13 @@ namespace CG
 	 * 		class FString                                      Name                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Data                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UGameServerStats::SetUserStatFloat(const struct FSteamID& SteamIDUser, const class FString& Name, float Data)
+	bool UGameServerStats::SetUserStatFloat(
+const struct FSteamID& SteamIDUser
+, 
+const class FString& Name
+, 
+float Data
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5373,6 +6288,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5382,7 +6299,11 @@ namespace CG
 	 * 		struct FSteamID                                    SteamIDUser                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Name                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UGameServerStats::SetUserAchievement(const struct FSteamID& SteamIDUser, const class FString& Name)
+	bool UGameServerStats::SetUserAchievement(
+const struct FSteamID& SteamIDUser
+, 
+const class FString& Name
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5403,6 +6324,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5412,7 +6335,11 @@ namespace CG
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FSteamID                                    SteamIDUser                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGameServerStats::ServerStoreUserStats(const class FScriptDelegate& Callback, const struct FSteamID& SteamIDUser)
+	void UGameServerStats::ServerStoreUserStats(
+const class FScriptDelegate& Callback
+, 
+const struct FSteamID& SteamIDUser
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5431,6 +6358,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5440,7 +6369,11 @@ namespace CG
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FSteamID                                    SteamIDUser                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGameServerStats::ServerRequestUserStats(const class FScriptDelegate& Callback, const struct FSteamID& SteamIDUser)
+	void UGameServerStats::ServerRequestUserStats(
+const class FScriptDelegate& Callback
+, 
+const struct FSteamID& SteamIDUser
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5459,6 +6392,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5469,7 +6404,13 @@ namespace CG
 	 * 		class FString                                      Name                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Data                                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UGameServerStats::GetUserStatInt(const struct FSteamID& SteamIDUser, const class FString& Name, int32_t* Data)
+	bool UGameServerStats::GetUserStatInt(
+const struct FSteamID& SteamIDUser
+, 
+const class FString& Name
+, 
+int32_t* Data
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5494,6 +6435,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5504,7 +6447,13 @@ namespace CG
 	 * 		class FString                                      Name                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Data                                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UGameServerStats::GetUserStatFloat(const struct FSteamID& SteamIDUser, const class FString& Name, float* Data)
+	bool UGameServerStats::GetUserStatFloat(
+const struct FSteamID& SteamIDUser
+, 
+const class FString& Name
+, 
+float* Data
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5529,6 +6478,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5539,7 +6490,13 @@ namespace CG
 	 * 		class FString                                      Name                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bAchieved                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UGameServerStats::GetUserAchievement(const struct FSteamID& SteamIDUser, const class FString& Name, bool* bAchieved)
+	bool UGameServerStats::GetUserAchievement(
+const struct FSteamID& SteamIDUser
+, 
+const class FString& Name
+, 
+bool* bAchieved
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5564,6 +6521,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5573,7 +6532,11 @@ namespace CG
 	 * 		struct FSteamID                                    SteamIDUser                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Name                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UGameServerStats::ClearUserAchievement(const struct FSteamID& SteamIDUser, const class FString& Name)
+	bool UGameServerStats::ClearUserAchievement(
+const struct FSteamID& SteamIDUser
+, 
+const class FString& Name
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5594,10 +6557,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGameServerStats.StaticClass
+	 * 		Name   -> PredefinedFunction UGameServerStats.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGameServerStats::StaticClass()
@@ -5607,6 +6572,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.GameServerStats");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5618,7 +6585,13 @@ namespace CG
 	 * 		unsigned char                                      LeftSpeed                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		unsigned char                                      RightSpeed                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UInput::TriggerVibration(const struct FInputHandle& Handle, unsigned char LeftSpeed, unsigned char RightSpeed)
+	void UInput::TriggerVibration(
+const struct FInputHandle& Handle
+, 
+unsigned char LeftSpeed
+, 
+unsigned char RightSpeed
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5639,6 +6612,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5652,7 +6627,19 @@ namespace CG
 	 * 		unsigned char                                      Repeat                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		unsigned char                                      Flags                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UInput::TriggerRepeatedHapticPulse(const struct FInputHandle& Handle, ESteamCoreControllerPad TargetPad, unsigned char DurationMicroSec, unsigned char OffMicroSec, unsigned char Repeat, unsigned char Flags)
+	void UInput::TriggerRepeatedHapticPulse(
+const struct FInputHandle& Handle
+, 
+ESteamCoreControllerPad TargetPad
+, 
+unsigned char DurationMicroSec
+, 
+unsigned char OffMicroSec
+, 
+unsigned char Repeat
+, 
+unsigned char Flags
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5679,6 +6666,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5689,7 +6678,13 @@ namespace CG
 	 * 		ESteamCoreControllerPad                            TargetPad                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		unsigned char                                      DurationMicroSec                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UInput::TriggerHapticPulse(const struct FInputHandle& Handle, ESteamCoreControllerPad TargetPad, unsigned char DurationMicroSec)
+	void UInput::TriggerHapticPulse(
+const struct FInputHandle& Handle
+, 
+ESteamCoreControllerPad TargetPad
+, 
+unsigned char DurationMicroSec
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5710,6 +6705,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5719,7 +6716,11 @@ namespace CG
 	 * 		ESteamCoreInputType                                DestinationInputType                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ESteamCoreInputActionOrigin                        SourceOrigin                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	ESteamCoreInputActionOrigin UInput::TranslateActionOrigin(ESteamCoreInputType DestinationInputType, ESteamCoreInputActionOrigin SourceOrigin)
+	ESteamCoreInputActionOrigin UInput::TranslateActionOrigin(
+ESteamCoreInputType DestinationInputType
+, 
+ESteamCoreInputActionOrigin SourceOrigin
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5740,6 +6741,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5749,7 +6752,11 @@ namespace CG
 	 * 		struct FInputHandle                                Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FInputAnalogActionHandle                    EAction                                                    (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UInput::StopAnalogActionMomentum(const struct FInputHandle& Handle, const struct FInputAnalogActionHandle& EAction)
+	void UInput::StopAnalogActionMomentum(
+const struct FInputHandle& Handle
+, 
+const struct FInputAnalogActionHandle& EAction
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5767,6 +6774,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5791,6 +6800,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5799,7 +6810,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FInputHandle                                Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UInput::ShowBindingPanel(const struct FInputHandle& Handle)
+	bool UInput::ShowBindingPanel(
+const struct FInputHandle& Handle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5818,6 +6831,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5830,7 +6845,17 @@ namespace CG
 	 * 		unsigned char                                      ColorB                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ESteamCoreInputLEDFlag                             Flags                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UInput::SetLEDColor(const struct FInputHandle& Handle, unsigned char ColorR, unsigned char ColorG, unsigned char ColorB, ESteamCoreInputLEDFlag Flags)
+	void UInput::SetLEDColor(
+const struct FInputHandle& Handle
+, 
+unsigned char ColorR
+, 
+unsigned char ColorG
+, 
+unsigned char ColorB
+, 
+ESteamCoreInputLEDFlag Flags
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5855,6 +6880,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5878,6 +6905,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5886,7 +6915,9 @@ namespace CG
 	 * Parameters:
 	 * 		ESteamCoreXboxOrigin                               Origin                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UInput::GetStringForXboxOrigin(ESteamCoreXboxOrigin Origin)
+	class FString UInput::GetStringForXboxOrigin(
+ESteamCoreXboxOrigin Origin
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5905,6 +6936,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5913,7 +6946,9 @@ namespace CG
 	 * Parameters:
 	 * 		ESteamCoreInputActionOrigin                        Origin                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UInput::GetStringForActionOrigin(ESteamCoreInputActionOrigin Origin)
+	class FString UInput::GetStringForActionOrigin(
+ESteamCoreInputActionOrigin Origin
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5932,6 +6967,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5940,7 +6977,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FInputHandle                                Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UInput::GetRemotePlaySessionID(const struct FInputHandle& Handle)
+	int32_t UInput::GetRemotePlaySessionID(
+const struct FInputHandle& Handle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5959,6 +6998,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5967,7 +7008,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FInputHandle                                Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FInputMotionData UInput::GetMotionData(const struct FInputHandle& Handle)
+	struct FInputMotionData UInput::GetMotionData(
+const struct FInputHandle& Handle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5986,6 +7029,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5994,7 +7039,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FInputHandle                                Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	ESteamCoreInputType UInput::GetInputTypeForHandle(const struct FInputHandle& Handle)
+	ESteamCoreInputType UInput::GetInputTypeForHandle(
+const struct FInputHandle& Handle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6013,6 +7060,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6021,7 +7070,9 @@ namespace CG
 	 * Parameters:
 	 * 		ESteamCoreXboxOrigin                               Origin                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UInput::GetGlyphForXboxOrigin(ESteamCoreXboxOrigin Origin)
+	class FString UInput::GetGlyphForXboxOrigin(
+ESteamCoreXboxOrigin Origin
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6040,6 +7091,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6048,7 +7101,9 @@ namespace CG
 	 * Parameters:
 	 * 		ESteamCoreInputActionOrigin                        Origin                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UInput::GetGlyphForActionOrigin(ESteamCoreInputActionOrigin Origin)
+	class FString UInput::GetGlyphForActionOrigin(
+ESteamCoreInputActionOrigin Origin
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6067,6 +7122,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6075,7 +7132,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FInputHandle                                Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UInput::GetGamepadIndexForController(const struct FInputHandle& Handle)
+	int32_t UInput::GetGamepadIndexForController(
+const struct FInputHandle& Handle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6094,6 +7153,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6105,7 +7166,15 @@ namespace CG
 	 * 		struct FInputDigitalActionHandle                   DigitalActionHandle                                        (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<ESteamCoreInputActionOrigin>                OriginsOut                                                 (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	int32_t UInput::GetDigitalActionOrigins(const struct FInputHandle& Handle, const struct FInputActionSetHandle& ActionSetHandle, const struct FInputDigitalActionHandle& DigitalActionHandle, TArray<ESteamCoreInputActionOrigin>* OriginsOut)
+	int32_t UInput::GetDigitalActionOrigins(
+const struct FInputHandle& Handle
+, 
+const struct FInputActionSetHandle& ActionSetHandle
+, 
+const struct FInputDigitalActionHandle& DigitalActionHandle
+, 
+TArray<ESteamCoreInputActionOrigin>* OriginsOut
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6132,6 +7201,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6140,7 +7211,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      PszActionName                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FInputDigitalActionHandle UInput::GetDigitalActionHandle(const class FString& PszActionName)
+	struct FInputDigitalActionHandle UInput::GetDigitalActionHandle(
+const class FString& PszActionName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6159,6 +7232,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6168,7 +7243,11 @@ namespace CG
 	 * 		struct FInputHandle                                Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FInputDigitalActionHandle                   DigitalActionHandle                                        (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FInputDigitalActionData UInput::GetDigitalActionData(const struct FInputHandle& Handle, const struct FInputDigitalActionHandle& DigitalActionHandle)
+	struct FInputDigitalActionData UInput::GetDigitalActionData(
+const struct FInputHandle& Handle
+, 
+const struct FInputDigitalActionHandle& DigitalActionHandle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6189,6 +7268,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6199,7 +7280,13 @@ namespace CG
 	 * 		int32_t                                            Major                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Minor                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UInput::GetDeviceBindingRevision(const struct FInputHandle& Handle, int32_t* Major, int32_t* Minor)
+	bool UInput::GetDeviceBindingRevision(
+const struct FInputHandle& Handle
+, 
+int32_t* Major
+, 
+int32_t* Minor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6225,6 +7312,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6233,7 +7322,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FInputHandle                                Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FInputActionSetHandle UInput::GetCurrentActionSet(const struct FInputHandle& Handle)
+	struct FInputActionSetHandle UInput::GetCurrentActionSet(
+const struct FInputHandle& Handle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6252,6 +7343,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6260,7 +7353,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FInputHandle UInput::GetControllerForGamepadIndex(int32_t Index)
+	struct FInputHandle UInput::GetControllerForGamepadIndex(
+int32_t Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6279,6 +7374,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6287,7 +7384,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<struct FInputHandle>                        OutHandles                                                 (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	int32_t UInput::GetConnectedControllers(TArray<struct FInputHandle>* OutHandles)
+	int32_t UInput::GetConnectedControllers(
+TArray<struct FInputHandle>* OutHandles
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6308,6 +7407,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6319,7 +7420,15 @@ namespace CG
 	 * 		struct FInputAnalogActionHandle                    AnalogActionHandle                                         (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<ESteamCoreInputActionOrigin>                OriginsOut                                                 (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	int32_t UInput::GetAnalogActionOrigins(const struct FInputHandle& Handle, const struct FInputActionSetHandle& ActionSetHandle, const struct FInputAnalogActionHandle& AnalogActionHandle, TArray<ESteamCoreInputActionOrigin>* OriginsOut)
+	int32_t UInput::GetAnalogActionOrigins(
+const struct FInputHandle& Handle
+, 
+const struct FInputActionSetHandle& ActionSetHandle
+, 
+const struct FInputAnalogActionHandle& AnalogActionHandle
+, 
+TArray<ESteamCoreInputActionOrigin>* OriginsOut
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6346,6 +7455,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6354,7 +7465,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      PszActionName                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FInputAnalogActionHandle UInput::GetAnalogActionHandle(const class FString& PszActionName)
+	struct FInputAnalogActionHandle UInput::GetAnalogActionHandle(
+const class FString& PszActionName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6373,6 +7486,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6382,7 +7497,11 @@ namespace CG
 	 * 		struct FInputHandle                                Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FInputAnalogActionHandle                    AnalogActionHandle                                         (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FInputAnalogActionData UInput::GetAnalogActionData(const struct FInputHandle& Handle, const struct FInputAnalogActionHandle& AnalogActionHandle)
+	struct FInputAnalogActionData UInput::GetAnalogActionData(
+const struct FInputHandle& Handle
+, 
+const struct FInputAnalogActionHandle& AnalogActionHandle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6403,6 +7522,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6412,7 +7533,11 @@ namespace CG
 	 * 		struct FInputHandle                                Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FInputActionSetHandle>               Data                                                       (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	int32_t UInput::GetActiveActionSetLayers(const struct FInputHandle& Handle, TArray<struct FInputActionSetHandle>* Data)
+	int32_t UInput::GetActiveActionSetLayers(
+const struct FInputHandle& Handle
+, 
+TArray<struct FInputActionSetHandle>* Data
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6435,6 +7560,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6443,7 +7570,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      ActionSetName                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FInputActionSetHandle UInput::GetActionSetHandle(const class FString& ActionSetName)
+	struct FInputActionSetHandle UInput::GetActionSetHandle(
+const class FString& ActionSetName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6462,6 +7591,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6471,7 +7602,11 @@ namespace CG
 	 * 		struct FInputHandle                                Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ESteamCoreXboxOrigin                               Origin                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	ESteamCoreInputActionOrigin UInput::GetActionOriginFromXboxOrigin(const struct FInputHandle& Handle, ESteamCoreXboxOrigin Origin)
+	ESteamCoreInputActionOrigin UInput::GetActionOriginFromXboxOrigin(
+const struct FInputHandle& Handle
+, 
+ESteamCoreXboxOrigin Origin
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6492,6 +7627,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6500,7 +7637,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FInputHandle                                Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UInput::DeactivateAllActionSetLayers(const struct FInputHandle& Handle)
+	void UInput::DeactivateAllActionSetLayers(
+const struct FInputHandle& Handle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6517,6 +7656,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6526,7 +7667,11 @@ namespace CG
 	 * 		struct FInputHandle                                Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FInputActionSetHandle                       ActionSetLayerHandle                                       (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UInput::DeactivateActionSetLayer(const struct FInputHandle& Handle, const struct FInputActionSetHandle& ActionSetLayerHandle)
+	void UInput::DeactivateActionSetLayer(
+const struct FInputHandle& Handle
+, 
+const struct FInputActionSetHandle& ActionSetLayerHandle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6545,6 +7690,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6554,7 +7701,11 @@ namespace CG
 	 * 		struct FInputHandle                                Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FInputActionSetHandle                       ActionSetLayerHandle                                       (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UInput::ActivateActionSetLayer(const struct FInputHandle& Handle, const struct FInputActionSetHandle& ActionSetLayerHandle)
+	void UInput::ActivateActionSetLayer(
+const struct FInputHandle& Handle
+, 
+const struct FInputActionSetHandle& ActionSetLayerHandle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6573,6 +7724,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6582,7 +7735,11 @@ namespace CG
 	 * 		struct FInputHandle                                Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FInputActionSetHandle                       ActionSetHandle                                            (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UInput::ActivateActionSet(const struct FInputHandle& Handle, const struct FInputActionSetHandle& ActionSetHandle)
+	void UInput::ActivateActionSet(
+const struct FInputHandle& Handle
+, 
+const struct FInputActionSetHandle& ActionSetHandle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6601,10 +7758,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UInput.StaticClass
+	 * 		Name   -> PredefinedFunction UInput.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UInput::StaticClass()
@@ -6615,6 +7774,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6624,7 +7785,11 @@ namespace CG
 	 * 		struct FSteamInventoryResult                       Result                                                     (Parm, OutParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FSteamItemDef                               ListDefinition                                             (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UInventory::TriggerItemDrop(struct FSteamInventoryResult* Result, const struct FSteamItemDef& ListDefinition)
+	bool UInventory::TriggerItemDrop(
+struct FSteamInventoryResult* Result
+, 
+const struct FSteamItemDef& ListDefinition
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6647,6 +7812,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6658,7 +7825,15 @@ namespace CG
 	 * 		int32_t                                            Quantity                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FSteamItemInstanceID                        ItemIDDest                                                 (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UInventory::TransferItemQuantity(struct FSteamInventoryResult* Result, const struct FSteamItemInstanceID& ItemIDSource, int32_t Quantity, const struct FSteamItemInstanceID& ItemIDDest)
+	bool UInventory::TransferItemQuantity(
+struct FSteamInventoryResult* Result
+, 
+const struct FSteamItemInstanceID& ItemIDSource
+, 
+int32_t Quantity
+, 
+const struct FSteamItemInstanceID& ItemIDDest
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6685,6 +7860,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6694,7 +7871,11 @@ namespace CG
 	 * 		struct FSteamInventoryUpdateHandle                 Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FSteamInventoryResult                       ResultHandle                                               (Parm, OutParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UInventory::SubmitUpdateProperties(const struct FSteamInventoryUpdateHandle& Handle, struct FSteamInventoryResult* ResultHandle)
+	bool UInventory::SubmitUpdateProperties(
+const struct FSteamInventoryUpdateHandle& Handle
+, 
+struct FSteamInventoryResult* ResultHandle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6716,6 +7897,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -6740,6 +7923,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6750,7 +7935,13 @@ namespace CG
 	 * 		TArray<struct FSteamItemDef>                       ItemDefs                                                   (ConstParm, Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		TArray<int32_t>                                    Quantity                                                   (ConstParm, Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UInventory::StartPurchase(const class FScriptDelegate& Callback, TArray<struct FSteamItemDef> ItemDefs, TArray<int32_t> Quantity)
+	void UInventory::StartPurchase(
+const class FScriptDelegate& Callback
+, 
+TArray<struct FSteamItemDef> ItemDefs
+, 
+TArray<int32_t> Quantity
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6771,6 +7962,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6782,7 +7975,15 @@ namespace CG
 	 * 		class FString                                      PropertyName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Value                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UInventory::SetPropertyString(const struct FSteamInventoryUpdateHandle& Handle, const struct FSteamItemInstanceID& ItemId, const class FString& PropertyName, const class FString& Value)
+	bool UInventory::SetPropertyString(
+const struct FSteamInventoryUpdateHandle& Handle
+, 
+const struct FSteamItemInstanceID& ItemId
+, 
+const class FString& PropertyName
+, 
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6807,6 +8008,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6818,7 +8021,15 @@ namespace CG
 	 * 		class FString                                      PropertyName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Value                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UInventory::SetPropertyInt(const struct FSteamInventoryUpdateHandle& Handle, const struct FSteamItemInstanceID& ItemId, const class FString& PropertyName, int32_t Value)
+	bool UInventory::SetPropertyInt(
+const struct FSteamInventoryUpdateHandle& Handle
+, 
+const struct FSteamItemInstanceID& ItemId
+, 
+const class FString& PropertyName
+, 
+int32_t Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6843,6 +8054,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6854,7 +8067,15 @@ namespace CG
 	 * 		class FString                                      PropertyName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Value                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UInventory::SetPropertyFloat(const struct FSteamInventoryUpdateHandle& Handle, const struct FSteamItemInstanceID& ItemId, const class FString& PropertyName, float Value)
+	bool UInventory::SetPropertyFloat(
+const struct FSteamInventoryUpdateHandle& Handle
+, 
+const struct FSteamItemInstanceID& ItemId
+, 
+const class FString& PropertyName
+, 
+float Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6879,6 +8100,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6890,7 +8113,15 @@ namespace CG
 	 * 		class FString                                      PropertyName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bValue                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UInventory::SetPropertyBool(const struct FSteamInventoryUpdateHandle& Handle, const struct FSteamItemInstanceID& ItemId, const class FString& PropertyName, bool bValue)
+	bool UInventory::SetPropertyBool(
+const struct FSteamInventoryUpdateHandle& Handle
+, 
+const struct FSteamItemInstanceID& ItemId
+, 
+const class FString& PropertyName
+, 
+bool bValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6915,6 +8146,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6924,7 +8157,11 @@ namespace CG
 	 * 		struct FSteamInventoryResult                       Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<unsigned char>                              Buffer                                                     (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	bool UInventory::SerializeResult(const struct FSteamInventoryResult& Handle, TArray<unsigned char>* Buffer)
+	bool UInventory::SerializeResult(
+const struct FSteamInventoryResult& Handle
+, 
+TArray<unsigned char>* Buffer
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6947,6 +8184,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6955,7 +8194,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UInventory::RequestPrices(const class FScriptDelegate& Callback)
+	void UInventory::RequestPrices(
+const class FScriptDelegate& Callback
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6972,6 +8213,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6981,7 +8224,11 @@ namespace CG
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FSteamID                                    SteamID                                                    (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UInventory::RequestEligiblePromoItemDefinitionsIDs(const class FScriptDelegate& Callback, const struct FSteamID& SteamID)
+	void UInventory::RequestEligiblePromoItemDefinitionsIDs(
+const class FScriptDelegate& Callback
+, 
+const struct FSteamID& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7000,6 +8247,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7010,7 +8259,13 @@ namespace CG
 	 * 		struct FSteamItemInstanceID                        ItemId                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      PropertyName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UInventory::RemoveProperty(const struct FSteamInventoryUpdateHandle& Handle, const struct FSteamItemInstanceID& ItemId, const class FString& PropertyName)
+	bool UInventory::RemoveProperty(
+const struct FSteamInventoryUpdateHandle& Handle
+, 
+const struct FSteamItemInstanceID& ItemId
+, 
+const class FString& PropertyName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7032,6 +8287,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7056,6 +8313,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7064,7 +8323,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamInventoryResult                       Result                                                     (Parm, OutParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UInventory::GrantPromoItems(struct FSteamInventoryResult* Result)
+	bool UInventory::GrantPromoItems(
+struct FSteamInventoryResult* Result
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7085,6 +8346,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7093,7 +8356,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamInventoryResult                       Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UInventory::GetResultTimestamp(const struct FSteamInventoryResult& Handle)
+	int32_t UInventory::GetResultTimestamp(
+const struct FSteamInventoryResult& Handle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7112,6 +8377,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7120,7 +8387,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamInventoryResult                       Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	ESteamResult UInventory::GetResultStatus(const struct FSteamInventoryResult& Handle)
+	ESteamResult UInventory::GetResultStatus(
+const struct FSteamInventoryResult& Handle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7139,6 +8408,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7148,7 +8419,11 @@ namespace CG
 	 * 		struct FSteamInventoryResult                       Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FSteamItemDetails>                   Items                                                      (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	bool UInventory::GetResultItems(const struct FSteamInventoryResult& Handle, TArray<struct FSteamItemDetails>* Items)
+	bool UInventory::GetResultItems(
+const struct FSteamInventoryResult& Handle
+, 
+TArray<struct FSteamItemDetails>* Items
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7171,6 +8446,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7182,7 +8459,15 @@ namespace CG
 	 * 		class FString                                      PropertyName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Value                                                      (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UInventory::GetResultItemProperty(const struct FSteamInventoryResult& Handle, int32_t ItemIndex, const class FString& PropertyName, class FString* Value)
+	bool UInventory::GetResultItemProperty(
+const struct FSteamInventoryResult& Handle
+, 
+int32_t ItemIndex
+, 
+const class FString& PropertyName
+, 
+class FString* Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7209,6 +8494,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7232,6 +8519,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7242,7 +8531,13 @@ namespace CG
 	 * 		TArray<int32_t>                                    Prices                                                     (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		TArray<int32_t>                                    BasePrices                                                 (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	bool UInventory::GetItemsWithPrices(TArray<struct FSteamItemDef>* ItemDefs, TArray<int32_t>* Prices, TArray<int32_t>* BasePrices)
+	bool UInventory::GetItemsWithPrices(
+TArray<struct FSteamItemDef>* ItemDefs
+, 
+TArray<int32_t>* Prices
+, 
+TArray<int32_t>* BasePrices
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7269,6 +8564,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7278,7 +8575,11 @@ namespace CG
 	 * 		struct FSteamInventoryResult                       InventoryResult                                            (Parm, OutParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FSteamItemInstanceID>                InstanceIDs                                                (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	bool UInventory::GetItemsByID(struct FSteamInventoryResult* InventoryResult, TArray<struct FSteamItemInstanceID> InstanceIDs)
+	bool UInventory::GetItemsByID(
+struct FSteamInventoryResult* InventoryResult
+, 
+TArray<struct FSteamItemInstanceID> InstanceIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7301,6 +8602,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7311,7 +8614,13 @@ namespace CG
 	 * 		int32_t                                            Price                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            BasePrice                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UInventory::GetItemPrice(const struct FSteamItemDef& ItemDef, int32_t* Price, int32_t* BasePrice)
+	bool UInventory::GetItemPrice(
+const struct FSteamItemDef& ItemDef
+, 
+int32_t* Price
+, 
+int32_t* BasePrice
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7337,6 +8646,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7347,7 +8658,13 @@ namespace CG
 	 * 		class FString                                      PropertyName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Value                                                      (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UInventory::GetItemDefinitionProperty(const struct FSteamItemDef& ItemDef, const class FString& PropertyName, class FString* Value)
+	bool UInventory::GetItemDefinitionProperty(
+const struct FSteamItemDef& ItemDef
+, 
+const class FString& PropertyName
+, 
+class FString* Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7372,6 +8689,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7380,7 +8699,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<struct FSteamItemDef>                       ItemDefs                                                   (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	bool UInventory::GetItemDefinitionIDs(TArray<struct FSteamItemDef>* ItemDefs)
+	bool UInventory::GetItemDefinitionIDs(
+TArray<struct FSteamItemDef>* ItemDefs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7401,6 +8722,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7410,7 +8733,11 @@ namespace CG
 	 * 		struct FSteamID                                    SteamID                                                    (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FSteamItemDef>                       ItemDefs                                                   (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	bool UInventory::GetEligiblePromoItemDefinitionIDs(const struct FSteamID& SteamID, TArray<struct FSteamItemDef>* ItemDefs)
+	bool UInventory::GetEligiblePromoItemDefinitionIDs(
+const struct FSteamID& SteamID
+, 
+TArray<struct FSteamItemDef>* ItemDefs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7433,6 +8760,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7441,7 +8770,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamInventoryResult                       Handle                                                     (Parm, OutParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UInventory::GetAllItems(struct FSteamInventoryResult* Handle)
+	bool UInventory::GetAllItems(
+struct FSteamInventoryResult* Handle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7462,6 +8793,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7472,7 +8805,13 @@ namespace CG
 	 * 		TArray<struct FSteamItemDef>                       ItemDefs                                                   (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		TArray<int32_t>                                    Quantity                                                   (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	bool UInventory::GenerateItems(struct FSteamInventoryResult* Result, TArray<struct FSteamItemDef> ItemDefs, TArray<int32_t> Quantity)
+	bool UInventory::GenerateItems(
+struct FSteamInventoryResult* Result
+, 
+TArray<struct FSteamItemDef> ItemDefs
+, 
+TArray<int32_t> Quantity
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7497,6 +8836,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7509,7 +8850,17 @@ namespace CG
 	 * 		TArray<struct FSteamItemInstanceID>                ArrayDestroy                                               (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		TArray<int32_t>                                    ArrayDestroyQuantity                                       (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	bool UInventory::ExchangeItems(struct FSteamInventoryResult* Result, TArray<struct FSteamItemDef> ArrayGenerate, TArray<int32_t> ArrayGenerateQuantity, TArray<struct FSteamItemInstanceID> ArrayDestroy, TArray<int32_t> ArrayDestroyQuantity)
+	bool UInventory::ExchangeItems(
+struct FSteamInventoryResult* Result
+, 
+TArray<struct FSteamItemDef> ArrayGenerate
+, 
+TArray<int32_t> ArrayGenerateQuantity
+, 
+TArray<struct FSteamItemInstanceID> ArrayDestroy
+, 
+TArray<int32_t> ArrayDestroyQuantity
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7538,6 +8889,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7546,7 +8899,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamInventoryResult                       Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UInventory::DestroyResult(const struct FSteamInventoryResult& Handle)
+	void UInventory::DestroyResult(
+const struct FSteamInventoryResult& Handle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7563,6 +8918,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7573,7 +8930,13 @@ namespace CG
 	 * 		TArray<unsigned char>                              Buffer                                                     (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bReservedMustBeFalse                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UInventory::DeserializeResult(struct FSteamInventoryResult* Result, TArray<unsigned char> Buffer, bool bReservedMustBeFalse)
+	bool UInventory::DeserializeResult(
+struct FSteamInventoryResult* Result
+, 
+TArray<unsigned char> Buffer
+, 
+bool bReservedMustBeFalse
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7598,6 +8961,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7608,7 +8973,13 @@ namespace CG
 	 * 		struct FSteamItemInstanceID                        ItemConsume                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Quantity                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UInventory::ConsumeItem(struct FSteamInventoryResult* Result, const struct FSteamItemInstanceID& ItemConsume, int32_t Quantity)
+	bool UInventory::ConsumeItem(
+struct FSteamInventoryResult* Result
+, 
+const struct FSteamItemInstanceID& ItemConsume
+, 
+int32_t Quantity
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7633,6 +9004,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7642,7 +9015,11 @@ namespace CG
 	 * 		struct FSteamInventoryResult                       Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FSteamID                                    SteamIDExpected                                            (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UInventory::CheckResultSteamID(const struct FSteamInventoryResult& Handle, const struct FSteamID& SteamIDExpected)
+	bool UInventory::CheckResultSteamID(
+const struct FSteamInventoryResult& Handle
+, 
+const struct FSteamID& SteamIDExpected
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7663,6 +9040,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7672,7 +9051,11 @@ namespace CG
 	 * 		struct FSteamInventoryResult                       OutResult                                                  (Parm, OutParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FSteamItemDef>                       ItemDefs                                                   (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	bool UInventory::AddPromoItems(struct FSteamInventoryResult* OutResult, TArray<struct FSteamItemDef> ItemDefs)
+	bool UInventory::AddPromoItems(
+struct FSteamInventoryResult* OutResult
+, 
+TArray<struct FSteamItemDef> ItemDefs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7695,6 +9078,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7704,7 +9089,11 @@ namespace CG
 	 * 		struct FSteamInventoryResult                       Result                                                     (Parm, OutParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FSteamItemDef                               ItemDef                                                    (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UInventory::AddPromoItem(struct FSteamInventoryResult* Result, const struct FSteamItemDef& ItemDef)
+	bool UInventory::AddPromoItem(
+struct FSteamInventoryResult* Result
+, 
+const struct FSteamItemDef& ItemDef
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7727,10 +9116,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UInventory.StaticClass
+	 * 		Name   -> PredefinedFunction UInventory.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UInventory::StaticClass()
@@ -7740,6 +9131,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.Inventory");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7751,7 +9144,13 @@ namespace CG
 	 * 		struct FSteamID                                    SteamID                                                    (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreInventoryAsyncActionRequestEligiblePromoItemDefinitionsIDs* USteamCoreInventoryAsyncActionRequestEligiblePromoItemDefinitionsIDs::RequestEligiblePromoItemDefinitionsIDsAsync(class UObject* WorldContextObject, const struct FSteamID& SteamID, float Timeout)
+	class USteamCoreInventoryAsyncActionRequestEligiblePromoItemDefinitionsIDs* USteamCoreInventoryAsyncActionRequestEligiblePromoItemDefinitionsIDs::RequestEligiblePromoItemDefinitionsIDsAsync(
+class UObject* WorldContextObject
+, 
+const struct FSteamID& SteamID
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7774,6 +9173,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7783,7 +9184,11 @@ namespace CG
 	 * 		struct FSteamInventoryEligiblePromoItemDefIDs      Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreInventoryAsyncActionRequestEligiblePromoItemDefinitionsIDs::HandleCallback(const struct FSteamInventoryEligiblePromoItemDefIDs& Data, bool bWasSuccessful)
+	void USteamCoreInventoryAsyncActionRequestEligiblePromoItemDefinitionsIDs::HandleCallback(
+const struct FSteamInventoryEligiblePromoItemDefIDs& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7802,10 +9207,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreInventoryAsyncActionRequestEligiblePromoItemDefinitionsIDs.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreInventoryAsyncActionRequestEligiblePromoItemDefinitionsIDs.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreInventoryAsyncActionRequestEligiblePromoItemDefinitionsIDs::StaticClass()
@@ -7816,6 +9223,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7825,7 +9234,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreInventoryAsyncActionRequestPricesResult* USteamCoreInventoryAsyncActionRequestPricesResult::RequestPricesAsync(class UObject* WorldContextObject, float Timeout)
+	class USteamCoreInventoryAsyncActionRequestPricesResult* USteamCoreInventoryAsyncActionRequestPricesResult::RequestPricesAsync(
+class UObject* WorldContextObject
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7846,6 +9259,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7855,7 +9270,11 @@ namespace CG
 	 * 		struct FSteamInventoryRequestPricesResult          Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreInventoryAsyncActionRequestPricesResult::HandleCallback(const struct FSteamInventoryRequestPricesResult& Data, bool bWasSuccessful)
+	void USteamCoreInventoryAsyncActionRequestPricesResult::HandleCallback(
+const struct FSteamInventoryRequestPricesResult& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7874,10 +9293,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreInventoryAsyncActionRequestPricesResult.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreInventoryAsyncActionRequestPricesResult.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreInventoryAsyncActionRequestPricesResult::StaticClass()
@@ -7887,6 +9308,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.SteamCoreInventoryAsyncActionRequestPricesResult");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7899,7 +9322,15 @@ namespace CG
 	 * 		TArray<int32_t>                                    Quantity                                                   (ConstParm, Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreInventoryAsyncActionStartPurchaseResult* USteamCoreInventoryAsyncActionStartPurchaseResult::StartPurchaseAsync(class UObject* WorldContextObject, TArray<struct FSteamItemDef> ItemDefs, TArray<int32_t> Quantity, float Timeout)
+	class USteamCoreInventoryAsyncActionStartPurchaseResult* USteamCoreInventoryAsyncActionStartPurchaseResult::StartPurchaseAsync(
+class UObject* WorldContextObject
+, 
+TArray<struct FSteamItemDef> ItemDefs
+, 
+TArray<int32_t> Quantity
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7924,6 +9355,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7933,7 +9366,11 @@ namespace CG
 	 * 		struct FSteamInventoryStartPurchaseResult          Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreInventoryAsyncActionStartPurchaseResult::HandleCallback(const struct FSteamInventoryStartPurchaseResult& Data, bool bWasSuccessful)
+	void USteamCoreInventoryAsyncActionStartPurchaseResult::HandleCallback(
+const struct FSteamInventoryStartPurchaseResult& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7952,10 +9389,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreInventoryAsyncActionStartPurchaseResult.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreInventoryAsyncActionStartPurchaseResult.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreInventoryAsyncActionStartPurchaseResult::StaticClass()
@@ -7966,6 +9405,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7975,7 +9416,11 @@ namespace CG
 	 * 		struct FSteamID                                    SteamIDLobby                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ESteamLobbyType                                    LobbyType                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMatchmaking::SetLobbyType(const struct FSteamID& SteamIDLobby, ESteamLobbyType LobbyType)
+	bool UMatchmaking::SetLobbyType(
+const struct FSteamID& SteamIDLobby
+, 
+ESteamLobbyType LobbyType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7996,6 +9441,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8005,7 +9452,11 @@ namespace CG
 	 * 		struct FSteamID                                    SteamIDLobby                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FSteamID                                    SteamIDNewOwner                                            (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMatchmaking::SetLobbyOwner(const struct FSteamID& SteamIDLobby, const struct FSteamID& SteamIDNewOwner)
+	bool UMatchmaking::SetLobbyOwner(
+const struct FSteamID& SteamIDLobby
+, 
+const struct FSteamID& SteamIDNewOwner
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8026,6 +9477,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8035,7 +9488,11 @@ namespace CG
 	 * 		struct FSteamID                                    SteamIDLobby                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            MaxMembers                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMatchmaking::SetLobbyMemberLimit(const struct FSteamID& SteamIDLobby, int32_t MaxMembers)
+	bool UMatchmaking::SetLobbyMemberLimit(
+const struct FSteamID& SteamIDLobby
+, 
+int32_t MaxMembers
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8056,6 +9513,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8066,7 +9525,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Value                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMatchmaking::SetLobbyMemberData(const struct FSteamID& SteamIDLobby, const class FString& Key, const class FString& Value)
+	void UMatchmaking::SetLobbyMemberData(
+const struct FSteamID& SteamIDLobby
+, 
+const class FString& Key
+, 
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8087,6 +9552,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8096,7 +9563,11 @@ namespace CG
 	 * 		struct FSteamID                                    SteamIDLobby                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bLobbyJoinable                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMatchmaking::SetLobbyJoinable(const struct FSteamID& SteamIDLobby, bool bLobbyJoinable)
+	bool UMatchmaking::SetLobbyJoinable(
+const struct FSteamID& SteamIDLobby
+, 
+bool bLobbyJoinable
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8117,6 +9588,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8128,7 +9601,15 @@ namespace CG
 	 * 		int32_t                                            GameServerPort                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FSteamID                                    SteamIDGameServer                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMatchmaking::SetLobbyGameServer(const struct FSteamID& SteamIDLobby, const class FString& GameServerIP, int32_t GameServerPort, const struct FSteamID& SteamIDGameServer)
+	void UMatchmaking::SetLobbyGameServer(
+const struct FSteamID& SteamIDLobby
+, 
+const class FString& GameServerIP
+, 
+int32_t GameServerPort
+, 
+const struct FSteamID& SteamIDGameServer
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8151,6 +9632,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8161,7 +9644,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Value                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMatchmaking::SetLobbyData(const struct FSteamID& SteamIDLobby, const class FString& Key, const class FString& Value)
+	bool UMatchmaking::SetLobbyData(
+const struct FSteamID& SteamIDLobby
+, 
+const class FString& Key
+, 
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8184,6 +9673,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8193,7 +9684,11 @@ namespace CG
 	 * 		struct FSteamID                                    SteamIDLobby                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FSteamID                                    SteamIDLobbyDependent                                      (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMatchmaking::SetLinkedLobby(const struct FSteamID& SteamIDLobby, const struct FSteamID& SteamIDLobbyDependent)
+	bool UMatchmaking::SetLinkedLobby(
+const struct FSteamID& SteamIDLobby
+, 
+const struct FSteamID& SteamIDLobbyDependent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8214,6 +9709,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8223,7 +9720,11 @@ namespace CG
 	 * 		struct FSteamID                                    SteamIDLobby                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Message                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMatchmaking::SendLobbyChatMsg(const struct FSteamID& SteamIDLobby, const class FString& Message)
+	bool UMatchmaking::SendLobbyChatMsg(
+const struct FSteamID& SteamIDLobby
+, 
+const class FString& Message
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8244,6 +9745,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8252,7 +9755,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UMatchmaking::RequestLobbyList(const class FScriptDelegate& Callback)
+	void UMatchmaking::RequestLobbyList(
+const class FScriptDelegate& Callback
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8269,6 +9774,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8277,7 +9784,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamIDLobby                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMatchmaking::RequestLobbyData(const struct FSteamID& SteamIDLobby)
+	bool UMatchmaking::RequestLobbyData(
+const struct FSteamID& SteamIDLobby
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8296,6 +9805,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8308,7 +9819,17 @@ namespace CG
 	 * 		int32_t                                            QueryPort                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<ESteamFavoriteFlags>                        Flags                                                      (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	bool UMatchmaking::RemoveFavoriteGame(int32_t AppID, const class FString& IP, int32_t ConnectionPort, int32_t QueryPort, TArray<ESteamFavoriteFlags> Flags)
+	bool UMatchmaking::RemoveFavoriteGame(
+int32_t AppID
+, 
+const class FString& IP
+, 
+int32_t ConnectionPort
+, 
+int32_t QueryPort
+, 
+TArray<ESteamFavoriteFlags> Flags
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8335,6 +9856,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8343,7 +9866,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamIDLobby                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMatchmaking::LeaveLobby(const struct FSteamID& SteamIDLobby)
+	void UMatchmaking::LeaveLobby(
+const struct FSteamID& SteamIDLobby
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8360,6 +9885,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8369,7 +9896,11 @@ namespace CG
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FSteamID                                    SteamIDLobby                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMatchmaking::JoinLobby(const class FScriptDelegate& Callback, const struct FSteamID& SteamIDLobby)
+	void UMatchmaking::JoinLobby(
+const class FScriptDelegate& Callback
+, 
+const struct FSteamID& SteamIDLobby
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8388,6 +9919,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8397,7 +9930,11 @@ namespace CG
 	 * 		struct FSteamID                                    SteamIDLobby                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FSteamID                                    SteamIDInvitee                                             (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMatchmaking::InviteUserToLobby(const struct FSteamID& SteamIDLobby, const struct FSteamID& SteamIDInvitee)
+	bool UMatchmaking::InviteUserToLobby(
+const struct FSteamID& SteamIDLobby
+, 
+const struct FSteamID& SteamIDInvitee
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8418,6 +9955,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8426,7 +9965,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamIDLobby                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UMatchmaking::GetNumLobbyMembers(const struct FSteamID& SteamIDLobby)
+	int32_t UMatchmaking::GetNumLobbyMembers(
+const struct FSteamID& SteamIDLobby
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8445,6 +9986,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8453,7 +9996,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamIDLobby                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FSteamID UMatchmaking::GetLobbyOwner(const struct FSteamID& SteamIDLobby)
+	struct FSteamID UMatchmaking::GetLobbyOwner(
+const struct FSteamID& SteamIDLobby
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8472,6 +10017,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8480,7 +10027,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamIDLobby                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UMatchmaking::GetLobbyMemberLimit(const struct FSteamID& SteamIDLobby)
+	int32_t UMatchmaking::GetLobbyMemberLimit(
+const struct FSteamID& SteamIDLobby
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8499,6 +10048,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8509,7 +10060,13 @@ namespace CG
 	 * 		struct FSteamID                                    SteamIDUser                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UMatchmaking::GetLobbyMemberData(const struct FSteamID& SteamIDLobby, const struct FSteamID& SteamIDUser, const class FString& Key)
+	class FString UMatchmaking::GetLobbyMemberData(
+const struct FSteamID& SteamIDLobby
+, 
+const struct FSteamID& SteamIDUser
+, 
+const class FString& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8532,6 +10089,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8541,7 +10100,11 @@ namespace CG
 	 * 		struct FSteamID                                    SteamIDLobby                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Member                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FSteamID UMatchmaking::GetLobbyMemberByIndex(const struct FSteamID& SteamIDLobby, int32_t Member)
+	struct FSteamID UMatchmaking::GetLobbyMemberByIndex(
+const struct FSteamID& SteamIDLobby
+, 
+int32_t Member
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8562,6 +10125,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8573,7 +10138,15 @@ namespace CG
 	 * 		int32_t                                            GameServerPort                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FSteamID                                    SteamIDGameServer                                          (Parm, OutParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMatchmaking::GetLobbyGameServer(const struct FSteamID& SteamIDLobby, class FString* GameServerIP, int32_t* GameServerPort, struct FSteamID* SteamIDGameServer)
+	bool UMatchmaking::GetLobbyGameServer(
+const struct FSteamID& SteamIDLobby
+, 
+class FString* GameServerIP
+, 
+int32_t* GameServerPort
+, 
+struct FSteamID* SteamIDGameServer
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8602,6 +10175,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8610,7 +10185,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamIDLobby                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UMatchmaking::GetLobbyDataCount(const struct FSteamID& SteamIDLobby)
+	int32_t UMatchmaking::GetLobbyDataCount(
+const struct FSteamID& SteamIDLobby
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8629,6 +10206,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8640,7 +10219,15 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Value                                                      (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMatchmaking::GetLobbyDataByIndex(const struct FSteamID& SteamIDLobby, int32_t LobbyData, class FString* Key, class FString* Value)
+	bool UMatchmaking::GetLobbyDataByIndex(
+const struct FSteamID& SteamIDLobby
+, 
+int32_t LobbyData
+, 
+class FString* Key
+, 
+class FString* Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8668,6 +10255,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8677,7 +10266,11 @@ namespace CG
 	 * 		struct FSteamID                                    SteamIDLobby                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UMatchmaking::GetLobbyData(const struct FSteamID& SteamIDLobby, const class FString& Key)
+	class FString UMatchmaking::GetLobbyData(
+const struct FSteamID& SteamIDLobby
+, 
+const class FString& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8698,6 +10291,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8710,7 +10305,17 @@ namespace CG
 	 * 		class FString                                      Message                                                    (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ESteamChatEntryType                                ChatEntryType                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UMatchmaking::GetLobbyChatEntry(const struct FSteamID& SteamIDLobby, int32_t MessageID, struct FSteamID* SteamIDUser, class FString* Message, ESteamChatEntryType* ChatEntryType)
+	int32_t UMatchmaking::GetLobbyChatEntry(
+const struct FSteamID& SteamIDLobby
+, 
+int32_t MessageID
+, 
+struct FSteamID* SteamIDUser
+, 
+class FString* Message
+, 
+ESteamChatEntryType* ChatEntryType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8741,6 +10346,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8749,7 +10356,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Lobby                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FSteamID UMatchmaking::GetLobbyByIndex(int32_t Lobby)
+	struct FSteamID UMatchmaking::GetLobbyByIndex(
+int32_t Lobby
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8767,6 +10376,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -8791,6 +10402,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8805,7 +10418,21 @@ namespace CG
 	 * 		TArray<ESteamFavoriteFlags>                        Flags                                                      (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            TimeLastPlayedOnServer                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMatchmaking::GetFavoriteGame(int32_t Game, int32_t* AppID, class FString* IP, int32_t* ConnectionPort, int32_t* QueryPort, TArray<ESteamFavoriteFlags>* Flags, int32_t* TimeLastPlayedOnServer)
+	bool UMatchmaking::GetFavoriteGame(
+int32_t Game
+, 
+int32_t* AppID
+, 
+class FString* IP
+, 
+int32_t* ConnectionPort
+, 
+int32_t* QueryPort
+, 
+TArray<ESteamFavoriteFlags>* Flags
+, 
+int32_t* TimeLastPlayedOnServer
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8843,6 +10470,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8852,7 +10481,11 @@ namespace CG
 	 * 		struct FSteamID                                    SteamIDLobby                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMatchmaking::DeleteLobbyData(const struct FSteamID& SteamIDLobby, const class FString& Key)
+	bool UMatchmaking::DeleteLobbyData(
+const struct FSteamID& SteamIDLobby
+, 
+const class FString& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8873,6 +10506,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8883,7 +10518,13 @@ namespace CG
 	 * 		ESteamLobbyType                                    LobbyType                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            MaxMembers                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMatchmaking::CreateLobby(const class FScriptDelegate& Callback, ESteamLobbyType LobbyType, int32_t MaxMembers)
+	void UMatchmaking::CreateLobby(
+const class FScriptDelegate& Callback
+, 
+ESteamLobbyType LobbyType
+, 
+int32_t MaxMembers
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8904,6 +10545,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8914,7 +10557,13 @@ namespace CG
 	 * 		class FString                                      ValueToMatch                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ESteamLobbyComparison                              ComparisonType                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMatchmaking::AddRequestLobbyListStringFilter(const class FString& KeyToMatch, const class FString& ValueToMatch, ESteamLobbyComparison ComparisonType)
+	void UMatchmaking::AddRequestLobbyListStringFilter(
+const class FString& KeyToMatch
+, 
+const class FString& ValueToMatch
+, 
+ESteamLobbyComparison ComparisonType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8935,6 +10584,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8943,7 +10594,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            MaxResults                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMatchmaking::AddRequestLobbyListResultCountFilter(int32_t MaxResults)
+	void UMatchmaking::AddRequestLobbyListResultCountFilter(
+int32_t MaxResults
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8960,6 +10613,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8970,7 +10625,13 @@ namespace CG
 	 * 		int32_t                                            ValueToMatch                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ESteamLobbyComparison                              ComparisonType                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMatchmaking::AddRequestLobbyListNumericalFilter(const class FString& KeyToMatch, int32_t ValueToMatch, ESteamLobbyComparison ComparisonType)
+	void UMatchmaking::AddRequestLobbyListNumericalFilter(
+const class FString& KeyToMatch
+, 
+int32_t ValueToMatch
+, 
+ESteamLobbyComparison ComparisonType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8991,6 +10652,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9000,7 +10663,11 @@ namespace CG
 	 * 		class FString                                      KeyToMatch                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            ValueToBeCloseTo                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMatchmaking::AddRequestLobbyListNearValueFilter(const class FString& KeyToMatch, int32_t ValueToBeCloseTo)
+	void UMatchmaking::AddRequestLobbyListNearValueFilter(
+const class FString& KeyToMatch
+, 
+int32_t ValueToBeCloseTo
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9019,6 +10686,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9027,7 +10696,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            SlotsAvailable                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMatchmaking::AddRequestLobbyListFilterSlotsAvailable(int32_t SlotsAvailable)
+	void UMatchmaking::AddRequestLobbyListFilterSlotsAvailable(
+int32_t SlotsAvailable
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9044,6 +10715,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9052,7 +10725,9 @@ namespace CG
 	 * Parameters:
 	 * 		ESteamLobbyDistanceFilter                          LobbyDistanceFilter                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMatchmaking::AddRequestLobbyListDistanceFilter(ESteamLobbyDistanceFilter LobbyDistanceFilter)
+	void UMatchmaking::AddRequestLobbyListDistanceFilter(
+ESteamLobbyDistanceFilter LobbyDistanceFilter
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9069,6 +10744,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9077,7 +10754,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamIDLobby                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMatchmaking::AddRequestLobbyListCompatibleMembersFilter(const struct FSteamID& SteamIDLobby)
+	void UMatchmaking::AddRequestLobbyListCompatibleMembersFilter(
+const struct FSteamID& SteamIDLobby
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9094,6 +10773,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9107,7 +10788,19 @@ namespace CG
 	 * 		TArray<ESteamFavoriteFlags>                        Flags                                                      (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            TimeLastPlayedOnServer                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UMatchmaking::AddFavoriteGame(int32_t AppID, const class FString& IP, int32_t ConnectionPort, int32_t QueryPort, TArray<ESteamFavoriteFlags> Flags, int32_t TimeLastPlayedOnServer)
+	int32_t UMatchmaking::AddFavoriteGame(
+int32_t AppID
+, 
+const class FString& IP
+, 
+int32_t ConnectionPort
+, 
+int32_t QueryPort
+, 
+TArray<ESteamFavoriteFlags> Flags
+, 
+int32_t TimeLastPlayedOnServer
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9136,10 +10829,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMatchmaking.StaticClass
+	 * 		Name   -> PredefinedFunction UMatchmaking.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMatchmaking::StaticClass()
@@ -9150,6 +10845,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9159,7 +10856,11 @@ namespace CG
 	 * 		struct FCreateLobbyData                            Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreMatchmakingAsyncActionCreateLobby::HandleCallback(const struct FCreateLobbyData& Data, bool bWasSuccessful)
+	void USteamCoreMatchmakingAsyncActionCreateLobby::HandleCallback(
+const struct FCreateLobbyData& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9178,6 +10879,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9189,7 +10892,15 @@ namespace CG
 	 * 		int32_t                                            MaxMembers                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreMatchmakingAsyncActionCreateLobby* USteamCoreMatchmakingAsyncActionCreateLobby::CreateLobbyAsync(class UObject* WorldContextObject, ESteamLobbyType LobbyType, int32_t MaxMembers, float Timeout)
+	class USteamCoreMatchmakingAsyncActionCreateLobby* USteamCoreMatchmakingAsyncActionCreateLobby::CreateLobbyAsync(
+class UObject* WorldContextObject
+, 
+ESteamLobbyType LobbyType
+, 
+int32_t MaxMembers
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9214,10 +10925,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreMatchmakingAsyncActionCreateLobby.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreMatchmakingAsyncActionCreateLobby.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreMatchmakingAsyncActionCreateLobby::StaticClass()
@@ -9228,6 +10941,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9237,7 +10952,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreMatchmakingAsyncActionRequestLobbyList* USteamCoreMatchmakingAsyncActionRequestLobbyList::RequestLobbyListAsync(class UObject* WorldContextObject, float Timeout)
+	class USteamCoreMatchmakingAsyncActionRequestLobbyList* USteamCoreMatchmakingAsyncActionRequestLobbyList::RequestLobbyListAsync(
+class UObject* WorldContextObject
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9258,6 +10977,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9267,7 +10988,11 @@ namespace CG
 	 * 		struct FLobbyMatchList                             Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreMatchmakingAsyncActionRequestLobbyList::HandleCallback(const struct FLobbyMatchList& Data, bool bWasSuccessful)
+	void USteamCoreMatchmakingAsyncActionRequestLobbyList::HandleCallback(
+const struct FLobbyMatchList& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9286,10 +11011,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreMatchmakingAsyncActionRequestLobbyList.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreMatchmakingAsyncActionRequestLobbyList.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreMatchmakingAsyncActionRequestLobbyList::StaticClass()
@@ -9299,6 +11026,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.SteamCoreMatchmakingAsyncActionRequestLobbyList");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -9310,7 +11039,13 @@ namespace CG
 	 * 		struct FSteamID                                    SteamIDLobby                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreMatchmakingAsyncActionJoinLobby* USteamCoreMatchmakingAsyncActionJoinLobby::JoinLobbyAsync(class UObject* WorldContextObject, const struct FSteamID& SteamIDLobby, float Timeout)
+	class USteamCoreMatchmakingAsyncActionJoinLobby* USteamCoreMatchmakingAsyncActionJoinLobby::JoinLobbyAsync(
+class UObject* WorldContextObject
+, 
+const struct FSteamID& SteamIDLobby
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9333,6 +11068,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9342,7 +11079,11 @@ namespace CG
 	 * 		struct FJoinLobbyData                              Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreMatchmakingAsyncActionJoinLobby::HandleCallback(const struct FJoinLobbyData& Data, bool bWasSuccessful)
+	void USteamCoreMatchmakingAsyncActionJoinLobby::HandleCallback(
+const struct FJoinLobbyData& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9361,10 +11102,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreMatchmakingAsyncActionJoinLobby.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreMatchmakingAsyncActionJoinLobby.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreMatchmakingAsyncActionJoinLobby::StaticClass()
@@ -9374,6 +11117,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.SteamCoreMatchmakingAsyncActionJoinLobby");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -9396,7 +11141,35 @@ namespace CG
 	 * 		bool                                               bUseLobbiesVoiceChatIfAvailable                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreCreateSession* USteamCoreCreateSession::CreateSteamCoreSession(class UObject* WorldContextObject, TMap<class FString, struct FSteamSessionSetting> SessionSettings, const class FString& SessionName, int32_t MaxPlayers, bool bUseLAN, bool bAllowInvites, bool bUsesPresence, bool bAllowJoinViaPresence, bool bAllowJoinViaPresenceFriendsOnly, bool bAntiCheatProtected, bool bUsesStats, bool bShouldAdvertise, bool bUseLobbiesVoiceChatIfAvailable, float Timeout)
+	class USteamCoreCreateSession* USteamCoreCreateSession::CreateSteamCoreSession(
+class UObject* WorldContextObject
+, 
+TMap<class FString, struct FSteamSessionSetting> SessionSettings
+, 
+const class FString& SessionName
+, 
+int32_t MaxPlayers
+, 
+bool bUseLAN
+, 
+bool bAllowInvites
+, 
+bool bUsesPresence
+, 
+bool bAllowJoinViaPresence
+, 
+bool bAllowJoinViaPresenceFriendsOnly
+, 
+bool bAntiCheatProtected
+, 
+bool bUsesStats
+, 
+bool bShouldAdvertise
+, 
+bool bUseLobbiesVoiceChatIfAvailable
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9441,10 +11214,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreCreateSession.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreCreateSession.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreCreateSession::StaticClass()
@@ -9455,6 +11230,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9463,7 +11240,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bSuccessful                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreFindSession::OnCompleted(bool bSuccessful)
+	void USteamCoreFindSession::OnCompleted(
+bool bSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9480,6 +11259,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9495,7 +11276,23 @@ namespace CG
 	 * 		bool                                               bSecureServersOnly                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreFindSession* USteamCoreFindSession::FindSteamCoreSessions(class UObject* WorldContextObject, TMap<class FString, struct FSteamSessionSearchSetting> SearchSettings, int32_t MaxResults, bool bUseLAN, ESteamSessionFindType ServerType, bool bEmptyServersOnly, bool bSecureServersOnly, float Timeout)
+	class USteamCoreFindSession* USteamCoreFindSession::FindSteamCoreSessions(
+class UObject* WorldContextObject
+, 
+TMap<class FString, struct FSteamSessionSearchSetting> SearchSettings
+, 
+int32_t MaxResults
+, 
+bool bUseLAN
+, 
+ESteamSessionFindType ServerType
+, 
+bool bEmptyServersOnly
+, 
+bool bSecureServersOnly
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9528,10 +11325,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreFindSession.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreFindSession.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreFindSession::StaticClass()
@@ -9542,6 +11341,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9551,7 +11352,11 @@ namespace CG
 	 * 		class FName                                        SessionName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreDestroySession::OnCompleted(const class FName& SessionName, bool bWasSuccessful)
+	void USteamCoreDestroySession::OnCompleted(
+const class FName& SessionName
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9570,6 +11375,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9579,7 +11386,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreDestroySession* USteamCoreDestroySession::DestroySteamCoreSession(class UObject* WorldContextObject, float Timeout)
+	class USteamCoreDestroySession* USteamCoreDestroySession::DestroySteamCoreSession(
+class UObject* WorldContextObject
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9600,10 +11411,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreDestroySession.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreDestroySession.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreDestroySession::StaticClass()
@@ -9613,6 +11426,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.SteamCoreDestroySession");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -9625,7 +11440,15 @@ namespace CG
 	 * 		class FString                                      SessionName                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            MaxPlayers                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreUpdateSession* USteamCoreUpdateSession::UpdateSteamCoreSession(class UObject* WorldContextObject, TMap<class FString, struct FSteamSessionSearchSetting> Settings, const class FString& SessionName, int32_t MaxPlayers)
+	class USteamCoreUpdateSession* USteamCoreUpdateSession::UpdateSteamCoreSession(
+class UObject* WorldContextObject
+, 
+TMap<class FString, struct FSteamSessionSearchSetting> Settings
+, 
+const class FString& SessionName
+, 
+int32_t MaxPlayers
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9650,6 +11473,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9659,7 +11484,11 @@ namespace CG
 	 * 		class FName                                        SessionName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreUpdateSession::OnCompleted(const class FName& SessionName, bool bWasSuccessful)
+	void USteamCoreUpdateSession::OnCompleted(
+const class FName& SessionName
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9678,10 +11507,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreUpdateSession.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreUpdateSession.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreUpdateSession::StaticClass()
@@ -9691,6 +11522,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.SteamCoreUpdateSession");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -9702,7 +11535,13 @@ namespace CG
 	 * 		class FString                                      IP                                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            QueryPort                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMatchmakingServers::ServerRules(const class FScriptDelegate& Callback, const class FString& IP, int32_t QueryPort)
+	void UMatchmakingServers::ServerRules(
+const class FScriptDelegate& Callback
+, 
+const class FString& IP
+, 
+int32_t QueryPort
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9723,6 +11562,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9736,7 +11577,19 @@ namespace CG
 	 * 		bool                                               bIgnoreNonResponsive                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UServerFilter*                               ServerFilter                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMatchmakingServers::RequestSpectatorServerList(const class FScriptDelegate& ServerCallback, int32_t AppID, float Timeout, int32_t MaxResults, bool bIgnoreNonResponsive, class UServerFilter* ServerFilter)
+	void UMatchmakingServers::RequestSpectatorServerList(
+const class FScriptDelegate& ServerCallback
+, 
+int32_t AppID
+, 
+float Timeout
+, 
+int32_t MaxResults
+, 
+bool bIgnoreNonResponsive
+, 
+class UServerFilter* ServerFilter
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9763,6 +11616,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9776,7 +11631,19 @@ namespace CG
 	 * 		bool                                               bIgnoreNonResponsive                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UServerFilter*                               ServerFilter                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMatchmakingServers::RequestLANServerList(const class FScriptDelegate& ServerCallback, int32_t AppID, float Timeout, int32_t MaxResults, bool bIgnoreNonResponsive, class UServerFilter* ServerFilter)
+	void UMatchmakingServers::RequestLANServerList(
+const class FScriptDelegate& ServerCallback
+, 
+int32_t AppID
+, 
+float Timeout
+, 
+int32_t MaxResults
+, 
+bool bIgnoreNonResponsive
+, 
+class UServerFilter* ServerFilter
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9803,6 +11670,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9816,7 +11685,19 @@ namespace CG
 	 * 		bool                                               bIgnoreNonResponsive                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UServerFilter*                               ServerFilter                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMatchmakingServers::RequestInternetServerList(const class FScriptDelegate& ServerCallback, int32_t AppID, float Timeout, int32_t MaxResults, bool bIgnoreNonResponsive, class UServerFilter* ServerFilter)
+	void UMatchmakingServers::RequestInternetServerList(
+const class FScriptDelegate& ServerCallback
+, 
+int32_t AppID
+, 
+float Timeout
+, 
+int32_t MaxResults
+, 
+bool bIgnoreNonResponsive
+, 
+class UServerFilter* ServerFilter
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9843,6 +11724,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9856,7 +11739,19 @@ namespace CG
 	 * 		bool                                               bIgnoreNonResponsive                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UServerFilter*                               ServerFilter                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMatchmakingServers::RequestHistoryServerList(const class FScriptDelegate& ServerCallback, int32_t AppID, float Timeout, int32_t MaxResults, bool bIgnoreNonResponsive, class UServerFilter* ServerFilter)
+	void UMatchmakingServers::RequestHistoryServerList(
+const class FScriptDelegate& ServerCallback
+, 
+int32_t AppID
+, 
+float Timeout
+, 
+int32_t MaxResults
+, 
+bool bIgnoreNonResponsive
+, 
+class UServerFilter* ServerFilter
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9883,6 +11778,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9896,7 +11793,19 @@ namespace CG
 	 * 		bool                                               bIgnoreNonResponsive                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UServerFilter*                               ServerFilter                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMatchmakingServers::RequestFriendsServerList(const class FScriptDelegate& ServerCallback, int32_t AppID, float Timeout, int32_t MaxResults, bool bIgnoreNonResponsive, class UServerFilter* ServerFilter)
+	void UMatchmakingServers::RequestFriendsServerList(
+const class FScriptDelegate& ServerCallback
+, 
+int32_t AppID
+, 
+float Timeout
+, 
+int32_t MaxResults
+, 
+bool bIgnoreNonResponsive
+, 
+class UServerFilter* ServerFilter
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9923,6 +11832,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9936,7 +11847,19 @@ namespace CG
 	 * 		bool                                               bIgnoreNonResponsive                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UServerFilter*                               ServerFilter                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMatchmakingServers::RequestFavoritesServerList(const class FScriptDelegate& ServerCallback, int32_t AppID, float Timeout, int32_t MaxResults, bool bIgnoreNonResponsive, class UServerFilter* ServerFilter)
+	void UMatchmakingServers::RequestFavoritesServerList(
+const class FScriptDelegate& ServerCallback
+, 
+int32_t AppID
+, 
+float Timeout
+, 
+int32_t MaxResults
+, 
+bool bIgnoreNonResponsive
+, 
+class UServerFilter* ServerFilter
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9963,6 +11886,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9973,7 +11898,13 @@ namespace CG
 	 * 		class FString                                      IP                                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            QueryPort                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMatchmakingServers::PingServer(const class FScriptDelegate& Callback, const class FString& IP, int32_t QueryPort)
+	void UMatchmakingServers::PingServer(
+const class FScriptDelegate& Callback
+, 
+const class FString& IP
+, 
+int32_t QueryPort
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9994,10 +11925,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMatchmakingServers.StaticClass
+	 * 		Name   -> PredefinedFunction UMatchmakingServers.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMatchmakingServers::StaticClass()
@@ -10007,6 +11940,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.MatchmakingServers");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -10019,7 +11954,15 @@ namespace CG
 	 * 		int32_t                                            Port                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreMatchmakingServersAsyncActionPingServer* USteamCoreMatchmakingServersAsyncActionPingServer::PingServerAsync(class UObject* WorldContextObject, const class FString& IP, int32_t Port, float Timeout)
+	class USteamCoreMatchmakingServersAsyncActionPingServer* USteamCoreMatchmakingServersAsyncActionPingServer::PingServerAsync(
+class UObject* WorldContextObject
+, 
+const class FString& IP
+, 
+int32_t Port
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10044,6 +11987,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10053,7 +11998,11 @@ namespace CG
 	 * 		struct FGameServerItem                             Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreMatchmakingServersAsyncActionPingServer::HandleCallback(const struct FGameServerItem& Data, bool bWasSuccessful)
+	void USteamCoreMatchmakingServersAsyncActionPingServer::HandleCallback(
+const struct FGameServerItem& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10072,10 +12021,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreMatchmakingServersAsyncActionPingServer.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreMatchmakingServersAsyncActionPingServer.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreMatchmakingServersAsyncActionPingServer::StaticClass()
@@ -10085,6 +12036,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.SteamCoreMatchmakingServersAsyncActionPingServer");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -10099,7 +12052,19 @@ namespace CG
 	 * 		bool                                               bIgnoreNonResponsive                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UServerFilter*                               ServerFilter                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreMatchmakingServersAsyncActionRequestServerList* USteamCoreMatchmakingServersAsyncActionRequestServerList::RequestSpectatorServerListAsync(class UObject* WorldContextObject, int32_t AppID, float Timeout, int32_t MaxResults, bool bIgnoreNonResponsive, class UServerFilter* ServerFilter)
+	class USteamCoreMatchmakingServersAsyncActionRequestServerList* USteamCoreMatchmakingServersAsyncActionRequestServerList::RequestSpectatorServerListAsync(
+class UObject* WorldContextObject
+, 
+int32_t AppID
+, 
+float Timeout
+, 
+int32_t MaxResults
+, 
+bool bIgnoreNonResponsive
+, 
+class UServerFilter* ServerFilter
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10128,6 +12093,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10141,7 +12108,19 @@ namespace CG
 	 * 		bool                                               bIgnoreNonResponsive                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UServerFilter*                               ServerFilter                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreMatchmakingServersAsyncActionRequestServerList* USteamCoreMatchmakingServersAsyncActionRequestServerList::RequestLANServerListAsync(class UObject* WorldContextObject, int32_t AppID, float Timeout, int32_t MaxResults, bool bIgnoreNonResponsive, class UServerFilter* ServerFilter)
+	class USteamCoreMatchmakingServersAsyncActionRequestServerList* USteamCoreMatchmakingServersAsyncActionRequestServerList::RequestLANServerListAsync(
+class UObject* WorldContextObject
+, 
+int32_t AppID
+, 
+float Timeout
+, 
+int32_t MaxResults
+, 
+bool bIgnoreNonResponsive
+, 
+class UServerFilter* ServerFilter
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10170,6 +12149,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10183,7 +12164,19 @@ namespace CG
 	 * 		bool                                               bIgnoreNonResponsive                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UServerFilter*                               ServerFilter                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreMatchmakingServersAsyncActionRequestServerList* USteamCoreMatchmakingServersAsyncActionRequestServerList::RequestInternetServerListAsync(class UObject* WorldContextObject, int32_t AppID, float Timeout, int32_t MaxResults, bool bIgnoreNonResponsive, class UServerFilter* ServerFilter)
+	class USteamCoreMatchmakingServersAsyncActionRequestServerList* USteamCoreMatchmakingServersAsyncActionRequestServerList::RequestInternetServerListAsync(
+class UObject* WorldContextObject
+, 
+int32_t AppID
+, 
+float Timeout
+, 
+int32_t MaxResults
+, 
+bool bIgnoreNonResponsive
+, 
+class UServerFilter* ServerFilter
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10212,6 +12205,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10225,7 +12220,19 @@ namespace CG
 	 * 		bool                                               bIgnoreNonResponsive                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UServerFilter*                               ServerFilter                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreMatchmakingServersAsyncActionRequestServerList* USteamCoreMatchmakingServersAsyncActionRequestServerList::RequestHistoryServerListAsync(class UObject* WorldContextObject, int32_t AppID, float Timeout, int32_t MaxResults, bool bIgnoreNonResponsive, class UServerFilter* ServerFilter)
+	class USteamCoreMatchmakingServersAsyncActionRequestServerList* USteamCoreMatchmakingServersAsyncActionRequestServerList::RequestHistoryServerListAsync(
+class UObject* WorldContextObject
+, 
+int32_t AppID
+, 
+float Timeout
+, 
+int32_t MaxResults
+, 
+bool bIgnoreNonResponsive
+, 
+class UServerFilter* ServerFilter
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10254,6 +12261,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10267,7 +12276,19 @@ namespace CG
 	 * 		bool                                               bIgnoreNonResponsive                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UServerFilter*                               ServerFilter                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreMatchmakingServersAsyncActionRequestServerList* USteamCoreMatchmakingServersAsyncActionRequestServerList::RequestFriendsServerListAsync(class UObject* WorldContextObject, int32_t AppID, float Timeout, int32_t MaxResults, bool bIgnoreNonResponsive, class UServerFilter* ServerFilter)
+	class USteamCoreMatchmakingServersAsyncActionRequestServerList* USteamCoreMatchmakingServersAsyncActionRequestServerList::RequestFriendsServerListAsync(
+class UObject* WorldContextObject
+, 
+int32_t AppID
+, 
+float Timeout
+, 
+int32_t MaxResults
+, 
+bool bIgnoreNonResponsive
+, 
+class UServerFilter* ServerFilter
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10296,6 +12317,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10309,7 +12332,19 @@ namespace CG
 	 * 		bool                                               bIgnoreNonResponsive                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UServerFilter*                               ServerFilter                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreMatchmakingServersAsyncActionRequestServerList* USteamCoreMatchmakingServersAsyncActionRequestServerList::RequestFavoritesServerListAsync(class UObject* WorldContextObject, int32_t AppID, float Timeout, int32_t MaxResults, bool bIgnoreNonResponsive, class UServerFilter* ServerFilter)
+	class USteamCoreMatchmakingServersAsyncActionRequestServerList* USteamCoreMatchmakingServersAsyncActionRequestServerList::RequestFavoritesServerListAsync(
+class UObject* WorldContextObject
+, 
+int32_t AppID
+, 
+float Timeout
+, 
+int32_t MaxResults
+, 
+bool bIgnoreNonResponsive
+, 
+class UServerFilter* ServerFilter
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10338,6 +12373,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10359,6 +12396,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10367,7 +12406,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FGameServerItem                             Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreMatchmakingServersAsyncActionRequestServerList::HandleCallback(const struct FGameServerItem& Data)
+	void USteamCoreMatchmakingServersAsyncActionRequestServerList::HandleCallback(
+const struct FGameServerItem& Data
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10384,10 +12425,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreMatchmakingServersAsyncActionRequestServerList.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreMatchmakingServersAsyncActionRequestServerList.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreMatchmakingServersAsyncActionRequestServerList::StaticClass()
@@ -10397,6 +12440,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.SteamCoreMatchmakingServersAsyncActionRequestServerList");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -10409,7 +12454,15 @@ namespace CG
 	 * 		int32_t                                            QueryPort                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreMatchmakingServersAsyncActionServerRules* USteamCoreMatchmakingServersAsyncActionServerRules::ServerRulesAsync(class UObject* WorldContextObject, const class FString& IP, int32_t QueryPort, float Timeout)
+	class USteamCoreMatchmakingServersAsyncActionServerRules* USteamCoreMatchmakingServersAsyncActionServerRules::ServerRulesAsync(
+class UObject* WorldContextObject
+, 
+const class FString& IP
+, 
+int32_t QueryPort
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10434,6 +12487,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10443,7 +12498,11 @@ namespace CG
 	 * 		TArray<struct FGameServerRule>                     Data                                                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreMatchmakingServersAsyncActionServerRules::HandleCallback(TArray<struct FGameServerRule> Data, bool bWasSuccessful)
+	void USteamCoreMatchmakingServersAsyncActionServerRules::HandleCallback(
+TArray<struct FGameServerRule> Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10462,10 +12521,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreMatchmakingServersAsyncActionServerRules.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreMatchmakingServersAsyncActionServerRules.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreMatchmakingServersAsyncActionServerRules::StaticClass()
@@ -10475,6 +12536,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.SteamCoreMatchmakingServersAsyncActionServerRules");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -10499,6 +12562,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10520,6 +12585,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10528,7 +12595,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Value                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UServerFilter::AddFilterVersion(const class FString& Value)
+	void UServerFilter::AddFilterVersion(
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10544,6 +12613,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -10566,6 +12637,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10586,6 +12659,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -10608,6 +12683,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10616,7 +12693,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Value                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UServerFilter::AddFilterOr(const class FString& Value)
+	void UServerFilter::AddFilterOr(
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10632,6 +12711,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -10654,6 +12735,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10662,7 +12745,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Value                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UServerFilter::AddFilterNotAppId(const class FString& Value)
+	void UServerFilter::AddFilterNotAppId(
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10679,6 +12764,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10687,7 +12774,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Value                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UServerFilter::AddFilterNor(const class FString& Value)
+	void UServerFilter::AddFilterNor(
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10703,6 +12792,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -10725,6 +12816,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10733,7 +12826,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Value                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UServerFilter::AddFilterNand(const class FString& Value)
+	void UServerFilter::AddFilterNand(
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10750,6 +12845,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10758,7 +12855,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Value                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UServerFilter::AddFilterName(const class FString& Value)
+	void UServerFilter::AddFilterName(
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10775,6 +12874,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10783,7 +12884,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Value                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UServerFilter::AddFilterMap(const class FString& Value)
+	void UServerFilter::AddFilterMap(
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10799,6 +12902,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -10821,6 +12926,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10842,6 +12949,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10850,7 +12959,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Value                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UServerFilter::AddFilterGameTagsNor(const class FString& Value)
+	void UServerFilter::AddFilterGameTagsNor(
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10867,6 +12978,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10875,7 +12988,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Value                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UServerFilter::AddFilterGameTagsAnd(const class FString& Value)
+	void UServerFilter::AddFilterGameTagsAnd(
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10892,6 +13007,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10900,7 +13017,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Value                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UServerFilter::AddFilterGameDataOr(const class FString& Value)
+	void UServerFilter::AddFilterGameDataOr(
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10917,6 +13036,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10925,7 +13046,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Value                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UServerFilter::AddFilterGameDataNor(const class FString& Value)
+	void UServerFilter::AddFilterGameDataNor(
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10942,6 +13065,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10950,7 +13075,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Value                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UServerFilter::AddFilterGameDataAnd(const class FString& Value)
+	void UServerFilter::AddFilterGameDataAnd(
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10967,6 +13094,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10975,7 +13104,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Value                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UServerFilter::AddFilterGameAddr(const class FString& Value)
+	void UServerFilter::AddFilterGameAddr(
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10991,6 +13122,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -11013,6 +13146,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11021,7 +13156,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Value                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UServerFilter::AddFilterAnd(const class FString& Value)
+	void UServerFilter::AddFilterAnd(
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11038,10 +13175,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UServerFilter.StaticClass
+	 * 		Name   -> PredefinedFunction UServerFilter.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UServerFilter::StaticClass()
@@ -11052,6 +13191,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11060,7 +13201,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              flVolume                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMusic::SetVolume(float flVolume)
+	void UMusic::SetVolume(
+float flVolume
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11076,6 +13219,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -11098,6 +13243,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11118,6 +13265,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -11140,6 +13289,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11160,6 +13311,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -11184,6 +13337,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11206,6 +13361,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -11230,6 +13387,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11253,10 +13412,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMusic.StaticClass
+	 * 		Name   -> PredefinedFunction UMusic.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMusic::StaticClass()
@@ -11266,6 +13427,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.Music");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -11278,7 +13441,15 @@ namespace CG
 	 * 		ESteamP2PSend                                      P2PSendType                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Channel                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UNetworking::SendP2PPacket(const struct FSteamID& SteamIDRemote, TArray<unsigned char> Data, ESteamP2PSend P2PSendType, int32_t Channel)
+	bool UNetworking::SendP2PPacket(
+const struct FSteamID& SteamIDRemote
+, 
+TArray<unsigned char> Data
+, 
+ESteamP2PSend P2PSendType
+, 
+int32_t Channel
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11303,6 +13474,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11314,7 +13487,15 @@ namespace CG
 	 * 		int32_t                                            MessageSize                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Channel                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UNetworking::ReadP2PPacket(TArray<unsigned char>* Data, struct FSteamID* OutSteamIdRemote, int32_t MessageSize, int32_t Channel)
+	bool UNetworking::ReadP2PPacket(
+TArray<unsigned char>* Data
+, 
+struct FSteamID* OutSteamIdRemote
+, 
+int32_t MessageSize
+, 
+int32_t Channel
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11342,6 +13523,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11351,7 +13534,11 @@ namespace CG
 	 * 		int32_t                                            MessageSize                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Channel                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UNetworking::IsP2PPacketAvailable(int32_t* MessageSize, int32_t Channel)
+	bool UNetworking::IsP2PPacketAvailable(
+int32_t* MessageSize
+, 
+int32_t Channel
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11374,6 +13561,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11383,7 +13572,11 @@ namespace CG
 	 * 		struct FSteamID                                    SteamIDRemote                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FSteamP2PSessionState                       ConnectionState                                            (Parm, OutParm, NativeAccessSpecifierPublic)
 	 */
-	bool UNetworking::GetP2PSessionState(const struct FSteamID& SteamIDRemote, struct FSteamP2PSessionState* ConnectionState)
+	bool UNetworking::GetP2PSessionState(
+const struct FSteamID& SteamIDRemote
+, 
+struct FSteamP2PSessionState* ConnectionState
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11406,6 +13599,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11414,7 +13609,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamIDRemote                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UNetworking::CloseP2PSessionWithUser(const struct FSteamID& SteamIDRemote)
+	bool UNetworking::CloseP2PSessionWithUser(
+const struct FSteamID& SteamIDRemote
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11433,6 +13630,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11442,7 +13641,11 @@ namespace CG
 	 * 		struct FSteamID                                    SteamIDRemote                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Channel                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UNetworking::CloseP2PChannelWithUser(const struct FSteamID& SteamIDRemote, int32_t Channel)
+	bool UNetworking::CloseP2PChannelWithUser(
+const struct FSteamID& SteamIDRemote
+, 
+int32_t Channel
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11463,6 +13666,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11471,7 +13676,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bAllow                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UNetworking::AllowP2PPacketRelay(bool bAllow)
+	bool UNetworking::AllowP2PPacketRelay(
+bool bAllow
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11490,6 +13697,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11498,7 +13707,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamIDRemote                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UNetworking::AcceptP2PSessionWithUser(const struct FSteamID& SteamIDRemote)
+	bool UNetworking::AcceptP2PSessionWithUser(
+const struct FSteamID& SteamIDRemote
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11517,10 +13728,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNetworking.StaticClass
+	 * 		Name   -> PredefinedFunction UNetworking.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNetworking::StaticClass()
@@ -11531,6 +13744,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11540,7 +13755,11 @@ namespace CG
 	 * 		class FString                                      String                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FSteamNetworkPingLocation                   Result                                                     (Parm, OutParm, NativeAccessSpecifierPublic)
 	 */
-	bool UNetworkingUtils::ParsePingLocationString(const class FString& String, struct FSteamNetworkPingLocation* Result)
+	bool UNetworkingUtils::ParsePingLocationString(
+const class FString& String
+, 
+struct FSteamNetworkPingLocation* Result
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11563,6 +13782,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11584,6 +13805,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11592,7 +13815,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamNetworkPingLocation                   Result                                                     (Parm, OutParm, NativeAccessSpecifierPublic)
 	 */
-	float UNetworkingUtils::GetLocalPingLocation(struct FSteamNetworkPingLocation* Result)
+	float UNetworkingUtils::GetLocalPingLocation(
+struct FSteamNetworkPingLocation* Result
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11613,6 +13838,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11621,7 +13848,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamNetworkPingLocation                   RemoteLocation                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	int32_t UNetworkingUtils::EstimatePingTimeFromLocalHost(const struct FSteamNetworkPingLocation& RemoteLocation)
+	int32_t UNetworkingUtils::EstimatePingTimeFromLocalHost(
+const struct FSteamNetworkPingLocation& RemoteLocation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11640,6 +13869,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11649,7 +13880,11 @@ namespace CG
 	 * 		struct FSteamNetworkPingLocation                   Location1                                                  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		struct FSteamNetworkPingLocation                   Location2                                                  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	int32_t UNetworkingUtils::EstimatePingTimeBetweenTwoLocations(const struct FSteamNetworkPingLocation& Location1, const struct FSteamNetworkPingLocation& Location2)
+	int32_t UNetworkingUtils::EstimatePingTimeBetweenTwoLocations(
+const struct FSteamNetworkPingLocation& Location1
+, 
+const struct FSteamNetworkPingLocation& Location2
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11670,6 +13905,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11679,7 +13916,11 @@ namespace CG
 	 * 		struct FSteamNetworkPingLocation                   Location                                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		class FString                                      String                                                     (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNetworkingUtils::ConvertPingLocationToString(const struct FSteamNetworkPingLocation& Location, class FString* String)
+	void UNetworkingUtils::ConvertPingLocationToString(
+const struct FSteamNetworkPingLocation& Location
+, 
+class FString* String
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11700,6 +13941,8 @@ namespace CG
 			*String = params.String;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11708,7 +13951,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              MaxAgeSeconds                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UNetworkingUtils::CheckPingDataUpToDate(float MaxAgeSeconds)
+	bool UNetworkingUtils::CheckPingDataUpToDate(
+float MaxAgeSeconds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11727,10 +13972,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNetworkingUtils.StaticClass
+	 * 		Name   -> PredefinedFunction UNetworkingUtils.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNetworkingUtils::StaticClass()
@@ -11740,6 +13987,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.NetworkingUtils");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -11764,6 +14013,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11787,6 +14038,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11795,7 +14048,9 @@ namespace CG
 	 * Parameters:
 	 * 		ESteamParentalFeature                              Feature                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UParentalSettings::BIsFeatureInBlockList(ESteamParentalFeature Feature)
+	bool UParentalSettings::BIsFeatureInBlockList(
+ESteamParentalFeature Feature
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11814,6 +14069,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11822,7 +14079,9 @@ namespace CG
 	 * Parameters:
 	 * 		ESteamParentalFeature                              Feature                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UParentalSettings::BIsFeatureBlocked(ESteamParentalFeature Feature)
+	bool UParentalSettings::BIsFeatureBlocked(
+ESteamParentalFeature Feature
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11841,6 +14100,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11849,7 +14110,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UParentalSettings::BIsAppInBlockList(int32_t AppID)
+	bool UParentalSettings::BIsAppInBlockList(
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11868,6 +14131,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11876,7 +14141,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UParentalSettings::BIsAppBlocked(int32_t AppID)
+	bool UParentalSettings::BIsAppBlocked(
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11895,10 +14162,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UParentalSettings.StaticClass
+	 * 		Name   -> PredefinedFunction UParentalSettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UParentalSettings::StaticClass()
@@ -11909,6 +14178,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11918,7 +14189,11 @@ namespace CG
 	 * 		struct FPartyBeaconID                              BeaconID                                                   (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FSteamID                                    SteamIDUser                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamParties::OnReservationCompleted(const struct FPartyBeaconID& BeaconID, const struct FSteamID& SteamIDUser)
+	void USteamParties::OnReservationCompleted(
+const struct FPartyBeaconID& BeaconID
+, 
+const struct FSteamID& SteamIDUser
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11937,6 +14212,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11946,7 +14223,11 @@ namespace CG
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FPartyBeaconID                              BeaconID                                                   (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamParties::JoinParty(const class FScriptDelegate& Callback, const struct FPartyBeaconID& BeaconID)
+	void USteamParties::JoinParty(
+const class FScriptDelegate& Callback
+, 
+const struct FPartyBeaconID& BeaconID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11965,6 +14246,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11973,7 +14256,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            NumLocations                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool USteamParties::GetNumAvailableBeaconLocations(int32_t* NumLocations)
+	bool USteamParties::GetNumAvailableBeaconLocations(
+int32_t* NumLocations
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11993,6 +14278,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -12017,6 +14304,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12027,7 +14316,13 @@ namespace CG
 	 * 		ESteamPartiesBeaconLocationData                    EData                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      PCHDataStringOut                                           (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool USteamParties::GetBeaconLocationData(const struct FSteamPartyBeaconLocation& BeaconLocation, ESteamPartiesBeaconLocationData EData, class FString* PCHDataStringOut)
+	bool USteamParties::GetBeaconLocationData(
+const struct FSteamPartyBeaconLocation& BeaconLocation
+, 
+ESteamPartiesBeaconLocationData EData
+, 
+class FString* PCHDataStringOut
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12052,6 +14347,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12063,7 +14360,15 @@ namespace CG
 	 * 		struct FSteamPartyBeaconLocation                   Location                                                   (Parm, OutParm, NativeAccessSpecifierPublic)
 	 * 		class FString                                      OutMetadata                                                (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool USteamParties::GetBeaconDetails(const struct FPartyBeaconID& BeaconID, struct FSteamID* SteamIDBeaconOwner, struct FSteamPartyBeaconLocation* Location, class FString* OutMetadata)
+	bool USteamParties::GetBeaconDetails(
+const struct FPartyBeaconID& BeaconID
+, 
+struct FSteamID* SteamIDBeaconOwner
+, 
+struct FSteamPartyBeaconLocation* Location
+, 
+class FString* OutMetadata
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12092,6 +14397,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12100,7 +14407,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FPartyBeaconID USteamParties::GetBeaconByIndex(int32_t Index)
+	struct FPartyBeaconID USteamParties::GetBeaconByIndex(
+int32_t Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12119,6 +14428,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12128,7 +14439,11 @@ namespace CG
 	 * 		TArray<struct FSteamPartyBeaconLocation>           LocationList                                               (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            MaxNumLocations                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool USteamParties::GetAvailableBeaconLocations(TArray<struct FSteamPartyBeaconLocation>* LocationList, int32_t MaxNumLocations)
+	bool USteamParties::GetAvailableBeaconLocations(
+TArray<struct FSteamPartyBeaconLocation>* LocationList
+, 
+int32_t MaxNumLocations
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12151,6 +14466,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12159,7 +14476,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FPartyBeaconID                              BeaconID                                                   (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool USteamParties::DestroyBeacon(const struct FPartyBeaconID& BeaconID)
+	bool USteamParties::DestroyBeacon(
+const struct FPartyBeaconID& BeaconID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12178,6 +14497,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12190,7 +14511,17 @@ namespace CG
 	 * 		class FString                                      ConnectString                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      MetaData                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamParties::CreateBeacon(const class FScriptDelegate& Callback, int32_t OpenSlots, const struct FSteamPartyBeaconLocation& BeaconLocation, const class FString& ConnectString, const class FString& MetaData)
+	void USteamParties::CreateBeacon(
+const class FScriptDelegate& Callback
+, 
+int32_t OpenSlots
+, 
+const struct FSteamPartyBeaconLocation& BeaconLocation
+, 
+const class FString& ConnectString
+, 
+const class FString& MetaData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12215,6 +14546,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12225,7 +14558,13 @@ namespace CG
 	 * 		struct FPartyBeaconID                              BeaconID                                                   (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            OpenSlots                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamParties::ChangeNumOpenSlots(const class FScriptDelegate& Callback, const struct FPartyBeaconID& BeaconID, int32_t OpenSlots)
+	void USteamParties::ChangeNumOpenSlots(
+const class FScriptDelegate& Callback
+, 
+const struct FPartyBeaconID& BeaconID
+, 
+int32_t OpenSlots
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12246,6 +14585,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12255,7 +14596,11 @@ namespace CG
 	 * 		struct FPartyBeaconID                              BeaconID                                                   (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FSteamID                                    SteamIDUser                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamParties::CancelReservation(const struct FPartyBeaconID& BeaconID, const struct FSteamID& SteamIDUser)
+	void USteamParties::CancelReservation(
+const struct FPartyBeaconID& BeaconID
+, 
+const struct FSteamID& SteamIDUser
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12274,10 +14619,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamParties.StaticClass
+	 * 		Name   -> PredefinedFunction USteamParties.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamParties::StaticClass()
@@ -12287,6 +14634,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.SteamParties");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -12298,7 +14647,13 @@ namespace CG
 	 * 		struct FPartyBeaconID                              BeaconID                                                   (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreSteamPartiesAsyncActionJoinParty* USteamCoreSteamPartiesAsyncActionJoinParty::JoinPartyAsync(class UObject* WorldContextObject, const struct FPartyBeaconID& BeaconID, float Timeout)
+	class USteamCoreSteamPartiesAsyncActionJoinParty* USteamCoreSteamPartiesAsyncActionJoinParty::JoinPartyAsync(
+class UObject* WorldContextObject
+, 
+const struct FPartyBeaconID& BeaconID
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12321,6 +14676,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12330,7 +14687,11 @@ namespace CG
 	 * 		struct FJoinPartyData                              Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreSteamPartiesAsyncActionJoinParty::HandleCallback(const struct FJoinPartyData& Data, bool bWasSuccessful)
+	void USteamCoreSteamPartiesAsyncActionJoinParty::HandleCallback(
+const struct FJoinPartyData& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12349,10 +14710,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreSteamPartiesAsyncActionJoinParty.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreSteamPartiesAsyncActionJoinParty.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreSteamPartiesAsyncActionJoinParty::StaticClass()
@@ -12363,6 +14726,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12372,7 +14737,11 @@ namespace CG
 	 * 		struct FCreateBeaconData                           Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreSteamPartiesAsyncActionCreateBeacon::HandleCallback(const struct FCreateBeaconData& Data, bool bWasSuccessful)
+	void USteamCoreSteamPartiesAsyncActionCreateBeacon::HandleCallback(
+const struct FCreateBeaconData& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12391,6 +14760,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12404,7 +14775,19 @@ namespace CG
 	 * 		class FString                                      MetaData                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreSteamPartiesAsyncActionCreateBeacon* USteamCoreSteamPartiesAsyncActionCreateBeacon::CreateBeaconAsync(class UObject* WorldContextObject, int32_t OpenSlots, const struct FSteamPartyBeaconLocation& BeaconLocation, const class FString& ConnectString, const class FString& MetaData, float Timeout)
+	class USteamCoreSteamPartiesAsyncActionCreateBeacon* USteamCoreSteamPartiesAsyncActionCreateBeacon::CreateBeaconAsync(
+class UObject* WorldContextObject
+, 
+int32_t OpenSlots
+, 
+const struct FSteamPartyBeaconLocation& BeaconLocation
+, 
+const class FString& ConnectString
+, 
+const class FString& MetaData
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12433,10 +14816,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreSteamPartiesAsyncActionCreateBeacon.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreSteamPartiesAsyncActionCreateBeacon.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreSteamPartiesAsyncActionCreateBeacon::StaticClass()
@@ -12447,6 +14832,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12456,7 +14843,11 @@ namespace CG
 	 * 		struct FChangeNumOpenSlotsData                     Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreSteamPartiesAsyncActionChangeNumOpenSlots::HandleCallback(const struct FChangeNumOpenSlotsData& Data, bool bWasSuccessful)
+	void USteamCoreSteamPartiesAsyncActionChangeNumOpenSlots::HandleCallback(
+const struct FChangeNumOpenSlotsData& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12475,6 +14866,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12486,7 +14879,15 @@ namespace CG
 	 * 		int32_t                                            OpenSlots                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreSteamPartiesAsyncActionChangeNumOpenSlots* USteamCoreSteamPartiesAsyncActionChangeNumOpenSlots::ChangeNumOpenSlotsAsync(class UObject* WorldContextObject, const struct FPartyBeaconID& BeaconID, int32_t OpenSlots, float Timeout)
+	class USteamCoreSteamPartiesAsyncActionChangeNumOpenSlots* USteamCoreSteamPartiesAsyncActionChangeNumOpenSlots::ChangeNumOpenSlotsAsync(
+class UObject* WorldContextObject
+, 
+const struct FPartyBeaconID& BeaconID
+, 
+int32_t OpenSlots
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12511,10 +14912,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreSteamPartiesAsyncActionChangeNumOpenSlots.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreSteamPartiesAsyncActionChangeNumOpenSlots.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreSteamPartiesAsyncActionChangeNumOpenSlots::StaticClass()
@@ -12525,6 +14928,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12533,7 +14938,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            SessionID                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FSteamID URemotePlay::GetSessionSteamID(int32_t SessionID)
+	struct FSteamID URemotePlay::GetSessionSteamID(
+int32_t SessionID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12552,6 +14959,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12560,7 +14969,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            SessionIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t URemotePlay::GetSessionID(int32_t SessionIndex)
+	int32_t URemotePlay::GetSessionID(
+int32_t SessionIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12578,6 +14989,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -12602,6 +15015,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12610,7 +15025,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            SessionID                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString URemotePlay::GetSessionClientName(int32_t SessionID)
+	class FString URemotePlay::GetSessionClientName(
+int32_t SessionID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12629,6 +15046,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12637,7 +15056,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            SessionID                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	ESteamCoreDeviceFormFactor URemotePlay::GetSessionClientFormFactor(int32_t SessionID)
+	ESteamCoreDeviceFormFactor URemotePlay::GetSessionClientFormFactor(
+int32_t SessionID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12656,6 +15077,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12664,7 +15087,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamIDFriend                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool URemotePlay::BSendRemotePlayTogetherInvite(const struct FSteamID& SteamIDFriend)
+	bool URemotePlay::BSendRemotePlayTogetherInvite(
+const struct FSteamID& SteamIDFriend
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12683,6 +15108,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12693,7 +15120,13 @@ namespace CG
 	 * 		int32_t                                            ResolutionX                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            ResolutionY                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool URemotePlay::BGetSessionClientResolution(int32_t SessionID, int32_t* ResolutionX, int32_t* ResolutionY)
+	bool URemotePlay::BGetSessionClientResolution(
+int32_t SessionID
+, 
+int32_t* ResolutionX
+, 
+int32_t* ResolutionY
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12719,10 +15152,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction URemotePlay.StaticClass
+	 * 		Name   -> PredefinedFunction URemotePlay.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* URemotePlay::StaticClass()
@@ -12732,6 +15167,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.RemotePlay");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -12745,7 +15182,17 @@ namespace CG
 	 * 		int32_t                                            Offset                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ESteamUGCReadAction                                Action                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t URemoteStorage::UGCRead(const struct FSteamUGCHandle& Content, TArray<unsigned char>* OutData, int32_t DataToRead, int32_t Offset, ESteamUGCReadAction Action)
+	int32_t URemoteStorage::UGCRead(
+const struct FSteamUGCHandle& Content
+, 
+TArray<unsigned char>* OutData
+, 
+int32_t DataToRead
+, 
+int32_t Offset
+, 
+ESteamUGCReadAction Action
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12774,6 +15221,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12785,7 +15234,15 @@ namespace CG
 	 * 		class FString                                      Location                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Priority                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void URemoteStorage::UGCDownloadToLocation(const class FScriptDelegate& Callback, const struct FSteamUGCHandle& Content, const class FString& Location, int32_t Priority)
+	void URemoteStorage::UGCDownloadToLocation(
+const class FScriptDelegate& Callback
+, 
+const struct FSteamUGCHandle& Content
+, 
+const class FString& Location
+, 
+int32_t Priority
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12808,6 +15265,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12818,7 +15277,13 @@ namespace CG
 	 * 		struct FSteamUGCHandle                             Content                                                    (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Priority                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void URemoteStorage::UGCDownload(const class FScriptDelegate& Callback, const struct FSteamUGCHandle& Content, int32_t Priority)
+	void URemoteStorage::UGCDownload(
+const class FScriptDelegate& Callback
+, 
+const struct FSteamUGCHandle& Content
+, 
+int32_t Priority
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12839,6 +15304,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12848,7 +15315,11 @@ namespace CG
 	 * 		class FString                                      File                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ESteamRemoteStoragePlatform                        RemoteStoragePlatform                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool URemoteStorage::SetSyncPlatforms(const class FString& File, ESteamRemoteStoragePlatform RemoteStoragePlatform)
+	bool URemoteStorage::SetSyncPlatforms(
+const class FString& File
+, 
+ESteamRemoteStoragePlatform RemoteStoragePlatform
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12869,6 +15340,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12877,7 +15350,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bEnabled                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void URemoteStorage::SetCloudEnabledForApp(bool bEnabled)
+	void URemoteStorage::SetCloudEnabledForApp(
+bool bEnabled
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12893,6 +15368,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -12917,6 +15394,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12940,6 +15419,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12950,7 +15431,13 @@ namespace CG
 	 * 		int32_t                                            BytesDownloaded                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            BytesExpected                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool URemoteStorage::GetUGCDownloadProgress(const struct FSteamUGCHandle& Handle, int32_t* BytesDownloaded, int32_t* BytesExpected)
+	bool URemoteStorage::GetUGCDownloadProgress(
+const struct FSteamUGCHandle& Handle
+, 
+int32_t* BytesDownloaded
+, 
+int32_t* BytesExpected
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12976,6 +15463,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12988,7 +15477,17 @@ namespace CG
 	 * 		int32_t                                            FileSizeInBytes                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FSteamID                                    SteamIDOwner                                               (Parm, OutParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool URemoteStorage::GetUGCDetails(const struct FSteamUGCHandle& Handle, int32_t* AppID, class FString* Name, int32_t* FileSizeInBytes, struct FSteamID* SteamIDOwner)
+	bool URemoteStorage::GetUGCDetails(
+const struct FSteamUGCHandle& Handle
+, 
+int32_t* AppID
+, 
+class FString* Name
+, 
+int32_t* FileSizeInBytes
+, 
+struct FSteamID* SteamIDOwner
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13020,6 +15519,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13028,7 +15529,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      File                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	ESteamRemoteStoragePlatform URemoteStorage::GetSyncPlatforms(const class FString& File)
+	ESteamRemoteStoragePlatform URemoteStorage::GetSyncPlatforms(
+const class FString& File
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13047,6 +15550,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13056,7 +15561,11 @@ namespace CG
 	 * 		int32_t                                            TotalBytes                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AvailableBytes                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool URemoteStorage::GetQuota(int32_t* TotalBytes, int32_t* AvailableBytes)
+	bool URemoteStorage::GetQuota(
+int32_t* TotalBytes
+, 
+int32_t* AvailableBytes
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13080,6 +15589,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13088,7 +15599,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      File                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t URemoteStorage::GetFileTimestamp(const class FString& File)
+	int32_t URemoteStorage::GetFileTimestamp(
+const class FString& File
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13107,6 +15620,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13115,7 +15630,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      File                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t URemoteStorage::GetFileSize(const class FString& File)
+	int32_t URemoteStorage::GetFileSize(
+const class FString& File
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13134,6 +15651,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13143,7 +15662,11 @@ namespace CG
 	 * 		int32_t                                            File                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            FileSizeInBytes                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString URemoteStorage::GetFileNameAndSize(int32_t File, int32_t* FileSizeInBytes)
+	class FString URemoteStorage::GetFileNameAndSize(
+int32_t File
+, 
+int32_t* FileSizeInBytes
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13165,6 +15688,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -13189,6 +15714,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13197,7 +15724,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            ICachedContent                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FSteamUGCHandle URemoteStorage::GetCachedUGCHandle(int32_t ICachedContent)
+	struct FSteamUGCHandle URemoteStorage::GetCachedUGCHandle(
+int32_t ICachedContent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13215,6 +15744,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -13239,6 +15770,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13248,7 +15781,11 @@ namespace CG
 	 * 		struct FUGCFileWriteStreamHandle                   Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<unsigned char>                              Data                                                       (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	bool URemoteStorage::FileWriteStreamWriteChunk(const struct FUGCFileWriteStreamHandle& Handle, TArray<unsigned char> Data)
+	bool URemoteStorage::FileWriteStreamWriteChunk(
+const struct FUGCFileWriteStreamHandle& Handle
+, 
+TArray<unsigned char> Data
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13269,6 +15806,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13277,7 +15816,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      File                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FUGCFileWriteStreamHandle URemoteStorage::FileWriteStreamOpen(const class FString& File)
+	struct FUGCFileWriteStreamHandle URemoteStorage::FileWriteStreamOpen(
+const class FString& File
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13296,6 +15837,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13304,7 +15847,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FUGCFileWriteStreamHandle                   Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool URemoteStorage::FileWriteStreamClose(const struct FUGCFileWriteStreamHandle& Handle)
+	bool URemoteStorage::FileWriteStreamClose(
+const struct FUGCFileWriteStreamHandle& Handle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13323,6 +15868,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13331,7 +15878,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FUGCFileWriteStreamHandle                   Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool URemoteStorage::FileWriteStreamCancel(const struct FUGCFileWriteStreamHandle& Handle)
+	bool URemoteStorage::FileWriteStreamCancel(
+const struct FUGCFileWriteStreamHandle& Handle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13350,6 +15899,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13360,7 +15911,13 @@ namespace CG
 	 * 		class FString                                      File                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<unsigned char>                              Data                                                       (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void URemoteStorage::FileWriteAsync(const class FScriptDelegate& Callback, const class FString& File, TArray<unsigned char> Data)
+	void URemoteStorage::FileWriteAsync(
+const class FScriptDelegate& Callback
+, 
+const class FString& File
+, 
+TArray<unsigned char> Data
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13381,6 +15938,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13390,7 +15949,11 @@ namespace CG
 	 * 		class FString                                      File                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<unsigned char>                              Data                                                       (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	bool URemoteStorage::FileWrite(const class FString& File, TArray<unsigned char> Data)
+	bool URemoteStorage::FileWrite(
+const class FString& File
+, 
+TArray<unsigned char> Data
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13411,6 +15974,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13420,7 +15985,11 @@ namespace CG
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		class FString                                      File                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void URemoteStorage::FileShare(const class FScriptDelegate& Callback, const class FString& File)
+	void URemoteStorage::FileShare(
+const class FScriptDelegate& Callback
+, 
+const class FString& File
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13439,6 +16008,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13449,7 +16020,13 @@ namespace CG
 	 * 		TArray<unsigned char>                              Buffer                                                     (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            BytesToRead                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool URemoteStorage::FileReadAsyncComplete(const struct FRemoteStorageFileReadAsyncComplete& ReadCall, TArray<unsigned char>* Buffer, int32_t BytesToRead)
+	bool URemoteStorage::FileReadAsyncComplete(
+const struct FRemoteStorageFileReadAsyncComplete& ReadCall
+, 
+TArray<unsigned char>* Buffer
+, 
+int32_t BytesToRead
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13474,6 +16051,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13485,7 +16064,15 @@ namespace CG
 	 * 		int32_t                                            Offset                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            BytesToRead                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void URemoteStorage::FileReadAsync(const class FScriptDelegate& Callback, const class FString& File, int32_t Offset, int32_t BytesToRead)
+	void URemoteStorage::FileReadAsync(
+const class FScriptDelegate& Callback
+, 
+const class FString& File
+, 
+int32_t Offset
+, 
+int32_t BytesToRead
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13508,6 +16095,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13518,7 +16107,13 @@ namespace CG
 	 * 		TArray<unsigned char>                              Buffer                                                     (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            DataToRead                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t URemoteStorage::FileRead(const class FString& File, TArray<unsigned char>* Buffer, int32_t DataToRead)
+	int32_t URemoteStorage::FileRead(
+const class FString& File
+, 
+TArray<unsigned char>* Buffer
+, 
+int32_t DataToRead
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13543,6 +16138,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13551,7 +16148,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      File                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool URemoteStorage::FilePersisted(const class FString& File)
+	bool URemoteStorage::FilePersisted(
+const class FString& File
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13570,6 +16169,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13578,7 +16179,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      File                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool URemoteStorage::FileForget(const class FString& File)
+	bool URemoteStorage::FileForget(
+const class FString& File
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13597,6 +16200,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13605,7 +16210,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      File                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool URemoteStorage::FileExists(const class FString& File)
+	bool URemoteStorage::FileExists(
+const class FString& File
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13624,6 +16231,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13632,7 +16241,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      File                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool URemoteStorage::FileDelete(const class FString& File)
+	bool URemoteStorage::FileDelete(
+const class FString& File
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13651,10 +16262,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction URemoteStorage.StaticClass
+	 * 		Name   -> PredefinedFunction URemoteStorage.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* URemoteStorage::StaticClass()
@@ -13664,6 +16277,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.RemoteStorage");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -13675,7 +16290,13 @@ namespace CG
 	 * 		int32_t                                            Width                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Height                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FScreenshotHandle UScreenshots::WriteScreenshot(TArray<unsigned char> PubRGB, int32_t Width, int32_t Height)
+	struct FScreenshotHandle UScreenshots::WriteScreenshot(
+TArray<unsigned char> PubRGB
+, 
+int32_t Width
+, 
+int32_t Height
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13698,6 +16319,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13719,6 +16342,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13728,7 +16353,11 @@ namespace CG
 	 * 		struct FScreenshotHandle                           Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FSteamID                                    SteamID                                                    (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UScreenshots::TagUser(const struct FScreenshotHandle& Handle, const struct FSteamID& SteamID)
+	bool UScreenshots::TagUser(
+const struct FScreenshotHandle& Handle
+, 
+const struct FSteamID& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13749,6 +16378,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13758,7 +16389,11 @@ namespace CG
 	 * 		struct FScreenshotHandle                           Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FPublishedFileID                            PublishedFileID                                            (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UScreenshots::TagPublishedFile(const struct FScreenshotHandle& Handle, const struct FPublishedFileID& PublishedFileID)
+	bool UScreenshots::TagPublishedFile(
+const struct FScreenshotHandle& Handle
+, 
+const struct FPublishedFileID& PublishedFileID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13779,6 +16414,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13788,7 +16425,11 @@ namespace CG
 	 * 		struct FScreenshotHandle                           Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Location                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UScreenshots::SetLocation(const struct FScreenshotHandle& Handle, const class FString& Location)
+	bool UScreenshots::SetLocation(
+const struct FScreenshotHandle& Handle
+, 
+const class FString& Location
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13808,6 +16449,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -13832,6 +16475,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13840,7 +16485,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bHook                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UScreenshots::HookScreenshots(bool bHook)
+	void UScreenshots::HookScreenshots(
+bool bHook
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13857,6 +16504,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13867,7 +16516,13 @@ namespace CG
 	 * 		class FString                                      Filename                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      VRFileName                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FScreenshotHandle UScreenshots::AddVRScreenshotToLibrary(ESteamVRScreenshotType EType, const class FString& Filename, const class FString& VRFileName)
+	struct FScreenshotHandle UScreenshots::AddVRScreenshotToLibrary(
+ESteamVRScreenshotType EType
+, 
+const class FString& Filename
+, 
+const class FString& VRFileName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13890,6 +16545,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13901,7 +16558,15 @@ namespace CG
 	 * 		int32_t                                            Width                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Height                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FScreenshotHandle UScreenshots::AddScreenshotToLibrary(const class FString& Filename, const class FString& ThumbnailFilename, int32_t Width, int32_t Height)
+	struct FScreenshotHandle UScreenshots::AddScreenshotToLibrary(
+const class FString& Filename
+, 
+const class FString& ThumbnailFilename
+, 
+int32_t Width
+, 
+int32_t Height
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13926,10 +16591,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UScreenshots.StaticClass
+	 * 		Name   -> PredefinedFunction UScreenshots.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UScreenshots::StaticClass()
@@ -13939,6 +16606,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.Screenshots");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -13950,7 +16619,13 @@ namespace CG
 	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      PreviewVideo                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::UpdateItemPreviewVideo(const struct FUGCUpdateHandle& Handle, int32_t Index, const class FString& PreviewVideo)
+	bool UUGC::UpdateItemPreviewVideo(
+const struct FUGCUpdateHandle& Handle
+, 
+int32_t Index
+, 
+const class FString& PreviewVideo
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13973,6 +16648,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13983,7 +16660,13 @@ namespace CG
 	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      PreviewFile                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::UpdateItemPreviewFile(const struct FUGCUpdateHandle& Handle, int32_t Index, const class FString& PreviewFile)
+	bool UUGC::UpdateItemPreviewFile(
+const struct FUGCUpdateHandle& Handle
+, 
+int32_t Index
+, 
+const class FString& PreviewFile
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14006,6 +16689,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14015,7 +16700,11 @@ namespace CG
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FPublishedFileID                            PublishedFileID                                            (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUGC::UnsubscribeItem(const class FScriptDelegate& Callback, const struct FPublishedFileID& PublishedFileID)
+	void UUGC::UnsubscribeItem(
+const class FScriptDelegate& Callback
+, 
+const struct FPublishedFileID& PublishedFileID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14034,6 +16723,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14042,7 +16733,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bSuspend                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUGC::SuspendDownloads(bool bSuspend)
+	void UUGC::SuspendDownloads(
+bool bSuspend
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14059,6 +16752,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14068,7 +16763,11 @@ namespace CG
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FPublishedFileID                            PublishedFileID                                            (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUGC::SubscribeItem(const class FScriptDelegate& Callback, const struct FPublishedFileID& PublishedFileID)
+	void UUGC::SubscribeItem(
+const class FScriptDelegate& Callback
+, 
+const struct FPublishedFileID& PublishedFileID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14087,6 +16786,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14097,7 +16798,13 @@ namespace CG
 	 * 		struct FUGCUpdateHandle                            Handle                                                     (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		class FString                                      ChangeNote                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUGC::SubmitItemUpdate(const class FScriptDelegate& Callback, const struct FUGCUpdateHandle& Handle, const class FString& ChangeNote)
+	void UUGC::SubmitItemUpdate(
+const class FScriptDelegate& Callback
+, 
+const struct FUGCUpdateHandle& Handle
+, 
+const class FString& ChangeNote
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14118,6 +16825,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14126,7 +16835,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UUGC::StopPlaytimeTrackingForAllItems(const class FScriptDelegate& Callback)
+	void UUGC::StopPlaytimeTrackingForAllItems(
+const class FScriptDelegate& Callback
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14143,6 +16854,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14152,7 +16865,11 @@ namespace CG
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FPublishedFileID>                    PublishedFileIDs                                           (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UUGC::StopPlaytimeTracking(const class FScriptDelegate& Callback, TArray<struct FPublishedFileID> PublishedFileIDs)
+	void UUGC::StopPlaytimeTracking(
+const class FScriptDelegate& Callback
+, 
+TArray<struct FPublishedFileID> PublishedFileIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14171,6 +16888,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14180,7 +16899,11 @@ namespace CG
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FPublishedFileID>                    PublishedFileID                                            (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UUGC::StartPlaytimeTracking(const class FScriptDelegate& Callback, TArray<struct FPublishedFileID> PublishedFileID)
+	void UUGC::StartPlaytimeTracking(
+const class FScriptDelegate& Callback
+, 
+TArray<struct FPublishedFileID> PublishedFileID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14199,6 +16922,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14208,7 +16933,11 @@ namespace CG
 	 * 		int32_t                                            ConsumerAppID                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FPublishedFileID                            PublishedFileID                                            (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FUGCUpdateHandle UUGC::StartItemUpdate(int32_t ConsumerAppID, const struct FPublishedFileID& PublishedFileID)
+	struct FUGCUpdateHandle UUGC::StartItemUpdate(
+int32_t ConsumerAppID
+, 
+const struct FPublishedFileID& PublishedFileID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14229,6 +16958,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14239,7 +16970,13 @@ namespace CG
 	 * 		struct FPublishedFileID                            PublishedFileID                                            (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bVoteUp                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUGC::SetUserItemVote(const class FScriptDelegate& Callback, const struct FPublishedFileID& PublishedFileID, bool bVoteUp)
+	void UUGC::SetUserItemVote(
+const class FScriptDelegate& Callback
+, 
+const struct FPublishedFileID& PublishedFileID
+, 
+bool bVoteUp
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14260,6 +16997,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14269,7 +17008,11 @@ namespace CG
 	 * 		struct FUGCQueryHandle                             Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SearchText                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::SetSearchText(const struct FUGCQueryHandle& Handle, const class FString& SearchText)
+	bool UUGC::SetSearchText(
+const struct FUGCQueryHandle& Handle
+, 
+const class FString& SearchText
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14290,6 +17033,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14299,7 +17044,11 @@ namespace CG
 	 * 		struct FUGCQueryHandle                             Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bReturnTotalOnly                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::SetReturnTotalOnly(const struct FUGCQueryHandle& Handle, bool bReturnTotalOnly)
+	bool UUGC::SetReturnTotalOnly(
+const struct FUGCQueryHandle& Handle
+, 
+bool bReturnTotalOnly
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14320,6 +17069,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14329,7 +17080,11 @@ namespace CG
 	 * 		struct FUGCQueryHandle                             Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Days                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::SetReturnPlaytimeStats(const struct FUGCQueryHandle& Handle, int32_t Days)
+	bool UUGC::SetReturnPlaytimeStats(
+const struct FUGCQueryHandle& Handle
+, 
+int32_t Days
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14350,6 +17105,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14359,7 +17116,11 @@ namespace CG
 	 * 		struct FUGCQueryHandle                             Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bReturnOnlyIDs                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::SetReturnOnlyIDs(const struct FUGCQueryHandle& Handle, bool bReturnOnlyIDs)
+	bool UUGC::SetReturnOnlyIDs(
+const struct FUGCQueryHandle& Handle
+, 
+bool bReturnOnlyIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14380,6 +17141,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14389,7 +17152,11 @@ namespace CG
 	 * 		struct FUGCQueryHandle                             Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bReturnMetadata                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::SetReturnMetadata(const struct FUGCQueryHandle& Handle, bool bReturnMetadata)
+	bool UUGC::SetReturnMetadata(
+const struct FUGCQueryHandle& Handle
+, 
+bool bReturnMetadata
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14410,6 +17177,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14419,7 +17188,11 @@ namespace CG
 	 * 		struct FUGCQueryHandle                             Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bReturnLongDescription                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::SetReturnLongDescription(const struct FUGCQueryHandle& Handle, bool bReturnLongDescription)
+	bool UUGC::SetReturnLongDescription(
+const struct FUGCQueryHandle& Handle
+, 
+bool bReturnLongDescription
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14440,6 +17213,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14449,7 +17224,11 @@ namespace CG
 	 * 		struct FUGCQueryHandle                             Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bReturnKeyValueTags                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::SetReturnKeyValueTags(const struct FUGCQueryHandle& Handle, bool bReturnKeyValueTags)
+	bool UUGC::SetReturnKeyValueTags(
+const struct FUGCQueryHandle& Handle
+, 
+bool bReturnKeyValueTags
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14470,6 +17249,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14479,7 +17260,11 @@ namespace CG
 	 * 		struct FUGCQueryHandle                             Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bReturnChildren                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::SetReturnChildren(const struct FUGCQueryHandle& Handle, bool bReturnChildren)
+	bool UUGC::SetReturnChildren(
+const struct FUGCQueryHandle& Handle
+, 
+bool bReturnChildren
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14500,6 +17285,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14509,7 +17296,11 @@ namespace CG
 	 * 		struct FUGCQueryHandle                             Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bReturnAdditionalPreviews                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::SetReturnAdditionalPreviews(const struct FUGCQueryHandle& Handle, bool bReturnAdditionalPreviews)
+	bool UUGC::SetReturnAdditionalPreviews(
+const struct FUGCQueryHandle& Handle
+, 
+bool bReturnAdditionalPreviews
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14530,6 +17321,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14539,7 +17332,11 @@ namespace CG
 	 * 		struct FUGCQueryHandle                             Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Days                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::SetRankedByTrendDays(const struct FUGCQueryHandle& Handle, int32_t Days)
+	bool UUGC::SetRankedByTrendDays(
+const struct FUGCQueryHandle& Handle
+, 
+int32_t Days
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14560,6 +17357,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14569,7 +17368,11 @@ namespace CG
 	 * 		struct FUGCQueryHandle                             Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bMatchAnyTag                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::SetMatchAnyTag(const struct FUGCQueryHandle& Handle, bool bMatchAnyTag)
+	bool UUGC::SetMatchAnyTag(
+const struct FUGCQueryHandle& Handle
+, 
+bool bMatchAnyTag
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14590,6 +17393,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14599,7 +17404,11 @@ namespace CG
 	 * 		struct FUGCQueryHandle                             Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Language                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::SetLanguage(const struct FUGCQueryHandle& Handle, const class FString& Language)
+	bool UUGC::SetLanguage(
+const struct FUGCQueryHandle& Handle
+, 
+const class FString& Language
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14620,6 +17429,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14629,7 +17440,11 @@ namespace CG
 	 * 		struct FUGCUpdateHandle                            Handle                                                     (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		ESteamRemoteStoragePublishedFileVisibility         Visibility                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::SetItemVisibility(const struct FUGCUpdateHandle& Handle, ESteamRemoteStoragePublishedFileVisibility Visibility)
+	bool UUGC::SetItemVisibility(
+const struct FUGCUpdateHandle& Handle
+, 
+ESteamRemoteStoragePublishedFileVisibility Visibility
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14650,6 +17465,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14659,7 +17476,11 @@ namespace CG
 	 * 		struct FUGCUpdateHandle                            Handle                                                     (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Language                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::SetItemUpdateLanguage(const struct FUGCUpdateHandle& Handle, const class FString& Language)
+	bool UUGC::SetItemUpdateLanguage(
+const struct FUGCUpdateHandle& Handle
+, 
+const class FString& Language
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14680,6 +17501,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14689,7 +17512,11 @@ namespace CG
 	 * 		struct FUGCUpdateHandle                            Handle                                                     (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Title                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::SetItemTitle(const struct FUGCUpdateHandle& Handle, const class FString& Title)
+	bool UUGC::SetItemTitle(
+const struct FUGCUpdateHandle& Handle
+, 
+const class FString& Title
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14710,6 +17537,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14719,7 +17548,11 @@ namespace CG
 	 * 		struct FUGCUpdateHandle                            Handle                                                     (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		TArray<class FString>                              Tags                                                       (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::SetItemTags(const struct FUGCUpdateHandle& Handle, TArray<class FString> Tags)
+	bool UUGC::SetItemTags(
+const struct FUGCUpdateHandle& Handle
+, 
+TArray<class FString> Tags
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14740,6 +17573,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14749,7 +17584,11 @@ namespace CG
 	 * 		struct FUGCUpdateHandle                            Handle                                                     (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		class FString                                      PreviewFile                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::SetItemPreview(const struct FUGCUpdateHandle& Handle, const class FString& PreviewFile)
+	bool UUGC::SetItemPreview(
+const struct FUGCUpdateHandle& Handle
+, 
+const class FString& PreviewFile
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14770,6 +17609,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14779,7 +17620,11 @@ namespace CG
 	 * 		struct FUGCUpdateHandle                            Handle                                                     (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		class FString                                      MetaData                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::SetItemMetadata(const struct FUGCUpdateHandle& Handle, const class FString& MetaData)
+	bool UUGC::SetItemMetadata(
+const struct FUGCUpdateHandle& Handle
+, 
+const class FString& MetaData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14800,6 +17645,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14809,7 +17656,11 @@ namespace CG
 	 * 		struct FUGCUpdateHandle                            Handle                                                     (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Description                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::SetItemDescription(const struct FUGCUpdateHandle& Handle, const class FString& Description)
+	bool UUGC::SetItemDescription(
+const struct FUGCUpdateHandle& Handle
+, 
+const class FString& Description
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14830,6 +17681,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14839,7 +17692,11 @@ namespace CG
 	 * 		struct FUGCUpdateHandle                            Handle                                                     (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		class FString                                      ContentFolder                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::SetItemContent(const struct FUGCUpdateHandle& Handle, const class FString& ContentFolder)
+	bool UUGC::SetItemContent(
+const struct FUGCUpdateHandle& Handle
+, 
+const class FString& ContentFolder
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14860,6 +17717,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14869,7 +17728,11 @@ namespace CG
 	 * 		struct FUGCQueryHandle                             Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      MatchCloudFileName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::SetCloudFileNameFilter(const struct FUGCQueryHandle& Handle, const class FString& MatchCloudFileName)
+	bool UUGC::SetCloudFileNameFilter(
+const struct FUGCQueryHandle& Handle
+, 
+const class FString& MatchCloudFileName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14890,6 +17753,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14899,7 +17764,11 @@ namespace CG
 	 * 		struct FUGCUpdateHandle                            Handle                                                     (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bAllowLegacyUpload                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::SetAllowLegacyUpload(const struct FUGCUpdateHandle& Handle, bool bAllowLegacyUpload)
+	bool UUGC::SetAllowLegacyUpload(
+const struct FUGCUpdateHandle& Handle
+, 
+bool bAllowLegacyUpload
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14920,6 +17789,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14929,7 +17800,11 @@ namespace CG
 	 * 		struct FUGCQueryHandle                             Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            MaxAgeSeconds                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::SetAllowCachedResponse(const struct FUGCQueryHandle& Handle, int32_t MaxAgeSeconds)
+	bool UUGC::SetAllowCachedResponse(
+const struct FUGCQueryHandle& Handle
+, 
+int32_t MaxAgeSeconds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14950,6 +17825,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14959,7 +17836,11 @@ namespace CG
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FUGCQueryHandle                             Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUGC::SendQueryUGCRequest(const class FScriptDelegate& Callback, const struct FUGCQueryHandle& Handle)
+	void UUGC::SendQueryUGCRequest(
+const class FScriptDelegate& Callback
+, 
+const struct FUGCQueryHandle& Handle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14978,6 +17859,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14987,7 +17870,11 @@ namespace CG
 	 * 		struct FUGCUpdateHandle                            Handle                                                     (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::RemoveItemPreview(const struct FUGCUpdateHandle& Handle, int32_t Index)
+	bool UUGC::RemoveItemPreview(
+const struct FUGCUpdateHandle& Handle
+, 
+int32_t Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15008,6 +17895,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15017,7 +17906,11 @@ namespace CG
 	 * 		struct FUGCUpdateHandle                            Handle                                                     (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::RemoveItemKeyValueTags(const struct FUGCUpdateHandle& Handle, const class FString& Key)
+	bool UUGC::RemoveItemKeyValueTags(
+const struct FUGCUpdateHandle& Handle
+, 
+const class FString& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15038,6 +17931,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15048,7 +17943,13 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FPublishedFileID                            PublishedFileID                                            (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUGC::RemoveItemFromFavorites(const class FScriptDelegate& Callback, int32_t AppID, const struct FPublishedFileID& PublishedFileID)
+	void UUGC::RemoveItemFromFavorites(
+const class FScriptDelegate& Callback
+, 
+int32_t AppID
+, 
+const struct FPublishedFileID& PublishedFileID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15069,6 +17970,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15079,7 +17982,13 @@ namespace CG
 	 * 		struct FPublishedFileID                            ParentPublishedFileID                                      (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FPublishedFileID                            ChildPublishedFileId                                       (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUGC::RemoveDependency(const class FScriptDelegate& Callback, const struct FPublishedFileID& ParentPublishedFileID, const struct FPublishedFileID& ChildPublishedFileId)
+	void UUGC::RemoveDependency(
+const class FScriptDelegate& Callback
+, 
+const struct FPublishedFileID& ParentPublishedFileID
+, 
+const struct FPublishedFileID& ChildPublishedFileId
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15100,6 +18009,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15110,7 +18021,13 @@ namespace CG
 	 * 		struct FPublishedFileID                            PublishedFileID                                            (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUGC::RemoveAppDependency(const class FScriptDelegate& Callback, const struct FPublishedFileID& PublishedFileID, int32_t AppID)
+	void UUGC::RemoveAppDependency(
+const class FScriptDelegate& Callback
+, 
+const struct FPublishedFileID& PublishedFileID
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15131,6 +18048,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15139,7 +18058,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FUGCQueryHandle                             Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::ReleaseQueryUGCRequest(const struct FUGCQueryHandle& Handle)
+	bool UUGC::ReleaseQueryUGCRequest(
+const struct FUGCQueryHandle& Handle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15158,6 +18079,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15167,7 +18090,11 @@ namespace CG
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FPublishedFileID                            PublishedFileID                                            (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUGC::GetUserItemVote(const class FScriptDelegate& Callback, const struct FPublishedFileID& PublishedFileID)
+	void UUGC::GetUserItemVote(
+const class FScriptDelegate& Callback
+, 
+const struct FPublishedFileID& PublishedFileID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15186,6 +18113,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15195,7 +18124,11 @@ namespace CG
 	 * 		TArray<struct FPublishedFileID>                    PublishedFileIDs                                           (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            MaxEntries                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UUGC::GetSubscribedItems(TArray<struct FPublishedFileID>* PublishedFileIDs, int32_t MaxEntries)
+	int32_t UUGC::GetSubscribedItems(
+TArray<struct FPublishedFileID>* PublishedFileIDs
+, 
+int32_t MaxEntries
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15218,6 +18151,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15229,7 +18164,15 @@ namespace CG
 	 * 		int32_t                                            IndexTag                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Value                                                      (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::GetQueryUGCTagDisplayName(const struct FUGCQueryHandle& Handle, int32_t Index, int32_t IndexTag, class FString* Value)
+	bool UUGC::GetQueryUGCTagDisplayName(
+const struct FUGCQueryHandle& Handle
+, 
+int32_t Index
+, 
+int32_t IndexTag
+, 
+class FString* Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15256,6 +18199,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15267,7 +18212,15 @@ namespace CG
 	 * 		int32_t                                            IndexTag                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Value                                                      (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::GetQueryUGCTag(const struct FUGCQueryHandle& Handle, int32_t Index, int32_t IndexTag, class FString* Value)
+	bool UUGC::GetQueryUGCTag(
+const struct FUGCQueryHandle& Handle
+, 
+int32_t Index
+, 
+int32_t IndexTag
+, 
+class FString* Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15294,6 +18247,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15305,7 +18260,15 @@ namespace CG
 	 * 		ESteamItemStatistic                                StatType                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      StatValue                                                  (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::GetQueryUGCStatistic(const struct FUGCQueryHandle& Handle, int32_t Index, ESteamItemStatistic StatType, class FString* StatValue)
+	bool UUGC::GetQueryUGCStatistic(
+const struct FUGCQueryHandle& Handle
+, 
+int32_t Index
+, 
+ESteamItemStatistic StatType
+, 
+class FString* StatValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15332,6 +18295,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15342,7 +18307,13 @@ namespace CG
 	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FSteamUGCDetails                            Details                                                    (Parm, OutParm, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::GetQueryUGCResult(const struct FUGCQueryHandle& Handle, int32_t Index, struct FSteamUGCDetails* Details)
+	bool UUGC::GetQueryUGCResult(
+const struct FUGCQueryHandle& Handle
+, 
+int32_t Index
+, 
+struct FSteamUGCDetails* Details
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15367,6 +18338,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15377,7 +18350,13 @@ namespace CG
 	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      URL                                                        (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::GetQueryUGCPreviewURL(const struct FUGCQueryHandle& Handle, int32_t Index, class FString* URL)
+	bool UUGC::GetQueryUGCPreviewURL(
+const struct FUGCQueryHandle& Handle
+, 
+int32_t Index
+, 
+class FString* URL
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15402,6 +18381,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15411,7 +18392,11 @@ namespace CG
 	 * 		struct FUGCQueryHandle                             Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UUGC::GetQueryUGCNumTags(const struct FUGCQueryHandle& Handle, int32_t Index)
+	int32_t UUGC::GetQueryUGCNumTags(
+const struct FUGCQueryHandle& Handle
+, 
+int32_t Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15432,6 +18417,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15441,7 +18428,11 @@ namespace CG
 	 * 		struct FUGCQueryHandle                             Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UUGC::GetQueryUGCNumKeyValueTags(const struct FUGCQueryHandle& Handle, int32_t Index)
+	int32_t UUGC::GetQueryUGCNumKeyValueTags(
+const struct FUGCQueryHandle& Handle
+, 
+int32_t Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15462,6 +18453,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15471,7 +18464,11 @@ namespace CG
 	 * 		struct FUGCQueryHandle                             Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UUGC::GetQueryUGCNumAdditionalPreviews(const struct FUGCQueryHandle& Handle, int32_t Index)
+	int32_t UUGC::GetQueryUGCNumAdditionalPreviews(
+const struct FUGCQueryHandle& Handle
+, 
+int32_t Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15492,6 +18489,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15503,7 +18502,15 @@ namespace CG
 	 * 		class FString                                      MetaData                                                   (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            MetadataSize                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::GetQueryUGCMetadata(const struct FUGCQueryHandle& Handle, int32_t Index, class FString* MetaData, int32_t MetadataSize)
+	bool UUGC::GetQueryUGCMetadata(
+const struct FUGCQueryHandle& Handle
+, 
+int32_t Index
+, 
+class FString* MetaData
+, 
+int32_t MetadataSize
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15530,6 +18537,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15542,7 +18551,17 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Value                                                      (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::GetQueryUGCKeyValueTag(const struct FUGCQueryHandle& Handle, int32_t Index, int32_t KeyValueTagIndex, class FString* Key, class FString* Value)
+	bool UUGC::GetQueryUGCKeyValueTag(
+const struct FUGCQueryHandle& Handle
+, 
+int32_t Index
+, 
+int32_t KeyValueTagIndex
+, 
+class FString* Key
+, 
+class FString* Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15572,6 +18591,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15583,7 +18604,15 @@ namespace CG
 	 * 		TArray<struct FPublishedFileID>                    PublishedFileIDs                                           (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            MaxEntries                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::GetQueryUGCChildren(const struct FUGCQueryHandle& Handle, int32_t Index, TArray<struct FPublishedFileID>* PublishedFileIDs, int32_t MaxEntries)
+	bool UUGC::GetQueryUGCChildren(
+const struct FUGCQueryHandle& Handle
+, 
+int32_t Index
+, 
+TArray<struct FPublishedFileID>* PublishedFileIDs
+, 
+int32_t MaxEntries
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15610,6 +18639,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15623,7 +18654,19 @@ namespace CG
 	 * 		class FString                                      OriginalFileName                                           (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ESteamItemPreviewType                              PreviewType                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::GetQueryUGCAdditionalPreview(const struct FUGCQueryHandle& Handle, int32_t Index, int32_t PreviewIndex, class FString* URLOrVideoID, class FString* OriginalFileName, ESteamItemPreviewType* PreviewType)
+	bool UUGC::GetQueryUGCAdditionalPreview(
+const struct FUGCQueryHandle& Handle
+, 
+int32_t Index
+, 
+int32_t PreviewIndex
+, 
+class FString* URLOrVideoID
+, 
+class FString* OriginalFileName
+, 
+ESteamItemPreviewType* PreviewType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15656,6 +18699,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15679,6 +18724,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15689,7 +18736,13 @@ namespace CG
 	 * 		int32_t                                            BytesProcessed                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            BytesTotal                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	ESteamItemUpdateStatus UUGC::GetItemUpdateProgress(const struct FUGCUpdateHandle& Handle, int32_t* BytesProcessed, int32_t* BytesTotal)
+	ESteamItemUpdateStatus UUGC::GetItemUpdateProgress(
+const struct FUGCUpdateHandle& Handle
+, 
+int32_t* BytesProcessed
+, 
+int32_t* BytesTotal
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15715,6 +18768,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15724,7 +18779,11 @@ namespace CG
 	 * 		struct FPublishedFileID                            PublishedFileID                                            (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<ESteamItemState>                            States                                                     (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	int32_t UUGC::GetItemState(const struct FPublishedFileID& PublishedFileID, TArray<ESteamItemState>* States)
+	int32_t UUGC::GetItemState(
+const struct FPublishedFileID& PublishedFileID
+, 
+TArray<ESteamItemState>* States
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15747,6 +18806,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15758,7 +18819,15 @@ namespace CG
 	 * 		class FString                                      Folder                                                     (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Timestamp                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::GetItemInstallInfo(const struct FPublishedFileID& PublishedFileID, int32_t* SizeOnDisk, class FString* Folder, int32_t* Timestamp)
+	bool UUGC::GetItemInstallInfo(
+const struct FPublishedFileID& PublishedFileID
+, 
+int32_t* SizeOnDisk
+, 
+class FString* Folder
+, 
+int32_t* Timestamp
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15787,6 +18856,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15797,7 +18868,13 @@ namespace CG
 	 * 		int32_t                                            BytesDownloaded                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            BytesTotal                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::GetItemDownloadInfo(const struct FPublishedFileID& PublishedFileID, int32_t* BytesDownloaded, int32_t* BytesTotal)
+	bool UUGC::GetItemDownloadInfo(
+const struct FPublishedFileID& PublishedFileID
+, 
+int32_t* BytesDownloaded
+, 
+int32_t* BytesTotal
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15823,6 +18900,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15832,7 +18911,11 @@ namespace CG
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FPublishedFileID                            PublishedFileID                                            (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUGC::GetAppDependencies(const class FScriptDelegate& Callback, const struct FPublishedFileID& PublishedFileID)
+	void UUGC::GetAppDependencies(
+const class FScriptDelegate& Callback
+, 
+const struct FPublishedFileID& PublishedFileID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15851,6 +18934,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15860,7 +18945,11 @@ namespace CG
 	 * 		struct FPublishedFileID                            PublishedFileID                                            (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHighPriority                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::DownloadItem(const struct FPublishedFileID& PublishedFileID, bool bHighPriority)
+	bool UUGC::DownloadItem(
+const struct FPublishedFileID& PublishedFileID
+, 
+bool bHighPriority
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15881,6 +18970,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15890,7 +18981,11 @@ namespace CG
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FPublishedFileID                            PublishedFileID                                            (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUGC::DeleteItem(const class FScriptDelegate& Callback, const struct FPublishedFileID& PublishedFileID)
+	void UUGC::DeleteItem(
+const class FScriptDelegate& Callback
+, 
+const struct FPublishedFileID& PublishedFileID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15909,6 +19004,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15923,7 +19020,21 @@ namespace CG
 	 * 		int32_t                                            ConsumerAppID                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Page                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FUGCQueryHandle UUGC::CreateQueryUserUGCRequest(const struct FSteamID& SteamID, ESteamUserUGCList ListType, ESteamUGCMatchingUGCType MatchingUGCType, ESteamUserUGCListSortOrder SortOrder, int32_t CreatorAppID, int32_t ConsumerAppID, int32_t Page)
+	struct FUGCQueryHandle UUGC::CreateQueryUserUGCRequest(
+const struct FSteamID& SteamID
+, 
+ESteamUserUGCList ListType
+, 
+ESteamUGCMatchingUGCType MatchingUGCType
+, 
+ESteamUserUGCListSortOrder SortOrder
+, 
+int32_t CreatorAppID
+, 
+int32_t ConsumerAppID
+, 
+int32_t Page
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15954,6 +19065,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15962,7 +19075,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<struct FPublishedFileID>                    PublishedFileIDs                                           (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	struct FUGCQueryHandle UUGC::CreateQueryUGCDetailsRequest(TArray<struct FPublishedFileID> PublishedFileIDs)
+	struct FUGCQueryHandle UUGC::CreateQueryUGCDetailsRequest(
+TArray<struct FPublishedFileID> PublishedFileIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15981,6 +19096,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15993,7 +19110,17 @@ namespace CG
 	 * 		int32_t                                            ConsumerAppID                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Page                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FUGCQueryHandle UUGC::CreateQueryAllUGCRequest(ESteamUGCQuery QueryType, ESteamUGCMatchingUGCType FileType, int32_t CreatorAppID, int32_t ConsumerAppID, int32_t Page)
+	struct FUGCQueryHandle UUGC::CreateQueryAllUGCRequest(
+ESteamUGCQuery QueryType
+, 
+ESteamUGCMatchingUGCType FileType
+, 
+int32_t CreatorAppID
+, 
+int32_t ConsumerAppID
+, 
+int32_t Page
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16020,6 +19147,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16030,7 +19159,13 @@ namespace CG
 	 * 		int32_t                                            ConsumerAppID                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ESteamWorkshopFileType                             FileType                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUGC::CreateItem(const class FScriptDelegate& Callback, int32_t ConsumerAppID, ESteamWorkshopFileType FileType)
+	void UUGC::CreateItem(
+const class FScriptDelegate& Callback
+, 
+int32_t ConsumerAppID
+, 
+ESteamWorkshopFileType FileType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16051,6 +19186,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16060,7 +19197,11 @@ namespace CG
 	 * 		int32_t                                            WorkshopDepotID                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Folder                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::BInitWorkshopForGameServer(int32_t WorkshopDepotID, const class FString& Folder)
+	bool UUGC::BInitWorkshopForGameServer(
+int32_t WorkshopDepotID
+, 
+const class FString& Folder
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16081,6 +19222,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16090,7 +19233,11 @@ namespace CG
 	 * 		struct FUGCQueryHandle                             Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<class FString>                              TagGroups                                                  (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::AddRequiredTagGroup(const struct FUGCQueryHandle& Handle, TArray<class FString> TagGroups)
+	bool UUGC::AddRequiredTagGroup(
+const struct FUGCQueryHandle& Handle
+, 
+TArray<class FString> TagGroups
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16111,6 +19258,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16120,7 +19269,11 @@ namespace CG
 	 * 		struct FUGCQueryHandle                             Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      TagName                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::AddRequiredTag(const struct FUGCQueryHandle& Handle, const class FString& TagName)
+	bool UUGC::AddRequiredTag(
+const struct FUGCQueryHandle& Handle
+, 
+const class FString& TagName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16141,6 +19294,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16151,7 +19306,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Value                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::AddRequiredKeyValueTag(const struct FUGCQueryHandle& Handle, const class FString& Key, const class FString& Value)
+	bool UUGC::AddRequiredKeyValueTag(
+const struct FUGCQueryHandle& Handle
+, 
+const class FString& Key
+, 
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16174,6 +19335,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16184,7 +19347,13 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FPublishedFileID                            PublishedFileID                                            (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUGC::AddItemToFavorites(const class FScriptDelegate& Callback, int32_t AppID, const struct FPublishedFileID& PublishedFileID)
+	void UUGC::AddItemToFavorites(
+const class FScriptDelegate& Callback
+, 
+int32_t AppID
+, 
+const struct FPublishedFileID& PublishedFileID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16205,6 +19374,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16214,7 +19385,11 @@ namespace CG
 	 * 		struct FUGCUpdateHandle                            Handle                                                     (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		class FString                                      VideoID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::AddItemPreviewVideo(const struct FUGCUpdateHandle& Handle, const class FString& VideoID)
+	bool UUGC::AddItemPreviewVideo(
+const struct FUGCUpdateHandle& Handle
+, 
+const class FString& VideoID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16235,6 +19410,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16245,7 +19422,13 @@ namespace CG
 	 * 		class FString                                      PreviewFile                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ESteamItemPreviewType                              Type                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::AddItemPreviewFile(const struct FUGCUpdateHandle& Handle, const class FString& PreviewFile, ESteamItemPreviewType Type)
+	bool UUGC::AddItemPreviewFile(
+const struct FUGCUpdateHandle& Handle
+, 
+const class FString& PreviewFile
+, 
+ESteamItemPreviewType Type
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16268,6 +19451,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16278,7 +19463,13 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Value                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::AddItemKeyValueTag(const struct FUGCUpdateHandle& Handle, const class FString& Key, const class FString& Value)
+	bool UUGC::AddItemKeyValueTag(
+const struct FUGCUpdateHandle& Handle
+, 
+const class FString& Key
+, 
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16301,6 +19492,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16310,7 +19503,11 @@ namespace CG
 	 * 		struct FUGCQueryHandle                             Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      TagName                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUGC::AddExcludedTag(const struct FUGCQueryHandle& Handle, const class FString& TagName)
+	bool UUGC::AddExcludedTag(
+const struct FUGCQueryHandle& Handle
+, 
+const class FString& TagName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16331,6 +19528,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16341,7 +19540,13 @@ namespace CG
 	 * 		struct FPublishedFileID                            PublishedFileID                                            (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FPublishedFileID                            ChildPublishedFileId                                       (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUGC::AddDependency(const class FScriptDelegate& Callback, const struct FPublishedFileID& PublishedFileID, const struct FPublishedFileID& ChildPublishedFileId)
+	void UUGC::AddDependency(
+const class FScriptDelegate& Callback
+, 
+const struct FPublishedFileID& PublishedFileID
+, 
+const struct FPublishedFileID& ChildPublishedFileId
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16362,6 +19567,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16372,7 +19579,13 @@ namespace CG
 	 * 		struct FPublishedFileID                            PublishedFileID                                            (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUGC::AddAppDependency(const class FScriptDelegate& Callback, const struct FPublishedFileID& PublishedFileID, int32_t AppID)
+	void UUGC::AddAppDependency(
+const class FScriptDelegate& Callback
+, 
+const struct FPublishedFileID& PublishedFileID
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16393,10 +19606,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UUGC.StaticClass
+	 * 		Name   -> PredefinedFunction UUGC.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UUGC::StaticClass()
@@ -16407,6 +19622,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16416,7 +19633,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreUGCAsyncActionStopPlaytimeTrackingForAllItems* USteamCoreUGCAsyncActionStopPlaytimeTrackingForAllItems::StopPlaytimeTrackingForAllItemsAsync(class UObject* WorldContextObject, float Timeout)
+	class USteamCoreUGCAsyncActionStopPlaytimeTrackingForAllItems* USteamCoreUGCAsyncActionStopPlaytimeTrackingForAllItems::StopPlaytimeTrackingForAllItemsAsync(
+class UObject* WorldContextObject
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16437,6 +19658,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16446,7 +19669,11 @@ namespace CG
 	 * 		struct FStopPlaytimeTrackingResult                 Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreUGCAsyncActionStopPlaytimeTrackingForAllItems::HandleCallback(const struct FStopPlaytimeTrackingResult& Data, bool bWasSuccessful)
+	void USteamCoreUGCAsyncActionStopPlaytimeTrackingForAllItems::HandleCallback(
+const struct FStopPlaytimeTrackingResult& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16465,10 +19692,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreUGCAsyncActionStopPlaytimeTrackingForAllItems.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreUGCAsyncActionStopPlaytimeTrackingForAllItems.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreUGCAsyncActionStopPlaytimeTrackingForAllItems::StaticClass()
@@ -16478,6 +19707,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.SteamCoreUGCAsyncActionStopPlaytimeTrackingForAllItems");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -16489,7 +19720,13 @@ namespace CG
 	 * 		TArray<struct FPublishedFileID>                    PublishedFileIDs                                           (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreUGCAsyncActionStopPlaytimeTracking* USteamCoreUGCAsyncActionStopPlaytimeTracking::StopPlaytimeTrackingAsync(class UObject* WorldContextObject, TArray<struct FPublishedFileID> PublishedFileIDs, float Timeout)
+	class USteamCoreUGCAsyncActionStopPlaytimeTracking* USteamCoreUGCAsyncActionStopPlaytimeTracking::StopPlaytimeTrackingAsync(
+class UObject* WorldContextObject
+, 
+TArray<struct FPublishedFileID> PublishedFileIDs
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16512,6 +19749,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16521,7 +19760,11 @@ namespace CG
 	 * 		struct FStopPlaytimeTrackingResult                 Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreUGCAsyncActionStopPlaytimeTracking::HandleCallback(const struct FStopPlaytimeTrackingResult& Data, bool bWasSuccessful)
+	void USteamCoreUGCAsyncActionStopPlaytimeTracking::HandleCallback(
+const struct FStopPlaytimeTrackingResult& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16540,10 +19783,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreUGCAsyncActionStopPlaytimeTracking.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreUGCAsyncActionStopPlaytimeTracking.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreUGCAsyncActionStopPlaytimeTracking::StaticClass()
@@ -16553,6 +19798,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.SteamCoreUGCAsyncActionStopPlaytimeTracking");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -16564,7 +19811,13 @@ namespace CG
 	 * 		TArray<struct FPublishedFileID>                    PublishedFileIDs                                           (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreUGCAsyncActionStartPlaytimeTracking* USteamCoreUGCAsyncActionStartPlaytimeTracking::StartPlaytimeTrackingAsync(class UObject* WorldContextObject, TArray<struct FPublishedFileID> PublishedFileIDs, float Timeout)
+	class USteamCoreUGCAsyncActionStartPlaytimeTracking* USteamCoreUGCAsyncActionStartPlaytimeTracking::StartPlaytimeTrackingAsync(
+class UObject* WorldContextObject
+, 
+TArray<struct FPublishedFileID> PublishedFileIDs
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16587,6 +19840,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16596,7 +19851,11 @@ namespace CG
 	 * 		struct FStartPlaytimeTrackingResult                Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreUGCAsyncActionStartPlaytimeTracking::HandleCallback(const struct FStartPlaytimeTrackingResult& Data, bool bWasSuccessful)
+	void USteamCoreUGCAsyncActionStartPlaytimeTracking::HandleCallback(
+const struct FStartPlaytimeTrackingResult& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16615,10 +19874,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreUGCAsyncActionStartPlaytimeTracking.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreUGCAsyncActionStartPlaytimeTracking.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreUGCAsyncActionStartPlaytimeTracking::StaticClass()
@@ -16628,6 +19889,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.SteamCoreUGCAsyncActionStartPlaytimeTracking");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -16639,7 +19902,13 @@ namespace CG
 	 * 		struct FPublishedFileID                            PublishedFileIDs                                           (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreUGCAsyncActionUnsubscribeItem* USteamCoreUGCAsyncActionUnsubscribeItem::UnsubscribeItemAsync(class UObject* WorldContextObject, const struct FPublishedFileID& PublishedFileIDs, float Timeout)
+	class USteamCoreUGCAsyncActionUnsubscribeItem* USteamCoreUGCAsyncActionUnsubscribeItem::UnsubscribeItemAsync(
+class UObject* WorldContextObject
+, 
+const struct FPublishedFileID& PublishedFileIDs
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16662,6 +19931,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16671,7 +19942,11 @@ namespace CG
 	 * 		struct FRemoteStorageSubscribePublishedFileResult  Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreUGCAsyncActionUnsubscribeItem::HandleCallback(const struct FRemoteStorageSubscribePublishedFileResult& Data, bool bWasSuccessful)
+	void USteamCoreUGCAsyncActionUnsubscribeItem::HandleCallback(
+const struct FRemoteStorageSubscribePublishedFileResult& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16690,10 +19965,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreUGCAsyncActionUnsubscribeItem.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreUGCAsyncActionUnsubscribeItem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreUGCAsyncActionUnsubscribeItem::StaticClass()
@@ -16703,6 +19980,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.SteamCoreUGCAsyncActionUnsubscribeItem");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -16714,7 +19993,13 @@ namespace CG
 	 * 		struct FPublishedFileID                            PublishedFileIDs                                           (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreUGCAsyncActionSubscribeItem* USteamCoreUGCAsyncActionSubscribeItem::SubscribeItemAsync(class UObject* WorldContextObject, const struct FPublishedFileID& PublishedFileIDs, float Timeout)
+	class USteamCoreUGCAsyncActionSubscribeItem* USteamCoreUGCAsyncActionSubscribeItem::SubscribeItemAsync(
+class UObject* WorldContextObject
+, 
+const struct FPublishedFileID& PublishedFileIDs
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16737,6 +20022,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16746,7 +20033,11 @@ namespace CG
 	 * 		struct FRemoteStorageSubscribePublishedFileResult  Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreUGCAsyncActionSubscribeItem::HandleCallback(const struct FRemoteStorageSubscribePublishedFileResult& Data, bool bWasSuccessful)
+	void USteamCoreUGCAsyncActionSubscribeItem::HandleCallback(
+const struct FRemoteStorageSubscribePublishedFileResult& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16765,10 +20056,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreUGCAsyncActionSubscribeItem.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreUGCAsyncActionSubscribeItem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreUGCAsyncActionSubscribeItem::StaticClass()
@@ -16778,6 +20071,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.SteamCoreUGCAsyncActionSubscribeItem");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -16790,7 +20085,15 @@ namespace CG
 	 * 		struct FPublishedFileID                            PublishedFileID                                            (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreUGCAsyncActionRemoveItemFromFavorites* USteamCoreUGCAsyncActionRemoveItemFromFavorites::RemoveItemFromFavoritesAsync(class UObject* WorldContextObject, int32_t AppID, const struct FPublishedFileID& PublishedFileID, float Timeout)
+	class USteamCoreUGCAsyncActionRemoveItemFromFavorites* USteamCoreUGCAsyncActionRemoveItemFromFavorites::RemoveItemFromFavoritesAsync(
+class UObject* WorldContextObject
+, 
+int32_t AppID
+, 
+const struct FPublishedFileID& PublishedFileID
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16815,6 +20118,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16824,7 +20129,11 @@ namespace CG
 	 * 		struct FUserFavoriteItemsListChanged               Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreUGCAsyncActionRemoveItemFromFavorites::HandleCallback(const struct FUserFavoriteItemsListChanged& Data, bool bWasSuccessful)
+	void USteamCoreUGCAsyncActionRemoveItemFromFavorites::HandleCallback(
+const struct FUserFavoriteItemsListChanged& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16843,10 +20152,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreUGCAsyncActionRemoveItemFromFavorites.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreUGCAsyncActionRemoveItemFromFavorites.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreUGCAsyncActionRemoveItemFromFavorites::StaticClass()
@@ -16857,6 +20168,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16866,7 +20179,11 @@ namespace CG
 	 * 		struct FUserFavoriteItemsListChanged               Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreUGCAsyncActionAddItemToFavorites::HandleCallback(const struct FUserFavoriteItemsListChanged& Data, bool bWasSuccessful)
+	void USteamCoreUGCAsyncActionAddItemToFavorites::HandleCallback(
+const struct FUserFavoriteItemsListChanged& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16885,6 +20202,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16896,7 +20215,15 @@ namespace CG
 	 * 		struct FPublishedFileID                            PublishedFileID                                            (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreUGCAsyncActionAddItemToFavorites* USteamCoreUGCAsyncActionAddItemToFavorites::AddItemToFavoritesAsync(class UObject* WorldContextObject, int32_t AppID, const struct FPublishedFileID& PublishedFileID, float Timeout)
+	class USteamCoreUGCAsyncActionAddItemToFavorites* USteamCoreUGCAsyncActionAddItemToFavorites::AddItemToFavoritesAsync(
+class UObject* WorldContextObject
+, 
+int32_t AppID
+, 
+const struct FPublishedFileID& PublishedFileID
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16921,10 +20248,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreUGCAsyncActionAddItemToFavorites.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreUGCAsyncActionAddItemToFavorites.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreUGCAsyncActionAddItemToFavorites::StaticClass()
@@ -16935,6 +20264,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16944,7 +20275,11 @@ namespace CG
 	 * 		struct FGetUserItemVoteResult                      Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreUGCAsyncActionGetUserItemVote::HandleCallback(const struct FGetUserItemVoteResult& Data, bool bWasSuccessful)
+	void USteamCoreUGCAsyncActionGetUserItemVote::HandleCallback(
+const struct FGetUserItemVoteResult& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16963,6 +20298,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16973,7 +20310,13 @@ namespace CG
 	 * 		struct FPublishedFileID                            PublishedFileID                                            (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreUGCAsyncActionGetUserItemVote* USteamCoreUGCAsyncActionGetUserItemVote::GetUserItemVoteAsync(class UObject* WorldContextObject, const struct FPublishedFileID& PublishedFileID, float Timeout)
+	class USteamCoreUGCAsyncActionGetUserItemVote* USteamCoreUGCAsyncActionGetUserItemVote::GetUserItemVoteAsync(
+class UObject* WorldContextObject
+, 
+const struct FPublishedFileID& PublishedFileID
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16996,10 +20339,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreUGCAsyncActionGetUserItemVote.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreUGCAsyncActionGetUserItemVote.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreUGCAsyncActionGetUserItemVote::StaticClass()
@@ -17009,6 +20354,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.SteamCoreUGCAsyncActionGetUserItemVote");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -17021,7 +20368,15 @@ namespace CG
 	 * 		bool                                               bVoteUp                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreUGCAsyncActionSetUserItemVote* USteamCoreUGCAsyncActionSetUserItemVote::SetUserItemVoteAsync(class UObject* WorldContextObject, const struct FPublishedFileID& PublishedFileID, bool bVoteUp, float Timeout)
+	class USteamCoreUGCAsyncActionSetUserItemVote* USteamCoreUGCAsyncActionSetUserItemVote::SetUserItemVoteAsync(
+class UObject* WorldContextObject
+, 
+const struct FPublishedFileID& PublishedFileID
+, 
+bool bVoteUp
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17046,6 +20401,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17055,7 +20412,11 @@ namespace CG
 	 * 		struct FSetUserItemVoteResult                      Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreUGCAsyncActionSetUserItemVote::HandleCallback(const struct FSetUserItemVoteResult& Data, bool bWasSuccessful)
+	void USteamCoreUGCAsyncActionSetUserItemVote::HandleCallback(
+const struct FSetUserItemVoteResult& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17074,10 +20435,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreUGCAsyncActionSetUserItemVote.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreUGCAsyncActionSetUserItemVote.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreUGCAsyncActionSetUserItemVote::StaticClass()
@@ -17087,6 +20450,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.SteamCoreUGCAsyncActionSetUserItemVote");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -17099,7 +20464,15 @@ namespace CG
 	 * 		class FString                                      ChangeNote                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreUGCAsyncActionSubmitItemUpdate* USteamCoreUGCAsyncActionSubmitItemUpdate::SubmitItemUpdateAsync(class UObject* WorldContextObject, const struct FUGCUpdateHandle& Handle, const class FString& ChangeNote, float Timeout)
+	class USteamCoreUGCAsyncActionSubmitItemUpdate* USteamCoreUGCAsyncActionSubmitItemUpdate::SubmitItemUpdateAsync(
+class UObject* WorldContextObject
+, 
+const struct FUGCUpdateHandle& Handle
+, 
+const class FString& ChangeNote
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17124,6 +20497,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17133,7 +20508,11 @@ namespace CG
 	 * 		struct FSubmitItemUpdateResult                     Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreUGCAsyncActionSubmitItemUpdate::HandleCallback(const struct FSubmitItemUpdateResult& Data, bool bWasSuccessful)
+	void USteamCoreUGCAsyncActionSubmitItemUpdate::HandleCallback(
+const struct FSubmitItemUpdateResult& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17152,10 +20531,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreUGCAsyncActionSubmitItemUpdate.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreUGCAsyncActionSubmitItemUpdate.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreUGCAsyncActionSubmitItemUpdate::StaticClass()
@@ -17166,6 +20547,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17175,7 +20558,11 @@ namespace CG
 	 * 		struct FCreateItemResult                           Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreUGCAsyncActionCreateItem::HandleCallback(const struct FCreateItemResult& Data, bool bWasSuccessful)
+	void USteamCoreUGCAsyncActionCreateItem::HandleCallback(
+const struct FCreateItemResult& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17194,6 +20581,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17205,7 +20594,15 @@ namespace CG
 	 * 		ESteamWorkshopFileType                             FileType                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreUGCAsyncActionCreateItem* USteamCoreUGCAsyncActionCreateItem::CreateItemAsync(class UObject* WorldContextObject, int32_t ConsumerAppID, ESteamWorkshopFileType FileType, float Timeout)
+	class USteamCoreUGCAsyncActionCreateItem* USteamCoreUGCAsyncActionCreateItem::CreateItemAsync(
+class UObject* WorldContextObject
+, 
+int32_t ConsumerAppID
+, 
+ESteamWorkshopFileType FileType
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17230,10 +20627,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreUGCAsyncActionCreateItem.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreUGCAsyncActionCreateItem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreUGCAsyncActionCreateItem::StaticClass()
@@ -17243,6 +20642,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.SteamCoreUGCAsyncActionCreateItem");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -17254,7 +20655,13 @@ namespace CG
 	 * 		struct FUGCQueryHandle                             Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreUGCAsyncActionSendQueryUGCRequest* USteamCoreUGCAsyncActionSendQueryUGCRequest::SendQueryUGCRequestAsync(class UObject* WorldContextObject, const struct FUGCQueryHandle& Handle, float Timeout)
+	class USteamCoreUGCAsyncActionSendQueryUGCRequest* USteamCoreUGCAsyncActionSendQueryUGCRequest::SendQueryUGCRequestAsync(
+class UObject* WorldContextObject
+, 
+const struct FUGCQueryHandle& Handle
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17277,6 +20684,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17286,7 +20695,11 @@ namespace CG
 	 * 		struct FSteamUGCQueryCompleted                     Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreUGCAsyncActionSendQueryUGCRequest::HandleCallback(const struct FSteamUGCQueryCompleted& Data, bool bWasSuccessful)
+	void USteamCoreUGCAsyncActionSendQueryUGCRequest::HandleCallback(
+const struct FSteamUGCQueryCompleted& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17305,10 +20718,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreUGCAsyncActionSendQueryUGCRequest.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreUGCAsyncActionSendQueryUGCRequest.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreUGCAsyncActionSendQueryUGCRequest::StaticClass()
@@ -17319,6 +20734,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17328,7 +20745,11 @@ namespace CG
 	 * 		struct FAddAppDependencyResult                     Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreUGCAsyncActionAddAppDependency::HandleCallback(const struct FAddAppDependencyResult& Data, bool bWasSuccessful)
+	void USteamCoreUGCAsyncActionAddAppDependency::HandleCallback(
+const struct FAddAppDependencyResult& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17347,6 +20768,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17358,7 +20781,15 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreUGCAsyncActionAddAppDependency* USteamCoreUGCAsyncActionAddAppDependency::AddAppDependencyAsync(class UObject* WorldContextObject, const struct FPublishedFileID& PublishedFileID, int32_t AppID, float Timeout)
+	class USteamCoreUGCAsyncActionAddAppDependency* USteamCoreUGCAsyncActionAddAppDependency::AddAppDependencyAsync(
+class UObject* WorldContextObject
+, 
+const struct FPublishedFileID& PublishedFileID
+, 
+int32_t AppID
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17383,10 +20814,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreUGCAsyncActionAddAppDependency.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreUGCAsyncActionAddAppDependency.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreUGCAsyncActionAddAppDependency::StaticClass()
@@ -17396,6 +20829,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.SteamCoreUGCAsyncActionAddAppDependency");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -17408,7 +20843,15 @@ namespace CG
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreUGCAsyncActionRemoveAppDependency* USteamCoreUGCAsyncActionRemoveAppDependency::RemoveAppDependencyAsync(class UObject* WorldContextObject, const struct FPublishedFileID& PublishedFileID, int32_t AppID, float Timeout)
+	class USteamCoreUGCAsyncActionRemoveAppDependency* USteamCoreUGCAsyncActionRemoveAppDependency::RemoveAppDependencyAsync(
+class UObject* WorldContextObject
+, 
+const struct FPublishedFileID& PublishedFileID
+, 
+int32_t AppID
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17433,6 +20876,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17442,7 +20887,11 @@ namespace CG
 	 * 		struct FRemoveAppDependencyResult                  Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreUGCAsyncActionRemoveAppDependency::HandleCallback(const struct FRemoveAppDependencyResult& Data, bool bWasSuccessful)
+	void USteamCoreUGCAsyncActionRemoveAppDependency::HandleCallback(
+const struct FRemoveAppDependencyResult& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17461,10 +20910,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreUGCAsyncActionRemoveAppDependency.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreUGCAsyncActionRemoveAppDependency.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreUGCAsyncActionRemoveAppDependency::StaticClass()
@@ -17475,6 +20926,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17484,7 +20937,11 @@ namespace CG
 	 * 		struct FAddUGCDependencyResult                     Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreUGCAsyncActionAddUGCDependency::HandleCallback(const struct FAddUGCDependencyResult& Data, bool bWasSuccessful)
+	void USteamCoreUGCAsyncActionAddUGCDependency::HandleCallback(
+const struct FAddUGCDependencyResult& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17503,6 +20960,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17514,7 +20973,15 @@ namespace CG
 	 * 		struct FPublishedFileID                            ChildPublishedFileId                                       (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreUGCAsyncActionAddUGCDependency* USteamCoreUGCAsyncActionAddUGCDependency::AddDependencyAsync(class UObject* WorldContextObject, const struct FPublishedFileID& PublishedFileID, const struct FPublishedFileID& ChildPublishedFileId, float Timeout)
+	class USteamCoreUGCAsyncActionAddUGCDependency* USteamCoreUGCAsyncActionAddUGCDependency::AddDependencyAsync(
+class UObject* WorldContextObject
+, 
+const struct FPublishedFileID& PublishedFileID
+, 
+const struct FPublishedFileID& ChildPublishedFileId
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17539,10 +21006,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreUGCAsyncActionAddUGCDependency.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreUGCAsyncActionAddUGCDependency.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreUGCAsyncActionAddUGCDependency::StaticClass()
@@ -17552,6 +21021,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.SteamCoreUGCAsyncActionAddUGCDependency");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -17564,7 +21035,15 @@ namespace CG
 	 * 		struct FPublishedFileID                            ChildPublishedFileId                                       (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreUGCAsyncActionRemoveUGCDependency* USteamCoreUGCAsyncActionRemoveUGCDependency::RemoveDependencyAsync(class UObject* WorldContextObject, const struct FPublishedFileID& PublishedFileID, const struct FPublishedFileID& ChildPublishedFileId, float Timeout)
+	class USteamCoreUGCAsyncActionRemoveUGCDependency* USteamCoreUGCAsyncActionRemoveUGCDependency::RemoveDependencyAsync(
+class UObject* WorldContextObject
+, 
+const struct FPublishedFileID& PublishedFileID
+, 
+const struct FPublishedFileID& ChildPublishedFileId
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17589,6 +21068,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17598,7 +21079,11 @@ namespace CG
 	 * 		struct FRemoveUGCDependencyResult                  Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreUGCAsyncActionRemoveUGCDependency::HandleCallback(const struct FRemoveUGCDependencyResult& Data, bool bWasSuccessful)
+	void USteamCoreUGCAsyncActionRemoveUGCDependency::HandleCallback(
+const struct FRemoveUGCDependencyResult& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17617,10 +21102,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreUGCAsyncActionRemoveUGCDependency.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreUGCAsyncActionRemoveUGCDependency.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreUGCAsyncActionRemoveUGCDependency::StaticClass()
@@ -17631,6 +21118,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17640,7 +21129,11 @@ namespace CG
 	 * 		struct FUGCDeleteItemResult                        Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreUGCAsyncActionDeleteItem::HandleCallback(const struct FUGCDeleteItemResult& Data, bool bWasSuccessful)
+	void USteamCoreUGCAsyncActionDeleteItem::HandleCallback(
+const struct FUGCDeleteItemResult& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17659,6 +21152,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17669,7 +21164,13 @@ namespace CG
 	 * 		struct FPublishedFileID                            PublishedFileID                                            (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreUGCAsyncActionDeleteItem* USteamCoreUGCAsyncActionDeleteItem::DeleteItemAsync(class UObject* WorldContextObject, const struct FPublishedFileID& PublishedFileID, float Timeout)
+	class USteamCoreUGCAsyncActionDeleteItem* USteamCoreUGCAsyncActionDeleteItem::DeleteItemAsync(
+class UObject* WorldContextObject
+, 
+const struct FPublishedFileID& PublishedFileID
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17692,10 +21193,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreUGCAsyncActionDeleteItem.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreUGCAsyncActionDeleteItem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreUGCAsyncActionDeleteItem::StaticClass()
@@ -17706,6 +21209,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17715,7 +21220,11 @@ namespace CG
 	 * 		struct FGetAppDependenciesResult                   Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreUGCAsyncActionGetAppDependencies::HandleCallback(const struct FGetAppDependenciesResult& Data, bool bWasSuccessful)
+	void USteamCoreUGCAsyncActionGetAppDependencies::HandleCallback(
+const struct FGetAppDependenciesResult& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17734,6 +21243,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17744,7 +21255,13 @@ namespace CG
 	 * 		struct FPublishedFileID                            PublishedFileID                                            (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreUGCAsyncActionGetAppDependencies* USteamCoreUGCAsyncActionGetAppDependencies::GetAppDependenciesAsync(class UObject* WorldContextObject, const struct FPublishedFileID& PublishedFileID, float Timeout)
+	class USteamCoreUGCAsyncActionGetAppDependencies* USteamCoreUGCAsyncActionGetAppDependencies::GetAppDependenciesAsync(
+class UObject* WorldContextObject
+, 
+const struct FPublishedFileID& PublishedFileID
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17767,10 +21284,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreUGCAsyncActionGetAppDependencies.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreUGCAsyncActionGetAppDependencies.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreUGCAsyncActionGetAppDependencies::StaticClass()
@@ -17781,6 +21300,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17790,7 +21311,11 @@ namespace CG
 	 * 		struct FDownloadItemResult                         Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreUGCAsyncActionDownloadItem::HandleCallback(const struct FDownloadItemResult& Data, bool bWasSuccessful)
+	void USteamCoreUGCAsyncActionDownloadItem::HandleCallback(
+const struct FDownloadItemResult& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17809,6 +21334,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17820,7 +21347,15 @@ namespace CG
 	 * 		bool                                               bHighPriority                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreUGCAsyncActionDownloadItem* USteamCoreUGCAsyncActionDownloadItem::DownloadItemAsync(class UObject* WorldContextObject, const struct FPublishedFileID& PublishedFileID, bool bHighPriority, float Timeout)
+	class USteamCoreUGCAsyncActionDownloadItem* USteamCoreUGCAsyncActionDownloadItem::DownloadItemAsync(
+class UObject* WorldContextObject
+, 
+const struct FPublishedFileID& PublishedFileID
+, 
+bool bHighPriority
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17845,10 +21380,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreUGCAsyncActionDownloadItem.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreUGCAsyncActionDownloadItem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreUGCAsyncActionDownloadItem::StaticClass()
@@ -17859,6 +21396,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17868,7 +21407,11 @@ namespace CG
 	 * 		struct FSteamID                                    SteamID                                                    (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AppID                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	ESteamUserHasLicenseForAppResult UUser::UserHasLicenseForApp(const struct FSteamID& SteamID, int32_t AppID)
+	ESteamUserHasLicenseForAppResult UUser::UserHasLicenseForApp(
+const struct FSteamID& SteamID
+, 
+int32_t AppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17888,6 +21431,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -17910,6 +21455,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17931,6 +21478,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17940,7 +21489,11 @@ namespace CG
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		class FString                                      RedirectURL                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUser::RequestStoreAuthURL(const class FScriptDelegate& Callback, const class FString& RedirectURL)
+	void UUser::RequestStoreAuthURL(
+const class FScriptDelegate& Callback
+, 
+const class FString& RedirectURL
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17959,6 +21512,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17968,7 +21523,11 @@ namespace CG
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		TArray<unsigned char>                              DataToInclude                                              (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UUser::RequestEncryptedAppTicket(const class FScriptDelegate& Callback, TArray<unsigned char> DataToInclude)
+	void UUser::RequestEncryptedAppTicket(
+const class FScriptDelegate& Callback
+, 
+TArray<unsigned char> DataToInclude
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17986,6 +21545,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -18010,6 +21571,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18019,7 +21582,11 @@ namespace CG
 	 * 		TArray<unsigned char>                              DestBuffer                                                 (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            BytesWritten                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	ESteamVoiceResult UUser::GetVoice(TArray<unsigned char>* DestBuffer, int32_t* BytesWritten)
+	ESteamVoiceResult UUser::GetVoice(
+TArray<unsigned char>* DestBuffer
+, 
+int32_t* BytesWritten
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18042,6 +21609,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -18066,6 +21635,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18088,6 +21659,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -18112,6 +21685,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18121,7 +21696,11 @@ namespace CG
 	 * 		int32_t                                            Series                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bFoil                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UUser::GetGameBadgeLevel(int32_t Series, bool bFoil)
+	int32_t UUser::GetGameBadgeLevel(
+int32_t Series
+, 
+bool bFoil
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18142,6 +21721,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18150,7 +21731,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<unsigned char>                              Ticket                                                     (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	bool UUser::GetEncryptedAppTicket(TArray<unsigned char>* Ticket)
+	bool UUser::GetEncryptedAppTicket(
+TArray<unsigned char>* Ticket
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18171,6 +21754,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18181,7 +21766,13 @@ namespace CG
 	 * 		int32_t                                            UncompressedBytes                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            UncompressedVoiceDesiredSampleRate                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	ESteamVoiceResult UUser::GetAvailableVoice(int32_t* CompressedBytes, int32_t* UncompressedBytes, int32_t UncompressedVoiceDesiredSampleRate)
+	ESteamVoiceResult UUser::GetAvailableVoice(
+int32_t* CompressedBytes
+, 
+int32_t* UncompressedBytes
+, 
+int32_t UncompressedVoiceDesiredSampleRate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18207,6 +21798,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18215,7 +21808,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<unsigned char>                              Ticket                                                     (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	struct FSteamTicketHandle UUser::GetAuthSessionTicket(TArray<unsigned char>* Ticket)
+	struct FSteamTicketHandle UUser::GetAuthSessionTicket(
+TArray<unsigned char>* Ticket
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18236,6 +21831,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18244,7 +21841,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamID                                                    (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUser::EndAuthSession(const struct FSteamID& SteamID)
+	void UUser::EndAuthSession(
+const struct FSteamID& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18261,6 +21860,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18271,7 +21872,13 @@ namespace CG
 	 * 		int32_t                                            DesiredSampleRate                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<unsigned char>                              DestBuffer                                                 (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	ESteamVoiceResult UUser::DecompressVoice(TArray<unsigned char> CompressedBuffer, int32_t DesiredSampleRate, TArray<unsigned char>* DestBuffer)
+	ESteamVoiceResult UUser::DecompressVoice(
+TArray<unsigned char> CompressedBuffer
+, 
+int32_t DesiredSampleRate
+, 
+TArray<unsigned char>* DestBuffer
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18296,6 +21903,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18304,7 +21913,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamTicketHandle                          TicketHandle                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUser::CancelAuthTicket(const struct FSteamTicketHandle& TicketHandle)
+	void UUser::CancelAuthTicket(
+const struct FSteamTicketHandle& TicketHandle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18320,6 +21931,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -18344,6 +21957,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18366,6 +21981,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -18390,6 +22007,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18412,6 +22031,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -18436,6 +22057,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18459,6 +22082,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18468,7 +22093,11 @@ namespace CG
 	 * 		TArray<unsigned char>                              Ticket                                                     (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		struct FSteamID                                    SteamID                                                    (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	ESteamBeginAuthSessionResult UUser::BeginAuthSession(TArray<unsigned char> Ticket, const struct FSteamID& SteamID)
+	ESteamBeginAuthSessionResult UUser::BeginAuthSession(
+TArray<unsigned char> Ticket
+, 
+const struct FSteamID& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18489,6 +22118,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18499,7 +22130,13 @@ namespace CG
 	 * 		class FString                                      ServerIP                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            ServerPort                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUser::AdvertiseGame(const struct FSteamID& SteamIDGameServer, const class FString& ServerIP, int32_t ServerPort)
+	void UUser::AdvertiseGame(
+const struct FSteamID& SteamIDGameServer
+, 
+const class FString& ServerIP
+, 
+int32_t ServerPort
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18520,10 +22157,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UUser.StaticClass
+	 * 		Name   -> PredefinedFunction UUser.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UUser::StaticClass()
@@ -18533,6 +22172,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.User");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -18544,7 +22185,13 @@ namespace CG
 	 * 		TArray<unsigned char>                              DataToInclude                                              (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreUserAsyncActionRequestEncryptedAppTicket* USteamCoreUserAsyncActionRequestEncryptedAppTicket::RequestEncryptedAppTicketAsync(class UObject* WorldContextObject, TArray<unsigned char> DataToInclude, float Timeout)
+	class USteamCoreUserAsyncActionRequestEncryptedAppTicket* USteamCoreUserAsyncActionRequestEncryptedAppTicket::RequestEncryptedAppTicketAsync(
+class UObject* WorldContextObject
+, 
+TArray<unsigned char> DataToInclude
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18567,6 +22214,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18576,7 +22225,11 @@ namespace CG
 	 * 		struct FEncryptedAppTicketResponse                 Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreUserAsyncActionRequestEncryptedAppTicket::HandleCallback(const struct FEncryptedAppTicketResponse& Data, bool bWasSuccessful)
+	void USteamCoreUserAsyncActionRequestEncryptedAppTicket::HandleCallback(
+const struct FEncryptedAppTicketResponse& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18595,10 +22248,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreUserAsyncActionRequestEncryptedAppTicket.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreUserAsyncActionRequestEncryptedAppTicket.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreUserAsyncActionRequestEncryptedAppTicket::StaticClass()
@@ -18608,6 +22263,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.SteamCoreUserAsyncActionRequestEncryptedAppTicket");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -18619,7 +22276,13 @@ namespace CG
 	 * 		class FString                                      RedirectURL                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreUserAsyncActionRequestStoreAuthURL* USteamCoreUserAsyncActionRequestStoreAuthURL::RequestStoreAuthURLAsync(class UObject* WorldContextObject, const class FString& RedirectURL, float Timeout)
+	class USteamCoreUserAsyncActionRequestStoreAuthURL* USteamCoreUserAsyncActionRequestStoreAuthURL::RequestStoreAuthURLAsync(
+class UObject* WorldContextObject
+, 
+const class FString& RedirectURL
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18642,6 +22305,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18651,7 +22316,11 @@ namespace CG
 	 * 		struct FStoreAuthURLResponse                       Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreUserAsyncActionRequestStoreAuthURL::HandleCallback(const struct FStoreAuthURLResponse& Data, bool bWasSuccessful)
+	void USteamCoreUserAsyncActionRequestStoreAuthURL::HandleCallback(
+const struct FStoreAuthURLResponse& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18670,10 +22339,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreUserAsyncActionRequestStoreAuthURL.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreUserAsyncActionRequestStoreAuthURL.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreUserAsyncActionRequestStoreAuthURL::StaticClass()
@@ -18683,6 +22354,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.SteamCoreUserAsyncActionRequestStoreAuthURL");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -18696,7 +22369,17 @@ namespace CG
 	 * 		int32_t                                            Score                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<int32_t>                                    ScoreDetails                                               (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UUserStats::UploadLeaderboardScore(const class FScriptDelegate& Callback, const struct FSteamLeaderboard& SteamLeaderboard, ESteamLeaderboardUploadScoreMethod UploadScoreMethod, int32_t Score, TArray<int32_t> ScoreDetails)
+	void UUserStats::UploadLeaderboardScore(
+const class FScriptDelegate& Callback
+, 
+const struct FSteamLeaderboard& SteamLeaderboard
+, 
+ESteamLeaderboardUploadScoreMethod UploadScoreMethod
+, 
+int32_t Score
+, 
+TArray<int32_t> ScoreDetails
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18721,6 +22404,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18731,7 +22416,13 @@ namespace CG
 	 * 		float                                              CountThisSession                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              SessionLength                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUserStats::UpdateAvgRateStat(const class FString& Name, float CountThisSession, float SessionLength)
+	bool UUserStats::UpdateAvgRateStat(
+const class FString& Name
+, 
+float CountThisSession
+, 
+float SessionLength
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18753,6 +22444,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -18777,6 +22470,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18786,7 +22481,11 @@ namespace CG
 	 * 		class FString                                      Name                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Data                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUserStats::SetStatInt(const class FString& Name, int32_t Data)
+	bool UUserStats::SetStatInt(
+const class FString& Name
+, 
+int32_t Data
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18807,6 +22506,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18816,7 +22517,11 @@ namespace CG
 	 * 		class FString                                      Name                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Data                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUserStats::SetStatFloat(const class FString& Name, float Data)
+	bool UUserStats::SetStatFloat(
+const class FString& Name
+, 
+float Data
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18837,6 +22542,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18845,7 +22552,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Name                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUserStats::SetAchievement(const class FString& Name)
+	bool UUserStats::SetAchievement(
+const class FString& Name
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18864,6 +22573,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18872,7 +22583,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bAchievementsToo                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUserStats::ResetAllStats(bool bAchievementsToo)
+	bool UUserStats::ResetAllStats(
+bool bAchievementsToo
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18891,6 +22604,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18900,7 +22615,11 @@ namespace CG
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FSteamID                                    SteamID                                                    (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUserStats::RequestUserStats(const class FScriptDelegate& Callback, const struct FSteamID& SteamID)
+	void UUserStats::RequestUserStats(
+const class FScriptDelegate& Callback
+, 
+const struct FSteamID& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18919,6 +22638,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18928,7 +22649,11 @@ namespace CG
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            HistoryDays                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUserStats::RequestGlobalStats(const class FScriptDelegate& Callback, int32_t HistoryDays)
+	void UUserStats::RequestGlobalStats(
+const class FScriptDelegate& Callback
+, 
+int32_t HistoryDays
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18947,6 +22672,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18955,7 +22682,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UUserStats::RequestGlobalAchievementPercentages(const class FScriptDelegate& Callback)
+	void UUserStats::RequestGlobalAchievementPercentages(
+const class FScriptDelegate& Callback
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18971,6 +22700,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -18995,6 +22726,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19005,7 +22738,13 @@ namespace CG
 	 * 		int32_t                                            CurrentProgress                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            MaxProgress                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUserStats::IndicateAchievementProgress(const class FString& Name, int32_t CurrentProgress, int32_t MaxProgress)
+	bool UUserStats::IndicateAchievementProgress(
+const class FString& Name
+, 
+int32_t CurrentProgress
+, 
+int32_t MaxProgress
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19028,6 +22767,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19038,7 +22779,13 @@ namespace CG
 	 * 		class FString                                      Name                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Data                                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUserStats::GetUserStatInteger(const struct FSteamID& SteamIDUser, const class FString& Name, int32_t* Data)
+	bool UUserStats::GetUserStatInteger(
+const struct FSteamID& SteamIDUser
+, 
+const class FString& Name
+, 
+int32_t* Data
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19063,6 +22810,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19073,7 +22822,13 @@ namespace CG
 	 * 		class FString                                      Name                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Data                                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUserStats::GetUserStatFloat(const struct FSteamID& SteamIDUser, const class FString& Name, float* Data)
+	bool UUserStats::GetUserStatFloat(
+const struct FSteamID& SteamIDUser
+, 
+const class FString& Name
+, 
+float* Data
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19098,6 +22853,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19109,7 +22866,15 @@ namespace CG
 	 * 		bool                                               bAchieved                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            UnlockTime                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUserStats::GetUserAchievementAndUnlockTime(const struct FSteamID& SteamIDUser, const class FString& Name, bool* bAchieved, int32_t* UnlockTime)
+	bool UUserStats::GetUserAchievementAndUnlockTime(
+const struct FSteamID& SteamIDUser
+, 
+const class FString& Name
+, 
+bool* bAchieved
+, 
+int32_t* UnlockTime
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19137,6 +22902,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19147,7 +22914,13 @@ namespace CG
 	 * 		class FString                                      Name                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bAchieved                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUserStats::GetUserAchievement(const struct FSteamID& SteamIDUser, const class FString& Name, bool* bAchieved)
+	bool UUserStats::GetUserAchievement(
+const struct FSteamID& SteamIDUser
+, 
+const class FString& Name
+, 
+bool* bAchieved
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19172,6 +22945,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19181,7 +22956,11 @@ namespace CG
 	 * 		class FString                                      Name                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Data                                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUserStats::GetStatInt(const class FString& Name, int32_t* Data)
+	bool UUserStats::GetStatInt(
+const class FString& Name
+, 
+int32_t* Data
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19204,6 +22983,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19213,7 +22994,11 @@ namespace CG
 	 * 		class FString                                      Name                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Data                                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUserStats::GetStatFloat(const class FString& Name, float* Data)
+	bool UUserStats::GetStatFloat(
+const class FString& Name
+, 
+float* Data
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19236,6 +23021,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19244,7 +23031,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UUserStats::GetNumberOfCurrentPlayers(const class FScriptDelegate& Callback)
+	void UUserStats::GetNumberOfCurrentPlayers(
+const class FScriptDelegate& Callback
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19260,6 +23049,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -19284,6 +23075,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19295,7 +23088,15 @@ namespace CG
 	 * 		float                                              Percent                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bAchieved                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UUserStats::GetNextMostAchievedAchievementInfo(int32_t IteratorPrevious, class FString* Name, float* Percent, bool* bAchieved)
+	int32_t UUserStats::GetNextMostAchievedAchievementInfo(
+int32_t IteratorPrevious
+, 
+class FString* Name
+, 
+float* Percent
+, 
+bool* bAchieved
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19324,6 +23125,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19334,7 +23137,13 @@ namespace CG
 	 * 		float                                              Percent                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bAchieved                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UUserStats::GetMostAchievedAchievementInfo(class FString* Name, float* Percent, bool* bAchieved)
+	int32_t UUserStats::GetMostAchievedAchievementInfo(
+class FString* Name
+, 
+float* Percent
+, 
+bool* bAchieved
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19361,6 +23170,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19369,7 +23180,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamLeaderboard                           SteamLeaderboard                                           (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	ESteamLeaderboardSortMethod UUserStats::GetLeaderboardSortMethod(const struct FSteamLeaderboard& SteamLeaderboard)
+	ESteamLeaderboardSortMethod UUserStats::GetLeaderboardSortMethod(
+const struct FSteamLeaderboard& SteamLeaderboard
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19388,6 +23201,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19396,7 +23211,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamLeaderboard                           SteamLeaderboard                                           (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UUserStats::GetLeaderboardName(const struct FSteamLeaderboard& SteamLeaderboard)
+	class FString UUserStats::GetLeaderboardName(
+const struct FSteamLeaderboard& SteamLeaderboard
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19415,6 +23232,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19423,7 +23242,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamLeaderboard                           SteamLeaderboard                                           (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UUserStats::GetLeaderboardEntryCount(const struct FSteamLeaderboard& SteamLeaderboard)
+	int32_t UUserStats::GetLeaderboardEntryCount(
+const struct FSteamLeaderboard& SteamLeaderboard
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19442,6 +23263,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19450,7 +23273,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamLeaderboard                           SteamLeaderboard                                           (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	ESteamLeaderboardDisplayType UUserStats::GetLeaderboardDisplayType(const struct FSteamLeaderboard& SteamLeaderboard)
+	ESteamLeaderboardDisplayType UUserStats::GetLeaderboardDisplayType(
+const struct FSteamLeaderboard& SteamLeaderboard
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19469,6 +23294,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19478,7 +23305,11 @@ namespace CG
 	 * 		class FString                                      StatName                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Data                                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUserStats::GetGlobalStatInt(const class FString& StatName, int32_t* Data)
+	bool UUserStats::GetGlobalStatInt(
+const class FString& StatName
+, 
+int32_t* Data
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19501,6 +23332,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19511,7 +23344,13 @@ namespace CG
 	 * 		int32_t                                            HistoryDays                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<int32_t>                                    Data                                                       (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	int32_t UUserStats::GetGlobalStatHistoryInt(const class FString& StatName, int32_t HistoryDays, TArray<int32_t>* Data)
+	int32_t UUserStats::GetGlobalStatHistoryInt(
+const class FString& StatName
+, 
+int32_t HistoryDays
+, 
+TArray<int32_t>* Data
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19536,6 +23375,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19546,7 +23387,13 @@ namespace CG
 	 * 		int32_t                                            HistoryDays                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<float>                                      Data                                                       (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	int32_t UUserStats::GetGlobalStatHistoryFloat(const class FString& StatName, int32_t HistoryDays, TArray<float>* Data)
+	int32_t UUserStats::GetGlobalStatHistoryFloat(
+const class FString& StatName
+, 
+int32_t HistoryDays
+, 
+TArray<float>* Data
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19571,6 +23418,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19580,7 +23429,11 @@ namespace CG
 	 * 		class FString                                      StatName                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Data                                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUserStats::GetGlobalStatFloat(const class FString& StatName, float* Data)
+	bool UUserStats::GetGlobalStatFloat(
+const class FString& StatName
+, 
+float* Data
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19603,6 +23456,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19615,7 +23470,17 @@ namespace CG
 	 * 		TArray<int32_t>                                    Details                                                    (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		TArray<int32_t>                                    outDetails                                                 (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	bool UUserStats::GetDownloadedLeaderboardEntry(const struct FSteamLeaderboardEntries& LeaderboardEntries, int32_t Index, struct FSteamLeaderboardEntry* LeaderboardEntry, TArray<int32_t> Details, TArray<int32_t>* outDetails)
+	bool UUserStats::GetDownloadedLeaderboardEntry(
+const struct FSteamLeaderboardEntries& LeaderboardEntries
+, 
+int32_t Index
+, 
+struct FSteamLeaderboardEntry* LeaderboardEntry
+, 
+TArray<int32_t> Details
+, 
+TArray<int32_t>* outDetails
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19645,6 +23510,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19655,7 +23522,13 @@ namespace CG
 	 * 		float                                              MinProgress                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              MaxProgress                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUserStats::GetAchievementProgressLimitsFloat(const class FString& Name, float* MinProgress, float* MaxProgress)
+	bool UUserStats::GetAchievementProgressLimitsFloat(
+const class FString& Name
+, 
+float* MinProgress
+, 
+float* MaxProgress
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19681,6 +23554,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19691,7 +23566,13 @@ namespace CG
 	 * 		int32_t                                            MinProgress                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            MaxProgress                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUserStats::GetAchievementProgressLimits(const class FString& Name, int32_t* MinProgress, int32_t* MaxProgress)
+	bool UUserStats::GetAchievementProgressLimits(
+const class FString& Name
+, 
+int32_t* MinProgress
+, 
+int32_t* MaxProgress
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19717,6 +23598,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19725,7 +23608,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Achievement                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UUserStats::GetAchievementName(int32_t Achievement)
+	class FString UUserStats::GetAchievementName(
+int32_t Achievement
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19744,6 +23629,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19752,7 +23639,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Name                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UTexture2D* UUserStats::GetAchievementIcon(const class FString& Name)
+	class UTexture2D* UUserStats::GetAchievementIcon(
+const class FString& Name
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19771,6 +23660,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19780,7 +23671,11 @@ namespace CG
 	 * 		class FString                                      Name                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UUserStats::GetAchievementDisplayAttribute(const class FString& Name, const class FString& Key)
+	class FString UUserStats::GetAchievementDisplayAttribute(
+const class FString& Name
+, 
+const class FString& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19801,6 +23696,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19811,7 +23708,13 @@ namespace CG
 	 * 		bool                                               bAchieved                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            UnlockTime                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUserStats::GetAchievementAndUnlockTime(const class FString& Name, bool* bAchieved, int32_t* UnlockTime)
+	bool UUserStats::GetAchievementAndUnlockTime(
+const class FString& Name
+, 
+bool* bAchieved
+, 
+int32_t* UnlockTime
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19837,6 +23740,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19846,7 +23751,11 @@ namespace CG
 	 * 		class FString                                      Name                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Percent                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUserStats::GetAchievementAchievedPercent(const class FString& Name, float* Percent)
+	bool UUserStats::GetAchievementAchievedPercent(
+const class FString& Name
+, 
+float* Percent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19869,6 +23778,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19878,7 +23789,11 @@ namespace CG
 	 * 		class FString                                      Name                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bAchieved                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUserStats::GetAchievement(const class FString& Name, bool* bAchieved)
+	bool UUserStats::GetAchievement(
+const class FString& Name
+, 
+bool* bAchieved
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19901,6 +23816,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19912,7 +23829,15 @@ namespace CG
 	 * 		ESteamLeaderboardSortMethod                        SortMethod                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ESteamLeaderboardDisplayType                       DisplayType                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUserStats::FindOrCreateLeaderboard(const class FScriptDelegate& Callback, const class FString& LeaderboardName, ESteamLeaderboardSortMethod SortMethod, ESteamLeaderboardDisplayType DisplayType)
+	void UUserStats::FindOrCreateLeaderboard(
+const class FScriptDelegate& Callback
+, 
+const class FString& LeaderboardName
+, 
+ESteamLeaderboardSortMethod SortMethod
+, 
+ESteamLeaderboardDisplayType DisplayType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19935,6 +23860,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19944,7 +23871,11 @@ namespace CG
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		class FString                                      LeaderboardName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUserStats::FindLeaderboard(const class FScriptDelegate& Callback, const class FString& LeaderboardName)
+	void UUserStats::FindLeaderboard(
+const class FScriptDelegate& Callback
+, 
+const class FString& LeaderboardName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19963,6 +23894,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19973,7 +23906,13 @@ namespace CG
 	 * 		struct FSteamLeaderboard                           SteamLeaderboard                                           (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FSteamID>                            Users                                                      (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UUserStats::DownloadLeaderboardEntriesForUsers(const class FScriptDelegate& Callback, const struct FSteamLeaderboard& SteamLeaderboard, TArray<struct FSteamID> Users)
+	void UUserStats::DownloadLeaderboardEntriesForUsers(
+const class FScriptDelegate& Callback
+, 
+const struct FSteamLeaderboard& SteamLeaderboard
+, 
+TArray<struct FSteamID> Users
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19994,6 +23933,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20006,7 +23947,17 @@ namespace CG
 	 * 		int32_t                                            RangeStart                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            RangeEnd                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUserStats::DownloadLeaderboardEntries(const class FScriptDelegate& Callback, const struct FSteamLeaderboard& SteamLeaderboard, ESteamLeaderboardDataRequest DataRequest, int32_t RangeStart, int32_t RangeEnd)
+	void UUserStats::DownloadLeaderboardEntries(
+const class FScriptDelegate& Callback
+, 
+const struct FSteamLeaderboard& SteamLeaderboard
+, 
+ESteamLeaderboardDataRequest DataRequest
+, 
+int32_t RangeStart
+, 
+int32_t RangeEnd
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20031,6 +23982,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20039,7 +23992,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Name                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUserStats::ClearAchievement(const class FString& Name)
+	bool UUserStats::ClearAchievement(
+const class FString& Name
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20058,6 +24013,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20068,7 +24025,13 @@ namespace CG
 	 * 		struct FSteamLeaderboard                           SteamLeaderboard                                           (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FSteamUGCHandle                             Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUserStats::AttachLeaderboardUGC(const class FScriptDelegate& Callback, const struct FSteamLeaderboard& SteamLeaderboard, const struct FSteamUGCHandle& Handle)
+	void UUserStats::AttachLeaderboardUGC(
+const class FScriptDelegate& Callback
+, 
+const struct FSteamLeaderboard& SteamLeaderboard
+, 
+const struct FSteamUGCHandle& Handle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20089,10 +24052,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UUserStats.StaticClass
+	 * 		Name   -> PredefinedFunction UUserStats.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UUserStats::StaticClass()
@@ -20103,6 +24068,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20112,7 +24079,11 @@ namespace CG
 	 * 		struct FLeaderboardFindResult                      Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreUserStatsAsyncActionFindLeaderboard::HandleCallback(const struct FLeaderboardFindResult& Data, bool bWasSuccessful)
+	void USteamCoreUserStatsAsyncActionFindLeaderboard::HandleCallback(
+const struct FLeaderboardFindResult& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20131,6 +24102,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20141,7 +24114,13 @@ namespace CG
 	 * 		class FString                                      LeaderboardName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreUserStatsAsyncActionFindLeaderboard* USteamCoreUserStatsAsyncActionFindLeaderboard::FindLeaderboardAsync(class UObject* WorldContextObject, const class FString& LeaderboardName, float Timeout)
+	class USteamCoreUserStatsAsyncActionFindLeaderboard* USteamCoreUserStatsAsyncActionFindLeaderboard::FindLeaderboardAsync(
+class UObject* WorldContextObject
+, 
+const class FString& LeaderboardName
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20164,10 +24143,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreUserStatsAsyncActionFindLeaderboard.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreUserStatsAsyncActionFindLeaderboard.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreUserStatsAsyncActionFindLeaderboard::StaticClass()
@@ -20178,6 +24159,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20187,7 +24170,11 @@ namespace CG
 	 * 		struct FLeaderboardScoresDownloaded                Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreUserStatsAsyncActionDownloadLeaderboardEntries::HandleCallback(const struct FLeaderboardScoresDownloaded& Data, bool bWasSuccessful)
+	void USteamCoreUserStatsAsyncActionDownloadLeaderboardEntries::HandleCallback(
+const struct FLeaderboardScoresDownloaded& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20206,6 +24193,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20219,7 +24208,19 @@ namespace CG
 	 * 		int32_t                                            RangeEnd                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreUserStatsAsyncActionDownloadLeaderboardEntries* USteamCoreUserStatsAsyncActionDownloadLeaderboardEntries::DownloadLeaderboardEntriesAsync(class UObject* WorldContextObject, const struct FSteamLeaderboard& SteamLeaderboard, ESteamLeaderboardDataRequest Request, int32_t RangeStart, int32_t RangeEnd, float Timeout)
+	class USteamCoreUserStatsAsyncActionDownloadLeaderboardEntries* USteamCoreUserStatsAsyncActionDownloadLeaderboardEntries::DownloadLeaderboardEntriesAsync(
+class UObject* WorldContextObject
+, 
+const struct FSteamLeaderboard& SteamLeaderboard
+, 
+ESteamLeaderboardDataRequest Request
+, 
+int32_t RangeStart
+, 
+int32_t RangeEnd
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20248,10 +24249,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreUserStatsAsyncActionDownloadLeaderboardEntries.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreUserStatsAsyncActionDownloadLeaderboardEntries.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreUserStatsAsyncActionDownloadLeaderboardEntries::StaticClass()
@@ -20261,6 +24264,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.SteamCoreUserStatsAsyncActionDownloadLeaderboardEntries");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -20272,7 +24277,13 @@ namespace CG
 	 * 		int32_t                                            HistoryDays                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreUserStatsAsyncActionDownloadRequestGlobalStats* USteamCoreUserStatsAsyncActionDownloadRequestGlobalStats::RequestGlobalStatsAsync(class UObject* WorldContextObject, int32_t HistoryDays, float Timeout)
+	class USteamCoreUserStatsAsyncActionDownloadRequestGlobalStats* USteamCoreUserStatsAsyncActionDownloadRequestGlobalStats::RequestGlobalStatsAsync(
+class UObject* WorldContextObject
+, 
+int32_t HistoryDays
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20295,6 +24306,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20304,7 +24317,11 @@ namespace CG
 	 * 		struct FGlobalStatsReceived                        Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreUserStatsAsyncActionDownloadRequestGlobalStats::HandleCallback(const struct FGlobalStatsReceived& Data, bool bWasSuccessful)
+	void USteamCoreUserStatsAsyncActionDownloadRequestGlobalStats::HandleCallback(
+const struct FGlobalStatsReceived& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20323,10 +24340,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreUserStatsAsyncActionDownloadRequestGlobalStats.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreUserStatsAsyncActionDownloadRequestGlobalStats.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreUserStatsAsyncActionDownloadRequestGlobalStats::StaticClass()
@@ -20337,6 +24356,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20346,7 +24367,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreUserStatsAsyncActionRequestGlobalAchievementPercentages* USteamCoreUserStatsAsyncActionRequestGlobalAchievementPercentages::RequestGlobalAchievementPercentagesAsync(class UObject* WorldContextObject, float Timeout)
+	class USteamCoreUserStatsAsyncActionRequestGlobalAchievementPercentages* USteamCoreUserStatsAsyncActionRequestGlobalAchievementPercentages::RequestGlobalAchievementPercentagesAsync(
+class UObject* WorldContextObject
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20367,6 +24392,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20376,7 +24403,11 @@ namespace CG
 	 * 		struct FGlobalAchievementPercentagesReady          Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreUserStatsAsyncActionRequestGlobalAchievementPercentages::HandleCallback(const struct FGlobalAchievementPercentagesReady& Data, bool bWasSuccessful)
+	void USteamCoreUserStatsAsyncActionRequestGlobalAchievementPercentages::HandleCallback(
+const struct FGlobalAchievementPercentagesReady& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20395,10 +24426,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreUserStatsAsyncActionRequestGlobalAchievementPercentages.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreUserStatsAsyncActionRequestGlobalAchievementPercentages.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreUserStatsAsyncActionRequestGlobalAchievementPercentages::StaticClass()
@@ -20409,6 +24442,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20418,7 +24453,11 @@ namespace CG
 	 * 		struct FNumberOfCurrentPlayers                     Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreUserStatsAsyncActionGetNumberOfCurrentPlayers::HandleCallback(const struct FNumberOfCurrentPlayers& Data, bool bWasSuccessful)
+	void USteamCoreUserStatsAsyncActionGetNumberOfCurrentPlayers::HandleCallback(
+const struct FNumberOfCurrentPlayers& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20437,6 +24476,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20446,7 +24487,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreUserStatsAsyncActionGetNumberOfCurrentPlayers* USteamCoreUserStatsAsyncActionGetNumberOfCurrentPlayers::GetNumberOfCurrentPlayersAsync(class UObject* WorldContextObject, float Timeout)
+	class USteamCoreUserStatsAsyncActionGetNumberOfCurrentPlayers* USteamCoreUserStatsAsyncActionGetNumberOfCurrentPlayers::GetNumberOfCurrentPlayersAsync(
+class UObject* WorldContextObject
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20467,10 +24512,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreUserStatsAsyncActionGetNumberOfCurrentPlayers.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreUserStatsAsyncActionGetNumberOfCurrentPlayers.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreUserStatsAsyncActionGetNumberOfCurrentPlayers::StaticClass()
@@ -20480,6 +24527,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.SteamCoreUserStatsAsyncActionGetNumberOfCurrentPlayers");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -20494,7 +24543,19 @@ namespace CG
 	 * 		TArray<int32_t>                                    ScoreDetails                                               (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreUserStatsAsyncActionUploadLeaderboardScore* USteamCoreUserStatsAsyncActionUploadLeaderboardScore::UploadLeaderboardScoreAsync(class UObject* WorldContextObject, const struct FSteamLeaderboard& SteamLeaderboard, ESteamLeaderboardUploadScoreMethod UploadScoreMethod, int32_t Score, TArray<int32_t> ScoreDetails, float Timeout)
+	class USteamCoreUserStatsAsyncActionUploadLeaderboardScore* USteamCoreUserStatsAsyncActionUploadLeaderboardScore::UploadLeaderboardScoreAsync(
+class UObject* WorldContextObject
+, 
+const struct FSteamLeaderboard& SteamLeaderboard
+, 
+ESteamLeaderboardUploadScoreMethod UploadScoreMethod
+, 
+int32_t Score
+, 
+TArray<int32_t> ScoreDetails
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20523,6 +24584,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20532,7 +24595,11 @@ namespace CG
 	 * 		struct FLeaderboardScoreUploaded                   Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreUserStatsAsyncActionUploadLeaderboardScore::HandleCallback(const struct FLeaderboardScoreUploaded& Data, bool bWasSuccessful)
+	void USteamCoreUserStatsAsyncActionUploadLeaderboardScore::HandleCallback(
+const struct FLeaderboardScoreUploaded& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20551,10 +24618,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreUserStatsAsyncActionUploadLeaderboardScore.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreUserStatsAsyncActionUploadLeaderboardScore.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreUserStatsAsyncActionUploadLeaderboardScore::StaticClass()
@@ -20565,6 +24634,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20574,7 +24645,11 @@ namespace CG
 	 * 		struct FFindOrCreateLeaderboardData                Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreUserStatsAsyncActionFindOrCreateLeaderboard::HandleCallback(const struct FFindOrCreateLeaderboardData& Data, bool bWasSuccessful)
+	void USteamCoreUserStatsAsyncActionFindOrCreateLeaderboard::HandleCallback(
+const struct FFindOrCreateLeaderboardData& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20593,6 +24668,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20605,7 +24682,17 @@ namespace CG
 	 * 		ESteamLeaderboardDisplayType                       DisplayType                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreUserStatsAsyncActionFindOrCreateLeaderboard* USteamCoreUserStatsAsyncActionFindOrCreateLeaderboard::FindOrCreateLeaderboardAsync(class UObject* WorldContextObject, const class FString& LeaderboardName, ESteamLeaderboardSortMethod SortMethod, ESteamLeaderboardDisplayType DisplayType, float Timeout)
+	class USteamCoreUserStatsAsyncActionFindOrCreateLeaderboard* USteamCoreUserStatsAsyncActionFindOrCreateLeaderboard::FindOrCreateLeaderboardAsync(
+class UObject* WorldContextObject
+, 
+const class FString& LeaderboardName
+, 
+ESteamLeaderboardSortMethod SortMethod
+, 
+ESteamLeaderboardDisplayType DisplayType
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20632,10 +24719,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreUserStatsAsyncActionFindOrCreateLeaderboard.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreUserStatsAsyncActionFindOrCreateLeaderboard.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreUserStatsAsyncActionFindOrCreateLeaderboard::StaticClass()
@@ -20645,6 +24734,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.SteamCoreUserStatsAsyncActionFindOrCreateLeaderboard");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -20656,7 +24747,13 @@ namespace CG
 	 * 		struct FSteamID                                    SteamID                                                    (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreUserStatsAsyncActionRequestUserStats* USteamCoreUserStatsAsyncActionRequestUserStats::RequestUserStatsAsync(class UObject* WorldContextObject, const struct FSteamID& SteamID, float Timeout)
+	class USteamCoreUserStatsAsyncActionRequestUserStats* USteamCoreUserStatsAsyncActionRequestUserStats::RequestUserStatsAsync(
+class UObject* WorldContextObject
+, 
+const struct FSteamID& SteamID
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20679,6 +24776,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20688,7 +24787,11 @@ namespace CG
 	 * 		struct FRequestUserStatsData                       Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreUserStatsAsyncActionRequestUserStats::HandleCallback(const struct FRequestUserStatsData& Data, bool bWasSuccessful)
+	void USteamCoreUserStatsAsyncActionRequestUserStats::HandleCallback(
+const struct FRequestUserStatsData& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20707,10 +24810,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreUserStatsAsyncActionRequestUserStats.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreUserStatsAsyncActionRequestUserStats.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreUserStatsAsyncActionRequestUserStats::StaticClass()
@@ -20721,6 +24826,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20730,7 +24837,11 @@ namespace CG
 	 * 		struct FLeaderboardScoresDownloadedForUsers        Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreUserStatsAsyncActionDownloadLeaderboardEntriesForUsers::HandleCallback(const struct FLeaderboardScoresDownloadedForUsers& Data, bool bWasSuccessful)
+	void USteamCoreUserStatsAsyncActionDownloadLeaderboardEntriesForUsers::HandleCallback(
+const struct FLeaderboardScoresDownloadedForUsers& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20749,6 +24860,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20760,7 +24873,15 @@ namespace CG
 	 * 		TArray<struct FSteamID>                            Users                                                      (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreUserStatsAsyncActionDownloadLeaderboardEntriesForUsers* USteamCoreUserStatsAsyncActionDownloadLeaderboardEntriesForUsers::DownloadLeaderboardEntriesForUsersAsync(class UObject* WorldContextObject, const struct FSteamLeaderboard& SteamLeaderboard, TArray<struct FSteamID> Users, float Timeout)
+	class USteamCoreUserStatsAsyncActionDownloadLeaderboardEntriesForUsers* USteamCoreUserStatsAsyncActionDownloadLeaderboardEntriesForUsers::DownloadLeaderboardEntriesForUsersAsync(
+class UObject* WorldContextObject
+, 
+const struct FSteamLeaderboard& SteamLeaderboard
+, 
+TArray<struct FSteamID> Users
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20785,10 +24906,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreUserStatsAsyncActionDownloadLeaderboardEntriesForUsers.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreUserStatsAsyncActionDownloadLeaderboardEntriesForUsers.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreUserStatsAsyncActionDownloadLeaderboardEntriesForUsers::StaticClass()
@@ -20799,6 +24922,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20808,7 +24933,11 @@ namespace CG
 	 * 		struct FAttachLeaderboardUGCData                   Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWasSuccessful                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreUserStatsAsyncActionAttachLeaderboardUGC::HandleCallback(const struct FAttachLeaderboardUGCData& Data, bool bWasSuccessful)
+	void USteamCoreUserStatsAsyncActionAttachLeaderboardUGC::HandleCallback(
+const struct FAttachLeaderboardUGCData& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20827,6 +24956,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20838,7 +24969,15 @@ namespace CG
 	 * 		struct FSteamUGCHandle                             Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Timeout                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreUserStatsAsyncActionAttachLeaderboardUGC* USteamCoreUserStatsAsyncActionAttachLeaderboardUGC::AttachLeaderboardUGCAsync(class UObject* WorldContextObject, const struct FSteamLeaderboard& SteamLeaderboard, const struct FSteamUGCHandle& Handle, float Timeout)
+	class USteamCoreUserStatsAsyncActionAttachLeaderboardUGC* USteamCoreUserStatsAsyncActionAttachLeaderboardUGC::AttachLeaderboardUGCAsync(
+class UObject* WorldContextObject
+, 
+const struct FSteamLeaderboard& SteamLeaderboard
+, 
+const struct FSteamUGCHandle& Handle
+, 
+float Timeout
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20863,10 +25002,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreUserStatsAsyncActionAttachLeaderboardUGC.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreUserStatsAsyncActionAttachLeaderboardUGC.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreUserStatsAsyncActionAttachLeaderboardUGC::StaticClass()
@@ -20877,6 +25018,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20885,7 +25028,9 @@ namespace CG
 	 * Parameters:
 	 * 		class USteamCoreVoice*                             Obj                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreVoice::DestroySteamCoreVoice(class USteamCoreVoice* Obj)
+	void USteamCoreVoice::DestroySteamCoreVoice(
+class USteamCoreVoice* Obj
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20902,6 +25047,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20910,7 +25057,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            AudioSampleRate                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USteamCoreVoice* USteamCoreVoice::ConstructSteamCoreVoice(int32_t AudioSampleRate)
+	class USteamCoreVoice* USteamCoreVoice::ConstructSteamCoreVoice(
+int32_t AudioSampleRate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20929,6 +25078,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20937,7 +25088,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<unsigned char>                              Buffer                                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void USteamCoreVoice::AddAudioBuffer(TArray<unsigned char> Buffer)
+	void USteamCoreVoice::AddAudioBuffer(
+TArray<unsigned char> Buffer
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20954,10 +25107,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamCoreVoice.StaticClass
+	 * 		Name   -> PredefinedFunction USteamCoreVoice.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamCoreVoice::StaticClass()
@@ -20967,6 +25122,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.SteamCoreVoice");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -20978,7 +25135,13 @@ namespace CG
 	 * 		class FString                                      AbsoluteFilePath                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<unsigned char>                              DataBuffer                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	bool USteamUtilities::WriteBytesToFile(bool bOverwriteIfExists, const class FString& AbsoluteFilePath, TArray<unsigned char> DataBuffer)
+	bool USteamUtilities::WriteBytesToFile(
+bool bOverwriteIfExists
+, 
+const class FString& AbsoluteFilePath
+, 
+TArray<unsigned char> DataBuffer
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -21001,6 +25164,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -21011,7 +25176,13 @@ namespace CG
 	 * 		struct FSteamItemInstanceID                        B                                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ESteamCoreIdentical                                Result                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamUtilities::SteamItemInstanceID_Equals_Exec(const struct FSteamItemInstanceID& A, const struct FSteamItemInstanceID& B, ESteamCoreIdentical* Result)
+	void USteamUtilities::SteamItemInstanceID_Equals_Exec(
+const struct FSteamItemInstanceID& A
+, 
+const struct FSteamItemInstanceID& B
+, 
+ESteamCoreIdentical* Result
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -21034,6 +25205,8 @@ namespace CG
 			*Result = params.Result;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -21043,7 +25216,11 @@ namespace CG
 	 * 		struct FSteamItemInstanceID                        A                                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FSteamItemInstanceID                        B                                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool USteamUtilities::SteamItemInstanceID_Equals(const struct FSteamItemInstanceID& A, const struct FSteamItemInstanceID& B)
+	bool USteamUtilities::SteamItemInstanceID_Equals(
+const struct FSteamItemInstanceID& A
+, 
+const struct FSteamItemInstanceID& B
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -21063,6 +25240,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -21085,6 +25264,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -21093,7 +25274,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      AbsoluteFilePath                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<unsigned char> USteamUtilities::ReadFileToBytes(const class FString& AbsoluteFilePath)
+	TArray<unsigned char> USteamUtilities::ReadFileToBytes(
+const class FString& AbsoluteFilePath
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -21112,6 +25295,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -21121,7 +25306,11 @@ namespace CG
 	 * 		struct FPublishedFileID                            A                                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FPublishedFileID                            B                                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool USteamUtilities::PublishedFileID_NotEquals(const struct FPublishedFileID& A, const struct FPublishedFileID& B)
+	bool USteamUtilities::PublishedFileID_NotEquals(
+const struct FPublishedFileID& A
+, 
+const struct FPublishedFileID& B
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -21142,6 +25331,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -21152,7 +25343,13 @@ namespace CG
 	 * 		struct FPublishedFileID                            B                                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ESteamCoreIdentical                                Result                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamUtilities::PublishedFileID_Equals_Exec(const struct FPublishedFileID& A, const struct FPublishedFileID& B, ESteamCoreIdentical* Result)
+	void USteamUtilities::PublishedFileID_Equals_Exec(
+const struct FPublishedFileID& A
+, 
+const struct FPublishedFileID& B
+, 
+ESteamCoreIdentical* Result
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -21175,6 +25372,8 @@ namespace CG
 			*Result = params.Result;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -21184,7 +25383,11 @@ namespace CG
 	 * 		struct FPublishedFileID                            A                                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FPublishedFileID                            B                                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool USteamUtilities::PublishedFileID_Equals(const struct FPublishedFileID& A, const struct FPublishedFileID& B)
+	bool USteamUtilities::PublishedFileID_Equals(
+const struct FPublishedFileID& A
+, 
+const struct FPublishedFileID& B
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -21205,6 +25408,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -21214,7 +25419,11 @@ namespace CG
 	 * 		struct FSteamID                                    A                                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FSteamID                                    B                                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool USteamUtilities::NotEqual(const struct FSteamID& A, const struct FSteamID& B)
+	bool USteamUtilities::NotEqual(
+const struct FSteamID& A
+, 
+const struct FSteamID& B
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -21235,6 +25444,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -21243,7 +25454,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Value                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FSteamUGCHandle USteamUtilities::MakeUGCHandle(const class FString& Value)
+	struct FSteamUGCHandle USteamUtilities::MakeUGCHandle(
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -21262,6 +25475,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -21270,7 +25485,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Value                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FSteamTicketHandle USteamUtilities::MakeTicketHandle(const class FString& Value)
+	struct FSteamTicketHandle USteamUtilities::MakeTicketHandle(
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -21289,6 +25506,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -21297,7 +25516,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Value                                                      (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FSteamSessionSetting USteamUtilities::MakeString(const class FString& Value)
+	struct FSteamSessionSetting USteamUtilities::MakeString(
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -21316,6 +25537,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -21324,7 +25547,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Value                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FSteamID USteamUtilities::MakeSteamID(const class FString& Value)
+	struct FSteamID USteamUtilities::MakeSteamID(
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -21343,6 +25568,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -21351,7 +25578,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Value                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FSteamGameID USteamUtilities::MakeSteamGameID(const class FString& Value)
+	struct FSteamGameID USteamUtilities::MakeSteamGameID(
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -21370,6 +25599,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -21378,7 +25609,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Value                                                      (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FSteamSessionSearchSetting USteamUtilities::MakeSearchString(const class FString& Value)
+	struct FSteamSessionSearchSetting USteamUtilities::MakeSearchString(
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -21397,6 +25630,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -21406,7 +25641,11 @@ namespace CG
 	 * 		ESteamComparisonOp                                 ComparisonOperator                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Value                                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FSteamSessionSearchSetting USteamUtilities::MakeSearchInteger(ESteamComparisonOp ComparisonOperator, int32_t Value)
+	struct FSteamSessionSearchSetting USteamUtilities::MakeSearchInteger(
+ESteamComparisonOp ComparisonOperator
+, 
+int32_t Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -21427,6 +25666,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -21435,7 +25676,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bValue                                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FSteamSessionSearchSetting USteamUtilities::MakeSearchBool(bool bValue)
+	struct FSteamSessionSearchSetting USteamUtilities::MakeSearchBool(
+bool bValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -21454,6 +25697,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -21462,7 +25707,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Value                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FPublishedFileID USteamUtilities::MakePublishedFileID(const class FString& Value)
+	struct FPublishedFileID USteamUtilities::MakePublishedFileID(
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -21481,6 +25728,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -21489,7 +25738,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Value                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FSteamInventoryUpdateHandle USteamUtilities::MakeInventoryUpdateHandle(const class FString& Value)
+	struct FSteamInventoryUpdateHandle USteamUtilities::MakeInventoryUpdateHandle(
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -21508,6 +25759,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -21516,7 +25769,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Value                                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FSteamSessionSetting USteamUtilities::MakeInteger(int32_t Value)
+	struct FSteamSessionSetting USteamUtilities::MakeInteger(
+int32_t Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -21535,6 +25790,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -21543,7 +25800,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bValue                                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FSteamSessionSetting USteamUtilities::MakeBool(bool bValue)
+	struct FSteamSessionSetting USteamUtilities::MakeBool(
+bool bValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -21562,6 +25821,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -21570,7 +25831,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void USteamUtilities::ListenForSteamMessages(const class FScriptDelegate& Callback)
+	void USteamUtilities::ListenForSteamMessages(
+const class FScriptDelegate& Callback
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -21587,6 +25850,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -21595,7 +25860,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamID                                                    (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool USteamUtilities::IsValid(const struct FSteamID& SteamID)
+	bool USteamUtilities::IsValid(
+const struct FSteamID& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -21613,6 +25880,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -21637,6 +25906,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -21646,7 +25917,11 @@ namespace CG
 	 * 		struct FSteamUGCHandle                             Handle                                                     (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ESteamCoreValid                                    Result                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamUtilities::IsUGCHandleValid_Exec(const struct FSteamUGCHandle& Handle, ESteamCoreValid* Result)
+	void USteamUtilities::IsUGCHandleValid_Exec(
+const struct FSteamUGCHandle& Handle
+, 
+ESteamCoreValid* Result
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -21667,6 +25942,8 @@ namespace CG
 			*Result = params.Result;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -21675,7 +25952,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamUGCHandle                             Handle                                                     (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool USteamUtilities::IsUGCHandleValid(const struct FSteamUGCHandle& Handle)
+	bool USteamUtilities::IsUGCHandleValid(
+const struct FSteamUGCHandle& Handle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -21694,6 +25973,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -21703,7 +25984,11 @@ namespace CG
 	 * 		struct FSteamTicketHandle                          Handle                                                     (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ESteamCoreValid                                    Result                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamUtilities::IsSteamTicketHandleValid_Exec(const struct FSteamTicketHandle& Handle, ESteamCoreValid* Result)
+	void USteamUtilities::IsSteamTicketHandleValid_Exec(
+const struct FSteamTicketHandle& Handle
+, 
+ESteamCoreValid* Result
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -21724,6 +26009,8 @@ namespace CG
 			*Result = params.Result;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -21732,7 +26019,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamTicketHandle                          Handle                                                     (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool USteamUtilities::IsSteamTicketHandleValid(const struct FSteamTicketHandle& Handle)
+	bool USteamUtilities::IsSteamTicketHandleValid(
+const struct FSteamTicketHandle& Handle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -21750,6 +26039,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -21774,6 +26065,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -21783,7 +26076,11 @@ namespace CG
 	 * 		struct FSteamInventoryUpdateHandle                 Handle                                                     (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ESteamCoreValid                                    Result                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamUtilities::IsSteamInventoryUpdateHandleValid_Exec(const struct FSteamInventoryUpdateHandle& Handle, ESteamCoreValid* Result)
+	void USteamUtilities::IsSteamInventoryUpdateHandleValid_Exec(
+const struct FSteamInventoryUpdateHandle& Handle
+, 
+ESteamCoreValid* Result
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -21804,6 +26101,8 @@ namespace CG
 			*Result = params.Result;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -21812,7 +26111,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamInventoryUpdateHandle                 Handle                                                     (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool USteamUtilities::IsSteamInventoryUpdateHandleValid(const struct FSteamInventoryUpdateHandle& Handle)
+	bool USteamUtilities::IsSteamInventoryUpdateHandleValid(
+const struct FSteamInventoryUpdateHandle& Handle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -21831,6 +26132,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -21840,7 +26143,11 @@ namespace CG
 	 * 		struct FSteamID                                    SteamID                                                    (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ESteamCoreValid                                    Result                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamUtilities::IsSteamIDValid_Exec(const struct FSteamID& SteamID, ESteamCoreValid* Result)
+	void USteamUtilities::IsSteamIDValid_Exec(
+const struct FSteamID& SteamID
+, 
+ESteamCoreValid* Result
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -21860,6 +26167,8 @@ namespace CG
 		if (Result != nullptr)
 			*Result = params.Result;
 	}
+
+
 
 	/**
 	 * Function:
@@ -21884,6 +26193,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -21907,6 +26218,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -21916,7 +26229,11 @@ namespace CG
 	 * 		struct FPublishedFileID                            Handle                                                     (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ESteamCoreValid                                    Result                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamUtilities::IsPublishedFileIDValid_Exec(const struct FPublishedFileID& Handle, ESteamCoreValid* Result)
+	void USteamUtilities::IsPublishedFileIDValid_Exec(
+const struct FPublishedFileID& Handle
+, 
+ESteamCoreValid* Result
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -21937,6 +26254,8 @@ namespace CG
 			*Result = params.Result;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -21945,7 +26264,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FPublishedFileID                            PublishedFileID                                            (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool USteamUtilities::IsPublishedFileIDValid(const struct FPublishedFileID& PublishedFileID)
+	bool USteamUtilities::IsPublishedFileIDValid(
+const struct FPublishedFileID& PublishedFileID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -21964,6 +26285,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -21972,7 +26295,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamID                                                    (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool USteamUtilities::IsLobby(const struct FSteamID& SteamID)
+	bool USteamUtilities::IsLobby(
+const struct FSteamID& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -21991,6 +26316,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -22000,7 +26327,11 @@ namespace CG
 	 * 		struct FSteamGameID                                GameID                                                     (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ESteamCoreValid                                    Result                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamUtilities::IsGameIDValid_Exec(const struct FSteamGameID& GameID, ESteamCoreValid* Result)
+	void USteamUtilities::IsGameIDValid_Exec(
+const struct FSteamGameID& GameID
+, 
+ESteamCoreValid* Result
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -22021,6 +26352,8 @@ namespace CG
 			*Result = params.Result;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -22029,7 +26362,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamGameID                                GameID                                                     (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool USteamUtilities::IsGameIDValid(const struct FSteamGameID& GameID)
+	bool USteamUtilities::IsGameIDValid(
+const struct FSteamGameID& GameID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -22048,6 +26383,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -22057,7 +26394,11 @@ namespace CG
 	 * 		struct FSteamSessionSetting                        Settings                                                   (Parm, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Key                                                        (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString USteamUtilities::GetString(const struct FSteamSessionSetting& Settings, class FString* Key)
+	class FString USteamUtilities::GetString(
+const struct FSteamSessionSetting& Settings
+, 
+class FString* Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -22080,6 +26421,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -22088,7 +26431,9 @@ namespace CG
 	 * Parameters:
 	 * 		class APlayerState*                                PlayerState                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FSteamID USteamUtilities::GetSteamIdFromPlayerState(class APlayerState* PlayerState)
+	struct FSteamID USteamUtilities::GetSteamIdFromPlayerState(
+class APlayerState* PlayerState
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -22107,6 +26452,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -22115,7 +26462,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FScriptDelegate                              Callback                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void USteamUtilities::GetPublicIp(const class FScriptDelegate& Callback)
+	void USteamUtilities::GetPublicIp(
+const class FScriptDelegate& Callback
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -22132,6 +26481,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -22140,7 +26491,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FHostPingData                               Data                                                       (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t USteamUtilities::GetPingFromHostData(const struct FHostPingData& Data)
+	int32_t USteamUtilities::GetPingFromHostData(
+const struct FHostPingData& Data
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -22159,6 +26512,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -22168,7 +26523,11 @@ namespace CG
 	 * 		struct FSteamSessionSetting                        Settings                                                   (Parm, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Key                                                        (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t USteamUtilities::GetInteger(const struct FSteamSessionSetting& Settings, class FString* Key)
+	int32_t USteamUtilities::GetInteger(
+const struct FSteamSessionSetting& Settings
+, 
+class FString* Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -22190,6 +26549,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -22214,6 +26575,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -22223,7 +26586,11 @@ namespace CG
 	 * 		struct FSteamSessionSetting                        Settings                                                   (Parm, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Key                                                        (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool USteamUtilities::GetBool(const struct FSteamSessionSetting& Settings, class FString* Key)
+	bool USteamUtilities::GetBool(
+const struct FSteamSessionSetting& Settings
+, 
+class FString* Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -22246,6 +26613,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -22254,7 +26623,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamID                                                    (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	ESteamAccountType USteamUtilities::GetAccountType(const struct FSteamID& SteamID)
+	ESteamAccountType USteamUtilities::GetAccountType(
+const struct FSteamID& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -22273,6 +26644,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -22281,7 +26654,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Timestamp                                                  (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FDateTime USteamUtilities::FromUnixTimestamp(const class FString& Timestamp)
+	struct FDateTime USteamUtilities::FromUnixTimestamp(
+const class FString& Timestamp
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -22300,6 +26675,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -22310,7 +26687,13 @@ namespace CG
 	 * 		struct FSteamID                                    B                                                          (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ESteamCoreIdentical                                Result                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USteamUtilities::Equal_Exec(const struct FSteamID& A, const struct FSteamID& B, ESteamCoreIdentical* Result)
+	void USteamUtilities::Equal_Exec(
+const struct FSteamID& A
+, 
+const struct FSteamID& B
+, 
+ESteamCoreIdentical* Result
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -22333,6 +26716,8 @@ namespace CG
 			*Result = params.Result;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -22342,7 +26727,11 @@ namespace CG
 	 * 		struct FSteamID                                    A                                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FSteamID                                    B                                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool USteamUtilities::Equal(const struct FSteamID& A, const struct FSteamID& B)
+	bool USteamUtilities::Equal(
+const struct FSteamID& A
+, 
+const struct FSteamID& B
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -22363,6 +26752,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -22371,7 +26762,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      String                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString USteamUtilities::EncryptString(const class FString& String)
+	class FString USteamUtilities::EncryptString(
+const class FString& String
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -22390,6 +26783,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -22398,7 +26793,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UServerFilter* USteamUtilities::ConstructServerFilter(class UObject* WorldContextObject)
+	class UServerFilter* USteamUtilities::ConstructServerFilter(
+class UObject* WorldContextObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -22416,6 +26813,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -22438,6 +26837,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -22446,7 +26847,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamUGCHandle                             Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString USteamUtilities::BreakUGCHandle(const struct FSteamUGCHandle& Handle)
+	class FString USteamUtilities::BreakUGCHandle(
+const struct FSteamUGCHandle& Handle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -22465,6 +26868,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -22473,7 +26878,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamTicketHandle                          Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString USteamUtilities::BreakTicketHandle(const struct FSteamTicketHandle& Handle)
+	class FString USteamUtilities::BreakTicketHandle(
+const struct FSteamTicketHandle& Handle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -22492,6 +26899,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -22500,7 +26909,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamID                                    SteamID                                                    (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString USteamUtilities::BreakSteamID(const struct FSteamID& SteamID)
+	class FString USteamUtilities::BreakSteamID(
+const struct FSteamID& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -22519,6 +26930,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -22527,7 +26940,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamGameID                                SteamID                                                    (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString USteamUtilities::BreakSteamGameID(const struct FSteamGameID& SteamID)
+	class FString USteamUtilities::BreakSteamGameID(
+const struct FSteamGameID& SteamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -22546,6 +26961,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -22554,7 +26971,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FPublishedFileID                            FileID                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString USteamUtilities::BreakPublishedFileID(const struct FPublishedFileID& FileID)
+	class FString USteamUtilities::BreakPublishedFileID(
+const struct FPublishedFileID& FileID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -22573,6 +26992,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -22581,7 +27002,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamInventoryUpdateHandle                 Handle                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString USteamUtilities::BreakInventoryUpdateHandle(const struct FSteamInventoryUpdateHandle& Handle)
+	class FString USteamUtilities::BreakInventoryUpdateHandle(
+const struct FSteamInventoryUpdateHandle& Handle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -22600,6 +27023,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -22608,7 +27033,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      String                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<unsigned char> USteamUtilities::BP_StringToBytes(const class FString& String)
+	TArray<unsigned char> USteamUtilities::BP_StringToBytes(
+const class FString& String
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -22627,6 +27054,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -22635,7 +27064,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<unsigned char>                              Array                                                      (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	class FString USteamUtilities::BP_BytesToString(TArray<unsigned char> Array)
+	class FString USteamUtilities::BP_BytesToString(
+TArray<unsigned char> Array
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -22654,10 +27085,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USteamUtilities.StaticClass
+	 * 		Name   -> PredefinedFunction USteamUtilities.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USteamUtilities::StaticClass()
@@ -22667,6 +27100,8 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.SteamUtilities");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -22689,6 +27124,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -22701,7 +27138,17 @@ namespace CG
 	 * 		int32_t                                            CharMax                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      ExistingText                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUtils::ShowGamepadTextInput(ESteamGamepadTextInputMode InputMode, ESteamGamepadTextInputLineMode LineInputMode, const class FString& Description, int32_t CharMax, const class FString& ExistingText)
+	bool UUtils::ShowGamepadTextInput(
+ESteamGamepadTextInputMode InputMode
+, 
+ESteamGamepadTextInputLineMode LineInputMode
+, 
+const class FString& Description
+, 
+int32_t CharMax
+, 
+const class FString& ExistingText
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -22728,6 +27175,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -22736,7 +27185,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bEnabled                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUtils::SetVRHeadsetStreamingEnabled(bool bEnabled)
+	void UUtils::SetVRHeadsetStreamingEnabled(
+bool bEnabled
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -22753,6 +27204,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -22761,7 +27214,9 @@ namespace CG
 	 * Parameters:
 	 * 		ESteamNotificationPosition                         NotificationPosition                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUtils::SetOverlayNotificationPosition(ESteamNotificationPosition NotificationPosition)
+	void UUtils::SetOverlayNotificationPosition(
+ESteamNotificationPosition NotificationPosition
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -22778,6 +27233,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -22787,7 +27244,11 @@ namespace CG
 	 * 		int32_t                                            HorizontalInset                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            VerticalInset                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUtils::SetOverlayNotificationInset(int32_t HorizontalInset, int32_t VerticalInset)
+	void UUtils::SetOverlayNotificationInset(
+int32_t HorizontalInset
+, 
+int32_t VerticalInset
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -22805,6 +27266,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -22829,6 +27292,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -22851,6 +27316,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -22875,6 +27342,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -22897,6 +27366,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -22921,6 +27392,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -22943,6 +27416,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -22967,6 +27442,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -22989,6 +27466,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -23013,6 +27492,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -23035,6 +27516,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -23059,6 +27542,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -23082,6 +27567,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -23092,7 +27579,13 @@ namespace CG
 	 * 		int32_t                                            Width                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Height                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUtils::GetImageSize(int32_t iImage, int32_t* Width, int32_t* Height)
+	bool UUtils::GetImageSize(
+int32_t iImage
+, 
+int32_t* Width
+, 
+int32_t* Height
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -23118,6 +27611,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -23127,7 +27622,11 @@ namespace CG
 	 * 		int32_t                                            iImage                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<unsigned char>                              OutBuffer                                                  (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	bool UUtils::GetImageRGBA(int32_t iImage, TArray<unsigned char>* OutBuffer)
+	bool UUtils::GetImageRGBA(
+int32_t iImage
+, 
+TArray<unsigned char>* OutBuffer
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -23149,6 +27648,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -23173,6 +27674,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -23181,7 +27684,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Text                                                       (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUtils::GetEnteredGamepadTextInput(class FString* Text)
+	bool UUtils::GetEnteredGamepadTextInput(
+class FString* Text
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -23201,6 +27706,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -23225,6 +27732,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -23247,6 +27756,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -23271,6 +27782,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -23293,6 +27806,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -23317,10 +27832,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UUtils.StaticClass
+	 * 		Name   -> PredefinedFunction UUtils.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UUtils::StaticClass()
@@ -23331,6 +27848,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -23339,7 +27858,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            NumViewers                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UVideo::IsBroadcasting(int32_t* NumViewers)
+	bool UVideo::IsBroadcasting(
+int32_t* NumViewers
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -23360,6 +27881,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -23368,7 +27891,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            VideoAppID                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVideo::GetVideoURL(int32_t VideoAppID)
+	void UVideo::GetVideoURL(
+int32_t VideoAppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -23385,6 +27910,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -23394,7 +27921,11 @@ namespace CG
 	 * 		int32_t                                            VideoAppID                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      OutBuffer                                                  (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UVideo::GetOPFStringForApp(int32_t VideoAppID, class FString* OutBuffer)
+	bool UVideo::GetOPFStringForApp(
+int32_t VideoAppID
+, 
+class FString* OutBuffer
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -23417,6 +27948,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -23425,7 +27958,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            VideoAppID                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVideo::GetOPFSettings(int32_t VideoAppID)
+	void UVideo::GetOPFSettings(
+int32_t VideoAppID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -23442,10 +27977,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVideo.StaticClass
+	 * 		Name   -> PredefinedFunction UVideo.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVideo::StaticClass()
@@ -23455,6 +27992,7 @@ namespace CG
 			ptr = UObject::FindClass("Class SteamCore.Video");
 		return ptr;
 	}
+
 
 }
 

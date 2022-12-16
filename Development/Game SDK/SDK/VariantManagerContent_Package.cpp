@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18,7 +19,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      VariantSetName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UVariantSet* ULevelVariantSets::GetVariantSetByName(const class FString& VariantSetName)
+	class UVariantSet* ULevelVariantSets::GetVariantSetByName(
+const class FString& VariantSetName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -37,6 +40,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -45,7 +50,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            VariantSetIndex                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UVariantSet* ULevelVariantSets::GetVariantSet(int32_t VariantSetIndex)
+	class UVariantSet* ULevelVariantSets::GetVariantSet(
+int32_t VariantSetIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -63,6 +70,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -87,10 +96,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULevelVariantSets.StaticClass
+	 * 		Name   -> PredefinedFunction ULevelVariantSets.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULevelVariantSets::StaticClass()
@@ -101,6 +112,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -110,7 +123,11 @@ namespace CG
 	 * 		class FString                                      VariantSetName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      VariantName                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool ALevelVariantSetsActor::SwitchOnVariantByName(const class FString& VariantSetName, const class FString& VariantName)
+	bool ALevelVariantSetsActor::SwitchOnVariantByName(
+const class FString& VariantSetName
+, 
+const class FString& VariantName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -131,6 +148,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -140,7 +159,11 @@ namespace CG
 	 * 		int32_t                                            VariantSetIndex                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            VariantIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool ALevelVariantSetsActor::SwitchOnVariantByIndex(int32_t VariantSetIndex, int32_t VariantIndex)
+	bool ALevelVariantSetsActor::SwitchOnVariantByIndex(
+int32_t VariantSetIndex
+, 
+int32_t VariantIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -161,6 +184,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -169,7 +194,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ULevelVariantSets*                           InVariantSets                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ALevelVariantSetsActor::SetLevelVariantSets(class ULevelVariantSets* InVariantSets)
+	void ALevelVariantSetsActor::SetLevelVariantSets(
+class ULevelVariantSets* InVariantSets
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -186,6 +213,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -194,7 +223,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bLoad                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class ULevelVariantSets* ALevelVariantSetsActor::GetLevelVariantSets(bool bLoad)
+	class ULevelVariantSets* ALevelVariantSetsActor::GetLevelVariantSets(
+bool bLoad
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -213,10 +244,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ALevelVariantSetsActor.StaticClass
+	 * 		Name   -> PredefinedFunction ALevelVariantSetsActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ALevelVariantSetsActor::StaticClass()
@@ -227,10 +260,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULevelVariantSetsFunctionDirector.StaticClass
+	 * 		Name   -> PredefinedFunction ULevelVariantSetsFunctionDirector.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULevelVariantSetsFunctionDirector::StaticClass()
@@ -240,6 +275,8 @@ namespace CG
 			ptr = UObject::FindClass("Class VariantManagerContent.LevelVariantSetsFunctionDirector");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -264,6 +301,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -286,6 +325,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -310,10 +351,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPropertyValue.StaticClass
+	 * 		Name   -> PredefinedFunction UPropertyValue.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPropertyValue::StaticClass()
@@ -324,10 +367,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPropertyValueTransform.StaticClass
+	 * 		Name   -> PredefinedFunction UPropertyValueTransform.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPropertyValueTransform::StaticClass()
@@ -338,10 +383,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPropertyValueVisibility.StaticClass
+	 * 		Name   -> PredefinedFunction UPropertyValueVisibility.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPropertyValueVisibility::StaticClass()
@@ -352,10 +399,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPropertyValueColor.StaticClass
+	 * 		Name   -> PredefinedFunction UPropertyValueColor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPropertyValueColor::StaticClass()
@@ -366,10 +415,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPropertyValueMaterial.StaticClass
+	 * 		Name   -> PredefinedFunction UPropertyValueMaterial.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPropertyValueMaterial::StaticClass()
@@ -380,10 +431,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPropertyValueOption.StaticClass
+	 * 		Name   -> PredefinedFunction UPropertyValueOption.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPropertyValueOption::StaticClass()
@@ -394,10 +447,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPropertyValueSoftObject.StaticClass
+	 * 		Name   -> PredefinedFunction UPropertyValueSoftObject.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPropertyValueSoftObject::StaticClass()
@@ -408,6 +463,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -416,7 +473,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            OptionIndex                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ASwitchActor::SelectOption(int32_t OptionIndex)
+	void ASwitchActor::SelectOption(
+int32_t OptionIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -432,6 +491,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -456,6 +517,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -479,10 +542,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ASwitchActor.StaticClass
+	 * 		Name   -> PredefinedFunction ASwitchActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ASwitchActor::StaticClass()
@@ -492,6 +557,8 @@ namespace CG
 			ptr = UObject::FindClass("Class VariantManagerContent.SwitchActor");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -514,6 +581,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -522,7 +591,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UTexture2D*                                  NewThumbnail                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVariant::SetThumbnailFromTexture(class UTexture2D* NewThumbnail)
+	void UVariant::SetThumbnailFromTexture(
+class UTexture2D* NewThumbnail
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -539,6 +610,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -547,7 +620,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      FilePath                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVariant::SetThumbnailFromFile(const class FString& FilePath)
+	void UVariant::SetThumbnailFromFile(
+const class FString& FilePath
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -563,6 +638,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -585,6 +662,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -597,7 +676,17 @@ namespace CG
 	 * 		float                                              MinZ                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Gamma                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVariant::SetThumbnailFromCamera(class UObject* WorldContextObject, const struct FTransform& CameraTransform, float FOVDegrees, float MinZ, float Gamma)
+	void UVariant::SetThumbnailFromCamera(
+class UObject* WorldContextObject
+, 
+const struct FTransform& CameraTransform
+, 
+float FOVDegrees
+, 
+float MinZ
+, 
+float Gamma
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -622,6 +711,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -630,7 +721,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FText                                        NewDisplayText                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UVariant::SetDisplayText(const class FText& NewDisplayText)
+	void UVariant::SetDisplayText(
+const class FText& NewDisplayText
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -647,6 +740,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -656,7 +751,11 @@ namespace CG
 	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVariantDependency                          Dependency                                                 (Parm, OutParm, NativeAccessSpecifierPublic)
 	 */
-	void UVariant::SetDependency(int32_t Index, struct FVariantDependency* Dependency)
+	void UVariant::SetDependency(
+int32_t Index
+, 
+struct FVariantDependency* Dependency
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -676,6 +775,8 @@ namespace CG
 		if (Dependency != nullptr)
 			*Dependency = params.Dependency;
 	}
+
+
 
 	/**
 	 * Function:
@@ -700,6 +801,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -722,6 +825,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -746,6 +851,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -768,6 +875,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -792,6 +901,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -815,6 +926,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -824,7 +937,11 @@ namespace CG
 	 * 		class ULevelVariantSets*                           LevelVariantSets                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bOnlyEnabledDependencies                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<class UVariant*> UVariant::GetDependents(class ULevelVariantSets* LevelVariantSets, bool bOnlyEnabledDependencies)
+	TArray<class UVariant*> UVariant::GetDependents(
+class ULevelVariantSets* LevelVariantSets
+, 
+bool bOnlyEnabledDependencies
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -845,6 +962,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -853,7 +972,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVariantDependency UVariant::GetDependency(int32_t Index)
+	struct FVariantDependency UVariant::GetDependency(
+int32_t Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -872,6 +993,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -880,7 +1003,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            ActorIndex                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class AActor* UVariant::GetActor(int32_t ActorIndex)
+	class AActor* UVariant::GetActor(
+int32_t ActorIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -899,6 +1024,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -907,7 +1034,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVariant::DeleteDependency(int32_t Index)
+	void UVariant::DeleteDependency(
+int32_t Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -924,6 +1053,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -932,7 +1063,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVariantDependency                          Dependency                                                 (Parm, OutParm, NativeAccessSpecifierPublic)
 	 */
-	int32_t UVariant::AddDependency(struct FVariantDependency* Dependency)
+	int32_t UVariant::AddDependency(
+struct FVariantDependency* Dependency
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -953,10 +1086,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVariant.StaticClass
+	 * 		Name   -> PredefinedFunction UVariant.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVariant::StaticClass()
@@ -967,10 +1102,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVariantObjectBinding.StaticClass
+	 * 		Name   -> PredefinedFunction UVariantObjectBinding.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVariantObjectBinding::StaticClass()
@@ -981,6 +1118,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -989,7 +1128,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UTexture2D*                                  NewThumbnail                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVariantSet::SetThumbnailFromTexture(class UTexture2D* NewThumbnail)
+	void UVariantSet::SetThumbnailFromTexture(
+class UTexture2D* NewThumbnail
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1006,6 +1147,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1014,7 +1157,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      FilePath                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVariantSet::SetThumbnailFromFile(const class FString& FilePath)
+	void UVariantSet::SetThumbnailFromFile(
+const class FString& FilePath
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1030,6 +1175,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1052,6 +1199,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1064,7 +1213,17 @@ namespace CG
 	 * 		float                                              MinZ                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Gamma                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVariantSet::SetThumbnailFromCamera(class UObject* WorldContextObject, const struct FTransform& CameraTransform, float FOVDegrees, float MinZ, float Gamma)
+	void UVariantSet::SetThumbnailFromCamera(
+class UObject* WorldContextObject
+, 
+const struct FTransform& CameraTransform
+, 
+float FOVDegrees
+, 
+float MinZ
+, 
+float Gamma
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1089,6 +1248,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1097,7 +1258,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FText                                        NewDisplayText                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UVariantSet::SetDisplayText(const class FText& NewDisplayText)
+	void UVariantSet::SetDisplayText(
+const class FText& NewDisplayText
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1114,6 +1277,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1122,7 +1287,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      VariantName                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UVariant* UVariantSet::GetVariantByName(const class FString& VariantName)
+	class UVariant* UVariantSet::GetVariantByName(
+const class FString& VariantName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1141,6 +1308,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1149,7 +1318,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            VariantIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UVariant* UVariantSet::GetVariant(int32_t VariantIndex)
+	class UVariant* UVariantSet::GetVariant(
+int32_t VariantIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1167,6 +1338,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1191,6 +1364,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1213,6 +1388,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1237,6 +1414,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1260,10 +1439,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVariantSet.StaticClass
+	 * 		Name   -> PredefinedFunction UVariantSet.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVariantSet::StaticClass()
@@ -1273,6 +1454,7 @@ namespace CG
 			ptr = UObject::FindClass("Class VariantManagerContent.VariantSet");
 		return ptr;
 	}
+
 
 }
 

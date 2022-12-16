@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * BlueprintGeneratedClass H_EditableText.H_EditableText_C
 	 * Size -> 0x0000 (FullSize[0x0460] - InheritedSize[0x0460])
@@ -21,6 +22,7 @@ namespace CG
 	class UH_EditableText_C : public UEditableText
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
 

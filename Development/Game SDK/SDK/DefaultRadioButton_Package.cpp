@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -33,6 +34,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -54,6 +57,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -62,7 +67,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UDefaultRadioButton_C::ExecuteUbergraph_DefaultRadioButton(int32_t EntryPoint)
+	void UDefaultRadioButton_C::ExecuteUbergraph_DefaultRadioButton(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -79,6 +86,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -87,7 +96,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Value                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UDefaultRadioButton_C::Clicked__DelegateSignature(int32_t Value)
+	void UDefaultRadioButton_C::Clicked__DelegateSignature(
+int32_t Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -104,10 +115,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDefaultRadioButton_C.StaticClass
+	 * 		Name   -> PredefinedFunction UDefaultRadioButton_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDefaultRadioButton_C::StaticClass()
@@ -117,6 +130,7 @@ namespace CG
 			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass DefaultRadioButton.DefaultRadioButton_C");
 		return ptr;
 	}
+
 
 }
 

@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+
 	/**
 	 * UserDefinedEnum E_Vehicle.E_Vehicle
 	 */
@@ -23,7 +24,10 @@ namespace CG
 		NewEnumerator4 = 1,
 		NewEnumerator5 = 2,
 		NewEnumerator6 = 3,
-		E_MAX          = 4
+		NewEnumerator7 = 4,
+		NewEnumerator8 = 5,
+		NewEnumerator9 = 6,
+		E_MAX          = 7
 	};
 
 }

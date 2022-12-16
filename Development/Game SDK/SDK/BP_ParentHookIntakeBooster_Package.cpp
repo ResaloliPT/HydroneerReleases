@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18,9 +19,15 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_ParentItem_C*                            HookedTo                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class USceneComponent*                             Component                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		bool                                               CanPass_                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               CanPass                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_ParentHookIntakeBooster_C::HookFunctionality(class ABP_ParentItem_C* HookedTo, class USceneComponent* Component, bool* CanPass_)
+	void ABP_ParentHookIntakeBooster_C::HookFunctionality(
+class ABP_ParentItem_C* HookedTo
+, 
+class USceneComponent* Component
+, 
+bool* CanPass
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -30,7 +37,7 @@ namespace CG
 		{
 			class ABP_ParentItem_C*                            HookedTo;
 			class USceneComponent*                             Component;
-			bool                                               CanPass_;
+			bool                                               CanPass;
 		} params;
 		params.HookedTo = HookedTo;
 		params.Component = Component;
@@ -39,14 +46,16 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 		
-		if (CanPass_ != nullptr)
-			*CanPass_ = params.CanPass_;
+		if (CanPass != nullptr)
+			*CanPass = params.CanPass;
 	}
+
+
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ABP_ParentHookIntakeBooster_C.StaticClass
+	 * 		Name   -> PredefinedFunction ABP_ParentHookIntakeBooster_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ABP_ParentHookIntakeBooster_C::StaticClass()
@@ -56,6 +65,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentHookIntakeBooster.BP_ParentHookIntakeBooster_C");
 		return ptr;
 	}
+
 
 }
 

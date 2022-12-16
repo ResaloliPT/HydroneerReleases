@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVisual.StaticClass
+	 * 		Name   -> PredefinedFunction UVisual.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVisual::StaticClass()
@@ -24,6 +25,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -32,7 +35,9 @@ namespace CG
 	 * Parameters:
 	 * 		ESlateVisibility                                   InVisibility                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidget::SetVisibility(ESlateVisibility InVisibility)
+	void UWidget::SetVisibility(
+ESlateVisibility InVisibility
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -49,6 +54,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -57,7 +64,9 @@ namespace CG
 	 * Parameters:
 	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidget::SetUserFocus(class APlayerController* PlayerController)
+	void UWidget::SetUserFocus(
+class APlayerController* PlayerController
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -74,6 +83,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -82,7 +93,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FText                                        InToolTipText                                              (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UWidget::SetToolTipText(const class FText& InToolTipText)
+	void UWidget::SetToolTipText(
+const class FText& InToolTipText
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -99,6 +112,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -107,7 +122,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidget::SetToolTip(class UWidget* Widget)
+	void UWidget::SetToolTip(
+class UWidget* Widget
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -124,6 +141,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -132,7 +151,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector2D                                   Translation                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidget::SetRenderTranslation(const struct FVector2D& Translation)
+	void UWidget::SetRenderTranslation(
+const struct FVector2D& Translation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -149,6 +170,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -157,7 +180,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector2D                                   Pivot                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidget::SetRenderTransformPivot(const struct FVector2D& Pivot)
+	void UWidget::SetRenderTransformPivot(
+const struct FVector2D& Pivot
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -174,6 +199,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -182,7 +209,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              Angle                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidget::SetRenderTransformAngle(float Angle)
+	void UWidget::SetRenderTransformAngle(
+float Angle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -199,6 +228,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -207,7 +238,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FWidgetTransform                            InTransform                                                (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UWidget::SetRenderTransform(const struct FWidgetTransform& InTransform)
+	void UWidget::SetRenderTransform(
+const struct FWidgetTransform& InTransform
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -224,6 +257,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -232,7 +267,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector2D                                   Shear                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidget::SetRenderShear(const struct FVector2D& Shear)
+	void UWidget::SetRenderShear(
+const struct FVector2D& Shear
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -249,6 +286,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -257,7 +296,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector2D                                   Scale                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidget::SetRenderScale(const struct FVector2D& Scale)
+	void UWidget::SetRenderScale(
+const struct FVector2D& Scale
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -274,6 +315,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -282,7 +325,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InOpacity                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidget::SetRenderOpacity(float InOpacity)
+	void UWidget::SetRenderOpacity(
+float InOpacity
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -299,6 +344,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -308,7 +355,11 @@ namespace CG
 	 * 		EUINavigation                                      Direction                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UWidget*                                     InWidget                                                   (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidget::SetNavigationRuleExplicit(EUINavigation Direction, class UWidget* InWidget)
+	void UWidget::SetNavigationRuleExplicit(
+EUINavigation Direction
+, 
+class UWidget* InWidget
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -327,6 +378,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -336,7 +389,11 @@ namespace CG
 	 * 		EUINavigation                                      Direction                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FScriptDelegate                              InCustomDelegate                                           (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UWidget::SetNavigationRuleCustomBoundary(EUINavigation Direction, const class FScriptDelegate& InCustomDelegate)
+	void UWidget::SetNavigationRuleCustomBoundary(
+EUINavigation Direction
+, 
+const class FScriptDelegate& InCustomDelegate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -355,6 +412,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -364,7 +423,11 @@ namespace CG
 	 * 		EUINavigation                                      Direction                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FScriptDelegate                              InCustomDelegate                                           (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UWidget::SetNavigationRuleCustom(EUINavigation Direction, const class FScriptDelegate& InCustomDelegate)
+	void UWidget::SetNavigationRuleCustom(
+EUINavigation Direction
+, 
+const class FScriptDelegate& InCustomDelegate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -383,6 +446,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -392,7 +457,11 @@ namespace CG
 	 * 		EUINavigation                                      Direction                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EUINavigationRule                                  Rule                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidget::SetNavigationRuleBase(EUINavigation Direction, EUINavigationRule Rule)
+	void UWidget::SetNavigationRuleBase(
+EUINavigation Direction
+, 
+EUINavigationRule Rule
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -411,6 +480,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -421,7 +492,13 @@ namespace CG
 	 * 		EUINavigationRule                                  Rule                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FName                                        WidgetToFocus                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidget::SetNavigationRule(EUINavigation Direction, EUINavigationRule Rule, const class FName& WidgetToFocus)
+	void UWidget::SetNavigationRule(
+EUINavigation Direction
+, 
+EUINavigationRule Rule
+, 
+const class FName& WidgetToFocus
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -441,6 +518,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -463,6 +542,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -471,7 +552,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bInIsEnabled                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidget::SetIsEnabled(bool bInIsEnabled)
+	void UWidget::SetIsEnabled(
+bool bInIsEnabled
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -487,6 +570,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -509,6 +594,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -517,7 +604,9 @@ namespace CG
 	 * Parameters:
 	 * 		EMouseCursor                                       InCursor                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidget::SetCursor(EMouseCursor InCursor)
+	void UWidget::SetCursor(
+EMouseCursor InCursor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -534,6 +623,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -542,7 +633,9 @@ namespace CG
 	 * Parameters:
 	 * 		EWidgetClipping                                    InClipping                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidget::SetClipping(EWidgetClipping InClipping)
+	void UWidget::SetClipping(
+EWidgetClipping InClipping
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -559,6 +652,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -568,7 +663,11 @@ namespace CG
 	 * 		EUINavigationRule                                  Rule                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FName                                        WidgetToFocus                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidget::SetAllNavigationRules(EUINavigationRule Rule, const class FName& WidgetToFocus)
+	void UWidget::SetAllNavigationRules(
+EUINavigationRule Rule
+, 
+const class FName& WidgetToFocus
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -586,6 +685,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -608,6 +709,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -628,6 +731,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -652,6 +757,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -661,7 +768,11 @@ namespace CG
 	 * 		struct FGeometry                                   MyGeometry                                                 (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FPointerEvent                               MouseEvent                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	struct FEventReply UWidget::OnPointerEvent__DelegateSignature(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
+	struct FEventReply UWidget::OnPointerEvent__DelegateSignature(
+const struct FGeometry& MyGeometry
+, 
+const struct FPointerEvent& MouseEvent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -681,6 +792,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -705,6 +818,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -728,6 +843,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -749,6 +866,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -757,7 +876,9 @@ namespace CG
 	 * Parameters:
 	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UWidget::HasUserFocusedDescendants(class APlayerController* PlayerController)
+	bool UWidget::HasUserFocusedDescendants(
+class APlayerController* PlayerController
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -776,6 +897,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -784,7 +907,9 @@ namespace CG
 	 * Parameters:
 	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UWidget::HasUserFocus(class APlayerController* PlayerController)
+	bool UWidget::HasUserFocus(
+class APlayerController* PlayerController
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -803,6 +928,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -812,7 +939,11 @@ namespace CG
 	 * 		int32_t                                            UserIndex                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            PointerIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UWidget::HasMouseCaptureByUser(int32_t UserIndex, int32_t PointerIndex)
+	bool UWidget::HasMouseCaptureByUser(
+int32_t UserIndex
+, 
+int32_t PointerIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -832,6 +963,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -856,6 +989,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -878,6 +1013,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -902,6 +1039,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -924,6 +1063,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -948,6 +1089,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -970,6 +1113,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -994,6 +1139,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1016,6 +1163,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1040,6 +1189,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1062,6 +1213,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1086,6 +1239,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1108,6 +1263,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1132,6 +1289,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1154,6 +1313,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1178,6 +1339,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1200,6 +1363,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1224,6 +1389,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1246,6 +1413,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1270,6 +1439,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1292,6 +1463,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1316,6 +1489,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1338,6 +1513,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1362,6 +1539,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1384,6 +1563,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1408,6 +1589,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1430,6 +1613,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1454,6 +1639,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1476,6 +1663,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1500,6 +1689,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1523,6 +1714,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1531,7 +1724,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Item                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UWidget* UWidget::GenerateWidgetForString__DelegateSignature(const class FString& Item)
+	class UWidget* UWidget::GenerateWidgetForString__DelegateSignature(
+const class FString& Item
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1550,6 +1745,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1558,7 +1755,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     Item                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UWidget* UWidget::GenerateWidgetForObject__DelegateSignature(class UObject* Item)
+	class UWidget* UWidget::GenerateWidgetForObject__DelegateSignature(
+class UObject* Item
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1577,6 +1776,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1585,7 +1786,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bForce                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidget::ForceVolatile(bool bForce)
+	void UWidget::ForceVolatile(
+bool bForce
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1601,6 +1804,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1623,10 +1828,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWidget.StaticClass
+	 * 		Name   -> PredefinedFunction UWidget.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWidget::StaticClass()
@@ -1636,6 +1843,8 @@ namespace CG
 			ptr = UObject::FindClass("Class UMG.Widget");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1658,6 +1867,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1667,7 +1878,11 @@ namespace CG
 	 * 		class UWidgetAnimation*                            Animation                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FScriptDelegate                              Delegate                                                   (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::UnbindFromAnimationStarted(class UWidgetAnimation* Animation, const class FScriptDelegate& Delegate)
+	void UUserWidget::UnbindFromAnimationStarted(
+class UWidgetAnimation* Animation
+, 
+const class FScriptDelegate& Delegate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1686,6 +1901,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1695,7 +1912,11 @@ namespace CG
 	 * 		class UWidgetAnimation*                            Animation                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FScriptDelegate                              Delegate                                                   (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::UnbindFromAnimationFinished(class UWidgetAnimation* Animation, const class FScriptDelegate& Delegate)
+	void UUserWidget::UnbindFromAnimationFinished(
+class UWidgetAnimation* Animation
+, 
+const class FScriptDelegate& Delegate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1714,6 +1935,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1722,7 +1945,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UWidgetAnimation*                            Animation                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::UnbindAllFromAnimationStarted(class UWidgetAnimation* Animation)
+	void UUserWidget::UnbindAllFromAnimationStarted(
+class UWidgetAnimation* Animation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1739,6 +1964,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1747,7 +1974,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UWidgetAnimation*                            Animation                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::UnbindAllFromAnimationFinished(class UWidgetAnimation* Animation)
+	void UUserWidget::UnbindAllFromAnimationFinished(
+class UWidgetAnimation* Animation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1764,6 +1993,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1773,7 +2004,11 @@ namespace CG
 	 * 		struct FGeometry                                   MyGeometry                                                 (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		float                                              InDeltaTime                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+	void UUserWidget::Tick(
+const struct FGeometry& MyGeometry
+, 
+float InDeltaTime
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1792,6 +2027,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1801,7 +2038,11 @@ namespace CG
 	 * 		class FName                                        ActionName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EInputEvent                                        EventType                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::StopListeningForInputAction(const class FName& ActionName, EInputEvent EventType)
+	void UUserWidget::StopListeningForInputAction(
+const class FName& ActionName
+, 
+EInputEvent EventType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1819,6 +2060,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1841,6 +2084,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1862,6 +2107,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1870,7 +2117,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UWidgetAnimation*                            InAnimation                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::StopAnimation(class UWidgetAnimation* InAnimation)
+	void UUserWidget::StopAnimation(
+class UWidgetAnimation* InAnimation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1886,6 +2135,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1908,6 +2159,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1917,7 +2170,11 @@ namespace CG
 	 * 		struct FVector2D                                   Position                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bRemoveDPIScale                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::SetPositionInViewport(const struct FVector2D& Position, bool bRemoveDPIScale)
+	void UUserWidget::SetPositionInViewport(
+const struct FVector2D& Position
+, 
+bool bRemoveDPIScale
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1936,6 +2193,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1945,7 +2204,11 @@ namespace CG
 	 * 		class UWidgetAnimation*                            InAnimation                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              PlaybackSpeed                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::SetPlaybackSpeed(class UWidgetAnimation* InAnimation, float PlaybackSpeed)
+	void UUserWidget::SetPlaybackSpeed(
+class UWidgetAnimation* InAnimation
+, 
+float PlaybackSpeed
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1964,6 +2227,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1972,7 +2237,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FMargin                                     InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::SetPadding(const struct FMargin& InPadding)
+	void UUserWidget::SetPadding(
+const struct FMargin& InPadding
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1989,6 +2256,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1997,7 +2266,9 @@ namespace CG
 	 * Parameters:
 	 * 		class APlayerController*                           LocalPlayerController                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::SetOwningPlayer(class APlayerController* LocalPlayerController)
+	void UUserWidget::SetOwningPlayer(
+class APlayerController* LocalPlayerController
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2014,6 +2285,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2023,7 +2296,11 @@ namespace CG
 	 * 		class UWidgetAnimation*                            InAnimation                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            NumLoopsToPlay                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::SetNumLoopsToPlay(class UWidgetAnimation* InAnimation, int32_t NumLoopsToPlay)
+	void UUserWidget::SetNumLoopsToPlay(
+class UWidgetAnimation* InAnimation
+, 
+int32_t NumLoopsToPlay
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2042,6 +2319,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2050,7 +2329,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            NewPriority                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::SetInputActionPriority(int32_t NewPriority)
+	void UUserWidget::SetInputActionPriority(
+int32_t NewPriority
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2067,6 +2348,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2075,7 +2358,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bShouldBlock                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::SetInputActionBlocking(bool bShouldBlock)
+	void UUserWidget::SetInputActionBlocking(
+bool bShouldBlock
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2092,6 +2377,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2100,7 +2387,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSlateColor                                 InForegroundColor                                          (Parm, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::SetForegroundColor(const struct FSlateColor& InForegroundColor)
+	void UUserWidget::SetForegroundColor(
+const struct FSlateColor& InForegroundColor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2117,6 +2406,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2125,7 +2416,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector2D                                   Size                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::SetDesiredSizeInViewport(const struct FVector2D& Size)
+	void UUserWidget::SetDesiredSizeInViewport(
+const struct FVector2D& Size
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2142,6 +2435,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2150,7 +2445,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FLinearColor                                InColorAndOpacity                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::SetColorAndOpacity(const struct FLinearColor& InColorAndOpacity)
+	void UUserWidget::SetColorAndOpacity(
+const struct FLinearColor& InColorAndOpacity
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2167,6 +2464,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2176,7 +2475,11 @@ namespace CG
 	 * 		class UWidgetAnimation*                            InAnimation                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              InTime                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::SetAnimationCurrentTime(class UWidgetAnimation* InAnimation, float InTime)
+	void UUserWidget::SetAnimationCurrentTime(
+class UWidgetAnimation* InAnimation
+, 
+float InTime
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2195,6 +2498,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2203,7 +2508,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FAnchors                                    Anchors                                                    (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::SetAnchorsInViewport(const struct FAnchors& Anchors)
+	void UUserWidget::SetAnchorsInViewport(
+const struct FAnchors& Anchors
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2220,6 +2527,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2228,7 +2537,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector2D                                   Alignment                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::SetAlignmentInViewport(const struct FVector2D& Alignment)
+	void UUserWidget::SetAlignmentInViewport(
+const struct FVector2D& Alignment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2245,6 +2556,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2253,7 +2566,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UWidgetAnimation*                            InAnimation                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::ReverseAnimation(class UWidgetAnimation* InAnimation)
+	void UUserWidget::ReverseAnimation(
+class UWidgetAnimation* InAnimation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2269,6 +2584,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2291,6 +2608,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2312,6 +2631,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2320,7 +2641,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               IsDesignTime                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::PreConstruct(bool IsDesignTime)
+	void UUserWidget::PreConstruct(
+bool IsDesignTime
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2337,6 +2660,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2345,7 +2670,9 @@ namespace CG
 	 * Parameters:
 	 * 		class USoundBase*                                  SoundToPlay                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::PlaySound(class USoundBase* SoundToPlay)
+	void UUserWidget::PlaySound(
+class USoundBase* SoundToPlay
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2362,6 +2689,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2376,7 +2705,21 @@ namespace CG
 	 * 		float                                              PlaybackSpeed                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bRestoreState                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UUMGSequencePlayer* UUserWidget::PlayAnimationTimeRange(class UWidgetAnimation* InAnimation, float StartAtTime, float EndAtTime, int32_t NumLoopsToPlay, EUMGSequencePlayMode PlayMode, float PlaybackSpeed, bool bRestoreState)
+	class UUMGSequencePlayer* UUserWidget::PlayAnimationTimeRange(
+class UWidgetAnimation* InAnimation
+, 
+float StartAtTime
+, 
+float EndAtTime
+, 
+int32_t NumLoopsToPlay
+, 
+EUMGSequencePlayMode PlayMode
+, 
+float PlaybackSpeed
+, 
+bool bRestoreState
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2407,6 +2750,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2417,7 +2762,13 @@ namespace CG
 	 * 		float                                              PlaybackSpeed                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bRestoreState                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UUMGSequencePlayer* UUserWidget::PlayAnimationReverse(class UWidgetAnimation* InAnimation, float PlaybackSpeed, bool bRestoreState)
+	class UUMGSequencePlayer* UUserWidget::PlayAnimationReverse(
+class UWidgetAnimation* InAnimation
+, 
+float PlaybackSpeed
+, 
+bool bRestoreState
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2440,6 +2791,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2450,7 +2803,13 @@ namespace CG
 	 * 		float                                              PlaybackSpeed                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bRestoreState                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UUMGSequencePlayer* UUserWidget::PlayAnimationForward(class UWidgetAnimation* InAnimation, float PlaybackSpeed, bool bRestoreState)
+	class UUMGSequencePlayer* UUserWidget::PlayAnimationForward(
+class UWidgetAnimation* InAnimation
+, 
+float PlaybackSpeed
+, 
+bool bRestoreState
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2473,6 +2832,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2486,7 +2847,19 @@ namespace CG
 	 * 		float                                              PlaybackSpeed                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bRestoreState                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UUMGSequencePlayer* UUserWidget::PlayAnimation(class UWidgetAnimation* InAnimation, float StartAtTime, int32_t NumLoopsToPlay, EUMGSequencePlayMode PlayMode, float PlaybackSpeed, bool bRestoreState)
+	class UUMGSequencePlayer* UUserWidget::PlayAnimation(
+class UWidgetAnimation* InAnimation
+, 
+float StartAtTime
+, 
+int32_t NumLoopsToPlay
+, 
+EUMGSequencePlayMode PlayMode
+, 
+float PlaybackSpeed
+, 
+bool bRestoreState
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2515,6 +2888,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2523,7 +2898,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UWidgetAnimation*                            InAnimation                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float UUserWidget::PauseAnimation(class UWidgetAnimation* InAnimation)
+	float UUserWidget::PauseAnimation(
+class UWidgetAnimation* InAnimation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2542,6 +2919,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2551,7 +2930,11 @@ namespace CG
 	 * 		struct FGeometry                                   MyGeometry                                                 (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FPointerEvent                               InTouchEvent                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	struct FEventReply UUserWidget::OnTouchStarted(const struct FGeometry& MyGeometry, const struct FPointerEvent& InTouchEvent)
+	struct FEventReply UUserWidget::OnTouchStarted(
+const struct FGeometry& MyGeometry
+, 
+const struct FPointerEvent& InTouchEvent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2572,6 +2955,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2581,7 +2966,11 @@ namespace CG
 	 * 		struct FGeometry                                   MyGeometry                                                 (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FPointerEvent                               InTouchEvent                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	struct FEventReply UUserWidget::OnTouchMoved(const struct FGeometry& MyGeometry, const struct FPointerEvent& InTouchEvent)
+	struct FEventReply UUserWidget::OnTouchMoved(
+const struct FGeometry& MyGeometry
+, 
+const struct FPointerEvent& InTouchEvent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2602,6 +2991,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2611,7 +3002,11 @@ namespace CG
 	 * 		struct FGeometry                                   MyGeometry                                                 (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FPointerEvent                               GestureEvent                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	struct FEventReply UUserWidget::OnTouchGesture(const struct FGeometry& MyGeometry, const struct FPointerEvent& GestureEvent)
+	struct FEventReply UUserWidget::OnTouchGesture(
+const struct FGeometry& MyGeometry
+, 
+const struct FPointerEvent& GestureEvent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2632,6 +3027,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2641,7 +3038,11 @@ namespace CG
 	 * 		struct FGeometry                                   MyGeometry                                                 (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FPointerEvent                               InTouchEvent                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	struct FEventReply UUserWidget::OnTouchForceChanged(const struct FGeometry& MyGeometry, const struct FPointerEvent& InTouchEvent)
+	struct FEventReply UUserWidget::OnTouchForceChanged(
+const struct FGeometry& MyGeometry
+, 
+const struct FPointerEvent& InTouchEvent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2662,6 +3063,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2671,7 +3074,11 @@ namespace CG
 	 * 		struct FGeometry                                   MyGeometry                                                 (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FPointerEvent                               InTouchEvent                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	struct FEventReply UUserWidget::OnTouchEnded(const struct FGeometry& MyGeometry, const struct FPointerEvent& InTouchEvent)
+	struct FEventReply UUserWidget::OnTouchEnded(
+const struct FGeometry& MyGeometry
+, 
+const struct FPointerEvent& InTouchEvent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2692,6 +3099,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2700,7 +3109,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FFocusEvent                                 InFocusEvent                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent)
+	void UUserWidget::OnRemovedFromFocusPath(
+const struct FFocusEvent& InFocusEvent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2717,6 +3128,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2726,7 +3139,11 @@ namespace CG
 	 * 		struct FGeometry                                   MyGeometry                                                 (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FPointerEvent                               MouseEvent                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	struct FEventReply UUserWidget::OnPreviewMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
+	struct FEventReply UUserWidget::OnPreviewMouseButtonDown(
+const struct FGeometry& MyGeometry
+, 
+const struct FPointerEvent& MouseEvent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2747,6 +3164,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2756,7 +3175,11 @@ namespace CG
 	 * 		struct FGeometry                                   MyGeometry                                                 (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FKeyEvent                                   InKeyEvent                                                 (Parm, NativeAccessSpecifierPublic)
 	 */
-	struct FEventReply UUserWidget::OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
+	struct FEventReply UUserWidget::OnPreviewKeyDown(
+const struct FGeometry& MyGeometry
+, 
+const struct FKeyEvent& InKeyEvent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2777,6 +3200,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2785,7 +3210,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FPaintContext                               Context                                                    (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::OnPaint(struct FPaintContext* Context)
+	void UUserWidget::OnPaint(
+struct FPaintContext* Context
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2804,6 +3231,8 @@ namespace CG
 			*Context = params.Context;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2813,7 +3242,11 @@ namespace CG
 	 * 		struct FGeometry                                   MyGeometry                                                 (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FPointerEvent                               MouseEvent                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	struct FEventReply UUserWidget::OnMouseWheel(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
+	struct FEventReply UUserWidget::OnMouseWheel(
+const struct FGeometry& MyGeometry
+, 
+const struct FPointerEvent& MouseEvent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2834,6 +3267,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2843,7 +3278,11 @@ namespace CG
 	 * 		struct FGeometry                                   MyGeometry                                                 (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FPointerEvent                               MouseEvent                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	struct FEventReply UUserWidget::OnMouseMove(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
+	struct FEventReply UUserWidget::OnMouseMove(
+const struct FGeometry& MyGeometry
+, 
+const struct FPointerEvent& MouseEvent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2864,6 +3303,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2872,7 +3313,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FPointerEvent                               MouseEvent                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::OnMouseLeave(const struct FPointerEvent& MouseEvent)
+	void UUserWidget::OnMouseLeave(
+const struct FPointerEvent& MouseEvent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2889,6 +3332,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2898,7 +3343,11 @@ namespace CG
 	 * 		struct FGeometry                                   MyGeometry                                                 (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FPointerEvent                               MouseEvent                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
+	void UUserWidget::OnMouseEnter(
+const struct FGeometry& MyGeometry
+, 
+const struct FPointerEvent& MouseEvent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2916,6 +3365,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2938,6 +3389,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2947,7 +3400,11 @@ namespace CG
 	 * 		struct FGeometry                                   MyGeometry                                                 (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FPointerEvent                               MouseEvent                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	struct FEventReply UUserWidget::OnMouseButtonUp(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
+	struct FEventReply UUserWidget::OnMouseButtonUp(
+const struct FGeometry& MyGeometry
+, 
+const struct FPointerEvent& MouseEvent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2968,6 +3425,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2977,7 +3436,11 @@ namespace CG
 	 * 		struct FGeometry                                   MyGeometry                                                 (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FPointerEvent                               MouseEvent                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	struct FEventReply UUserWidget::OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
+	struct FEventReply UUserWidget::OnMouseButtonDown(
+const struct FGeometry& MyGeometry
+, 
+const struct FPointerEvent& MouseEvent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2998,6 +3461,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3007,7 +3472,11 @@ namespace CG
 	 * 		struct FGeometry                                   InMyGeometry                                               (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FPointerEvent                               InMouseEvent                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	struct FEventReply UUserWidget::OnMouseButtonDoubleClick(const struct FGeometry& InMyGeometry, const struct FPointerEvent& InMouseEvent)
+	struct FEventReply UUserWidget::OnMouseButtonDoubleClick(
+const struct FGeometry& InMyGeometry
+, 
+const struct FPointerEvent& InMouseEvent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3028,6 +3497,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3037,7 +3508,11 @@ namespace CG
 	 * 		struct FGeometry                                   MyGeometry                                                 (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FMotionEvent                                InMotionEvent                                              (Parm, NativeAccessSpecifierPublic)
 	 */
-	struct FEventReply UUserWidget::OnMotionDetected(const struct FGeometry& MyGeometry, const struct FMotionEvent& InMotionEvent)
+	struct FEventReply UUserWidget::OnMotionDetected(
+const struct FGeometry& MyGeometry
+, 
+const struct FMotionEvent& InMotionEvent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3058,6 +3533,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3067,7 +3544,11 @@ namespace CG
 	 * 		struct FGeometry                                   MyGeometry                                                 (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FKeyEvent                                   InKeyEvent                                                 (Parm, NativeAccessSpecifierPublic)
 	 */
-	struct FEventReply UUserWidget::OnKeyUp(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
+	struct FEventReply UUserWidget::OnKeyUp(
+const struct FGeometry& MyGeometry
+, 
+const struct FKeyEvent& InKeyEvent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3088,6 +3569,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3097,7 +3580,11 @@ namespace CG
 	 * 		struct FGeometry                                   MyGeometry                                                 (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FKeyEvent                                   InKeyEvent                                                 (Parm, NativeAccessSpecifierPublic)
 	 */
-	struct FEventReply UUserWidget::OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
+	struct FEventReply UUserWidget::OnKeyDown(
+const struct FGeometry& MyGeometry
+, 
+const struct FKeyEvent& InKeyEvent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3118,6 +3605,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3127,7 +3616,11 @@ namespace CG
 	 * 		struct FGeometry                                   MyGeometry                                                 (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FCharacterEvent                             InCharacterEvent                                           (Parm, NativeAccessSpecifierPublic)
 	 */
-	struct FEventReply UUserWidget::OnKeyChar(const struct FGeometry& MyGeometry, const struct FCharacterEvent& InCharacterEvent)
+	struct FEventReply UUserWidget::OnKeyChar(
+const struct FGeometry& MyGeometry
+, 
+const struct FCharacterEvent& InCharacterEvent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3147,6 +3640,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3169,6 +3664,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3178,7 +3675,11 @@ namespace CG
 	 * 		struct FGeometry                                   MyGeometry                                                 (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FFocusEvent                                 InFocusEvent                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	struct FEventReply UUserWidget::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
+	struct FEventReply UUserWidget::OnFocusReceived(
+const struct FGeometry& MyGeometry
+, 
+const struct FFocusEvent& InFocusEvent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3199,6 +3700,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3207,7 +3710,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FFocusEvent                                 InFocusEvent                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::OnFocusLost(const struct FFocusEvent& InFocusEvent)
+	void UUserWidget::OnFocusLost(
+const struct FFocusEvent& InFocusEvent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3224,6 +3729,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3234,7 +3741,13 @@ namespace CG
 	 * 		struct FPointerEvent                               PointerEvent                                               (Parm, NativeAccessSpecifierPublic)
 	 * 		class UDragDropOperation*                          Operation                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUserWidget::OnDrop(const struct FGeometry& MyGeometry, const struct FPointerEvent& PointerEvent, class UDragDropOperation* Operation)
+	bool UUserWidget::OnDrop(
+const struct FGeometry& MyGeometry
+, 
+const struct FPointerEvent& PointerEvent
+, 
+class UDragDropOperation* Operation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3257,6 +3770,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3267,7 +3782,13 @@ namespace CG
 	 * 		struct FPointerEvent                               PointerEvent                                               (Parm, NativeAccessSpecifierPublic)
 	 * 		class UDragDropOperation*                          Operation                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUserWidget::OnDragOver(const struct FGeometry& MyGeometry, const struct FPointerEvent& PointerEvent, class UDragDropOperation* Operation)
+	bool UUserWidget::OnDragOver(
+const struct FGeometry& MyGeometry
+, 
+const struct FPointerEvent& PointerEvent
+, 
+class UDragDropOperation* Operation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3290,6 +3811,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3299,7 +3822,11 @@ namespace CG
 	 * 		struct FPointerEvent                               PointerEvent                                               (Parm, NativeAccessSpecifierPublic)
 	 * 		class UDragDropOperation*                          Operation                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::OnDragLeave(const struct FPointerEvent& PointerEvent, class UDragDropOperation* Operation)
+	void UUserWidget::OnDragLeave(
+const struct FPointerEvent& PointerEvent
+, 
+class UDragDropOperation* Operation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3318,6 +3845,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3328,7 +3857,13 @@ namespace CG
 	 * 		struct FPointerEvent                               PointerEvent                                               (Parm, NativeAccessSpecifierPublic)
 	 * 		class UDragDropOperation*                          Operation                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::OnDragEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& PointerEvent, class UDragDropOperation* Operation)
+	void UUserWidget::OnDragEnter(
+const struct FGeometry& MyGeometry
+, 
+const struct FPointerEvent& PointerEvent
+, 
+class UDragDropOperation* Operation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3349,6 +3884,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3359,7 +3896,13 @@ namespace CG
 	 * 		struct FPointerEvent                               PointerEvent                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		class UDragDropOperation*                          Operation                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::OnDragDetected(const struct FGeometry& MyGeometry, const struct FPointerEvent& PointerEvent, class UDragDropOperation** Operation)
+	void UUserWidget::OnDragDetected(
+const struct FGeometry& MyGeometry
+, 
+const struct FPointerEvent& PointerEvent
+, 
+class UDragDropOperation** Operation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3382,6 +3925,8 @@ namespace CG
 			*Operation = params.Operation;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3391,7 +3936,11 @@ namespace CG
 	 * 		struct FPointerEvent                               PointerEvent                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		class UDragDropOperation*                          Operation                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::OnDragCancelled(const struct FPointerEvent& PointerEvent, class UDragDropOperation* Operation)
+	void UUserWidget::OnDragCancelled(
+const struct FPointerEvent& PointerEvent
+, 
+class UDragDropOperation* Operation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3410,6 +3959,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3418,7 +3969,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UWidgetAnimation*                            Animation                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::OnAnimationStarted(class UWidgetAnimation* Animation)
+	void UUserWidget::OnAnimationStarted(
+class UWidgetAnimation* Animation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3435,6 +3988,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3443,7 +3998,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UWidgetAnimation*                            Animation                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::OnAnimationFinished(class UWidgetAnimation* Animation)
+	void UUserWidget::OnAnimationFinished(
+class UWidgetAnimation* Animation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3460,6 +4017,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3469,7 +4028,11 @@ namespace CG
 	 * 		struct FGeometry                                   MyGeometry                                                 (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FAnalogInputEvent                           InAnalogInputEvent                                         (Parm, NativeAccessSpecifierPublic)
 	 */
-	struct FEventReply UUserWidget::OnAnalogValueChanged(const struct FGeometry& MyGeometry, const struct FAnalogInputEvent& InAnalogInputEvent)
+	struct FEventReply UUserWidget::OnAnalogValueChanged(
+const struct FGeometry& MyGeometry
+, 
+const struct FAnalogInputEvent& InAnalogInputEvent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3490,6 +4053,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3498,7 +4063,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FFocusEvent                                 InFocusEvent                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent)
+	void UUserWidget::OnAddedToFocusPath(
+const struct FFocusEvent& InFocusEvent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3515,6 +4082,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3526,7 +4095,15 @@ namespace CG
 	 * 		bool                                               bConsume                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FScriptDelegate                              Callback                                                   (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::ListenForInputAction(const class FName& ActionName, EInputEvent EventType, bool bConsume, const class FScriptDelegate& Callback)
+	void UUserWidget::ListenForInputAction(
+const class FName& ActionName
+, 
+EInputEvent EventType
+, 
+bool bConsume
+, 
+const class FScriptDelegate& Callback
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3548,6 +4125,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3572,6 +4151,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3580,7 +4161,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        ActionName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUserWidget::IsListeningForInputAction(const class FName& ActionName)
+	bool UUserWidget::IsListeningForInputAction(
+const class FName& ActionName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3598,6 +4181,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3622,6 +4207,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3644,6 +4231,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3668,6 +4257,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3676,7 +4267,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UWidgetAnimation*                            InAnimation                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUserWidget::IsAnimationPlayingForward(class UWidgetAnimation* InAnimation)
+	bool UUserWidget::IsAnimationPlayingForward(
+class UWidgetAnimation* InAnimation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3695,6 +4288,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3703,7 +4298,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UWidgetAnimation*                            InAnimation                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUserWidget::IsAnimationPlaying(class UWidgetAnimation* InAnimation)
+	bool UUserWidget::IsAnimationPlaying(
+class UWidgetAnimation* InAnimation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3721,6 +4318,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3745,6 +4344,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3767,6 +4368,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3791,6 +4394,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3799,7 +4404,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UWidgetAnimation*                            InAnimation                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float UUserWidget::GetAnimationCurrentTime(class UWidgetAnimation* InAnimation)
+	float UUserWidget::GetAnimationCurrentTime(
+class UWidgetAnimation* InAnimation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3817,6 +4424,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3841,6 +4450,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3864,6 +4475,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3884,6 +4497,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3906,6 +4521,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3926,6 +4543,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3948,6 +4567,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3957,7 +4578,11 @@ namespace CG
 	 * 		class UWidgetAnimation*                            Animation                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FScriptDelegate                              Delegate                                                   (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::BindToAnimationStarted(class UWidgetAnimation* Animation, const class FScriptDelegate& Delegate)
+	void UUserWidget::BindToAnimationStarted(
+class UWidgetAnimation* Animation
+, 
+const class FScriptDelegate& Delegate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3976,6 +4601,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3985,7 +4612,11 @@ namespace CG
 	 * 		class UWidgetAnimation*                            Animation                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FScriptDelegate                              Delegate                                                   (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::BindToAnimationFinished(class UWidgetAnimation* Animation, const class FScriptDelegate& Delegate)
+	void UUserWidget::BindToAnimationFinished(
+class UWidgetAnimation* Animation
+, 
+const class FScriptDelegate& Delegate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4004,6 +4635,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4015,7 +4648,15 @@ namespace CG
 	 * 		EWidgetAnimationEvent                              AnimationEvent                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FName                                        UserTag                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::BindToAnimationEvent(class UWidgetAnimation* Animation, const class FScriptDelegate& Delegate, EWidgetAnimationEvent AnimationEvent, const class FName& UserTag)
+	void UUserWidget::BindToAnimationEvent(
+class UWidgetAnimation* Animation
+, 
+const class FScriptDelegate& Delegate
+, 
+EWidgetAnimationEvent AnimationEvent
+, 
+const class FName& UserTag
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4038,6 +4679,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4046,7 +4689,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            ZOrder                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUserWidget::AddToViewport(int32_t ZOrder)
+	void UUserWidget::AddToViewport(
+int32_t ZOrder
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4063,6 +4708,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4071,7 +4718,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            ZOrder                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUserWidget::AddToPlayerScreen(int32_t ZOrder)
+	bool UUserWidget::AddToPlayerScreen(
+int32_t ZOrder
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4090,10 +4739,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UUserWidget.StaticClass
+	 * 		Name   -> PredefinedFunction UUserWidget.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UUserWidget::StaticClass()
@@ -4104,6 +4755,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4112,7 +4765,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      URL                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UAsyncTaskDownloadImage* UAsyncTaskDownloadImage::DownloadImage(const class FString& URL)
+	class UAsyncTaskDownloadImage* UAsyncTaskDownloadImage::DownloadImage(
+const class FString& URL
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4131,10 +4786,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAsyncTaskDownloadImage.StaticClass
+	 * 		Name   -> PredefinedFunction UAsyncTaskDownloadImage.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAsyncTaskDownloadImage::StaticClass()
@@ -4145,6 +4802,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4153,7 +4812,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UPanelWidget::RemoveChildAt(int32_t Index)
+	bool UPanelWidget::RemoveChildAt(
+int32_t Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4172,6 +4833,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4180,7 +4843,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UWidget*                                     Content                                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UPanelWidget::RemoveChild(class UWidget* Content)
+	bool UPanelWidget::RemoveChild(
+class UWidget* Content
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4199,6 +4864,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4207,7 +4874,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UWidget*                                     Content                                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UPanelWidget::HasChild(class UWidget* Content)
+	bool UPanelWidget::HasChild(
+class UWidget* Content
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4225,6 +4894,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4249,6 +4920,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4272,6 +4945,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4280,7 +4955,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UWidget*                                     Content                                                    (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UPanelWidget::GetChildIndex(class UWidget* Content)
+	int32_t UPanelWidget::GetChildIndex(
+class UWidget* Content
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4299,6 +4976,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4307,7 +4986,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UWidget* UPanelWidget::GetChildAt(int32_t Index)
+	class UWidget* UPanelWidget::GetChildAt(
+int32_t Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4325,6 +5006,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4349,6 +5032,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4370,6 +5055,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4378,7 +5065,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UWidget*                                     Content                                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UPanelSlot* UPanelWidget::AddChild(class UWidget* Content)
+	class UPanelSlot* UPanelWidget::AddChild(
+class UWidget* Content
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4397,10 +5086,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPanelWidget.StaticClass
+	 * 		Name   -> PredefinedFunction UPanelWidget.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPanelWidget::StaticClass()
@@ -4411,6 +5102,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4419,7 +5112,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UWidget*                                     Content                                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UPanelSlot* UContentWidget::SetContent(class UWidget* Content)
+	class UPanelSlot* UContentWidget::SetContent(
+class UWidget* Content
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4437,6 +5132,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4461,6 +5158,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4484,10 +5183,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UContentWidget.StaticClass
+	 * 		Name   -> PredefinedFunction UContentWidget.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UContentWidget::StaticClass()
@@ -4498,6 +5199,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4506,7 +5209,9 @@ namespace CG
 	 * Parameters:
 	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBackgroundBlur::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
+	void UBackgroundBlur::SetVerticalAlignment(
+EVerticalAlignment InVerticalAlignment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4523,6 +5228,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4531,7 +5238,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FMargin                                     InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UBackgroundBlur::SetPadding(const struct FMargin& InPadding)
+	void UBackgroundBlur::SetPadding(
+const struct FMargin& InPadding
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4548,6 +5257,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4556,7 +5267,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSlateBrush                                 InBrush                                                    (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UBackgroundBlur::SetLowQualityFallbackBrush(const struct FSlateBrush& InBrush)
+	void UBackgroundBlur::SetLowQualityFallbackBrush(
+const struct FSlateBrush& InBrush
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4573,6 +5286,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4581,7 +5296,9 @@ namespace CG
 	 * Parameters:
 	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBackgroundBlur::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
+	void UBackgroundBlur::SetHorizontalAlignment(
+EHorizontalAlignment InHorizontalAlignment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4598,6 +5315,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4606,7 +5325,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InStrength                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBackgroundBlur::SetBlurStrength(float InStrength)
+	void UBackgroundBlur::SetBlurStrength(
+float InStrength
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4623,6 +5344,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4631,7 +5354,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            InBlurRadius                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBackgroundBlur::SetBlurRadius(int32_t InBlurRadius)
+	void UBackgroundBlur::SetBlurRadius(
+int32_t InBlurRadius
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4648,6 +5373,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4656,7 +5383,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bInApplyAlphaToBlur                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBackgroundBlur::SetApplyAlphaToBlur(bool bInApplyAlphaToBlur)
+	void UBackgroundBlur::SetApplyAlphaToBlur(
+bool bInApplyAlphaToBlur
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4673,10 +5402,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBackgroundBlur.StaticClass
+	 * 		Name   -> PredefinedFunction UBackgroundBlur.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBackgroundBlur::StaticClass()
@@ -4687,10 +5418,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPanelSlot.StaticClass
+	 * 		Name   -> PredefinedFunction UPanelSlot.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPanelSlot::StaticClass()
@@ -4701,6 +5434,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4709,7 +5444,9 @@ namespace CG
 	 * Parameters:
 	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBackgroundBlurSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
+	void UBackgroundBlurSlot::SetVerticalAlignment(
+EVerticalAlignment InVerticalAlignment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4726,6 +5463,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4734,7 +5473,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FMargin                                     InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UBackgroundBlurSlot::SetPadding(const struct FMargin& InPadding)
+	void UBackgroundBlurSlot::SetPadding(
+const struct FMargin& InPadding
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4751,6 +5492,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4759,7 +5502,9 @@ namespace CG
 	 * Parameters:
 	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBackgroundBlurSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
+	void UBackgroundBlurSlot::SetHorizontalAlignment(
+EHorizontalAlignment InHorizontalAlignment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4776,10 +5521,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBackgroundBlurSlot.StaticClass
+	 * 		Name   -> PredefinedFunction UBackgroundBlurSlot.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBackgroundBlurSlot::StaticClass()
@@ -4790,10 +5537,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPropertyBinding.StaticClass
+	 * 		Name   -> PredefinedFunction UPropertyBinding.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPropertyBinding::StaticClass()
@@ -4803,6 +5552,8 @@ namespace CG
 			ptr = UObject::FindClass("Class UMG.PropertyBinding");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4827,10 +5578,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBoolBinding.StaticClass
+	 * 		Name   -> PredefinedFunction UBoolBinding.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBoolBinding::StaticClass()
@@ -4841,6 +5594,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4849,7 +5604,9 @@ namespace CG
 	 * Parameters:
 	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBorder::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
+	void UBorder::SetVerticalAlignment(
+EVerticalAlignment InVerticalAlignment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4866,6 +5623,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4874,7 +5633,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FMargin                                     InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UBorder::SetPadding(const struct FMargin& InPadding)
+	void UBorder::SetPadding(
+const struct FMargin& InPadding
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4891,6 +5652,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4899,7 +5662,9 @@ namespace CG
 	 * Parameters:
 	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBorder::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
+	void UBorder::SetHorizontalAlignment(
+EHorizontalAlignment InHorizontalAlignment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4916,6 +5681,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4924,7 +5691,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector2D                                   InScale                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBorder::SetDesiredSizeScale(const struct FVector2D& InScale)
+	void UBorder::SetDesiredSizeScale(
+const struct FVector2D& InScale
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4941,6 +5710,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4949,7 +5720,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FLinearColor                                InContentColorAndOpacity                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBorder::SetContentColorAndOpacity(const struct FLinearColor& InContentColorAndOpacity)
+	void UBorder::SetContentColorAndOpacity(
+const struct FLinearColor& InContentColorAndOpacity
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4966,6 +5739,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4974,7 +5749,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UTexture2D*                                  Texture                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBorder::SetBrushFromTexture(class UTexture2D* Texture)
+	void UBorder::SetBrushFromTexture(
+class UTexture2D* Texture
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4991,6 +5768,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4999,7 +5778,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UMaterialInterface*                          Material                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBorder::SetBrushFromMaterial(class UMaterialInterface* Material)
+	void UBorder::SetBrushFromMaterial(
+class UMaterialInterface* Material
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5016,6 +5797,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5024,7 +5807,9 @@ namespace CG
 	 * Parameters:
 	 * 		class USlateBrushAsset*                            Asset                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBorder::SetBrushFromAsset(class USlateBrushAsset* Asset)
+	void UBorder::SetBrushFromAsset(
+class USlateBrushAsset* Asset
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5041,6 +5826,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5049,7 +5836,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FLinearColor                                InBrushColor                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBorder::SetBrushColor(const struct FLinearColor& InBrushColor)
+	void UBorder::SetBrushColor(
+const struct FLinearColor& InBrushColor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5066,6 +5855,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5074,7 +5865,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSlateBrush                                 InBrush                                                    (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UBorder::SetBrush(const struct FSlateBrush& InBrush)
+	void UBorder::SetBrush(
+const struct FSlateBrush& InBrush
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5090,6 +5883,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5114,10 +5909,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBorder.StaticClass
+	 * 		Name   -> PredefinedFunction UBorder.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBorder::StaticClass()
@@ -5128,6 +5925,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5136,7 +5935,9 @@ namespace CG
 	 * Parameters:
 	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBorderSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
+	void UBorderSlot::SetVerticalAlignment(
+EVerticalAlignment InVerticalAlignment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5153,6 +5954,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5161,7 +5964,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FMargin                                     InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UBorderSlot::SetPadding(const struct FMargin& InPadding)
+	void UBorderSlot::SetPadding(
+const struct FMargin& InPadding
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5178,6 +5983,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5186,7 +5993,9 @@ namespace CG
 	 * Parameters:
 	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBorderSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
+	void UBorderSlot::SetHorizontalAlignment(
+EHorizontalAlignment InHorizontalAlignment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5203,10 +6012,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBorderSlot.StaticClass
+	 * 		Name   -> PredefinedFunction UBorderSlot.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBorderSlot::StaticClass()
@@ -5216,6 +6027,8 @@ namespace CG
 			ptr = UObject::FindClass("Class UMG.BorderSlot");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5240,10 +6053,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBrushBinding.StaticClass
+	 * 		Name   -> PredefinedFunction UBrushBinding.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBrushBinding::StaticClass()
@@ -5254,6 +6069,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5262,7 +6079,9 @@ namespace CG
 	 * Parameters:
 	 * 		EButtonTouchMethod                                 InTouchMethod                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UButton::SetTouchMethod(EButtonTouchMethod InTouchMethod)
+	void UButton::SetTouchMethod(
+EButtonTouchMethod InTouchMethod
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5279,6 +6098,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5287,7 +6108,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FButtonStyle                                InStyle                                                    (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UButton::SetStyle(const struct FButtonStyle& InStyle)
+	void UButton::SetStyle(
+const struct FButtonStyle& InStyle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5304,6 +6127,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5312,7 +6137,9 @@ namespace CG
 	 * Parameters:
 	 * 		EButtonPressMethod                                 InPressMethod                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UButton::SetPressMethod(EButtonPressMethod InPressMethod)
+	void UButton::SetPressMethod(
+EButtonPressMethod InPressMethod
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5329,6 +6156,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5337,7 +6166,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FLinearColor                                InColorAndOpacity                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UButton::SetColorAndOpacity(const struct FLinearColor& InColorAndOpacity)
+	void UButton::SetColorAndOpacity(
+const struct FLinearColor& InColorAndOpacity
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5354,6 +6185,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5362,7 +6195,9 @@ namespace CG
 	 * Parameters:
 	 * 		EButtonClickMethod                                 InClickMethod                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UButton::SetClickMethod(EButtonClickMethod InClickMethod)
+	void UButton::SetClickMethod(
+EButtonClickMethod InClickMethod
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5379,6 +6214,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5387,7 +6224,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FLinearColor                                InBackgroundColor                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UButton::SetBackgroundColor(const struct FLinearColor& InBackgroundColor)
+	void UButton::SetBackgroundColor(
+const struct FLinearColor& InBackgroundColor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5403,6 +6242,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5427,10 +6268,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UButton.StaticClass
+	 * 		Name   -> PredefinedFunction UButton.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UButton::StaticClass()
@@ -5441,6 +6284,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5449,7 +6294,9 @@ namespace CG
 	 * Parameters:
 	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UButtonSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
+	void UButtonSlot::SetVerticalAlignment(
+EVerticalAlignment InVerticalAlignment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5466,6 +6313,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5474,7 +6323,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FMargin                                     InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UButtonSlot::SetPadding(const struct FMargin& InPadding)
+	void UButtonSlot::SetPadding(
+const struct FMargin& InPadding
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5491,6 +6342,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5499,7 +6352,9 @@ namespace CG
 	 * Parameters:
 	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UButtonSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
+	void UButtonSlot::SetHorizontalAlignment(
+EHorizontalAlignment InHorizontalAlignment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5516,10 +6371,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UButtonSlot.StaticClass
+	 * 		Name   -> PredefinedFunction UButtonSlot.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UButtonSlot::StaticClass()
@@ -5530,6 +6387,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5538,7 +6397,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UWidget*                                     Content                                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UCanvasPanelSlot* UCanvasPanel::AddChildToCanvas(class UWidget* Content)
+	class UCanvasPanelSlot* UCanvasPanel::AddChildToCanvas(
+class UWidget* Content
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5557,10 +6418,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UCanvasPanel.StaticClass
+	 * 		Name   -> PredefinedFunction UCanvasPanel.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UCanvasPanel::StaticClass()
@@ -5571,6 +6434,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5579,7 +6444,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            InZOrder                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UCanvasPanelSlot::SetZOrder(int32_t InZOrder)
+	void UCanvasPanelSlot::SetZOrder(
+int32_t InZOrder
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5596,6 +6463,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5604,7 +6473,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector2D                                   InSize                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UCanvasPanelSlot::SetSize(const struct FVector2D& InSize)
+	void UCanvasPanelSlot::SetSize(
+const struct FVector2D& InSize
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5621,6 +6492,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5629,7 +6502,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector2D                                   InPosition                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UCanvasPanelSlot::SetPosition(const struct FVector2D& InPosition)
+	void UCanvasPanelSlot::SetPosition(
+const struct FVector2D& InPosition
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5646,6 +6521,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5654,7 +6531,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FMargin                                     InOffset                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UCanvasPanelSlot::SetOffsets(const struct FMargin& InOffset)
+	void UCanvasPanelSlot::SetOffsets(
+const struct FMargin& InOffset
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5671,6 +6550,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5679,7 +6560,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector2D                                   InMinimumAnchors                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UCanvasPanelSlot::SetMinimum(const struct FVector2D& InMinimumAnchors)
+	void UCanvasPanelSlot::SetMinimum(
+const struct FVector2D& InMinimumAnchors
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5696,6 +6579,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5704,7 +6589,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector2D                                   InMaximumAnchors                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UCanvasPanelSlot::SetMaximum(const struct FVector2D& InMaximumAnchors)
+	void UCanvasPanelSlot::SetMaximum(
+const struct FVector2D& InMaximumAnchors
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5721,6 +6608,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5729,7 +6618,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FAnchorData                                 InLayoutData                                               (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UCanvasPanelSlot::SetLayout(const struct FAnchorData& InLayoutData)
+	void UCanvasPanelSlot::SetLayout(
+const struct FAnchorData& InLayoutData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5746,6 +6637,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5754,7 +6647,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               InbAutoSize                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UCanvasPanelSlot::SetAutoSize(bool InbAutoSize)
+	void UCanvasPanelSlot::SetAutoSize(
+bool InbAutoSize
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5771,6 +6666,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5779,7 +6676,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FAnchors                                    InAnchors                                                  (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UCanvasPanelSlot::SetAnchors(const struct FAnchors& InAnchors)
+	void UCanvasPanelSlot::SetAnchors(
+const struct FAnchors& InAnchors
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5796,6 +6695,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5804,7 +6705,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector2D                                   InAlignment                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UCanvasPanelSlot::SetAlignment(const struct FVector2D& InAlignment)
+	void UCanvasPanelSlot::SetAlignment(
+const struct FVector2D& InAlignment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5820,6 +6723,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5844,6 +6749,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5866,6 +6773,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5890,6 +6799,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5912,6 +6823,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5936,6 +6849,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5958,6 +6873,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5982,6 +6899,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6005,10 +6924,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UCanvasPanelSlot.StaticClass
+	 * 		Name   -> PredefinedFunction UCanvasPanelSlot.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UCanvasPanelSlot::StaticClass()
@@ -6019,6 +6940,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6027,7 +6950,9 @@ namespace CG
 	 * Parameters:
 	 * 		EButtonTouchMethod                                 InTouchMethod                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UCheckBox::SetTouchMethod(EButtonTouchMethod InTouchMethod)
+	void UCheckBox::SetTouchMethod(
+EButtonTouchMethod InTouchMethod
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6044,6 +6969,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6052,7 +6979,9 @@ namespace CG
 	 * Parameters:
 	 * 		EButtonPressMethod                                 InPressMethod                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UCheckBox::SetPressMethod(EButtonPressMethod InPressMethod)
+	void UCheckBox::SetPressMethod(
+EButtonPressMethod InPressMethod
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6069,6 +6998,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6077,7 +7008,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               InIsChecked                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UCheckBox::SetIsChecked(bool InIsChecked)
+	void UCheckBox::SetIsChecked(
+bool InIsChecked
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6094,6 +7027,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6102,7 +7037,9 @@ namespace CG
 	 * Parameters:
 	 * 		EButtonClickMethod                                 InClickMethod                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UCheckBox::SetClickMethod(EButtonClickMethod InClickMethod)
+	void UCheckBox::SetClickMethod(
+EButtonClickMethod InClickMethod
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6119,6 +7056,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6127,7 +7066,9 @@ namespace CG
 	 * Parameters:
 	 * 		ECheckBoxState                                     InCheckedState                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UCheckBox::SetCheckedState(ECheckBoxState InCheckedState)
+	void UCheckBox::SetCheckedState(
+ECheckBoxState InCheckedState
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6143,6 +7084,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -6167,6 +7110,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6189,6 +7134,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -6213,10 +7160,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UCheckBox.StaticClass
+	 * 		Name   -> PredefinedFunction UCheckBox.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UCheckBox::StaticClass()
@@ -6226,6 +7175,8 @@ namespace CG
 			ptr = UObject::FindClass("Class UMG.CheckBox");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -6250,10 +7201,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UCheckedStateBinding.StaticClass
+	 * 		Name   -> PredefinedFunction UCheckedStateBinding.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UCheckedStateBinding::StaticClass()
@@ -6264,6 +7217,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6272,7 +7227,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InRadius                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UCircularThrobber::SetRadius(float InRadius)
+	void UCircularThrobber::SetRadius(
+float InRadius
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6289,6 +7246,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6297,7 +7256,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InPeriod                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UCircularThrobber::SetPeriod(float InPeriod)
+	void UCircularThrobber::SetPeriod(
+float InPeriod
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6314,6 +7275,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6322,7 +7285,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            InNumberOfPieces                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UCircularThrobber::SetNumberOfPieces(int32_t InNumberOfPieces)
+	void UCircularThrobber::SetNumberOfPieces(
+int32_t InNumberOfPieces
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6339,10 +7304,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UCircularThrobber.StaticClass
+	 * 		Name   -> PredefinedFunction UCircularThrobber.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UCircularThrobber::StaticClass()
@@ -6352,6 +7319,8 @@ namespace CG
 			ptr = UObject::FindClass("Class UMG.CircularThrobber");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -6376,6 +7345,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6399,10 +7370,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UColorBinding.StaticClass
+	 * 		Name   -> PredefinedFunction UColorBinding.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UColorBinding::StaticClass()
@@ -6413,10 +7386,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UComboBox.StaticClass
+	 * 		Name   -> PredefinedFunction UComboBox.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UComboBox::StaticClass()
@@ -6427,6 +7402,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6435,7 +7412,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Option                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UComboBoxString::SetSelectedOption(const class FString& Option)
+	void UComboBoxString::SetSelectedOption(
+const class FString& Option
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6452,6 +7431,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6460,7 +7441,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Index                                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UComboBoxString::SetSelectedIndex(int32_t Index)
+	void UComboBoxString::SetSelectedIndex(
+int32_t Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6477,6 +7460,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6485,7 +7470,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Option                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UComboBoxString::RemoveOption(const class FString& Option)
+	bool UComboBoxString::RemoveOption(
+const class FString& Option
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6503,6 +7490,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -6525,6 +7514,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6534,7 +7525,11 @@ namespace CG
 	 * 		class FString                                      SelectedItem                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ESelectInfo                                        SelectionType                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UComboBoxString::OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
+	void UComboBoxString::OnSelectionChangedEvent__DelegateSignature(
+const class FString& SelectedItem
+, 
+ESelectInfo SelectionType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6552,6 +7547,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -6573,6 +7570,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -6597,6 +7596,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6619,6 +7620,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -6643,6 +7646,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6666,6 +7671,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6674,7 +7681,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UComboBoxString::GetOptionAtIndex(int32_t Index)
+	class FString UComboBoxString::GetOptionAtIndex(
+int32_t Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6693,6 +7702,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6701,7 +7712,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Option                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UComboBoxString::FindOptionIndex(const class FString& Option)
+	int32_t UComboBoxString::FindOptionIndex(
+const class FString& Option
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6719,6 +7732,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -6741,6 +7756,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6762,6 +7779,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6770,7 +7789,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Option                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UComboBoxString::AddOption(const class FString& Option)
+	void UComboBoxString::AddOption(
+const class FString& Option
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6787,10 +7808,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UComboBoxString.StaticClass
+	 * 		Name   -> PredefinedFunction UComboBoxString.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UComboBoxString::StaticClass()
@@ -6801,6 +7824,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6809,7 +7834,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FPointerEvent                               PointerEvent                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UDragDropOperation::Drop(const struct FPointerEvent& PointerEvent)
+	void UDragDropOperation::Drop(
+const struct FPointerEvent& PointerEvent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6826,6 +7853,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6834,7 +7863,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FPointerEvent                               PointerEvent                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UDragDropOperation::Dragged(const struct FPointerEvent& PointerEvent)
+	void UDragDropOperation::Dragged(
+const struct FPointerEvent& PointerEvent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6851,6 +7882,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6859,7 +7892,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FPointerEvent                               PointerEvent                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UDragDropOperation::DragCancelled(const struct FPointerEvent& PointerEvent)
+	void UDragDropOperation::DragCancelled(
+const struct FPointerEvent& PointerEvent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6876,10 +7911,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDragDropOperation.StaticClass
+	 * 		Name   -> PredefinedFunction UDragDropOperation.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDragDropOperation::StaticClass()
@@ -6890,6 +7927,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6898,7 +7937,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FRadialBoxSettings                          InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UDynamicEntryBoxBase::SetRadialSettings(const struct FRadialBoxSettings& InSettings)
+	void UDynamicEntryBoxBase::SetRadialSettings(
+const struct FRadialBoxSettings& InSettings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6915,6 +7956,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6923,7 +7966,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector2D                                   InEntrySpacing                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UDynamicEntryBoxBase::SetEntrySpacing(const struct FVector2D& InEntrySpacing)
+	void UDynamicEntryBoxBase::SetEntrySpacing(
+const struct FVector2D& InEntrySpacing
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6939,6 +7984,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -6963,6 +8010,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6986,10 +8035,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDynamicEntryBoxBase.StaticClass
+	 * 		Name   -> PredefinedFunction UDynamicEntryBoxBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDynamicEntryBoxBase::StaticClass()
@@ -7000,6 +8051,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7008,7 +8061,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bDeleteWidgets                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UDynamicEntryBox::Reset(bool bDeleteWidgets)
+	void UDynamicEntryBox::Reset(
+bool bDeleteWidgets
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7025,6 +8080,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7033,7 +8090,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UUserWidget*                                 EntryWidget                                                (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UDynamicEntryBox::RemoveEntry(class UUserWidget* EntryWidget)
+	void UDynamicEntryBox::RemoveEntry(
+class UUserWidget* EntryWidget
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7050,6 +8109,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7058,7 +8119,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UClass*                                      EntryClass                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UUserWidget* UDynamicEntryBox::BP_CreateEntryOfClass(class UClass* EntryClass)
+	class UUserWidget* UDynamicEntryBox::BP_CreateEntryOfClass(
+class UClass* EntryClass
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7076,6 +8139,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7100,10 +8165,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDynamicEntryBox.StaticClass
+	 * 		Name   -> PredefinedFunction UDynamicEntryBox.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDynamicEntryBox::StaticClass()
@@ -7114,6 +8181,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7122,7 +8191,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FText                                        InText                                                     (Parm, NativeAccessSpecifierPublic)
 	 */
-	void UEditableText::SetText(const class FText& InText)
+	void UEditableText::SetText(
+const class FText& InText
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7139,6 +8210,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7147,7 +8220,9 @@ namespace CG
 	 * Parameters:
 	 * 		ETextJustify                                       InJustification                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEditableText::SetJustification(ETextJustify InJustification)
+	void UEditableText::SetJustification(
+ETextJustify InJustification
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7164,6 +8239,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7172,7 +8249,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               InbIsReadyOnly                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEditableText::SetIsReadOnly(bool InbIsReadyOnly)
+	void UEditableText::SetIsReadOnly(
+bool InbIsReadyOnly
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7189,6 +8268,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7197,7 +8278,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               InbIsPassword                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEditableText::SetIsPassword(bool InbIsPassword)
+	void UEditableText::SetIsPassword(
+bool InbIsPassword
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7214,6 +8297,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7222,7 +8307,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FText                                        InHintText                                                 (Parm, NativeAccessSpecifierPublic)
 	 */
-	void UEditableText::SetHintText(const class FText& InHintText)
+	void UEditableText::SetHintText(
+const class FText& InHintText
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7239,6 +8326,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7248,7 +8337,11 @@ namespace CG
 	 * 		class FText                                        Text                                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		ETextCommit                                        CommitMethod                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEditableText::OnEditableTextCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
+	void UEditableText::OnEditableTextCommittedEvent__DelegateSignature(
+const class FText& Text
+, 
+ETextCommit CommitMethod
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7267,6 +8360,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7275,7 +8370,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FText                                        Text                                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UEditableText::OnEditableTextChangedEvent__DelegateSignature(const class FText& Text)
+	void UEditableText::OnEditableTextChangedEvent__DelegateSignature(
+const class FText& Text
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7291,6 +8388,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7315,10 +8414,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEditableText.StaticClass
+	 * 		Name   -> PredefinedFunction UEditableText.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEditableText::StaticClass()
@@ -7329,6 +8430,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7337,7 +8440,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FText                                        InText                                                     (Parm, NativeAccessSpecifierPublic)
 	 */
-	void UEditableTextBox::SetText(const class FText& InText)
+	void UEditableTextBox::SetText(
+const class FText& InText
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7354,6 +8459,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7362,7 +8469,9 @@ namespace CG
 	 * Parameters:
 	 * 		ETextJustify                                       InJustification                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEditableTextBox::SetJustification(ETextJustify InJustification)
+	void UEditableTextBox::SetJustification(
+ETextJustify InJustification
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7379,6 +8488,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7387,7 +8498,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bReadOnly                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEditableTextBox::SetIsReadOnly(bool bReadOnly)
+	void UEditableTextBox::SetIsReadOnly(
+bool bReadOnly
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7404,6 +8517,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7412,7 +8527,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bIsPassword                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEditableTextBox::SetIsPassword(bool bIsPassword)
+	void UEditableTextBox::SetIsPassword(
+bool bIsPassword
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7429,6 +8546,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7437,7 +8556,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FText                                        InText                                                     (Parm, NativeAccessSpecifierPublic)
 	 */
-	void UEditableTextBox::SetHintText(const class FText& InText)
+	void UEditableTextBox::SetHintText(
+const class FText& InText
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7454,6 +8575,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7462,7 +8585,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FText                                        InError                                                    (Parm, NativeAccessSpecifierPublic)
 	 */
-	void UEditableTextBox::SetError(const class FText& InError)
+	void UEditableTextBox::SetError(
+const class FText& InError
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7479,6 +8604,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7488,7 +8615,11 @@ namespace CG
 	 * 		class FText                                        Text                                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		ETextCommit                                        CommitMethod                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEditableTextBox::OnEditableTextBoxCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
+	void UEditableTextBox::OnEditableTextBoxCommittedEvent__DelegateSignature(
+const class FText& Text
+, 
+ETextCommit CommitMethod
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7507,6 +8638,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7515,7 +8648,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FText                                        Text                                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UEditableTextBox::OnEditableTextBoxChangedEvent__DelegateSignature(const class FText& Text)
+	void UEditableTextBox::OnEditableTextBoxChangedEvent__DelegateSignature(
+const class FText& Text
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7531,6 +8666,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7555,6 +8692,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7578,6 +8717,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7599,10 +8740,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEditableTextBox.StaticClass
+	 * 		Name   -> PredefinedFunction UEditableTextBox.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEditableTextBox::StaticClass()
@@ -7613,6 +8756,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7621,7 +8766,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               IsExpanded                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UExpandableArea::SetIsExpanded_Animated(bool IsExpanded)
+	void UExpandableArea::SetIsExpanded_Animated(
+bool IsExpanded
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7638,6 +8785,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7646,7 +8795,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               IsExpanded                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UExpandableArea::SetIsExpanded(bool IsExpanded)
+	void UExpandableArea::SetIsExpanded(
+bool IsExpanded
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7662,6 +8813,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7686,10 +8839,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UExpandableArea.StaticClass
+	 * 		Name   -> PredefinedFunction UExpandableArea.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UExpandableArea::StaticClass()
@@ -7699,6 +8854,8 @@ namespace CG
 			ptr = UObject::FindClass("Class UMG.ExpandableArea");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7723,10 +8880,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UFloatBinding.StaticClass
+	 * 		Name   -> PredefinedFunction UFloatBinding.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UFloatBinding::StaticClass()
@@ -7737,6 +8896,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7746,7 +8907,11 @@ namespace CG
 	 * 		int32_t                                            ColumnIndex                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Coefficient                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGridPanel::SetRowFill(int32_t ColumnIndex, float Coefficient)
+	void UGridPanel::SetRowFill(
+int32_t ColumnIndex
+, 
+float Coefficient
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7765,6 +8930,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7774,7 +8941,11 @@ namespace CG
 	 * 		int32_t                                            ColumnIndex                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Coefficient                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGridPanel::SetColumnFill(int32_t ColumnIndex, float Coefficient)
+	void UGridPanel::SetColumnFill(
+int32_t ColumnIndex
+, 
+float Coefficient
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7793,6 +8964,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7803,7 +8976,13 @@ namespace CG
 	 * 		int32_t                                            InRow                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            InColumn                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UGridSlot* UGridPanel::AddChildToGrid(class UWidget* Content, int32_t InRow, int32_t InColumn)
+	class UGridSlot* UGridPanel::AddChildToGrid(
+class UWidget* Content
+, 
+int32_t InRow
+, 
+int32_t InColumn
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7826,10 +9005,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGridPanel.StaticClass
+	 * 		Name   -> PredefinedFunction UGridPanel.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGridPanel::StaticClass()
@@ -7840,6 +9021,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7848,7 +9031,9 @@ namespace CG
 	 * Parameters:
 	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGridSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
+	void UGridSlot::SetVerticalAlignment(
+EVerticalAlignment InVerticalAlignment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7865,6 +9050,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7873,7 +9060,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            InRowSpan                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGridSlot::SetRowSpan(int32_t InRowSpan)
+	void UGridSlot::SetRowSpan(
+int32_t InRowSpan
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7890,6 +9079,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7898,7 +9089,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            InRow                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGridSlot::SetRow(int32_t InRow)
+	void UGridSlot::SetRow(
+int32_t InRow
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7915,6 +9108,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7923,7 +9118,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FMargin                                     InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UGridSlot::SetPadding(const struct FMargin& InPadding)
+	void UGridSlot::SetPadding(
+const struct FMargin& InPadding
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7940,6 +9137,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7948,7 +9147,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector2D                                   InNudge                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGridSlot::SetNudge(const struct FVector2D& InNudge)
+	void UGridSlot::SetNudge(
+const struct FVector2D& InNudge
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7965,6 +9166,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7973,7 +9176,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            InLayer                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGridSlot::SetLayer(int32_t InLayer)
+	void UGridSlot::SetLayer(
+int32_t InLayer
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7990,6 +9195,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7998,7 +9205,9 @@ namespace CG
 	 * Parameters:
 	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGridSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
+	void UGridSlot::SetHorizontalAlignment(
+EHorizontalAlignment InHorizontalAlignment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8015,6 +9224,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8023,7 +9234,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            InColumnSpan                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGridSlot::SetColumnSpan(int32_t InColumnSpan)
+	void UGridSlot::SetColumnSpan(
+int32_t InColumnSpan
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8040,6 +9253,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8048,7 +9263,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            InColumn                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGridSlot::SetColumn(int32_t InColumn)
+	void UGridSlot::SetColumn(
+int32_t InColumn
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8065,10 +9282,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGridSlot.StaticClass
+	 * 		Name   -> PredefinedFunction UGridSlot.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGridSlot::StaticClass()
@@ -8079,6 +9298,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8087,7 +9308,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UWidget*                                     Content                                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UHorizontalBoxSlot* UHorizontalBox::AddChildToHorizontalBox(class UWidget* Content)
+	class UHorizontalBoxSlot* UHorizontalBox::AddChildToHorizontalBox(
+class UWidget* Content
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8106,10 +9329,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UHorizontalBox.StaticClass
+	 * 		Name   -> PredefinedFunction UHorizontalBox.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UHorizontalBox::StaticClass()
@@ -8120,6 +9345,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8128,7 +9355,9 @@ namespace CG
 	 * Parameters:
 	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UHorizontalBoxSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
+	void UHorizontalBoxSlot::SetVerticalAlignment(
+EVerticalAlignment InVerticalAlignment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8145,6 +9374,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8153,7 +9384,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSlateChildSize                             InSize                                                     (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UHorizontalBoxSlot::SetSize(const struct FSlateChildSize& InSize)
+	void UHorizontalBoxSlot::SetSize(
+const struct FSlateChildSize& InSize
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8170,6 +9403,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8178,7 +9413,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FMargin                                     InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UHorizontalBoxSlot::SetPadding(const struct FMargin& InPadding)
+	void UHorizontalBoxSlot::SetPadding(
+const struct FMargin& InPadding
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8195,6 +9432,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8203,7 +9442,9 @@ namespace CG
 	 * Parameters:
 	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UHorizontalBoxSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
+	void UHorizontalBoxSlot::SetHorizontalAlignment(
+EHorizontalAlignment InHorizontalAlignment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8220,10 +9461,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UHorizontalBoxSlot.StaticClass
+	 * 		Name   -> PredefinedFunction UHorizontalBoxSlot.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UHorizontalBoxSlot::StaticClass()
@@ -8234,6 +9477,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8242,7 +9487,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InOpacity                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UImage::SetOpacity(float InOpacity)
+	void UImage::SetOpacity(
+float InOpacity
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8259,6 +9506,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8267,7 +9516,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FLinearColor                                InColorAndOpacity                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UImage::SetColorAndOpacity(const struct FLinearColor& InColorAndOpacity)
+	void UImage::SetColorAndOpacity(
+const struct FLinearColor& InColorAndOpacity
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8284,6 +9535,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8292,7 +9545,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSlateColor                                 TintColor                                                  (Parm, NativeAccessSpecifierPublic)
 	 */
-	void UImage::SetBrushTintColor(const struct FSlateColor& TintColor)
+	void UImage::SetBrushTintColor(
+const struct FSlateColor& TintColor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8309,6 +9564,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8317,7 +9574,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector2D                                   DesiredSize                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UImage::SetBrushSize(const struct FVector2D& DesiredSize)
+	void UImage::SetBrushSize(
+const struct FVector2D& DesiredSize
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8334,6 +9593,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8342,7 +9603,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     ResourceObject                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UImage::SetBrushResourceObject(class UObject* ResourceObject)
+	void UImage::SetBrushResourceObject(
+class UObject* ResourceObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8359,6 +9622,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8368,7 +9633,11 @@ namespace CG
 	 * 		class UTexture2DDynamic*                           Texture                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bMatchSize                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UImage::SetBrushFromTextureDynamic(class UTexture2DDynamic* Texture, bool bMatchSize)
+	void UImage::SetBrushFromTextureDynamic(
+class UTexture2DDynamic* Texture
+, 
+bool bMatchSize
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8387,6 +9656,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8396,7 +9667,11 @@ namespace CG
 	 * 		class UTexture2D*                                  Texture                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bMatchSize                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UImage::SetBrushFromTexture(class UTexture2D* Texture, bool bMatchSize)
+	void UImage::SetBrushFromTexture(
+class UTexture2D* Texture
+, 
+bool bMatchSize
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8415,6 +9690,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8423,7 +9700,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bMatchSize                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UImage::SetBrushFromSoftTexture(bool bMatchSize)
+	void UImage::SetBrushFromSoftTexture(
+bool bMatchSize
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8439,6 +9718,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -8461,6 +9742,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8469,7 +9752,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UMaterialInterface*                          Material                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UImage::SetBrushFromMaterial(class UMaterialInterface* Material)
+	void UImage::SetBrushFromMaterial(
+class UMaterialInterface* Material
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8486,6 +9771,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8494,7 +9781,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bMatchSize                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UImage::SetBrushFromAtlasInterface(bool bMatchSize)
+	void UImage::SetBrushFromAtlasInterface(
+bool bMatchSize
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8511,6 +9800,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8519,7 +9810,9 @@ namespace CG
 	 * Parameters:
 	 * 		class USlateBrushAsset*                            Asset                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UImage::SetBrushFromAsset(class USlateBrushAsset* Asset)
+	void UImage::SetBrushFromAsset(
+class USlateBrushAsset* Asset
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8536,6 +9829,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8544,7 +9839,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSlateBrush                                 InBrush                                                    (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UImage::SetBrush(const struct FSlateBrush& InBrush)
+	void UImage::SetBrush(
+const struct FSlateBrush& InBrush
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8560,6 +9857,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -8584,10 +9883,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UImage.StaticClass
+	 * 		Name   -> PredefinedFunction UImage.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UImage::StaticClass()
@@ -8598,6 +9899,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8606,7 +9909,9 @@ namespace CG
 	 * Parameters:
 	 * 		ESlateVisibility                                   InVisibility                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UInputKeySelector::SetTextBlockVisibility(ESlateVisibility InVisibility)
+	void UInputKeySelector::SetTextBlockVisibility(
+ESlateVisibility InVisibility
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8623,6 +9928,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8631,7 +9938,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FInputChord                                 InSelectedKey                                              (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UInputKeySelector::SetSelectedKey(const struct FInputChord& InSelectedKey)
+	void UInputKeySelector::SetSelectedKey(
+const struct FInputChord& InSelectedKey
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8648,6 +9957,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8656,7 +9967,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FText                                        InNoKeySpecifiedText                                       (Parm, NativeAccessSpecifierPublic)
 	 */
-	void UInputKeySelector::SetNoKeySpecifiedText(const class FText& InNoKeySpecifiedText)
+	void UInputKeySelector::SetNoKeySpecifiedText(
+const class FText& InNoKeySpecifiedText
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8673,6 +9986,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8681,7 +9996,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FText                                        InKeySelectionText                                         (Parm, NativeAccessSpecifierPublic)
 	 */
-	void UInputKeySelector::SetKeySelectionText(const class FText& InKeySelectionText)
+	void UInputKeySelector::SetKeySelectionText(
+const class FText& InKeySelectionText
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8698,6 +10015,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8706,7 +10025,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<struct FKey>                                InKeys                                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UInputKeySelector::SetEscapeKeys(TArray<struct FKey> InKeys)
+	void UInputKeySelector::SetEscapeKeys(
+TArray<struct FKey> InKeys
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8723,6 +10044,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8731,7 +10054,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bInAllowModifierKeys                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UInputKeySelector::SetAllowModifierKeys(bool bInAllowModifierKeys)
+	void UInputKeySelector::SetAllowModifierKeys(
+bool bInAllowModifierKeys
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8748,6 +10073,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8756,7 +10083,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bInAllowGamepadKeys                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UInputKeySelector::SetAllowGamepadKeys(bool bInAllowGamepadKeys)
+	void UInputKeySelector::SetAllowGamepadKeys(
+bool bInAllowGamepadKeys
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8773,6 +10102,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8781,7 +10112,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FInputChord                                 SelectedKey                                                (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UInputKeySelector::OnKeySelected__DelegateSignature(const struct FInputChord& SelectedKey)
+	void UInputKeySelector::OnKeySelected__DelegateSignature(
+const struct FInputChord& SelectedKey
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8797,6 +10130,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -8818,6 +10153,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -8842,10 +10179,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UInputKeySelector.StaticClass
+	 * 		Name   -> PredefinedFunction UInputKeySelector.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UInputKeySelector::StaticClass()
@@ -8855,6 +10194,8 @@ namespace CG
 			ptr = UObject::FindClass("Class UMG.InputKeySelector");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -8879,10 +10220,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UInt32Binding.StaticClass
+	 * 		Name   -> PredefinedFunction UInt32Binding.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UInt32Binding::StaticClass()
@@ -8893,6 +10236,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8901,7 +10246,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               CanCache                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UInvalidationBox::SetCanCache(bool CanCache)
+	void UInvalidationBox::SetCanCache(
+bool CanCache
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8917,6 +10264,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -8938,6 +10287,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -8962,10 +10313,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UInvalidationBox.StaticClass
+	 * 		Name   -> PredefinedFunction UInvalidationBox.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UInvalidationBox::StaticClass()
@@ -8976,6 +10329,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8984,7 +10339,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bIsSelected                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUserListEntry::BP_OnItemSelectionChanged(bool bIsSelected)
+	void UUserListEntry::BP_OnItemSelectionChanged(
+bool bIsSelected
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9001,6 +10358,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9009,7 +10368,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bIsExpanded                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUserListEntry::BP_OnItemExpansionChanged(bool bIsExpanded)
+	void UUserListEntry::BP_OnItemExpansionChanged(
+bool bIsExpanded
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9025,6 +10386,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -9047,10 +10410,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UUserListEntry.StaticClass
+	 * 		Name   -> PredefinedFunction UUserListEntry.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UUserListEntry::StaticClass()
@@ -9060,6 +10425,8 @@ namespace CG
 			ptr = UObject::FindClass("Class UMG.UserListEntry");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -9084,6 +10451,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9106,6 +10475,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -9130,10 +10501,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UUserListEntryLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UUserListEntryLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UUserListEntryLibrary::StaticClass()
@@ -9144,6 +10517,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9152,7 +10527,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     ListItemObject                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUserObjectListEntry::OnListItemObjectSet(class UObject* ListItemObject)
+	void UUserObjectListEntry::OnListItemObjectSet(
+class UObject* ListItemObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9169,10 +10546,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UUserObjectListEntry.StaticClass
+	 * 		Name   -> PredefinedFunction UUserObjectListEntry.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UUserObjectListEntry::StaticClass()
@@ -9182,6 +10561,8 @@ namespace CG
 			ptr = UObject::FindClass("Class UMG.UserObjectListEntry");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -9206,10 +10587,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UUserObjectListEntryLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UUserObjectListEntryLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UUserObjectListEntryLibrary::StaticClass()
@@ -9220,6 +10603,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9228,7 +10613,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              NewWheelScrollMultiplier                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UListViewBase::SetWheelScrollMultiplier(float NewWheelScrollMultiplier)
+	void UListViewBase::SetWheelScrollMultiplier(
+float NewWheelScrollMultiplier
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9245,6 +10632,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9253,7 +10642,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InScrollOffset                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UListViewBase::SetScrollOffset(float InScrollOffset)
+	void UListViewBase::SetScrollOffset(
+float InScrollOffset
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9270,6 +10661,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9278,7 +10671,9 @@ namespace CG
 	 * Parameters:
 	 * 		ESlateVisibility                                   InVisibility                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UListViewBase::SetScrollbarVisibility(ESlateVisibility InVisibility)
+	void UListViewBase::SetScrollbarVisibility(
+ESlateVisibility InVisibility
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9294,6 +10689,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -9316,6 +10713,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9336,6 +10735,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -9358,6 +10759,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9378,6 +10781,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -9402,10 +10807,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UListViewBase.StaticClass
+	 * 		Name   -> PredefinedFunction UListViewBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UListViewBase::StaticClass()
@@ -9416,6 +10823,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9424,7 +10833,9 @@ namespace CG
 	 * Parameters:
 	 * 		ESelectionMode                                     SelectionMode                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UListView::SetSelectionMode(ESelectionMode SelectionMode)
+	void UListView::SetSelectionMode(
+ESelectionMode SelectionMode
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9441,6 +10852,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9449,7 +10862,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UListView::SetSelectedIndex(int32_t Index)
+	void UListView::SetSelectedIndex(
+int32_t Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9466,6 +10881,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9474,7 +10891,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UListView::ScrollIndexIntoView(int32_t Index)
+	void UListView::ScrollIndexIntoView(
+int32_t Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9491,6 +10910,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9499,7 +10920,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     Item                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UListView::RemoveItem(class UObject* Item)
+	void UListView::RemoveItem(
+class UObject* Item
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9516,6 +10939,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9524,7 +10949,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UListView::NavigateToIndex(int32_t Index)
+	void UListView::NavigateToIndex(
+int32_t Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9540,6 +10967,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -9564,6 +10993,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9586,6 +11017,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -9610,6 +11043,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9618,7 +11053,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UObject* UListView::GetItemAt(int32_t Index)
+	class UObject* UListView::GetItemAt(
+int32_t Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9637,6 +11074,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9645,7 +11084,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     Item                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UListView::GetIndexForItem(class UObject* Item)
+	int32_t UListView::GetIndexForItem(
+class UObject* Item
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9663,6 +11104,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -9685,6 +11128,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9693,7 +11138,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     Item                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UListView::BP_SetSelectedItem(class UObject* Item)
+	void UListView::BP_SetSelectedItem(
+class UObject* Item
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9710,6 +11157,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9718,7 +11167,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<class UObject*>                             InListItems                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UListView::BP_SetListItems(TArray<class UObject*> InListItems)
+	void UListView::BP_SetListItems(
+TArray<class UObject*> InListItems
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9735,6 +11186,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9744,7 +11197,11 @@ namespace CG
 	 * 		class UObject*                                     Item                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bSelected                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UListView::BP_SetItemSelection(class UObject* Item, bool bSelected)
+	void UListView::BP_SetItemSelection(
+class UObject* Item
+, 
+bool bSelected
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9763,6 +11220,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9771,7 +11230,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     Item                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UListView::BP_ScrollItemIntoView(class UObject* Item)
+	void UListView::BP_ScrollItemIntoView(
+class UObject* Item
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9788,6 +11249,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9796,7 +11259,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     Item                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UListView::BP_NavigateToItem(class UObject* Item)
+	void UListView::BP_NavigateToItem(
+class UObject* Item
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9813,6 +11278,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9821,7 +11288,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     Item                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UListView::BP_IsItemVisible(class UObject* Item)
+	bool UListView::BP_IsItemVisible(
+class UObject* Item
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9840,6 +11309,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9848,7 +11319,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<class UObject*>                             Items                                                      (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	bool UListView::BP_GetSelectedItems(TArray<class UObject*>* Items)
+	bool UListView::BP_GetSelectedItems(
+TArray<class UObject*>* Items
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9868,6 +11341,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -9892,6 +11367,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9915,6 +11392,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9935,6 +11414,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -9957,6 +11438,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9965,7 +11448,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     Item                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UListView::AddItem(class UObject* Item)
+	void UListView::AddItem(
+class UObject* Item
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9982,10 +11467,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UListView.StaticClass
+	 * 		Name   -> PredefinedFunction UListView.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UListView::StaticClass()
@@ -9996,10 +11483,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UListViewDesignerPreviewItem.StaticClass
+	 * 		Name   -> PredefinedFunction UListViewDesignerPreviewItem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UListViewDesignerPreviewItem::StaticClass()
@@ -10010,6 +11499,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10018,7 +11509,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bFocusOnOpen                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMenuAnchor::ToggleOpen(bool bFocusOnOpen)
+	void UMenuAnchor::ToggleOpen(
+bool bFocusOnOpen
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10034,6 +11527,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -10058,6 +11553,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10066,7 +11563,9 @@ namespace CG
 	 * Parameters:
 	 * 		EMenuPlacement                                     InPlacement                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMenuAnchor::SetPlacement(EMenuPlacement InPlacement)
+	void UMenuAnchor::SetPlacement(
+EMenuPlacement InPlacement
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10083,6 +11582,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10091,7 +11592,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bFocusMenu                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMenuAnchor::Open(bool bFocusMenu)
+	void UMenuAnchor::Open(
+bool bFocusMenu
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10107,6 +11610,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -10131,6 +11636,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10153,6 +11660,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -10177,6 +11686,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10200,6 +11711,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10208,7 +11721,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bFit                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMenuAnchor::FitInWindow(bool bFit)
+	void UMenuAnchor::FitInWindow(
+bool bFit
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10224,6 +11739,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -10246,10 +11763,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMenuAnchor.StaticClass
+	 * 		Name   -> PredefinedFunction UMenuAnchor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMenuAnchor::StaticClass()
@@ -10259,6 +11778,8 @@ namespace CG
 			ptr = UObject::FindClass("Class UMG.MenuAnchor");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -10283,10 +11804,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMouseCursorBinding.StaticClass
+	 * 		Name   -> PredefinedFunction UMouseCursorBinding.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMouseCursorBinding::StaticClass()
@@ -10297,10 +11820,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieScene2DTransformPropertySystem.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieScene2DTransformPropertySystem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieScene2DTransformPropertySystem::StaticClass()
@@ -10311,10 +11836,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieScene2DTransformSection.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieScene2DTransformSection.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieScene2DTransformSection::StaticClass()
@@ -10325,10 +11852,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieScene2DTransformTrack.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieScene2DTransformTrack.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieScene2DTransformTrack::StaticClass()
@@ -10339,10 +11868,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneMarginSection.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneMarginSection.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneMarginSection::StaticClass()
@@ -10353,10 +11884,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneMarginTrack.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneMarginTrack.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneMarginTrack::StaticClass()
@@ -10367,10 +11900,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneWidgetMaterialTrack.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneWidgetMaterialTrack.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneWidgetMaterialTrack::StaticClass()
@@ -10381,6 +11916,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10389,7 +11926,9 @@ namespace CG
 	 * Parameters:
 	 * 		ETextJustify                                       InJustification                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UTextLayoutWidget::SetJustification(ETextJustify InJustification)
+	void UTextLayoutWidget::SetJustification(
+ETextJustify InJustification
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10406,10 +11945,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UTextLayoutWidget.StaticClass
+	 * 		Name   -> PredefinedFunction UTextLayoutWidget.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UTextLayoutWidget::StaticClass()
@@ -10420,6 +11961,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10428,7 +11971,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FTextBlockStyle                             InWidgetStyle                                              (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UMultiLineEditableText::SetWidgetStyle(const struct FTextBlockStyle& InWidgetStyle)
+	void UMultiLineEditableText::SetWidgetStyle(
+const struct FTextBlockStyle& InWidgetStyle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10445,6 +11990,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10453,7 +12000,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FText                                        InText                                                     (Parm, NativeAccessSpecifierPublic)
 	 */
-	void UMultiLineEditableText::SetText(const class FText& InText)
+	void UMultiLineEditableText::SetText(
+const class FText& InText
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10470,6 +12019,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10478,7 +12029,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bReadOnly                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMultiLineEditableText::SetIsReadOnly(bool bReadOnly)
+	void UMultiLineEditableText::SetIsReadOnly(
+bool bReadOnly
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10495,6 +12048,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10503,7 +12058,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FText                                        InHintText                                                 (Parm, NativeAccessSpecifierPublic)
 	 */
-	void UMultiLineEditableText::SetHintText(const class FText& InHintText)
+	void UMultiLineEditableText::SetHintText(
+const class FText& InHintText
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10520,6 +12077,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10529,7 +12088,11 @@ namespace CG
 	 * 		class FText                                        Text                                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		ETextCommit                                        CommitMethod                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMultiLineEditableText::OnMultiLineEditableTextCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
+	void UMultiLineEditableText::OnMultiLineEditableTextCommittedEvent__DelegateSignature(
+const class FText& Text
+, 
+ETextCommit CommitMethod
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10548,6 +12111,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10556,7 +12121,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FText                                        Text                                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UMultiLineEditableText::OnMultiLineEditableTextChangedEvent__DelegateSignature(const class FText& Text)
+	void UMultiLineEditableText::OnMultiLineEditableTextChangedEvent__DelegateSignature(
+const class FText& Text
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10572,6 +12139,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -10596,6 +12165,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10619,10 +12190,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMultiLineEditableText.StaticClass
+	 * 		Name   -> PredefinedFunction UMultiLineEditableText.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMultiLineEditableText::StaticClass()
@@ -10633,6 +12206,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10641,7 +12216,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FTextBlockStyle                             InTextStyle                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UMultiLineEditableTextBox::SetTextStyle(const struct FTextBlockStyle& InTextStyle)
+	void UMultiLineEditableTextBox::SetTextStyle(
+const struct FTextBlockStyle& InTextStyle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10658,6 +12235,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10666,7 +12245,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FText                                        InText                                                     (Parm, NativeAccessSpecifierPublic)
 	 */
-	void UMultiLineEditableTextBox::SetText(const class FText& InText)
+	void UMultiLineEditableTextBox::SetText(
+const class FText& InText
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10683,6 +12264,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10691,7 +12274,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bReadOnly                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMultiLineEditableTextBox::SetIsReadOnly(bool bReadOnly)
+	void UMultiLineEditableTextBox::SetIsReadOnly(
+bool bReadOnly
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10708,6 +12293,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10716,7 +12303,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FText                                        InHintText                                                 (Parm, NativeAccessSpecifierPublic)
 	 */
-	void UMultiLineEditableTextBox::SetHintText(const class FText& InHintText)
+	void UMultiLineEditableTextBox::SetHintText(
+const class FText& InHintText
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10733,6 +12322,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10741,7 +12332,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FText                                        InError                                                    (Parm, NativeAccessSpecifierPublic)
 	 */
-	void UMultiLineEditableTextBox::SetError(const class FText& InError)
+	void UMultiLineEditableTextBox::SetError(
+const class FText& InError
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10758,6 +12351,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10767,7 +12362,11 @@ namespace CG
 	 * 		class FText                                        Text                                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		ETextCommit                                        CommitMethod                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMultiLineEditableTextBox::OnMultiLineEditableTextBoxCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
+	void UMultiLineEditableTextBox::OnMultiLineEditableTextBoxCommittedEvent__DelegateSignature(
+const class FText& Text
+, 
+ETextCommit CommitMethod
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10786,6 +12385,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10794,7 +12395,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FText                                        Text                                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UMultiLineEditableTextBox::OnMultiLineEditableTextBoxChangedEvent__DelegateSignature(const class FText& Text)
+	void UMultiLineEditableTextBox::OnMultiLineEditableTextBoxChangedEvent__DelegateSignature(
+const class FText& Text
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10810,6 +12413,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -10834,6 +12439,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10857,10 +12464,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMultiLineEditableTextBox.StaticClass
+	 * 		Name   -> PredefinedFunction UMultiLineEditableTextBox.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMultiLineEditableTextBox::StaticClass()
@@ -10871,10 +12480,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNamedSlot.StaticClass
+	 * 		Name   -> PredefinedFunction UNamedSlot.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNamedSlot::StaticClass()
@@ -10885,10 +12496,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNamedSlotInterface.StaticClass
+	 * 		Name   -> PredefinedFunction UNamedSlotInterface.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNamedSlotInterface::StaticClass()
@@ -10899,10 +12512,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNativeWidgetHost.StaticClass
+	 * 		Name   -> PredefinedFunction UNativeWidgetHost.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNativeWidgetHost::StaticClass()
@@ -10913,6 +12528,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10921,7 +12538,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UWidget*                                     Content                                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UOverlaySlot* UOverlay::AddChildToOverlay(class UWidget* Content)
+	class UOverlaySlot* UOverlay::AddChildToOverlay(
+class UWidget* Content
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10940,10 +12559,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UOverlay.StaticClass
+	 * 		Name   -> PredefinedFunction UOverlay.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UOverlay::StaticClass()
@@ -10954,6 +12575,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10962,7 +12585,9 @@ namespace CG
 	 * Parameters:
 	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UOverlaySlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
+	void UOverlaySlot::SetVerticalAlignment(
+EVerticalAlignment InVerticalAlignment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10979,6 +12604,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10987,7 +12614,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FMargin                                     InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UOverlaySlot::SetPadding(const struct FMargin& InPadding)
+	void UOverlaySlot::SetPadding(
+const struct FMargin& InPadding
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11004,6 +12633,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11012,7 +12643,9 @@ namespace CG
 	 * Parameters:
 	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UOverlaySlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
+	void UOverlaySlot::SetHorizontalAlignment(
+EHorizontalAlignment InHorizontalAlignment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11029,10 +12662,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UOverlaySlot.StaticClass
+	 * 		Name   -> PredefinedFunction UOverlaySlot.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UOverlaySlot::StaticClass()
@@ -11043,6 +12678,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11051,7 +12688,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InPercent                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UProgressBar::SetPercent(float InPercent)
+	void UProgressBar::SetPercent(
+float InPercent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11068,6 +12707,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11076,7 +12717,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               InbIsMarquee                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UProgressBar::SetIsMarquee(bool InbIsMarquee)
+	void UProgressBar::SetIsMarquee(
+bool InbIsMarquee
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11093,6 +12736,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11101,7 +12746,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FLinearColor                                InColor                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UProgressBar::SetFillColorAndOpacity(const struct FLinearColor& InColor)
+	void UProgressBar::SetFillColorAndOpacity(
+const struct FLinearColor& InColor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11118,10 +12765,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UProgressBar.StaticClass
+	 * 		Name   -> PredefinedFunction UProgressBar.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UProgressBar::StaticClass()
@@ -11132,6 +12781,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11140,7 +12791,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        TextureParameter                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void URetainerBox::SetTextureParameter(const class FName& TextureParameter)
+	void URetainerBox::SetTextureParameter(
+const class FName& TextureParameter
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11157,6 +12810,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11165,7 +12820,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bInRetainRendering                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void URetainerBox::SetRetainRendering(bool bInRetainRendering)
+	void URetainerBox::SetRetainRendering(
+bool bInRetainRendering
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11182,6 +12839,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11191,7 +12850,11 @@ namespace CG
 	 * 		int32_t                                            RenderPhase                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            TotalPhases                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void URetainerBox::SetRenderingPhase(int32_t RenderPhase, int32_t TotalPhases)
+	void URetainerBox::SetRenderingPhase(
+int32_t RenderPhase
+, 
+int32_t TotalPhases
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11210,6 +12873,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11218,7 +12883,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UMaterialInterface*                          EffectMaterial                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void URetainerBox::SetEffectMaterial(class UMaterialInterface* EffectMaterial)
+	void URetainerBox::SetEffectMaterial(
+class UMaterialInterface* EffectMaterial
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11234,6 +12901,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -11255,6 +12924,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -11279,10 +12950,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction URetainerBox.StaticClass
+	 * 		Name   -> PredefinedFunction URetainerBox.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* URetainerBox::StaticClass()
@@ -11293,6 +12966,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11301,7 +12976,9 @@ namespace CG
 	 * Parameters:
 	 * 		ETextTransformPolicy                               InTransformPolicy                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void URichTextBlock::SetTextTransformPolicy(ETextTransformPolicy InTransformPolicy)
+	void URichTextBlock::SetTextTransformPolicy(
+ETextTransformPolicy InTransformPolicy
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11318,6 +12995,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11326,7 +13005,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UDataTable*                                  NewTextStyleSet                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void URichTextBlock::SetTextStyleSet(class UDataTable* NewTextStyleSet)
+	void URichTextBlock::SetTextStyleSet(
+class UDataTable* NewTextStyleSet
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11343,6 +13024,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11351,7 +13034,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FText                                        InText                                                     (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void URichTextBlock::SetText(const class FText& InText)
+	void URichTextBlock::SetText(
+const class FText& InText
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11368,6 +13053,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11376,7 +13063,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InMinDesiredWidth                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void URichTextBlock::SetMinDesiredWidth(float InMinDesiredWidth)
+	void URichTextBlock::SetMinDesiredWidth(
+float InMinDesiredWidth
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11393,6 +13082,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11401,7 +13092,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FTextBlockStyle                             InDefaultTextStyle                                         (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void URichTextBlock::SetDefaultTextStyle(const struct FTextBlockStyle& InDefaultTextStyle)
+	void URichTextBlock::SetDefaultTextStyle(
+const struct FTextBlockStyle& InDefaultTextStyle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11418,6 +13111,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11426,7 +13121,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSlateBrush                                 InStrikeBrush                                              (Parm, OutParm, NativeAccessSpecifierPublic)
 	 */
-	void URichTextBlock::SetDefaultStrikeBrush(struct FSlateBrush* InStrikeBrush)
+	void URichTextBlock::SetDefaultStrikeBrush(
+struct FSlateBrush* InStrikeBrush
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11445,6 +13142,8 @@ namespace CG
 			*InStrikeBrush = params.InStrikeBrush;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11453,7 +13152,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector2D                                   InShadowOffset                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void URichTextBlock::SetDefaultShadowOffset(const struct FVector2D& InShadowOffset)
+	void URichTextBlock::SetDefaultShadowOffset(
+const struct FVector2D& InShadowOffset
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11470,6 +13171,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11478,7 +13181,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FLinearColor                                InShadowColorAndOpacity                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void URichTextBlock::SetDefaultShadowColorAndOpacity(const struct FLinearColor& InShadowColorAndOpacity)
+	void URichTextBlock::SetDefaultShadowColorAndOpacity(
+const struct FLinearColor& InShadowColorAndOpacity
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11495,6 +13200,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11503,7 +13210,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSlateFontInfo                              InFontInfo                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void URichTextBlock::SetDefaultFont(const struct FSlateFontInfo& InFontInfo)
+	void URichTextBlock::SetDefaultFont(
+const struct FSlateFontInfo& InFontInfo
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11520,6 +13229,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11528,7 +13239,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSlateColor                                 InColorAndOpacity                                          (Parm, NativeAccessSpecifierPublic)
 	 */
-	void URichTextBlock::SetDefaultColorAndOpacity(const struct FSlateColor& InColorAndOpacity)
+	void URichTextBlock::SetDefaultColorAndOpacity(
+const struct FSlateColor& InColorAndOpacity
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11545,6 +13258,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11553,7 +13268,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               InAutoTextWrap                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void URichTextBlock::SetAutoWrapText(bool InAutoTextWrap)
+	void URichTextBlock::SetAutoWrapText(
+bool InAutoTextWrap
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11569,6 +13286,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -11593,6 +13312,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11601,7 +13322,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UClass*                                      DecoratorClass                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class URichTextBlockDecorator* URichTextBlock::GetDecoratorByClass(class UClass* DecoratorClass)
+	class URichTextBlockDecorator* URichTextBlock::GetDecoratorByClass(
+class UClass* DecoratorClass
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11619,6 +13342,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -11641,10 +13366,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction URichTextBlock.StaticClass
+	 * 		Name   -> PredefinedFunction URichTextBlock.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* URichTextBlock::StaticClass()
@@ -11655,10 +13382,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction URichTextBlockDecorator.StaticClass
+	 * 		Name   -> PredefinedFunction URichTextBlockDecorator.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* URichTextBlockDecorator::StaticClass()
@@ -11669,10 +13398,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction URichTextBlockImageDecorator.StaticClass
+	 * 		Name   -> PredefinedFunction URichTextBlockImageDecorator.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* URichTextBlockImageDecorator::StaticClass()
@@ -11682,6 +13413,8 @@ namespace CG
 			ptr = UObject::FindClass("Class UMG.RichTextBlockImageDecorator");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -11694,7 +13427,15 @@ namespace CG
 	 * 		bool                                               InPadTop                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               InPadBottom                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USafeZone::SetSidesToPad(bool InPadLeft, bool InPadRight, bool InPadTop, bool InPadBottom)
+	void USafeZone::SetSidesToPad(
+bool InPadLeft
+, 
+bool InPadRight
+, 
+bool InPadTop
+, 
+bool InPadBottom
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11717,10 +13458,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USafeZone.StaticClass
+	 * 		Name   -> PredefinedFunction USafeZone.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USafeZone::StaticClass()
@@ -11731,10 +13474,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USafeZoneSlot.StaticClass
+	 * 		Name   -> PredefinedFunction USafeZoneSlot.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USafeZoneSlot::StaticClass()
@@ -11745,6 +13490,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11753,7 +13500,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InUserSpecifiedScale                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UScaleBox::SetUserSpecifiedScale(float InUserSpecifiedScale)
+	void UScaleBox::SetUserSpecifiedScale(
+float InUserSpecifiedScale
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11770,6 +13519,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11778,7 +13529,9 @@ namespace CG
 	 * Parameters:
 	 * 		EStretchDirection                                  InStretchDirection                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UScaleBox::SetStretchDirection(EStretchDirection InStretchDirection)
+	void UScaleBox::SetStretchDirection(
+EStretchDirection InStretchDirection
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11795,6 +13548,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11803,7 +13558,9 @@ namespace CG
 	 * Parameters:
 	 * 		EStretch                                           InStretch                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UScaleBox::SetStretch(EStretch InStretch)
+	void UScaleBox::SetStretch(
+EStretch InStretch
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11820,6 +13577,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11828,7 +13587,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bInIgnoreInheritedScale                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UScaleBox::SetIgnoreInheritedScale(bool bInIgnoreInheritedScale)
+	void UScaleBox::SetIgnoreInheritedScale(
+bool bInIgnoreInheritedScale
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11845,10 +13606,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UScaleBox.StaticClass
+	 * 		Name   -> PredefinedFunction UScaleBox.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UScaleBox::StaticClass()
@@ -11859,6 +13622,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11867,7 +13632,9 @@ namespace CG
 	 * Parameters:
 	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UScaleBoxSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
+	void UScaleBoxSlot::SetVerticalAlignment(
+EVerticalAlignment InVerticalAlignment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11884,6 +13651,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11892,7 +13661,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FMargin                                     InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UScaleBoxSlot::SetPadding(const struct FMargin& InPadding)
+	void UScaleBoxSlot::SetPadding(
+const struct FMargin& InPadding
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11909,6 +13680,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11917,7 +13690,9 @@ namespace CG
 	 * Parameters:
 	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UScaleBoxSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
+	void UScaleBoxSlot::SetHorizontalAlignment(
+EHorizontalAlignment InHorizontalAlignment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11934,10 +13709,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UScaleBoxSlot.StaticClass
+	 * 		Name   -> PredefinedFunction UScaleBoxSlot.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UScaleBoxSlot::StaticClass()
@@ -11948,6 +13725,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11957,7 +13736,11 @@ namespace CG
 	 * 		float                                              InOffsetFraction                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              InThumbSizeFraction                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UScrollBar::SetState(float InOffsetFraction, float InThumbSizeFraction)
+	void UScrollBar::SetState(
+float InOffsetFraction
+, 
+float InThumbSizeFraction
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11976,10 +13759,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UScrollBar.StaticClass
+	 * 		Name   -> PredefinedFunction UScrollBar.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UScrollBar::StaticClass()
@@ -11990,6 +13775,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11998,7 +13785,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              NewWheelScrollMultiplier                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UScrollBox::SetWheelScrollMultiplier(float NewWheelScrollMultiplier)
+	void UScrollBox::SetWheelScrollMultiplier(
+float NewWheelScrollMultiplier
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12015,6 +13804,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12023,7 +13814,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              NewScrollOffset                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UScrollBox::SetScrollOffset(float NewScrollOffset)
+	void UScrollBox::SetScrollOffset(
+float NewScrollOffset
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12040,6 +13833,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12048,7 +13843,9 @@ namespace CG
 	 * Parameters:
 	 * 		ESlateVisibility                                   NewScrollBarVisibility                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UScrollBox::SetScrollbarVisibility(ESlateVisibility NewScrollBarVisibility)
+	void UScrollBox::SetScrollbarVisibility(
+ESlateVisibility NewScrollBarVisibility
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12065,6 +13862,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12073,7 +13872,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector2D                                   NewScrollbarThickness                                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UScrollBox::SetScrollbarThickness(const struct FVector2D& NewScrollbarThickness)
+	void UScrollBox::SetScrollbarThickness(
+const struct FVector2D& NewScrollbarThickness
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12090,6 +13891,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12098,7 +13901,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FMargin                                     NewScrollbarPadding                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UScrollBox::SetScrollbarPadding(const struct FMargin& NewScrollbarPadding)
+	void UScrollBox::SetScrollbarPadding(
+const struct FMargin& NewScrollbarPadding
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12115,6 +13920,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12123,7 +13930,9 @@ namespace CG
 	 * Parameters:
 	 * 		EOrientation                                       NewOrientation                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UScrollBox::SetOrientation(EOrientation NewOrientation)
+	void UScrollBox::SetOrientation(
+EOrientation NewOrientation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12140,6 +13949,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12148,7 +13959,9 @@ namespace CG
 	 * Parameters:
 	 * 		EConsumeMouseWheel                                 NewConsumeMouseWheel                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UScrollBox::SetConsumeMouseWheel(EConsumeMouseWheel NewConsumeMouseWheel)
+	void UScrollBox::SetConsumeMouseWheel(
+EConsumeMouseWheel NewConsumeMouseWheel
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12165,6 +13978,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12173,7 +13988,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bShouldAnimateWheelScrolling                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UScrollBox::SetAnimateWheelScrolling(bool bShouldAnimateWheelScrolling)
+	void UScrollBox::SetAnimateWheelScrolling(
+bool bShouldAnimateWheelScrolling
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12190,6 +14007,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12198,7 +14017,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               NewAlwaysShowScrollbar                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UScrollBox::SetAlwaysShowScrollbar(bool NewAlwaysShowScrollbar)
+	void UScrollBox::SetAlwaysShowScrollbar(
+bool NewAlwaysShowScrollbar
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12215,6 +14036,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12223,7 +14046,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               NewAllowOverscroll                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UScrollBox::SetAllowOverscroll(bool NewAllowOverscroll)
+	void UScrollBox::SetAllowOverscroll(
+bool NewAllowOverscroll
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12240,6 +14065,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12251,7 +14078,15 @@ namespace CG
 	 * 		EDescendantScrollDestination                       ScrollDestination                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Padding                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UScrollBox::ScrollWidgetIntoView(class UWidget* WidgetToFind, bool AnimateScroll, EDescendantScrollDestination ScrollDestination, float Padding)
+	void UScrollBox::ScrollWidgetIntoView(
+class UWidget* WidgetToFind
+, 
+bool AnimateScroll
+, 
+EDescendantScrollDestination ScrollDestination
+, 
+float Padding
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12274,6 +14109,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12295,6 +14132,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12315,6 +14154,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -12339,6 +14180,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12361,6 +14204,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -12385,6 +14230,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12406,10 +14253,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UScrollBox.StaticClass
+	 * 		Name   -> PredefinedFunction UScrollBox.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UScrollBox::StaticClass()
@@ -12420,6 +14269,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12428,7 +14279,9 @@ namespace CG
 	 * Parameters:
 	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UScrollBoxSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
+	void UScrollBoxSlot::SetVerticalAlignment(
+EVerticalAlignment InVerticalAlignment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12445,6 +14298,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12453,7 +14308,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FMargin                                     InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UScrollBoxSlot::SetPadding(const struct FMargin& InPadding)
+	void UScrollBoxSlot::SetPadding(
+const struct FMargin& InPadding
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12470,6 +14327,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12478,7 +14337,9 @@ namespace CG
 	 * Parameters:
 	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UScrollBoxSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
+	void UScrollBoxSlot::SetHorizontalAlignment(
+EHorizontalAlignment InHorizontalAlignment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12495,10 +14356,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UScrollBoxSlot.StaticClass
+	 * 		Name   -> PredefinedFunction UScrollBoxSlot.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UScrollBoxSlot::StaticClass()
@@ -12509,6 +14372,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12517,7 +14382,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InWidthOverride                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USizeBox::SetWidthOverride(float InWidthOverride)
+	void USizeBox::SetWidthOverride(
+float InWidthOverride
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12534,6 +14401,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12542,7 +14411,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InMinDesiredWidth                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USizeBox::SetMinDesiredWidth(float InMinDesiredWidth)
+	void USizeBox::SetMinDesiredWidth(
+float InMinDesiredWidth
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12559,6 +14430,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12567,7 +14440,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InMinDesiredHeight                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USizeBox::SetMinDesiredHeight(float InMinDesiredHeight)
+	void USizeBox::SetMinDesiredHeight(
+float InMinDesiredHeight
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12584,6 +14459,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12592,7 +14469,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InMinAspectRatio                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USizeBox::SetMinAspectRatio(float InMinAspectRatio)
+	void USizeBox::SetMinAspectRatio(
+float InMinAspectRatio
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12609,6 +14488,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12617,7 +14498,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InMaxDesiredWidth                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USizeBox::SetMaxDesiredWidth(float InMaxDesiredWidth)
+	void USizeBox::SetMaxDesiredWidth(
+float InMaxDesiredWidth
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12634,6 +14517,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12642,7 +14527,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InMaxDesiredHeight                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USizeBox::SetMaxDesiredHeight(float InMaxDesiredHeight)
+	void USizeBox::SetMaxDesiredHeight(
+float InMaxDesiredHeight
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12659,6 +14546,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12667,7 +14556,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InMaxAspectRatio                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USizeBox::SetMaxAspectRatio(float InMaxAspectRatio)
+	void USizeBox::SetMaxAspectRatio(
+float InMaxAspectRatio
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12684,6 +14575,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12692,7 +14585,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InHeightOverride                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USizeBox::SetHeightOverride(float InHeightOverride)
+	void USizeBox::SetHeightOverride(
+float InHeightOverride
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12708,6 +14603,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -12730,6 +14627,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12750,6 +14649,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -12772,6 +14673,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12792,6 +14695,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -12814,6 +14719,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12834,6 +14741,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -12856,6 +14765,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12877,10 +14788,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USizeBox.StaticClass
+	 * 		Name   -> PredefinedFunction USizeBox.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USizeBox::StaticClass()
@@ -12891,6 +14804,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12899,7 +14814,9 @@ namespace CG
 	 * Parameters:
 	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USizeBoxSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
+	void USizeBoxSlot::SetVerticalAlignment(
+EVerticalAlignment InVerticalAlignment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12916,6 +14833,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12924,7 +14843,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FMargin                                     InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void USizeBoxSlot::SetPadding(const struct FMargin& InPadding)
+	void USizeBoxSlot::SetPadding(
+const struct FMargin& InPadding
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12941,6 +14862,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12949,7 +14872,9 @@ namespace CG
 	 * Parameters:
 	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USizeBoxSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
+	void USizeBoxSlot::SetHorizontalAlignment(
+EHorizontalAlignment InHorizontalAlignment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12966,10 +14891,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USizeBoxSlot.StaticClass
+	 * 		Name   -> PredefinedFunction USizeBoxSlot.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USizeBoxSlot::StaticClass()
@@ -12980,6 +14907,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12989,7 +14918,11 @@ namespace CG
 	 * 		struct FGeometry                                   Geometry                                                   (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FVector2D                                   LocalVector                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVector2D USlateBlueprintLibrary::TransformVectorLocalToAbsolute(const struct FGeometry& Geometry, const struct FVector2D& LocalVector)
+	struct FVector2D USlateBlueprintLibrary::TransformVectorLocalToAbsolute(
+const struct FGeometry& Geometry
+, 
+const struct FVector2D& LocalVector
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13010,6 +14943,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13019,7 +14954,11 @@ namespace CG
 	 * 		struct FGeometry                                   Geometry                                                   (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FVector2D                                   AbsoluteVector                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVector2D USlateBlueprintLibrary::TransformVectorAbsoluteToLocal(const struct FGeometry& Geometry, const struct FVector2D& AbsoluteVector)
+	struct FVector2D USlateBlueprintLibrary::TransformVectorAbsoluteToLocal(
+const struct FGeometry& Geometry
+, 
+const struct FVector2D& AbsoluteVector
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13040,6 +14979,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13049,7 +14990,11 @@ namespace CG
 	 * 		struct FGeometry                                   Geometry                                                   (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		float                                              LocalScalar                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float USlateBlueprintLibrary::TransformScalarLocalToAbsolute(const struct FGeometry& Geometry, float LocalScalar)
+	float USlateBlueprintLibrary::TransformScalarLocalToAbsolute(
+const struct FGeometry& Geometry
+, 
+float LocalScalar
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13070,6 +15015,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13079,7 +15026,11 @@ namespace CG
 	 * 		struct FGeometry                                   Geometry                                                   (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		float                                              AbsoluteScalar                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float USlateBlueprintLibrary::TransformScalarAbsoluteToLocal(const struct FGeometry& Geometry, float AbsoluteScalar)
+	float USlateBlueprintLibrary::TransformScalarAbsoluteToLocal(
+const struct FGeometry& Geometry
+, 
+float AbsoluteScalar
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13100,6 +15051,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13112,7 +15065,17 @@ namespace CG
 	 * 		struct FVector2D                                   LocalCoordinate                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bIncludeWindowPosition                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USlateBlueprintLibrary::ScreenToWidgetLocal(class UObject* WorldContextObject, const struct FGeometry& Geometry, const struct FVector2D& ScreenPosition, struct FVector2D* LocalCoordinate, bool bIncludeWindowPosition)
+	void USlateBlueprintLibrary::ScreenToWidgetLocal(
+class UObject* WorldContextObject
+, 
+const struct FGeometry& Geometry
+, 
+const struct FVector2D& ScreenPosition
+, 
+struct FVector2D* LocalCoordinate
+, 
+bool bIncludeWindowPosition
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13139,6 +15102,8 @@ namespace CG
 			*LocalCoordinate = params.LocalCoordinate;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13150,7 +15115,15 @@ namespace CG
 	 * 		struct FVector2D                                   AbsoluteCoordinate                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bIncludeWindowPosition                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USlateBlueprintLibrary::ScreenToWidgetAbsolute(class UObject* WorldContextObject, const struct FVector2D& ScreenPosition, struct FVector2D* AbsoluteCoordinate, bool bIncludeWindowPosition)
+	void USlateBlueprintLibrary::ScreenToWidgetAbsolute(
+class UObject* WorldContextObject
+, 
+const struct FVector2D& ScreenPosition
+, 
+struct FVector2D* AbsoluteCoordinate
+, 
+bool bIncludeWindowPosition
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13175,6 +15148,8 @@ namespace CG
 			*AbsoluteCoordinate = params.AbsoluteCoordinate;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13185,7 +15160,13 @@ namespace CG
 	 * 		struct FVector2D                                   ScreenPosition                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector2D                                   ViewportPosition                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USlateBlueprintLibrary::ScreenToViewport(class UObject* WorldContextObject, const struct FVector2D& ScreenPosition, struct FVector2D* ViewportPosition)
+	void USlateBlueprintLibrary::ScreenToViewport(
+class UObject* WorldContextObject
+, 
+const struct FVector2D& ScreenPosition
+, 
+struct FVector2D* ViewportPosition
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13208,6 +15189,8 @@ namespace CG
 			*ViewportPosition = params.ViewportPosition;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13220,7 +15203,17 @@ namespace CG
 	 * 		struct FVector2D                                   PixelPosition                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector2D                                   ViewportPosition                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USlateBlueprintLibrary::LocalToViewport(class UObject* WorldContextObject, const struct FGeometry& Geometry, const struct FVector2D& LocalCoordinate, struct FVector2D* PixelPosition, struct FVector2D* ViewportPosition)
+	void USlateBlueprintLibrary::LocalToViewport(
+class UObject* WorldContextObject
+, 
+const struct FGeometry& Geometry
+, 
+const struct FVector2D& LocalCoordinate
+, 
+struct FVector2D* PixelPosition
+, 
+struct FVector2D* ViewportPosition
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13248,6 +15241,8 @@ namespace CG
 			*ViewportPosition = params.ViewportPosition;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13257,7 +15252,11 @@ namespace CG
 	 * 		struct FGeometry                                   Geometry                                                   (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FVector2D                                   LocalCoordinate                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVector2D USlateBlueprintLibrary::LocalToAbsolute(const struct FGeometry& Geometry, const struct FVector2D& LocalCoordinate)
+	struct FVector2D USlateBlueprintLibrary::LocalToAbsolute(
+const struct FGeometry& Geometry
+, 
+const struct FVector2D& LocalCoordinate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13278,6 +15277,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13287,7 +15288,11 @@ namespace CG
 	 * 		struct FGeometry                                   Geometry                                                   (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FVector2D                                   AbsoluteCoordinate                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool USlateBlueprintLibrary::IsUnderLocation(const struct FGeometry& Geometry, const struct FVector2D& AbsoluteCoordinate)
+	bool USlateBlueprintLibrary::IsUnderLocation(
+const struct FGeometry& Geometry
+, 
+const struct FVector2D& AbsoluteCoordinate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13308,6 +15313,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13316,7 +15323,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FGeometry                                   Geometry                                                   (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	struct FVector2D USlateBlueprintLibrary::GetLocalTopLeft(const struct FGeometry& Geometry)
+	struct FVector2D USlateBlueprintLibrary::GetLocalTopLeft(
+const struct FGeometry& Geometry
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13335,6 +15344,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13343,7 +15354,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FGeometry                                   Geometry                                                   (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	struct FVector2D USlateBlueprintLibrary::GetLocalSize(const struct FGeometry& Geometry)
+	struct FVector2D USlateBlueprintLibrary::GetLocalSize(
+const struct FGeometry& Geometry
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13362,6 +15375,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13370,7 +15385,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FGeometry                                   Geometry                                                   (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	struct FVector2D USlateBlueprintLibrary::GetAbsoluteSize(const struct FGeometry& Geometry)
+	struct FVector2D USlateBlueprintLibrary::GetAbsoluteSize(
+const struct FGeometry& Geometry
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13389,6 +15406,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13398,7 +15417,11 @@ namespace CG
 	 * 		struct FSlateBrush                                 A                                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		struct FSlateBrush                                 B                                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	bool USlateBlueprintLibrary::EqualEqual_SlateBrush(const struct FSlateBrush& A, const struct FSlateBrush& B)
+	bool USlateBlueprintLibrary::EqualEqual_SlateBrush(
+const struct FSlateBrush& A
+, 
+const struct FSlateBrush& B
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13419,6 +15442,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13430,7 +15455,15 @@ namespace CG
 	 * 		struct FVector2D                                   PixelPosition                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector2D                                   ViewportPosition                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USlateBlueprintLibrary::AbsoluteToViewport(class UObject* WorldContextObject, const struct FVector2D& AbsoluteDesktopCoordinate, struct FVector2D* PixelPosition, struct FVector2D* ViewportPosition)
+	void USlateBlueprintLibrary::AbsoluteToViewport(
+class UObject* WorldContextObject
+, 
+const struct FVector2D& AbsoluteDesktopCoordinate
+, 
+struct FVector2D* PixelPosition
+, 
+struct FVector2D* ViewportPosition
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13456,6 +15489,8 @@ namespace CG
 			*ViewportPosition = params.ViewportPosition;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13465,7 +15500,11 @@ namespace CG
 	 * 		struct FGeometry                                   Geometry                                                   (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FVector2D                                   AbsoluteCoordinate                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVector2D USlateBlueprintLibrary::AbsoluteToLocal(const struct FGeometry& Geometry, const struct FVector2D& AbsoluteCoordinate)
+	struct FVector2D USlateBlueprintLibrary::AbsoluteToLocal(
+const struct FGeometry& Geometry
+, 
+const struct FVector2D& AbsoluteCoordinate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13486,10 +15525,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USlateBlueprintLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction USlateBlueprintLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USlateBlueprintLibrary::StaticClass()
@@ -13500,10 +15541,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USlateVectorArtData.StaticClass
+	 * 		Name   -> PredefinedFunction USlateVectorArtData.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USlateVectorArtData::StaticClass()
@@ -13514,10 +15557,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USlateAccessibleWidgetData.StaticClass
+	 * 		Name   -> PredefinedFunction USlateAccessibleWidgetData.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USlateAccessibleWidgetData::StaticClass()
@@ -13528,6 +15573,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13536,7 +15583,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USlider::SetValue(float InValue)
+	void USlider::SetValue(
+float InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13553,6 +15602,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13561,7 +15612,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USlider::SetStepSize(float InValue)
+	void USlider::SetStepSize(
+float InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13578,6 +15631,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13586,7 +15641,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FLinearColor                                InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USlider::SetSliderHandleColor(const struct FLinearColor& InValue)
+	void USlider::SetSliderHandleColor(
+const struct FLinearColor& InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13603,6 +15660,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13611,7 +15670,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FLinearColor                                InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USlider::SetSliderBarColor(const struct FLinearColor& InValue)
+	void USlider::SetSliderBarColor(
+const struct FLinearColor& InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13628,6 +15689,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13636,7 +15699,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USlider::SetMinValue(float InValue)
+	void USlider::SetMinValue(
+float InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13653,6 +15718,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13661,7 +15728,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USlider::SetMaxValue(float InValue)
+	void USlider::SetMaxValue(
+float InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13678,6 +15747,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13686,7 +15757,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USlider::SetLocked(bool InValue)
+	void USlider::SetLocked(
+bool InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13703,6 +15776,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13711,7 +15786,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USlider::SetIndentHandle(bool InValue)
+	void USlider::SetIndentHandle(
+bool InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13727,6 +15804,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -13751,6 +15830,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13774,10 +15855,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USlider.StaticClass
+	 * 		Name   -> PredefinedFunction USlider.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USlider::StaticClass()
@@ -13788,6 +15871,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13796,7 +15881,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector2D                                   InSize                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USpacer::SetSize(const struct FVector2D& InSize)
+	void USpacer::SetSize(
+const struct FVector2D& InSize
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13813,10 +15900,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USpacer.StaticClass
+	 * 		Name   -> PredefinedFunction USpacer.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USpacer::StaticClass()
@@ -13827,6 +15916,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13835,7 +15926,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              NewValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USpinBox::SetValue(float NewValue)
+	void USpinBox::SetValue(
+float NewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13852,6 +15945,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13860,7 +15955,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              NewValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USpinBox::SetMinValue(float NewValue)
+	void USpinBox::SetMinValue(
+float NewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13877,6 +15974,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13885,7 +15984,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              NewValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USpinBox::SetMinSliderValue(float NewValue)
+	void USpinBox::SetMinSliderValue(
+float NewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13902,6 +16003,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13910,7 +16013,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            NewValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USpinBox::SetMinFractionalDigits(int32_t NewValue)
+	void USpinBox::SetMinFractionalDigits(
+int32_t NewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13927,6 +16032,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13935,7 +16042,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              NewValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USpinBox::SetMaxValue(float NewValue)
+	void USpinBox::SetMaxValue(
+float NewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13952,6 +16061,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13960,7 +16071,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              NewValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USpinBox::SetMaxSliderValue(float NewValue)
+	void USpinBox::SetMaxSliderValue(
+float NewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13977,6 +16090,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13985,7 +16100,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            NewValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USpinBox::SetMaxFractionalDigits(int32_t NewValue)
+	void USpinBox::SetMaxFractionalDigits(
+int32_t NewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14002,6 +16119,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14010,7 +16129,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSlateColor                                 InForegroundColor                                          (Parm, NativeAccessSpecifierPublic)
 	 */
-	void USpinBox::SetForegroundColor(const struct FSlateColor& InForegroundColor)
+	void USpinBox::SetForegroundColor(
+const struct FSlateColor& InForegroundColor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14027,6 +16148,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14035,7 +16158,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              NewValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USpinBox::SetDelta(float NewValue)
+	void USpinBox::SetDelta(
+float NewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14052,6 +16177,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14060,7 +16187,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bNewValue                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USpinBox::SetAlwaysUsesDeltaSnap(bool bNewValue)
+	void USpinBox::SetAlwaysUsesDeltaSnap(
+bool bNewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14077,6 +16206,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14086,7 +16217,11 @@ namespace CG
 	 * 		float                                              InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ETextCommit                                        CommitMethod                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USpinBox::OnSpinBoxValueCommittedEvent__DelegateSignature(float InValue, ETextCommit CommitMethod)
+	void USpinBox::OnSpinBoxValueCommittedEvent__DelegateSignature(
+float InValue
+, 
+ETextCommit CommitMethod
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14105,6 +16240,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14113,7 +16250,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USpinBox::OnSpinBoxValueChangedEvent__DelegateSignature(float InValue)
+	void USpinBox::OnSpinBoxValueChangedEvent__DelegateSignature(
+float InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14129,6 +16268,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -14150,6 +16291,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -14174,6 +16317,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14196,6 +16341,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -14220,6 +16367,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14242,6 +16391,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -14266,6 +16417,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14288,6 +16441,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -14312,6 +16467,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14334,6 +16491,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -14358,6 +16517,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14378,6 +16539,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -14400,6 +16563,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14420,6 +16585,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -14442,10 +16609,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USpinBox.StaticClass
+	 * 		Name   -> PredefinedFunction USpinBox.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USpinBox::StaticClass()
@@ -14455,6 +16624,8 @@ namespace CG
 			ptr = UObject::FindClass("Class UMG.SpinBox");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -14479,6 +16650,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14502,10 +16675,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UTextBinding.StaticClass
+	 * 		Name   -> PredefinedFunction UTextBinding.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UTextBinding::StaticClass()
@@ -14516,6 +16691,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14524,7 +16701,9 @@ namespace CG
 	 * Parameters:
 	 * 		ETextTransformPolicy                               InTransformPolicy                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UTextBlock::SetTextTransformPolicy(ETextTransformPolicy InTransformPolicy)
+	void UTextBlock::SetTextTransformPolicy(
+ETextTransformPolicy InTransformPolicy
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14541,6 +16720,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14549,7 +16730,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FText                                        InText                                                     (Parm, NativeAccessSpecifierPublic)
 	 */
-	void UTextBlock::SetText(const class FText& InText)
+	void UTextBlock::SetText(
+const class FText& InText
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14566,6 +16749,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14574,7 +16759,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSlateBrush                                 InStrikeBrush                                              (Parm, NativeAccessSpecifierPublic)
 	 */
-	void UTextBlock::SetStrikeBrush(const struct FSlateBrush& InStrikeBrush)
+	void UTextBlock::SetStrikeBrush(
+const struct FSlateBrush& InStrikeBrush
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14591,6 +16778,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14599,7 +16788,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector2D                                   InShadowOffset                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UTextBlock::SetShadowOffset(const struct FVector2D& InShadowOffset)
+	void UTextBlock::SetShadowOffset(
+const struct FVector2D& InShadowOffset
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14616,6 +16807,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14624,7 +16817,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FLinearColor                                InShadowColorAndOpacity                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UTextBlock::SetShadowColorAndOpacity(const struct FLinearColor& InShadowColorAndOpacity)
+	void UTextBlock::SetShadowColorAndOpacity(
+const struct FLinearColor& InShadowColorAndOpacity
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14641,6 +16836,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14649,7 +16846,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InOpacity                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UTextBlock::SetOpacity(float InOpacity)
+	void UTextBlock::SetOpacity(
+float InOpacity
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14666,6 +16865,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14674,7 +16875,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InMinDesiredWidth                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UTextBlock::SetMinDesiredWidth(float InMinDesiredWidth)
+	void UTextBlock::SetMinDesiredWidth(
+float InMinDesiredWidth
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14691,6 +16894,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14699,7 +16904,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSlateFontInfo                              InFontInfo                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UTextBlock::SetFont(const struct FSlateFontInfo& InFontInfo)
+	void UTextBlock::SetFont(
+const struct FSlateFontInfo& InFontInfo
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14716,6 +16923,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14724,7 +16933,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSlateColor                                 InColorAndOpacity                                          (Parm, NativeAccessSpecifierPublic)
 	 */
-	void UTextBlock::SetColorAndOpacity(const struct FSlateColor& InColorAndOpacity)
+	void UTextBlock::SetColorAndOpacity(
+const struct FSlateColor& InColorAndOpacity
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14741,6 +16952,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14749,7 +16962,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               InAutoTextWrap                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UTextBlock::SetAutoWrapText(bool InAutoTextWrap)
+	void UTextBlock::SetAutoWrapText(
+bool InAutoTextWrap
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14765,6 +16980,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -14789,6 +17006,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14811,6 +17030,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -14835,10 +17056,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UTextBlock.StaticClass
+	 * 		Name   -> PredefinedFunction UTextBlock.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UTextBlock::StaticClass()
@@ -14849,6 +17072,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14857,7 +17082,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            InNumberOfPieces                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UThrobber::SetNumberOfPieces(int32_t InNumberOfPieces)
+	void UThrobber::SetNumberOfPieces(
+int32_t InNumberOfPieces
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14874,6 +17101,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14882,7 +17111,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bInAnimateVertically                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UThrobber::SetAnimateVertically(bool bInAnimateVertically)
+	void UThrobber::SetAnimateVertically(
+bool bInAnimateVertically
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14899,6 +17130,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14907,7 +17140,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bInAnimateOpacity                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UThrobber::SetAnimateOpacity(bool bInAnimateOpacity)
+	void UThrobber::SetAnimateOpacity(
+bool bInAnimateOpacity
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14924,6 +17159,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14932,7 +17169,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bInAnimateHorizontally                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UThrobber::SetAnimateHorizontally(bool bInAnimateHorizontally)
+	void UThrobber::SetAnimateHorizontally(
+bool bInAnimateHorizontally
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14949,10 +17188,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UThrobber.StaticClass
+	 * 		Name   -> PredefinedFunction UThrobber.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UThrobber::StaticClass()
@@ -14963,6 +17204,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14971,7 +17214,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              NewWidth                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UTileView::SetEntryWidth(float NewWidth)
+	void UTileView::SetEntryWidth(
+float NewWidth
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14988,6 +17233,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14996,7 +17243,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              NewHeight                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UTileView::SetEntryHeight(float NewHeight)
+	void UTileView::SetEntryHeight(
+float NewHeight
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15012,6 +17261,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -15036,6 +17287,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15059,10 +17312,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UTileView.StaticClass
+	 * 		Name   -> PredefinedFunction UTileView.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UTileView::StaticClass()
@@ -15073,6 +17328,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15082,7 +17339,11 @@ namespace CG
 	 * 		class UObject*                                     Item                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bExpandItem                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UTreeView::SetItemExpansion(class UObject* Item, bool bExpandItem)
+	void UTreeView::SetItemExpansion(
+class UObject* Item
+, 
+bool bExpandItem
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15100,6 +17361,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -15122,6 +17385,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15143,10 +17408,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UTreeView.StaticClass
+	 * 		Name   -> PredefinedFunction UTreeView.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UTreeView::StaticClass()
@@ -15157,6 +17424,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15165,7 +17434,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        InUserTag                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUMGSequencePlayer::SetUserTag(const class FName& InUserTag)
+	void UUMGSequencePlayer::SetUserTag(
+const class FName& InUserTag
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15181,6 +17452,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -15205,10 +17478,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UUMGSequencePlayer.StaticClass
+	 * 		Name   -> PredefinedFunction UUMGSequencePlayer.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UUMGSequencePlayer::StaticClass()
@@ -15219,10 +17494,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UUMGSequenceTickManager.StaticClass
+	 * 		Name   -> PredefinedFunction UUMGSequenceTickManager.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UUMGSequenceTickManager::StaticClass()
@@ -15233,6 +17510,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15241,7 +17520,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FMargin                                     InSlotPadding                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UUniformGridPanel::SetSlotPadding(const struct FMargin& InSlotPadding)
+	void UUniformGridPanel::SetSlotPadding(
+const struct FMargin& InSlotPadding
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15258,6 +17539,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15266,7 +17549,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InMinDesiredSlotWidth                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUniformGridPanel::SetMinDesiredSlotWidth(float InMinDesiredSlotWidth)
+	void UUniformGridPanel::SetMinDesiredSlotWidth(
+float InMinDesiredSlotWidth
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15283,6 +17568,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15291,7 +17578,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InMinDesiredSlotHeight                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUniformGridPanel::SetMinDesiredSlotHeight(float InMinDesiredSlotHeight)
+	void UUniformGridPanel::SetMinDesiredSlotHeight(
+float InMinDesiredSlotHeight
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15308,6 +17597,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15318,7 +17609,13 @@ namespace CG
 	 * 		int32_t                                            InRow                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            InColumn                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UUniformGridSlot* UUniformGridPanel::AddChildToUniformGrid(class UWidget* Content, int32_t InRow, int32_t InColumn)
+	class UUniformGridSlot* UUniformGridPanel::AddChildToUniformGrid(
+class UWidget* Content
+, 
+int32_t InRow
+, 
+int32_t InColumn
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15341,10 +17638,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UUniformGridPanel.StaticClass
+	 * 		Name   -> PredefinedFunction UUniformGridPanel.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UUniformGridPanel::StaticClass()
@@ -15355,6 +17654,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15363,7 +17664,9 @@ namespace CG
 	 * Parameters:
 	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUniformGridSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
+	void UUniformGridSlot::SetVerticalAlignment(
+EVerticalAlignment InVerticalAlignment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15380,6 +17683,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15388,7 +17693,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            InRow                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUniformGridSlot::SetRow(int32_t InRow)
+	void UUniformGridSlot::SetRow(
+int32_t InRow
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15405,6 +17712,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15413,7 +17722,9 @@ namespace CG
 	 * Parameters:
 	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUniformGridSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
+	void UUniformGridSlot::SetHorizontalAlignment(
+EHorizontalAlignment InHorizontalAlignment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15430,6 +17741,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15438,7 +17751,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            InColumn                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUniformGridSlot::SetColumn(int32_t InColumn)
+	void UUniformGridSlot::SetColumn(
+int32_t InColumn
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15455,10 +17770,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UUniformGridSlot.StaticClass
+	 * 		Name   -> PredefinedFunction UUniformGridSlot.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UUniformGridSlot::StaticClass()
@@ -15469,6 +17786,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15477,7 +17796,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UWidget*                                     Content                                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UVerticalBoxSlot* UVerticalBox::AddChildToVerticalBox(class UWidget* Content)
+	class UVerticalBoxSlot* UVerticalBox::AddChildToVerticalBox(
+class UWidget* Content
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15496,10 +17817,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVerticalBox.StaticClass
+	 * 		Name   -> PredefinedFunction UVerticalBox.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVerticalBox::StaticClass()
@@ -15510,6 +17833,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15518,7 +17843,9 @@ namespace CG
 	 * Parameters:
 	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVerticalBoxSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
+	void UVerticalBoxSlot::SetVerticalAlignment(
+EVerticalAlignment InVerticalAlignment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15535,6 +17862,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15543,7 +17872,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSlateChildSize                             InSize                                                     (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UVerticalBoxSlot::SetSize(const struct FSlateChildSize& InSize)
+	void UVerticalBoxSlot::SetSize(
+const struct FSlateChildSize& InSize
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15560,6 +17891,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15568,7 +17901,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FMargin                                     InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UVerticalBoxSlot::SetPadding(const struct FMargin& InPadding)
+	void UVerticalBoxSlot::SetPadding(
+const struct FMargin& InPadding
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15585,6 +17920,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15593,7 +17930,9 @@ namespace CG
 	 * Parameters:
 	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVerticalBoxSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
+	void UVerticalBoxSlot::SetHorizontalAlignment(
+EHorizontalAlignment InHorizontalAlignment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15610,10 +17949,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVerticalBoxSlot.StaticClass
+	 * 		Name   -> PredefinedFunction UVerticalBoxSlot.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVerticalBoxSlot::StaticClass()
@@ -15624,6 +17965,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15632,7 +17975,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UClass*                                      ActorClass                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class AActor* UViewport::Spawn(class UClass* ActorClass)
+	class AActor* UViewport::Spawn(
+class UClass* ActorClass
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15651,6 +17996,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15659,7 +18006,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FRotator                                    Rotation                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UViewport::SetViewRotation(const struct FRotator& Rotation)
+	void UViewport::SetViewRotation(
+const struct FRotator& Rotation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15676,6 +18025,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15684,7 +18035,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector                                     Location                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UViewport::SetViewLocation(const struct FVector& Location)
+	void UViewport::SetViewLocation(
+const struct FVector& Location
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15700,6 +18053,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -15724,6 +18079,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15746,6 +18103,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -15770,10 +18129,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UViewport.StaticClass
+	 * 		Name   -> PredefinedFunction UViewport.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UViewport::StaticClass()
@@ -15783,6 +18144,8 @@ namespace CG
 			ptr = UObject::FindClass("Class UMG.Viewport");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -15807,10 +18170,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVisibilityBinding.StaticClass
+	 * 		Name   -> PredefinedFunction UVisibilityBinding.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVisibilityBinding::StaticClass()
@@ -15821,6 +18186,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15830,7 +18197,11 @@ namespace CG
 	 * 		class UUserWidget*                                 Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FScriptDelegate                              Delegate                                                   (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetAnimation::UnbindFromAnimationStarted(class UUserWidget* Widget, const class FScriptDelegate& Delegate)
+	void UWidgetAnimation::UnbindFromAnimationStarted(
+class UUserWidget* Widget
+, 
+const class FScriptDelegate& Delegate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15849,6 +18220,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15858,7 +18231,11 @@ namespace CG
 	 * 		class UUserWidget*                                 Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FScriptDelegate                              Delegate                                                   (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetAnimation::UnbindFromAnimationFinished(class UUserWidget* Widget, const class FScriptDelegate& Delegate)
+	void UWidgetAnimation::UnbindFromAnimationFinished(
+class UUserWidget* Widget
+, 
+const class FScriptDelegate& Delegate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15877,6 +18254,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15885,7 +18264,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UUserWidget*                                 Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetAnimation::UnbindAllFromAnimationStarted(class UUserWidget* Widget)
+	void UWidgetAnimation::UnbindAllFromAnimationStarted(
+class UUserWidget* Widget
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15902,6 +18283,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15910,7 +18293,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UUserWidget*                                 Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetAnimation::UnbindAllFromAnimationFinished(class UUserWidget* Widget)
+	void UWidgetAnimation::UnbindAllFromAnimationFinished(
+class UUserWidget* Widget
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15926,6 +18311,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -15950,6 +18337,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15973,6 +18362,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15982,7 +18373,11 @@ namespace CG
 	 * 		class UUserWidget*                                 Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FScriptDelegate                              Delegate                                                   (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetAnimation::BindToAnimationStarted(class UUserWidget* Widget, const class FScriptDelegate& Delegate)
+	void UWidgetAnimation::BindToAnimationStarted(
+class UUserWidget* Widget
+, 
+const class FScriptDelegate& Delegate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16001,6 +18396,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16010,7 +18407,11 @@ namespace CG
 	 * 		class UUserWidget*                                 Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FScriptDelegate                              Delegate                                                   (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetAnimation::BindToAnimationFinished(class UUserWidget* Widget, const class FScriptDelegate& Delegate)
+	void UWidgetAnimation::BindToAnimationFinished(
+class UUserWidget* Widget
+, 
+const class FScriptDelegate& Delegate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16029,10 +18430,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWidgetAnimation.StaticClass
+	 * 		Name   -> PredefinedFunction UWidgetAnimation.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWidgetAnimation::StaticClass()
@@ -16043,10 +18446,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWidgetAnimationDelegateBinding.StaticClass
+	 * 		Name   -> PredefinedFunction UWidgetAnimationDelegateBinding.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWidgetAnimationDelegateBinding::StaticClass()
@@ -16056,6 +18461,8 @@ namespace CG
 			ptr = UObject::FindClass("Class UMG.WidgetAnimationDelegateBinding");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -16072,7 +18479,23 @@ namespace CG
 	 * 		EUMGSequencePlayMode                               PlayMode                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              PlaybackSpeed                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UWidgetAnimationPlayCallbackProxy* UWidgetAnimationPlayCallbackProxy::CreatePlayAnimationTimeRangeProxyObject(class UUMGSequencePlayer** Result, class UUserWidget* Widget, class UWidgetAnimation* InAnimation, float StartAtTime, float EndAtTime, int32_t NumLoopsToPlay, EUMGSequencePlayMode PlayMode, float PlaybackSpeed)
+	class UWidgetAnimationPlayCallbackProxy* UWidgetAnimationPlayCallbackProxy::CreatePlayAnimationTimeRangeProxyObject(
+class UUMGSequencePlayer** Result
+, 
+class UUserWidget* Widget
+, 
+class UWidgetAnimation* InAnimation
+, 
+float StartAtTime
+, 
+float EndAtTime
+, 
+int32_t NumLoopsToPlay
+, 
+EUMGSequencePlayMode PlayMode
+, 
+float PlaybackSpeed
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16107,6 +18530,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16121,7 +18546,21 @@ namespace CG
 	 * 		EUMGSequencePlayMode                               PlayMode                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              PlaybackSpeed                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UWidgetAnimationPlayCallbackProxy* UWidgetAnimationPlayCallbackProxy::CreatePlayAnimationProxyObject(class UUMGSequencePlayer** Result, class UUserWidget* Widget, class UWidgetAnimation* InAnimation, float StartAtTime, int32_t NumLoopsToPlay, EUMGSequencePlayMode PlayMode, float PlaybackSpeed)
+	class UWidgetAnimationPlayCallbackProxy* UWidgetAnimationPlayCallbackProxy::CreatePlayAnimationProxyObject(
+class UUMGSequencePlayer** Result
+, 
+class UUserWidget* Widget
+, 
+class UWidgetAnimation* InAnimation
+, 
+float StartAtTime
+, 
+int32_t NumLoopsToPlay
+, 
+EUMGSequencePlayMode PlayMode
+, 
+float PlaybackSpeed
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16154,10 +18593,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWidgetAnimationPlayCallbackProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UWidgetAnimationPlayCallbackProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWidgetAnimationPlayCallbackProxy::StaticClass()
@@ -16167,6 +18608,8 @@ namespace CG
 			ptr = UObject::FindClass("Class UMG.WidgetAnimationPlayCallbackProxy");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -16191,10 +18634,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWidgetBinding.StaticClass
+	 * 		Name   -> PredefinedFunction UWidgetBinding.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWidgetBinding::StaticClass()
@@ -16205,10 +18650,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWidgetBlueprintGeneratedClass.StaticClass
+	 * 		Name   -> PredefinedFunction UWidgetBlueprintGeneratedClass.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWidgetBlueprintGeneratedClass::StaticClass()
@@ -16219,6 +18666,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16227,7 +18676,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FEventReply                                 Reply                                                      (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	struct FEventReply UWidgetBlueprintLibrary::UnlockMouse(struct FEventReply* Reply)
+	struct FEventReply UWidgetBlueprintLibrary::UnlockMouse(
+struct FEventReply* Reply
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16247,6 +18698,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -16271,6 +18724,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16283,7 +18738,17 @@ namespace CG
 	 * 		bool                                               bWindowButtonsVisible                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bTitleBarVisible                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetBlueprintLibrary::SetWindowTitleBarState(class UWidget* TitleBarContent, EWindowTitleBarMode Mode, bool bTitleBarDragEnabled, bool bWindowButtonsVisible, bool bTitleBarVisible)
+	void UWidgetBlueprintLibrary::SetWindowTitleBarState(
+class UWidget* TitleBarContent
+, 
+EWindowTitleBarMode Mode
+, 
+bool bTitleBarDragEnabled
+, 
+bool bWindowButtonsVisible
+, 
+bool bTitleBarVisible
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16308,6 +18773,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16316,7 +18783,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FScriptDelegate                              Delegate                                                   (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetBlueprintLibrary::SetWindowTitleBarOnCloseClickedDelegate(const class FScriptDelegate& Delegate)
+	void UWidgetBlueprintLibrary::SetWindowTitleBarOnCloseClickedDelegate(
+const class FScriptDelegate& Delegate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16333,6 +18802,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16341,7 +18812,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bActive                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetBlueprintLibrary::SetWindowTitleBarCloseButtonActive(bool bActive)
+	void UWidgetBlueprintLibrary::SetWindowTitleBarCloseButtonActive(
+bool bActive
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16358,6 +18831,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16368,7 +18843,13 @@ namespace CG
 	 * 		class UWidget*                                     FocusWidget                                                (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bInAllUsers                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FEventReply UWidgetBlueprintLibrary::SetUserFocus(struct FEventReply* Reply, class UWidget* FocusWidget, bool bInAllUsers)
+	struct FEventReply UWidgetBlueprintLibrary::SetUserFocus(
+struct FEventReply* Reply
+, 
+class UWidget* FocusWidget
+, 
+bool bInAllUsers
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16393,6 +18874,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16402,7 +18885,11 @@ namespace CG
 	 * 		struct FEventReply                                 Reply                                                      (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		struct FVector2D                                   NewMousePosition                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FEventReply UWidgetBlueprintLibrary::SetMousePosition(struct FEventReply* Reply, const struct FVector2D& NewMousePosition)
+	struct FEventReply UWidgetBlueprintLibrary::SetMousePosition(
+struct FEventReply* Reply
+, 
+const struct FVector2D& NewMousePosition
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16425,6 +18912,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16435,7 +18924,13 @@ namespace CG
 	 * 		class UWidget*                                     InWidgetToFocus                                            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EMouseLockMode                                     InMouseLockMode                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetBlueprintLibrary::SetInputMode_UIOnlyEx(class APlayerController* PlayerController, class UWidget* InWidgetToFocus, EMouseLockMode InMouseLockMode)
+	void UWidgetBlueprintLibrary::SetInputMode_UIOnlyEx(
+class APlayerController* PlayerController
+, 
+class UWidget* InWidgetToFocus
+, 
+EMouseLockMode InMouseLockMode
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16456,6 +18951,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16466,7 +18963,13 @@ namespace CG
 	 * 		class UWidget*                                     InWidgetToFocus                                            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bLockMouseToViewport                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetBlueprintLibrary::SetInputMode_UIOnly(class APlayerController* Target, class UWidget* InWidgetToFocus, bool bLockMouseToViewport)
+	void UWidgetBlueprintLibrary::SetInputMode_UIOnly(
+class APlayerController* Target
+, 
+class UWidget* InWidgetToFocus
+, 
+bool bLockMouseToViewport
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16487,6 +18990,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16495,7 +19000,9 @@ namespace CG
 	 * Parameters:
 	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetBlueprintLibrary::SetInputMode_GameOnly(class APlayerController* PlayerController)
+	void UWidgetBlueprintLibrary::SetInputMode_GameOnly(
+class APlayerController* PlayerController
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16512,6 +19019,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16523,7 +19032,15 @@ namespace CG
 	 * 		EMouseLockMode                                     InMouseLockMode                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideCursorDuringCapture                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetBlueprintLibrary::SetInputMode_GameAndUIEx(class APlayerController* PlayerController, class UWidget* InWidgetToFocus, EMouseLockMode InMouseLockMode, bool bHideCursorDuringCapture)
+	void UWidgetBlueprintLibrary::SetInputMode_GameAndUIEx(
+class APlayerController* PlayerController
+, 
+class UWidget* InWidgetToFocus
+, 
+EMouseLockMode InMouseLockMode
+, 
+bool bHideCursorDuringCapture
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16546,6 +19063,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16557,7 +19076,15 @@ namespace CG
 	 * 		bool                                               bLockMouseToViewport                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideCursorDuringCapture                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetBlueprintLibrary::SetInputMode_GameAndUI(class APlayerController* Target, class UWidget* InWidgetToFocus, bool bLockMouseToViewport, bool bHideCursorDuringCapture)
+	void UWidgetBlueprintLibrary::SetInputMode_GameAndUI(
+class APlayerController* Target
+, 
+class UWidget* InWidgetToFocus
+, 
+bool bLockMouseToViewport
+, 
+bool bHideCursorDuringCapture
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16580,6 +19107,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16591,7 +19120,15 @@ namespace CG
 	 * 		class FName                                        CursorName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector2D                                   HotSpot                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UWidgetBlueprintLibrary::SetHardwareCursor(class UObject* WorldContextObject, EMouseCursor CursorShape, const class FName& CursorName, const struct FVector2D& HotSpot)
+	bool UWidgetBlueprintLibrary::SetHardwareCursor(
+class UObject* WorldContextObject
+, 
+EMouseCursor CursorShape
+, 
+const class FName& CursorName
+, 
+const struct FVector2D& HotSpot
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16616,6 +19153,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16637,6 +19176,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16648,7 +19189,15 @@ namespace CG
 	 * 		bool                                               CorrectDeficiency                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               ShowCorrectionWithDeficiency                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetBlueprintLibrary::SetColorVisionDeficiencyType(EColorVisionDeficiency Type, float Severity, bool CorrectDeficiency, bool ShowCorrectionWithDeficiency)
+	void UWidgetBlueprintLibrary::SetColorVisionDeficiencyType(
+EColorVisionDeficiency Type
+, 
+float Severity
+, 
+bool CorrectDeficiency
+, 
+bool ShowCorrectionWithDeficiency
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16671,6 +19220,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16680,7 +19231,11 @@ namespace CG
 	 * 		struct FSlateBrush                                 Brush                                                      (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		class UTexture2D*                                  Texture                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetBlueprintLibrary::SetBrushResourceToTexture(struct FSlateBrush* Brush, class UTexture2D* Texture)
+	void UWidgetBlueprintLibrary::SetBrushResourceToTexture(
+struct FSlateBrush* Brush
+, 
+class UTexture2D* Texture
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16701,6 +19256,8 @@ namespace CG
 			*Brush = params.Brush;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16710,7 +19267,11 @@ namespace CG
 	 * 		struct FSlateBrush                                 Brush                                                      (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		class UMaterialInterface*                          Material                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetBlueprintLibrary::SetBrushResourceToMaterial(struct FSlateBrush* Brush, class UMaterialInterface* Material)
+	void UWidgetBlueprintLibrary::SetBrushResourceToMaterial(
+struct FSlateBrush* Brush
+, 
+class UMaterialInterface* Material
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16730,6 +19291,8 @@ namespace CG
 		if (Brush != nullptr)
 			*Brush = params.Brush;
 	}
+
+
 
 	/**
 	 * Function:
@@ -16752,6 +19315,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16760,7 +19325,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FEventReply                                 Reply                                                      (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	struct FEventReply UWidgetBlueprintLibrary::ReleaseMouseCapture(struct FEventReply* Reply)
+	struct FEventReply UWidgetBlueprintLibrary::ReleaseMouseCapture(
+struct FEventReply* Reply
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16781,6 +19348,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16790,7 +19359,11 @@ namespace CG
 	 * 		struct FEventReply                                 Reply                                                      (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		bool                                               bInAllJoysticks                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FEventReply UWidgetBlueprintLibrary::ReleaseJoystickCapture(struct FEventReply* Reply, bool bInAllJoysticks)
+	struct FEventReply UWidgetBlueprintLibrary::ReleaseJoystickCapture(
+struct FEventReply* Reply
+, 
+bool bInAllJoysticks
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16813,6 +19386,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16833,6 +19408,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -16857,6 +19434,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16867,7 +19446,13 @@ namespace CG
 	 * 		int32_t                                            Width                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Height                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FSlateBrush UWidgetBlueprintLibrary::MakeBrushFromTexture(class UTexture2D* Texture, int32_t Width, int32_t Height)
+	struct FSlateBrush UWidgetBlueprintLibrary::MakeBrushFromTexture(
+class UTexture2D* Texture
+, 
+int32_t Width
+, 
+int32_t Height
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16890,6 +19475,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16900,7 +19487,13 @@ namespace CG
 	 * 		int32_t                                            Width                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Height                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FSlateBrush UWidgetBlueprintLibrary::MakeBrushFromMaterial(class UMaterialInterface* Material, int32_t Width, int32_t Height)
+	struct FSlateBrush UWidgetBlueprintLibrary::MakeBrushFromMaterial(
+class UMaterialInterface* Material
+, 
+int32_t Width
+, 
+int32_t Height
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16923,6 +19516,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16931,7 +19526,9 @@ namespace CG
 	 * Parameters:
 	 * 		class USlateBrushAsset*                            BrushAsset                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FSlateBrush UWidgetBlueprintLibrary::MakeBrushFromAsset(class USlateBrushAsset* BrushAsset)
+	struct FSlateBrush UWidgetBlueprintLibrary::MakeBrushFromAsset(
+class USlateBrushAsset* BrushAsset
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16950,6 +19547,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -16959,7 +19558,11 @@ namespace CG
 	 * 		struct FEventReply                                 Reply                                                      (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		class UWidget*                                     CapturingWidget                                            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FEventReply UWidgetBlueprintLibrary::LockMouse(struct FEventReply* Reply, class UWidget* CapturingWidget)
+	struct FEventReply UWidgetBlueprintLibrary::LockMouse(
+struct FEventReply* Reply
+, 
+class UWidget* CapturingWidget
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -16981,6 +19584,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -17005,6 +19610,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17028,6 +19635,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17039,7 +19648,15 @@ namespace CG
 	 * 		struct FVector2D                                   SafePaddingScale                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector4                                    SpillOverPadding                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetBlueprintLibrary::GetSafeZonePadding(class UObject* WorldContextObject, struct FVector4* SafePadding, struct FVector2D* SafePaddingScale, struct FVector4* SpillOverPadding)
+	void UWidgetBlueprintLibrary::GetSafeZonePadding(
+class UObject* WorldContextObject
+, 
+struct FVector4* SafePadding
+, 
+struct FVector2D* SafePaddingScale
+, 
+struct FVector4* SpillOverPadding
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17066,6 +19683,8 @@ namespace CG
 			*SpillOverPadding = params.SpillOverPadding;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17074,7 +19693,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FAnalogInputEvent                           Event                                                      (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	struct FKeyEvent UWidgetBlueprintLibrary::GetKeyEventFromAnalogInputEvent(const struct FAnalogInputEvent& Event)
+	struct FKeyEvent UWidgetBlueprintLibrary::GetKeyEventFromAnalogInputEvent(
+const struct FAnalogInputEvent& Event
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17093,6 +19714,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17101,7 +19724,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FPointerEvent                               Event                                                      (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	struct FInputEvent UWidgetBlueprintLibrary::GetInputEventFromPointerEvent(const struct FPointerEvent& Event)
+	struct FInputEvent UWidgetBlueprintLibrary::GetInputEventFromPointerEvent(
+const struct FPointerEvent& Event
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17120,6 +19745,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17128,7 +19755,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FNavigationEvent                            Event                                                      (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	struct FInputEvent UWidgetBlueprintLibrary::GetInputEventFromNavigationEvent(const struct FNavigationEvent& Event)
+	struct FInputEvent UWidgetBlueprintLibrary::GetInputEventFromNavigationEvent(
+const struct FNavigationEvent& Event
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17147,6 +19776,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17155,7 +19786,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FKeyEvent                                   Event                                                      (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	struct FInputEvent UWidgetBlueprintLibrary::GetInputEventFromKeyEvent(const struct FKeyEvent& Event)
+	struct FInputEvent UWidgetBlueprintLibrary::GetInputEventFromKeyEvent(
+const struct FKeyEvent& Event
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17174,6 +19807,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17182,7 +19817,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FCharacterEvent                             Event                                                      (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	struct FInputEvent UWidgetBlueprintLibrary::GetInputEventFromCharacterEvent(const struct FCharacterEvent& Event)
+	struct FInputEvent UWidgetBlueprintLibrary::GetInputEventFromCharacterEvent(
+const struct FCharacterEvent& Event
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17201,6 +19838,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17209,7 +19848,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSlateBrush                                 Brush                                                      (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	class UMaterialInstanceDynamic* UWidgetBlueprintLibrary::GetDynamicMaterial(struct FSlateBrush* Brush)
+	class UMaterialInstanceDynamic* UWidgetBlueprintLibrary::GetDynamicMaterial(
+struct FSlateBrush* Brush
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17229,6 +19870,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -17253,6 +19896,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17261,7 +19906,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSlateBrush                                 Brush                                                      (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	class UTexture2D* UWidgetBlueprintLibrary::GetBrushResourceAsTexture2D(const struct FSlateBrush& Brush)
+	class UTexture2D* UWidgetBlueprintLibrary::GetBrushResourceAsTexture2D(
+const struct FSlateBrush& Brush
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17280,6 +19927,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17288,7 +19937,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSlateBrush                                 Brush                                                      (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	class UMaterialInterface* UWidgetBlueprintLibrary::GetBrushResourceAsMaterial(const struct FSlateBrush& Brush)
+	class UMaterialInterface* UWidgetBlueprintLibrary::GetBrushResourceAsMaterial(
+const struct FSlateBrush& Brush
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17307,6 +19958,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17315,7 +19968,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSlateBrush                                 Brush                                                      (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	class UObject* UWidgetBlueprintLibrary::GetBrushResource(const struct FSlateBrush& Brush)
+	class UObject* UWidgetBlueprintLibrary::GetBrushResource(
+const struct FSlateBrush& Brush
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17334,6 +19989,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17345,7 +20002,15 @@ namespace CG
 	 * 		class UClass*                                      Interface                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               TopLevelOnly                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetBlueprintLibrary::GetAllWidgetsWithInterface(class UObject* WorldContextObject, TArray<class UUserWidget*>* FoundWidgets, class UClass* Interface, bool TopLevelOnly)
+	void UWidgetBlueprintLibrary::GetAllWidgetsWithInterface(
+class UObject* WorldContextObject
+, 
+TArray<class UUserWidget*>* FoundWidgets
+, 
+class UClass* Interface
+, 
+bool TopLevelOnly
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17370,6 +20035,8 @@ namespace CG
 			*FoundWidgets = params.FoundWidgets;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17381,7 +20048,15 @@ namespace CG
 	 * 		class UClass*                                      WidgetClass                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               TopLevelOnly                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetBlueprintLibrary::GetAllWidgetsOfClass(class UObject* WorldContextObject, TArray<class UUserWidget*>* FoundWidgets, class UClass* WidgetClass, bool TopLevelOnly)
+	void UWidgetBlueprintLibrary::GetAllWidgetsOfClass(
+class UObject* WorldContextObject
+, 
+TArray<class UUserWidget*>* FoundWidgets
+, 
+class UClass* WidgetClass
+, 
+bool TopLevelOnly
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17406,6 +20081,8 @@ namespace CG
 			*FoundWidgets = params.FoundWidgets;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17414,7 +20091,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FEventReply                                 Reply                                                      (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	struct FEventReply UWidgetBlueprintLibrary::EndDragDrop(struct FEventReply* Reply)
+	struct FEventReply UWidgetBlueprintLibrary::EndDragDrop(
+struct FEventReply* Reply
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17435,6 +20114,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17449,7 +20130,21 @@ namespace CG
 	 * 		class FName                                        FontTypeFace                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FLinearColor                                Tint                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetBlueprintLibrary::DrawTextFormatted(struct FPaintContext* Context, const class FText& Text, const struct FVector2D& Position, class UFont* Font, int32_t FontSize, const class FName& FontTypeFace, const struct FLinearColor& Tint)
+	void UWidgetBlueprintLibrary::DrawTextFormatted(
+struct FPaintContext* Context
+, 
+const class FText& Text
+, 
+const struct FVector2D& Position
+, 
+class UFont* Font
+, 
+int32_t FontSize
+, 
+const class FName& FontTypeFace
+, 
+const struct FLinearColor& Tint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17480,6 +20175,8 @@ namespace CG
 			*Context = params.Context;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17491,7 +20188,15 @@ namespace CG
 	 * 		struct FVector2D                                   Position                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FLinearColor                                Tint                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetBlueprintLibrary::DrawText(struct FPaintContext* Context, const class FString& inString, const struct FVector2D& Position, const struct FLinearColor& Tint)
+	void UWidgetBlueprintLibrary::DrawText(
+struct FPaintContext* Context
+, 
+const class FString& inString
+, 
+const struct FVector2D& Position
+, 
+const struct FLinearColor& Tint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17516,6 +20221,8 @@ namespace CG
 			*Context = params.Context;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17528,7 +20235,17 @@ namespace CG
 	 * 		bool                                               bAntiAlias                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Thickness                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetBlueprintLibrary::DrawLines(struct FPaintContext* Context, TArray<struct FVector2D> Points, const struct FLinearColor& Tint, bool bAntiAlias, float Thickness)
+	void UWidgetBlueprintLibrary::DrawLines(
+struct FPaintContext* Context
+, 
+TArray<struct FVector2D> Points
+, 
+const struct FLinearColor& Tint
+, 
+bool bAntiAlias
+, 
+float Thickness
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17555,6 +20272,8 @@ namespace CG
 			*Context = params.Context;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17568,7 +20287,19 @@ namespace CG
 	 * 		bool                                               bAntiAlias                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Thickness                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetBlueprintLibrary::DrawLine(struct FPaintContext* Context, const struct FVector2D& PositionA, const struct FVector2D& PositionB, const struct FLinearColor& Tint, bool bAntiAlias, float Thickness)
+	void UWidgetBlueprintLibrary::DrawLine(
+struct FPaintContext* Context
+, 
+const struct FVector2D& PositionA
+, 
+const struct FVector2D& PositionB
+, 
+const struct FLinearColor& Tint
+, 
+bool bAntiAlias
+, 
+float Thickness
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17597,6 +20328,8 @@ namespace CG
 			*Context = params.Context;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17609,7 +20342,17 @@ namespace CG
 	 * 		class USlateBrushAsset*                            Brush                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FLinearColor                                Tint                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetBlueprintLibrary::DrawBox(struct FPaintContext* Context, const struct FVector2D& Position, const struct FVector2D& Size, class USlateBrushAsset* Brush, const struct FLinearColor& Tint)
+	void UWidgetBlueprintLibrary::DrawBox(
+struct FPaintContext* Context
+, 
+const struct FVector2D& Position
+, 
+const struct FVector2D& Size
+, 
+class USlateBrushAsset* Brush
+, 
+const struct FLinearColor& Tint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17636,6 +20379,8 @@ namespace CG
 			*Context = params.Context;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17657,6 +20402,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17667,7 +20414,13 @@ namespace CG
 	 * 		class UWidget*                                     WidgetDetectingDrag                                        (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FKey                                        DragKey                                                    (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FEventReply UWidgetBlueprintLibrary::DetectDragIfPressed(const struct FPointerEvent& PointerEvent, class UWidget* WidgetDetectingDrag, const struct FKey& DragKey)
+	struct FEventReply UWidgetBlueprintLibrary::DetectDragIfPressed(
+const struct FPointerEvent& PointerEvent
+, 
+class UWidget* WidgetDetectingDrag
+, 
+const struct FKey& DragKey
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17690,6 +20443,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17700,7 +20455,13 @@ namespace CG
 	 * 		class UWidget*                                     WidgetDetectingDrag                                        (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FKey                                        DragKey                                                    (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FEventReply UWidgetBlueprintLibrary::DetectDrag(struct FEventReply* Reply, class UWidget* WidgetDetectingDrag, const struct FKey& DragKey)
+	struct FEventReply UWidgetBlueprintLibrary::DetectDrag(
+struct FEventReply* Reply
+, 
+class UWidget* WidgetDetectingDrag
+, 
+const struct FKey& DragKey
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17725,6 +20486,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17733,7 +20496,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UClass*                                      OperationClass                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UDragDropOperation* UWidgetBlueprintLibrary::CreateDragDropOperation(class UClass* OperationClass)
+	class UDragDropOperation* UWidgetBlueprintLibrary::CreateDragDropOperation(
+class UClass* OperationClass
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17752,6 +20517,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17762,7 +20529,13 @@ namespace CG
 	 * 		class UClass*                                      WidgetType                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class APlayerController*                           OwningPlayer                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UUserWidget* UWidgetBlueprintLibrary::Create(class UObject* WorldContextObject, class UClass* WidgetType, class APlayerController* OwningPlayer)
+	class UUserWidget* UWidgetBlueprintLibrary::Create(
+class UObject* WorldContextObject
+, 
+class UClass* WidgetType
+, 
+class APlayerController* OwningPlayer
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17785,6 +20558,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17794,7 +20569,11 @@ namespace CG
 	 * 		struct FEventReply                                 Reply                                                      (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		bool                                               bInAllUsers                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FEventReply UWidgetBlueprintLibrary::ClearUserFocus(struct FEventReply* Reply, bool bInAllUsers)
+	struct FEventReply UWidgetBlueprintLibrary::ClearUserFocus(
+struct FEventReply* Reply
+, 
+bool bInAllUsers
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17817,6 +20596,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17826,7 +20607,11 @@ namespace CG
 	 * 		struct FEventReply                                 Reply                                                      (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		class UWidget*                                     CapturingWidget                                            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FEventReply UWidgetBlueprintLibrary::CaptureMouse(struct FEventReply* Reply, class UWidget* CapturingWidget)
+	struct FEventReply UWidgetBlueprintLibrary::CaptureMouse(
+struct FEventReply* Reply
+, 
+class UWidget* CapturingWidget
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17849,6 +20634,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17859,7 +20646,13 @@ namespace CG
 	 * 		class UWidget*                                     CapturingWidget                                            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bInAllJoysticks                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FEventReply UWidgetBlueprintLibrary::CaptureJoystick(struct FEventReply* Reply, class UWidget* CapturingWidget, bool bInAllJoysticks)
+	struct FEventReply UWidgetBlueprintLibrary::CaptureJoystick(
+struct FEventReply* Reply
+, 
+class UWidget* CapturingWidget
+, 
+bool bInAllJoysticks
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17884,6 +20677,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17905,10 +20700,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWidgetBlueprintLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UWidgetBlueprintLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWidgetBlueprintLibrary::StaticClass()
@@ -17919,6 +20716,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17927,7 +20726,9 @@ namespace CG
 	 * Parameters:
 	 * 		EWindowVisibility                                  InVisibility                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetComponent::SetWindowVisibility(EWindowVisibility InVisibility)
+	void UWidgetComponent::SetWindowVisibility(
+EWindowVisibility InVisibility
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17944,6 +20745,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17952,7 +20755,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bInWindowFocusable                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetComponent::SetWindowFocusable(bool bInWindowFocusable)
+	void UWidgetComponent::SetWindowFocusable(
+bool bInWindowFocusable
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17969,6 +20774,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17977,7 +20784,9 @@ namespace CG
 	 * Parameters:
 	 * 		EWidgetSpace                                       NewSpace                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetComponent::SetWidgetSpace(EWidgetSpace NewSpace)
+	void UWidgetComponent::SetWidgetSpace(
+EWidgetSpace NewSpace
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -17994,6 +20803,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18002,7 +20813,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UUserWidget*                                 Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetComponent::SetWidget(class UUserWidget* Widget)
+	void UWidgetComponent::SetWidget(
+class UUserWidget* Widget
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18019,6 +20832,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18027,7 +20842,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bWantTwoSided                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetComponent::SetTwoSided(bool bWantTwoSided)
+	void UWidgetComponent::SetTwoSided(
+bool bWantTwoSided
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18044,6 +20861,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18052,7 +20871,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FLinearColor                                NewTintColorAndOpacity                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetComponent::SetTintColorAndOpacity(const struct FLinearColor& NewTintColorAndOpacity)
+	void UWidgetComponent::SetTintColorAndOpacity(
+const struct FLinearColor& NewTintColorAndOpacity
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18069,6 +20890,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18077,7 +20900,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bWantTickWhenOffscreen                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetComponent::SetTickWhenOffscreen(bool bWantTickWhenOffscreen)
+	void UWidgetComponent::SetTickWhenOffscreen(
+bool bWantTickWhenOffscreen
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18094,6 +20919,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18102,7 +20929,9 @@ namespace CG
 	 * Parameters:
 	 * 		ETickMode                                          InTickMode                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetComponent::SetTickMode(ETickMode InTickMode)
+	void UWidgetComponent::SetTickMode(
+ETickMode InTickMode
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18119,6 +20948,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18127,7 +20958,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InRedrawTime                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetComponent::SetRedrawTime(float InRedrawTime)
+	void UWidgetComponent::SetRedrawTime(
+float InRedrawTime
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18144,6 +20977,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18152,7 +20987,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector2D                                   InPivot                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetComponent::SetPivot(const struct FVector2D& InPivot)
+	void UWidgetComponent::SetPivot(
+const struct FVector2D& InPivot
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18169,6 +21006,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18177,7 +21016,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ULocalPlayer*                                LocalPlayer                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetComponent::SetOwnerPlayer(class ULocalPlayer* LocalPlayer)
+	void UWidgetComponent::SetOwnerPlayer(
+class ULocalPlayer* LocalPlayer
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18194,6 +21035,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18202,7 +21045,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bUseManualRedraw                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetComponent::SetManuallyRedraw(bool bUseManualRedraw)
+	void UWidgetComponent::SetManuallyRedraw(
+bool bUseManualRedraw
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18219,6 +21064,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18227,7 +21074,9 @@ namespace CG
 	 * Parameters:
 	 * 		EWidgetGeometryMode                                InGeometryMode                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetComponent::SetGeometryMode(EWidgetGeometryMode InGeometryMode)
+	void UWidgetComponent::SetGeometryMode(
+EWidgetGeometryMode InGeometryMode
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18244,6 +21093,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18252,7 +21103,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector2D                                   Size                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetComponent::SetDrawSize(const struct FVector2D& Size)
+	void UWidgetComponent::SetDrawSize(
+const struct FVector2D& Size
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18269,6 +21122,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18277,7 +21132,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bInDrawAtDesiredSize                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetComponent::SetDrawAtDesiredSize(bool bInDrawAtDesiredSize)
+	void UWidgetComponent::SetDrawAtDesiredSize(
+bool bInDrawAtDesiredSize
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18294,6 +21151,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18302,7 +21161,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InCylinderArcAngle                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetComponent::SetCylinderArcAngle(float InCylinderArcAngle)
+	void UWidgetComponent::SetCylinderArcAngle(
+float InCylinderArcAngle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18319,6 +21180,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18327,7 +21190,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FLinearColor                                NewBackgroundColor                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetComponent::SetBackgroundColor(const struct FLinearColor& NewBackgroundColor)
+	void UWidgetComponent::SetBackgroundColor(
+const struct FLinearColor& NewBackgroundColor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18343,6 +21208,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -18364,6 +21231,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -18388,6 +21257,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18410,6 +21281,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -18434,6 +21307,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18456,6 +21331,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -18480,6 +21357,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18502,6 +21381,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -18526,6 +21407,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18548,6 +21431,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -18572,6 +21457,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18594,6 +21481,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -18618,6 +21507,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18640,6 +21531,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -18664,6 +21557,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18686,6 +21581,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -18710,6 +21607,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18732,6 +21631,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -18756,6 +21657,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18778,6 +21681,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -18802,10 +21707,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWidgetComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UWidgetComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWidgetComponent::StaticClass()
@@ -18816,6 +21723,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18824,7 +21733,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UWidget*                                     FocusWidget                                                (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetInteractionComponent::SetFocus(class UWidget* FocusWidget)
+	void UWidgetInteractionComponent::SetFocus(
+class UWidget* FocusWidget
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18841,6 +21752,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18849,7 +21762,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FHitResult                                  HitResult                                                  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetInteractionComponent::SetCustomHitResult(const struct FHitResult& HitResult)
+	void UWidgetInteractionComponent::SetCustomHitResult(
+const struct FHitResult& HitResult
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18866,6 +21781,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18875,7 +21792,11 @@ namespace CG
 	 * 		class FString                                      Characters                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bRepeat                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UWidgetInteractionComponent::SendKeyChar(const class FString& Characters, bool bRepeat)
+	bool UWidgetInteractionComponent::SendKeyChar(
+const class FString& Characters
+, 
+bool bRepeat
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18896,6 +21817,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18904,7 +21827,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              ScrollDelta                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetInteractionComponent::ScrollWheel(float ScrollDelta)
+	void UWidgetInteractionComponent::ScrollWheel(
+float ScrollDelta
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18921,6 +21846,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18929,7 +21856,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetInteractionComponent::ReleasePointerKey(const struct FKey& Key)
+	void UWidgetInteractionComponent::ReleasePointerKey(
+const struct FKey& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18946,6 +21875,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18954,7 +21885,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UWidgetInteractionComponent::ReleaseKey(const struct FKey& Key)
+	bool UWidgetInteractionComponent::ReleaseKey(
+const struct FKey& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18973,6 +21906,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18981,7 +21916,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetInteractionComponent::PressPointerKey(const struct FKey& Key)
+	void UWidgetInteractionComponent::PressPointerKey(
+const struct FKey& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -18998,6 +21935,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19007,7 +21946,11 @@ namespace CG
 	 * 		struct FKey                                        Key                                                        (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bRepeat                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UWidgetInteractionComponent::PressKey(const struct FKey& Key, bool bRepeat)
+	bool UWidgetInteractionComponent::PressKey(
+const struct FKey& Key
+, 
+bool bRepeat
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19028,6 +21971,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19036,7 +21981,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UWidgetInteractionComponent::PressAndReleaseKey(const struct FKey& Key)
+	bool UWidgetInteractionComponent::PressAndReleaseKey(
+const struct FKey& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19054,6 +22001,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -19078,6 +22027,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19100,6 +22051,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -19124,6 +22077,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19146,6 +22101,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -19170,6 +22127,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19193,10 +22152,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWidgetInteractionComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UWidgetInteractionComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWidgetInteractionComponent::StaticClass()
@@ -19207,6 +22168,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19215,7 +22178,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UWrapBoxSlot* UWidgetLayoutLibrary::SlotAsWrapBoxSlot(class UWidget* Widget)
+	class UWrapBoxSlot* UWidgetLayoutLibrary::SlotAsWrapBoxSlot(
+class UWidget* Widget
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19234,6 +22199,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19242,7 +22209,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UWidgetSwitcherSlot* UWidgetLayoutLibrary::SlotAsWidgetSwitcherSlot(class UWidget* Widget)
+	class UWidgetSwitcherSlot* UWidgetLayoutLibrary::SlotAsWidgetSwitcherSlot(
+class UWidget* Widget
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19261,6 +22230,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19269,7 +22240,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UVerticalBoxSlot* UWidgetLayoutLibrary::SlotAsVerticalBoxSlot(class UWidget* Widget)
+	class UVerticalBoxSlot* UWidgetLayoutLibrary::SlotAsVerticalBoxSlot(
+class UWidget* Widget
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19288,6 +22261,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19296,7 +22271,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UUniformGridSlot* UWidgetLayoutLibrary::SlotAsUniformGridSlot(class UWidget* Widget)
+	class UUniformGridSlot* UWidgetLayoutLibrary::SlotAsUniformGridSlot(
+class UWidget* Widget
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19315,6 +22292,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19323,7 +22302,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USizeBoxSlot* UWidgetLayoutLibrary::SlotAsSizeBoxSlot(class UWidget* Widget)
+	class USizeBoxSlot* UWidgetLayoutLibrary::SlotAsSizeBoxSlot(
+class UWidget* Widget
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19342,6 +22323,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19350,7 +22333,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UScrollBoxSlot* UWidgetLayoutLibrary::SlotAsScrollBoxSlot(class UWidget* Widget)
+	class UScrollBoxSlot* UWidgetLayoutLibrary::SlotAsScrollBoxSlot(
+class UWidget* Widget
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19369,6 +22354,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19377,7 +22364,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UScaleBoxSlot* UWidgetLayoutLibrary::SlotAsScaleBoxSlot(class UWidget* Widget)
+	class UScaleBoxSlot* UWidgetLayoutLibrary::SlotAsScaleBoxSlot(
+class UWidget* Widget
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19396,6 +22385,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19404,7 +22395,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USafeZoneSlot* UWidgetLayoutLibrary::SlotAsSafeBoxSlot(class UWidget* Widget)
+	class USafeZoneSlot* UWidgetLayoutLibrary::SlotAsSafeBoxSlot(
+class UWidget* Widget
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19423,6 +22416,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19431,7 +22426,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UOverlaySlot* UWidgetLayoutLibrary::SlotAsOverlaySlot(class UWidget* Widget)
+	class UOverlaySlot* UWidgetLayoutLibrary::SlotAsOverlaySlot(
+class UWidget* Widget
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19450,6 +22447,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19458,7 +22457,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UHorizontalBoxSlot* UWidgetLayoutLibrary::SlotAsHorizontalBoxSlot(class UWidget* Widget)
+	class UHorizontalBoxSlot* UWidgetLayoutLibrary::SlotAsHorizontalBoxSlot(
+class UWidget* Widget
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19477,6 +22478,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19485,7 +22488,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UGridSlot* UWidgetLayoutLibrary::SlotAsGridSlot(class UWidget* Widget)
+	class UGridSlot* UWidgetLayoutLibrary::SlotAsGridSlot(
+class UWidget* Widget
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19504,6 +22509,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19512,7 +22519,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UCanvasPanelSlot* UWidgetLayoutLibrary::SlotAsCanvasSlot(class UWidget* Widget)
+	class UCanvasPanelSlot* UWidgetLayoutLibrary::SlotAsCanvasSlot(
+class UWidget* Widget
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19531,6 +22540,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19539,7 +22550,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UBorderSlot* UWidgetLayoutLibrary::SlotAsBorderSlot(class UWidget* Widget)
+	class UBorderSlot* UWidgetLayoutLibrary::SlotAsBorderSlot(
+class UWidget* Widget
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19558,6 +22571,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19566,7 +22581,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetLayoutLibrary::RemoveAllWidgets(class UObject* WorldContextObject)
+	void UWidgetLayoutLibrary::RemoveAllWidgets(
+class UObject* WorldContextObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19583,6 +22600,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19594,7 +22613,15 @@ namespace CG
 	 * 		struct FVector2D                                   ScreenPosition                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bPlayerViewportRelative                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UWidgetLayoutLibrary::ProjectWorldLocationToWidgetPosition(class APlayerController* PlayerController, const struct FVector& WorldLocation, struct FVector2D* ScreenPosition, bool bPlayerViewportRelative)
+	bool UWidgetLayoutLibrary::ProjectWorldLocationToWidgetPosition(
+class APlayerController* PlayerController
+, 
+const struct FVector& WorldLocation
+, 
+struct FVector2D* ScreenPosition
+, 
+bool bPlayerViewportRelative
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19621,6 +22648,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19629,7 +22658,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FGeometry UWidgetLayoutLibrary::GetViewportWidgetGeometry(class UObject* WorldContextObject)
+	struct FGeometry UWidgetLayoutLibrary::GetViewportWidgetGeometry(
+class UObject* WorldContextObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19648,6 +22679,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19656,7 +22689,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVector2D UWidgetLayoutLibrary::GetViewportSize(class UObject* WorldContextObject)
+	struct FVector2D UWidgetLayoutLibrary::GetViewportSize(
+class UObject* WorldContextObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19675,6 +22710,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19683,7 +22720,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float UWidgetLayoutLibrary::GetViewportScale(class UObject* WorldContextObject)
+	float UWidgetLayoutLibrary::GetViewportScale(
+class UObject* WorldContextObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19702,6 +22741,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19710,7 +22751,9 @@ namespace CG
 	 * Parameters:
 	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FGeometry UWidgetLayoutLibrary::GetPlayerScreenWidgetGeometry(class APlayerController* PlayerController)
+	struct FGeometry UWidgetLayoutLibrary::GetPlayerScreenWidgetGeometry(
+class APlayerController* PlayerController
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19729,6 +22772,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19739,7 +22784,13 @@ namespace CG
 	 * 		float                                              LocationX                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              LocationY                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UWidgetLayoutLibrary::GetMousePositionScaledByDPI(class APlayerController* Player, float* LocationX, float* LocationY)
+	bool UWidgetLayoutLibrary::GetMousePositionScaledByDPI(
+class APlayerController* Player
+, 
+float* LocationX
+, 
+float* LocationY
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19765,6 +22816,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19773,7 +22826,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVector2D UWidgetLayoutLibrary::GetMousePositionOnViewport(class UObject* WorldContextObject)
+	struct FVector2D UWidgetLayoutLibrary::GetMousePositionOnViewport(
+class UObject* WorldContextObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19791,6 +22846,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -19815,10 +22872,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWidgetLayoutLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UWidgetLayoutLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWidgetLayoutLibrary::StaticClass()
@@ -19829,10 +22888,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWidgetNavigation.StaticClass
+	 * 		Name   -> PredefinedFunction UWidgetNavigation.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWidgetNavigation::StaticClass()
@@ -19843,6 +22904,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19851,7 +22914,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetSwitcher::SetActiveWidgetIndex(int32_t Index)
+	void UWidgetSwitcher::SetActiveWidgetIndex(
+int32_t Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19868,6 +22933,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19876,7 +22943,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetSwitcher::SetActiveWidget(class UWidget* Widget)
+	void UWidgetSwitcher::SetActiveWidget(
+class UWidget* Widget
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19893,6 +22962,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19901,7 +22972,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UWidget* UWidgetSwitcher::GetWidgetAtIndex(int32_t Index)
+	class UWidget* UWidgetSwitcher::GetWidgetAtIndex(
+int32_t Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -19919,6 +22992,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -19943,6 +23018,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19965,6 +23042,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -19989,10 +23068,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWidgetSwitcher.StaticClass
+	 * 		Name   -> PredefinedFunction UWidgetSwitcher.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWidgetSwitcher::StaticClass()
@@ -20003,6 +23084,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20011,7 +23094,9 @@ namespace CG
 	 * Parameters:
 	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetSwitcherSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
+	void UWidgetSwitcherSlot::SetVerticalAlignment(
+EVerticalAlignment InVerticalAlignment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20028,6 +23113,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20036,7 +23123,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FMargin                                     InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetSwitcherSlot::SetPadding(const struct FMargin& InPadding)
+	void UWidgetSwitcherSlot::SetPadding(
+const struct FMargin& InPadding
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20053,6 +23142,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20061,7 +23152,9 @@ namespace CG
 	 * Parameters:
 	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetSwitcherSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
+	void UWidgetSwitcherSlot::SetHorizontalAlignment(
+EHorizontalAlignment InHorizontalAlignment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20078,10 +23171,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWidgetSwitcherSlot.StaticClass
+	 * 		Name   -> PredefinedFunction UWidgetSwitcherSlot.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWidgetSwitcherSlot::StaticClass()
@@ -20092,10 +23187,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWidgetTree.StaticClass
+	 * 		Name   -> PredefinedFunction UWidgetTree.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWidgetTree::StaticClass()
@@ -20106,6 +23203,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20114,7 +23213,9 @@ namespace CG
 	 * Parameters:
 	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWindowTitleBarArea::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
+	void UWindowTitleBarArea::SetVerticalAlignment(
+EVerticalAlignment InVerticalAlignment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20131,6 +23232,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20139,7 +23242,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FMargin                                     InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UWindowTitleBarArea::SetPadding(const struct FMargin& InPadding)
+	void UWindowTitleBarArea::SetPadding(
+const struct FMargin& InPadding
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20156,6 +23261,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20164,7 +23271,9 @@ namespace CG
 	 * Parameters:
 	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWindowTitleBarArea::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
+	void UWindowTitleBarArea::SetHorizontalAlignment(
+EHorizontalAlignment InHorizontalAlignment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20181,10 +23290,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWindowTitleBarArea.StaticClass
+	 * 		Name   -> PredefinedFunction UWindowTitleBarArea.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWindowTitleBarArea::StaticClass()
@@ -20195,6 +23306,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20203,7 +23316,9 @@ namespace CG
 	 * Parameters:
 	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWindowTitleBarAreaSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
+	void UWindowTitleBarAreaSlot::SetVerticalAlignment(
+EVerticalAlignment InVerticalAlignment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20220,6 +23335,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20228,7 +23345,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FMargin                                     InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UWindowTitleBarAreaSlot::SetPadding(const struct FMargin& InPadding)
+	void UWindowTitleBarAreaSlot::SetPadding(
+const struct FMargin& InPadding
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20245,6 +23364,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20253,7 +23374,9 @@ namespace CG
 	 * Parameters:
 	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWindowTitleBarAreaSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
+	void UWindowTitleBarAreaSlot::SetHorizontalAlignment(
+EHorizontalAlignment InHorizontalAlignment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20270,10 +23393,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWindowTitleBarAreaSlot.StaticClass
+	 * 		Name   -> PredefinedFunction UWindowTitleBarAreaSlot.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWindowTitleBarAreaSlot::StaticClass()
@@ -20284,6 +23409,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20292,7 +23419,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector2D                                   InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWrapBox::SetInnerSlotPadding(const struct FVector2D& InPadding)
+	void UWrapBox::SetInnerSlotPadding(
+const struct FVector2D& InPadding
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20309,6 +23438,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20317,7 +23448,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UWidget*                                     Content                                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UWrapBoxSlot* UWrapBox::AddChildToWrapBox(class UWidget* Content)
+	class UWrapBoxSlot* UWrapBox::AddChildToWrapBox(
+class UWidget* Content
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20336,10 +23469,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWrapBox.StaticClass
+	 * 		Name   -> PredefinedFunction UWrapBox.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWrapBox::StaticClass()
@@ -20350,6 +23485,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20358,7 +23495,9 @@ namespace CG
 	 * Parameters:
 	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWrapBoxSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
+	void UWrapBoxSlot::SetVerticalAlignment(
+EVerticalAlignment InVerticalAlignment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20375,6 +23514,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20383,7 +23524,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FMargin                                     InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UWrapBoxSlot::SetPadding(const struct FMargin& InPadding)
+	void UWrapBoxSlot::SetPadding(
+const struct FMargin& InPadding
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20400,6 +23543,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20408,7 +23553,9 @@ namespace CG
 	 * Parameters:
 	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWrapBoxSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
+	void UWrapBoxSlot::SetHorizontalAlignment(
+EHorizontalAlignment InHorizontalAlignment
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20425,6 +23572,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20433,7 +23582,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InFillSpanWhenLessThan                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWrapBoxSlot::SetFillSpanWhenLessThan(float InFillSpanWhenLessThan)
+	void UWrapBoxSlot::SetFillSpanWhenLessThan(
+float InFillSpanWhenLessThan
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20450,6 +23601,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20458,7 +23611,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               InbFillEmptySpace                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWrapBoxSlot::SetFillEmptySpace(bool InbFillEmptySpace)
+	void UWrapBoxSlot::SetFillEmptySpace(
+bool InbFillEmptySpace
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -20475,10 +23630,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWrapBoxSlot.StaticClass
+	 * 		Name   -> PredefinedFunction UWrapBoxSlot.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWrapBoxSlot::StaticClass()
@@ -20488,6 +23645,7 @@ namespace CG
 			ptr = UObject::FindClass("Class UMG.WrapBoxSlot");
 		return ptr;
 	}
+
 
 }
 

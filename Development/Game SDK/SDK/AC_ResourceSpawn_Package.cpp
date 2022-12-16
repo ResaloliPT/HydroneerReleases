@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19,7 +20,11 @@ namespace CG
 	 * 		float                                              DQA_In                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		float                                              DQA_Out                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UAC_ResourceSpawn_C::BalanceResources(float DQA_In, float* DQA_Out)
+	void UAC_ResourceSpawn_C::BalanceResources(
+float DQA_In
+, 
+float* DQA_Out
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -40,6 +45,8 @@ namespace CG
 			*DQA_Out = params.DQA_Out;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -50,7 +57,13 @@ namespace CG
 	 * 		class ABP_HydroVoxelWorld_C*                       VoxelWorld                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		int32_t                                            QualityValue                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UAC_ResourceSpawn_C::GetDirtDepth(const struct FVector& AtLocation, class ABP_HydroVoxelWorld_C* VoxelWorld, int32_t* QualityValue)
+	void UAC_ResourceSpawn_C::GetDirtDepth(
+const struct FVector& AtLocation
+, 
+class ABP_HydroVoxelWorld_C* VoxelWorld
+, 
+int32_t* QualityValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -73,6 +86,8 @@ namespace CG
 			*QualityValue = params.QualityValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -84,7 +99,15 @@ namespace CG
 	 * 		float                                              Weight                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		float                                              Impulse                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UAC_ResourceSpawn_C::SpawnActorDontUsethis(class UClass* Class, const struct FTransform& SpawnTransform, float Weight, float Impulse)
+	void UAC_ResourceSpawn_C::SpawnActorDontUsethis(
+class UClass* Class
+, 
+const struct FTransform& SpawnTransform
+, 
+float Weight
+, 
+float Impulse
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -107,6 +130,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -115,10 +140,18 @@ namespace CG
 	 * Parameters:
 	 * 		class USceneComponent*                             VoxelWorld                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class USceneComponent*                             DiggingComp                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		bool                                               Z_                                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               Z                                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 * 		int32_t                                            DirtQualityAverage                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UAC_ResourceSpawn_C::CalcDQA(class USceneComponent* VoxelWorld, class USceneComponent* DiggingComp, bool Z_, int32_t* DirtQualityAverage)
+	void UAC_ResourceSpawn_C::CalcDQA(
+class USceneComponent* VoxelWorld
+, 
+class USceneComponent* DiggingComp
+, 
+bool Z
+, 
+int32_t* DirtQualityAverage
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -128,12 +161,12 @@ namespace CG
 		{
 			class USceneComponent*                             VoxelWorld;
 			class USceneComponent*                             DiggingComp;
-			bool                                               Z_;
+			bool                                               Z;
 			int32_t                                            DirtQualityAverage;
 		} params;
 		params.VoxelWorld = VoxelWorld;
 		params.DiggingComp = DiggingComp;
-		params.Z_ = Z_;
+		params.Z = Z;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -142,6 +175,8 @@ namespace CG
 		if (DirtQualityAverage != nullptr)
 			*DirtQualityAverage = params.DirtQualityAverage;
 	}
+
+
 
 	/**
 	 * Function:
@@ -153,7 +188,13 @@ namespace CG
 	 * 		int32_t                                            Luck                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class ABP_CaughtFish_C*                            Fish                                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UAC_ResourceSpawn_C::SpawnFish(const struct FVector& Spawn_Transform_Location, int32_t Luck, class ABP_CaughtFish_C** Fish)
+	void UAC_ResourceSpawn_C::SpawnFish(
+const struct FVector& Spawn_Transform_Location
+, 
+int32_t Luck
+, 
+class ABP_CaughtFish_C** Fish
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -176,6 +217,8 @@ namespace CG
 			*Fish = params.Fish;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -186,9 +229,19 @@ namespace CG
 	 * 		int32_t                                            DirtQualityAverage                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		struct FTransform                                  SpawnTrans                                                 (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	 * 		float                                              Impulse                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		bool                                               HandPan_                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               HandPan                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void UAC_ResourceSpawn_C::SpawnResource(int32_t DirtLoads, int32_t DirtQualityAverage, const struct FTransform& SpawnTrans, float Impulse, bool HandPan_)
+	void UAC_ResourceSpawn_C::SpawnResource(
+int32_t DirtLoads
+, 
+int32_t DirtQualityAverage
+, 
+const struct FTransform& SpawnTrans
+, 
+float Impulse
+, 
+bool HandPan
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -200,23 +253,25 @@ namespace CG
 			int32_t                                            DirtQualityAverage;
 			struct FTransform                                  SpawnTrans;
 			float                                              Impulse;
-			bool                                               HandPan_;
+			bool                                               HandPan;
 		} params;
 		params.DirtLoads = DirtLoads;
 		params.DirtQualityAverage = DirtQualityAverage;
 		params.SpawnTrans = SpawnTrans;
 		params.Impulse = Impulse;
-		params.HandPan_ = HandPan_;
+		params.HandPan = HandPan;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAC_ResourceSpawn_C.StaticClass
+	 * 		Name   -> PredefinedFunction UAC_ResourceSpawn_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAC_ResourceSpawn_C::StaticClass()
@@ -226,6 +281,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass AC_ResourceSpawn.AC_ResourceSpawn_C");
 		return ptr;
 	}
+
 
 }
 

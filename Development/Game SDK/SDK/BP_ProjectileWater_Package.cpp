@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -22,7 +23,17 @@ namespace CG
 	 * 		struct FVector                                     NormalImpulse                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		struct FHitResult                                  Hit                                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	 */
-	void ABP_ProjectileWater_C::BndEvt__StaticMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
+	void ABP_ProjectileWater_C::BndEvt__StaticMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(
+class UPrimitiveComponent* HitComponent
+, 
+class AActor* OtherActor
+, 
+class UPrimitiveComponent* OtherComp
+, 
+const struct FVector& NormalImpulse
+, 
+const struct FHitResult& Hit
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -47,6 +58,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -68,6 +81,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -76,7 +91,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ProjectileWater_C::ExecuteUbergraph_BP_ProjectileWater(int32_t EntryPoint)
+	void ABP_ProjectileWater_C::ExecuteUbergraph_BP_ProjectileWater(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -93,10 +110,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ABP_ProjectileWater_C.StaticClass
+	 * 		Name   -> PredefinedFunction ABP_ProjectileWater_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ABP_ProjectileWater_C::StaticClass()
@@ -106,6 +125,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ProjectileWater.BP_ProjectileWater_C");
 		return ptr;
 	}
+
 
 }
 

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UStyledBindCapturePrompt_C.StaticClass
+	 * 		Name   -> PredefinedFunction UStyledBindCapturePrompt_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UStyledBindCapturePrompt_C::StaticClass()
@@ -23,6 +24,7 @@ namespace CG
 			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass StyledBindCapturePrompt.StyledBindCapturePrompt_C");
 		return ptr;
 	}
+
 
 }
 

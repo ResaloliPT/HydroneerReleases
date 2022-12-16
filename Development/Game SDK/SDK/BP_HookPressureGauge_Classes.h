@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,17 +14,28 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * BlueprintGeneratedClass BP_HookPressureGauge.BP_HookPressureGauge_C
-	 * Size -> 0x0008 (FullSize[0x03D0] - InheritedSize[0x03C8])
+	 * Size -> 0x0008 (FullSize[0x0430] - InheritedSize[0x0428])
 	 */
 	class ABP_HookPressureGauge_C : public ABP_ParentHook_C
 	{
 	public:
-		class UTextRenderComponent*                                TextRender;                                              // 0x03C8(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+
+		class UTextRenderComponent*                              TextRender;                                              // 0x0428(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+
 
 	public:
-		void HookFunctionality(class ABP_ParentItem_C* HookedTo, class USceneComponent* Component, bool* CanPass_);
+
+		void HookFunctionality(
+class ABP_ParentItem_C* HookedTo
+, 
+class USceneComponent* Component
+, 
+bool* CanPass
+);
+
 		static UClass* StaticClass();
 	};
 

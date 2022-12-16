@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18,7 +19,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector                                     Location                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UAC_Explosive_C::GetRandomSpaceInRadius(struct FVector* Location)
+	void UAC_Explosive_C::GetRandomSpaceInRadius(
+struct FVector* Location
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -37,6 +40,8 @@ namespace CG
 			*Location = params.Location;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -45,7 +50,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_HydroVoxelWorld_C*                       VoxWorld                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UAC_Explosive_C::TraceForVoxelWorld(class ABP_HydroVoxelWorld_C** VoxWorld)
+	void UAC_Explosive_C::TraceForVoxelWorld(
+class ABP_HydroVoxelWorld_C** VoxWorld
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -64,6 +71,8 @@ namespace CG
 			*VoxWorld = params.VoxWorld;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -72,7 +81,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Amount                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UAC_Explosive_C::CreateHoles(int32_t Amount)
+	void UAC_Explosive_C::CreateHoles(
+int32_t Amount
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -89,6 +100,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -97,7 +110,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<class ABP_ParentItem_C*>                    Items                                                      (Parm, OutParm)
 	 */
-	void UAC_Explosive_C::FindOverlappingActors(TArray<class ABP_ParentItem_C*>* Items)
+	void UAC_Explosive_C::FindOverlappingActors(
+TArray<class ABP_ParentItem_C*>* Items
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -116,6 +131,8 @@ namespace CG
 			*Items = params.Items;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -125,7 +142,11 @@ namespace CG
 	 * 		struct FVector                                     Location                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		float                                              Size                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UAC_Explosive_C::SpawnScrap(const struct FVector& Location, float Size)
+	void UAC_Explosive_C::SpawnScrap(
+const struct FVector& Location
+, 
+float Size
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -143,6 +164,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -165,6 +188,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -173,7 +198,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AActor*                                      Object                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UAC_Explosive_C::LoopForItems(class AActor* Object)
+	void UAC_Explosive_C::LoopForItems(
+class AActor* Object
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -189,6 +216,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -211,6 +240,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -219,7 +250,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UAC_Explosive_C::ExecuteUbergraph_AC_Explosive(int32_t EntryPoint)
+	void UAC_Explosive_C::ExecuteUbergraph_AC_Explosive(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -236,10 +269,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAC_Explosive_C.StaticClass
+	 * 		Name   -> PredefinedFunction UAC_Explosive_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAC_Explosive_C::StaticClass()
@@ -249,6 +284,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass AC_Explosive.AC_Explosive_C");
 		return ptr;
 	}
+
 
 }
 

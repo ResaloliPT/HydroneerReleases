@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18,7 +19,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	 */
-	void AGM_Hydroneer_C::LocationIndicatorColorChange(const class FString& NewValue)
+	void AGM_Hydroneer_C::LocationIndicatorColorChange(
+const class FString& NewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -35,13 +38,15 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function GM_Hydroneer.GM_Hydroneer_C.CanAddPlayer?
 	 * 		Flags  -> ()
 	 */
-	bool AGM_Hydroneer_C::CanAddPlayer_()
+	bool AGM_Hydroneer_C::CanAddPlayer()
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -58,6 +63,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -67,7 +74,11 @@ namespace CG
 	 * 		class AController*                                 NewPlayer                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		struct FTransform                                  SpawnTransform                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor)
 	 */
-	class APawn* AGM_Hydroneer_C::SpawnDefaultPawnAtTransform(class AController* NewPlayer, const struct FTransform& SpawnTransform)
+	class APawn* AGM_Hydroneer_C::SpawnDefaultPawnAtTransform(
+class AController* NewPlayer
+, 
+const struct FTransform& SpawnTransform
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -88,6 +99,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -97,7 +110,11 @@ namespace CG
 	 * 		struct FTransform                                  SpawnTransform                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, UObjectWrapper)
 	 * 		class AController*                                 PlayerController                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	class ABP_Character_HydroGuy_C* AGM_Hydroneer_C::SpawnHydroguy(const struct FTransform& SpawnTransform, class AController* PlayerController)
+	class ABP_Character_HydroGuy_C* AGM_Hydroneer_C::SpawnHydroguy(
+const struct FTransform& SpawnTransform
+, 
+class AController* PlayerController
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -118,6 +135,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -127,7 +146,11 @@ namespace CG
 	 * 		class AController*                                 NewPlayer                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class AActor*                                      StartSpot                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	class APawn* AGM_Hydroneer_C::SpawnDefaultPawnFor(class AController* NewPlayer, class AActor* StartSpot)
+	class APawn* AGM_Hydroneer_C::SpawnDefaultPawnFor(
+class AController* NewPlayer
+, 
+class AActor* StartSpot
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -147,6 +170,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -169,6 +194,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -189,6 +216,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -211,15 +240,19 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function GM_Hydroneer.GM_Hydroneer_C.AddDebugPlayer
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               Add_                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               Add                                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void AGM_Hydroneer_C::AddDebugPlayer(bool Add_)
+	void AGM_Hydroneer_C::AddDebugPlayer(
+bool Add
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -227,14 +260,16 @@ namespace CG
 		
 		struct
 		{
-			bool                                               Add_;
+			bool                                               Add;
 		} params;
-		params.Add_ = Add_;
+		params.Add = Add;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -244,7 +279,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamRemotePlaySessionDisconnected         Data                                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 	 */
-	void AGM_Hydroneer_C::RemovePlayer(const struct FSteamRemotePlaySessionDisconnected& Data)
+	void AGM_Hydroneer_C::RemovePlayer(
+const struct FSteamRemotePlaySessionDisconnected& Data
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -260,6 +297,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -282,6 +321,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -303,6 +344,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -311,7 +354,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamRemotePlaySessionConnected            Data                                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 	 */
-	void AGM_Hydroneer_C::AddRemotePlayer(const struct FSteamRemotePlaySessionConnected& Data)
+	void AGM_Hydroneer_C::AddRemotePlayer(
+const struct FSteamRemotePlaySessionConnected& Data
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -328,6 +373,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -338,7 +385,13 @@ namespace CG
 	 * 		bool                                               isRemote                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 * 		class ABP_GameController_C*                        PlayerController                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	 */
-	void AGM_Hydroneer_C::AddPlayer(const struct FSteamRemotePlaySessionConnected& Data, bool isRemote, class ABP_GameController_C** PlayerController)
+	void AGM_Hydroneer_C::AddPlayer(
+const struct FSteamRemotePlaySessionConnected& Data
+, 
+bool isRemote
+, 
+class ABP_GameController_C** PlayerController
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -361,6 +414,8 @@ namespace CG
 			*PlayerController = params.PlayerController;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -382,15 +437,19 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function GM_Hydroneer.GM_Hydroneer_C.InitGameplay
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               UseCameraLerp_                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               UseCameraLerp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void AGM_Hydroneer_C::InitGameplay(bool UseCameraLerp_)
+	void AGM_Hydroneer_C::InitGameplay(
+bool UseCameraLerp
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -398,14 +457,16 @@ namespace CG
 		
 		struct
 		{
-			bool                                               UseCameraLerp_;
+			bool                                               UseCameraLerp;
 		} params;
-		params.UseCameraLerp_ = UseCameraLerp_;
+		params.UseCameraLerp = UseCameraLerp;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -413,9 +474,11 @@ namespace CG
 	 * 		Name   -> Function GM_Hydroneer.GM_Hydroneer_C.InitMainMenu
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               SkipMainMenu_                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               SkipMainMenu                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void AGM_Hydroneer_C::InitMainMenu(bool SkipMainMenu_)
+	void AGM_Hydroneer_C::InitMainMenu(
+bool SkipMainMenu
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -423,14 +486,16 @@ namespace CG
 		
 		struct
 		{
-			bool                                               SkipMainMenu_;
+			bool                                               SkipMainMenu;
 		} params;
-		params.SkipMainMenu_ = SkipMainMenu_;
+		params.SkipMainMenu = SkipMainMenu;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -453,6 +518,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -474,16 +541,22 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function GM_Hydroneer.GM_Hydroneer_C.ContinueGame
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               Creative_                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	 * 		bool                                               CloudSaving_                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               Creative                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               CloudSaving                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void AGM_Hydroneer_C::ContinueGame(bool Creative_, bool CloudSaving_)
+	void AGM_Hydroneer_C::ContinueGame(
+bool Creative
+, 
+bool CloudSaving
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -491,16 +564,18 @@ namespace CG
 		
 		struct
 		{
-			bool                                               Creative_;
-			bool                                               CloudSaving_;
+			bool                                               Creative;
+			bool                                               CloudSaving;
 		} params;
-		params.Creative_ = Creative_;
-		params.CloudSaving_ = CloudSaving_;
+		params.Creative = Creative;
+		params.CloudSaving = CloudSaving;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -523,6 +598,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -543,6 +620,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -565,6 +644,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -573,7 +654,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void AGM_Hydroneer_C::ExecuteUbergraph_GM_Hydroneer(int32_t EntryPoint)
+	void AGM_Hydroneer_C::ExecuteUbergraph_GM_Hydroneer(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -589,6 +672,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -611,6 +696,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -632,10 +719,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AGM_Hydroneer_C.StaticClass
+	 * 		Name   -> PredefinedFunction AGM_Hydroneer_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AGM_Hydroneer_C::StaticClass()
@@ -645,6 +734,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass GM_Hydroneer.GM_Hydroneer_C");
 		return ptr;
 	}
+
 
 }
 

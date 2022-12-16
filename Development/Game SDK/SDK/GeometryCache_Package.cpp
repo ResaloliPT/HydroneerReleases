@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGeometryCache.StaticClass
+	 * 		Name   -> PredefinedFunction UGeometryCache.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGeometryCache::StaticClass()
@@ -23,6 +24,8 @@ namespace CG
 			ptr = UObject::FindClass("Class GeometryCache.GeometryCache");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -47,10 +50,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AGeometryCacheActor.StaticClass
+	 * 		Name   -> PredefinedFunction AGeometryCacheActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AGeometryCacheActor::StaticClass()
@@ -61,10 +66,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGeometryCacheCodecBase.StaticClass
+	 * 		Name   -> PredefinedFunction UGeometryCacheCodecBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGeometryCacheCodecBase::StaticClass()
@@ -75,10 +82,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGeometryCacheCodecRaw.StaticClass
+	 * 		Name   -> PredefinedFunction UGeometryCacheCodecRaw.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGeometryCacheCodecRaw::StaticClass()
@@ -89,10 +98,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGeometryCacheCodecV1.StaticClass
+	 * 		Name   -> PredefinedFunction UGeometryCacheCodecV1.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGeometryCacheCodecV1::StaticClass()
@@ -102,6 +113,8 @@ namespace CG
 			ptr = UObject::FindClass("Class GeometryCache.GeometryCacheCodecV1");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -114,7 +127,15 @@ namespace CG
 	 * 		bool                                               bInBackwards                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bInIsLooping                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGeometryCacheComponent::TickAtThisTime(float Time, bool bInIsRunning, bool bInBackwards, bool bInIsLooping)
+	void UGeometryCacheComponent::TickAtThisTime(
+float Time
+, 
+bool bInIsRunning
+, 
+bool bInBackwards
+, 
+bool bInIsLooping
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -137,6 +158,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -158,6 +181,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -166,7 +191,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              NewStartTimeOffset                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGeometryCacheComponent::SetStartTimeOffset(float NewStartTimeOffset)
+	void UGeometryCacheComponent::SetStartTimeOffset(
+float NewStartTimeOffset
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -183,6 +210,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -191,7 +220,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              NewPlaybackSpeed                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGeometryCacheComponent::SetPlaybackSpeed(float NewPlaybackSpeed)
+	void UGeometryCacheComponent::SetPlaybackSpeed(
+float NewPlaybackSpeed
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -208,6 +239,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -216,7 +249,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bNewLooping                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGeometryCacheComponent::SetLooping(bool bNewLooping)
+	void UGeometryCacheComponent::SetLooping(
+bool bNewLooping
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -233,6 +268,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -241,7 +278,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UGeometryCache*                              NewGeomCache                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UGeometryCacheComponent::SetGeometryCache(class UGeometryCache* NewGeomCache)
+	bool UGeometryCacheComponent::SetGeometryCache(
+class UGeometryCache* NewGeomCache
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -259,6 +298,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -281,6 +322,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -301,6 +344,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -323,6 +368,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -344,6 +391,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -364,6 +413,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -388,6 +439,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -410,6 +463,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -434,6 +489,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -456,6 +513,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -480,6 +539,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -502,6 +563,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -526,6 +589,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -548,6 +613,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -572,10 +639,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGeometryCacheComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UGeometryCacheComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGeometryCacheComponent::StaticClass()
@@ -586,10 +655,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGeometryCacheTrack.StaticClass
+	 * 		Name   -> PredefinedFunction UGeometryCacheTrack.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGeometryCacheTrack::StaticClass()
@@ -600,6 +671,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -609,7 +682,11 @@ namespace CG
 	 * 		struct FGeometryCacheMeshData                      MeshData                                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		float                                              SampleTime                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGeometryCacheTrack_FlipbookAnimation::AddMeshSample(const struct FGeometryCacheMeshData& MeshData, float SampleTime)
+	void UGeometryCacheTrack_FlipbookAnimation::AddMeshSample(
+const struct FGeometryCacheMeshData& MeshData
+, 
+float SampleTime
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -628,10 +705,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGeometryCacheTrack_FlipbookAnimation.StaticClass
+	 * 		Name   -> PredefinedFunction UGeometryCacheTrack_FlipbookAnimation.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGeometryCacheTrack_FlipbookAnimation::StaticClass()
@@ -642,10 +721,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGeometryCacheTrackStreamable.StaticClass
+	 * 		Name   -> PredefinedFunction UGeometryCacheTrackStreamable.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGeometryCacheTrackStreamable::StaticClass()
@@ -656,6 +737,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -664,7 +747,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FGeometryCacheMeshData                      NewMeshData                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UGeometryCacheTrack_TransformAnimation::SetMesh(const struct FGeometryCacheMeshData& NewMeshData)
+	void UGeometryCacheTrack_TransformAnimation::SetMesh(
+const struct FGeometryCacheMeshData& NewMeshData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -681,10 +766,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGeometryCacheTrack_TransformAnimation.StaticClass
+	 * 		Name   -> PredefinedFunction UGeometryCacheTrack_TransformAnimation.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGeometryCacheTrack_TransformAnimation::StaticClass()
@@ -695,6 +782,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -703,7 +792,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FGeometryCacheMeshData                      NewMeshData                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UGeometryCacheTrack_TransformGroupAnimation::SetMesh(const struct FGeometryCacheMeshData& NewMeshData)
+	void UGeometryCacheTrack_TransformGroupAnimation::SetMesh(
+const struct FGeometryCacheMeshData& NewMeshData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -720,10 +811,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGeometryCacheTrack_TransformGroupAnimation.StaticClass
+	 * 		Name   -> PredefinedFunction UGeometryCacheTrack_TransformGroupAnimation.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGeometryCacheTrack_TransformGroupAnimation::StaticClass()
@@ -733,6 +826,7 @@ namespace CG
 			ptr = UObject::FindClass("Class GeometryCache.GeometryCacheTrack_TransformGroupAnimation");
 		return ptr;
 	}
+
 
 }
 

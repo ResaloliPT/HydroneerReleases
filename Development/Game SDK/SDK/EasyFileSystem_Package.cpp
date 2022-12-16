@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19,7 +20,11 @@ namespace CG
 	 * 		class FString                                      inPath                                                     (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bNewReadOnlyValue                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UEasyFileSystemBPLibrary::SetReadOnly(const class FString& inPath, bool bNewReadOnlyValue)
+	bool UEasyFileSystemBPLibrary::SetReadOnly(
+const class FString& inPath
+, 
+bool bNewReadOnlyValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -40,6 +45,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -49,7 +56,11 @@ namespace CG
 	 * 		class FString                                      inPath                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      textData                                                   (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UEasyFileSystemBPLibrary::SaveStringToFile(const class FString& inPath, const class FString& textData)
+	bool UEasyFileSystemBPLibrary::SaveStringToFile(
+const class FString& inPath
+, 
+const class FString& textData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -70,6 +81,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -79,7 +92,11 @@ namespace CG
 	 * 		class FString                                      inPath                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<unsigned char>                              Array                                                      (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	bool UEasyFileSystemBPLibrary::SaveArrayToFile(const class FString& inPath, TArray<unsigned char> Array)
+	bool UEasyFileSystemBPLibrary::SaveArrayToFile(
+const class FString& inPath
+, 
+TArray<unsigned char> Array
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -100,6 +117,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -109,7 +128,11 @@ namespace CG
 	 * 		class FString                                      to                                                         (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      from                                                       (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UEasyFileSystemBPLibrary::MoveFile(const class FString& to, const class FString& from)
+	bool UEasyFileSystemBPLibrary::MoveFile(
+const class FString& to
+, 
+const class FString& from
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -130,6 +153,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -138,7 +163,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      inPath                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UEasyFileSystemBPLibrary::LoadFileToString(const class FString& inPath)
+	class FString UEasyFileSystemBPLibrary::LoadFileToString(
+const class FString& inPath
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -157,6 +184,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -166,7 +195,11 @@ namespace CG
 	 * 		class FString                                      inPath                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<unsigned char>                              Result                                                     (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	bool UEasyFileSystemBPLibrary::LoadFileToArray(const class FString& inPath, TArray<unsigned char>* Result)
+	bool UEasyFileSystemBPLibrary::LoadFileToArray(
+const class FString& inPath
+, 
+TArray<unsigned char>* Result
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -189,6 +222,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -197,7 +232,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Filename                                                   (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UEasyFileSystemBPLibrary::IsReadOnly(const class FString& Filename)
+	bool UEasyFileSystemBPLibrary::IsReadOnly(
+const class FString& Filename
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -216,6 +253,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -225,7 +264,11 @@ namespace CG
 	 * 		class FString                                      Data                                                       (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      fieldName                                                  (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UEasyFileSystemBPLibrary::GetStringFieldJson(const class FString& Data, const class FString& fieldName)
+	class FString UEasyFileSystemBPLibrary::GetStringFieldJson(
+const class FString& Data
+, 
+const class FString& fieldName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -245,6 +288,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -269,6 +314,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -277,7 +324,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      inPath                                                     (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UEasyFileSystemBPLibrary::GetSizeFile(const class FString& inPath)
+	int32_t UEasyFileSystemBPLibrary::GetSizeFile(
+const class FString& inPath
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -295,6 +344,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -319,6 +370,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -328,7 +381,11 @@ namespace CG
 	 * 		class FString                                      Data                                                       (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      fieldName                                                  (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UEasyFileSystemBPLibrary::GetIntegerFieldJson(const class FString& Data, const class FString& fieldName)
+	int32_t UEasyFileSystemBPLibrary::GetIntegerFieldJson(
+const class FString& Data
+, 
+const class FString& fieldName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -349,6 +406,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -357,7 +416,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Filename                                                   (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UEasyFileSystemBPLibrary::GetFilenameOnDisk(const class FString& Filename)
+	class FString UEasyFileSystemBPLibrary::GetFilenameOnDisk(
+const class FString& Filename
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -376,6 +437,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -384,7 +447,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      inPath                                                     (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UEasyFileSystemBPLibrary::GetExtension(const class FString& inPath)
+	class FString UEasyFileSystemBPLibrary::GetExtension(
+const class FString& inPath
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -402,6 +467,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -426,6 +493,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -435,7 +504,11 @@ namespace CG
 	 * 		class FString                                      Data                                                       (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      fieldName                                                  (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UEasyFileSystemBPLibrary::GetBoolFieldJson(const class FString& Data, const class FString& fieldName)
+	bool UEasyFileSystemBPLibrary::GetBoolFieldJson(
+const class FString& Data
+, 
+const class FString& fieldName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -456,6 +529,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -465,7 +540,11 @@ namespace CG
 	 * 		class FString                                      Directory                                                  (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      fileExtension                                              (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<class FString> UEasyFileSystemBPLibrary::FindFiles(const class FString& Directory, const class FString& fileExtension)
+	TArray<class FString> UEasyFileSystemBPLibrary::FindFiles(
+const class FString& Directory
+, 
+const class FString& fileExtension
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -486,6 +565,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -494,7 +575,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      inPath                                                     (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UEasyFileSystemBPLibrary::FileExists(const class FString& inPath)
+	bool UEasyFileSystemBPLibrary::FileExists(
+const class FString& inPath
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -513,6 +596,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -521,7 +606,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      inPath                                                     (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UEasyFileSystemBPLibrary::DirectoryExists(const class FString& inPath)
+	bool UEasyFileSystemBPLibrary::DirectoryExists(
+const class FString& inPath
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -540,6 +627,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -548,7 +637,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      inPath                                                     (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UEasyFileSystemBPLibrary::DeleteFile(const class FString& inPath)
+	bool UEasyFileSystemBPLibrary::DeleteFile(
+const class FString& inPath
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -567,6 +658,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -575,7 +668,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Directory                                                  (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UEasyFileSystemBPLibrary::DeleteDirectory(const class FString& Directory)
+	bool UEasyFileSystemBPLibrary::DeleteDirectory(
+const class FString& Directory
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -594,6 +689,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -602,7 +699,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      inPath                                                     (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UEasyFileSystemBPLibrary::CreateDirectory(const class FString& inPath)
+	bool UEasyFileSystemBPLibrary::CreateDirectory(
+const class FString& inPath
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -621,6 +720,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -630,7 +731,11 @@ namespace CG
 	 * 		class FString                                      to                                                         (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      from                                                       (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UEasyFileSystemBPLibrary::CopyFile(const class FString& to, const class FString& from)
+	bool UEasyFileSystemBPLibrary::CopyFile(
+const class FString& to
+, 
+const class FString& from
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -651,6 +756,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -661,7 +768,13 @@ namespace CG
 	 * 		class FString                                      Source                                                     (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bOverwriteAllExisting                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UEasyFileSystemBPLibrary::CopyDirectoryTree(const class FString& destinationDirectory, const class FString& Source, bool bOverwriteAllExisting)
+	bool UEasyFileSystemBPLibrary::CopyDirectoryTree(
+const class FString& destinationDirectory
+, 
+const class FString& Source
+, 
+bool bOverwriteAllExisting
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -684,6 +797,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -693,7 +808,11 @@ namespace CG
 	 * 		class FString                                      inPath                                                     (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      inNewExtension                                             (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UEasyFileSystemBPLibrary::ChangeExtension(const class FString& inPath, const class FString& inNewExtension)
+	class FString UEasyFileSystemBPLibrary::ChangeExtension(
+const class FString& inPath
+, 
+const class FString& inNewExtension
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -714,10 +833,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEasyFileSystemBPLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UEasyFileSystemBPLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEasyFileSystemBPLibrary::StaticClass()
@@ -727,6 +848,7 @@ namespace CG
 			ptr = UObject::FindClass("Class EasyFileSystem.EasyFileSystemBPLibrary");
 		return ptr;
 	}
+
 
 }
 

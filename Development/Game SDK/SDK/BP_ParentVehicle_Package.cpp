@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18,7 +19,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<int32_t>                                    HighlightArray                                             (Parm, OutParm)
 	 */
-	void ABP_ParentVehicle_C::BPI_GetHighlightArray(TArray<int32_t>* HighlightArray)
+	void ABP_ParentVehicle_C::BPI_GetHighlightArray(
+TArray<int32_t>* HighlightArray
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -37,6 +40,8 @@ namespace CG
 			*HighlightArray = params.HighlightArray;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -46,7 +51,11 @@ namespace CG
 	 * 		TArray<int32_t>                                    HighlightArray                                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	 * 		bool                                               Result                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_ParentVehicle_C::BPI_SetHighlightArray(TArray<int32_t>* HighlightArray, bool* Result)
+	void ABP_ParentVehicle_C::BPI_SetHighlightArray(
+TArray<int32_t>* HighlightArray
+, 
+bool* Result
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -68,15 +77,19 @@ namespace CG
 			*Result = params.Result;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.BPI_GetCanHighlight
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               CanHighlight_                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               CanHighlight                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_ParentVehicle_C::BPI_GetCanHighlight(bool* CanHighlight_)
+	void ABP_ParentVehicle_C::BPI_GetCanHighlight(
+bool* CanHighlight
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -84,16 +97,18 @@ namespace CG
 		
 		struct
 		{
-			bool                                               CanHighlight_;
+			bool                                               CanHighlight;
 		} params;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 		
-		if (CanHighlight_ != nullptr)
-			*CanHighlight_ = params.CanHighlight_;
+		if (CanHighlight != nullptr)
+			*CanHighlight = params.CanHighlight;
 	}
+
+
 
 	/**
 	 * Function:
@@ -103,7 +118,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<class UActorComponent*>                     Components                                                 (Parm, OutParm, ContainsInstancedReference)
 	 */
-	void ABP_ParentVehicle_C::ComponentsToSave(TArray<class UActorComponent*>* Components)
+	void ABP_ParentVehicle_C::ComponentsToSave(
+TArray<class UActorComponent*>* Components
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -122,6 +139,89 @@ namespace CG
 			*Components = params.Components;
 	}
 
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.PostPlayerAttached
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               Attached                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 */
+	void ABP_ParentVehicle_C::PostPlayerAttached(
+bool Attached
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.PostPlayerAttached");
+		
+		struct
+		{
+			bool                                               Attached;
+		} params;
+		params.Attached = Attached;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.ToggleAffectNavigation
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               bCanAffectNavigation                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 */
+	void ABP_ParentVehicle_C::ToggleAffectNavigation(
+bool bCanAffectNavigation
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.ToggleAffectNavigation");
+		
+		struct
+		{
+			bool                                               bCanAffectNavigation;
+		} params;
+		params.bCanAffectNavigation = bCanAffectNavigation;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.SetPhysicsDampening
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentVehicle_C::SetPhysicsDampening()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.SetPhysicsDampening");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -130,7 +230,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector                                     NewParam                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentVehicle_C::FindExitPoint(struct FVector* NewParam)
+	void ABP_ParentVehicle_C::FindExitPoint(
+struct FVector* NewParam
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -149,6 +251,8 @@ namespace CG
 			*NewParam = params.NewParam;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -157,7 +261,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               Result                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_ParentVehicle_C::CanEnter_(bool* Result)
+	void ABP_ParentVehicle_C::CanEnter(
+bool* Result
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -176,6 +282,8 @@ namespace CG
 			*Result = params.Result;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -184,7 +292,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bNewState                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_ParentVehicle_C::FreezePhysics(bool bNewState)
+	void ABP_ParentVehicle_C::FreezePhysics(
+bool bNewState
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -200,6 +310,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -222,6 +334,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -243,103 +357,7 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.RecalculateCargoWeight
-	 * 		Flags  -> ()
-	 */
-	void ABP_ParentVehicle_C::RecalculateCargoWeight()
-	{
-		static UFunction* fn = nullptr;
-		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.RecalculateCargoWeight");
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
 
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.ApplyCargoWeight
-	 * 		Flags  -> ()
-	 */
-	void ABP_ParentVehicle_C::ApplyCargoWeight()
-	{
-		static UFunction* fn = nullptr;
-		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.ApplyCargoWeight");
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.RemoveCargo
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		E_CargoType                                        Cargo_Type                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		int32_t                                            Amount                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 */
-	void ABP_ParentVehicle_C::RemoveCargo(E_CargoType Cargo_Type, int32_t Amount)
-	{
-		static UFunction* fn = nullptr;
-		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.RemoveCargo");
-		
-		struct
-		{
-			E_CargoType                                        Cargo_Type;
-			int32_t                                            Amount;
-		} params;
-		params.Cargo_Type = Cargo_Type;
-		params.Amount = Amount;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.AddCargo
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		E_CargoType                                        Cargo_Type                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		int32_t                                            Amount                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 */
-	void ABP_ParentVehicle_C::AddCargo(E_CargoType Cargo_Type, int32_t Amount)
-	{
-		static UFunction* fn = nullptr;
-		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.AddCargo");
-		
-		struct
-		{
-			E_CargoType                                        Cargo_Type;
-			int32_t                                            Amount;
-		} params;
-		params.Cargo_Type = Cargo_Type;
-		params.Amount = Amount;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
 
 	/**
 	 * Function:
@@ -362,6 +380,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -370,7 +390,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              DeltaTime                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentVehicle_C::TickCameraZoom(float DeltaTime)
+	void ABP_ParentVehicle_C::TickCameraZoom(
+float DeltaTime
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -386,6 +408,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -408,6 +432,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -417,7 +443,11 @@ namespace CG
 	 * 		class APawn*                                       Pawn                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		int32_t                                            Index                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentVehicle_C::AttachPawnToVehicle(class APawn* Pawn, int32_t Index)
+	void ABP_ParentVehicle_C::AttachPawnToVehicle(
+class APawn* Pawn
+, 
+int32_t Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -436,6 +466,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -444,7 +476,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_ParentVehicle_C::SetHeadlights(bool NewValue)
+	void ABP_ParentVehicle_C::SetHeadlights(
+bool NewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -460,6 +494,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -482,6 +518,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -502,6 +540,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -524,13 +564,19 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.ApplyTireForce
 	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            Index                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentVehicle_C::ApplyTireForce()
+	void ABP_ParentVehicle_C::ApplyTireForce(
+int32_t Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -538,20 +584,28 @@ namespace CG
 		
 		struct
 		{
+			int32_t                                            Index;
 		} params;
+		params.Index = Index;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.GetTireForce
 	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            Index                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentVehicle_C::GetTireForce()
+	void ABP_ParentVehicle_C::GetTireForce(
+int32_t Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -559,20 +613,28 @@ namespace CG
 		
 		struct
 		{
+			int32_t                                            Index;
 		} params;
+		params.Index = Index;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.GetWheelLinearVelocityLocal
 	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            Index                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentVehicle_C::GetWheelLinearVelocityLocal()
+	void ABP_ParentVehicle_C::GetWheelLinearVelocityLocal(
+int32_t Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -580,20 +642,28 @@ namespace CG
 		
 		struct
 		{
+			int32_t                                            Index;
 		} params;
+		params.Index = Index;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.UpdateWheelLocation
 	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            Index                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentVehicle_C::UpdateWheelLocation()
+	void ABP_ParentVehicle_C::UpdateWheelLocation(
+int32_t Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -601,20 +671,28 @@ namespace CG
 		
 		struct
 		{
+			int32_t                                            Index;
 		} params;
+		params.Index = Index;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.ApplySuspensionForce
 	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            Index                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentVehicle_C::ApplySuspensionForce()
+	void ABP_ParentVehicle_C::ApplySuspensionForce(
+int32_t Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -622,20 +700,28 @@ namespace CG
 		
 		struct
 		{
+			int32_t                                            Index;
 		} params;
+		params.Index = Index;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.GetSuspensionForce
 	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            Index                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentVehicle_C::GetSuspensionForce()
+	void ABP_ParentVehicle_C::GetSuspensionForce(
+int32_t Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -643,20 +729,28 @@ namespace CG
 		
 		struct
 		{
+			int32_t                                            Index;
 		} params;
+		params.Index = Index;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.UpdateSuspensionLength
 	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            Index                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentVehicle_C::UpdateSuspensionLength()
+	void ABP_ParentVehicle_C::UpdateSuspensionLength(
+int32_t Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -664,12 +758,16 @@ namespace CG
 		
 		struct
 		{
+			int32_t                                            Index;
 		} params;
+		params.Index = Index;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -692,6 +790,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -712,6 +812,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -734,6 +836,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -754,6 +858,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -776,6 +882,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -796,6 +904,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -818,6 +928,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -838,6 +950,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -860,6 +974,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -880,6 +996,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -902,6 +1020,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -922,6 +1042,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -944,30 +1066,7 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.InpActEvt_Jump_K2Node_InputActionEvent_3
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	 */
-	void ABP_ParentVehicle_C::InpActEvt_Jump_K2Node_InputActionEvent_3(const struct FKey& Key)
-	{
-		static UFunction* fn = nullptr;
-		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.InpActEvt_Jump_K2Node_InputActionEvent_3");
-		
-		struct
-		{
-			struct FKey                                        Key;
-		} params;
-		params.Key = Key;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
+
 
 	/**
 	 * Function:
@@ -977,7 +1076,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	 */
-	void ABP_ParentVehicle_C::InpActEvt_Jump_K2Node_InputActionEvent_2(const struct FKey& Key)
+	void ABP_ParentVehicle_C::InpActEvt_Jump_K2Node_InputActionEvent_2(
+const struct FKey& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -994,19 +1095,23 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.InpActEvt_LMB_K2Node_InputActionEvent_1
+	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.InpActEvt_Jump_K2Node_InputActionEvent_1
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	 */
-	void ABP_ParentVehicle_C::InpActEvt_LMB_K2Node_InputActionEvent_1(const struct FKey& Key)
+	void ABP_ParentVehicle_C::InpActEvt_Jump_K2Node_InputActionEvent_1(
+const struct FKey& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.InpActEvt_LMB_K2Node_InputActionEvent_1");
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.InpActEvt_Jump_K2Node_InputActionEvent_1");
 		
 		struct
 		{
@@ -1019,51 +1124,7 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.ReceiveBeginPlay
-	 * 		Flags  -> ()
-	 */
-	void ABP_ParentVehicle_C::ReceiveBeginPlay()
-	{
-		static UFunction* fn = nullptr;
-		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.ReceiveBeginPlay");
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
 
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.ReceiveTick
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              DeltaSeconds                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 */
-	void ABP_ParentVehicle_C::ReceiveTick(float DeltaSeconds)
-	{
-		static UFunction* fn = nullptr;
-		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.ReceiveTick");
-		
-		struct
-		{
-			float                                              DeltaSeconds;
-		} params;
-		params.DeltaSeconds = DeltaSeconds;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
 
 	/**
 	 * Function:
@@ -1086,6 +1147,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1094,7 +1157,9 @@ namespace CG
 	 * Parameters:
 	 * 		class APawn*                                       Pawn                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentVehicle_C::EnterVehicle(class APawn* Pawn)
+	void ABP_ParentVehicle_C::EnterVehicle(
+class APawn* Pawn
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1111,6 +1176,60 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.ReceiveBeginPlay
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentVehicle_C::ReceiveBeginPlay()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.ReceiveBeginPlay");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.ReceiveTick
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              DeltaSeconds                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_ParentVehicle_C::ReceiveTick(
+float DeltaSeconds
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.ReceiveTick");
+		
+		struct
+		{
+			float                                              DeltaSeconds;
+		} params;
+		params.DeltaSeconds = DeltaSeconds;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1119,7 +1238,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              AxisValue                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentVehicle_C::InpAxisEvt_MoveRight_K2Node_InputAxisEvent_2(float AxisValue)
+	void ABP_ParentVehicle_C::InpAxisEvt_MoveRight_K2Node_InputAxisEvent_2(
+float AxisValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1135,6 +1256,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1157,6 +1280,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1178,55 +1303,7 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.BPI_Unhighlight
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class ABP_GameController_C*                        Controller                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 */
-	void ABP_ParentVehicle_C::BPI_Unhighlight(class ABP_GameController_C* Controller)
-	{
-		static UFunction* fn = nullptr;
-		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.BPI_Unhighlight");
-		
-		struct
-		{
-			class ABP_GameController_C*                        Controller;
-		} params;
-		params.Controller = Controller;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
 
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.BPI_Highlight
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class ABP_GameController_C*                        Controller                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 */
-	void ABP_ParentVehicle_C::BPI_Highlight(class ABP_GameController_C* Controller)
-	{
-		static UFunction* fn = nullptr;
-		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.BPI_Highlight");
-		
-		struct
-		{
-			class ABP_GameController_C*                        Controller;
-		} params;
-		params.Controller = Controller;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
 
 	/**
 	 * Function:
@@ -1249,6 +1326,37 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.BPI_Unhighlight
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class ABP_GameController_C*                        Controller                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_ParentVehicle_C::BPI_Unhighlight(
+class ABP_GameController_C* Controller
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.BPI_Unhighlight");
+		
+		struct
+		{
+			class ABP_GameController_C*                        Controller;
+		} params;
+		params.Controller = Controller;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1257,7 +1365,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              AxisValue                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentVehicle_C::InpAxisKeyEvt_MouseWheelAxis_K2Node_InputAxisKeyEvent_1(float AxisValue)
+	void ABP_ParentVehicle_C::InpAxisKeyEvt_MouseWheelAxis_K2Node_InputAxisKeyEvent_1(
+float AxisValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1273,6 +1383,37 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.BPI_Highlight
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class ABP_GameController_C*                        Controller                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_ParentVehicle_C::BPI_Highlight(
+class ABP_GameController_C* Controller
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.BPI_Highlight");
+		
+		struct
+		{
+			class ABP_GameController_C*                        Controller;
+		} params;
+		params.Controller = Controller;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
 
 	/**
 	 * Function:
@@ -1295,17 +1436,19 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.Yeet
+	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.HasWater
 	 * 		Flags  -> ()
 	 */
-	void ABP_ParentVehicle_C::Yeet()
+	void ABP_ParentVehicle_C::HasWater()
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.Yeet");
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.HasWater");
 		
 		struct
 		{
@@ -1316,6 +1459,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1324,7 +1469,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              AxisValue                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentVehicle_C::InpAxisEvt_MouseUp_K2Node_InputAxisEvent_5(float AxisValue)
+	void ABP_ParentVehicle_C::InpAxisEvt_MouseUp_K2Node_InputAxisEvent_5(
+float AxisValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1341,6 +1488,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1349,7 +1498,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              AxisValue                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentVehicle_C::InpAxisEvt_MouseRight_K2Node_InputAxisEvent_6(float AxisValue)
+	void ABP_ParentVehicle_C::InpAxisEvt_MouseRight_K2Node_InputAxisEvent_6(
+float AxisValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1365,6 +1516,31 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.HasNoWater
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentVehicle_C::HasNoWater()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.HasNoWater");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
 
 	/**
 	 * Function:
@@ -1387,30 +1563,30 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.InpAxisEvt_Accelerate_K2Node_InputAxisEvent_3
+	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.WaterParticleHit
 	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              AxisValue                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentVehicle_C::InpAxisEvt_Accelerate_K2Node_InputAxisEvent_3(float AxisValue)
+	void ABP_ParentVehicle_C::WaterParticleHit()
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.InpAxisEvt_Accelerate_K2Node_InputAxisEvent_3");
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.WaterParticleHit");
 		
 		struct
 		{
-			float                                              AxisValue;
 		} params;
-		params.AxisValue = AxisValue;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1420,7 +1596,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentVehicle_C::FOVChanged(float NewValue)
+	void ABP_ParentVehicle_C::FOVChanged(
+float NewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1437,45 +1615,7 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.BndEvt__BP_ParentVehicle_RefuelBox_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UPrimitiveComponent*                         OverlappedComponent                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		class AActor*                                      OtherActor                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		class UPrimitiveComponent*                         OtherComp                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		int32_t                                            OtherBodyIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		bool                                               bFromSweep                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	 * 		struct FHitResult                                  SweepResult                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	 */
-	void ABP_ParentVehicle_C::BndEvt__BP_ParentVehicle_RefuelBox_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
-	{
-		static UFunction* fn = nullptr;
-		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.BndEvt__BP_ParentVehicle_RefuelBox_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature");
-		
-		struct
-		{
-			class UPrimitiveComponent*                         OverlappedComponent;
-			class AActor*                                      OtherActor;
-			class UPrimitiveComponent*                         OtherComp;
-			int32_t                                            OtherBodyIndex;
-			bool                                               bFromSweep;
-			struct FHitResult                                  SweepResult;
-		} params;
-		params.OverlappedComponent = OverlappedComponent;
-		params.OtherActor = OtherActor;
-		params.OtherComp = OtherComp;
-		params.OtherBodyIndex = OtherBodyIndex;
-		params.bFromSweep = bFromSweep;
-		params.SweepResult = SweepResult;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
+
 
 	/**
 	 * Function:
@@ -1498,6 +1638,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1519,6 +1661,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1527,7 +1671,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              AxisValue                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentVehicle_C::InpAxisEvt_MoveForward_K2Node_InputAxisEvent_4(float AxisValue)
+	void ABP_ParentVehicle_C::InpAxisEvt_MoveForward_K2Node_InputAxisEvent_4(
+float AxisValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1544,6 +1690,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1551,9 +1699,13 @@ namespace CG
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		class ABP_GameController_C*                        Controller                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		bool                                               LookingAt_                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               LookingAt                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_ParentVehicle_C::BPI_ToggleLookAt(class ABP_GameController_C* Controller, bool LookingAt_)
+	void ABP_ParentVehicle_C::BPI_ToggleLookAt(
+class ABP_GameController_C* Controller
+, 
+bool LookingAt
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1562,15 +1714,17 @@ namespace CG
 		struct
 		{
 			class ABP_GameController_C*                        Controller;
-			bool                                               LookingAt_;
+			bool                                               LookingAt;
 		} params;
 		params.Controller = Controller;
-		params.LookingAt_ = LookingAt_;
+		params.LookingAt = LookingAt;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1580,7 +1734,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_ParentVehicle_C::InvertMouseYChanged(bool NewValue)
+	void ABP_ParentVehicle_C::InvertMouseYChanged(
+bool NewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1597,6 +1753,186 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.LMBDownWhileDriving
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentVehicle_C::LMBDownWhileDriving()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.LMBDownWhileDriving");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.RMBDownWhileDriving
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentVehicle_C::RMBDownWhileDriving()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.RMBDownWhileDriving");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.OverrideMoveForward
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              AxisValue                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_ParentVehicle_C::OverrideMoveForward(
+float AxisValue
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.OverrideMoveForward");
+		
+		struct
+		{
+			float                                              AxisValue;
+		} params;
+		params.AxisValue = AxisValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.ForceVehicleOff
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentVehicle_C::ForceVehicleOff()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.ForceVehicleOff");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.InWater
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               WaterBody                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		class UPrimitiveComponent*                         Comp                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_ParentVehicle_C::InWater(
+bool WaterBody
+, 
+class UPrimitiveComponent* Comp
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.InWater");
+		
+		struct
+		{
+			bool                                               WaterBody;
+			class UPrimitiveComponent*                         Comp;
+		} params;
+		params.WaterBody = WaterBody;
+		params.Comp = Comp;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.EDownWhileDriving
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentVehicle_C::EDownWhileDriving()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.EDownWhileDriving");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentVehicle.BP_ParentVehicle_C.EUpWhileDriving
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentVehicle_C::EUpWhileDriving()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentVehicle.BP_ParentVehicle_C.EUpWhileDriving");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1605,7 +1941,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentVehicle_C::ExecuteUbergraph_BP_ParentVehicle(int32_t EntryPoint)
+	void ABP_ParentVehicle_C::ExecuteUbergraph_BP_ParentVehicle(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1622,10 +1960,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ABP_ParentVehicle_C.StaticClass
+	 * 		Name   -> PredefinedFunction ABP_ParentVehicle_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ABP_ParentVehicle_C::StaticClass()
@@ -1635,6 +1975,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentVehicle.BP_ParentVehicle_C");
 		return ptr;
 	}
+
 
 }
 

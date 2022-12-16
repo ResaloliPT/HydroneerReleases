@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18,9 +19,15 @@ namespace CG
 	 * Parameters:
 	 * 		struct FS_SavedShelfItem                           ItemInfo                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		int32_t                                            Index                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		bool                                               Contains_                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               Contains                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_ParentShelf_C::ContainsSpecial_(const struct FS_SavedShelfItem& ItemInfo, int32_t* Index, bool* Contains_)
+	void ABP_ParentShelf_C::ContainsSpecial(
+const struct FS_SavedShelfItem& ItemInfo
+, 
+int32_t* Index
+, 
+bool* Contains
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -30,7 +37,7 @@ namespace CG
 		{
 			struct FS_SavedShelfItem                           ItemInfo;
 			int32_t                                            Index;
-			bool                                               Contains_;
+			bool                                               Contains;
 		} params;
 		params.ItemInfo = ItemInfo;
 		
@@ -40,9 +47,11 @@ namespace CG
 		
 		if (Index != nullptr)
 			*Index = params.Index;
-		if (Contains_ != nullptr)
-			*Contains_ = params.Contains_;
+		if (Contains != nullptr)
+			*Contains = params.Contains;
 	}
+
+
 
 	/**
 	 * Function:
@@ -54,7 +63,13 @@ namespace CG
 	 * 		class ABP_ParentItem_C*                            Item                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		struct FS_ShelfItem                                S_ShelfItem                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentShelf_C::Attach_Item(class USceneComponent* ShelfLocation, class ABP_ParentItem_C* Item, const struct FS_ShelfItem& S_ShelfItem)
+	void ABP_ParentShelf_C::Attach_Item(
+class USceneComponent* ShelfLocation
+, 
+class ABP_ParentItem_C* Item
+, 
+const struct FS_ShelfItem& S_ShelfItem
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -75,6 +90,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -83,7 +100,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<struct FHitResult>                          Hits                                                       (Parm, OutParm, ContainsInstancedReference)
 	 */
-	void ABP_ParentShelf_C::Shelf_Trace(TArray<struct FHitResult>* Hits)
+	void ABP_ParentShelf_C::Shelf_Trace(
+TArray<struct FHitResult>* Hits
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -101,6 +120,8 @@ namespace CG
 		if (Hits != nullptr)
 			*Hits = params.Hits;
 	}
+
+
 
 	/**
 	 * Function:
@@ -123,6 +144,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -130,11 +153,19 @@ namespace CG
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		class ABP_ParentItem_C*                            Item                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		bool                                               CanStore_                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               CanStore                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 * 		class USC_ShelfLocation_C*                         Location                                                   (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		struct FS_ShelfItem                                ItemData                                                   (Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentShelf_C::CanStore_(class ABP_ParentItem_C* Item, bool* CanStore_, class USC_ShelfLocation_C** Location, struct FS_ShelfItem* ItemData)
+	void ABP_ParentShelf_C::CanStore(
+class ABP_ParentItem_C* Item
+, 
+bool* CanStore
+, 
+class USC_ShelfLocation_C** Location
+, 
+struct FS_ShelfItem* ItemData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -143,7 +174,7 @@ namespace CG
 		struct
 		{
 			class ABP_ParentItem_C*                            Item;
-			bool                                               CanStore_;
+			bool                                               CanStore;
 			class USC_ShelfLocation_C*                         Location;
 			struct FS_ShelfItem                                ItemData;
 		} params;
@@ -153,13 +184,15 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 		
-		if (CanStore_ != nullptr)
-			*CanStore_ = params.CanStore_;
+		if (CanStore != nullptr)
+			*CanStore = params.CanStore;
 		if (Location != nullptr)
 			*Location = params.Location;
 		if (ItemData != nullptr)
 			*ItemData = params.ItemData;
 	}
+
+
 
 	/**
 	 * Function:
@@ -182,6 +215,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -190,7 +225,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_ParentItem_C*                            Item                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentShelf_C::NewItemToShelf(class ABP_ParentItem_C* Item)
+	void ABP_ParentShelf_C::NewItemToShelf(
+class ABP_ParentItem_C* Item
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -206,6 +243,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -228,6 +267,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -249,6 +290,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -258,7 +301,11 @@ namespace CG
 	 * 		class ABP_ParentItem_C*                            Item                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class USceneComponent*                             Location                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentShelf_C::LoadItemToShelf(class ABP_ParentItem_C* Item, class USceneComponent* Location)
+	void ABP_ParentShelf_C::LoadItemToShelf(
+class ABP_ParentItem_C* Item
+, 
+class USceneComponent* Location
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -277,6 +324,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -285,7 +334,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentShelf_C::ExecuteUbergraph_BP_ParentShelf(int32_t EntryPoint)
+	void ABP_ParentShelf_C::ExecuteUbergraph_BP_ParentShelf(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -302,10 +353,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ABP_ParentShelf_C.StaticClass
+	 * 		Name   -> PredefinedFunction ABP_ParentShelf_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ABP_ParentShelf_C::StaticClass()
@@ -315,6 +368,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentShelf.BP_ParentShelf_C");
 		return ptr;
 	}
+
 
 }
 

@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * Class AvfMediaFactory.AvfMediaSettings
 	 * Size -> 0x0008 (FullSize[0x0030] - InheritedSize[0x0028])
@@ -21,10 +22,15 @@ namespace CG
 	class UAvfMediaSettings : public UObject
 	{
 	public:
-		bool                                                       NativeAudioOut;                                          // 0x0028(0x0001) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_BZK5[0x7];                                   // 0x0029(0x0007) MISSED OFFSET (PADDING)
+
+		bool                                                     NativeAudioOut;                                          // 0x0028(0x0001) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_NGXG[0x7];                                   // 0x0029(0x0007) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
 

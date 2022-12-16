@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * Class ActorLayerUtilities.LayersBlueprintLibrary
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
@@ -21,9 +22,25 @@ namespace CG
 	class ULayersBlueprintLibrary : public UBlueprintFunctionLibrary
 	{
 	public:
-		void RemoveActorFromLayer(class AActor* InActor, const struct FActorLayer& Layer);
-		TArray<class AActor*> GetActors(class UObject* WorldContextObject, const struct FActorLayer& ActorLayer);
-		void AddActorToLayer(class AActor* InActor, const struct FActorLayer& Layer);
+
+		void RemoveActorFromLayer(
+class AActor* InActor
+, 
+const struct FActorLayer& Layer
+);
+
+		TArray<class AActor*> GetActors(
+class UObject* WorldContextObject
+, 
+const struct FActorLayer& ActorLayer
+);
+
+		void AddActorToLayer(
+class AActor* InActor
+, 
+const struct FActorLayer& Layer
+);
+
 		static UClass* StaticClass();
 	};
 

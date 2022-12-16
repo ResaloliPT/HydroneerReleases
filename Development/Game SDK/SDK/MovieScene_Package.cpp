@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneSignedObject.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneSignedObject.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneSignedObject::StaticClass()
@@ -24,10 +25,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneTrack.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneTrack.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneTrack::StaticClass()
@@ -38,10 +41,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneNameableTrack.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneNameableTrack.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneNameableTrack::StaticClass()
@@ -52,6 +57,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -60,7 +67,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            NewRowIndex                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMovieSceneSection::SetRowIndex(int32_t NewRowIndex)
+	void UMovieSceneSection::SetRowIndex(
+int32_t NewRowIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -77,6 +86,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -85,7 +96,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            InPreRollFrames                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMovieSceneSection::SetPreRollFrames(int32_t InPreRollFrames)
+	void UMovieSceneSection::SetPreRollFrames(
+int32_t InPreRollFrames
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -102,6 +115,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -110,7 +125,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            InPostRollFrames                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMovieSceneSection::SetPostRollFrames(int32_t InPostRollFrames)
+	void UMovieSceneSection::SetPostRollFrames(
+int32_t InPostRollFrames
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -127,6 +144,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -135,7 +154,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            NewPriority                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMovieSceneSection::SetOverlapPriority(int32_t NewPriority)
+	void UMovieSceneSection::SetOverlapPriority(
+int32_t NewPriority
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -152,6 +173,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -160,7 +183,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bInIsLocked                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMovieSceneSection::SetIsLocked(bool bInIsLocked)
+	void UMovieSceneSection::SetIsLocked(
+bool bInIsLocked
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -177,6 +202,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -185,7 +212,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bInIsActive                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMovieSceneSection::SetIsActive(bool bInIsActive)
+	void UMovieSceneSection::SetIsActive(
+bool bInIsActive
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -202,6 +231,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -210,7 +241,9 @@ namespace CG
 	 * Parameters:
 	 * 		EMovieSceneCompletionMode                          InCompletionMode                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMovieSceneSection::SetCompletionMode(EMovieSceneCompletionMode InCompletionMode)
+	void UMovieSceneSection::SetCompletionMode(
+EMovieSceneCompletionMode InCompletionMode
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -227,6 +260,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -235,7 +270,9 @@ namespace CG
 	 * Parameters:
 	 * 		EMovieSceneBlendType                               InBlendType                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMovieSceneSection::SetBlendType(EMovieSceneBlendType InBlendType)
+	void UMovieSceneSection::SetBlendType(
+EMovieSceneBlendType InBlendType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -251,6 +288,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -275,6 +314,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -297,6 +338,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -321,6 +364,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -343,6 +388,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -367,6 +414,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -389,6 +438,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -413,6 +464,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -436,10 +489,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneSection.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneSection.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneSection::StaticClass()
@@ -450,6 +505,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -458,7 +515,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        InBindingName                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<struct FMovieSceneObjectBindingID> UMovieSceneSequence::FindBindingsByTag(const class FName& InBindingName)
+	TArray<struct FMovieSceneObjectBindingID> UMovieSceneSequence::FindBindingsByTag(
+const class FName& InBindingName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -477,6 +536,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -485,7 +546,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        InBindingName                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FMovieSceneObjectBindingID UMovieSceneSequence::FindBindingByTag(const class FName& InBindingName)
+	struct FMovieSceneObjectBindingID UMovieSceneSequence::FindBindingByTag(
+const class FName& InBindingName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -504,10 +567,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneSequence.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneSequence.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneSequence::StaticClass()
@@ -517,6 +582,8 @@ namespace CG
 			ptr = UObject::FindClass("Class MovieScene.MovieSceneSequence");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -539,6 +606,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -560,6 +629,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -569,7 +640,11 @@ namespace CG
 	 * 		float                                              StartTime                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Duration                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMovieSceneSequencePlayer::SetTimeRange(float StartTime, float Duration)
+	void UMovieSceneSequencePlayer::SetTimeRange(
+float StartTime
+, 
+float Duration
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -588,6 +663,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -596,7 +673,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              PlayRate                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMovieSceneSequencePlayer::SetPlayRate(float PlayRate)
+	void UMovieSceneSequencePlayer::SetPlayRate(
+float PlayRate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -613,6 +692,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -621,7 +702,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FMovieSceneSequencePlaybackParams           PlaybackParams                                             (Parm, NativeAccessSpecifierPublic)
 	 */
-	void UMovieSceneSequencePlayer::SetPlaybackPosition(const struct FMovieSceneSequencePlaybackParams& PlaybackParams)
+	void UMovieSceneSequencePlayer::SetPlaybackPosition(
+const struct FMovieSceneSequencePlaybackParams& PlaybackParams
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -638,6 +721,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -646,7 +731,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FFrameRate                                  FrameRate                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMovieSceneSequencePlayer::SetFrameRate(const struct FFrameRate& FrameRate)
+	void UMovieSceneSequencePlayer::SetFrameRate(
+const struct FFrameRate& FrameRate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -663,6 +750,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -673,7 +762,13 @@ namespace CG
 	 * 		int32_t                                            Duration                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              SubFrames                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMovieSceneSequencePlayer::SetFrameRange(int32_t StartFrame, int32_t Duration, float SubFrames)
+	void UMovieSceneSequencePlayer::SetFrameRange(
+int32_t StartFrame
+, 
+int32_t Duration
+, 
+float SubFrames
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -694,6 +789,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -702,7 +799,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bInDisableCameraCuts                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMovieSceneSequencePlayer::SetDisableCameraCuts(bool bInDisableCameraCuts)
+	void UMovieSceneSequencePlayer::SetDisableCameraCuts(
+bool bInDisableCameraCuts
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -719,6 +818,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -727,7 +828,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              TimeInSeconds                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMovieSceneSequencePlayer::ScrubToSeconds(float TimeInSeconds)
+	void UMovieSceneSequencePlayer::ScrubToSeconds(
+float TimeInSeconds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -744,6 +847,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -752,7 +857,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      InLabel                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMovieSceneSequencePlayer::ScrubToMarkedFrame(const class FString& InLabel)
+	bool UMovieSceneSequencePlayer::ScrubToMarkedFrame(
+const class FString& InLabel
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -771,6 +878,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -779,7 +888,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FFrameTime                                  NewPosition                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMovieSceneSequencePlayer::ScrubToFrame(const struct FFrameTime& NewPosition)
+	void UMovieSceneSequencePlayer::ScrubToFrame(
+const struct FFrameTime& NewPosition
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -795,6 +906,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -817,6 +930,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -825,7 +940,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FFrameTime                                  StoppedTime                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMovieSceneSequencePlayer::RPC_OnStopEvent(const struct FFrameTime& StoppedTime)
+	void UMovieSceneSequencePlayer::RPC_OnStopEvent(
+const struct FFrameTime& StoppedTime
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -842,6 +959,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -851,7 +970,11 @@ namespace CG
 	 * 		EUpdatePositionMethod                              Method                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FFrameTime                                  RelevantTime                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMovieSceneSequencePlayer::RPC_ExplicitServerUpdateEvent(EUpdatePositionMethod Method, const struct FFrameTime& RelevantTime)
+	void UMovieSceneSequencePlayer::RPC_ExplicitServerUpdateEvent(
+EUpdatePositionMethod Method
+, 
+const struct FFrameTime& RelevantTime
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -870,6 +993,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -878,7 +1003,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              TimeInSeconds                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMovieSceneSequencePlayer::PlayToSeconds(float TimeInSeconds)
+	void UMovieSceneSequencePlayer::PlayToSeconds(
+float TimeInSeconds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -895,6 +1022,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -903,7 +1032,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      InLabel                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMovieSceneSequencePlayer::PlayToMarkedFrame(const class FString& InLabel)
+	bool UMovieSceneSequencePlayer::PlayToMarkedFrame(
+const class FString& InLabel
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -922,6 +1053,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -930,7 +1063,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FFrameTime                                  NewPosition                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMovieSceneSequencePlayer::PlayToFrame(const struct FFrameTime& NewPosition)
+	void UMovieSceneSequencePlayer::PlayToFrame(
+const struct FFrameTime& NewPosition
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -947,6 +1082,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -955,7 +1092,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FMovieSceneSequencePlaybackParams           PlaybackParams                                             (Parm, NativeAccessSpecifierPublic)
 	 */
-	void UMovieSceneSequencePlayer::PlayTo(const struct FMovieSceneSequencePlaybackParams& PlaybackParams)
+	void UMovieSceneSequencePlayer::PlayTo(
+const struct FMovieSceneSequencePlaybackParams& PlaybackParams
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -971,6 +1110,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -993,6 +1134,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1001,7 +1144,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            NumLoops                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMovieSceneSequencePlayer::PlayLooping(int32_t NumLoops)
+	void UMovieSceneSequencePlayer::PlayLooping(
+int32_t NumLoops
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1017,6 +1162,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1039,6 +1186,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1060,6 +1209,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1068,7 +1219,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              TimeInSeconds                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMovieSceneSequencePlayer::JumpToSeconds(float TimeInSeconds)
+	void UMovieSceneSequencePlayer::JumpToSeconds(
+float TimeInSeconds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1085,6 +1238,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1093,7 +1248,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      InLabel                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMovieSceneSequencePlayer::JumpToMarkedFrame(const class FString& InLabel)
+	bool UMovieSceneSequencePlayer::JumpToMarkedFrame(
+const class FString& InLabel
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1112,6 +1269,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1120,7 +1279,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FFrameTime                                  NewPosition                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMovieSceneSequencePlayer::JumpToFrame(const struct FFrameTime& NewPosition)
+	void UMovieSceneSequencePlayer::JumpToFrame(
+const struct FFrameTime& NewPosition
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1136,6 +1297,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1160,6 +1323,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1182,6 +1347,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1206,6 +1373,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1226,6 +1395,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1250,6 +1421,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1273,6 +1446,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1281,7 +1456,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     InObject                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<struct FMovieSceneObjectBindingID> UMovieSceneSequencePlayer::GetObjectBindings(class UObject* InObject)
+	TArray<struct FMovieSceneObjectBindingID> UMovieSceneSequencePlayer::GetObjectBindings(
+class UObject* InObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1299,6 +1476,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1323,6 +1502,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1345,6 +1526,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1369,6 +1552,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1391,6 +1576,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1415,6 +1602,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1438,6 +1627,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1446,7 +1637,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FMovieSceneObjectBindingID                  ObjectBinding                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<class UObject*> UMovieSceneSequencePlayer::GetBoundObjects(const struct FMovieSceneObjectBindingID& ObjectBinding)
+	TArray<class UObject*> UMovieSceneSequencePlayer::GetBoundObjects(
+const struct FMovieSceneObjectBindingID& ObjectBinding
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1464,6 +1657,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1486,10 +1681,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneSequencePlayer.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneSequencePlayer.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneSequencePlayer::StaticClass()
@@ -1500,6 +1697,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1508,7 +1707,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UMovieSceneSequence*                         Sequence                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMovieSceneSubSection::SetSequence(class UMovieSceneSequence* Sequence)
+	void UMovieSceneSubSection::SetSequence(
+class UMovieSceneSequence* Sequence
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1524,6 +1725,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1548,10 +1751,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneSubSection.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneSubSection.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneSubSection::StaticClass()
@@ -1562,10 +1767,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneEntitySystem.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneEntitySystem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneEntitySystem::StaticClass()
@@ -1576,10 +1783,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneSubTrack.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneSubTrack.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneSubTrack::StaticClass()
@@ -1590,6 +1799,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1599,7 +1810,11 @@ namespace CG
 	 * 		float                                              DeltaSeconds                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              InPlayRate                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMovieSceneCustomClockSource::OnTick(float DeltaSeconds, float InPlayRate)
+	void UMovieSceneCustomClockSource::OnTick(
+float DeltaSeconds
+, 
+float InPlayRate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1618,6 +1833,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1626,7 +1843,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FQualifiedFrameTime                         InStopTime                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMovieSceneCustomClockSource::OnStopPlaying(const struct FQualifiedFrameTime& InStopTime)
+	void UMovieSceneCustomClockSource::OnStopPlaying(
+const struct FQualifiedFrameTime& InStopTime
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1643,6 +1862,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1651,7 +1872,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FQualifiedFrameTime                         InStartTime                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMovieSceneCustomClockSource::OnStartPlaying(const struct FQualifiedFrameTime& InStartTime)
+	void UMovieSceneCustomClockSource::OnStartPlaying(
+const struct FQualifiedFrameTime& InStartTime
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1668,6 +1891,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1677,7 +1902,11 @@ namespace CG
 	 * 		struct FQualifiedFrameTime                         InCurrentTime                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              InPlayRate                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FFrameTime UMovieSceneCustomClockSource::OnRequestCurrentTime(const struct FQualifiedFrameTime& InCurrentTime, float InPlayRate)
+	struct FFrameTime UMovieSceneCustomClockSource::OnRequestCurrentTime(
+const struct FQualifiedFrameTime& InCurrentTime
+, 
+float InPlayRate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1698,10 +1927,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneCustomClockSource.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneCustomClockSource.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneCustomClockSource::StaticClass()
@@ -1712,10 +1943,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneEntityProvider.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneEntityProvider.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneEntityProvider::StaticClass()
@@ -1726,10 +1959,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieScenePlaybackClient.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieScenePlaybackClient.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieScenePlaybackClient::StaticClass()
@@ -1740,10 +1975,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneTrackTemplateProducer.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneTrackTemplateProducer.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneTrackTemplateProducer::StaticClass()
@@ -1754,10 +1991,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNodeAndChannelMappings.StaticClass
+	 * 		Name   -> PredefinedFunction UNodeAndChannelMappings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNodeAndChannelMappings::StaticClass()
@@ -1768,10 +2007,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneNodeGroup.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneNodeGroup.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneNodeGroup::StaticClass()
@@ -1782,10 +2023,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneNodeGroupCollection.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneNodeGroupCollection.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneNodeGroupCollection::StaticClass()
@@ -1796,10 +2039,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieScene.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieScene.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieScene::StaticClass()
@@ -1810,10 +2055,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneBindingOverrides.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneBindingOverrides.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneBindingOverrides::StaticClass()
@@ -1824,10 +2071,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneBindingOwnerInterface.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneBindingOwnerInterface.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneBindingOwnerInterface::StaticClass()
@@ -1838,10 +2087,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneBlenderSystem.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneBlenderSystem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneBlenderSystem::StaticClass()
@@ -1852,10 +2103,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneBoolSection.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneBoolSection.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneBoolSection::StaticClass()
@@ -1866,10 +2119,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneEntityInstantiatorSystem.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneEntityInstantiatorSystem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneEntityInstantiatorSystem::StaticClass()
@@ -1880,10 +2135,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneGenericBoundObjectInstantiator.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneGenericBoundObjectInstantiator.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneGenericBoundObjectInstantiator::StaticClass()
@@ -1894,10 +2151,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneBoundSceneComponentInstantiator.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneBoundSceneComponentInstantiator.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneBoundSceneComponentInstantiator::StaticClass()
@@ -1908,10 +2167,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneSceneComponentImpersonator.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneSceneComponentImpersonator.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneSceneComponentImpersonator::StaticClass()
@@ -1922,10 +2183,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneCompiledData.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneCompiledData.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneCompiledData::StaticClass()
@@ -1936,10 +2199,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneCompiledDataManager.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneCompiledDataManager.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneCompiledDataManager::StaticClass()
@@ -1950,10 +2215,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneFloatDecomposer.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneFloatDecomposer.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneFloatDecomposer::StaticClass()
@@ -1964,10 +2231,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneBuiltInEasingFunction.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneBuiltInEasingFunction.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneBuiltInEasingFunction::StaticClass()
@@ -1978,10 +2247,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneEasingExternalCurve.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneEasingExternalCurve.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneEasingExternalCurve::StaticClass()
@@ -1992,6 +2263,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2000,7 +2273,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              Interp                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float UMovieSceneEasingFunction::OnEvaluate(float Interp)
+	float UMovieSceneEasingFunction::OnEvaluate(
+float Interp
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2019,10 +2294,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneEasingFunction.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneEasingFunction.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneEasingFunction::StaticClass()
@@ -2033,10 +2310,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneEntitySystemLinker.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneEntitySystemLinker.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneEntitySystemLinker::StaticClass()
@@ -2047,10 +2326,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneEvalTimeSystem.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneEvalTimeSystem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneEvalTimeSystem::StaticClass()
@@ -2061,10 +2342,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneFolder.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneFolder.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneFolder::StaticClass()
@@ -2075,10 +2358,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneKeyProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneKeyProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneKeyProxy::StaticClass()
@@ -2089,10 +2374,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneMasterInstantiatorSystem.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneMasterInstantiatorSystem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneMasterInstantiatorSystem::StaticClass()
@@ -2103,10 +2390,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieScenePreAnimatedStateSystemInterface.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieScenePreAnimatedStateSystemInterface.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieScenePreAnimatedStateSystemInterface::StaticClass()
@@ -2117,10 +2406,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneCachePreAnimatedStateSystem.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneCachePreAnimatedStateSystem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneCachePreAnimatedStateSystem::StaticClass()
@@ -2131,10 +2422,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneRestorePreAnimatedStateSystem.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneRestorePreAnimatedStateSystem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneRestorePreAnimatedStateSystem::StaticClass()
@@ -2145,10 +2438,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneSequenceTickManager.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneSequenceTickManager.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneSequenceTickManager::StaticClass()
@@ -2159,10 +2454,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneSpawnablesSystem.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneSpawnablesSystem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneSpawnablesSystem::StaticClass()
@@ -2173,10 +2470,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneSpawnSection.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneSpawnSection.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneSpawnSection::StaticClass()
@@ -2187,10 +2486,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneSpawnTrack.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneSpawnTrack.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneSpawnTrack::StaticClass()
@@ -2201,10 +2502,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UTestMovieSceneTrack.StaticClass
+	 * 		Name   -> PredefinedFunction UTestMovieSceneTrack.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UTestMovieSceneTrack::StaticClass()
@@ -2215,10 +2518,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UTestMovieSceneSection.StaticClass
+	 * 		Name   -> PredefinedFunction UTestMovieSceneSection.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UTestMovieSceneSection::StaticClass()
@@ -2229,10 +2534,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UTestMovieSceneSequence.StaticClass
+	 * 		Name   -> PredefinedFunction UTestMovieSceneSequence.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UTestMovieSceneSequence::StaticClass()
@@ -2243,10 +2550,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UTestMovieSceneSubTrack.StaticClass
+	 * 		Name   -> PredefinedFunction UTestMovieSceneSubTrack.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UTestMovieSceneSubTrack::StaticClass()
@@ -2257,10 +2566,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UTestMovieSceneSubSection.StaticClass
+	 * 		Name   -> PredefinedFunction UTestMovieSceneSubSection.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UTestMovieSceneSubSection::StaticClass()
@@ -2271,10 +2582,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneTrackInstance.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneTrackInstance.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneTrackInstance::StaticClass()
@@ -2285,10 +2598,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneTrackInstanceInstantiator.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneTrackInstanceInstantiator.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneTrackInstanceInstantiator::StaticClass()
@@ -2299,10 +2614,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneTrackInstanceSystem.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneTrackInstanceSystem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneTrackInstanceSystem::StaticClass()
@@ -2312,6 +2629,7 @@ namespace CG
 			ptr = UObject::FindClass("Class MovieScene.MovieSceneTrackInstanceSystem");
 		return ptr;
 	}
+
 
 }
 

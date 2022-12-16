@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULiveLinkSourceFactory.StaticClass
+	 * 		Name   -> PredefinedFunction ULiveLinkSourceFactory.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULiveLinkSourceFactory::StaticClass()
@@ -24,10 +25,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULiveLinkRole.StaticClass
+	 * 		Name   -> PredefinedFunction ULiveLinkRole.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULiveLinkRole::StaticClass()
@@ -38,10 +41,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULiveLinkBasicRole.StaticClass
+	 * 		Name   -> PredefinedFunction ULiveLinkBasicRole.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULiveLinkBasicRole::StaticClass()
@@ -52,10 +57,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULiveLinkAnimationRole.StaticClass
+	 * 		Name   -> PredefinedFunction ULiveLinkAnimationRole.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULiveLinkAnimationRole::StaticClass()
@@ -66,10 +73,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULiveLinkTransformRole.StaticClass
+	 * 		Name   -> PredefinedFunction ULiveLinkTransformRole.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULiveLinkTransformRole::StaticClass()
@@ -80,10 +89,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULiveLinkCameraRole.StaticClass
+	 * 		Name   -> PredefinedFunction ULiveLinkCameraRole.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULiveLinkCameraRole::StaticClass()
@@ -94,10 +105,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULiveLinkController.StaticClass
+	 * 		Name   -> PredefinedFunction ULiveLinkController.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULiveLinkController::StaticClass()
@@ -108,10 +121,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULiveLinkSourceSettings.StaticClass
+	 * 		Name   -> PredefinedFunction ULiveLinkSourceSettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULiveLinkSourceSettings::StaticClass()
@@ -122,10 +137,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULiveLinkCurveRemapSettings.StaticClass
+	 * 		Name   -> PredefinedFunction ULiveLinkCurveRemapSettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULiveLinkCurveRemapSettings::StaticClass()
@@ -136,10 +153,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULiveLinkFrameInterpolationProcessor.StaticClass
+	 * 		Name   -> PredefinedFunction ULiveLinkFrameInterpolationProcessor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULiveLinkFrameInterpolationProcessor::StaticClass()
@@ -150,10 +169,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULiveLinkFramePreProcessor.StaticClass
+	 * 		Name   -> PredefinedFunction ULiveLinkFramePreProcessor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULiveLinkFramePreProcessor::StaticClass()
@@ -164,10 +185,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULiveLinkFrameTranslator.StaticClass
+	 * 		Name   -> PredefinedFunction ULiveLinkFrameTranslator.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULiveLinkFrameTranslator::StaticClass()
@@ -178,10 +201,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULiveLinkLightRole.StaticClass
+	 * 		Name   -> PredefinedFunction ULiveLinkLightRole.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULiveLinkLightRole::StaticClass()
@@ -192,10 +217,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULiveLinkSubjectSettings.StaticClass
+	 * 		Name   -> PredefinedFunction ULiveLinkSubjectSettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULiveLinkSubjectSettings::StaticClass()
@@ -206,10 +233,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULiveLinkVirtualSubject.StaticClass
+	 * 		Name   -> PredefinedFunction ULiveLinkVirtualSubject.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULiveLinkVirtualSubject::StaticClass()
@@ -219,6 +248,7 @@ namespace CG
 			ptr = UObject::FindClass("Class LiveLinkInterface.LiveLinkVirtualSubject");
 		return ptr;
 	}
+
 
 }
 

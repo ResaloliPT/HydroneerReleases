@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UFoliageInstancedStaticMeshComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UFoliageInstancedStaticMeshComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UFoliageInstancedStaticMeshComponent::StaticClass()
@@ -23,6 +24,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Foliage.FoliageInstancedStaticMeshComponent");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -35,7 +38,15 @@ namespace CG
 	 * 		struct FVector                                     CenterPosition                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Radius                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UFoliageStatistics::FoliageOverlappingSphereCount(class UObject* WorldContextObject, class UStaticMesh* StaticMesh, const struct FVector& CenterPosition, float Radius)
+	int32_t UFoliageStatistics::FoliageOverlappingSphereCount(
+class UObject* WorldContextObject
+, 
+class UStaticMesh* StaticMesh
+, 
+const struct FVector& CenterPosition
+, 
+float Radius
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -60,6 +71,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -70,7 +83,13 @@ namespace CG
 	 * 		class UStaticMesh*                                 StaticMesh                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FBox                                        Box                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	int32_t UFoliageStatistics::FoliageOverlappingBoxCount(class UObject* WorldContextObject, class UStaticMesh* StaticMesh, const struct FBox& Box)
+	int32_t UFoliageStatistics::FoliageOverlappingBoxCount(
+class UObject* WorldContextObject
+, 
+class UStaticMesh* StaticMesh
+, 
+const struct FBox& Box
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -93,10 +112,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UFoliageStatistics.StaticClass
+	 * 		Name   -> PredefinedFunction UFoliageStatistics.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UFoliageStatistics::StaticClass()
@@ -107,10 +128,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UFoliageType.StaticClass
+	 * 		Name   -> PredefinedFunction UFoliageType.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UFoliageType::StaticClass()
@@ -121,10 +144,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UFoliageType_Actor.StaticClass
+	 * 		Name   -> PredefinedFunction UFoliageType_Actor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UFoliageType_Actor::StaticClass()
@@ -135,10 +160,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UFoliageType_InstancedStaticMesh.StaticClass
+	 * 		Name   -> PredefinedFunction UFoliageType_InstancedStaticMesh.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UFoliageType_InstancedStaticMesh::StaticClass()
@@ -149,10 +176,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AInstancedFoliageActor.StaticClass
+	 * 		Name   -> PredefinedFunction AInstancedFoliageActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AInstancedFoliageActor::StaticClass()
@@ -162,6 +191,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Foliage.InstancedFoliageActor");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -176,7 +207,19 @@ namespace CG
 	 * 		bool                                               bFromSweep                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FHitResult                                  OverlapInfo                                                (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	 */
-	void AInteractiveFoliageActor::CapsuleTouched(class UPrimitiveComponent* OverlappedComp, class AActor* Other, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& OverlapInfo)
+	void AInteractiveFoliageActor::CapsuleTouched(
+class UPrimitiveComponent* OverlappedComp
+, 
+class AActor* Other
+, 
+class UPrimitiveComponent* OtherComp
+, 
+int32_t OtherBodyIndex
+, 
+bool bFromSweep
+, 
+const struct FHitResult& OverlapInfo
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -203,10 +246,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AInteractiveFoliageActor.StaticClass
+	 * 		Name   -> PredefinedFunction AInteractiveFoliageActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AInteractiveFoliageActor::StaticClass()
@@ -217,10 +262,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UInteractiveFoliageComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UInteractiveFoliageComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UInteractiveFoliageComponent::StaticClass()
@@ -231,10 +278,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AProceduralFoliageBlockingVolume.StaticClass
+	 * 		Name   -> PredefinedFunction AProceduralFoliageBlockingVolume.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AProceduralFoliageBlockingVolume::StaticClass()
@@ -245,10 +294,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UProceduralFoliageComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UProceduralFoliageComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UProceduralFoliageComponent::StaticClass()
@@ -259,6 +310,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -267,7 +320,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            NumSteps                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UProceduralFoliageSpawner::Simulate(int32_t NumSteps)
+	void UProceduralFoliageSpawner::Simulate(
+int32_t NumSteps
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -284,10 +339,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UProceduralFoliageSpawner.StaticClass
+	 * 		Name   -> PredefinedFunction UProceduralFoliageSpawner.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UProceduralFoliageSpawner::StaticClass()
@@ -298,10 +355,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UProceduralFoliageTile.StaticClass
+	 * 		Name   -> PredefinedFunction UProceduralFoliageTile.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UProceduralFoliageTile::StaticClass()
@@ -312,10 +371,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AProceduralFoliageVolume.StaticClass
+	 * 		Name   -> PredefinedFunction AProceduralFoliageVolume.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AProceduralFoliageVolume::StaticClass()
@@ -325,6 +386,7 @@ namespace CG
 			ptr = UObject::FindClass("Class Foliage.ProceduralFoliageVolume");
 		return ptr;
 	}
+
 
 }
 

@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,27 +14,84 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * BlueprintGeneratedClass BP_ParentCutVeg.BP_ParentCutVeg_C
-	 * Size -> 0x001F (FullSize[0x0398] - InheritedSize[0x0379])
+	 * Size -> 0x0030 (FullSize[0x0418] - InheritedSize[0x03E8])
 	 */
 	class ABP_ParentCutVeg_C : public ABP_ParentResource_C
 	{
 	public:
-		unsigned char                                              UnknownData_LTQL[0x7];                                   // 0x0379(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x0380(0x0008) ZeroConstructor, Transient, DuplicateTransient, UObjectWrapper
-		class UStaticMesh*                                         DefaultMeshVar;                                          // 0x0388(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
-		class UClass*                                              SeedBag;                                                 // 0x0390(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+
+		struct FPointerToUberGraphFrame                          UberGraphFrame;                                          // 0x03E8(0x0008) ZeroConstructor, Transient, DuplicateTransient, UObjectWrapper
+
+
+		class UStaticMesh*                                       SoupTopperMesh;                                          // 0x03F0(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+
+
+		class UClass*                                            SeedBag;                                                 // 0x03F8(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+
+
+		TArray<class UStaticMesh*>                               MeshLevels;                                              // 0x0400(0x0010) Edit, BlueprintVisible, DisableEditOnInstance
+
+
+		class UNiagaraSystem*                                    CutNiagaraSystem;                                        // 0x0410(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+
 
 	public:
-		void InWater(bool WaterBody_);
+
+		void SetResourceMesh();
+
+		void UserConstructionScript();
+
+		void InWater(
+bool WaterBody
+, 
+class UPrimitiveComponent* Comp
+);
+
 		void WaterParticleHit();
-		void HeatUpdated(float Heat);
+
+		void HasNoWater();
+
+		void HasWater();
+
+		void HeatUpdated(
+float Heat
+);
+
 		void FullHeat();
-		void InFire(bool SlowBurn_);
+
+		void InFire(
+bool SlowBurn
+);
+
 		void OutOfFire();
-		void ReceiveHit(class UPrimitiveComponent* MyComp, class AActor* Other, class UPrimitiveComponent* OtherComp, bool bSelfMoved, const struct FVector& HitLocation, const struct FVector& HitNormal, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
-		void ExecuteUbergraph_BP_ParentCutVeg(int32_t EntryPoint);
+
+		void ReceiveHit(
+class UPrimitiveComponent* MyComp
+, 
+class AActor* Other
+, 
+class UPrimitiveComponent* OtherComp
+, 
+bool bSelfMoved
+, 
+const struct FVector& HitLocation
+, 
+const struct FVector& HitNormal
+, 
+const struct FVector& NormalImpulse
+, 
+const struct FHitResult& Hit
+);
+
+		void ActorLoaded();
+
+		void ExecuteUbergraph_BP_ParentCutVeg(
+int32_t EntryPoint
+);
+
 		static UClass* StaticClass();
 	};
 

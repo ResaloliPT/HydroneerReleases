@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+
 	/**
 	 * ScriptStruct AutoSettings.SettingOption
 	 * Size -> 0x0028
@@ -21,9 +22,15 @@ namespace CG
 	struct FSettingOption
 	{
 	public:
-		class FText                                                Label;                                                   // 0x0000(0x0018) Edit, BlueprintVisible, NativeAccessSpecifierPublic
-		class FString                                              Value;                                                   // 0x0018(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		class FText                                              Label;                                                   // 0x0000(0x0018) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+
+
+		class FString                                            Value;                                                   // 0x0018(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct AutoSettings.AutoSettingData
@@ -32,9 +39,15 @@ namespace CG
 	struct FAutoSettingData
 	{
 	public:
-		class FName                                                Key;                                                     // 0x0000(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                              Value;                                                   // 0x0008(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FGameplayTagContainer                               Tags;                                                    // 0x0018(0x0020) Edit, BlueprintVisible, Transient, NativeAccessSpecifierPublic
+
+		class FName                                              Key;                                                     // 0x0000(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FString                                            Value;                                                   // 0x0008(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FGameplayTagContainer                             Tags;                                                    // 0x0018(0x0020) Edit, BlueprintVisible, Transient, NativeAccessSpecifierPublic
+
 	};
 
 }

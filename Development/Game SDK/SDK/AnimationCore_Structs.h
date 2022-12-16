@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+
 	/**
 	 * Enum AnimationCore.ETransformConstraintType
 	 */
@@ -25,6 +26,8 @@ namespace CG
 		Parent      = 3,
 		MAX         = 4
 	};
+
+
 
 	/**
 	 * Enum AnimationCore.EConstraintType
@@ -39,6 +42,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+
 	/**
 	 * ScriptStruct AnimationCore.CCDIKChainLink
 	 * Size -> 0x0080
@@ -46,8 +50,12 @@ namespace CG
 	struct FCCDIKChainLink
 	{
 	public:
-		unsigned char                                              UnknownData_T9QQ[0x80];                                  // 0x0000(0x0080) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_52SB[0x80];                                  // 0x0000(0x0080) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct AnimationCore.Axis
@@ -56,10 +64,18 @@ namespace CG
 	struct FAxis
 	{
 	public:
-		struct FVector                                             Axis;                                                    // 0x0000(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bInLocalSpace;                                           // 0x000C(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_3D7Z[0x3];                                   // 0x000D(0x0003) MISSED OFFSET (PADDING)
+
+		struct FVector                                           Axis;                                                    // 0x0000(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bInLocalSpace;                                           // 0x000C(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_80HM[0x3];                                   // 0x000D(0x0003) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct AnimationCore.ConstraintDescriptor
@@ -68,9 +84,15 @@ namespace CG
 	struct FConstraintDescriptor
 	{
 	public:
-		EConstraintType                                            Type;                                                    // 0x0000(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_W8XV[0xF];                                   // 0x0001(0x000F) MISSED OFFSET (PADDING)
+
+		EConstraintType                                          Type;                                                    // 0x0000(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_462B[0xF];                                   // 0x0001(0x000F) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct AnimationCore.ConstraintData
@@ -79,13 +101,27 @@ namespace CG
 	struct FConstraintData
 	{
 	public:
-		struct FConstraintDescriptor                               Constraint;                                              // 0x0000(0x0010) NativeAccessSpecifierPublic
-		float                                                      Weight;                                                  // 0x0010(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bMaintainOffset;                                         // 0x0014(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_KI9R[0xB];                                   // 0x0015(0x000B) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FTransform                                          Offset;                                                  // 0x0020(0x0030) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct FTransform                                          CurrentTransform;                                        // 0x0050(0x0030) Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+
+		struct FConstraintDescriptor                             Constraint;                                              // 0x0000(0x0010) NativeAccessSpecifierPublic
+
+
+		float                                                    Weight;                                                  // 0x0010(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bMaintainOffset;                                         // 0x0014(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_ULW4[0xB];                                   // 0x0015(0x000B) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FTransform                                        Offset;                                                  // 0x0020(0x0030) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+
+
+		struct FTransform                                        CurrentTransform;                                        // 0x0050(0x0030) Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct AnimationCore.FilterOptionPerAxis
@@ -94,10 +130,18 @@ namespace CG
 	struct FFilterOptionPerAxis
 	{
 	public:
-		bool                                                       bX;                                                      // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bY;                                                      // 0x0001(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bZ;                                                      // 0x0002(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		bool                                                     bX;                                                      // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bY;                                                      // 0x0001(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bZ;                                                      // 0x0002(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct AnimationCore.ConstraintDescriptionEx
@@ -106,10 +150,18 @@ namespace CG
 	struct FConstraintDescriptionEx
 	{
 	public:
-		unsigned char                                              UnknownData_PD36[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FFilterOptionPerAxis                                AxesFilterOption;                                        // 0x0008(0x0003) Edit, NoDestructor, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_NUYB[0x5];                                   // 0x000B(0x0005) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_8CY8[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FFilterOptionPerAxis                              AxesFilterOption;                                        // 0x0008(0x0003) Edit, NoDestructor, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_RM86[0x5];                                   // 0x000B(0x0005) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct AnimationCore.AimConstraintDescription
@@ -118,12 +170,24 @@ namespace CG
 	struct FAimConstraintDescription : public FConstraintDescriptionEx
 	{
 	public:
-		struct FAxis                                               LookAt_Axis;                                             // 0x0010(0x0010) Edit, NoDestructor, NativeAccessSpecifierPublic
-		struct FAxis                                               LookUp_Axis;                                             // 0x0020(0x0010) Edit, NoDestructor, NativeAccessSpecifierPublic
-		bool                                                       bUseLookUp;                                              // 0x0030(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_4MUS[0x3];                                   // 0x0031(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FVector                                             LookUpTarget;                                            // 0x0034(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		struct FAxis                                             LookAt_Axis;                                             // 0x0010(0x0010) Edit, NoDestructor, NativeAccessSpecifierPublic
+
+
+		struct FAxis                                             LookUp_Axis;                                             // 0x0020(0x0010) Edit, NoDestructor, NativeAccessSpecifierPublic
+
+
+		bool                                                     bUseLookUp;                                              // 0x0030(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_77YB[0x3];                                   // 0x0031(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FVector                                           LookUpTarget;                                            // 0x0034(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct AnimationCore.TransformConstraintDescription
@@ -132,9 +196,15 @@ namespace CG
 	struct FTransformConstraintDescription : public FConstraintDescriptionEx
 	{
 	public:
-		ETransformConstraintType                                   TransformType;                                           // 0x0010(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_J3CS[0x7];                                   // 0x0011(0x0007) MISSED OFFSET (PADDING)
+
+		ETransformConstraintType                                 TransformType;                                           // 0x0010(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_9SBU[0x7];                                   // 0x0011(0x0007) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct AnimationCore.ConstraintDescription
@@ -143,14 +213,30 @@ namespace CG
 	struct FConstraintDescription
 	{
 	public:
-		bool                                                       bTranslation;                                            // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bRotation;                                               // 0x0001(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bScale;                                                  // 0x0002(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bParent;                                                 // 0x0003(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FFilterOptionPerAxis                                TranslationAxes;                                         // 0x0004(0x0003) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
-		struct FFilterOptionPerAxis                                RotationAxes;                                            // 0x0007(0x0003) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
-		struct FFilterOptionPerAxis                                ScaleAxes;                                               // 0x000A(0x0003) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
+
+		bool                                                     bTranslation;                                            // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bRotation;                                               // 0x0001(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bScale;                                                  // 0x0002(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bParent;                                                 // 0x0003(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FFilterOptionPerAxis                              TranslationAxes;                                         // 0x0004(0x0003) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
+
+
+		struct FFilterOptionPerAxis                              RotationAxes;                                            // 0x0007(0x0003) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
+
+
+		struct FFilterOptionPerAxis                              ScaleAxes;                                               // 0x000A(0x0003) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct AnimationCore.TransformConstraint
@@ -159,14 +245,30 @@ namespace CG
 	struct FTransformConstraint
 	{
 	public:
-		struct FConstraintDescription                              Operator;                                                // 0x0000(0x000D) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_ML0L[0x3];                                   // 0x000D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FName                                                SourceNode;                                              // 0x0010(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FName                                                TargetNode;                                              // 0x0018(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Weight;                                                  // 0x0020(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bMaintainOffset;                                         // 0x0024(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_BWM2[0x3];                                   // 0x0025(0x0003) MISSED OFFSET (PADDING)
+
+		struct FConstraintDescription                            Operator;                                                // 0x0000(0x000D) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_F24D[0x3];                                   // 0x000D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		class FName                                              SourceNode;                                              // 0x0010(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FName                                              TargetNode;                                              // 0x0018(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Weight;                                                  // 0x0020(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bMaintainOffset;                                         // 0x0024(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_56ST[0x3];                                   // 0x0025(0x0003) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct AnimationCore.ConstraintOffset
@@ -175,13 +277,27 @@ namespace CG
 	struct FConstraintOffset
 	{
 	public:
-		struct FVector                                             Translation;                                             // 0x0000(0x000C) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_GR40[0x4];                                   // 0x000C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FQuat                                               Rotation;                                                // 0x0010(0x0010) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct FVector                                             Scale;                                                   // 0x0020(0x000C) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_Z8AG[0x4];                                   // 0x002C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FTransform                                          Parent;                                                  // 0x0030(0x0030) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+
+		struct FVector                                           Translation;                                             // 0x0000(0x000C) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_WHCQ[0x4];                                   // 0x000C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FQuat                                             Rotation;                                                // 0x0010(0x0010) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+
+
+		struct FVector                                           Scale;                                                   // 0x0020(0x000C) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_GOLZ[0x4];                                   // 0x002C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FTransform                                        Parent;                                                  // 0x0030(0x0030) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct AnimationCore.TransformFilter
@@ -190,10 +306,18 @@ namespace CG
 	struct FTransformFilter
 	{
 	public:
-		struct FFilterOptionPerAxis                                TranslationFilter;                                       // 0x0000(0x0003) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
-		struct FFilterOptionPerAxis                                RotationFilter;                                          // 0x0003(0x0003) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
-		struct FFilterOptionPerAxis                                ScaleFilter;                                             // 0x0006(0x0003) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
+
+		struct FFilterOptionPerAxis                              TranslationFilter;                                       // 0x0000(0x0003) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
+
+
+		struct FFilterOptionPerAxis                              RotationFilter;                                          // 0x0003(0x0003) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
+
+
+		struct FFilterOptionPerAxis                              ScaleFilter;                                             // 0x0006(0x0003) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct AnimationCore.EulerTransform
@@ -202,10 +326,18 @@ namespace CG
 	struct FEulerTransform
 	{
 	public:
-		struct FVector                                             Location;                                                // 0x0000(0x000C) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FRotator                                            Rotation;                                                // 0x000C(0x000C) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct FVector                                             Scale;                                                   // 0x0018(0x000C) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		struct FVector                                           Location;                                                // 0x0000(0x000C) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FRotator                                          Rotation;                                                // 0x000C(0x000C) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+
+
+		struct FVector                                           Scale;                                                   // 0x0018(0x000C) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct AnimationCore.FABRIKChainLink
@@ -214,8 +346,12 @@ namespace CG
 	struct FFABRIKChainLink
 	{
 	public:
-		unsigned char                                              UnknownData_NDRM[0x38];                                  // 0x0000(0x0038) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_N4G2[0x38];                                  // 0x0000(0x0038) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct AnimationCore.NodeChain
@@ -224,8 +360,12 @@ namespace CG
 	struct FNodeChain
 	{
 	public:
-		TArray<class FName>                                        Nodes;                                                   // 0x0000(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+
+		TArray<class FName>                                      Nodes;                                                   // 0x0000(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct AnimationCore.NodeObject
@@ -234,9 +374,15 @@ namespace CG
 	struct FNodeObject
 	{
 	public:
-		class FName                                                Name;                                                    // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FName                                                ParentName;                                              // 0x0008(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		class FName                                              Name;                                                    // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FName                                              ParentName;                                              // 0x0008(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct AnimationCore.NodeHierarchyData
@@ -245,10 +391,18 @@ namespace CG
 	struct FNodeHierarchyData
 	{
 	public:
-		TArray<struct FNodeObject>                                 Nodes;                                                   // 0x0000(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		TArray<struct FTransform>                                  Transforms;                                              // 0x0010(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		TMap<class FName, int32_t>                                 NodeNameToIndexMapping;                                  // 0x0020(0x0050) NativeAccessSpecifierPublic
+
+		TArray<struct FNodeObject>                               Nodes;                                                   // 0x0000(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+
+
+		TArray<struct FTransform>                                Transforms;                                              // 0x0010(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+
+
+		TMap<class FName, int32_t>                               NodeNameToIndexMapping;                                  // 0x0020(0x0050) NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct AnimationCore.NodeHierarchyWithUserData
@@ -257,9 +411,15 @@ namespace CG
 	struct FNodeHierarchyWithUserData
 	{
 	public:
-		unsigned char                                              UnknownData_XLS2[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FNodeHierarchyData                                  Hierarchy;                                               // 0x0008(0x0070) Protected, NativeAccessSpecifierProtected
+
+		unsigned char                                            UnknownData_38SC[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FNodeHierarchyData                                Hierarchy;                                               // 0x0008(0x0070) Protected, NativeAccessSpecifierProtected
+
 	};
+
+
 
 	/**
 	 * ScriptStruct AnimationCore.TransformNoScale
@@ -268,9 +428,15 @@ namespace CG
 	struct FTransformNoScale
 	{
 	public:
-		struct FVector                                             Location;                                                // 0x0000(0x000C) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_9QQG[0x4];                                   // 0x000C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FQuat                                               Rotation;                                                // 0x0010(0x0010) Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+
+		struct FVector                                           Location;                                                // 0x0000(0x000C) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_3MIC[0x4];                                   // 0x000C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FQuat                                             Rotation;                                                // 0x0010(0x0010) Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+
 	};
 
 }

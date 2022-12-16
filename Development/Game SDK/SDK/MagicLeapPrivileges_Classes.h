@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * Class MagicLeapPrivileges.MagicLeapPrivilegesFunctionLibrary
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
@@ -21,9 +22,21 @@ namespace CG
 	class UMagicLeapPrivilegesFunctionLibrary : public UBlueprintFunctionLibrary
 	{
 	public:
-		bool RequestPrivilegeAsync(EMagicLeapPrivilege Privilege, const class FScriptDelegate& ResultDelegate);
-		bool RequestPrivilege(EMagicLeapPrivilege Privilege);
-		bool CheckPrivilege(EMagicLeapPrivilege Privilege);
+
+		bool RequestPrivilegeAsync(
+EMagicLeapPrivilege Privilege
+, 
+const class FScriptDelegate& ResultDelegate
+);
+
+		bool RequestPrivilege(
+EMagicLeapPrivilege Privilege
+);
+
+		bool CheckPrivilege(
+EMagicLeapPrivilege Privilege
+);
+
 		static UClass* StaticClass();
 	};
 

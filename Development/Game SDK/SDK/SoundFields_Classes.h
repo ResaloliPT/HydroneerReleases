@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * Class SoundFields.AmbisonicsEncodingSettings
 	 * Size -> 0x0008 (FullSize[0x0030] - InheritedSize[0x0028])
@@ -21,10 +22,15 @@ namespace CG
 	class UAmbisonicsEncodingSettings : public USoundfieldEncodingSettingsBase
 	{
 	public:
-		int32_t                                                    AmbisonicsOrder;                                         // 0x0028(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		unsigned char                                              UnknownData_7E9K[0x4];                                   // 0x002C(0x0004) MISSED OFFSET (PADDING)
+
+		int32_t                                                  AmbisonicsOrder;                                         // 0x0028(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
+
+		unsigned char                                            UnknownData_XZGS[0x4];                                   // 0x002C(0x0004) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
 

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20,7 +21,13 @@ namespace CG
 	 * 		struct FVector2D                                   UV                                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            UVIndex                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UStaticMeshDescription::SetVertexInstanceUV(const struct FVertexInstanceID& VertexInstanceID, const struct FVector2D& UV, int32_t UVIndex)
+	void UStaticMeshDescription::SetVertexInstanceUV(
+const struct FVertexInstanceID& VertexInstanceID
+, 
+const struct FVector2D& UV
+, 
+int32_t UVIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -41,6 +48,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -50,7 +59,11 @@ namespace CG
 	 * 		struct FPolygonGroupID                             PolygonGroupID                                             (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FName                                        SlotName                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UStaticMeshDescription::SetPolygonGroupMaterialSlotName(const struct FPolygonGroupID& PolygonGroupID, const class FName& SlotName)
+	void UStaticMeshDescription::SetPolygonGroupMaterialSlotName(
+const struct FPolygonGroupID& PolygonGroupID
+, 
+const class FName& SlotName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -69,6 +82,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -78,7 +93,11 @@ namespace CG
 	 * 		struct FVertexInstanceID                           VertexInstanceID                                           (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            UVIndex                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVector2D UStaticMeshDescription::GetVertexInstanceUV(const struct FVertexInstanceID& VertexInstanceID, int32_t UVIndex)
+	struct FVector2D UStaticMeshDescription::GetVertexInstanceUV(
+const struct FVertexInstanceID& VertexInstanceID
+, 
+int32_t UVIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -99,6 +118,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -115,7 +136,25 @@ namespace CG
 	 * 		struct FPolygonID                                  PolygonID_PlusZ                                            (Parm, OutParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FPolygonID                                  PolygonID_MinusZ                                           (Parm, OutParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UStaticMeshDescription::CreateCube(const struct FVector& Center, const struct FVector& HalfExtents, const struct FPolygonGroupID& PolygonGroup, struct FPolygonID* PolygonID_PlusX, struct FPolygonID* PolygonID_MinusX, struct FPolygonID* PolygonID_PlusY, struct FPolygonID* PolygonID_MinusY, struct FPolygonID* PolygonID_PlusZ, struct FPolygonID* PolygonID_MinusZ)
+	void UStaticMeshDescription::CreateCube(
+const struct FVector& Center
+, 
+const struct FVector& HalfExtents
+, 
+const struct FPolygonGroupID& PolygonGroup
+, 
+struct FPolygonID* PolygonID_PlusX
+, 
+struct FPolygonID* PolygonID_MinusX
+, 
+struct FPolygonID* PolygonID_PlusY
+, 
+struct FPolygonID* PolygonID_MinusY
+, 
+struct FPolygonID* PolygonID_PlusZ
+, 
+struct FPolygonID* PolygonID_MinusZ
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -155,10 +194,12 @@ namespace CG
 			*PolygonID_MinusZ = params.PolygonID_MinusZ;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UStaticMeshDescription.StaticClass
+	 * 		Name   -> PredefinedFunction UStaticMeshDescription.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UStaticMeshDescription::StaticClass()
@@ -168,6 +209,7 @@ namespace CG
 			ptr = UObject::FindClass("Class StaticMeshDescription.StaticMeshDescription");
 		return ptr;
 	}
+
 
 }
 

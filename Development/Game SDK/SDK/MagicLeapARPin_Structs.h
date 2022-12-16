@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+
 	/**
 	 * Enum MagicLeapARPin.EMagicLeapARPinType
 	 */
@@ -25,6 +26,8 @@ namespace CG
 		MAX                     = 3
 	};
 
+
+
 	/**
 	 * Enum MagicLeapARPin.EMagicLeapAutoPinType
 	 */
@@ -35,6 +38,8 @@ namespace CG
 		Never                 = 2,
 		MAX                   = 3
 	};
+
+
 
 	/**
 	 * Enum MagicLeapARPin.EMagicLeapPassableWorldError
@@ -59,6 +64,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+
 	/**
 	 * ScriptStruct MagicLeapARPin.MagicLeapARPinState
 	 * Size -> 0x0014
@@ -66,13 +72,27 @@ namespace CG
 	struct FMagicLeapARPinState
 	{
 	public:
-		float                                                      Confidence;                                              // 0x0000(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      ValidRadius;                                             // 0x0004(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      RotationError;                                           // 0x0008(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      TranslationError;                                        // 0x000C(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EMagicLeapARPinType                                        PinType;                                                 // 0x0010(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_W33N[0x3];                                   // 0x0011(0x0003) MISSED OFFSET (PADDING)
+
+		float                                                    Confidence;                                              // 0x0000(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    ValidRadius;                                             // 0x0004(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    RotationError;                                           // 0x0008(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    TranslationError;                                        // 0x000C(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		EMagicLeapARPinType                                      PinType;                                                 // 0x0010(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_MXKW[0x3];                                   // 0x0011(0x0003) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct MagicLeapARPin.MagicLeapARPinObjectIdList
@@ -81,8 +101,12 @@ namespace CG
 	struct FMagicLeapARPinObjectIdList
 	{
 	public:
-		unsigned char                                              ObjectIdList[0x50];                                      // 0x0000(0x0050) UNKNOWN PROPERTY: SetProperty
+
+		unsigned char                                            ObjectIdList[0x50];                                      // 0x0000(0x0050) UNKNOWN PROPERTY: SetProperty
+
 	};
+
+
 
 	/**
 	 * ScriptStruct MagicLeapARPin.MagicLeapARPinQuery
@@ -91,12 +115,24 @@ namespace CG
 	struct FMagicLeapARPinQuery
 	{
 	public:
-		unsigned char                                              Types[0x50];                                             // 0x0000(0x0050) UNKNOWN PROPERTY: SetProperty
-		int32_t                                                    MaxResults;                                              // 0x0050(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FVector                                             TargetPoint;                                             // 0x0054(0x000C) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Radius;                                                  // 0x0060(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bSorted;                                                 // 0x0064(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_DLHE[0x3];                                   // 0x0065(0x0003) MISSED OFFSET (PADDING)
+
+		unsigned char                                            Types[0x50];                                             // 0x0000(0x0050) UNKNOWN PROPERTY: SetProperty
+
+
+		int32_t                                                  MaxResults;                                              // 0x0050(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FVector                                           TargetPoint;                                             // 0x0054(0x000C) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Radius;                                                  // 0x0060(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bSorted;                                                 // 0x0064(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_R3JL[0x3];                                   // 0x0065(0x0003) MISSED OFFSET (PADDING)
+
 	};
 
 }

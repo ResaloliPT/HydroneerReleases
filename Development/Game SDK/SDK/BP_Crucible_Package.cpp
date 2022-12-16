@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,38 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_Crucible.BP_Crucible_C.GetAttachedMeshCollisionProfile
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		E_PhyReact                                         Index                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	class FName ABP_Crucible_C::GetAttachedMeshCollisionProfile(
+E_PhyReact Index
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.GetAttachedMeshCollisionProfile");
+		
+		struct
+		{
+			E_PhyReact                                         Index;
+		} params;
+		params.Index = Index;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19,9 +51,17 @@ namespace CG
 	 * 		class ABP_GameController_C*                        Controller                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class AActor*                                      HitActor                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		struct FVector                                     HitLocation                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		bool                                               ConsumeInput_                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               ConsumeInput                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_Crucible_C::LMBDownWhileCarrying(class ABP_GameController_C* Controller, class AActor* HitActor, const struct FVector& HitLocation, bool* ConsumeInput_)
+	void ABP_Crucible_C::LMBDownWhileCarrying(
+class ABP_GameController_C* Controller
+, 
+class AActor* HitActor
+, 
+const struct FVector& HitLocation
+, 
+bool* ConsumeInput
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -32,7 +72,7 @@ namespace CG
 			class ABP_GameController_C*                        Controller;
 			class AActor*                                      HitActor;
 			struct FVector                                     HitLocation;
-			bool                                               ConsumeInput_;
+			bool                                               ConsumeInput;
 		} params;
 		params.Controller = Controller;
 		params.HitActor = HitActor;
@@ -42,9 +82,11 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 		
-		if (ConsumeInput_ != nullptr)
-			*ConsumeInput_ = params.ConsumeInput_;
+		if (ConsumeInput != nullptr)
+			*ConsumeInput = params.ConsumeInput;
 	}
+
+
 
 	/**
 	 * Function:
@@ -56,7 +98,13 @@ namespace CG
 	 * 		class UClass*                                      Bar                                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		TArray<class ABP_ParentResource_C*>                Items                                                      (Parm, OutParm)
 	 */
-	void ABP_Crucible_C::LoopResourcesForTargets(class UClass* Ore, class UClass* Bar, TArray<class ABP_ParentResource_C*>* Items)
+	void ABP_Crucible_C::LoopResourcesForTargets(
+class UClass* Ore
+, 
+class UClass* Bar
+, 
+TArray<class ABP_ParentResource_C*>* Items
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -79,6 +127,8 @@ namespace CG
 			*Items = params.Items;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -89,7 +139,13 @@ namespace CG
 	 * 		TArray<class ABP_ParentResource_C*>                Class                                                      (Parm, OutParm)
 	 * 		int32_t                                            BarOut                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_Crucible_C::FindTestClass(E_MetalType CurrentMoltenType, TArray<class ABP_ParentResource_C*>* Class, int32_t* BarOut)
+	void ABP_Crucible_C::FindTestClass(
+E_MetalType CurrentMoltenType
+, 
+TArray<class ABP_ParentResource_C*>* Class
+, 
+int32_t* BarOut
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -113,6 +169,8 @@ namespace CG
 			*BarOut = params.BarOut;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -134,6 +192,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -142,7 +202,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_ParentItem_C*                            ItemPickedUp                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_Crucible_C::StoredItemPickedUp(class ABP_ParentItem_C* ItemPickedUp)
+	void ABP_Crucible_C::StoredItemPickedUp(
+class ABP_ParentItem_C* ItemPickedUp
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -158,6 +220,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -180,6 +244,54 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_Crucible.BP_Crucible_C.HasNoWater
+	 * 		Flags  -> ()
+	 */
+	void ABP_Crucible_C::HasNoWater()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.HasNoWater");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_Crucible.BP_Crucible_C.HasWater
+	 * 		Flags  -> ()
+	 */
+	void ABP_Crucible_C::HasWater()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.HasWater");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -193,7 +305,19 @@ namespace CG
 	 * 		bool                                               bFromSweep                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 * 		struct FHitResult                                  SweepResult                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	 */
-	void ABP_Crucible_C::BndEvt__Cylinder_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+	void ABP_Crucible_C::BndEvt__Cylinder_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(
+class UPrimitiveComponent* OverlappedComponent
+, 
+class AActor* OtherActor
+, 
+class UPrimitiveComponent* OtherComp
+, 
+int32_t OtherBodyIndex
+, 
+bool bFromSweep
+, 
+const struct FHitResult& SweepResult
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -220,6 +344,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -228,7 +354,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_Mould_C*                                 Mould                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_Crucible_C::SpawnBar(class ABP_Mould_C* Mould)
+	void ABP_Crucible_C::SpawnBar(
+class ABP_Mould_C* Mould
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -244,6 +372,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -266,6 +396,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -287,6 +419,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -295,7 +429,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              Heat                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_Crucible_C::HeatUpdated(float Heat)
+	void ABP_Crucible_C::HeatUpdated(
+float Heat
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -311,6 +447,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -333,15 +471,19 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_Crucible.BP_Crucible_C.InFire
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               SlowBurn_                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               SlowBurn                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_Crucible_C::InFire(bool SlowBurn_)
+	void ABP_Crucible_C::InFire(
+bool SlowBurn
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -349,14 +491,16 @@ namespace CG
 		
 		struct
 		{
-			bool                                               SlowBurn_;
+			bool                                               SlowBurn;
 		} params;
-		params.SlowBurn_ = SlowBurn_;
+		params.SlowBurn = SlowBurn;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -379,15 +523,22 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_Crucible.BP_Crucible_C.InWater
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               WaterBody_                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               WaterBody                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		class UPrimitiveComponent*                         Comp                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_Crucible_C::InWater(bool WaterBody_)
+	void ABP_Crucible_C::InWater(
+bool WaterBody
+, 
+class UPrimitiveComponent* Comp
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -395,14 +546,18 @@ namespace CG
 		
 		struct
 		{
-			bool                                               WaterBody_;
+			bool                                               WaterBody;
+			class UPrimitiveComponent*                         Comp;
 		} params;
-		params.WaterBody_ = WaterBody_;
+		params.WaterBody = WaterBody;
+		params.Comp = Comp;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -412,7 +567,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_ParentItem_C*                            Item                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_Crucible_C::ItemStored(class ABP_ParentItem_C* Item)
+	void ABP_Crucible_C::ItemStored(
+class ABP_ParentItem_C* Item
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -429,6 +586,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -440,7 +599,15 @@ namespace CG
 	 * 		class UPrimitiveComponent*                         OtherComp                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		int32_t                                            OtherBodyIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_Crucible_C::BndEvt__BP_Crucible_Cylinder_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex)
+	void ABP_Crucible_C::BndEvt__BP_Crucible_Cylinder_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(
+class UPrimitiveComponent* OverlappedComponent
+, 
+class AActor* OtherActor
+, 
+class UPrimitiveComponent* OtherComp
+, 
+int32_t OtherBodyIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -463,6 +630,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -484,6 +653,77 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_Crucible.BP_Crucible_C.BndEvt__BP_Pan_AC_Storage_K2Node_ComponentBoundEvent_1_ItemAttached__DelegateSignature
+	 * 		Flags  -> ()
+	 */
+	void ABP_Crucible_C::BndEvt__BP_Pan_AC_Storage_K2Node_ComponentBoundEvent_1_ItemAttached__DelegateSignature()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.BndEvt__BP_Pan_AC_Storage_K2Node_ComponentBoundEvent_1_ItemAttached__DelegateSignature");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_Crucible.BP_Crucible_C.BndEvt__BP_Pan_AC_Storage_K2Node_ComponentBoundEvent_2_ItemDetached__DelegateSignature
+	 * 		Flags  -> ()
+	 */
+	void ABP_Crucible_C::BndEvt__BP_Pan_AC_Storage_K2Node_ComponentBoundEvent_2_ItemDetached__DelegateSignature()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.BndEvt__BP_Pan_AC_Storage_K2Node_ComponentBoundEvent_2_ItemDetached__DelegateSignature");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_Crucible.BP_Crucible_C.OverridePickedupPreCarry
+	 * 		Flags  -> ()
+	 */
+	void ABP_Crucible_C::OverridePickedupPreCarry()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_Crucible.BP_Crucible_C.OverridePickedupPreCarry");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -492,7 +732,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_Crucible_C::ExecuteUbergraph_BP_Crucible(int32_t EntryPoint)
+	void ABP_Crucible_C::ExecuteUbergraph_BP_Crucible(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -509,10 +751,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ABP_Crucible_C.StaticClass
+	 * 		Name   -> PredefinedFunction ABP_Crucible_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ABP_Crucible_C::StaticClass()
@@ -522,6 +766,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass BP_Crucible.BP_Crucible_C");
 		return ptr;
 	}
+
 
 }
 

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18,7 +19,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FScriptDelegate                              ResultDelegate                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapAudioFunctionLibrary::SetOnAudioJackUnpluggedDelegate(const class FScriptDelegate& ResultDelegate)
+	bool UMagicLeapAudioFunctionLibrary::SetOnAudioJackUnpluggedDelegate(
+const class FScriptDelegate& ResultDelegate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -37,6 +40,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -45,7 +50,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FScriptDelegate                              ResultDelegate                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapAudioFunctionLibrary::SetOnAudioJackPluggedDelegate(const class FScriptDelegate& ResultDelegate)
+	bool UMagicLeapAudioFunctionLibrary::SetOnAudioJackPluggedDelegate(
+const class FScriptDelegate& ResultDelegate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -64,6 +71,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -72,7 +81,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               IsMuted                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapAudioFunctionLibrary::SetMicMute(bool IsMuted)
+	bool UMagicLeapAudioFunctionLibrary::SetMicMute(
+bool IsMuted
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -90,6 +101,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -114,10 +127,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMagicLeapAudioFunctionLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UMagicLeapAudioFunctionLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMagicLeapAudioFunctionLibrary::StaticClass()
@@ -127,6 +142,7 @@ namespace CG
 			ptr = UObject::FindClass("Class MagicLeapAudio.MagicLeapAudioFunctionLibrary");
 		return ptr;
 	}
+
 
 }
 

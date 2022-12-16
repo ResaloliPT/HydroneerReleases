@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -30,6 +31,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -52,6 +55,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -73,6 +78,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -81,7 +88,9 @@ namespace CG
 	 * Parameters:
 	 * 		E_CameraShakes                                     Selection                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameCharacter_C::CameraShake(E_CameraShakes Selection)
+	void ABP_GameCharacter_C::CameraShake(
+E_CameraShakes Selection
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -98,6 +107,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -106,7 +117,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UStaticMeshComponent*                        ValidMeshIfTrue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameCharacter_C::ToggleDropDecal(class UStaticMeshComponent* ValidMeshIfTrue)
+	void ABP_GameCharacter_C::ToggleDropDecal(
+class UStaticMeshComponent* ValidMeshIfTrue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -122,6 +135,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -144,6 +159,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -164,6 +181,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -186,6 +205,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -206,6 +227,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -228,6 +251,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -248,6 +273,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -270,6 +297,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -291,6 +320,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -299,7 +330,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	 */
-	void ABP_GameCharacter_C::InpActEvt_Jump_K2Node_InputActionEvent_6(const struct FKey& Key)
+	void ABP_GameCharacter_C::InpActEvt_Jump_K2Node_InputActionEvent_6(
+const struct FKey& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -316,6 +349,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -324,7 +359,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	 */
-	void ABP_GameCharacter_C::InpActEvt_Jump_K2Node_InputActionEvent_5(const struct FKey& Key)
+	void ABP_GameCharacter_C::InpActEvt_Jump_K2Node_InputActionEvent_5(
+const struct FKey& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -341,6 +378,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -349,7 +388,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	 */
-	void ABP_GameCharacter_C::InpActEvt_Crouch_K2Node_InputActionEvent_4(const struct FKey& Key)
+	void ABP_GameCharacter_C::InpActEvt_Crouch_K2Node_InputActionEvent_4(
+const struct FKey& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -366,6 +407,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -374,7 +417,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	 */
-	void ABP_GameCharacter_C::InpActEvt_Crouch_K2Node_InputActionEvent_3(const struct FKey& Key)
+	void ABP_GameCharacter_C::InpActEvt_Crouch_K2Node_InputActionEvent_3(
+const struct FKey& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -391,6 +436,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -399,7 +446,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	 */
-	void ABP_GameCharacter_C::InpActEvt_Sprint_K2Node_InputActionEvent_2(const struct FKey& Key)
+	void ABP_GameCharacter_C::InpActEvt_Sprint_K2Node_InputActionEvent_2(
+const struct FKey& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -416,6 +465,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -424,7 +475,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FKey                                        Key                                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	 */
-	void ABP_GameCharacter_C::InpActEvt_Sprint_K2Node_InputActionEvent_1(const struct FKey& Key)
+	void ABP_GameCharacter_C::InpActEvt_Sprint_K2Node_InputActionEvent_1(
+const struct FKey& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -441,6 +494,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -449,7 +504,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              AxisValue                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameCharacter_C::InpAxisEvt_MouseUp_K2Node_InputAxisEvent_3(float AxisValue)
+	void ABP_GameCharacter_C::InpAxisEvt_MouseUp_K2Node_InputAxisEvent_3(
+float AxisValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -466,6 +523,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -474,7 +533,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              AxisValue                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameCharacter_C::InpAxisEvt_MouseRight_K2Node_InputAxisEvent_4(float AxisValue)
+	void ABP_GameCharacter_C::InpAxisEvt_MouseRight_K2Node_InputAxisEvent_4(
+float AxisValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -490,6 +551,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -512,6 +575,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -532,6 +597,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -554,6 +621,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -575,6 +644,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -583,7 +654,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              AxisValue                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameCharacter_C::InpAxisEvt_MoveForward_K2Node_InputAxisEvent_1(float AxisValue)
+	void ABP_GameCharacter_C::InpAxisEvt_MoveForward_K2Node_InputAxisEvent_1(
+float AxisValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -600,6 +673,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -608,7 +683,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              AxisValue                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameCharacter_C::InpAxisEvt_MoveRight_K2Node_InputAxisEvent_2(float AxisValue)
+	void ABP_GameCharacter_C::InpAxisEvt_MoveRight_K2Node_InputAxisEvent_2(
+float AxisValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -625,6 +702,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -633,7 +712,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AController*                                 NewController                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameCharacter_C::ReceivePossessed(class AController* NewController)
+	void ABP_GameCharacter_C::ReceivePossessed(
+class AController* NewController
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -650,6 +731,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -658,7 +741,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameCharacter_C::FOVChanged(float NewValue)
+	void ABP_GameCharacter_C::FOVChanged(
+float NewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -675,6 +760,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -683,7 +770,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_GameCharacter_C::InvertMouseYChanged(bool NewValue)
+	void ABP_GameCharacter_C::InvertMouseYChanged(
+bool NewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -700,6 +789,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -708,7 +799,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_GameCharacter_C::HeadbobChanged(bool NewValue)
+	void ABP_GameCharacter_C::HeadbobChanged(
+bool NewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -724,6 +817,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -746,6 +841,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -754,7 +851,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AActor*                                      DestroyedActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameCharacter_C::Destroy(class AActor* DestroyedActor)
+	void ABP_GameCharacter_C::Destroy(
+class AActor* DestroyedActor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -771,6 +870,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -779,7 +880,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameCharacter_C::ToggleSprintChange(float NewValue)
+	void ABP_GameCharacter_C::ToggleSprintChange(
+float NewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -796,6 +899,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -804,7 +909,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameCharacter_C::ToggleCrouchChange(float NewValue)
+	void ABP_GameCharacter_C::ToggleCrouchChange(
+float NewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -821,6 +928,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -829,7 +938,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GameCharacter_C::ExecuteUbergraph_BP_GameCharacter(int32_t EntryPoint)
+	void ABP_GameCharacter_C::ExecuteUbergraph_BP_GameCharacter(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -846,10 +957,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ABP_GameCharacter_C.StaticClass
+	 * 		Name   -> PredefinedFunction ABP_GameCharacter_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ABP_GameCharacter_C::StaticClass()
@@ -859,6 +972,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass BP_GameCharacter.BP_GameCharacter_C");
 		return ptr;
 	}
+
 
 }
 

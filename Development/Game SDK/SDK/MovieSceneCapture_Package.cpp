@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -32,6 +33,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -56,10 +59,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneCaptureProtocolBase.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneCaptureProtocolBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneCaptureProtocolBase::StaticClass()
@@ -70,10 +75,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneAudioCaptureProtocolBase.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneAudioCaptureProtocolBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneAudioCaptureProtocolBase::StaticClass()
@@ -84,10 +91,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNullAudioCaptureProtocol.StaticClass
+	 * 		Name   -> PredefinedFunction UNullAudioCaptureProtocol.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNullAudioCaptureProtocol::StaticClass()
@@ -98,10 +107,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMasterAudioSubmixCaptureProtocol.StaticClass
+	 * 		Name   -> PredefinedFunction UMasterAudioSubmixCaptureProtocol.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMasterAudioSubmixCaptureProtocol::StaticClass()
@@ -112,10 +123,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneImageCaptureProtocolBase.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneImageCaptureProtocolBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneImageCaptureProtocolBase::StaticClass()
@@ -126,10 +139,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UCompositionGraphCaptureProtocol.StaticClass
+	 * 		Name   -> PredefinedFunction UCompositionGraphCaptureProtocol.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UCompositionGraphCaptureProtocol::StaticClass()
@@ -140,10 +155,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UFrameGrabberProtocol.StaticClass
+	 * 		Name   -> PredefinedFunction UFrameGrabberProtocol.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UFrameGrabberProtocol::StaticClass()
@@ -154,10 +171,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UImageSequenceProtocol.StaticClass
+	 * 		Name   -> PredefinedFunction UImageSequenceProtocol.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UImageSequenceProtocol::StaticClass()
@@ -168,10 +187,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UCompressedImageSequenceProtocol.StaticClass
+	 * 		Name   -> PredefinedFunction UCompressedImageSequenceProtocol.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UCompressedImageSequenceProtocol::StaticClass()
@@ -182,10 +203,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UImageSequenceProtocol_BMP.StaticClass
+	 * 		Name   -> PredefinedFunction UImageSequenceProtocol_BMP.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UImageSequenceProtocol_BMP::StaticClass()
@@ -196,10 +219,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UImageSequenceProtocol_PNG.StaticClass
+	 * 		Name   -> PredefinedFunction UImageSequenceProtocol_PNG.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UImageSequenceProtocol_PNG::StaticClass()
@@ -210,10 +235,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UImageSequenceProtocol_JPG.StaticClass
+	 * 		Name   -> PredefinedFunction UImageSequenceProtocol_JPG.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UImageSequenceProtocol_JPG::StaticClass()
@@ -224,10 +251,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UImageSequenceProtocol_EXR.StaticClass
+	 * 		Name   -> PredefinedFunction UImageSequenceProtocol_EXR.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UImageSequenceProtocol_EXR::StaticClass()
@@ -238,10 +267,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneCaptureInterface.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneCaptureInterface.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneCaptureInterface::StaticClass()
@@ -252,6 +283,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -260,7 +293,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UClass*                                      ProtocolType                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMovieSceneCapture::SetImageCaptureProtocolType(class UClass* ProtocolType)
+	void UMovieSceneCapture::SetImageCaptureProtocolType(
+class UClass* ProtocolType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -277,6 +312,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -285,7 +322,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UClass*                                      ProtocolType                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMovieSceneCapture::SetAudioCaptureProtocolType(class UClass* ProtocolType)
+	void UMovieSceneCapture::SetAudioCaptureProtocolType(
+class UClass* ProtocolType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -301,6 +340,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -325,6 +366,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -348,10 +391,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneCapture.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneCapture.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneCapture::StaticClass()
@@ -362,10 +407,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULevelCapture.StaticClass
+	 * 		Name   -> PredefinedFunction ULevelCapture.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULevelCapture::StaticClass()
@@ -375,6 +422,8 @@ namespace CG
 			ptr = UObject::FindClass("Class MovieSceneCapture.LevelCapture");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -399,6 +448,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -421,6 +472,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -445,6 +498,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -467,6 +522,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -491,10 +548,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneCaptureEnvironment.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneCaptureEnvironment.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneCaptureEnvironment::StaticClass()
@@ -504,6 +563,8 @@ namespace CG
 			ptr = UObject::FindClass("Class MovieSceneCapture.MovieSceneCaptureEnvironment");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -526,6 +587,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -534,7 +597,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FCapturedPixelsID                           StreamID                                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UUserDefinedCaptureProtocol::StartCapturingFinalPixels(const struct FCapturedPixelsID& StreamID)
+	void UUserDefinedCaptureProtocol::StartCapturingFinalPixels(
+const struct FCapturedPixelsID& StreamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -551,6 +616,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -560,7 +627,11 @@ namespace CG
 	 * 		class UTexture*                                    Buffer                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FCapturedPixelsID                           BufferID                                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UUserDefinedCaptureProtocol::ResolveBuffer(class UTexture* Buffer, const struct FCapturedPixelsID& BufferID)
+	void UUserDefinedCaptureProtocol::ResolveBuffer(
+class UTexture* Buffer
+, 
+const struct FCapturedPixelsID& BufferID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -578,6 +649,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -600,6 +673,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -621,6 +696,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -641,6 +718,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -665,6 +744,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -686,6 +767,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -696,7 +779,13 @@ namespace CG
 	 * 		struct FCapturedPixelsID                           ID                                                         (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		struct FFrameMetrics                               FrameMetrics                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UUserDefinedCaptureProtocol::OnPixelsReceived(const struct FCapturedPixels& Pixels, const struct FCapturedPixelsID& ID, const struct FFrameMetrics& FrameMetrics)
+	void UUserDefinedCaptureProtocol::OnPixelsReceived(
+const struct FCapturedPixels& Pixels
+, 
+const struct FCapturedPixelsID& ID
+, 
+const struct FFrameMetrics& FrameMetrics
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -716,6 +805,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -738,6 +829,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -759,6 +852,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -779,6 +874,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -803,6 +900,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -823,6 +922,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -847,6 +948,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -855,7 +958,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FFrameMetrics                               InFrameMetrics                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	class FString UUserDefinedCaptureProtocol::GenerateFilename(const struct FFrameMetrics& InFrameMetrics)
+	class FString UUserDefinedCaptureProtocol::GenerateFilename(
+const struct FFrameMetrics& InFrameMetrics
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -874,10 +979,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UUserDefinedCaptureProtocol.StaticClass
+	 * 		Name   -> PredefinedFunction UUserDefinedCaptureProtocol.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UUserDefinedCaptureProtocol::StaticClass()
@@ -887,6 +994,8 @@ namespace CG
 			ptr = UObject::FindClass("Class MovieSceneCapture.UserDefinedCaptureProtocol");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -899,7 +1008,15 @@ namespace CG
 	 * 		struct FFrameMetrics                               FrameMetrics                                               (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bCopyImageData                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UUserDefinedImageCaptureProtocol::WriteImageToDisk(const struct FCapturedPixels& PixelData, const struct FCapturedPixelsID& StreamID, const struct FFrameMetrics& FrameMetrics, bool bCopyImageData)
+	void UUserDefinedImageCaptureProtocol::WriteImageToDisk(
+const struct FCapturedPixels& PixelData
+, 
+const struct FCapturedPixelsID& StreamID
+, 
+const struct FFrameMetrics& FrameMetrics
+, 
+bool bCopyImageData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -921,6 +1038,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -945,6 +1064,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -954,7 +1075,11 @@ namespace CG
 	 * 		class UTexture*                                    Buffer                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FCapturedPixelsID                           StreamID                                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	class FString UUserDefinedImageCaptureProtocol::GenerateFilenameForBuffer(class UTexture* Buffer, const struct FCapturedPixelsID& StreamID)
+	class FString UUserDefinedImageCaptureProtocol::GenerateFilenameForBuffer(
+class UTexture* Buffer
+, 
+const struct FCapturedPixelsID& StreamID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -975,10 +1100,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UUserDefinedImageCaptureProtocol.StaticClass
+	 * 		Name   -> PredefinedFunction UUserDefinedImageCaptureProtocol.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UUserDefinedImageCaptureProtocol::StaticClass()
@@ -989,10 +1116,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVideoCaptureProtocol.StaticClass
+	 * 		Name   -> PredefinedFunction UVideoCaptureProtocol.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVideoCaptureProtocol::StaticClass()
@@ -1002,6 +1131,7 @@ namespace CG
 			ptr = UObject::FindClass("Class MovieSceneCapture.VideoCaptureProtocol");
 		return ptr;
 	}
+
 
 }
 

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19,9 +20,17 @@ namespace CG
 	 * 		class ABP_GameController_C*                        Controller                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class AActor*                                      HitActor                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		struct FVector                                     HitLocation                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		bool                                               ConsumeInput_                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               ConsumeInput                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_GravityTool_C::LMBDownWhileCarrying(class ABP_GameController_C* Controller, class AActor* HitActor, const struct FVector& HitLocation, bool* ConsumeInput_)
+	void ABP_GravityTool_C::LMBDownWhileCarrying(
+class ABP_GameController_C* Controller
+, 
+class AActor* HitActor
+, 
+const struct FVector& HitLocation
+, 
+bool* ConsumeInput
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -32,7 +41,7 @@ namespace CG
 			class ABP_GameController_C*                        Controller;
 			class AActor*                                      HitActor;
 			struct FVector                                     HitLocation;
-			bool                                               ConsumeInput_;
+			bool                                               ConsumeInput;
 		} params;
 		params.Controller = Controller;
 		params.HitActor = HitActor;
@@ -42,9 +51,11 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 		
-		if (ConsumeInput_ != nullptr)
-			*ConsumeInput_ = params.ConsumeInput_;
+		if (ConsumeInput != nullptr)
+			*ConsumeInput = params.ConsumeInput;
 	}
+
+
 
 	/**
 	 * Function:
@@ -67,6 +78,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -87,6 +100,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -109,6 +124,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -130,6 +147,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -138,7 +157,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_GameCharacter_C*                         Character                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GravityTool_C::OverrideDroppedItem(class ABP_GameCharacter_C* Character)
+	void ABP_GravityTool_C::OverrideDroppedItem(
+class ABP_GameCharacter_C* Character
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -154,6 +175,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -176,15 +199,19 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_GravityTool.BP_GravityTool_C.StopLiftingObject
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               Add_Velocity_                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               Add_Velocity                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_GravityTool_C::StopLiftingObject(bool Add_Velocity_)
+	void ABP_GravityTool_C::StopLiftingObject(
+bool Add_Velocity
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -192,14 +219,16 @@ namespace CG
 		
 		struct
 		{
-			bool                                               Add_Velocity_;
+			bool                                               Add_Velocity;
 		} params;
-		params.Add_Velocity_ = Add_Velocity_;
+		params.Add_Velocity = Add_Velocity;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -209,7 +238,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AActor*                                      Object                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GravityTool_C::StartLiftingObject(class AActor* Object)
+	void ABP_GravityTool_C::StartLiftingObject(
+class AActor* Object
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -226,15 +257,19 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_GravityTool.BP_GravityTool_C.TurnOnHeat
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               Heat_                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               Heat                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_GravityTool_C::TurnOnHeat(bool Heat_)
+	void ABP_GravityTool_C::TurnOnHeat(
+bool Heat
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -242,14 +277,16 @@ namespace CG
 		
 		struct
 		{
-			bool                                               Heat_;
+			bool                                               Heat;
 		} params;
-		params.Heat_ = Heat_;
+		params.Heat = Heat;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -261,7 +298,13 @@ namespace CG
 	 * 		class AActor*                                      Hit_Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		struct FVector                                     HitLocation                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GravityTool_C::RMBDownWhileCarrying(class ABP_GameController_C* Controller, class AActor* Hit_Actor, const struct FVector& HitLocation)
+	void ABP_GravityTool_C::RMBDownWhileCarrying(
+class ABP_GameController_C* Controller
+, 
+class AActor* Hit_Actor
+, 
+const struct FVector& HitLocation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -282,6 +325,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -290,7 +335,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AActor*                                      HitActor                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GravityTool_C::LMBDown(class AActor* HitActor)
+	void ABP_GravityTool_C::LMBDown(
+class AActor* HitActor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -307,6 +354,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -315,7 +364,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_GravityTool_C::ExecuteUbergraph_BP_GravityTool(int32_t EntryPoint)
+	void ABP_GravityTool_C::ExecuteUbergraph_BP_GravityTool(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -332,10 +383,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ABP_GravityTool_C.StaticClass
+	 * 		Name   -> PredefinedFunction ABP_GravityTool_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ABP_GravityTool_C::StaticClass()
@@ -345,6 +398,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass BP_GravityTool.BP_GravityTool_C");
 		return ptr;
 	}
+
 
 }
 

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18,7 +19,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FText                                        InText                                                     (BlueprintVisible, BlueprintReadOnly, Parm)
 	 */
-	void UUI_CoinAmount_C::SetText(const class FText& InText)
+	void UUI_CoinAmount_C::SetText(
+const class FText& InText
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -35,6 +38,31 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UI_CoinAmount.UI_CoinAmount_C.Construct
+	 * 		Flags  -> ()
+	 */
+	void UUI_CoinAmount_C::Construct()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function UI_CoinAmount.UI_CoinAmount_C.Construct");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -43,7 +71,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_CoinAmount_C::ExecuteUbergraph_UI_CoinAmount(int32_t EntryPoint)
+	void UUI_CoinAmount_C::ExecuteUbergraph_UI_CoinAmount(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -60,10 +90,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UUI_CoinAmount_C.StaticClass
+	 * 		Name   -> PredefinedFunction UUI_CoinAmount_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UUI_CoinAmount_C::StaticClass()
@@ -73,6 +105,7 @@ namespace CG
 			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_CoinAmount.UI_CoinAmount_C");
 		return ptr;
 	}
+
 
 }
 

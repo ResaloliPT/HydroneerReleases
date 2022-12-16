@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,17 +10,24 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function UI_Menu_SaveManager.UI_Menu_SaveManager_C.ShowCloudSaveConflictWarning?
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               Show_                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               Show                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 * 		class FText                                        CloudTime                                                  (BlueprintVisible, BlueprintReadOnly, Parm)
 	 * 		class FText                                        LocalTime                                                  (BlueprintVisible, BlueprintReadOnly, Parm)
 	 */
-	void UUI_Menu_SaveManager_C::ShowCloudSaveConflictWarning_(bool Show_, const class FText& CloudTime, const class FText& LocalTime)
+	void UUI_Menu_SaveManager_C::ShowCloudSaveConflictWarning(
+bool Show
+, 
+const class FText& CloudTime
+, 
+const class FText& LocalTime
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -28,11 +35,11 @@ namespace CG
 		
 		struct
 		{
-			bool                                               Show_;
+			bool                                               Show;
 			class FText                                        CloudTime;
 			class FText                                        LocalTime;
 		} params;
-		params.Show_ = Show_;
+		params.Show = Show;
 		params.CloudTime = CloudTime;
 		params.LocalTime = LocalTime;
 		
@@ -40,6 +47,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -62,6 +71,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -83,6 +94,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -91,7 +104,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Save                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	 */
-	void UUI_Menu_SaveManager_C::SaveSelected(const class FString& Save)
+	void UUI_Menu_SaveManager_C::SaveSelected(
+const class FString& Save
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -107,6 +122,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -129,6 +146,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -149,6 +168,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -171,6 +192,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -179,7 +202,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bIsChecked                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void UUI_Menu_SaveManager_C::BndEvt__UI_Menu_SaveManager_BackupVisibility_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
+	void UUI_Menu_SaveManager_C::BndEvt__UI_Menu_SaveManager_BackupVisibility_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature(
+bool bIsChecked
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -195,6 +220,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -217,6 +244,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -237,6 +266,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -259,6 +290,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -279,6 +312,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -301,6 +336,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -309,7 +346,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_Menu_SaveManager_C::ExecuteUbergraph_UI_Menu_SaveManager(int32_t EntryPoint)
+	void UUI_Menu_SaveManager_C::ExecuteUbergraph_UI_Menu_SaveManager(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -326,10 +365,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UUI_Menu_SaveManager_C.StaticClass
+	 * 		Name   -> PredefinedFunction UUI_Menu_SaveManager_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UUI_Menu_SaveManager_C::StaticClass()
@@ -339,6 +380,7 @@ namespace CG
 			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_Menu_SaveManager.UI_Menu_SaveManager_C");
 		return ptr;
 	}
+
 
 }
 

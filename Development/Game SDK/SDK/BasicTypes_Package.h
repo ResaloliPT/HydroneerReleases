@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #define UE4
@@ -23,10 +23,25 @@ namespace CG
 	// --------------------------------------------------
 	// # Global functions
 	// --------------------------------------------------
-	bool InitSdk(const std::wstring& moduleName, uintptr_t gObjectsOffset, uintptr_t gNamesOffset, uintptr_t gWorldOffset);
+
+	bool InitSdk(
+const std::wstring& moduleName
+, 
+uintptr_t gObjectsOffset
+, 
+uintptr_t gNamesOffset
+, 
+uintptr_t gWorldOffset
+);
+
 	bool InitSdk();
+
 	template<typename Fn>
-	Fn GetVFunction(const void* instance, size_t index)
+	Fn GetVFunction(
+const void* instance
+, 
+size_t index
+)
 	{
 		auto vtable = *static_cast<const void***>(const_cast<void*>(instance));
 		return reinterpret_cast<Fn>(const_cast<void (*)>(vtable[index]));

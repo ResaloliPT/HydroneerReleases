@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAssetActorPrimitiveComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UAssetActorPrimitiveComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAssetActorPrimitiveComponent::StaticClass()
@@ -23,6 +24,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Voxel.AssetActorPrimitiveComponent");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -47,6 +50,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -55,7 +60,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void AVoxelPlaceableItemActor::K2_AddItemToWorld(class AVoxelWorld* World)
+	void AVoxelPlaceableItemActor::K2_AddItemToWorld(
+class AVoxelWorld* World
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -72,10 +79,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AVoxelPlaceableItemActor.StaticClass
+	 * 		Name   -> PredefinedFunction AVoxelPlaceableItemActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AVoxelPlaceableItemActor::StaticClass()
@@ -86,10 +95,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AVoxelAssetActor.StaticClass
+	 * 		Name   -> PredefinedFunction AVoxelAssetActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AVoxelAssetActor::StaticClass()
@@ -99,6 +110,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Voxel.VoxelAssetActor");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -110,7 +123,13 @@ namespace CG
 	 * 		class UVoxelDataAsset*                             NewAsset                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelMaterial                              Material                                                   (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelAssetTools::SetDataAssetMaterial(class UVoxelDataAsset* Asset, class UVoxelDataAsset** NewAsset, const struct FVoxelMaterial& Material)
+	void UVoxelAssetTools::SetDataAssetMaterial(
+class UVoxelDataAsset* Asset
+, 
+class UVoxelDataAsset** NewAsset
+, 
+const struct FVoxelMaterial& Material
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -133,6 +152,8 @@ namespace CG
 			*NewAsset = params.NewAsset;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -142,7 +163,11 @@ namespace CG
 	 * 		class UVoxelDataAsset*                             Asset                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UVoxelDataAsset*                             InvertedAsset                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelAssetTools::InvertDataAsset(class UVoxelDataAsset* Asset, class UVoxelDataAsset** InvertedAsset)
+	void UVoxelAssetTools::InvertDataAsset(
+class UVoxelDataAsset* Asset
+, 
+class UVoxelDataAsset** InvertedAsset
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -163,6 +188,8 @@ namespace CG
 			*InvertedAsset = params.InvertedAsset;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -181,7 +208,29 @@ namespace CG
 	 * 		bool                                               bConvertToVoxelSpace                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelAssetTools::ImportModifierAssetAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, class UVoxelTransformableGeneratorInstanceWrapper* Asset, const struct FTransform& Transform, const struct FVoxelIntBox& Bounds, bool bModifyValues, bool bModifyMaterials, bool bLockEntireWorld, bool bConvertToVoxelSpace, bool bHideLatentWarnings)
+	void UVoxelAssetTools::ImportModifierAssetAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+class AVoxelWorld* World
+, 
+class UVoxelTransformableGeneratorInstanceWrapper* Asset
+, 
+const struct FTransform& Transform
+, 
+const struct FVoxelIntBox& Bounds
+, 
+bool bModifyValues
+, 
+bool bModifyMaterials
+, 
+bool bLockEntireWorld
+, 
+bool bConvertToVoxelSpace
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -218,6 +267,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -233,7 +284,23 @@ namespace CG
 	 * 		bool                                               bLockEntireWorld                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bConvertToVoxelSpace                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelAssetTools::ImportModifierAsset(class AVoxelWorld* World, class UVoxelTransformableGeneratorInstanceWrapper* Asset, const struct FTransform& Transform, const struct FVoxelIntBox& Bounds, bool bModifyValues, bool bModifyMaterials, bool bLockEntireWorld, bool bConvertToVoxelSpace)
+	void UVoxelAssetTools::ImportModifierAsset(
+class AVoxelWorld* World
+, 
+class UVoxelTransformableGeneratorInstanceWrapper* Asset
+, 
+const struct FTransform& Transform
+, 
+const struct FVoxelIntBox& Bounds
+, 
+bool bModifyValues
+, 
+bool bModifyMaterials
+, 
+bool bLockEntireWorld
+, 
+bool bConvertToVoxelSpace
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -264,6 +331,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -279,7 +348,23 @@ namespace CG
 	 * 		bool                                               bConvertToVoxelSpace                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelAssetTools::ImportDataAssetFastAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, class UVoxelDataAsset* Asset, const struct FVector& Position, EVoxelAssetMergeMode MergeMode, bool bConvertToVoxelSpace, bool bHideLatentWarnings)
+	void UVoxelAssetTools::ImportDataAssetFastAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+class AVoxelWorld* World
+, 
+class UVoxelDataAsset* Asset
+, 
+const struct FVector& Position
+, 
+EVoxelAssetMergeMode MergeMode
+, 
+bool bConvertToVoxelSpace
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -310,6 +395,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -322,7 +409,17 @@ namespace CG
 	 * 		EVoxelAssetMergeMode                               MergeMode                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bConvertToVoxelSpace                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelAssetTools::ImportDataAssetFast(class AVoxelWorld* World, class UVoxelDataAsset* Asset, const struct FVector& Position, EVoxelAssetMergeMode MergeMode, bool bConvertToVoxelSpace)
+	void UVoxelAssetTools::ImportDataAssetFast(
+class AVoxelWorld* World
+, 
+class UVoxelDataAsset* Asset
+, 
+const struct FVector& Position
+, 
+EVoxelAssetMergeMode MergeMode
+, 
+bool bConvertToVoxelSpace
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -347,6 +444,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -364,7 +463,27 @@ namespace CG
 	 * 		bool                                               bConvertToVoxelSpace                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelAssetTools::ImportAssetAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, class UVoxelTransformableGeneratorInstanceWrapper* Asset, const struct FTransform& Transform, const struct FVoxelIntBox& Bounds, bool bSubtractive, EVoxelAssetMergeMode MergeMode, bool bConvertToVoxelSpace, bool bHideLatentWarnings)
+	void UVoxelAssetTools::ImportAssetAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+class AVoxelWorld* World
+, 
+class UVoxelTransformableGeneratorInstanceWrapper* Asset
+, 
+const struct FTransform& Transform
+, 
+const struct FVoxelIntBox& Bounds
+, 
+bool bSubtractive
+, 
+EVoxelAssetMergeMode MergeMode
+, 
+bool bConvertToVoxelSpace
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -399,6 +518,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -417,7 +538,29 @@ namespace CG
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelAssetTools::ImportAssetAsReferenceAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, struct FVoxelAssetItemReference* Reference, class AVoxelWorld* World, class UVoxelTransformableGeneratorInstanceWrapper* Asset, const struct FTransform& Transform, const struct FVoxelIntBox& Bounds, int32_t Priority, bool bConvertToVoxelSpace, bool bUpdateRender, bool bHideLatentWarnings)
+	void UVoxelAssetTools::ImportAssetAsReferenceAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+struct FVoxelAssetItemReference* Reference
+, 
+class AVoxelWorld* World
+, 
+class UVoxelTransformableGeneratorInstanceWrapper* Asset
+, 
+const struct FTransform& Transform
+, 
+const struct FVoxelIntBox& Bounds
+, 
+int32_t Priority
+, 
+bool bConvertToVoxelSpace
+, 
+bool bUpdateRender
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -456,6 +599,8 @@ namespace CG
 			*Reference = params.Reference;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -471,7 +616,23 @@ namespace CG
 	 * 		bool                                               bConvertToVoxelSpace                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelAssetTools::ImportAssetAsReference(struct FVoxelAssetItemReference* Reference, class AVoxelWorld* World, class UVoxelTransformableGeneratorInstanceWrapper* Asset, const struct FTransform& Transform, const struct FVoxelIntBox& Bounds, int32_t Priority, bool bConvertToVoxelSpace, bool bUpdateRender)
+	void UVoxelAssetTools::ImportAssetAsReference(
+struct FVoxelAssetItemReference* Reference
+, 
+class AVoxelWorld* World
+, 
+class UVoxelTransformableGeneratorInstanceWrapper* Asset
+, 
+const struct FTransform& Transform
+, 
+const struct FVoxelIntBox& Bounds
+, 
+int32_t Priority
+, 
+bool bConvertToVoxelSpace
+, 
+bool bUpdateRender
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -504,6 +665,8 @@ namespace CG
 			*Reference = params.Reference;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -518,7 +681,21 @@ namespace CG
 	 * 		EVoxelAssetMergeMode                               MergeMode                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bConvertToVoxelSpace                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelAssetTools::ImportAsset(class AVoxelWorld* World, class UVoxelTransformableGeneratorInstanceWrapper* Asset, const struct FTransform& Transform, const struct FVoxelIntBox& Bounds, bool bSubtractive, EVoxelAssetMergeMode MergeMode, bool bConvertToVoxelSpace)
+	void UVoxelAssetTools::ImportAsset(
+class AVoxelWorld* World
+, 
+class UVoxelTransformableGeneratorInstanceWrapper* Asset
+, 
+const struct FTransform& Transform
+, 
+const struct FVoxelIntBox& Bounds
+, 
+bool bSubtractive
+, 
+EVoxelAssetMergeMode MergeMode
+, 
+bool bConvertToVoxelSpace
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -547,6 +724,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -557,7 +736,13 @@ namespace CG
 	 * 		struct FVoxelIntBox                                Bounds                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bCopyMaterials                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UVoxelDataAsset* UVoxelAssetTools::CreateDataAssetFromWorldSection(class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bCopyMaterials)
+	class UVoxelDataAsset* UVoxelAssetTools::CreateDataAssetFromWorldSection(
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+, 
+bool bCopyMaterials
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -580,6 +765,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -593,7 +780,19 @@ namespace CG
 	 * 		struct FVoxelIntBox                                Bounds                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelAssetTools::AddDisableEditsBoxAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, struct FVoxelDisableEditsBoxItemReference* Reference, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bHideLatentWarnings)
+	void UVoxelAssetTools::AddDisableEditsBoxAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+struct FVoxelDisableEditsBoxItemReference* Reference
+, 
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -622,6 +821,8 @@ namespace CG
 			*Reference = params.Reference;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -632,7 +833,13 @@ namespace CG
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelIntBox                                Bounds                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelAssetTools::AddDisableEditsBox(struct FVoxelDisableEditsBoxItemReference* Reference, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds)
+	void UVoxelAssetTools::AddDisableEditsBox(
+struct FVoxelDisableEditsBoxItemReference* Reference
+, 
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -655,10 +862,12 @@ namespace CG
 			*Reference = params.Reference;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelAssetTools.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelAssetTools.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelAssetTools::StaticClass()
@@ -668,6 +877,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Voxel.VoxelAssetTools");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -692,6 +903,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -700,7 +913,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        Name                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UVoxelMaterialCollectionBase::GetMaterialIndex(const class FName& Name)
+	int32_t UVoxelMaterialCollectionBase::GetMaterialIndex(
+const class FName& Name
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -719,6 +934,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -727,7 +944,9 @@ namespace CG
 	 * Parameters:
 	 * 		unsigned char                                      Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UMaterialInterface* UVoxelMaterialCollectionBase::GetIndexMaterial(unsigned char Index)
+	class UMaterialInterface* UVoxelMaterialCollectionBase::GetIndexMaterial(
+unsigned char Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -746,10 +965,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelMaterialCollectionBase.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelMaterialCollectionBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelMaterialCollectionBase::StaticClass()
@@ -760,10 +981,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelBasicMaterialCollection.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelBasicMaterialCollection.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelBasicMaterialCollection::StaticClass()
@@ -774,6 +997,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -783,7 +1008,11 @@ namespace CG
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FIntVector                                  Position                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBlueprintLibrary::UpdatePosition(class AVoxelWorld* World, const struct FIntVector& Position)
+	void UVoxelBlueprintLibrary::UpdatePosition(
+class AVoxelWorld* World
+, 
+const struct FIntVector& Position
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -802,6 +1031,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -811,7 +1042,11 @@ namespace CG
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelIntBox                                Bounds                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBlueprintLibrary::UpdateBounds(class AVoxelWorld* World, const struct FVoxelIntBox& Bounds)
+	void UVoxelBlueprintLibrary::UpdateBounds(
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -830,6 +1065,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -838,7 +1075,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBlueprintLibrary::UpdateAll(class AVoxelWorld* World)
+	void UVoxelBlueprintLibrary::UpdateAll(
+class AVoxelWorld* World
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -855,6 +1094,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -864,7 +1105,11 @@ namespace CG
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FVoxelIntBox>                        OutUpdatedBounds                                           (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	bool UVoxelBlueprintLibrary::Undo(class AVoxelWorld* World, TArray<struct FVoxelIntBox>* OutUpdatedBounds)
+	bool UVoxelBlueprintLibrary::Undo(
+class AVoxelWorld* World
+, 
+TArray<struct FVoxelIntBox>* OutUpdatedBounds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -887,6 +1132,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -896,7 +1143,11 @@ namespace CG
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelIntBox                                Box                                                        (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FBox UVoxelBlueprintLibrary::TransformVoxelBoxToGlobalBox(class AVoxelWorld* World, const struct FVoxelIntBox& Box)
+	struct FBox UVoxelBlueprintLibrary::TransformVoxelBoxToGlobalBox(
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Box
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -917,6 +1168,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -926,7 +1179,11 @@ namespace CG
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FBox                                        Box                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelIntBox UVoxelBlueprintLibrary::TransformGlobalBoxToVoxelBox(class AVoxelWorld* World, const struct FBox& Box)
+	struct FVoxelIntBox UVoxelBlueprintLibrary::TransformGlobalBoxToVoxelBox(
+class AVoxelWorld* World
+, 
+const struct FBox& Box
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -947,6 +1204,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -956,7 +1215,11 @@ namespace CG
 	 * 		struct FIntVector                                  Left                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FIntVector                                  Right                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FIntVector UVoxelBlueprintLibrary::Substract_IntVectorIntVector(const struct FIntVector& Left, const struct FIntVector& Right)
+	struct FIntVector UVoxelBlueprintLibrary::Substract_IntVectorIntVector(
+const struct FIntVector& Left
+, 
+const struct FIntVector& Right
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -977,6 +1240,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -987,7 +1252,13 @@ namespace CG
 	 * 		struct FVoxelToolRenderingRef                      Ref                                                        (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		class UMaterialInterface*                          Material                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBlueprintLibrary::SetToolRenderingMaterial(class AVoxelWorld* World, const struct FVoxelToolRenderingRef& Ref, class UMaterialInterface* Material)
+	void UVoxelBlueprintLibrary::SetToolRenderingMaterial(
+class AVoxelWorld* World
+, 
+const struct FVoxelToolRenderingRef& Ref
+, 
+class UMaterialInterface* Material
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1008,6 +1279,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1018,7 +1291,13 @@ namespace CG
 	 * 		struct FVoxelToolRenderingRef                      Ref                                                        (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bEnabled                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBlueprintLibrary::SetToolRenderingEnabled(class AVoxelWorld* World, const struct FVoxelToolRenderingRef& Ref, bool bEnabled)
+	void UVoxelBlueprintLibrary::SetToolRenderingEnabled(
+class AVoxelWorld* World
+, 
+const struct FVoxelToolRenderingRef& Ref
+, 
+bool bEnabled
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1039,6 +1318,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1049,7 +1330,13 @@ namespace CG
 	 * 		struct FVoxelToolRenderingRef                      Ref                                                        (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FBox                                        Bounds                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBlueprintLibrary::SetToolRenderingBounds(class AVoxelWorld* World, const struct FVoxelToolRenderingRef& Ref, const struct FBox& Bounds)
+	void UVoxelBlueprintLibrary::SetToolRenderingBounds(
+class AVoxelWorld* World
+, 
+const struct FVoxelToolRenderingRef& Ref
+, 
+const struct FBox& Bounds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1070,6 +1357,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1078,7 +1367,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Number                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBlueprintLibrary::SetNumberOfVoxelThreads(int32_t Number)
+	void UVoxelBlueprintLibrary::SetNumberOfVoxelThreads(
+int32_t Number
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1095,6 +1386,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1104,7 +1397,11 @@ namespace CG
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector                                     Scale                                                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBlueprintLibrary::ScaleData(class AVoxelWorld* World, const struct FVector& Scale)
+	void UVoxelBlueprintLibrary::ScaleData(
+class AVoxelWorld* World
+, 
+const struct FVector& Scale
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1123,6 +1420,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1131,7 +1430,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBlueprintLibrary::SaveFrame(class AVoxelWorld* World)
+	void UVoxelBlueprintLibrary::SaveFrame(
+class AVoxelWorld* World
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1148,6 +1449,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1157,7 +1460,11 @@ namespace CG
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelIntBox                                Bounds                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBlueprintLibrary::RegenerateSpawners(class AVoxelWorld* World, const struct FVoxelIntBox& Bounds)
+	void UVoxelBlueprintLibrary::RegenerateSpawners(
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1176,6 +1483,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1185,7 +1494,11 @@ namespace CG
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FVoxelIntBox>                        OutUpdatedBounds                                           (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	bool UVoxelBlueprintLibrary::Redo(class AVoxelWorld* World, TArray<struct FVoxelIntBox>* OutUpdatedBounds)
+	bool UVoxelBlueprintLibrary::Redo(
+class AVoxelWorld* World
+, 
+TArray<struct FVoxelIntBox>* OutUpdatedBounds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1208,6 +1521,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1216,7 +1531,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBlueprintLibrary::RecreateSpawners(class AVoxelWorld* World)
+	void UVoxelBlueprintLibrary::RecreateSpawners(
+class AVoxelWorld* World
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1233,6 +1550,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1241,7 +1560,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBlueprintLibrary::RecreateRender(class AVoxelWorld* World)
+	void UVoxelBlueprintLibrary::RecreateRender(
+class AVoxelWorld* World
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1258,6 +1579,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1267,7 +1590,11 @@ namespace CG
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bSaveData                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBlueprintLibrary::Recreate(class AVoxelWorld* World, bool bSaveData)
+	void UVoxelBlueprintLibrary::Recreate(
+class AVoxelWorld* World
+, 
+bool bSaveData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1286,6 +1613,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1294,7 +1623,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBlueprintLibrary::RecomputeComponentPositions(class AVoxelWorld* World)
+	void UVoxelBlueprintLibrary::RecomputeComponentPositions(
+class AVoxelWorld* World
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1311,6 +1642,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1320,7 +1653,11 @@ namespace CG
 	 * 		class FString                                      Message                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UObject*                                     Object                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBlueprintLibrary::RaiseWarning(const class FString& Message, class UObject* Object)
+	void UVoxelBlueprintLibrary::RaiseWarning(
+const class FString& Message
+, 
+class UObject* Object
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1339,6 +1676,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1348,7 +1687,11 @@ namespace CG
 	 * 		class FString                                      Message                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UObject*                                     Object                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBlueprintLibrary::RaiseInfo(const class FString& Message, class UObject* Object)
+	void UVoxelBlueprintLibrary::RaiseInfo(
+const class FString& Message
+, 
+class UObject* Object
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1367,6 +1710,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1376,7 +1721,11 @@ namespace CG
 	 * 		class FString                                      Message                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UObject*                                     Object                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBlueprintLibrary::RaiseError(const class FString& Message, class UObject* Object)
+	void UVoxelBlueprintLibrary::RaiseError(
+const class FString& Message
+, 
+class UObject* Object
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1394,6 +1743,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1418,6 +1769,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1427,7 +1780,11 @@ namespace CG
 	 * 		struct FIntVector                                  Left                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FIntVector                                  Right                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FIntVector UVoxelBlueprintLibrary::Multiply_IntVectorIntVector(const struct FIntVector& Left, const struct FIntVector& Right)
+	struct FIntVector UVoxelBlueprintLibrary::Multiply_IntVectorIntVector(
+const struct FIntVector& Left
+, 
+const struct FIntVector& Right
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1448,6 +1805,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1457,7 +1816,11 @@ namespace CG
 	 * 		struct FIntVector                                  Left                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Right                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FIntVector UVoxelBlueprintLibrary::Multiply_IntVectorInt(const struct FIntVector& Left, int32_t Right)
+	struct FIntVector UVoxelBlueprintLibrary::Multiply_IntVectorInt(
+const struct FIntVector& Left
+, 
+int32_t Right
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1478,6 +1841,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1487,7 +1852,11 @@ namespace CG
 	 * 		int32_t                                            Left                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FIntVector                                  Right                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FIntVector UVoxelBlueprintLibrary::Multiply_IntIntVector(int32_t Left, const struct FIntVector& Right)
+	struct FIntVector UVoxelBlueprintLibrary::Multiply_IntIntVector(
+int32_t Left
+, 
+const struct FIntVector& Right
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1508,6 +1877,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1517,7 +1888,11 @@ namespace CG
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelIntBox                                Bounds                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBlueprintLibrary::MarkSpawnersDirty(class AVoxelWorld* World, const struct FVoxelIntBox& Bounds)
+	void UVoxelBlueprintLibrary::MarkSpawnersDirty(
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1536,6 +1911,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1544,7 +1921,9 @@ namespace CG
 	 * Parameters:
 	 * 		unsigned char                                      Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelMaterial UVoxelBlueprintLibrary::MakeSingleIndexMaterial(unsigned char Index)
+	struct FVoxelMaterial UVoxelBlueprintLibrary::MakeSingleIndexMaterial(
+unsigned char Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1562,6 +1941,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1582,7 +1963,31 @@ namespace CG
 	 * 		unsigned char                                      U3                                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		unsigned char                                      V3                                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelMaterial UVoxelBlueprintLibrary::MakeRawMaterial(unsigned char R, unsigned char G, unsigned char B, unsigned char A, unsigned char U0, unsigned char V0, unsigned char U1, unsigned char v1, unsigned char U2, unsigned char v2, unsigned char U3, unsigned char V3)
+	struct FVoxelMaterial UVoxelBlueprintLibrary::MakeRawMaterial(
+unsigned char R
+, 
+unsigned char G
+, 
+unsigned char B
+, 
+unsigned char A
+, 
+unsigned char U0
+, 
+unsigned char V0
+, 
+unsigned char U1
+, 
+unsigned char v1
+, 
+unsigned char U2
+, 
+unsigned char v2
+, 
+unsigned char U3
+, 
+unsigned char V3
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1623,6 +2028,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1642,7 +2049,31 @@ namespace CG
 	 * 		bool                                               U3                                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               V3                                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UVoxelBlueprintLibrary::MakeMaterialMask(bool R, bool G, bool B, bool A, bool U0, bool V0, bool U1, bool v1, bool U2, bool v2, bool U3, bool V3)
+	int32_t UVoxelBlueprintLibrary::MakeMaterialMask(
+bool R
+, 
+bool G
+, 
+bool B
+, 
+bool A
+, 
+bool U0
+, 
+bool V0
+, 
+bool U1
+, 
+bool v1
+, 
+bool U2
+, 
+bool v2
+, 
+bool U3
+, 
+bool V3
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1683,6 +2114,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1693,7 +2126,13 @@ namespace CG
 	 * 		struct FVector                                     GlobalPosition                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Radius                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelIntBox UVoxelBlueprintLibrary::MakeIntBoxFromGlobalPositionAndRadius(class AVoxelWorld* World, const struct FVector& GlobalPosition, float Radius)
+	struct FVoxelIntBox UVoxelBlueprintLibrary::MakeIntBoxFromGlobalPositionAndRadius(
+class AVoxelWorld* World
+, 
+const struct FVector& GlobalPosition
+, 
+float Radius
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1716,6 +2155,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1724,7 +2165,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FLinearColor                                Color                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelMaterial UVoxelBlueprintLibrary::MakeColorMaterial(const struct FLinearColor& Color)
+	struct FVoxelMaterial UVoxelBlueprintLibrary::MakeColorMaterial(
+const struct FLinearColor& Color
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1742,6 +2185,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1764,6 +2209,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1772,7 +2219,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UVoxelBlueprintLibrary::IsVoxelWorldMeshLoading(class AVoxelWorld* World)
+	bool UVoxelBlueprintLibrary::IsVoxelWorldMeshLoading(
+class AVoxelWorld* World
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1791,6 +2240,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1799,7 +2250,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UVoxelBlueprintLibrary::IsVoxelWorldFoliageLoading(class AVoxelWorld* World)
+	bool UVoxelBlueprintLibrary::IsVoxelWorldFoliageLoading(
+class AVoxelWorld* World
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1817,6 +2270,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1841,6 +2296,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1849,7 +2306,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelFloatTexture                          Texture                                                    (Parm, NativeAccessSpecifierPublic)
 	 */
-	bool UVoxelBlueprintLibrary::IsVoxelFloatTextureValid(const struct FVoxelFloatTexture& Texture)
+	bool UVoxelBlueprintLibrary::IsVoxelFloatTextureValid(
+const struct FVoxelFloatTexture& Texture
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1868,6 +2327,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1876,7 +2337,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelFloatTexture                          Texture                                                    (Parm, NativeAccessSpecifierPublic)
 	 */
-	bool UVoxelBlueprintLibrary::IsVoxelColorTextureValid(const struct FVoxelFloatTexture& Texture)
+	bool UVoxelBlueprintLibrary::IsVoxelColorTextureValid(
+const struct FVoxelFloatTexture& Texture
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1895,6 +2358,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1904,7 +2369,11 @@ namespace CG
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelToolRenderingRef                      Ref                                                        (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	bool UVoxelBlueprintLibrary::IsValidRef(class AVoxelWorld* World, const struct FVoxelToolRenderingRef& Ref)
+	bool UVoxelBlueprintLibrary::IsValidRef(
+class AVoxelWorld* World
+, 
+const struct FVoxelToolRenderingRef& Ref
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1925,6 +2394,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1934,7 +2405,11 @@ namespace CG
 	 * 		struct FVoxelInt32Interval                         Interval                                                   (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Value                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UVoxelBlueprintLibrary::IntervalContains_Int32(const struct FVoxelInt32Interval& Interval, int32_t Value)
+	bool UVoxelBlueprintLibrary::IntervalContains_Int32(
+const struct FVoxelInt32Interval& Interval
+, 
+int32_t Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1955,6 +2430,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1964,7 +2441,11 @@ namespace CG
 	 * 		struct FVoxelFloatInterval                         Interval                                                   (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Value                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UVoxelBlueprintLibrary::IntervalContains_Float(const struct FVoxelFloatInterval& Interval, float Value)
+	bool UVoxelBlueprintLibrary::IntervalContains_Float(
+const struct FVoxelFloatInterval& Interval
+, 
+float Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1985,6 +2466,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1993,7 +2476,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UVoxelBlueprintLibrary::HasValueData(class AVoxelWorld* World)
+	bool UVoxelBlueprintLibrary::HasValueData(
+class AVoxelWorld* World
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2012,6 +2497,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2020,7 +2507,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UVoxelBlueprintLibrary::HasMaterialData(class AVoxelWorld* World)
+	bool UVoxelBlueprintLibrary::HasMaterialData(
+class AVoxelWorld* World
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2039,6 +2528,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2048,7 +2539,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FBox                                        Box                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	class AVoxelWorld* UVoxelBlueprintLibrary::GetVoxelWorldOverlappingBox(class UObject* WorldContextObject, const struct FBox& Box)
+	class AVoxelWorld* UVoxelBlueprintLibrary::GetVoxelWorldOverlappingBox(
+class UObject* WorldContextObject
+, 
+const struct FBox& Box
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2069,6 +2564,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2077,7 +2574,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AActor*                                      Actor                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class AVoxelWorld* UVoxelBlueprintLibrary::GetVoxelWorldOverlappingActor(class AActor* Actor)
+	class AVoxelWorld* UVoxelBlueprintLibrary::GetVoxelWorldOverlappingActor(
+class AActor* Actor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2096,6 +2595,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2105,7 +2606,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector                                     Position                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class AVoxelWorld* UVoxelBlueprintLibrary::GetVoxelWorldContainingPosition(class UObject* WorldContextObject, const struct FVector& Position)
+	class AVoxelWorld* UVoxelBlueprintLibrary::GetVoxelWorldContainingPosition(
+class UObject* WorldContextObject
+, 
+const struct FVector& Position
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2126,6 +2631,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2134,7 +2641,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelFloatTexture                          Texture                                                    (Parm, NativeAccessSpecifierPublic)
 	 */
-	struct FIntPoint UVoxelBlueprintLibrary::GetVoxelFloatTextureSize(const struct FVoxelFloatTexture& Texture)
+	struct FIntPoint UVoxelBlueprintLibrary::GetVoxelFloatTextureSize(
+const struct FVoxelFloatTexture& Texture
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2153,6 +2662,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2161,7 +2672,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelColorTexture                          Texture                                                    (Parm, NativeAccessSpecifierPublic)
 	 */
-	struct FIntPoint UVoxelBlueprintLibrary::GetVoxelColorTextureSize(const struct FVoxelColorTexture& Texture)
+	struct FIntPoint UVoxelBlueprintLibrary::GetVoxelColorTextureSize(
+const struct FVoxelColorTexture& Texture
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2180,6 +2693,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2189,7 +2704,11 @@ namespace CG
 	 * 		struct FVoxelMaterial                              Material                                                   (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Channel                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVector2D UVoxelBlueprintLibrary::GetUV(const struct FVoxelMaterial& Material, int32_t Channel)
+	struct FVector2D UVoxelBlueprintLibrary::GetUV(
+const struct FVoxelMaterial& Material
+, 
+int32_t Channel
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2210,6 +2729,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2218,7 +2739,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UVoxelBlueprintLibrary::GetTaskCount(class AVoxelWorld* World)
+	int32_t UVoxelBlueprintLibrary::GetTaskCount(
+class AVoxelWorld* World
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2237,6 +2760,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2245,7 +2770,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelMaterial                              Material                                                   (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	unsigned char UVoxelBlueprintLibrary::GetSingleIndex(const struct FVoxelMaterial& Material)
+	unsigned char UVoxelBlueprintLibrary::GetSingleIndex(
+const struct FVoxelMaterial& Material
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2264,6 +2791,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2274,7 +2803,13 @@ namespace CG
 	 * 		struct FVoxelIntBox                                DataBounds                                                 (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            LOD                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelIntBox UVoxelBlueprintLibrary::GetRenderBoundsOverlappingDataBounds(class AVoxelWorld* World, const struct FVoxelIntBox& DataBounds, int32_t LOD)
+	struct FVoxelIntBox UVoxelBlueprintLibrary::GetRenderBoundsOverlappingDataBounds(
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& DataBounds
+, 
+int32_t LOD
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2297,6 +2832,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2317,7 +2854,33 @@ namespace CG
 	 * 		unsigned char                                      U3                                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		unsigned char                                      V3                                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBlueprintLibrary::GetRawMaterial(const struct FVoxelMaterial& Material, unsigned char* R, unsigned char* G, unsigned char* B, unsigned char* A, unsigned char* U0, unsigned char* V0, unsigned char* U1, unsigned char* v1, unsigned char* U2, unsigned char* v2, unsigned char* U3, unsigned char* V3)
+	void UVoxelBlueprintLibrary::GetRawMaterial(
+const struct FVoxelMaterial& Material
+, 
+unsigned char* R
+, 
+unsigned char* G
+, 
+unsigned char* B
+, 
+unsigned char* A
+, 
+unsigned char* U0
+, 
+unsigned char* V0
+, 
+unsigned char* U1
+, 
+unsigned char* v1
+, 
+unsigned char* U2
+, 
+unsigned char* v2
+, 
+unsigned char* U3
+, 
+unsigned char* V3
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2371,6 +2934,8 @@ namespace CG
 			*V3 = params.V3;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2379,7 +2944,9 @@ namespace CG
 	 * Parameters:
 	 * 		EVoxelMemoryUsageType                              Type                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float UVoxelBlueprintLibrary::GetPeakMemoryUsageInMB(EVoxelMemoryUsageType Type)
+	float UVoxelBlueprintLibrary::GetPeakMemoryUsageInMB(
+EVoxelMemoryUsageType Type
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2397,6 +2964,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2421,6 +2990,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2430,7 +3001,11 @@ namespace CG
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FIntVector                                  Position                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVector UVoxelBlueprintLibrary::GetNormal(class AVoxelWorld* World, const struct FIntVector& Position)
+	struct FVector UVoxelBlueprintLibrary::GetNormal(
+class AVoxelWorld* World
+, 
+const struct FIntVector& Position
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2451,6 +3026,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2469,7 +3046,29 @@ namespace CG
 	 * 		unsigned char                                      Index3                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Wetness                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBlueprintLibrary::GetMultiIndex(const struct FVoxelMaterial& Material, bool bSortByStrength, float* Strength0, unsigned char* Index0, float* Strength1, unsigned char* Index1, float* Strength2, unsigned char* Index2, float* Strength3, unsigned char* Index3, float* Wetness)
+	void UVoxelBlueprintLibrary::GetMultiIndex(
+const struct FVoxelMaterial& Material
+, 
+bool bSortByStrength
+, 
+float* Strength0
+, 
+unsigned char* Index0
+, 
+float* Strength1
+, 
+unsigned char* Index1
+, 
+float* Strength2
+, 
+unsigned char* Index2
+, 
+float* Strength3
+, 
+unsigned char* Index3
+, 
+float* Wetness
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2516,6 +3115,8 @@ namespace CG
 			*Wetness = params.Wetness;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2524,7 +3125,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FIntVector                                  Vector                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UVoxelBlueprintLibrary::GetMin_Intvector(const struct FIntVector& Vector)
+	int32_t UVoxelBlueprintLibrary::GetMin_Intvector(
+const struct FIntVector& Vector
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2543,6 +3146,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2551,7 +3156,9 @@ namespace CG
 	 * Parameters:
 	 * 		EVoxelMemoryUsageType                              Type                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float UVoxelBlueprintLibrary::GetMemoryUsageInMB(EVoxelMemoryUsageType Type)
+	float UVoxelBlueprintLibrary::GetMemoryUsageInMB(
+EVoxelMemoryUsageType Type
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2570,6 +3177,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2578,7 +3187,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FIntVector                                  Vector                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UVoxelBlueprintLibrary::GetMax_Intvector(const struct FIntVector& Vector)
+	int32_t UVoxelBlueprintLibrary::GetMax_Intvector(
+const struct FIntVector& Vector
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2597,6 +3208,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2610,7 +3223,19 @@ namespace CG
 	 * 		float                                              Z                                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            DefaultValue                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UVoxelBlueprintLibrary::GetIntOutput(class AVoxelWorld* World, const class FName& Name, float X, float Y, float Z, int32_t DefaultValue)
+	int32_t UVoxelBlueprintLibrary::GetIntOutput(
+class AVoxelWorld* World
+, 
+const class FName& Name
+, 
+float X
+, 
+float Y
+, 
+float Z
+, 
+int32_t DefaultValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2639,6 +3264,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2647,7 +3274,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UVoxelBlueprintLibrary::GetHistoryPosition(class AVoxelWorld* World)
+	int32_t UVoxelBlueprintLibrary::GetHistoryPosition(
+class AVoxelWorld* World
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2666,6 +3295,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2679,7 +3310,19 @@ namespace CG
 	 * 		float                                              Z                                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              DefaultValue                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float UVoxelBlueprintLibrary::GetFloatOutput(class AVoxelWorld* World, const class FName& Name, float X, float Y, float Z, float DefaultValue)
+	float UVoxelBlueprintLibrary::GetFloatOutput(
+class AVoxelWorld* World
+, 
+const class FName& Name
+, 
+float X
+, 
+float Y
+, 
+float Z
+, 
+float DefaultValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2708,6 +3351,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2716,7 +3361,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float UVoxelBlueprintLibrary::GetEstimatedCollisionsMemoryUsageInMB(class AVoxelWorld* World)
+	float UVoxelBlueprintLibrary::GetEstimatedCollisionsMemoryUsageInMB(
+class AVoxelWorld* World
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2735,6 +3382,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2743,7 +3392,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelMaterial                              Material                                                   (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	struct FLinearColor UVoxelBlueprintLibrary::GetColor(const struct FVoxelMaterial& Material)
+	struct FLinearColor UVoxelBlueprintLibrary::GetColor(
+const struct FVoxelMaterial& Material
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2762,6 +3413,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2770,7 +3423,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelIntBox UVoxelBlueprintLibrary::GetBounds(class AVoxelWorld* World)
+	struct FVoxelIntBox UVoxelBlueprintLibrary::GetBounds(
+class AVoxelWorld* World
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2789,6 +3444,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2798,7 +3455,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FBox                                        Box                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	TArray<class AVoxelWorld*> UVoxelBlueprintLibrary::GetAllVoxelWorldsOverlappingBox(class UObject* WorldContextObject, const struct FBox& Box)
+	TArray<class AVoxelWorld*> UVoxelBlueprintLibrary::GetAllVoxelWorldsOverlappingBox(
+class UObject* WorldContextObject
+, 
+const struct FBox& Box
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2819,6 +3480,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2827,7 +3490,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AActor*                                      Actor                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<class AVoxelWorld*> UVoxelBlueprintLibrary::GetAllVoxelWorldsOverlappingActor(class AActor* Actor)
+	TArray<class AVoxelWorld*> UVoxelBlueprintLibrary::GetAllVoxelWorldsOverlappingActor(
+class AActor* Actor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2846,6 +3511,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2855,7 +3522,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector                                     Position                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<class AVoxelWorld*> UVoxelBlueprintLibrary::GetAllVoxelWorldsContainingPosition(class UObject* WorldContextObject, const struct FVector& Position)
+	TArray<class AVoxelWorld*> UVoxelBlueprintLibrary::GetAllVoxelWorldsContainingPosition(
+class UObject* WorldContextObject
+, 
+const struct FVector& Position
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2876,6 +3547,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2885,7 +3558,11 @@ namespace CG
 	 * 		struct FIntVector                                  Left                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Right                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FIntVector UVoxelBlueprintLibrary::Divide_IntVectorInt(const struct FIntVector& Left, int32_t Right)
+	struct FIntVector UVoxelBlueprintLibrary::Divide_IntVectorInt(
+const struct FIntVector& Left
+, 
+int32_t Right
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2906,6 +3583,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2915,7 +3594,11 @@ namespace CG
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelToolRenderingRef                      Ref                                                        (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBlueprintLibrary::DestroyToolRendering(class AVoxelWorld* World, const struct FVoxelToolRenderingRef& Ref)
+	void UVoxelBlueprintLibrary::DestroyToolRendering(
+class AVoxelWorld* World
+, 
+const struct FVoxelToolRenderingRef& Ref
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2934,6 +3617,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2943,7 +3628,11 @@ namespace CG
 	 * 		class UTexture2D*                                  Texture                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EVoxelRGBA                                         Channel                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelFloatTexture UVoxelBlueprintLibrary::CreateVoxelFloatTextureFromTextureChannel(class UTexture2D* Texture, EVoxelRGBA Channel)
+	struct FVoxelFloatTexture UVoxelBlueprintLibrary::CreateVoxelFloatTextureFromTextureChannel(
+class UTexture2D* Texture
+, 
+EVoxelRGBA Channel
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2964,6 +3653,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2974,7 +3665,13 @@ namespace CG
 	 * 		EVoxelRGBA                                         Channel                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bNormalize                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelColorTexture UVoxelBlueprintLibrary::CreateVoxelColorTextureFromVoxelFloatTexture(const struct FVoxelFloatTexture& Texture, EVoxelRGBA Channel, bool bNormalize)
+	struct FVoxelColorTexture UVoxelBlueprintLibrary::CreateVoxelColorTextureFromVoxelFloatTexture(
+const struct FVoxelFloatTexture& Texture
+, 
+EVoxelRGBA Channel
+, 
+bool bNormalize
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2997,6 +3694,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3005,7 +3704,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelPaintMaterialUV                       UV                                                         (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelPaintMaterial UVoxelBlueprintLibrary::CreateUVPaintMaterial(const struct FVoxelPaintMaterialUV& UV)
+	struct FVoxelPaintMaterial UVoxelBlueprintLibrary::CreateUVPaintMaterial(
+const struct FVoxelPaintMaterialUV& UV
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3024,6 +3725,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3032,7 +3735,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelToolRenderingRef UVoxelBlueprintLibrary::CreateToolRendering(class AVoxelWorld* World)
+	struct FVoxelToolRenderingRef UVoxelBlueprintLibrary::CreateToolRendering(
+class AVoxelWorld* World
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3051,6 +3756,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3059,7 +3766,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelFloatTexture                          VoxelTexture                                               (Parm, NativeAccessSpecifierPublic)
 	 */
-	class UTexture2D* UVoxelBlueprintLibrary::CreateTextureFromVoxelFloatTexture(const struct FVoxelFloatTexture& VoxelTexture)
+	class UTexture2D* UVoxelBlueprintLibrary::CreateTextureFromVoxelFloatTexture(
+const struct FVoxelFloatTexture& VoxelTexture
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3078,6 +3787,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3086,7 +3797,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelColorTexture                          VoxelTexture                                               (Parm, NativeAccessSpecifierPublic)
 	 */
-	class UTexture2D* UVoxelBlueprintLibrary::CreateTextureFromVoxelColorTexture(const struct FVoxelColorTexture& VoxelTexture)
+	class UTexture2D* UVoxelBlueprintLibrary::CreateTextureFromVoxelColorTexture(
+const struct FVoxelColorTexture& VoxelTexture
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3105,6 +3818,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3113,7 +3828,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelPaintMaterialSingleIndex              SingleIndex                                                (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelPaintMaterial UVoxelBlueprintLibrary::CreateSingleIndexPaintMaterial(const struct FVoxelPaintMaterialSingleIndex& SingleIndex)
+	struct FVoxelPaintMaterial UVoxelBlueprintLibrary::CreateSingleIndexPaintMaterial(
+const struct FVoxelPaintMaterialSingleIndex& SingleIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3132,6 +3849,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3141,7 +3860,11 @@ namespace CG
 	 * 		struct FVoxelFloatTexture                          VoxelTexture                                               (Parm, NativeAccessSpecifierPublic)
 	 * 		class UTexture2D*                                  Texture                                                    (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UTexture2D* UVoxelBlueprintLibrary::CreateOrUpdateTextureFromVoxelFloatTexture(const struct FVoxelFloatTexture& VoxelTexture, class UTexture2D** Texture)
+	class UTexture2D* UVoxelBlueprintLibrary::CreateOrUpdateTextureFromVoxelFloatTexture(
+const struct FVoxelFloatTexture& VoxelTexture
+, 
+class UTexture2D** Texture
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3164,6 +3887,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3173,7 +3898,11 @@ namespace CG
 	 * 		struct FVoxelColorTexture                          VoxelTexture                                               (Parm, NativeAccessSpecifierPublic)
 	 * 		class UTexture2D*                                  Texture                                                    (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UTexture2D* UVoxelBlueprintLibrary::CreateOrUpdateTextureFromVoxelColorTexture(const struct FVoxelColorTexture& VoxelTexture, class UTexture2D** Texture)
+	class UTexture2D* UVoxelBlueprintLibrary::CreateOrUpdateTextureFromVoxelColorTexture(
+const struct FVoxelColorTexture& VoxelTexture
+, 
+class UTexture2D** Texture
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3196,6 +3925,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3204,7 +3935,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelPaintMaterialMultiIndexWetness        MultiIndexWetness                                          (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelPaintMaterial UVoxelBlueprintLibrary::CreateMultiIndexWetnessPaintMaterial(const struct FVoxelPaintMaterialMultiIndexWetness& MultiIndexWetness)
+	struct FVoxelPaintMaterial UVoxelBlueprintLibrary::CreateMultiIndexWetnessPaintMaterial(
+const struct FVoxelPaintMaterialMultiIndexWetness& MultiIndexWetness
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3223,6 +3956,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3231,7 +3966,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelPaintMaterialMultiIndexRaw            MultiIndexRaw                                              (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelPaintMaterial UVoxelBlueprintLibrary::CreateMultiIndexRawPaintMaterial(const struct FVoxelPaintMaterialMultiIndexRaw& MultiIndexRaw)
+	struct FVoxelPaintMaterial UVoxelBlueprintLibrary::CreateMultiIndexRawPaintMaterial(
+const struct FVoxelPaintMaterialMultiIndexRaw& MultiIndexRaw
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3250,6 +3987,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3258,7 +3997,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelPaintMaterialMultiIndex               MultiIndex                                                 (Parm, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelPaintMaterial UVoxelBlueprintLibrary::CreateMultiIndexPaintMaterial(const struct FVoxelPaintMaterialMultiIndex& MultiIndex)
+	struct FVoxelPaintMaterial UVoxelBlueprintLibrary::CreateMultiIndexPaintMaterial(
+const struct FVoxelPaintMaterialMultiIndex& MultiIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3277,6 +4018,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3285,7 +4028,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelPaintMaterialFiveWayBlend             FiveWayBlend                                               (Parm, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelPaintMaterial UVoxelBlueprintLibrary::CreateFiveWayBlendPaintMaterial(const struct FVoxelPaintMaterialFiveWayBlend& FiveWayBlend)
+	struct FVoxelPaintMaterial UVoxelBlueprintLibrary::CreateFiveWayBlendPaintMaterial(
+const struct FVoxelPaintMaterialFiveWayBlend& FiveWayBlend
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3304,6 +4049,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3312,7 +4059,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelPaintMaterialColor                    Color                                                      (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelPaintMaterial UVoxelBlueprintLibrary::CreateColorPaintMaterial(const struct FVoxelPaintMaterialColor& Color)
+	struct FVoxelPaintMaterial UVoxelBlueprintLibrary::CreateColorPaintMaterial(
+const struct FVoxelPaintMaterialColor& Color
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3331,6 +4080,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3339,7 +4090,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBlueprintLibrary::CompactVoxelTexturePool(class AVoxelWorld* World)
+	void UVoxelBlueprintLibrary::CompactVoxelTexturePool(
+class AVoxelWorld* World
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3356,6 +4109,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3365,7 +4120,11 @@ namespace CG
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBlueprintLibrary::ClearValueData(class AVoxelWorld* World, bool bUpdateRender)
+	void UVoxelBlueprintLibrary::ClearValueData(
+class AVoxelWorld* World
+, 
+bool bUpdateRender
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3384,6 +4143,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3393,7 +4154,11 @@ namespace CG
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBlueprintLibrary::ClearMaterialData(class AVoxelWorld* World, bool bUpdateRender)
+	void UVoxelBlueprintLibrary::ClearMaterialData(
+class AVoxelWorld* World
+, 
+bool bUpdateRender
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3412,6 +4177,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3420,7 +4187,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBlueprintLibrary::ClearFrames(class AVoxelWorld* World)
+	void UVoxelBlueprintLibrary::ClearFrames(
+class AVoxelWorld* World
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3437,6 +4206,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3446,7 +4217,11 @@ namespace CG
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBlueprintLibrary::ClearDirtyData(class AVoxelWorld* World, bool bUpdateRender)
+	void UVoxelBlueprintLibrary::ClearDirtyData(
+class AVoxelWorld* World
+, 
+bool bUpdateRender
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3465,6 +4240,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3474,7 +4251,11 @@ namespace CG
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBlueprintLibrary::ClearAllData(class AVoxelWorld* World, bool bUpdateRender)
+	void UVoxelBlueprintLibrary::ClearAllData(
+class AVoxelWorld* World
+, 
+bool bUpdateRender
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3493,6 +4274,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3505,7 +4288,17 @@ namespace CG
 	 * 		int32_t                                            ChunkSize                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            GenerationDistanceInChunks                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBlueprintLibrary::BindVoxelGenerationEvent(class AVoxelWorld* World, const class FScriptDelegate& OnGenerate, bool bFireExistingOnes, int32_t ChunkSize, int32_t GenerationDistanceInChunks)
+	void UVoxelBlueprintLibrary::BindVoxelGenerationEvent(
+class AVoxelWorld* World
+, 
+const class FScriptDelegate& OnGenerate
+, 
+bool bFireExistingOnes
+, 
+int32_t ChunkSize
+, 
+int32_t GenerationDistanceInChunks
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3530,6 +4323,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3543,7 +4338,19 @@ namespace CG
 	 * 		int32_t                                            ChunkSize                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            ActivationDistanceInChunks                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBlueprintLibrary::BindVoxelChunkEvents(class AVoxelWorld* World, const class FScriptDelegate& OnActivate, const class FScriptDelegate& OnDeactivate, bool bFireExistingOnes, int32_t ChunkSize, int32_t ActivationDistanceInChunks)
+	void UVoxelBlueprintLibrary::BindVoxelChunkEvents(
+class AVoxelWorld* World
+, 
+const class FScriptDelegate& OnActivate
+, 
+const class FScriptDelegate& OnDeactivate
+, 
+bool bFireExistingOnes
+, 
+int32_t ChunkSize
+, 
+int32_t ActivationDistanceInChunks
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3570,6 +4377,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3581,7 +4390,15 @@ namespace CG
 	 * 		int32_t                                            LOD                                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bConvertToVoxelSpace                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UVoxelBlueprintLibrary::AreCollisionsEnabled(class AVoxelWorld* World, const struct FVector& Position, int32_t* LOD, bool bConvertToVoxelSpace)
+	bool UVoxelBlueprintLibrary::AreCollisionsEnabled(
+class AVoxelWorld* World
+, 
+const struct FVector& Position
+, 
+int32_t* LOD
+, 
+bool bConvertToVoxelSpace
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3608,6 +4425,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3618,7 +4437,13 @@ namespace CG
 	 * 		struct FVoxelPaintMaterial                         PaintMaterial                                              (Parm, NativeAccessSpecifierPublic)
 	 * 		float                                              Strength                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelMaterial UVoxelBlueprintLibrary::ApplyPaintMaterial(const struct FVoxelMaterial& Material, const struct FVoxelPaintMaterial& PaintMaterial, float Strength)
+	struct FVoxelMaterial UVoxelBlueprintLibrary::ApplyPaintMaterial(
+const struct FVoxelMaterial& Material
+, 
+const struct FVoxelPaintMaterial& PaintMaterial
+, 
+float Strength
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3641,6 +4466,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3649,7 +4476,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBlueprintLibrary::ApplyNewMaterials(class AVoxelWorld* World)
+	void UVoxelBlueprintLibrary::ApplyNewMaterials(
+class AVoxelWorld* World
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3666,6 +4495,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3674,7 +4505,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBlueprintLibrary::ApplyLODSettings(class AVoxelWorld* World)
+	void UVoxelBlueprintLibrary::ApplyLODSettings(
+class AVoxelWorld* World
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3690,6 +4523,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3712,6 +4547,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3721,7 +4558,11 @@ namespace CG
 	 * 		struct FIntVector                                  Left                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FIntVector                                  Right                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FIntVector UVoxelBlueprintLibrary::Add_IntVectorIntVector(const struct FIntVector& Left, const struct FIntVector& Right)
+	struct FIntVector UVoxelBlueprintLibrary::Add_IntVectorIntVector(
+const struct FIntVector& Left
+, 
+const struct FIntVector& Right
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3742,10 +4583,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelBlueprintLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelBlueprintLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelBlueprintLibrary::StaticClass()
@@ -3755,6 +4598,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Voxel.VoxelBlueprintLibrary");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3776,6 +4621,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3800,6 +4647,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3808,7 +4657,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<unsigned char>                              Indices                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	class UMaterialInterface* UVoxelBlueprintMaterialCollectionInterface::GetMaterialForIndices(TArray<unsigned char> Indices)
+	class UMaterialInterface* UVoxelBlueprintMaterialCollectionInterface::GetMaterialForIndices(
+TArray<unsigned char> Indices
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3827,6 +4678,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3836,7 +4689,11 @@ namespace CG
 	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EVoxelCubicFace                                    Face                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UMaterialInterface* UVoxelBlueprintMaterialCollectionInterface::GetMaterialForIndex(int32_t Index, EVoxelCubicFace Face)
+	class UMaterialInterface* UVoxelBlueprintMaterialCollectionInterface::GetMaterialForIndex(
+int32_t Index
+, 
+EVoxelCubicFace Face
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3857,10 +4714,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelBlueprintMaterialCollectionInterface.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelBlueprintMaterialCollectionInterface.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelBlueprintMaterialCollectionInterface::StaticClass()
@@ -3871,10 +4730,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelCachedMaterialCollection.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelCachedMaterialCollection.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelCachedMaterialCollection::StaticClass()
@@ -3885,10 +4746,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelBlueprintMaterialCollection.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelBlueprintMaterialCollection.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelBlueprintMaterialCollection::StaticClass()
@@ -3899,6 +4762,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3907,7 +4772,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<struct FModifiedVoxelValue>                 ModifiedVoxels                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelIntBox UVoxelToolsBase::GetModifiedVoxelValuesBounds(TArray<struct FModifiedVoxelValue> ModifiedVoxels)
+	struct FVoxelIntBox UVoxelToolsBase::GetModifiedVoxelValuesBounds(
+TArray<struct FModifiedVoxelValue> ModifiedVoxels
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3926,6 +4793,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3934,7 +4803,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<struct FModifiedVoxelMaterial>              ModifiedVoxels                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelIntBox UVoxelToolsBase::GetModifiedVoxelMaterialsBounds(TArray<struct FModifiedVoxelMaterial> ModifiedVoxels)
+	struct FVoxelIntBox UVoxelToolsBase::GetModifiedVoxelMaterialsBounds(
+TArray<struct FModifiedVoxelMaterial> ModifiedVoxels
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3953,10 +4824,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelToolsBase.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelToolsBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelToolsBase::StaticClass()
@@ -3966,6 +4839,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Voxel.VoxelToolsBase");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3985,7 +4860,29 @@ namespace CG
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBoxTools::SetValueBoxAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVoxelIntBox& Bounds, float Value, bool bMultiThreaded, bool bRecordModifiedValues, bool bUpdateRender, bool bHideLatentWarnings)
+	void UVoxelBoxTools::SetValueBoxAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+TArray<struct FModifiedVoxelValue>* ModifiedValues
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVoxelIntBox& Bounds
+, 
+float Value
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedValues
+, 
+bool bUpdateRender
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4025,6 +4922,8 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4040,7 +4939,23 @@ namespace CG
 	 * 		bool                                               bRecordModifiedValues                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBoxTools::SetValueBox(TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVoxelIntBox& Bounds, float Value, bool bMultiThreaded, bool bRecordModifiedValues, bool bUpdateRender)
+	void UVoxelBoxTools::SetValueBox(
+TArray<struct FModifiedVoxelValue>* ModifiedValues
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVoxelIntBox& Bounds
+, 
+float Value
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedValues
+, 
+bool bUpdateRender
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4074,6 +4989,8 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4092,7 +5009,29 @@ namespace CG
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBoxTools::SetMaterialBoxAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelMaterial>* ModifiedMaterials, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVoxelIntBox& Bounds, const struct FVoxelPaintMaterial& PaintMaterial, bool bMultiThreaded, bool bRecordModifiedMaterials, bool bUpdateRender, bool bHideLatentWarnings)
+	void UVoxelBoxTools::SetMaterialBoxAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+TArray<struct FModifiedVoxelMaterial>* ModifiedMaterials
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVoxelIntBox& Bounds
+, 
+const struct FVoxelPaintMaterial& PaintMaterial
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedMaterials
+, 
+bool bUpdateRender
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4132,6 +5071,8 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4147,7 +5088,23 @@ namespace CG
 	 * 		bool                                               bRecordModifiedMaterials                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBoxTools::SetMaterialBox(TArray<struct FModifiedVoxelMaterial>* ModifiedMaterials, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVoxelIntBox& Bounds, const struct FVoxelPaintMaterial& PaintMaterial, bool bMultiThreaded, bool bRecordModifiedMaterials, bool bUpdateRender)
+	void UVoxelBoxTools::SetMaterialBox(
+TArray<struct FModifiedVoxelMaterial>* ModifiedMaterials
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVoxelIntBox& Bounds
+, 
+const struct FVoxelPaintMaterial& PaintMaterial
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedMaterials
+, 
+bool bUpdateRender
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4181,6 +5138,8 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4198,7 +5157,27 @@ namespace CG
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBoxTools::RemoveBoxAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVoxelIntBox& Bounds, bool bMultiThreaded, bool bRecordModifiedValues, bool bUpdateRender, bool bHideLatentWarnings)
+	void UVoxelBoxTools::RemoveBoxAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+TArray<struct FModifiedVoxelValue>* ModifiedValues
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVoxelIntBox& Bounds
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedValues
+, 
+bool bUpdateRender
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4236,6 +5215,8 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4250,7 +5231,21 @@ namespace CG
 	 * 		bool                                               bRecordModifiedValues                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBoxTools::RemoveBox(TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVoxelIntBox& Bounds, bool bMultiThreaded, bool bRecordModifiedValues, bool bUpdateRender)
+	void UVoxelBoxTools::RemoveBox(
+TArray<struct FModifiedVoxelValue>* ModifiedValues
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVoxelIntBox& Bounds
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedValues
+, 
+bool bUpdateRender
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4282,6 +5277,8 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4299,7 +5296,27 @@ namespace CG
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBoxTools::AddBoxAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVoxelIntBox& Bounds, bool bMultiThreaded, bool bRecordModifiedValues, bool bUpdateRender, bool bHideLatentWarnings)
+	void UVoxelBoxTools::AddBoxAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+TArray<struct FModifiedVoxelValue>* ModifiedValues
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVoxelIntBox& Bounds
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedValues
+, 
+bool bUpdateRender
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4337,6 +5354,8 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4351,7 +5370,21 @@ namespace CG
 	 * 		bool                                               bRecordModifiedValues                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelBoxTools::AddBox(TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVoxelIntBox& Bounds, bool bMultiThreaded, bool bRecordModifiedValues, bool bUpdateRender)
+	void UVoxelBoxTools::AddBox(
+TArray<struct FModifiedVoxelValue>* ModifiedValues
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVoxelIntBox& Bounds
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedValues
+, 
+bool bUpdateRender
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4383,10 +5416,12 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelBoxTools.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelBoxTools.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelBoxTools::StaticClass()
@@ -4397,10 +5432,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AVoxelCharacter.StaticClass
+	 * 		Name   -> PredefinedFunction AVoxelCharacter.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AVoxelCharacter::StaticClass()
@@ -4411,10 +5448,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelSubsystemProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelSubsystemProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelSubsystemProxy::StaticClass()
@@ -4425,10 +5464,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelStaticSubsystemProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelStaticSubsystemProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelStaticSubsystemProxy::StaticClass()
@@ -4439,10 +5480,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelChunksSubsystemProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelChunksSubsystemProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelChunksSubsystemProxy::StaticClass()
@@ -4453,10 +5496,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelGenerator.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelGenerator.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelGenerator::StaticClass()
@@ -4467,10 +5512,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelChunkGenerator.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelChunkGenerator.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelChunkGenerator::StaticClass()
@@ -4481,6 +5528,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4489,7 +5538,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelCookingSettings UVoxelCookingLibrary::MakeVoxelCookingSettingsFromVoxelWorld(class AVoxelWorld* World)
+	struct FVoxelCookingSettings UVoxelCookingLibrary::MakeVoxelCookingSettingsFromVoxelWorld(
+class AVoxelWorld* World
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4508,6 +5559,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4517,7 +5570,11 @@ namespace CG
 	 * 		struct FVoxelCookedData                            CookedData                                                 (Parm, NativeAccessSpecifierPublic)
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelCookingLibrary::LoadCookedVoxelData(const struct FVoxelCookedData& CookedData, class AVoxelWorld* World)
+	void UVoxelCookingLibrary::LoadCookedVoxelData(
+const struct FVoxelCookedData& CookedData
+, 
+class AVoxelWorld* World
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4536,6 +5593,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4545,7 +5604,11 @@ namespace CG
 	 * 		struct FVoxelCookingSettings                       Settings                                                   (Parm, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelUncompressedWorldSave                 Save                                                       (Parm, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelCookedData UVoxelCookingLibrary::CookVoxelDataWithSave(const struct FVoxelCookingSettings& Settings, const struct FVoxelUncompressedWorldSave& Save)
+	struct FVoxelCookedData UVoxelCookingLibrary::CookVoxelDataWithSave(
+const struct FVoxelCookingSettings& Settings
+, 
+const struct FVoxelUncompressedWorldSave& Save
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4566,6 +5629,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4574,7 +5639,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelCookingSettings                       Settings                                                   (Parm, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelCookedData UVoxelCookingLibrary::CookVoxelData(const struct FVoxelCookingSettings& Settings)
+	struct FVoxelCookedData UVoxelCookingLibrary::CookVoxelData(
+const struct FVoxelCookingSettings& Settings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4593,10 +5660,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelCookingLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelCookingLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelCookingLibrary::StaticClass()
@@ -4606,6 +5675,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Voxel.VoxelCookingLibrary");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4617,7 +5688,13 @@ namespace CG
 	 * 		struct FIntVector                                  Position                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bValue                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelCubicLibrary::SetCubicVoxelValue(class AVoxelWorld* World, const struct FIntVector& Position, bool bValue)
+	void UVoxelCubicLibrary::SetCubicVoxelValue(
+class AVoxelWorld* World
+, 
+const struct FIntVector& Position
+, 
+bool bValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4638,6 +5715,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4647,7 +5726,11 @@ namespace CG
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FIntVector                                  Position                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UVoxelCubicLibrary::GetCubicVoxelValue(class AVoxelWorld* World, const struct FIntVector& Position)
+	bool UVoxelCubicLibrary::GetCubicVoxelValue(
+class AVoxelWorld* World
+, 
+const struct FIntVector& Position
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4668,6 +5751,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4679,7 +5764,15 @@ namespace CG
 	 * 		struct FVector                                     HitNormal                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bSelectVoxelOutside                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FIntVector UVoxelCubicLibrary::GetCubicVoxelPositionFromHit(class AVoxelWorld* World, const struct FVector& HitPosition, const struct FVector& HitNormal, bool bSelectVoxelOutside)
+	struct FIntVector UVoxelCubicLibrary::GetCubicVoxelPositionFromHit(
+class AVoxelWorld* World
+, 
+const struct FVector& HitPosition
+, 
+const struct FVector& HitNormal
+, 
+bool bSelectVoxelOutside
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4704,10 +5797,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelCubicLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelCubicLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelCubicLibrary::StaticClass()
@@ -4718,10 +5813,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelTransformableGenerator.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelTransformableGenerator.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelTransformableGenerator::StaticClass()
@@ -4732,10 +5829,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelTransformableGeneratorWithBounds.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelTransformableGeneratorWithBounds.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelTransformableGeneratorWithBounds::StaticClass()
@@ -4745,6 +5844,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Voxel.VoxelTransformableGeneratorWithBounds");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4769,6 +5870,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4792,10 +5895,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelDataAsset.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelDataAsset.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelDataAsset::StaticClass()
@@ -4805,6 +5910,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Voxel.VoxelDataAsset");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4827,6 +5934,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4835,7 +5944,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void AVoxelDataItemActor::K2_AddItemToWorld(class AVoxelWorld* World)
+	void AVoxelDataItemActor::K2_AddItemToWorld(
+class AVoxelWorld* World
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4852,10 +5963,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AVoxelDataItemActor.StaticClass
+	 * 		Name   -> PredefinedFunction AVoxelDataItemActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AVoxelDataItemActor::StaticClass()
@@ -4866,10 +5979,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelDataSubsystemProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelDataSubsystemProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelDataSubsystemProxy::StaticClass()
@@ -4879,6 +5994,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Voxel.VoxelDataSubsystemProxy");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4893,7 +6010,19 @@ namespace CG
 	 * 		float                                              Value                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::SetValueAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, const struct FIntVector& Position, float Value, bool bHideLatentWarnings)
+	void UVoxelDataTools::SetValueAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+class AVoxelWorld* World
+, 
+const struct FIntVector& Position
+, 
+float Value
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4920,6 +6049,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4930,7 +6061,13 @@ namespace CG
 	 * 		struct FIntVector                                  Position                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Value                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::SetValue(class AVoxelWorld* World, const struct FIntVector& Position, float Value)
+	void UVoxelDataTools::SetValue(
+class AVoxelWorld* World
+, 
+const struct FIntVector& Position
+, 
+float Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4951,6 +6088,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4964,7 +6103,19 @@ namespace CG
 	 * 		struct FVoxelMaterial                              Material                                                   (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::SetMaterialAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, const struct FIntVector& Position, const struct FVoxelMaterial& Material, bool bHideLatentWarnings)
+	void UVoxelDataTools::SetMaterialAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+class AVoxelWorld* World
+, 
+const struct FIntVector& Position
+, 
+const struct FVoxelMaterial& Material
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4991,6 +6142,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5002,7 +6155,15 @@ namespace CG
 	 * 		struct FVoxelMaterial                              Material                                                   (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Mask                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::SetMaterial(class AVoxelWorld* World, const struct FIntVector& Position, const struct FVoxelMaterial& Material, int32_t Mask)
+	void UVoxelDataTools::SetMaterial(
+class AVoxelWorld* World
+, 
+const struct FIntVector& Position
+, 
+const struct FVoxelMaterial& Material
+, 
+int32_t Mask
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5025,6 +6186,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5039,7 +6202,21 @@ namespace CG
 	 * 		bool                                               bDirtyMaterials                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::SetBoxAsDirtyAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bDirtyValues, bool bDirtyMaterials, bool bHideLatentWarnings)
+	void UVoxelDataTools::SetBoxAsDirtyAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+, 
+bool bDirtyValues
+, 
+bool bDirtyMaterials
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5068,6 +6245,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5079,7 +6258,15 @@ namespace CG
 	 * 		bool                                               bDirtyValues                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bDirtyMaterials                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::SetBoxAsDirty(class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bDirtyValues, bool bDirtyMaterials)
+	void UVoxelDataTools::SetBoxAsDirty(
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+, 
+bool bDirtyValues
+, 
+bool bDirtyMaterials
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5102,6 +6289,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5114,7 +6303,17 @@ namespace CG
 	 * 		struct FVoxelIntBox                                Bounds                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::RoundVoxelsAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bHideLatentWarnings)
+	void UVoxelDataTools::RoundVoxelsAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5139,6 +6338,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5148,7 +6349,11 @@ namespace CG
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelIntBox                                Bounds                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::RoundVoxels(class AVoxelWorld* World, const struct FVoxelIntBox& Bounds)
+	void UVoxelDataTools::RoundVoxels(
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5167,6 +6372,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5180,7 +6387,19 @@ namespace CG
 	 * 		bool                                               bPreserveNormals                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::RoundToGeneratorAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bPreserveNormals, bool bHideLatentWarnings)
+	void UVoxelDataTools::RoundToGeneratorAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+, 
+bool bPreserveNormals
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5207,6 +6426,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5217,7 +6438,13 @@ namespace CG
 	 * 		struct FVoxelIntBox                                Bounds                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bPreserveNormals                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::RoundToGenerator(class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bPreserveNormals)
+	void UVoxelDataTools::RoundToGenerator(
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+, 
+bool bPreserveNormals
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5238,6 +6465,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5247,7 +6476,11 @@ namespace CG
 	 * 		class AVoxelWorld*                                 World                                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelUncompressedWorldSave                 Save                                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	bool UVoxelDataTools::LoadFromSave(class AVoxelWorld* World, const struct FVoxelUncompressedWorldSave& Save)
+	bool UVoxelDataTools::LoadFromSave(
+class AVoxelWorld* World
+, 
+const struct FVoxelUncompressedWorldSave& Save
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5268,6 +6501,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5277,7 +6512,11 @@ namespace CG
 	 * 		class AVoxelWorld*                                 World                                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelCompressedWorldSave                   Save                                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	bool UVoxelDataTools::LoadFromCompressedSave(class AVoxelWorld* World, const struct FVoxelCompressedWorldSave& Save)
+	bool UVoxelDataTools::LoadFromCompressedSave(
+class AVoxelWorld* World
+, 
+const struct FVoxelCompressedWorldSave& Save
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5298,6 +6537,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5311,7 +6552,19 @@ namespace CG
 	 * 		TArray<struct FIntVector>                          Positions                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::GetVoxelsValueAndMaterialAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FVoxelValueMaterial>* Voxels, class AVoxelWorld* World, TArray<struct FIntVector> Positions, bool bHideLatentWarnings)
+	void UVoxelDataTools::GetVoxelsValueAndMaterialAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+TArray<struct FVoxelValueMaterial>* Voxels
+, 
+class AVoxelWorld* World
+, 
+TArray<struct FIntVector> Positions
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5340,6 +6593,8 @@ namespace CG
 			*Voxels = params.Voxels;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5350,7 +6605,13 @@ namespace CG
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FIntVector>                          Positions                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::GetVoxelsValueAndMaterial(TArray<struct FVoxelValueMaterial>* Voxels, class AVoxelWorld* World, TArray<struct FIntVector> Positions)
+	void UVoxelDataTools::GetVoxelsValueAndMaterial(
+TArray<struct FVoxelValueMaterial>* Voxels
+, 
+class AVoxelWorld* World
+, 
+TArray<struct FIntVector> Positions
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5373,6 +6634,8 @@ namespace CG
 			*Voxels = params.Voxels;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5386,7 +6649,19 @@ namespace CG
 	 * 		struct FIntVector                                  Position                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::GetValueAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, float* Value, class AVoxelWorld* World, const struct FIntVector& Position, bool bHideLatentWarnings)
+	void UVoxelDataTools::GetValueAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+float* Value
+, 
+class AVoxelWorld* World
+, 
+const struct FIntVector& Position
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5415,6 +6690,8 @@ namespace CG
 			*Value = params.Value;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5425,7 +6702,13 @@ namespace CG
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FIntVector                                  Position                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::GetValue(float* Value, class AVoxelWorld* World, const struct FIntVector& Position)
+	void UVoxelDataTools::GetValue(
+float* Value
+, 
+class AVoxelWorld* World
+, 
+const struct FIntVector& Position
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5448,6 +6731,8 @@ namespace CG
 			*Value = params.Value;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5460,7 +6745,17 @@ namespace CG
 	 * 		struct FVoxelUncompressedWorldSave                 OutSave                                                    (Parm, OutParm, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::GetSaveAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, struct FVoxelUncompressedWorldSave* OutSave, bool bHideLatentWarnings)
+	void UVoxelDataTools::GetSaveAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+class AVoxelWorld* World
+, 
+struct FVoxelUncompressedWorldSave* OutSave
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5487,6 +6782,8 @@ namespace CG
 			*OutSave = params.OutSave;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5496,7 +6793,11 @@ namespace CG
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelUncompressedWorldSave                 OutSave                                                    (Parm, OutParm, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::GetSave(class AVoxelWorld* World, struct FVoxelUncompressedWorldSave* OutSave)
+	void UVoxelDataTools::GetSave(
+class AVoxelWorld* World
+, 
+struct FVoxelUncompressedWorldSave* OutSave
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5517,6 +6818,8 @@ namespace CG
 			*OutSave = params.OutSave;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5530,7 +6833,19 @@ namespace CG
 	 * 		struct FIntVector                                  Position                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::GetMaterialAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, struct FVoxelMaterial* Material, class AVoxelWorld* World, const struct FIntVector& Position, bool bHideLatentWarnings)
+	void UVoxelDataTools::GetMaterialAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+struct FVoxelMaterial* Material
+, 
+class AVoxelWorld* World
+, 
+const struct FIntVector& Position
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5559,6 +6874,8 @@ namespace CG
 			*Material = params.Material;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5569,7 +6886,13 @@ namespace CG
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FIntVector                                  Position                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::GetMaterial(struct FVoxelMaterial* Material, class AVoxelWorld* World, const struct FIntVector& Position)
+	void UVoxelDataTools::GetMaterial(
+struct FVoxelMaterial* Material
+, 
+class AVoxelWorld* World
+, 
+const struct FIntVector& Position
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5592,6 +6915,8 @@ namespace CG
 			*Material = params.Material;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5602,7 +6927,13 @@ namespace CG
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector                                     Position                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::GetInterpolatedValue(float* Value, class AVoxelWorld* World, const struct FVector& Position)
+	void UVoxelDataTools::GetInterpolatedValue(
+float* Value
+, 
+class AVoxelWorld* World
+, 
+const struct FVector& Position
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5625,6 +6956,8 @@ namespace CG
 			*Value = params.Value;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5633,7 +6966,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelDataMemoryUsageInMB UVoxelDataTools::GetDataMemoryUsageInMB(class AVoxelWorld* World)
+	struct FVoxelDataMemoryUsageInMB UVoxelDataTools::GetDataMemoryUsageInMB(
+class AVoxelWorld* World
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5652,6 +6987,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5664,7 +7001,17 @@ namespace CG
 	 * 		struct FVoxelCompressedWorldSave                   OutSave                                                    (Parm, OutParm, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::GetCompressedSaveAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, struct FVoxelCompressedWorldSave* OutSave, bool bHideLatentWarnings)
+	void UVoxelDataTools::GetCompressedSaveAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+class AVoxelWorld* World
+, 
+struct FVoxelCompressedWorldSave* OutSave
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5691,6 +7038,8 @@ namespace CG
 			*OutSave = params.OutSave;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5700,7 +7049,11 @@ namespace CG
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelCompressedWorldSave                   OutSave                                                    (Parm, OutParm, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::GetCompressedSave(class AVoxelWorld* World, struct FVoxelCompressedWorldSave* OutSave)
+	void UVoxelDataTools::GetCompressedSave(
+class AVoxelWorld* World
+, 
+struct FVoxelCompressedWorldSave* OutSave
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5721,6 +7074,8 @@ namespace CG
 			*OutSave = params.OutSave;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5736,7 +7091,23 @@ namespace CG
 	 * 		bool                                               bConvertToVoxelSpace                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::FindClosestNonEmptyVoxelAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, struct FVoxelFindClosestNonEmptyVoxelResult* Result, class AVoxelWorld* World, const struct FVector& Position, bool bReadMaterial, bool bConvertToVoxelSpace, bool bHideLatentWarnings)
+	void UVoxelDataTools::FindClosestNonEmptyVoxelAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+struct FVoxelFindClosestNonEmptyVoxelResult* Result
+, 
+class AVoxelWorld* World
+, 
+const struct FVector& Position
+, 
+bool bReadMaterial
+, 
+bool bConvertToVoxelSpace
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5769,6 +7140,8 @@ namespace CG
 			*Result = params.Result;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5781,7 +7154,17 @@ namespace CG
 	 * 		bool                                               bReadMaterial                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bConvertToVoxelSpace                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::FindClosestNonEmptyVoxel(struct FVoxelFindClosestNonEmptyVoxelResult* Result, class AVoxelWorld* World, const struct FVector& Position, bool bReadMaterial, bool bConvertToVoxelSpace)
+	void UVoxelDataTools::FindClosestNonEmptyVoxel(
+struct FVoxelFindClosestNonEmptyVoxelResult* Result
+, 
+class AVoxelWorld* World
+, 
+const struct FVector& Position
+, 
+bool bReadMaterial
+, 
+bool bConvertToVoxelSpace
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5808,6 +7191,8 @@ namespace CG
 			*Result = params.Result;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5818,7 +7203,13 @@ namespace CG
 	 * 		class UVoxelHeightmapAsset*                        HeightmapAsset                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHeightmapAssetMatchesWorld                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::CompressIntoHeightmap(class AVoxelWorld* World, class UVoxelHeightmapAsset* HeightmapAsset, bool bHeightmapAssetMatchesWorld)
+	void UVoxelDataTools::CompressIntoHeightmap(
+class AVoxelWorld* World
+, 
+class UVoxelHeightmapAsset* HeightmapAsset
+, 
+bool bHeightmapAssetMatchesWorld
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5839,6 +7230,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5851,7 +7244,17 @@ namespace CG
 	 * 		struct FVoxelIntBox                                Bounds                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::ClearUnusedMaterialsAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bHideLatentWarnings)
+	void UVoxelDataTools::ClearUnusedMaterialsAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5876,6 +7279,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5885,7 +7290,11 @@ namespace CG
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelIntBox                                Bounds                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::ClearUnusedMaterials(class AVoxelWorld* World, const struct FVoxelIntBox& Bounds)
+	void UVoxelDataTools::ClearUnusedMaterials(
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5904,6 +7313,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5916,7 +7327,17 @@ namespace CG
 	 * 		struct FVoxelIntBox                                Bounds                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::ClearCachedValuesAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bHideLatentWarnings)
+	void UVoxelDataTools::ClearCachedValuesAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5941,6 +7362,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5950,7 +7373,11 @@ namespace CG
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelIntBox                                Bounds                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::ClearCachedValues(class AVoxelWorld* World, const struct FVoxelIntBox& Bounds)
+	void UVoxelDataTools::ClearCachedValues(
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5969,6 +7396,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5981,7 +7410,17 @@ namespace CG
 	 * 		struct FVoxelIntBox                                Bounds                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::ClearCachedMaterialsAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bHideLatentWarnings)
+	void UVoxelDataTools::ClearCachedMaterialsAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6006,6 +7445,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6015,7 +7456,11 @@ namespace CG
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelIntBox                                Bounds                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::ClearCachedMaterials(class AVoxelWorld* World, const struct FVoxelIntBox& Bounds)
+	void UVoxelDataTools::ClearCachedMaterials(
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6034,6 +7479,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6046,7 +7493,17 @@ namespace CG
 	 * 		struct FVoxelIntBox                                Bounds                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::CheckIfSameAsGeneratorAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bHideLatentWarnings)
+	void UVoxelDataTools::CheckIfSameAsGeneratorAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6071,6 +7528,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6080,7 +7539,11 @@ namespace CG
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelIntBox                                Bounds                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::CheckIfSameAsGenerator(class AVoxelWorld* World, const struct FVoxelIntBox& Bounds)
+	void UVoxelDataTools::CheckIfSameAsGenerator(
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6099,6 +7562,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6111,7 +7576,17 @@ namespace CG
 	 * 		struct FVoxelIntBox                                Bounds                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::CheckForSingleValuesAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bHideLatentWarnings)
+	void UVoxelDataTools::CheckForSingleValuesAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6136,6 +7611,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6145,7 +7622,11 @@ namespace CG
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelIntBox                                Bounds                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::CheckForSingleValues(class AVoxelWorld* World, const struct FVoxelIntBox& Bounds)
+	void UVoxelDataTools::CheckForSingleValues(
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6164,6 +7645,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6176,7 +7659,17 @@ namespace CG
 	 * 		struct FVoxelIntBox                                Bounds                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::CheckForSingleMaterialsAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bHideLatentWarnings)
+	void UVoxelDataTools::CheckForSingleMaterialsAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6201,6 +7694,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6210,7 +7705,11 @@ namespace CG
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelIntBox                                Bounds                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::CheckForSingleMaterials(class AVoxelWorld* World, const struct FVoxelIntBox& Bounds)
+	void UVoxelDataTools::CheckForSingleMaterials(
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6229,6 +7728,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6241,7 +7742,17 @@ namespace CG
 	 * 		struct FVoxelIntBox                                Bounds                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::CacheValuesAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bHideLatentWarnings)
+	void UVoxelDataTools::CacheValuesAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6266,6 +7777,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6276,7 +7789,13 @@ namespace CG
 	 * 		struct FVoxelIntBox                                Bounds                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bMultiThreaded                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::CacheValues(class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bMultiThreaded)
+	void UVoxelDataTools::CacheValues(
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+, 
+bool bMultiThreaded
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6297,6 +7816,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6309,7 +7830,17 @@ namespace CG
 	 * 		struct FVoxelIntBox                                Bounds                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::CacheMaterialsAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bHideLatentWarnings)
+	void UVoxelDataTools::CacheMaterialsAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6334,6 +7865,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6344,7 +7877,13 @@ namespace CG
 	 * 		struct FVoxelIntBox                                Bounds                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bMultiThreaded                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDataTools::CacheMaterials(class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bMultiThreaded)
+	void UVoxelDataTools::CacheMaterials(
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+, 
+bool bMultiThreaded
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6365,10 +7904,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelDataTools.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelDataTools.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelDataTools::StaticClass()
@@ -6379,10 +7920,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelDebugSubsystemProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelDebugSubsystemProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelDebugSubsystemProxy::StaticClass()
@@ -6392,6 +7935,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Voxel.VoxelDebugSubsystemProxy");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -6406,7 +7951,19 @@ namespace CG
 	 * 		float                                              Thickness                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FLinearColor                                Color                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDebugUtilities::DrawDebugIntBox(class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, const struct FTransform& Transform, float LifeTime, float Thickness, const struct FLinearColor& Color)
+	void UVoxelDebugUtilities::DrawDebugIntBox(
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+, 
+const struct FTransform& Transform
+, 
+float LifeTime
+, 
+float Thickness
+, 
+const struct FLinearColor& Color
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6433,6 +7990,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6449,7 +8008,25 @@ namespace CG
 	 * 		struct FColor                                      CachedColor                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FColor                                      DirtyColor                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDebugUtilities::DrawDataOctree(class AVoxelWorld* World, EVoxelDataType DataType, float LifeTime, bool bShowSingle, bool bShowCached, const struct FColor& SingleColor, const struct FColor& SingleDirtyColor, const struct FColor& CachedColor, const struct FColor& DirtyColor)
+	void UVoxelDebugUtilities::DrawDataOctree(
+class AVoxelWorld* World
+, 
+EVoxelDataType DataType
+, 
+float LifeTime
+, 
+bool bShowSingle
+, 
+bool bShowCached
+, 
+const struct FColor& SingleColor
+, 
+const struct FColor& SingleDirtyColor
+, 
+const struct FColor& CachedColor
+, 
+const struct FColor& DirtyColor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6482,6 +8059,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6496,7 +8075,21 @@ namespace CG
 	 * 		bool                                               bDebugDensities                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FLinearColor                                TextColor                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelDebugUtilities::DebugVoxelsInsideBounds(class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, const struct FLinearColor& Color, float LifeTime, float Thickness, bool bDebugDensities, const struct FLinearColor& TextColor)
+	void UVoxelDebugUtilities::DebugVoxelsInsideBounds(
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+, 
+const struct FLinearColor& Color
+, 
+float LifeTime
+, 
+float Thickness
+, 
+bool bDebugDensities
+, 
+const struct FLinearColor& TextColor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6525,10 +8118,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelDebugUtilities.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelDebugUtilities.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelDebugUtilities::StaticClass()
@@ -6539,10 +8134,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelDynamicSubsystemProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelDynamicSubsystemProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelDynamicSubsystemProxy::StaticClass()
@@ -6553,10 +8150,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelLODSubsystemProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelLODSubsystemProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelLODSubsystemProxy::StaticClass()
@@ -6567,10 +8166,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelDefaultLODSubsystemProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelDefaultLODSubsystemProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelDefaultLODSubsystemProxy::StaticClass()
@@ -6581,10 +8182,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelRendererSubsystemProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelRendererSubsystemProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelRendererSubsystemProxy::StaticClass()
@@ -6595,10 +8198,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelDefaultRendererSubsystemProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelDefaultRendererSubsystemProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelDefaultRendererSubsystemProxy::StaticClass()
@@ -6609,10 +8214,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AVoxelDisableEditsBox.StaticClass
+	 * 		Name   -> PredefinedFunction AVoxelDisableEditsBox.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AVoxelDisableEditsBox::StaticClass()
@@ -6623,10 +8230,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelEmptyGenerator.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelEmptyGenerator.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelEmptyGenerator::StaticClass()
@@ -6637,6 +8246,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6645,7 +8256,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Count                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelErosion::Step(int32_t Count)
+	void UVoxelErosion::Step(
+int32_t Count
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6661,6 +8274,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -6685,6 +8300,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6705,6 +8322,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -6729,6 +8348,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6751,6 +8372,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -6775,10 +8398,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelErosion.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelErosion.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelErosion::StaticClass()
@@ -6789,10 +8414,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelEventSubsystemProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelEventSubsystemProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelEventSubsystemProxy::StaticClass()
@@ -6803,10 +8430,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelFixedResolutionLODSubsystemProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelFixedResolutionLODSubsystemProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelFixedResolutionLODSubsystemProxy::StaticClass()
@@ -6817,10 +8446,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelFlatGenerator.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelFlatGenerator.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelFlatGenerator::StaticClass()
@@ -6830,6 +8461,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Voxel.VoxelFlatGenerator");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -6845,7 +8478,21 @@ namespace CG
 	 * 		struct FVector                                     CameraDirection                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ECollisionChannel                                  CollisionChannel                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelToolTickData UVoxelTool::MakeVoxelToolTickData(class APlayerController* PlayerController, bool bEdit, TMap<class FName, bool> Keys, TMap<class FName, float> Axes, const struct FVector2D& MousePosition, const struct FVector& CameraDirection, ECollisionChannel CollisionChannel)
+	struct FVoxelToolTickData UVoxelTool::MakeVoxelToolTickData(
+class APlayerController* PlayerController
+, 
+bool bEdit
+, 
+TMap<class FName, bool> Keys
+, 
+TMap<class FName, float> Axes
+, 
+const struct FVector2D& MousePosition
+, 
+const struct FVector& CameraDirection
+, 
+ECollisionChannel CollisionChannel
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6876,6 +8523,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6884,7 +8533,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UClass*                                      ToolClass                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UVoxelTool* UVoxelTool::MakeVoxelTool(class UClass* ToolClass)
+	class UVoxelTool* UVoxelTool::MakeVoxelTool(
+class UClass* ToolClass
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6903,6 +8554,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6911,7 +8564,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bAlternativeMode                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TMap<class FName, bool> UVoxelTool::MakeToolKeys(bool bAlternativeMode)
+	TMap<class FName, bool> UVoxelTool::MakeToolKeys(
+bool bAlternativeMode
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6930,6 +8585,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6940,7 +8597,13 @@ namespace CG
 	 * 		float                                              FalloffDelta                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              StrengthDelta                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TMap<class FName, float> UVoxelTool::MakeToolAxes(float BrushSizeDelta, float FalloffDelta, float StrengthDelta)
+	TMap<class FName, float> UVoxelTool::MakeToolAxes(
+float BrushSizeDelta
+, 
+float FalloffDelta
+, 
+float StrengthDelta
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6963,6 +8626,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6976,7 +8641,19 @@ namespace CG
 	 * 		class FScriptDelegate                              DoEditOverride                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
 	 * 		ECollisionChannel                                  CollisionChannel                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelTool::K2_SimpleTick(class APlayerController* PlayerController, bool bEdit, TMap<class FName, bool> Keys, TMap<class FName, float> Axes, const class FScriptDelegate& DoEditOverride, ECollisionChannel CollisionChannel)
+	void UVoxelTool::K2_SimpleTick(
+class APlayerController* PlayerController
+, 
+bool bEdit
+, 
+TMap<class FName, bool> Keys
+, 
+TMap<class FName, float> Axes
+, 
+const class FScriptDelegate& DoEditOverride
+, 
+ECollisionChannel CollisionChannel
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7003,6 +8680,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7013,7 +8692,13 @@ namespace CG
 	 * 		struct FVoxelToolTickData                          TickData                                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		class FScriptDelegate                              DoEditOverride                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelTool::K2_AdvancedTick(class UObject* WorldContextObject, const struct FVoxelToolTickData& TickData, const class FScriptDelegate& DoEditOverride)
+	void UVoxelTool::K2_AdvancedTick(
+class UObject* WorldContextObject
+, 
+const struct FVoxelToolTickData& TickData
+, 
+const class FScriptDelegate& DoEditOverride
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7034,6 +8719,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7043,7 +8730,11 @@ namespace CG
 	 * 		struct FVoxelToolTickData                          TickData                                                   (Parm, NativeAccessSpecifierPublic)
 	 * 		class FName                                        Key                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UVoxelTool::IsKeyDown(const struct FVoxelToolTickData& TickData, const class FName& Key)
+	bool UVoxelTool::IsKeyDown(
+const struct FVoxelToolTickData& TickData
+, 
+const class FName& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7064,6 +8755,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7072,7 +8765,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelToolTickData                          TickData                                                   (Parm, NativeAccessSpecifierPublic)
 	 */
-	bool UVoxelTool::IsAlternativeMode(const struct FVoxelToolTickData& TickData)
+	bool UVoxelTool::IsAlternativeMode(
+const struct FVoxelToolTickData& TickData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7090,6 +8785,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7114,6 +8811,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7137,6 +8836,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7145,7 +8846,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelToolTickData                          TickData                                                   (Parm, NativeAccessSpecifierPublic)
 	 */
-	struct FVector UVoxelTool::GetRayOrigin(const struct FVoxelToolTickData& TickData)
+	struct FVector UVoxelTool::GetRayOrigin(
+const struct FVoxelToolTickData& TickData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7164,6 +8867,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7172,7 +8877,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelToolTickData                          TickData                                                   (Parm, NativeAccessSpecifierPublic)
 	 */
-	struct FVector UVoxelTool::GetRayDirection(const struct FVoxelToolTickData& TickData)
+	struct FVector UVoxelTool::GetRayDirection(
+const struct FVoxelToolTickData& TickData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7191,6 +8898,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7200,7 +8909,11 @@ namespace CG
 	 * 		struct FVoxelToolTickData                          TickData                                                   (Parm, NativeAccessSpecifierPublic)
 	 * 		class FName                                        Axis                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float UVoxelTool::GetAxis(const struct FVoxelToolTickData& TickData, const class FName& Axis)
+	float UVoxelTool::GetAxis(
+const struct FVoxelToolTickData& TickData
+, 
+const class FName& Axis
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7220,6 +8933,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7242,6 +8957,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7251,7 +8968,11 @@ namespace CG
 	 * 		struct FVector                                     Position                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector                                     Normal                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelTool::DoEditDynamicOverride__DelegateSignature(const struct FVector& Position, const struct FVector& Normal)
+	void UVoxelTool::DoEditDynamicOverride__DelegateSignature(
+const struct FVector& Position
+, 
+const struct FVector& Normal
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7269,6 +8990,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7291,6 +9014,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7302,7 +9027,15 @@ namespace CG
 	 * 		struct FVector                                     WorldPosition                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector                                     WorldDirection                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UVoxelTool::Deproject(const struct FVoxelToolTickData& TickData, const struct FVector2D& ScreenPosition, struct FVector* WorldPosition, struct FVector* WorldDirection)
+	bool UVoxelTool::Deproject(
+const struct FVoxelToolTickData& TickData
+, 
+const struct FVector2D& ScreenPosition
+, 
+struct FVector* WorldPosition
+, 
+struct FVector* WorldDirection
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7330,6 +9063,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7342,7 +9077,17 @@ namespace CG
 	 * 		TMap<class FName, bool>                            Keys                                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		TMap<class FName, float>                           Axes                                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelTool::Apply(class AVoxelWorld* World, const struct FVector& Position, const struct FVector& Normal, TMap<class FName, bool> Keys, TMap<class FName, float> Axes)
+	void UVoxelTool::Apply(
+class AVoxelWorld* World
+, 
+const struct FVector& Position
+, 
+const struct FVector& Normal
+, 
+TMap<class FName, bool> Keys
+, 
+TMap<class FName, float> Axes
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7367,10 +9112,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelTool.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelTool.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelTool::StaticClass()
@@ -7380,6 +9127,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Voxel.VoxelTool");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7392,7 +9141,15 @@ namespace CG
 	 * 		struct FTransform                                  Transform                                                  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		class FName                                        ID                                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelToolBase::UpdateToolMesh(class UStaticMesh* Mesh, class UMaterialInterface* Material, const struct FTransform& Transform, const class FName& ID)
+	void UVoxelToolBase::UpdateToolMesh(
+class UStaticMesh* Mesh
+, 
+class UMaterialInterface* Material
+, 
+const struct FTransform& Transform
+, 
+const class FName& ID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7415,6 +9172,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7423,7 +9182,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FBox                                        Bounds                                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelToolBase::SetToolOverlayBounds(const struct FBox& Bounds)
+	void UVoxelToolBase::SetToolOverlayBounds(
+const struct FBox& Bounds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7439,6 +9200,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7463,6 +9226,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7472,7 +9237,11 @@ namespace CG
 	 * 		class UMaterialInstanceDynamic*                    OverlayMaterialInstance                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UMaterialInstanceDynamic*                    MeshMaterialInstance                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelToolBase::K2_UpdateRender(class UMaterialInstanceDynamic* OverlayMaterialInstance, class UMaterialInstanceDynamic* MeshMaterialInstance)
+	void UVoxelToolBase::K2_UpdateRender(
+class UMaterialInstanceDynamic* OverlayMaterialInstance
+, 
+class UMaterialInstanceDynamic* MeshMaterialInstance
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7490,6 +9259,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7512,6 +9283,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7521,7 +9294,11 @@ namespace CG
 	 * 		struct FVoxelToolBaseConfig                        InConfig                                                   (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelToolBaseConfig                        OutConfig                                                  (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelToolBase::K2_GetToolConfig(const struct FVoxelToolBaseConfig& InConfig, struct FVoxelToolBaseConfig* OutConfig)
+	void UVoxelToolBase::K2_GetToolConfig(
+const struct FVoxelToolBaseConfig& InConfig
+, 
+struct FVoxelToolBaseConfig* OutConfig
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7541,6 +9318,8 @@ namespace CG
 		if (OutConfig != nullptr)
 			*OutConfig = params.OutConfig;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7565,6 +9344,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7576,7 +9357,15 @@ namespace CG
 	 * 		float                                              Min                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Max                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float UVoxelToolBase::GetValueAfterAxisInput(const class FName& AxisName, float CurrentValue, float Min, float Max)
+	float UVoxelToolBase::GetValueAfterAxisInput(
+const class FName& AxisName
+, 
+float CurrentValue
+, 
+float Min
+, 
+float Max
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7601,6 +9390,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7623,6 +9414,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7647,6 +9440,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7669,6 +9464,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7693,6 +9490,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7715,6 +9514,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7739,6 +9540,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7761,6 +9564,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7785,6 +9590,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7793,7 +9600,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelIntBox                                Bounds                                                     (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelIntBox UVoxelToolBase::GetBoundsToCache(const struct FVoxelIntBox& Bounds)
+	struct FVoxelIntBox UVoxelToolBase::GetBoundsToCache(
+const struct FVoxelIntBox& Bounds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7811,6 +9620,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7835,10 +9646,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelToolBase.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelToolBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelToolBase::StaticClass()
@@ -7849,10 +9662,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelFlattenTool.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelFlattenTool.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelFlattenTool::StaticClass()
@@ -7863,10 +9678,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelFoliageBiomeBase.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelFoliageBiomeBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelFoliageBiomeBase::StaticClass()
@@ -7877,10 +9694,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelFoliageCollectionBase.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelFoliageCollectionBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelFoliageCollectionBase::StaticClass()
@@ -7891,10 +9710,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelFoliageInterfaceSubsystemProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelFoliageInterfaceSubsystemProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelFoliageInterfaceSubsystemProxy::StaticClass()
@@ -7905,10 +9726,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelGeneratorCacheSubsystemProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelGeneratorCacheSubsystemProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelGeneratorCacheSubsystemProxy::StaticClass()
@@ -7919,6 +9742,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7927,7 +9752,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelTransformableGeneratorPicker          Picker                                                     (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UVoxelTransformableGeneratorInstanceWrapper* UVoxelGeneratorCache::MakeTransformableGeneratorInstance(const struct FVoxelTransformableGeneratorPicker& Picker)
+	class UVoxelTransformableGeneratorInstanceWrapper* UVoxelGeneratorCache::MakeTransformableGeneratorInstance(
+const struct FVoxelTransformableGeneratorPicker& Picker
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7946,6 +9773,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7954,7 +9783,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelGeneratorPicker                       Picker                                                     (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UVoxelGeneratorInstanceWrapper* UVoxelGeneratorCache::MakeGeneratorInstance(const struct FVoxelGeneratorPicker& Picker)
+	class UVoxelGeneratorInstanceWrapper* UVoxelGeneratorCache::MakeGeneratorInstance(
+const struct FVoxelGeneratorPicker& Picker
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7973,10 +9804,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelGeneratorCache.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelGeneratorCache.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelGeneratorCache::StaticClass()
@@ -7986,6 +9819,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Voxel.VoxelGeneratorCache");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -8010,10 +9845,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelGeneratorInstanceWrapper.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelGeneratorInstanceWrapper.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelGeneratorInstanceWrapper::StaticClass()
@@ -8023,6 +9860,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Voxel.VoxelGeneratorInstanceWrapper");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -8047,10 +9886,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelTransformableGeneratorInstanceWrapper.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelTransformableGeneratorInstanceWrapper.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelTransformableGeneratorInstanceWrapper::StaticClass()
@@ -8060,6 +9901,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Voxel.VoxelTransformableGeneratorInstanceWrapper");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -8071,7 +9914,13 @@ namespace CG
 	 * 		class FName                                        UniqueName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Value                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UVoxelGeneratorTools::SetTransformableGeneratorParameter(const struct FVoxelTransformableGeneratorPicker& Picker, const class FName& UniqueName, int32_t Value)
+	bool UVoxelGeneratorTools::SetTransformableGeneratorParameter(
+const struct FVoxelTransformableGeneratorPicker& Picker
+, 
+const class FName& UniqueName
+, 
+int32_t Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8094,6 +9943,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8104,7 +9955,13 @@ namespace CG
 	 * 		class FName                                        UniqueName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Value                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UVoxelGeneratorTools::SetGeneratorParameter(const struct FVoxelGeneratorPicker& Picker, const class FName& UniqueName, int32_t Value)
+	bool UVoxelGeneratorTools::SetGeneratorParameter(
+const struct FVoxelGeneratorPicker& Picker
+, 
+const class FName& UniqueName
+, 
+int32_t Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8127,6 +9984,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8135,7 +9994,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UVoxelTransformableGenerator*                Generator                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelTransformableGeneratorPicker UVoxelGeneratorTools::MakeTransformableGeneratorPickerFromObject(class UVoxelTransformableGenerator* Generator)
+	struct FVoxelTransformableGeneratorPicker UVoxelGeneratorTools::MakeTransformableGeneratorPickerFromObject(
+class UVoxelTransformableGenerator* Generator
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8154,6 +10015,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8162,7 +10025,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UClass*                                      GeneratorClass                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelTransformableGeneratorPicker UVoxelGeneratorTools::MakeTransformableGeneratorPickerFromClass(class UClass* GeneratorClass)
+	struct FVoxelTransformableGeneratorPicker UVoxelGeneratorTools::MakeTransformableGeneratorPickerFromClass(
+class UClass* GeneratorClass
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8181,6 +10046,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8190,7 +10057,11 @@ namespace CG
 	 * 		struct FVoxelTransformableGeneratorPicker          GeneratorPicker                                            (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelGeneratorInit                         GeneratorInit                                              (Parm, NativeAccessSpecifierPublic)
 	 */
-	class UVoxelTransformableGeneratorInstanceWrapper* UVoxelGeneratorTools::MakeTransformableGeneratorInstance(const struct FVoxelTransformableGeneratorPicker& GeneratorPicker, const struct FVoxelGeneratorInit& GeneratorInit)
+	class UVoxelTransformableGeneratorInstanceWrapper* UVoxelGeneratorTools::MakeTransformableGeneratorInstance(
+const struct FVoxelTransformableGeneratorPicker& GeneratorPicker
+, 
+const struct FVoxelGeneratorInit& GeneratorInit
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8211,6 +10082,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8219,7 +10092,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UVoxelGenerator*                             Generator                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelGeneratorPicker UVoxelGeneratorTools::MakeGeneratorPickerFromObject(class UVoxelGenerator* Generator)
+	struct FVoxelGeneratorPicker UVoxelGeneratorTools::MakeGeneratorPickerFromObject(
+class UVoxelGenerator* Generator
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8238,6 +10113,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8246,7 +10123,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UClass*                                      GeneratorClass                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelGeneratorPicker UVoxelGeneratorTools::MakeGeneratorPickerFromClass(class UClass* GeneratorClass)
+	struct FVoxelGeneratorPicker UVoxelGeneratorTools::MakeGeneratorPickerFromClass(
+class UClass* GeneratorClass
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8265,6 +10144,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8274,7 +10155,11 @@ namespace CG
 	 * 		struct FVoxelGeneratorPicker                       GeneratorPicker                                            (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelGeneratorInit                         GeneratorInit                                              (Parm, NativeAccessSpecifierPublic)
 	 */
-	class UVoxelGeneratorInstanceWrapper* UVoxelGeneratorTools::MakeGeneratorInstance(const struct FVoxelGeneratorPicker& GeneratorPicker, const struct FVoxelGeneratorInit& GeneratorInit)
+	class UVoxelGeneratorInstanceWrapper* UVoxelGeneratorTools::MakeGeneratorInstance(
+const struct FVoxelGeneratorPicker& GeneratorPicker
+, 
+const struct FVoxelGeneratorInit& GeneratorInit
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8295,6 +10180,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8303,7 +10190,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelTransformableGeneratorPicker          GeneratorPicker                                            (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UVoxelGeneratorTools::IsValid_TransformableGeneratorPicker(const struct FVoxelTransformableGeneratorPicker& GeneratorPicker)
+	bool UVoxelGeneratorTools::IsValid_TransformableGeneratorPicker(
+const struct FVoxelTransformableGeneratorPicker& GeneratorPicker
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8322,6 +10211,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8330,7 +10221,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelGeneratorPicker                       GeneratorPicker                                            (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UVoxelGeneratorTools::IsValid_GeneratorPicker(const struct FVoxelGeneratorPicker& GeneratorPicker)
+	bool UVoxelGeneratorTools::IsValid_GeneratorPicker(
+const struct FVoxelGeneratorPicker& GeneratorPicker
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8348,6 +10241,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -8367,7 +10262,29 @@ namespace CG
 	 * 		int32_t                                            StartY                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelGeneratorTools::CreateFloatTextureFromGeneratorAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, struct FVoxelFloatTexture* OutTexture, class UVoxelGeneratorInstanceWrapper* Generator, const class FName& OutputName, int32_t SizeX, int32_t SizeY, float Scale, int32_t StartX, int32_t StartY, bool bHideLatentWarnings)
+	void UVoxelGeneratorTools::CreateFloatTextureFromGeneratorAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+struct FVoxelFloatTexture* OutTexture
+, 
+class UVoxelGeneratorInstanceWrapper* Generator
+, 
+const class FName& OutputName
+, 
+int32_t SizeX
+, 
+int32_t SizeY
+, 
+float Scale
+, 
+int32_t StartX
+, 
+int32_t StartY
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8406,6 +10323,8 @@ namespace CG
 			*OutTexture = params.OutTexture;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8421,7 +10340,23 @@ namespace CG
 	 * 		int32_t                                            StartX                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            StartY                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelGeneratorTools::CreateFloatTextureFromGenerator(struct FVoxelFloatTexture* OutTexture, class UVoxelGeneratorInstanceWrapper* Generator, const class FName& OutputName, int32_t SizeX, int32_t SizeY, float Scale, int32_t StartX, int32_t StartY)
+	void UVoxelGeneratorTools::CreateFloatTextureFromGenerator(
+struct FVoxelFloatTexture* OutTexture
+, 
+class UVoxelGeneratorInstanceWrapper* Generator
+, 
+const class FName& OutputName
+, 
+int32_t SizeX
+, 
+int32_t SizeY
+, 
+float Scale
+, 
+int32_t StartX
+, 
+int32_t StartY
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8454,6 +10389,8 @@ namespace CG
 			*OutTexture = params.OutTexture;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8472,7 +10409,29 @@ namespace CG
 	 * 		int32_t                                            StartY                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelGeneratorTools::CreateColorTextureFromGeneratorAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, struct FVoxelColorTexture* OutTexture, class UVoxelGeneratorInstanceWrapper* Generator, const class FName& OutputName, int32_t SizeX, int32_t SizeY, float Scale, int32_t StartX, int32_t StartY, bool bHideLatentWarnings)
+	void UVoxelGeneratorTools::CreateColorTextureFromGeneratorAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+struct FVoxelColorTexture* OutTexture
+, 
+class UVoxelGeneratorInstanceWrapper* Generator
+, 
+const class FName& OutputName
+, 
+int32_t SizeX
+, 
+int32_t SizeY
+, 
+float Scale
+, 
+int32_t StartX
+, 
+int32_t StartY
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8511,6 +10470,8 @@ namespace CG
 			*OutTexture = params.OutTexture;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8526,7 +10487,23 @@ namespace CG
 	 * 		int32_t                                            StartX                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            StartY                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelGeneratorTools::CreateColorTextureFromGenerator(struct FVoxelColorTexture* OutTexture, class UVoxelGeneratorInstanceWrapper* Generator, const class FName& OutputName, int32_t SizeX, int32_t SizeY, float Scale, int32_t StartX, int32_t StartY)
+	void UVoxelGeneratorTools::CreateColorTextureFromGenerator(
+struct FVoxelColorTexture* OutTexture
+, 
+class UVoxelGeneratorInstanceWrapper* Generator
+, 
+const class FName& OutputName
+, 
+int32_t SizeX
+, 
+int32_t SizeY
+, 
+float Scale
+, 
+int32_t StartX
+, 
+int32_t StartY
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8559,10 +10536,12 @@ namespace CG
 			*OutTexture = params.OutTexture;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelGeneratorTools.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelGeneratorTools.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelGeneratorTools::StaticClass()
@@ -8572,6 +10551,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Voxel.VoxelGeneratorTools");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -8596,6 +10577,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8619,10 +10602,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelHeightmapAsset.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelHeightmapAsset.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelHeightmapAsset::StaticClass()
@@ -8633,10 +10618,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelHeightmapAssetFloat.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelHeightmapAssetFloat.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelHeightmapAssetFloat::StaticClass()
@@ -8647,10 +10634,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelHeightmapAssetUINT16.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelHeightmapAssetUINT16.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelHeightmapAssetUINT16::StaticClass()
@@ -8661,10 +10650,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelInstancedMaterialCollectionTemplates.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelInstancedMaterialCollectionTemplates.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelInstancedMaterialCollectionTemplates::StaticClass()
@@ -8675,10 +10666,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelInstancedMaterialCollection.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelInstancedMaterialCollection.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelInstancedMaterialCollection::StaticClass()
@@ -8689,10 +10682,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelInstancedMaterialCollectionInstance.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelInstancedMaterialCollectionInstance.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelInstancedMaterialCollectionInstance::StaticClass()
@@ -8703,6 +10698,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8712,7 +10709,11 @@ namespace CG
 	 * 		struct FVoxelIntBox                                Box                                                        (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FIntVector                                  Position                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelIntBox UVoxelIntBoxLibrary::TranslateBox(const struct FVoxelIntBox& Box, const struct FIntVector& Position)
+	struct FVoxelIntBox UVoxelIntBoxLibrary::TranslateBox(
+const struct FVoxelIntBox& Box
+, 
+const struct FIntVector& Position
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8733,6 +10734,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8742,7 +10745,11 @@ namespace CG
 	 * 		struct FVoxelIntBox                                Box                                                        (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Scale                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelIntBox UVoxelIntBoxLibrary::Scale(const struct FVoxelIntBox& Box, int32_t Scale)
+	struct FVoxelIntBox UVoxelIntBoxLibrary::Scale(
+const struct FVoxelIntBox& Box
+, 
+int32_t Scale
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8763,6 +10770,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8771,7 +10780,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelIntBox                                Box                                                        (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelIntBox UVoxelIntBoxLibrary::RemoveTranslation(const struct FVoxelIntBox& Box)
+	struct FVoxelIntBox UVoxelIntBoxLibrary::RemoveTranslation(
+const struct FVoxelIntBox& Box
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8790,6 +10801,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8799,7 +10812,11 @@ namespace CG
 	 * 		struct FVoxelIntBox                                A                                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelIntBox                                B                                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelIntBox UVoxelIntBoxLibrary::Overlap(const struct FVoxelIntBox& A, const struct FVoxelIntBox& B)
+	struct FVoxelIntBox UVoxelIntBoxLibrary::Overlap(
+const struct FVoxelIntBox& A
+, 
+const struct FVoxelIntBox& B
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8820,6 +10837,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8829,7 +10848,11 @@ namespace CG
 	 * 		struct FVoxelIntBox                                A                                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelIntBox                                B                                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UVoxelIntBoxLibrary::NotEqual_IntBoxIntBox(const struct FVoxelIntBox& A, const struct FVoxelIntBox& B)
+	bool UVoxelIntBoxLibrary::NotEqual_IntBoxIntBox(
+const struct FVoxelIntBox& A
+, 
+const struct FVoxelIntBox& B
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8850,6 +10873,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8859,7 +10884,11 @@ namespace CG
 	 * 		struct FVoxelIntBox                                Box                                                        (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bIsValid                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelIntBoxWithValidity UVoxelIntBoxLibrary::MakeIntBoxWithValidity(const struct FVoxelIntBox& Box, bool bIsValid)
+	struct FVoxelIntBoxWithValidity UVoxelIntBoxLibrary::MakeIntBoxWithValidity(
+const struct FVoxelIntBox& Box
+, 
+bool bIsValid
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8880,6 +10909,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8888,7 +10919,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<struct FVector>                             Points                                                     (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelIntBox UVoxelIntBoxLibrary::MakeIntBoxFromPoints(TArray<struct FVector> Points)
+	struct FVoxelIntBox UVoxelIntBoxLibrary::MakeIntBoxFromPoints(
+TArray<struct FVector> Points
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8907,6 +10940,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8916,7 +10951,11 @@ namespace CG
 	 * 		struct FIntVector                                  Min                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FIntVector                                  Max                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelIntBox UVoxelIntBoxLibrary::MakeIntBox(const struct FIntVector& Min, const struct FIntVector& Max)
+	struct FVoxelIntBox UVoxelIntBoxLibrary::MakeIntBox(
+const struct FIntVector& Min
+, 
+const struct FIntVector& Max
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8937,6 +10976,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8946,7 +10987,11 @@ namespace CG
 	 * 		struct FVector                                     Position                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Radius                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelIntBox UVoxelIntBoxLibrary::MakeBoxFromPositionAndRadius(const struct FVector& Position, float Radius)
+	struct FVoxelIntBox UVoxelIntBoxLibrary::MakeBoxFromPositionAndRadius(
+const struct FVector& Position
+, 
+float Radius
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8967,6 +11012,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8976,7 +11023,11 @@ namespace CG
 	 * 		struct FIntVector                                  Position                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Radius                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelIntBox UVoxelIntBoxLibrary::MakeBoxFromLocalPositionAndRadius(const struct FIntVector& Position, int32_t Radius)
+	struct FVoxelIntBox UVoxelIntBoxLibrary::MakeBoxFromLocalPositionAndRadius(
+const struct FIntVector& Position
+, 
+int32_t Radius
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8997,6 +11048,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9006,7 +11059,11 @@ namespace CG
 	 * 		struct FVoxelIntBox                                Box                                                        (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector                                     Position                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UVoxelIntBoxLibrary::IsVectorInsideBox(const struct FVoxelIntBox& Box, const struct FVector& Position)
+	bool UVoxelIntBoxLibrary::IsVectorInsideBox(
+const struct FVoxelIntBox& Box
+, 
+const struct FVector& Position
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9027,6 +11084,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9035,7 +11094,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelIntBox                                Box                                                        (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UVoxelIntBoxLibrary::IsValid(const struct FVoxelIntBox& Box)
+	bool UVoxelIntBoxLibrary::IsValid(
+const struct FVoxelIntBox& Box
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9054,6 +11115,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9063,7 +11126,11 @@ namespace CG
 	 * 		struct FVoxelIntBox                                Box                                                        (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FIntVector                                  Position                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UVoxelIntBoxLibrary::IsIntVectorInsideBox(const struct FVoxelIntBox& Box, const struct FIntVector& Position)
+	bool UVoxelIntBoxLibrary::IsIntVectorInsideBox(
+const struct FVoxelIntBox& Box
+, 
+const struct FIntVector& Position
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9084,6 +11151,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9093,7 +11162,11 @@ namespace CG
 	 * 		struct FVoxelIntBox                                Box                                                        (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelIntBox                                Other                                                      (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UVoxelIntBoxLibrary::Intersect(const struct FVoxelIntBox& Box, const struct FVoxelIntBox& Other)
+	bool UVoxelIntBoxLibrary::Intersect(
+const struct FVoxelIntBox& Box
+, 
+const struct FVoxelIntBox& Other
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9113,6 +11186,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -9137,6 +11212,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9145,7 +11222,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelIntBox                                Box                                                        (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FIntVector UVoxelIntBoxLibrary::GetSize(const struct FVoxelIntBox& Box)
+	struct FIntVector UVoxelIntBoxLibrary::GetSize(
+const struct FVoxelIntBox& Box
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9164,6 +11243,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9172,7 +11253,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelIntBox                                Box                                                        (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<struct FIntVector> UVoxelIntBoxLibrary::GetCorners(const struct FVoxelIntBox& Box)
+	TArray<struct FIntVector> UVoxelIntBoxLibrary::GetCorners(
+const struct FVoxelIntBox& Box
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9191,6 +11274,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9199,7 +11284,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelIntBox                                Box                                                        (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVector UVoxelIntBoxLibrary::GetCenter(const struct FVoxelIntBox& Box)
+	struct FVector UVoxelIntBoxLibrary::GetCenter(
+const struct FVoxelIntBox& Box
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9218,6 +11305,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9227,7 +11316,11 @@ namespace CG
 	 * 		struct FVoxelIntBox                                Box                                                        (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FIntVector                                  Extent                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelIntBox UVoxelIntBoxLibrary::Extend_IntVector(const struct FVoxelIntBox& Box, const struct FIntVector& Extent)
+	struct FVoxelIntBox UVoxelIntBoxLibrary::Extend_IntVector(
+const struct FVoxelIntBox& Box
+, 
+const struct FIntVector& Extent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9248,6 +11341,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9257,7 +11352,11 @@ namespace CG
 	 * 		struct FVoxelIntBox                                Box                                                        (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Extent                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelIntBox UVoxelIntBoxLibrary::Extend(const struct FVoxelIntBox& Box, int32_t Extent)
+	struct FVoxelIntBox UVoxelIntBoxLibrary::Extend(
+const struct FVoxelIntBox& Box
+, 
+int32_t Extent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9278,6 +11377,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9287,7 +11388,11 @@ namespace CG
 	 * 		struct FVoxelIntBox                                A                                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelIntBox                                B                                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UVoxelIntBoxLibrary::EqualEqual_IntBoxIntBox(const struct FVoxelIntBox& A, const struct FVoxelIntBox& B)
+	bool UVoxelIntBoxLibrary::EqualEqual_IntBoxIntBox(
+const struct FVoxelIntBox& A
+, 
+const struct FVoxelIntBox& B
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9308,6 +11413,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9316,7 +11423,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FIntVector                                  Vector                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelIntBox UVoxelIntBoxLibrary::Conv_IntVectorToVoxelIntBox(const struct FIntVector& Vector)
+	struct FVoxelIntBox UVoxelIntBoxLibrary::Conv_IntVectorToVoxelIntBox(
+const struct FIntVector& Vector
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9335,6 +11444,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9343,7 +11454,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelIntBox                                IntBox                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UVoxelIntBoxLibrary::Conv_IntBoxToString(const struct FVoxelIntBox& IntBox)
+	class FString UVoxelIntBoxLibrary::Conv_IntBoxToString(
+const struct FVoxelIntBox& IntBox
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9362,6 +11475,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9371,7 +11486,11 @@ namespace CG
 	 * 		struct FVoxelIntBox                                Box                                                        (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelIntBox                                Other                                                      (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UVoxelIntBoxLibrary::Contains(const struct FVoxelIntBox& Box, const struct FVoxelIntBox& Other)
+	bool UVoxelIntBoxLibrary::Contains(
+const struct FVoxelIntBox& Box
+, 
+const struct FVoxelIntBox& Other
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9392,6 +11511,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9400,7 +11521,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelIntBox                                Box                                                        (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelIntBox UVoxelIntBoxLibrary::Center(const struct FVoxelIntBox& Box)
+	struct FVoxelIntBox UVoxelIntBoxLibrary::Center(
+const struct FVoxelIntBox& Box
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9419,6 +11542,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9429,7 +11554,13 @@ namespace CG
 	 * 		struct FVoxelIntBox                                Box                                                        (Parm, OutParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bIsValid                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelIntBoxLibrary::BreakIntBoxWithValidity(const struct FVoxelIntBoxWithValidity& BoxWithValidity, struct FVoxelIntBox* Box, bool* bIsValid)
+	void UVoxelIntBoxLibrary::BreakIntBoxWithValidity(
+const struct FVoxelIntBoxWithValidity& BoxWithValidity
+, 
+struct FVoxelIntBox* Box
+, 
+bool* bIsValid
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9453,6 +11584,8 @@ namespace CG
 			*bIsValid = params.bIsValid;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9463,7 +11596,13 @@ namespace CG
 	 * 		struct FIntVector                                  Min                                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FIntVector                                  Max                                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelIntBoxLibrary::BreakIntBox(const struct FVoxelIntBox& Box, struct FIntVector* Min, struct FIntVector* Max)
+	void UVoxelIntBoxLibrary::BreakIntBox(
+const struct FVoxelIntBox& Box
+, 
+struct FIntVector* Min
+, 
+struct FIntVector* Max
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9487,6 +11626,8 @@ namespace CG
 			*Max = params.Max;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9496,7 +11637,11 @@ namespace CG
 	 * 		struct FVoxelIntBox                                Box                                                        (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FTransform                                  Transform                                                  (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelIntBox UVoxelIntBoxLibrary::ApplyTransform(const struct FVoxelIntBox& Box, const struct FTransform& Transform)
+	struct FVoxelIntBox UVoxelIntBoxLibrary::ApplyTransform(
+const struct FVoxelIntBox& Box
+, 
+const struct FTransform& Transform
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9517,6 +11662,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9526,7 +11673,11 @@ namespace CG
 	 * 		struct FVoxelIntBox                                Box                                                        (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FIntVector                                  Point                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelIntBox UVoxelIntBoxLibrary::AddPoint(const struct FVoxelIntBox& Box, const struct FIntVector& Point)
+	struct FVoxelIntBox UVoxelIntBoxLibrary::AddPoint(
+const struct FVoxelIntBox& Box
+, 
+const struct FIntVector& Point
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9547,6 +11698,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9556,7 +11709,11 @@ namespace CG
 	 * 		struct FVoxelIntBox                                Box                                                        (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelIntBox                                BoxToAdd                                                   (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelIntBox UVoxelIntBoxLibrary::AddBox(const struct FVoxelIntBox& Box, const struct FVoxelIntBox& BoxToAdd)
+	struct FVoxelIntBox UVoxelIntBoxLibrary::AddBox(
+const struct FVoxelIntBox& Box
+, 
+const struct FVoxelIntBox& BoxToAdd
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9577,10 +11734,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelIntBoxLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelIntBoxLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelIntBoxLibrary::StaticClass()
@@ -9591,6 +11750,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9599,7 +11760,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AVoxelWorld*                                 VoxelWorld                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UVoxelInvokerComponentBase::ShouldUseInvoker(class AVoxelWorld* VoxelWorld)
+	bool UVoxelInvokerComponentBase::ShouldUseInvoker(
+class AVoxelWorld* VoxelWorld
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9617,6 +11780,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -9638,6 +11803,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -9662,6 +11829,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9670,7 +11839,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AVoxelWorld*                                 VoxelWorld                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FIntVector UVoxelInvokerComponentBase::GetInvokerVoxelPosition(class AVoxelWorld* VoxelWorld)
+	struct FIntVector UVoxelInvokerComponentBase::GetInvokerVoxelPosition(
+class AVoxelWorld* VoxelWorld
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9689,6 +11860,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9697,7 +11870,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AVoxelWorld*                                 VoxelWorld                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelInvokerSettings UVoxelInvokerComponentBase::GetInvokerSettings(class AVoxelWorld* VoxelWorld)
+	struct FVoxelInvokerSettings UVoxelInvokerComponentBase::GetInvokerSettings(
+class AVoxelWorld* VoxelWorld
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9716,10 +11891,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelInvokerComponentBase.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelInvokerComponentBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelInvokerComponentBase::StaticClass()
@@ -9729,6 +11906,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Voxel.VoxelInvokerComponentBase");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -9753,10 +11932,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelSimpleInvokerComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelSimpleInvokerComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelSimpleInvokerComponent::StaticClass()
@@ -9767,10 +11948,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelInvokerWithPredictionComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelInvokerWithPredictionComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelInvokerWithPredictionComponent::StaticClass()
@@ -9781,10 +11964,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelInvokerAutoCameraComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelInvokerAutoCameraComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelInvokerAutoCameraComponent::StaticClass()
@@ -9795,10 +11980,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelVolumeInvokerComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelVolumeInvokerComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelVolumeInvokerComponent::StaticClass()
@@ -9809,10 +11996,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AVoxelLODVolume.StaticClass
+	 * 		Name   -> PredefinedFunction AVoxelLODVolume.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AVoxelLODVolume::StaticClass()
@@ -9823,10 +12012,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AVoxelLandscapeImporter.StaticClass
+	 * 		Name   -> PredefinedFunction AVoxelLandscapeImporter.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AVoxelLandscapeImporter::StaticClass()
@@ -9837,10 +12028,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelLandscapeMaterialCollection.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelLandscapeMaterialCollection.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelLandscapeMaterialCollection::StaticClass()
@@ -9851,10 +12044,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelLevelTool.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelLevelTool.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelLevelTool::StaticClass()
@@ -9864,6 +12059,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Voxel.VoxelLevelTool");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -9887,7 +12084,37 @@ namespace CG
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelLevelTools::LevelAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, float Falloff, float Height, bool bAdditive, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender, bool bHideLatentWarnings)
+	void UVoxelLevelTools::LevelAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+TArray<struct FModifiedVoxelValue>* ModifiedValues
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVector& Position
+, 
+float Radius
+, 
+float Falloff
+, 
+float Height
+, 
+bool bAdditive
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedValues
+, 
+bool bConvertToVoxelSpace
+, 
+bool bUpdateRender
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9935,6 +12162,8 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -9954,7 +12183,31 @@ namespace CG
 	 * 		bool                                               bConvertToVoxelSpace                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelLevelTools::Level(TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, float Falloff, float Height, bool bAdditive, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender)
+	void UVoxelLevelTools::Level(
+TArray<struct FModifiedVoxelValue>* ModifiedValues
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVector& Position
+, 
+float Radius
+, 
+float Falloff
+, 
+float Height
+, 
+bool bAdditive
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedValues
+, 
+bool bConvertToVoxelSpace
+, 
+bool bUpdateRender
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -9996,10 +12249,12 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelLevelTools.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelLevelTools.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelLevelTools::StaticClass()
@@ -10010,10 +12265,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelLineBatchComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelLineBatchComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelLineBatchComponent::StaticClass()
@@ -10024,10 +12281,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelMagicaVoxScene.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelMagicaVoxScene.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelMagicaVoxScene::StaticClass()
@@ -10038,6 +12297,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10046,7 +12307,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UVoxelMagicaVoxScene*                        Scene                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void AVoxelMagicaVoxSceneActor::SetScene(class UVoxelMagicaVoxScene* Scene)
+	void AVoxelMagicaVoxSceneActor::SetScene(
+class UVoxelMagicaVoxScene* Scene
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10062,6 +12325,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -10084,10 +12349,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AVoxelMagicaVoxSceneActor.StaticClass
+	 * 		Name   -> PredefinedFunction AVoxelMagicaVoxSceneActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AVoxelMagicaVoxSceneActor::StaticClass()
@@ -10098,10 +12365,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMaterialExpressionVoxelLandscapeLayerBlend.StaticClass
+	 * 		Name   -> PredefinedFunction UMaterialExpressionVoxelLandscapeLayerBlend.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMaterialExpressionVoxelLandscapeLayerBlend::StaticClass()
@@ -10112,10 +12381,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMaterialExpressionVoxelLandscapeLayerSwitch.StaticClass
+	 * 		Name   -> PredefinedFunction UMaterialExpressionVoxelLandscapeLayerSwitch.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMaterialExpressionVoxelLandscapeLayerSwitch::StaticClass()
@@ -10126,10 +12397,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMaterialExpressionVoxelLandscapeLayerWeight.StaticClass
+	 * 		Name   -> PredefinedFunction UMaterialExpressionVoxelLandscapeLayerWeight.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMaterialExpressionVoxelLandscapeLayerWeight::StaticClass()
@@ -10140,10 +12413,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMaterialExpressionVoxelLandscapeLayerSample.StaticClass
+	 * 		Name   -> PredefinedFunction UMaterialExpressionVoxelLandscapeLayerSample.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMaterialExpressionVoxelLandscapeLayerSample::StaticClass()
@@ -10154,10 +12429,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMaterialExpressionVoxelLandscapeVisibilityMask.StaticClass
+	 * 		Name   -> PredefinedFunction UMaterialExpressionVoxelLandscapeVisibilityMask.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMaterialExpressionVoxelLandscapeVisibilityMask::StaticClass()
@@ -10168,6 +12445,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10176,7 +12455,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelHaltonStream                          Stream                                                     (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelMathLibrary::ResetHaltonStream(const struct FVoxelHaltonStream& Stream)
+	void UVoxelMathLibrary::ResetHaltonStream(
+const struct FVoxelHaltonStream& Stream
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10193,6 +12474,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10201,7 +12484,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            InitialSeed                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelHaltonStream UVoxelMathLibrary::MakeHaltonStream(int32_t InitialSeed)
+	struct FVoxelHaltonStream UVoxelMathLibrary::MakeHaltonStream(
+int32_t InitialSeed
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10220,6 +12505,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10228,7 +12515,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector2D                                   Random                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVector UVoxelMathLibrary::GetUnitVectorFromRandom(const struct FVector2D& Random)
+	struct FVector UVoxelMathLibrary::GetUnitVectorFromRandom(
+const struct FVector2D& Random
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10247,6 +12536,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10255,7 +12546,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelHaltonStream                          Stream                                                     (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	struct FVector UVoxelMathLibrary::GetHalton3D(const struct FVoxelHaltonStream& Stream)
+	struct FVector UVoxelMathLibrary::GetHalton3D(
+const struct FVoxelHaltonStream& Stream
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10274,6 +12567,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10282,7 +12577,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelHaltonStream                          Stream                                                     (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	struct FVector2D UVoxelMathLibrary::GetHalton2D(const struct FVoxelHaltonStream& Stream)
+	struct FVector2D UVoxelMathLibrary::GetHalton2D(
+const struct FVoxelHaltonStream& Stream
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10301,6 +12598,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10309,7 +12608,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelHaltonStream                          Stream                                                     (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	float UVoxelMathLibrary::GetHalton1D(const struct FVoxelHaltonStream& Stream)
+	float UVoxelMathLibrary::GetHalton1D(
+const struct FVoxelHaltonStream& Stream
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10328,10 +12629,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelMathLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelMathLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelMathLibrary::StaticClass()
@@ -10342,10 +12645,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelMeshImporterInputData.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelMeshImporterInputData.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelMeshImporterInputData::StaticClass()
@@ -10355,6 +12660,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Voxel.VoxelMeshImporterInputData");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -10367,7 +12674,15 @@ namespace CG
 	 * 		int32_t                                            Width                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Height                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UTextureRenderTarget2D* UVoxelMeshImporterLibrary::CreateTextureFromMaterial(class UObject* WorldContextObject, class UMaterialInterface* Material, int32_t Width, int32_t Height)
+	class UTextureRenderTarget2D* UVoxelMeshImporterLibrary::CreateTextureFromMaterial(
+class UObject* WorldContextObject
+, 
+class UMaterialInterface* Material
+, 
+int32_t Width
+, 
+int32_t Height
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10392,6 +12707,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10400,7 +12717,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UStaticMesh*                                 StaticMesh                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UVoxelMeshImporterInputData* UVoxelMeshImporterLibrary::CreateMeshDataFromStaticMesh(class UStaticMesh* StaticMesh)
+	class UVoxelMeshImporterInputData* UVoxelMeshImporterLibrary::CreateMeshDataFromStaticMesh(
+class UStaticMesh* StaticMesh
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10419,6 +12738,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10433,7 +12754,21 @@ namespace CG
 	 * 		class UVoxelDataAsset*                             Asset                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            NumLeaks                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelMeshImporterLibrary::ConvertMeshToVoxels_NoMaterials(class UObject* WorldContextObject, class UVoxelMeshImporterInputData* Mesh, const struct FTransform& Transform, bool bSubtractive, const struct FVoxelMeshImporterSettingsBase& Settings, class UVoxelDataAsset** Asset, int32_t* NumLeaks)
+	void UVoxelMeshImporterLibrary::ConvertMeshToVoxels_NoMaterials(
+class UObject* WorldContextObject
+, 
+class UVoxelMeshImporterInputData* Mesh
+, 
+const struct FTransform& Transform
+, 
+bool bSubtractive
+, 
+const struct FVoxelMeshImporterSettingsBase& Settings
+, 
+class UVoxelDataAsset** Asset
+, 
+int32_t* NumLeaks
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10465,6 +12800,8 @@ namespace CG
 			*NumLeaks = params.NumLeaks;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10480,7 +12817,23 @@ namespace CG
 	 * 		class UVoxelDataAsset*                             Asset                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            NumLeaks                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelMeshImporterLibrary::ConvertMeshToVoxels(class UObject* WorldContextObject, class UVoxelMeshImporterInputData* Mesh, const struct FTransform& Transform, bool bSubtractive, const struct FVoxelMeshImporterSettings& Settings, struct FVoxelMeshImporterRenderTargetCache* RenderTargetCache, class UVoxelDataAsset** Asset, int32_t* NumLeaks)
+	void UVoxelMeshImporterLibrary::ConvertMeshToVoxels(
+class UObject* WorldContextObject
+, 
+class UVoxelMeshImporterInputData* Mesh
+, 
+const struct FTransform& Transform
+, 
+bool bSubtractive
+, 
+const struct FVoxelMeshImporterSettings& Settings
+, 
+struct FVoxelMeshImporterRenderTargetCache* RenderTargetCache
+, 
+class UVoxelDataAsset** Asset
+, 
+int32_t* NumLeaks
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10515,10 +12868,12 @@ namespace CG
 			*NumLeaks = params.NumLeaks;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelMeshImporterLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelMeshImporterLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelMeshImporterLibrary::StaticClass()
@@ -10529,10 +12884,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AVoxelMeshImporter.StaticClass
+	 * 		Name   -> PredefinedFunction AVoxelMeshImporter.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AVoxelMeshImporter::StaticClass()
@@ -10543,10 +12900,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelToolWithAlignment.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelToolWithAlignment.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelToolWithAlignment::StaticClass()
@@ -10557,10 +12916,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelMeshTool.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelMeshTool.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelMeshTool::StaticClass()
@@ -10571,10 +12932,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelMultiplayerInterface.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelMultiplayerInterface.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelMultiplayerInterface::StaticClass()
@@ -10585,10 +12948,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelMultiplayerSubsystemProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelMultiplayerSubsystemProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelMultiplayerSubsystemProxy::StaticClass()
@@ -10598,6 +12963,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Voxel.VoxelMultiplayerSubsystemProxy");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -10609,7 +12976,13 @@ namespace CG
 	 * 		class FString                                      IP                                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Port                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UVoxelMultiplayerTcpInterface::StartServer(class FString* OutError, const class FString& IP, int32_t Port)
+	bool UVoxelMultiplayerTcpInterface::StartServer(
+class FString* OutError
+, 
+const class FString& IP
+, 
+int32_t Port
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10634,6 +13007,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10644,7 +13019,13 @@ namespace CG
 	 * 		class FString                                      IP                                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Port                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UVoxelMultiplayerTcpInterface::ConnectToServer(class FString* OutError, const class FString& IP, int32_t Port)
+	bool UVoxelMultiplayerTcpInterface::ConnectToServer(
+class FString* OutError
+, 
+const class FString& IP
+, 
+int32_t Port
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10669,10 +13050,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelMultiplayerTcpInterface.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelMultiplayerTcpInterface.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelMultiplayerTcpInterface::StaticClass()
@@ -10683,6 +13066,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10691,7 +13076,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AVoxelWorld*                                 VoxelWorld                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UVoxelNoClippingComponent::ShouldUseVoxelWorld(class AVoxelWorld* VoxelWorld)
+	bool UVoxelNoClippingComponent::ShouldUseVoxelWorld(
+class AVoxelWorld* VoxelWorld
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10709,6 +13096,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -10731,6 +13120,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10751,6 +13142,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -10773,10 +13166,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelNoClippingComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelNoClippingComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelNoClippingComponent::StaticClass()
@@ -10786,6 +13181,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Voxel.VoxelNoClippingComponent");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -10801,7 +13198,21 @@ namespace CG
 	 * 		bool                                               bDebug                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelPhysicsTools::ApplyVoxelPhysics(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, int32_t MinParts, bool bDebug, bool bHideLatentWarnings)
+	void UVoxelPhysicsTools::ApplyVoxelPhysics(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+, 
+int32_t MinParts
+, 
+bool bDebug
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -10830,10 +13241,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelPhysicsTools.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelPhysicsTools.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelPhysicsTools::StaticClass()
@@ -10844,10 +13257,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelPhysicsPartSpawnerResult_VoxelWorlds.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelPhysicsPartSpawnerResult_VoxelWorlds.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelPhysicsPartSpawnerResult_VoxelWorlds::StaticClass()
@@ -10858,10 +13273,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelPhysicsPartSpawner_VoxelWorlds.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelPhysicsPartSpawner_VoxelWorlds.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelPhysicsPartSpawner_VoxelWorlds::StaticClass()
@@ -10872,10 +13289,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelPhysicsPartSpawnerResult_Cubes.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelPhysicsPartSpawnerResult_Cubes.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelPhysicsPartSpawnerResult_Cubes::StaticClass()
@@ -10886,10 +13305,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelPhysicsPartSpawner_Cubes.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelPhysicsPartSpawner_Cubes.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelPhysicsPartSpawner_Cubes::StaticClass()
@@ -10900,10 +13321,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelPhysicsPartSpawnerResult_GetVoxels.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelPhysicsPartSpawnerResult_GetVoxels.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelPhysicsPartSpawnerResult_GetVoxels::StaticClass()
@@ -10914,10 +13337,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelPhysicsPartSpawner_GetVoxels.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelPhysicsPartSpawner_GetVoxels.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelPhysicsPartSpawner_GetVoxels::StaticClass()
@@ -10928,10 +13353,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelPhysicsPartSpawnerResult.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelPhysicsPartSpawnerResult.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelPhysicsPartSpawnerResult::StaticClass()
@@ -10942,10 +13369,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelPhysicsPartSpawner.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelPhysicsPartSpawner.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelPhysicsPartSpawner::StaticClass()
@@ -10956,10 +13385,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelPhysicsRelevancyComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelPhysicsRelevancyComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelPhysicsRelevancyComponent::StaticClass()
@@ -10970,10 +13401,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AVoxelRuntimeActor.StaticClass
+	 * 		Name   -> PredefinedFunction AVoxelRuntimeActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AVoxelRuntimeActor::StaticClass()
@@ -10984,6 +13417,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -10992,7 +13427,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            NewWorldSizeInVoxel                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void AVoxelWorld::SetWorldSize(int32_t NewWorldSizeInVoxel)
+	void AVoxelWorld::SetWorldSize(
+int32_t NewWorldSizeInVoxel
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11009,6 +13446,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11017,7 +13456,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            NewDepth                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void AVoxelWorld::SetRenderOctreeDepth(int32_t NewDepth)
+	void AVoxelWorld::SetRenderOctreeDepth(
+int32_t NewDepth
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11034,6 +13475,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11042,7 +13485,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            NewChunkSize                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void AVoxelWorld::SetRenderOctreeChunkSize(int32_t NewChunkSize)
+	void AVoxelWorld::SetRenderOctreeChunkSize(
+int32_t NewChunkSize
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11059,6 +13504,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11067,7 +13514,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UVoxelGenerator*                             NewGenerator                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void AVoxelWorld::SetGeneratorObject(class UVoxelGenerator* NewGenerator)
+	void AVoxelWorld::SetGeneratorObject(
+class UVoxelGenerator* NewGenerator
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11084,6 +13533,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11092,7 +13543,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UClass*                                      NewGeneratorClass                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void AVoxelWorld::SetGeneratorClass(class UClass* NewGeneratorClass)
+	void AVoxelWorld::SetGeneratorClass(
+class UClass* NewGeneratorClass
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11109,6 +13562,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11118,7 +13573,11 @@ namespace CG
 	 * 		ECollisionChannel                                  Channel                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ECollisionResponse                                 NewResponse                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void AVoxelWorld::SetCollisionResponseToChannel(ECollisionChannel Channel, ECollisionResponse NewResponse)
+	void AVoxelWorld::SetCollisionResponseToChannel(
+ECollisionChannel Channel
+, 
+ECollisionResponse NewResponse
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11136,6 +13595,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -11158,6 +13619,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11178,6 +13641,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -11200,6 +13665,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11221,6 +13688,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11230,7 +13699,11 @@ namespace CG
 	 * 		class AVoxelWorld*                                 VoxelWorld                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelCompressedWorldSave                   Save                                                       (Parm, NativeAccessSpecifierPublic)
 	 */
-	void AVoxelWorld::LogCompressedSaveSize(class AVoxelWorld* VoxelWorld, const struct FVoxelCompressedWorldSave& Save)
+	void AVoxelWorld::LogCompressedSaveSize(
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVoxelCompressedWorldSave& Save
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11249,6 +13722,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11257,7 +13732,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector                                     Position                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVector AVoxelWorld::K2_LocalToGlobalFloat(const struct FVector& Position)
+	struct FVector AVoxelWorld::K2_LocalToGlobalFloat(
+const struct FVector& Position
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11276,6 +13753,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11284,7 +13763,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelIntBox                                Bounds                                                     (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FBox AVoxelWorld::K2_LocalToGlobalBounds(const struct FVoxelIntBox& Bounds)
+	struct FBox AVoxelWorld::K2_LocalToGlobalBounds(
+const struct FVoxelIntBox& Bounds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11303,6 +13784,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11311,7 +13794,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FIntVector                                  Position                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVector AVoxelWorld::K2_LocalToGlobal(const struct FIntVector& Position)
+	struct FVector AVoxelWorld::K2_LocalToGlobal(
+const struct FIntVector& Position
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11330,6 +13815,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11338,7 +13825,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector                                     Position                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVector AVoxelWorld::K2_GlobalToLocalFloat(const struct FVector& Position)
+	struct FVector AVoxelWorld::K2_GlobalToLocalFloat(
+const struct FVector& Position
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11357,6 +13846,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11365,7 +13856,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FBox                                        Bounds                                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelIntBox AVoxelWorld::K2_GlobalToLocalBounds(const struct FBox& Bounds)
+	struct FVoxelIntBox AVoxelWorld::K2_GlobalToLocalBounds(
+const struct FBox& Bounds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11384,6 +13877,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11393,7 +13888,11 @@ namespace CG
 	 * 		struct FVector                                     Position                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EVoxelWorldCoordinatesRounding                     Rounding                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FIntVector AVoxelWorld::K2_GlobalToLocal(const struct FVector& Position, EVoxelWorldCoordinatesRounding Rounding)
+	struct FIntVector AVoxelWorld::K2_GlobalToLocal(
+const struct FVector& Position
+, 
+EVoxelWorldCoordinatesRounding Rounding
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11413,6 +13912,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -11437,6 +13938,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11460,6 +13963,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11468,7 +13973,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector                                     GlobalPosition                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<struct FIntVector> AVoxelWorld::GetNeighboringPositions(const struct FVector& GlobalPosition)
+	TArray<struct FIntVector> AVoxelWorld::GetNeighboringPositions(
+const struct FVector& GlobalPosition
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11486,6 +13993,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -11510,6 +14019,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11532,6 +14043,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -11556,6 +14069,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11577,6 +14092,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11585,7 +14102,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelWorldCreateInfo                       Info                                                       (Parm, NativeAccessSpecifierPublic)
 	 */
-	void AVoxelWorld::CreateWorld(const struct FVoxelWorldCreateInfo& Info)
+	void AVoxelWorld::CreateWorld(
+const struct FVoxelWorldCreateInfo& Info
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11601,6 +14120,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -11625,10 +14146,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AVoxelWorld.StaticClass
+	 * 		Name   -> PredefinedFunction AVoxelWorld.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AVoxelWorld::StaticClass()
@@ -11639,10 +14162,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelPlaceableItemActorHelper.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelPlaceableItemActorHelper.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelPlaceableItemActorHelper::StaticClass()
@@ -11652,6 +14177,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Voxel.VoxelPlaceableItemActorHelper");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -11674,6 +14201,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11694,6 +14223,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -11718,6 +14249,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11727,7 +14260,11 @@ namespace CG
 	 * 		struct FVector                                     Position                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FLinearColor                                Color                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelPlaceableItemManager::DrawDebugPoint(const struct FVector& Position, const struct FLinearColor& Color)
+	void UVoxelPlaceableItemManager::DrawDebugPoint(
+const struct FVector& Position
+, 
+const struct FLinearColor& Color
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11746,6 +14283,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11756,7 +14295,13 @@ namespace CG
 	 * 		struct FVector                                     End                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FLinearColor                                Color                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelPlaceableItemManager::DrawDebugLine(const struct FVector& Start, const struct FVector& End, const struct FLinearColor& Color)
+	void UVoxelPlaceableItemManager::DrawDebugLine(
+const struct FVector& Start
+, 
+const struct FVector& End
+, 
+const struct FLinearColor& Color
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11777,6 +14322,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11785,7 +14332,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelDataItemConstructionInfo              Info                                                       (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelPlaceableItemManager::AddDataItem(const struct FVoxelDataItemConstructionInfo& Info)
+	void UVoxelPlaceableItemManager::AddDataItem(
+const struct FVoxelDataItemConstructionInfo& Info
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11802,10 +14351,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelPlaceableItemManager.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelPlaceableItemManager.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelPlaceableItemManager::StaticClass()
@@ -11816,6 +14367,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11825,7 +14378,11 @@ namespace CG
 	 * 		class FScriptDelegate                              AddWorm                                                    (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelPerlinWormsSettings                   Settings                                                   (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelPlaceableItemsUtilities::AddWorms(const class FScriptDelegate& AddWorm, const struct FVoxelPerlinWormsSettings& Settings)
+	void UVoxelPlaceableItemsUtilities::AddWorms(
+const class FScriptDelegate& AddWorm
+, 
+const struct FVoxelPerlinWormsSettings& Settings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11844,6 +14401,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11854,7 +14413,13 @@ namespace CG
 	 * 		struct FVector                                     End                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Radius                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelPlaceableItemsUtilities::AddWorm__DelegateSignature(const struct FVector& Start, const struct FVector& End, float Radius)
+	void UVoxelPlaceableItemsUtilities::AddWorm__DelegateSignature(
+const struct FVector& Start
+, 
+const struct FVector& End
+, 
+float Radius
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11875,10 +14440,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelPlaceableItemsUtilities.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelPlaceableItemsUtilities.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelPlaceableItemsUtilities::StaticClass()
@@ -11889,10 +14456,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelPoolSubsystemProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelPoolSubsystemProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelPoolSubsystemProxy::StaticClass()
@@ -11903,6 +14472,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11912,7 +14483,11 @@ namespace CG
 	 * 		class AVoxelWorld*                                 VoxelWorld                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bFrozen                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelProceduralMeshComponent::SetVoxelCollisionsFrozen(class AVoxelWorld* VoxelWorld, bool bFrozen)
+	void UVoxelProceduralMeshComponent::SetVoxelCollisionsFrozen(
+class AVoxelWorld* VoxelWorld
+, 
+bool bFrozen
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11931,6 +14506,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11940,7 +14517,11 @@ namespace CG
 	 * 		unsigned char                                      ChunkLOD                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelIntBox                                ChunkBounds                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelProceduralMeshComponent::InitChunk(unsigned char ChunkLOD, const struct FVoxelIntBox& ChunkBounds)
+	void UVoxelProceduralMeshComponent::InitChunk(
+unsigned char ChunkLOD
+, 
+const struct FVoxelIntBox& ChunkBounds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11959,6 +14540,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -11967,7 +14550,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AVoxelWorld*                                 VoxelWorld                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UVoxelProceduralMeshComponent::AreVoxelCollisionsFrozen(class AVoxelWorld* VoxelWorld)
+	bool UVoxelProceduralMeshComponent::AreVoxelCollisionsFrozen(
+class AVoxelWorld* VoxelWorld
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -11986,10 +14571,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelProceduralMeshComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelProceduralMeshComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelProceduralMeshComponent::StaticClass()
@@ -11999,6 +14586,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Voxel.VoxelProceduralMeshComponent");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -12014,7 +14603,21 @@ namespace CG
 	 * 		struct FLinearColor                                TraceHitColor                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              DrawTime                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelLineTraceParameters UVoxelProjectionTools::MakeVoxelLineTraceParameters(TArray<ECollisionChannel> CollisionChannelsToIgnore, TArray<class AActor*> ActorsToIgnore, ECollisionChannel CollisionChannel, EDrawDebugTrace DrawDebugType, const struct FLinearColor& TraceColor, const struct FLinearColor& TraceHitColor, float DrawTime)
+	struct FVoxelLineTraceParameters UVoxelProjectionTools::MakeVoxelLineTraceParameters(
+TArray<ECollisionChannel> CollisionChannelsToIgnore
+, 
+TArray<class AActor*> ActorsToIgnore
+, 
+ECollisionChannel CollisionChannel
+, 
+EDrawDebugTrace DrawDebugType
+, 
+const struct FLinearColor& TraceColor
+, 
+const struct FLinearColor& TraceHitColor
+, 
+float DrawTime
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12045,6 +14648,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12053,7 +14658,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<struct FVoxelProjectionHit>                 Hits                                                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	 */
-	TArray<struct FIntVector> UVoxelProjectionTools::GetHitsPositions(TArray<struct FVoxelProjectionHit> Hits)
+	TArray<struct FIntVector> UVoxelProjectionTools::GetHitsPositions(
+TArray<struct FVoxelProjectionHit> Hits
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12072,6 +14679,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12080,7 +14689,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<struct FVoxelProjectionHit>                 Hits                                                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	 */
-	struct FVector UVoxelProjectionTools::GetHitsAveragePosition(TArray<struct FVoxelProjectionHit> Hits)
+	struct FVector UVoxelProjectionTools::GetHitsAveragePosition(
+TArray<struct FVoxelProjectionHit> Hits
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12099,6 +14710,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12107,7 +14720,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<struct FVoxelProjectionHit>                 Hits                                                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	 */
-	struct FVector UVoxelProjectionTools::GetHitsAverageNormal(TArray<struct FVoxelProjectionHit> Hits)
+	struct FVector UVoxelProjectionTools::GetHitsAverageNormal(
+TArray<struct FVoxelProjectionHit> Hits
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12125,6 +14740,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -12145,7 +14762,31 @@ namespace CG
 	 * 		float                                              MaxDistance                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UVoxelProjectionTools::FindProjectionVoxelsAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FVoxelProjectionHit>* Hits, class AVoxelWorld* World, const struct FVoxelLineTraceParameters& Parameters, const struct FVector& Position, const struct FVector& Direction, float Radius, EVoxelProjectionShape Shape, float NumRays, float MaxDistance, bool bHideLatentWarnings)
+	int32_t UVoxelProjectionTools::FindProjectionVoxelsAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+TArray<struct FVoxelProjectionHit>* Hits
+, 
+class AVoxelWorld* World
+, 
+const struct FVoxelLineTraceParameters& Parameters
+, 
+const struct FVector& Position
+, 
+const struct FVector& Direction
+, 
+float Radius
+, 
+EVoxelProjectionShape Shape
+, 
+float NumRays
+, 
+float MaxDistance
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12188,6 +14829,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12204,7 +14847,25 @@ namespace CG
 	 * 		float                                              NumRays                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              MaxDistance                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UVoxelProjectionTools::FindProjectionVoxels(TArray<struct FVoxelProjectionHit>* Hits, class AVoxelWorld* World, const struct FVoxelLineTraceParameters& Parameters, const struct FVector& Position, const struct FVector& Direction, float Radius, EVoxelProjectionShape Shape, float NumRays, float MaxDistance)
+	int32_t UVoxelProjectionTools::FindProjectionVoxels(
+TArray<struct FVoxelProjectionHit>* Hits
+, 
+class AVoxelWorld* World
+, 
+const struct FVoxelLineTraceParameters& Parameters
+, 
+const struct FVector& Position
+, 
+const struct FVector& Direction
+, 
+float Radius
+, 
+EVoxelProjectionShape Shape
+, 
+float NumRays
+, 
+float MaxDistance
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12241,6 +14902,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12250,7 +14913,11 @@ namespace CG
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FVoxelProjectionHit>                 Hits                                                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelSurfaceEditsVoxels UVoxelProjectionTools::CreateSurfaceVoxelsFromHitsWithExactValues(class AVoxelWorld* World, TArray<struct FVoxelProjectionHit> Hits)
+	struct FVoxelSurfaceEditsVoxels UVoxelProjectionTools::CreateSurfaceVoxelsFromHitsWithExactValues(
+class AVoxelWorld* World
+, 
+TArray<struct FVoxelProjectionHit> Hits
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12271,6 +14938,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12279,7 +14948,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<struct FVoxelProjectionHit>                 Hits                                                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelSurfaceEditsVoxels UVoxelProjectionTools::CreateSurfaceVoxelsFromHits(TArray<struct FVoxelProjectionHit> Hits)
+	struct FVoxelSurfaceEditsVoxels UVoxelProjectionTools::CreateSurfaceVoxelsFromHits(
+TArray<struct FVoxelProjectionHit> Hits
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12298,10 +14969,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelProjectionTools.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelProjectionTools.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelProjectionTools::StaticClass()
@@ -12312,10 +14985,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelSphereToolBase.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelSphereToolBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelSphereToolBase::StaticClass()
@@ -12326,10 +15001,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelRevertTool.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelRevertTool.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelRevertTool::StaticClass()
@@ -12340,10 +15017,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelWorldSaveObject.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelWorldSaveObject.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelWorldSaveObject::StaticClass()
@@ -12354,6 +15033,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12363,7 +15044,11 @@ namespace CG
 	 * 		struct FVoxelCompressedWorldSave                   CompressedSave                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelUncompressedWorldSave                 OutUncompressedSave                                        (Parm, OutParm, NativeAccessSpecifierPublic)
 	 */
-	bool UVoxelSaveUtilities::DecompressVoxelSave(const struct FVoxelCompressedWorldSave& CompressedSave, struct FVoxelUncompressedWorldSave* OutUncompressedSave)
+	bool UVoxelSaveUtilities::DecompressVoxelSave(
+const struct FVoxelCompressedWorldSave& CompressedSave
+, 
+struct FVoxelUncompressedWorldSave* OutUncompressedSave
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12386,6 +15071,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12395,7 +15082,11 @@ namespace CG
 	 * 		struct FVoxelUncompressedWorldSave                 UncompressedSave                                           (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelCompressedWorldSave                   OutCompressedSave                                          (Parm, OutParm, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSaveUtilities::CompressVoxelSave(const struct FVoxelUncompressedWorldSave& UncompressedSave, struct FVoxelCompressedWorldSave* OutCompressedSave)
+	void UVoxelSaveUtilities::CompressVoxelSave(
+const struct FVoxelUncompressedWorldSave& UncompressedSave
+, 
+struct FVoxelCompressedWorldSave* OutCompressedSave
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12416,10 +15107,12 @@ namespace CG
 			*OutCompressedSave = params.OutCompressedSave;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelSaveUtilities.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelSaveUtilities.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelSaveUtilities::StaticClass()
@@ -12430,10 +15123,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelSettings.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelSettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelSettings::StaticClass()
@@ -12444,10 +15139,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelSmoothTool.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelSmoothTool.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelSmoothTool::StaticClass()
@@ -12458,10 +15155,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelSphereTool.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelSphereTool.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelSphereTool::StaticClass()
@@ -12471,6 +15170,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Voxel.VoxelSphereTool");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -12494,7 +15195,37 @@ namespace CG
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSphereTools::TrimSphereAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, const struct FVector& Normal, float Radius, float Falloff, bool bAdditive, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender, bool bHideLatentWarnings)
+	void UVoxelSphereTools::TrimSphereAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+TArray<struct FModifiedVoxelValue>* ModifiedValues
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVector& Position
+, 
+const struct FVector& Normal
+, 
+float Radius
+, 
+float Falloff
+, 
+bool bAdditive
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedValues
+, 
+bool bConvertToVoxelSpace
+, 
+bool bUpdateRender
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12542,6 +15273,8 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12561,7 +15294,31 @@ namespace CG
 	 * 		bool                                               bConvertToVoxelSpace                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSphereTools::TrimSphere(TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, const struct FVector& Normal, float Radius, float Falloff, bool bAdditive, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender)
+	void UVoxelSphereTools::TrimSphere(
+TArray<struct FModifiedVoxelValue>* ModifiedValues
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVector& Position
+, 
+const struct FVector& Normal
+, 
+float Radius
+, 
+float Falloff
+, 
+bool bAdditive
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedValues
+, 
+bool bConvertToVoxelSpace
+, 
+bool bUpdateRender
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12603,6 +15360,8 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12626,7 +15385,39 @@ namespace CG
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSphereTools::SmoothSphereAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, float Strength, int32_t NumIterations, EVoxelFalloff FalloffType, float Falloff, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender, bool bHideLatentWarnings)
+	void UVoxelSphereTools::SmoothSphereAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+TArray<struct FModifiedVoxelValue>* ModifiedValues
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVector& Position
+, 
+float Radius
+, 
+float Strength
+, 
+int32_t NumIterations
+, 
+EVoxelFalloff FalloffType
+, 
+float Falloff
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedValues
+, 
+bool bConvertToVoxelSpace
+, 
+bool bUpdateRender
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12676,6 +15467,8 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12696,7 +15489,33 @@ namespace CG
 	 * 		bool                                               bConvertToVoxelSpace                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSphereTools::SmoothSphere(TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, float Strength, int32_t NumIterations, EVoxelFalloff FalloffType, float Falloff, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender)
+	void UVoxelSphereTools::SmoothSphere(
+TArray<struct FModifiedVoxelValue>* ModifiedValues
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVector& Position
+, 
+float Radius
+, 
+float Strength
+, 
+int32_t NumIterations
+, 
+EVoxelFalloff FalloffType
+, 
+float Falloff
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedValues
+, 
+bool bConvertToVoxelSpace
+, 
+bool bUpdateRender
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12740,6 +15559,8 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12764,7 +15585,41 @@ namespace CG
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSphereTools::SmoothMaterialSphereAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelMaterial>* ModifiedMaterials, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, float Strength, int32_t NumIterations, int32_t Mask, EVoxelFalloff FalloffType, float Falloff, bool bMultiThreaded, bool bRecordModifiedMaterials, bool bConvertToVoxelSpace, bool bUpdateRender, bool bHideLatentWarnings)
+	void UVoxelSphereTools::SmoothMaterialSphereAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+TArray<struct FModifiedVoxelMaterial>* ModifiedMaterials
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVector& Position
+, 
+float Radius
+, 
+float Strength
+, 
+int32_t NumIterations
+, 
+int32_t Mask
+, 
+EVoxelFalloff FalloffType
+, 
+float Falloff
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedMaterials
+, 
+bool bConvertToVoxelSpace
+, 
+bool bUpdateRender
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12816,6 +15671,8 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12837,7 +15694,35 @@ namespace CG
 	 * 		bool                                               bConvertToVoxelSpace                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSphereTools::SmoothMaterialSphere(TArray<struct FModifiedVoxelMaterial>* ModifiedMaterials, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, float Strength, int32_t NumIterations, int32_t Mask, EVoxelFalloff FalloffType, float Falloff, bool bMultiThreaded, bool bRecordModifiedMaterials, bool bConvertToVoxelSpace, bool bUpdateRender)
+	void UVoxelSphereTools::SmoothMaterialSphere(
+TArray<struct FModifiedVoxelMaterial>* ModifiedMaterials
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVector& Position
+, 
+float Radius
+, 
+float Strength
+, 
+int32_t NumIterations
+, 
+int32_t Mask
+, 
+EVoxelFalloff FalloffType
+, 
+float Falloff
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedMaterials
+, 
+bool bConvertToVoxelSpace
+, 
+bool bUpdateRender
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12883,6 +15768,8 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12903,7 +15790,33 @@ namespace CG
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSphereTools::SetValueSphereAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, float Value, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender, bool bHideLatentWarnings)
+	void UVoxelSphereTools::SetValueSphereAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+TArray<struct FModifiedVoxelValue>* ModifiedValues
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVector& Position
+, 
+float Radius
+, 
+float Value
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedValues
+, 
+bool bConvertToVoxelSpace
+, 
+bool bUpdateRender
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -12947,6 +15860,8 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -12964,7 +15879,27 @@ namespace CG
 	 * 		bool                                               bConvertToVoxelSpace                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSphereTools::SetValueSphere(TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, float Value, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender)
+	void UVoxelSphereTools::SetValueSphere(
+TArray<struct FModifiedVoxelValue>* ModifiedValues
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVector& Position
+, 
+float Radius
+, 
+float Value
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedValues
+, 
+bool bConvertToVoxelSpace
+, 
+bool bUpdateRender
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13002,6 +15937,8 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13025,7 +15962,39 @@ namespace CG
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSphereTools::SetMaterialSphereAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelMaterial>* ModifiedMaterials, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, const struct FVoxelPaintMaterial& PaintMaterial, float Strength, EVoxelFalloff FalloffType, float Falloff, bool bMultiThreaded, bool bRecordModifiedMaterials, bool bConvertToVoxelSpace, bool bUpdateRender, bool bHideLatentWarnings)
+	void UVoxelSphereTools::SetMaterialSphereAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+TArray<struct FModifiedVoxelMaterial>* ModifiedMaterials
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVector& Position
+, 
+float Radius
+, 
+const struct FVoxelPaintMaterial& PaintMaterial
+, 
+float Strength
+, 
+EVoxelFalloff FalloffType
+, 
+float Falloff
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedMaterials
+, 
+bool bConvertToVoxelSpace
+, 
+bool bUpdateRender
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13075,6 +16044,8 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13095,7 +16066,33 @@ namespace CG
 	 * 		bool                                               bConvertToVoxelSpace                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSphereTools::SetMaterialSphere(TArray<struct FModifiedVoxelMaterial>* ModifiedMaterials, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, const struct FVoxelPaintMaterial& PaintMaterial, float Strength, EVoxelFalloff FalloffType, float Falloff, bool bMultiThreaded, bool bRecordModifiedMaterials, bool bConvertToVoxelSpace, bool bUpdateRender)
+	void UVoxelSphereTools::SetMaterialSphere(
+TArray<struct FModifiedVoxelMaterial>* ModifiedMaterials
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVector& Position
+, 
+float Radius
+, 
+const struct FVoxelPaintMaterial& PaintMaterial
+, 
+float Strength
+, 
+EVoxelFalloff FalloffType
+, 
+float Falloff
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedMaterials
+, 
+bool bConvertToVoxelSpace
+, 
+bool bUpdateRender
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13139,6 +16136,8 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13160,7 +16159,35 @@ namespace CG
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSphereTools::RevertSphereToGeneratorAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, bool bRevertValues, bool bRevertMaterials, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender, bool bHideLatentWarnings)
+	void UVoxelSphereTools::RevertSphereToGeneratorAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+TArray<struct FModifiedVoxelValue>* ModifiedValues
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVector& Position
+, 
+float Radius
+, 
+bool bRevertValues
+, 
+bool bRevertMaterials
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedValues
+, 
+bool bConvertToVoxelSpace
+, 
+bool bUpdateRender
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13206,6 +16233,8 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13224,7 +16253,29 @@ namespace CG
 	 * 		bool                                               bConvertToVoxelSpace                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSphereTools::RevertSphereToGenerator(TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, bool bRevertValues, bool bRevertMaterials, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender)
+	void UVoxelSphereTools::RevertSphereToGenerator(
+TArray<struct FModifiedVoxelValue>* ModifiedValues
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVector& Position
+, 
+float Radius
+, 
+bool bRevertValues
+, 
+bool bRevertMaterials
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedValues
+, 
+bool bConvertToVoxelSpace
+, 
+bool bUpdateRender
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13264,6 +16315,8 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13286,7 +16339,37 @@ namespace CG
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSphereTools::RevertSphereAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, int32_t HistoryPosition, bool bRevertValues, bool bRevertMaterials, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender, bool bHideLatentWarnings)
+	void UVoxelSphereTools::RevertSphereAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+TArray<struct FModifiedVoxelValue>* ModifiedValues
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVector& Position
+, 
+float Radius
+, 
+int32_t HistoryPosition
+, 
+bool bRevertValues
+, 
+bool bRevertMaterials
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedValues
+, 
+bool bConvertToVoxelSpace
+, 
+bool bUpdateRender
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13334,6 +16417,8 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13353,7 +16438,31 @@ namespace CG
 	 * 		bool                                               bConvertToVoxelSpace                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSphereTools::RevertSphere(TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, int32_t HistoryPosition, bool bRevertValues, bool bRevertMaterials, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender)
+	void UVoxelSphereTools::RevertSphere(
+TArray<struct FModifiedVoxelValue>* ModifiedValues
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVector& Position
+, 
+float Radius
+, 
+int32_t HistoryPosition
+, 
+bool bRevertValues
+, 
+bool bRevertMaterials
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedValues
+, 
+bool bConvertToVoxelSpace
+, 
+bool bUpdateRender
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13395,6 +16504,8 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13415,7 +16526,33 @@ namespace CG
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSphereTools::RemoveSphereWithDurabilityAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, const struct FVoxelInt32Interval& Interval, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender, bool bHideLatentWarnings)
+	void UVoxelSphereTools::RemoveSphereWithDurabilityAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+TArray<struct FModifiedVoxelValue>* ModifiedValues
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVector& Position
+, 
+float Radius
+, 
+const struct FVoxelInt32Interval& Interval
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedValues
+, 
+bool bConvertToVoxelSpace
+, 
+bool bUpdateRender
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13459,6 +16596,8 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13476,7 +16615,27 @@ namespace CG
 	 * 		bool                                               bConvertToVoxelSpace                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSphereTools::RemoveSphereWithDurability(TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, const struct FVoxelInt32Interval& Interval, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender)
+	void UVoxelSphereTools::RemoveSphereWithDurability(
+TArray<struct FModifiedVoxelValue>* ModifiedValues
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVector& Position
+, 
+float Radius
+, 
+const struct FVoxelInt32Interval& Interval
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedValues
+, 
+bool bConvertToVoxelSpace
+, 
+bool bUpdateRender
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13514,6 +16673,8 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13533,7 +16694,31 @@ namespace CG
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSphereTools::RemoveSphereAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender, bool bHideLatentWarnings)
+	void UVoxelSphereTools::RemoveSphereAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+TArray<struct FModifiedVoxelValue>* ModifiedValues
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVector& Position
+, 
+float Radius
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedValues
+, 
+bool bConvertToVoxelSpace
+, 
+bool bUpdateRender
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13575,6 +16760,8 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13591,7 +16778,25 @@ namespace CG
 	 * 		bool                                               bConvertToVoxelSpace                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSphereTools::RemoveSphere(TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender)
+	void UVoxelSphereTools::RemoveSphere(
+TArray<struct FModifiedVoxelValue>* ModifiedValues
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVector& Position
+, 
+float Radius
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedValues
+, 
+bool bConvertToVoxelSpace
+, 
+bool bUpdateRender
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13627,6 +16832,8 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13652,7 +16859,43 @@ namespace CG
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSphereTools::ApplyMaterialKernelSphereAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelMaterial>* ModifiedMaterials, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, float CenterMultiplier, float FirstDegreeNeighborMultiplier, float SecondDegreeNeighborMultiplier, float ThirdDegreeNeighborMultiplier, int32_t NumIterations, int32_t Mask, bool bMultiThreaded, bool bRecordModifiedMaterials, bool bConvertToVoxelSpace, bool bUpdateRender, bool bHideLatentWarnings)
+	void UVoxelSphereTools::ApplyMaterialKernelSphereAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+TArray<struct FModifiedVoxelMaterial>* ModifiedMaterials
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVector& Position
+, 
+float Radius
+, 
+float CenterMultiplier
+, 
+float FirstDegreeNeighborMultiplier
+, 
+float SecondDegreeNeighborMultiplier
+, 
+float ThirdDegreeNeighborMultiplier
+, 
+int32_t NumIterations
+, 
+int32_t Mask
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedMaterials
+, 
+bool bConvertToVoxelSpace
+, 
+bool bUpdateRender
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13706,6 +16949,8 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13728,7 +16973,37 @@ namespace CG
 	 * 		bool                                               bConvertToVoxelSpace                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSphereTools::ApplyMaterialKernelSphere(TArray<struct FModifiedVoxelMaterial>* ModifiedMaterials, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, float CenterMultiplier, float FirstDegreeNeighborMultiplier, float SecondDegreeNeighborMultiplier, float ThirdDegreeNeighborMultiplier, int32_t NumIterations, int32_t Mask, bool bMultiThreaded, bool bRecordModifiedMaterials, bool bConvertToVoxelSpace, bool bUpdateRender)
+	void UVoxelSphereTools::ApplyMaterialKernelSphere(
+TArray<struct FModifiedVoxelMaterial>* ModifiedMaterials
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVector& Position
+, 
+float Radius
+, 
+float CenterMultiplier
+, 
+float FirstDegreeNeighborMultiplier
+, 
+float SecondDegreeNeighborMultiplier
+, 
+float ThirdDegreeNeighborMultiplier
+, 
+int32_t NumIterations
+, 
+int32_t Mask
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedMaterials
+, 
+bool bConvertToVoxelSpace
+, 
+bool bUpdateRender
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13776,6 +17051,8 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13800,7 +17077,41 @@ namespace CG
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSphereTools::ApplyKernelSphereAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, float CenterMultiplier, float FirstDegreeNeighborMultiplier, float SecondDegreeNeighborMultiplier, float ThirdDegreeNeighborMultiplier, int32_t NumIterations, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender, bool bHideLatentWarnings)
+	void UVoxelSphereTools::ApplyKernelSphereAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+TArray<struct FModifiedVoxelValue>* ModifiedValues
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVector& Position
+, 
+float Radius
+, 
+float CenterMultiplier
+, 
+float FirstDegreeNeighborMultiplier
+, 
+float SecondDegreeNeighborMultiplier
+, 
+float ThirdDegreeNeighborMultiplier
+, 
+int32_t NumIterations
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedValues
+, 
+bool bConvertToVoxelSpace
+, 
+bool bUpdateRender
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13852,6 +17163,8 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13873,7 +17186,35 @@ namespace CG
 	 * 		bool                                               bConvertToVoxelSpace                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSphereTools::ApplyKernelSphere(TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, float CenterMultiplier, float FirstDegreeNeighborMultiplier, float SecondDegreeNeighborMultiplier, float ThirdDegreeNeighborMultiplier, int32_t NumIterations, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender)
+	void UVoxelSphereTools::ApplyKernelSphere(
+TArray<struct FModifiedVoxelValue>* ModifiedValues
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVector& Position
+, 
+float Radius
+, 
+float CenterMultiplier
+, 
+float FirstDegreeNeighborMultiplier
+, 
+float SecondDegreeNeighborMultiplier
+, 
+float ThirdDegreeNeighborMultiplier
+, 
+int32_t NumIterations
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedValues
+, 
+bool bConvertToVoxelSpace
+, 
+bool bUpdateRender
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13919,6 +17260,8 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13938,7 +17281,31 @@ namespace CG
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSphereTools::AddSphereAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender, bool bHideLatentWarnings)
+	void UVoxelSphereTools::AddSphereAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+TArray<struct FModifiedVoxelValue>* ModifiedValues
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVector& Position
+, 
+float Radius
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedValues
+, 
+bool bConvertToVoxelSpace
+, 
+bool bUpdateRender
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -13980,6 +17347,8 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -13996,7 +17365,25 @@ namespace CG
 	 * 		bool                                               bConvertToVoxelSpace                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSphereTools::AddSphere(TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVector& Position, float Radius, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender)
+	void UVoxelSphereTools::AddSphere(
+TArray<struct FModifiedVoxelValue>* ModifiedValues
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVector& Position
+, 
+float Radius
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedValues
+, 
+bool bConvertToVoxelSpace
+, 
+bool bUpdateRender
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14032,10 +17419,12 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelSphereTools.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelSphereTools.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelSphereTools::StaticClass()
@@ -14046,10 +17435,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AVoxelStaticWorld.StaticClass
+	 * 		Name   -> PredefinedFunction AVoxelStaticWorld.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AVoxelStaticWorld::StaticClass()
@@ -14059,6 +17450,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Voxel.VoxelStaticWorld");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -14077,7 +17470,27 @@ namespace CG
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSurfaceEditTools::PropagateVoxelMaterialsAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelMaterial>* ModifiedMaterials, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVoxelSurfaceEditsProcessedVoxels& ProcessedVoxels, bool bMultiThreaded, bool bRecordModifiedMaterials, bool bUpdateRender, bool bHideLatentWarnings)
+	void UVoxelSurfaceEditTools::PropagateVoxelMaterialsAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+TArray<struct FModifiedVoxelMaterial>* ModifiedMaterials
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVoxelSurfaceEditsProcessedVoxels& ProcessedVoxels
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedMaterials
+, 
+bool bUpdateRender
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14115,6 +17528,8 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14129,7 +17544,21 @@ namespace CG
 	 * 		bool                                               bRecordModifiedMaterials                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSurfaceEditTools::PropagateVoxelMaterials(TArray<struct FModifiedVoxelMaterial>* ModifiedMaterials, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVoxelSurfaceEditsProcessedVoxels& ProcessedVoxels, bool bMultiThreaded, bool bRecordModifiedMaterials, bool bUpdateRender)
+	void UVoxelSurfaceEditTools::PropagateVoxelMaterials(
+TArray<struct FModifiedVoxelMaterial>* ModifiedMaterials
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVoxelSurfaceEditsProcessedVoxels& ProcessedVoxels
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedMaterials
+, 
+bool bUpdateRender
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14161,6 +17590,8 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14179,7 +17610,29 @@ namespace CG
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSurfaceEditTools::EditVoxelValuesAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVoxelSurfaceEditsProcessedVoxels& ProcessedVoxels, float DistanceDivisor, bool bMultiThreaded, bool bRecordModifiedValues, bool bUpdateRender, bool bHideLatentWarnings)
+	void UVoxelSurfaceEditTools::EditVoxelValuesAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+TArray<struct FModifiedVoxelValue>* ModifiedValues
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVoxelSurfaceEditsProcessedVoxels& ProcessedVoxels
+, 
+float DistanceDivisor
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedValues
+, 
+bool bUpdateRender
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14219,6 +17672,8 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14234,7 +17689,23 @@ namespace CG
 	 * 		bool                                               bRecordModifiedValues                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSurfaceEditTools::EditVoxelValues(TArray<struct FModifiedVoxelValue>* ModifiedValues, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVoxelSurfaceEditsProcessedVoxels& ProcessedVoxels, float DistanceDivisor, bool bMultiThreaded, bool bRecordModifiedValues, bool bUpdateRender)
+	void UVoxelSurfaceEditTools::EditVoxelValues(
+TArray<struct FModifiedVoxelValue>* ModifiedValues
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVoxelSurfaceEditsProcessedVoxels& ProcessedVoxels
+, 
+float DistanceDivisor
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedValues
+, 
+bool bUpdateRender
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14268,6 +17739,8 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14286,7 +17759,29 @@ namespace CG
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSurfaceEditTools::EditVoxelMaterialsAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, TArray<struct FModifiedVoxelMaterial>* ModifiedMaterials, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVoxelPaintMaterial& PaintMaterial, const struct FVoxelSurfaceEditsProcessedVoxels& ProcessedVoxels, bool bMultiThreaded, bool bRecordModifiedMaterials, bool bUpdateRender, bool bHideLatentWarnings)
+	void UVoxelSurfaceEditTools::EditVoxelMaterialsAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+TArray<struct FModifiedVoxelMaterial>* ModifiedMaterials
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVoxelPaintMaterial& PaintMaterial
+, 
+const struct FVoxelSurfaceEditsProcessedVoxels& ProcessedVoxels
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedMaterials
+, 
+bool bUpdateRender
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14326,6 +17821,8 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14341,7 +17838,23 @@ namespace CG
 	 * 		bool                                               bRecordModifiedMaterials                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bUpdateRender                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSurfaceEditTools::EditVoxelMaterials(TArray<struct FModifiedVoxelMaterial>* ModifiedMaterials, struct FVoxelIntBox* EditedBounds, class AVoxelWorld* VoxelWorld, const struct FVoxelPaintMaterial& PaintMaterial, const struct FVoxelSurfaceEditsProcessedVoxels& ProcessedVoxels, bool bMultiThreaded, bool bRecordModifiedMaterials, bool bUpdateRender)
+	void UVoxelSurfaceEditTools::EditVoxelMaterials(
+TArray<struct FModifiedVoxelMaterial>* ModifiedMaterials
+, 
+struct FVoxelIntBox* EditedBounds
+, 
+class AVoxelWorld* VoxelWorld
+, 
+const struct FVoxelPaintMaterial& PaintMaterial
+, 
+const struct FVoxelSurfaceEditsProcessedVoxels& ProcessedVoxels
+, 
+bool bMultiThreaded
+, 
+bool bRecordModifiedMaterials
+, 
+bool bUpdateRender
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14375,10 +17888,12 @@ namespace CG
 			*EditedBounds = params.EditedBounds;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelSurfaceEditTools.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelSurfaceEditTools.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelSurfaceEditTools::StaticClass()
@@ -14389,10 +17904,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelSurfaceTool.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelSurfaceTool.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelSurfaceTool::StaticClass()
@@ -14402,6 +17919,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Voxel.VoxelSurfaceTool");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -14417,7 +17936,21 @@ namespace CG
 	 * 		float                                              SizeY                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bConvertToVoxelSpace                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSurfaceTools::GetStrengthMaskScale(float* ScaleX, float* ScaleY, class AVoxelWorld* World, const struct FVoxelFloatTexture& Mask, float SizeX, float SizeY, bool bConvertToVoxelSpace)
+	void UVoxelSurfaceTools::GetStrengthMaskScale(
+float* ScaleX
+, 
+float* ScaleY
+, 
+class AVoxelWorld* World
+, 
+const struct FVoxelFloatTexture& Mask
+, 
+float SizeX
+, 
+float SizeY
+, 
+bool bConvertToVoxelSpace
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14449,6 +17982,8 @@ namespace CG
 			*ScaleY = params.ScaleY;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14457,7 +17992,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVoxelSurfaceEditsProcessedVoxels           Voxels                                                     (Parm, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelIntBox UVoxelSurfaceTools::GetBounds(const struct FVoxelSurfaceEditsProcessedVoxels& Voxels)
+	struct FVoxelIntBox UVoxelSurfaceTools::GetBounds(
+const struct FVoxelSurfaceEditsProcessedVoxels& Voxels
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14476,6 +18013,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14488,7 +18027,17 @@ namespace CG
 	 * 		bool                                               bMultiThreaded                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EVoxelComputeDevice                                ComputeDevice                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSurfaceTools::FindSurfaceVoxelsFromDistanceField(struct FVoxelSurfaceEditsVoxels* Voxels, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bMultiThreaded, EVoxelComputeDevice ComputeDevice)
+	void UVoxelSurfaceTools::FindSurfaceVoxelsFromDistanceField(
+struct FVoxelSurfaceEditsVoxels* Voxels
+, 
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+, 
+bool bMultiThreaded
+, 
+EVoxelComputeDevice ComputeDevice
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14515,6 +18064,8 @@ namespace CG
 			*Voxels = params.Voxels;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14529,7 +18080,21 @@ namespace CG
 	 * 		bool                                               bComputeNormals                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSurfaceTools::FindSurfaceVoxelsAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, struct FVoxelSurfaceEditsVoxels* Voxels, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bComputeNormals, bool bHideLatentWarnings)
+	void UVoxelSurfaceTools::FindSurfaceVoxelsAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+struct FVoxelSurfaceEditsVoxels* Voxels
+, 
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+, 
+bool bComputeNormals
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14560,6 +18125,8 @@ namespace CG
 			*Voxels = params.Voxels;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14574,7 +18141,21 @@ namespace CG
 	 * 		bool                                               bComputeNormals                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSurfaceTools::FindSurfaceVoxels2DAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, struct FVoxelSurfaceEditsVoxels* Voxels, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bComputeNormals, bool bHideLatentWarnings)
+	void UVoxelSurfaceTools::FindSurfaceVoxels2DAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+struct FVoxelSurfaceEditsVoxels* Voxels
+, 
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+, 
+bool bComputeNormals
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14605,6 +18186,8 @@ namespace CG
 			*Voxels = params.Voxels;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14616,7 +18199,15 @@ namespace CG
 	 * 		struct FVoxelIntBox                                Bounds                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bComputeNormals                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSurfaceTools::FindSurfaceVoxels2D(struct FVoxelSurfaceEditsVoxels* Voxels, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bComputeNormals)
+	void UVoxelSurfaceTools::FindSurfaceVoxels2D(
+struct FVoxelSurfaceEditsVoxels* Voxels
+, 
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+, 
+bool bComputeNormals
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14641,6 +18232,8 @@ namespace CG
 			*Voxels = params.Voxels;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14652,7 +18245,15 @@ namespace CG
 	 * 		struct FVoxelIntBox                                Bounds                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bComputeNormals                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSurfaceTools::FindSurfaceVoxels(struct FVoxelSurfaceEditsVoxels* Voxels, class AVoxelWorld* World, const struct FVoxelIntBox& Bounds, bool bComputeNormals)
+	void UVoxelSurfaceTools::FindSurfaceVoxels(
+struct FVoxelSurfaceEditsVoxels* Voxels
+, 
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+, 
+bool bComputeNormals
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14677,6 +18278,8 @@ namespace CG
 			*Voxels = params.Voxels;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14687,7 +18290,13 @@ namespace CG
 	 * 		struct FVoxelSurfaceEditsProcessedVoxels           ProcessedVoxels                                            (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		float                                              LifeTime                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSurfaceTools::DebugSurfaceVoxels(class AVoxelWorld* World, const struct FVoxelSurfaceEditsProcessedVoxels& ProcessedVoxels, float LifeTime)
+	void UVoxelSurfaceTools::DebugSurfaceVoxels(
+class AVoxelWorld* World
+, 
+const struct FVoxelSurfaceEditsProcessedVoxels& ProcessedVoxels
+, 
+float LifeTime
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14708,6 +18317,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14718,7 +18329,13 @@ namespace CG
 	 * 		float                                              Angle                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            ImmutableVoxels                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelSurfaceEditsStackElement UVoxelSurfaceTools::ApplyTerrace(int32_t TerraceHeightInVoxels, float Angle, int32_t ImmutableVoxels)
+	struct FVoxelSurfaceEditsStackElement UVoxelSurfaceTools::ApplyTerrace(
+int32_t TerraceHeightInVoxels
+, 
+float Angle
+, 
+int32_t ImmutableVoxels
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14741,6 +18358,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14757,7 +18376,25 @@ namespace CG
 	 * 		EVoxelSamplerMode                                  SamplerMode                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bConvertToVoxelSpace                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelSurfaceEditsStackElement UVoxelSurfaceTools::ApplyStrengthMask(class AVoxelWorld* World, const struct FVoxelFloatTexture& Mask, const struct FVector& EditPosition, float ScaleX, float ScaleY, const struct FVector& PlaneNormal, const struct FVector& PlaneTangent, EVoxelSamplerMode SamplerMode, bool bConvertToVoxelSpace)
+	struct FVoxelSurfaceEditsStackElement UVoxelSurfaceTools::ApplyStrengthMask(
+class AVoxelWorld* World
+, 
+const struct FVoxelFloatTexture& Mask
+, 
+const struct FVector& EditPosition
+, 
+float ScaleX
+, 
+float ScaleY
+, 
+const struct FVector& PlaneNormal
+, 
+const struct FVector& PlaneTangent
+, 
+EVoxelSamplerMode SamplerMode
+, 
+bool bConvertToVoxelSpace
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14792,6 +18429,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14804,7 +18443,17 @@ namespace CG
 	 * 		class UCurveFloat*                                 StrengthCurve                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bConvertToVoxelSpace                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelSurfaceEditsStackElement UVoxelSurfaceTools::ApplyStrengthCurve(class AVoxelWorld* World, const struct FVector& Center, float Radius, class UCurveFloat* StrengthCurve, bool bConvertToVoxelSpace)
+	struct FVoxelSurfaceEditsStackElement UVoxelSurfaceTools::ApplyStrengthCurve(
+class AVoxelWorld* World
+, 
+const struct FVector& Center
+, 
+float Radius
+, 
+class UCurveFloat* StrengthCurve
+, 
+bool bConvertToVoxelSpace
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14831,6 +18480,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14844,7 +18495,19 @@ namespace CG
 	 * 		struct FVoxelSurfaceEditsStack                     Stack                                                      (Parm, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHideLatentWarnings                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelSurfaceTools::ApplyStackAsync(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, struct FVoxelSurfaceEditsProcessedVoxels* ProcessedVoxels, const struct FVoxelSurfaceEditsVoxels& Voxels, const struct FVoxelSurfaceEditsStack& Stack, bool bHideLatentWarnings)
+	void UVoxelSurfaceTools::ApplyStackAsync(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+struct FVoxelSurfaceEditsProcessedVoxels* ProcessedVoxels
+, 
+const struct FVoxelSurfaceEditsVoxels& Voxels
+, 
+const struct FVoxelSurfaceEditsStack& Stack
+, 
+bool bHideLatentWarnings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14873,6 +18536,8 @@ namespace CG
 			*ProcessedVoxels = params.ProcessedVoxels;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14882,7 +18547,11 @@ namespace CG
 	 * 		struct FVoxelSurfaceEditsVoxels                    Voxels                                                     (Parm, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelSurfaceEditsStack                     Stack                                                      (Parm, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelSurfaceEditsProcessedVoxels UVoxelSurfaceTools::ApplyStack(const struct FVoxelSurfaceEditsVoxels& Voxels, const struct FVoxelSurfaceEditsStack& Stack)
+	struct FVoxelSurfaceEditsProcessedVoxels UVoxelSurfaceTools::ApplyStack(
+const struct FVoxelSurfaceEditsVoxels& Voxels
+, 
+const struct FVoxelSurfaceEditsStack& Stack
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14903,6 +18572,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14915,7 +18586,17 @@ namespace CG
 	 * 		EVoxelSDFMergeMode                                 MergeMode                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bConvertToVoxelSpace                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelSurfaceEditsStackElement UVoxelSurfaceTools::ApplyFlatten(class AVoxelWorld* World, const struct FVector& PlanePoint, const struct FVector& PlaneNormal, EVoxelSDFMergeMode MergeMode, bool bConvertToVoxelSpace)
+	struct FVoxelSurfaceEditsStackElement UVoxelSurfaceTools::ApplyFlatten(
+class AVoxelWorld* World
+, 
+const struct FVector& PlanePoint
+, 
+const struct FVector& PlaneNormal
+, 
+EVoxelSDFMergeMode MergeMode
+, 
+bool bConvertToVoxelSpace
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14942,6 +18623,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14955,7 +18638,19 @@ namespace CG
 	 * 		float                                              Falloff                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bConvertToVoxelSpace                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelSurfaceEditsStackElement UVoxelSurfaceTools::ApplyFalloff(class AVoxelWorld* World, EVoxelFalloff FalloffType, const struct FVector& Center, float Radius, float Falloff, bool bConvertToVoxelSpace)
+	struct FVoxelSurfaceEditsStackElement UVoxelSurfaceTools::ApplyFalloff(
+class AVoxelWorld* World
+, 
+EVoxelFalloff FalloffType
+, 
+const struct FVector& Center
+, 
+float Radius
+, 
+float Falloff
+, 
+bool bConvertToVoxelSpace
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -14984,6 +18679,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -14992,7 +18689,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              Strength                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelSurfaceEditsStackElement UVoxelSurfaceTools::ApplyConstantStrength(float Strength)
+	struct FVoxelSurfaceEditsStackElement UVoxelSurfaceTools::ApplyConstantStrength(
+float Strength
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15011,6 +18710,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15020,7 +18721,11 @@ namespace CG
 	 * 		struct FVoxelSurfaceEditsStack                     Stack                                                      (Parm, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelSurfaceEditsStackElement              Element                                                    (Parm, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelSurfaceEditsStack UVoxelSurfaceTools::AddToStack(const struct FVoxelSurfaceEditsStack& Stack, const struct FVoxelSurfaceEditsStackElement& Element)
+	struct FVoxelSurfaceEditsStack UVoxelSurfaceTools::AddToStack(
+const struct FVoxelSurfaceEditsStack& Stack
+, 
+const struct FVoxelSurfaceEditsStackElement& Element
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15041,10 +18746,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelSurfaceTools.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelSurfaceTools.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelSurfaceTools::StaticClass()
@@ -15055,6 +18762,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15064,7 +18773,11 @@ namespace CG
 	 * 		struct FVoxelTestValues                            ValuesA                                                    (Parm, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelTestValues                            ValuesB                                                    (Parm, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelTestLibrary::TestValues(const struct FVoxelTestValues& ValuesA, const struct FVoxelTestValues& ValuesB)
+	void UVoxelTestLibrary::TestValues(
+const struct FVoxelTestValues& ValuesA
+, 
+const struct FVoxelTestValues& ValuesB
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15083,6 +18796,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15092,7 +18807,11 @@ namespace CG
 	 * 		class AVoxelWorld*                                 World                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVoxelIntBox                                Bounds                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelTestValues UVoxelTestLibrary::ReadValues(class AVoxelWorld* World, const struct FVoxelIntBox& Bounds)
+	struct FVoxelTestValues UVoxelTestLibrary::ReadValues(
+class AVoxelWorld* World
+, 
+const struct FVoxelIntBox& Bounds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15113,10 +18832,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelTestLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelTestLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelTestLibrary::StaticClass()
@@ -15127,10 +18848,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelTexturePoolSubsystemProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelTexturePoolSubsystemProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelTexturePoolSubsystemProxy::StaticClass()
@@ -15141,6 +18864,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15150,7 +18875,11 @@ namespace CG
 	 * 		struct FVoxelFloatTexture                          Texture                                                    (Parm, NativeAccessSpecifierPublic)
 	 * 		float                                              Radius                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelFloatTexture UVoxelTextureTools::Minimum(const struct FVoxelFloatTexture& Texture, float Radius)
+	struct FVoxelFloatTexture UVoxelTextureTools::Minimum(
+const struct FVoxelFloatTexture& Texture
+, 
+float Radius
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15171,6 +18900,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15180,7 +18911,11 @@ namespace CG
 	 * 		struct FVoxelFloatTexture                          Texture                                                    (Parm, NativeAccessSpecifierPublic)
 	 * 		float                                              Radius                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVoxelFloatTexture UVoxelTextureTools::Maximum(const struct FVoxelFloatTexture& Texture, float Radius)
+	struct FVoxelFloatTexture UVoxelTextureTools::Maximum(
+const struct FVoxelFloatTexture& Texture
+, 
+float Radius
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15201,10 +18936,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelTextureTools.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelTextureTools.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelTextureTools::StaticClass()
@@ -15215,10 +18952,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelToolSharedConfig.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelToolSharedConfig.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelToolSharedConfig::StaticClass()
@@ -15228,6 +18967,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Voxel.VoxelToolSharedConfig");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -15240,7 +18981,15 @@ namespace CG
 	 * 		EVoxelFalloff                                      FalloffType                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Falloff                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelToolLibrary::UpdateSphereOverlayMaterial(class UVoxelToolBase* Tool, class UMaterialInstanceDynamic* OverlayMaterialInstance, EVoxelFalloff FalloffType, float Falloff)
+	void UVoxelToolLibrary::UpdateSphereOverlayMaterial(
+class UVoxelToolBase* Tool
+, 
+class UMaterialInstanceDynamic* OverlayMaterialInstance
+, 
+EVoxelFalloff FalloffType
+, 
+float Falloff
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15263,10 +19012,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelToolLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelToolLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelToolLibrary::StaticClass()
@@ -15277,6 +19028,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15285,7 +19038,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        NewActiveTool                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelToolManager::SetActiveToolByName(const class FName& NewActiveTool)
+	void UVoxelToolManager::SetActiveToolByName(
+const class FName& NewActiveTool
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15302,6 +19057,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15310,7 +19067,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UClass*                                      NewActiveTool                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelToolManager::SetActiveToolByClass(class UClass* NewActiveTool)
+	void UVoxelToolManager::SetActiveToolByClass(
+class UClass* NewActiveTool
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15327,6 +19086,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15335,7 +19096,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UVoxelTool*                                  NewActiveTool                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelToolManager::SetActiveTool(class UVoxelTool* NewActiveTool)
+	void UVoxelToolManager::SetActiveTool(
+class UVoxelTool* NewActiveTool
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15351,6 +19114,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -15375,6 +19140,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15397,6 +19164,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -15421,6 +19190,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -15429,7 +19200,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bLoadBlueprints                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelToolManager::CreateDefaultTools(bool bLoadBlueprints)
+	void UVoxelToolManager::CreateDefaultTools(
+bool bLoadBlueprints
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -15446,10 +19219,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelToolManager.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelToolManager.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelToolManager::StaticClass()
@@ -15460,10 +19235,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelToolRenderingSubsystemProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelToolRenderingSubsystemProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelToolRenderingSubsystemProxy::StaticClass()
@@ -15474,10 +19251,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelTrimTool.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelTrimTool.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelTrimTool::StaticClass()
@@ -15488,10 +19267,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelWorldRootComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelWorldRootComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelWorldRootComponent::StaticClass()
@@ -15501,6 +19282,7 @@ namespace CG
 			ptr = UObject::FindClass("Class Voxel.VoxelWorldRootComponent");
 		return ptr;
 	}
+
 
 }
 

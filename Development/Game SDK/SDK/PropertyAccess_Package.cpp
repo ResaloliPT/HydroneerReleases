@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPropertyAccess.StaticClass
+	 * 		Name   -> PredefinedFunction UPropertyAccess.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPropertyAccess::StaticClass()
@@ -24,10 +25,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPropertyEventBroadcaster.StaticClass
+	 * 		Name   -> PredefinedFunction UPropertyEventBroadcaster.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPropertyEventBroadcaster::StaticClass()
@@ -38,10 +41,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPropertyEventSubscriber.StaticClass
+	 * 		Name   -> PredefinedFunction UPropertyEventSubscriber.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPropertyEventSubscriber::StaticClass()
@@ -51,6 +56,7 @@ namespace CG
 			ptr = UObject::FindClass("Class PropertyAccess.PropertyEventSubscriber");
 		return ptr;
 	}
+
 
 }
 

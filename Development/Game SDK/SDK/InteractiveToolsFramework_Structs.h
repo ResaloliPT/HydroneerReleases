@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+
 	/**
 	 * Enum InteractiveToolsFramework.EInputCaptureState
 	 */
@@ -26,6 +27,8 @@ namespace CG
 		MAX      = 4
 	};
 
+
+
 	/**
 	 * Enum InteractiveToolsFramework.EInputCaptureRequestType
 	 */
@@ -35,6 +38,8 @@ namespace CG
 		Ignore = 1,
 		MAX    = 2
 	};
+
+
 
 	/**
 	 * Enum InteractiveToolsFramework.EInputCaptureSide
@@ -48,6 +53,8 @@ namespace CG
 		Any   = 4,
 		MAX   = 5
 	};
+
+
 
 	/**
 	 * Enum InteractiveToolsFramework.EInputDevices
@@ -64,6 +71,8 @@ namespace CG
 		TabletFingers    = 7,
 		MAX              = 8
 	};
+
+
 
 	/**
 	 * Enum InteractiveToolsFramework.ETransformGizmoSubElements
@@ -98,6 +107,8 @@ namespace CG
 		MAX                         = 25
 	};
 
+
+
 	/**
 	 * Enum InteractiveToolsFramework.EToolChangeTrackingMode
 	 */
@@ -108,6 +119,8 @@ namespace CG
 		FullUndoRedo     = 2,
 		MAX              = 3
 	};
+
+
 
 	/**
 	 * Enum InteractiveToolsFramework.EToolSide
@@ -120,6 +133,8 @@ namespace CG
 		MAX   = 3
 	};
 
+
+
 	/**
 	 * Enum InteractiveToolsFramework.EViewInteractionState
 	 */
@@ -130,6 +145,8 @@ namespace CG
 		Focused = 2,
 		MAX     = 3
 	};
+
+
 
 	/**
 	 * Enum InteractiveToolsFramework.ESelectedObjectsModificationType
@@ -142,6 +159,8 @@ namespace CG
 		Clear   = 3,
 		MAX     = 4
 	};
+
+
 
 	/**
 	 * Enum InteractiveToolsFramework.EToolMessageLevel
@@ -156,6 +175,8 @@ namespace CG
 		MAX              = 5
 	};
 
+
+
 	/**
 	 * Enum InteractiveToolsFramework.EToolContextCoordinateSystem
 	 */
@@ -166,6 +187,8 @@ namespace CG
 		MAX   = 2
 	};
 
+
+
 	/**
 	 * Enum InteractiveToolsFramework.EStandardToolContextMaterials
 	 */
@@ -174,6 +197,8 @@ namespace CG
 		VertexColorMaterial = 0,
 		MAX                 = 1
 	};
+
+
 
 	/**
 	 * Enum InteractiveToolsFramework.ESceneSnapQueryTargetType
@@ -188,6 +213,8 @@ namespace CG
 		MAX        = 5
 	};
 
+
+
 	/**
 	 * Enum InteractiveToolsFramework.ESceneSnapQueryType
 	 */
@@ -201,6 +228,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+
 	/**
 	 * ScriptStruct InteractiveToolsFramework.BrushStampData
 	 * Size -> 0x00AC
@@ -208,8 +236,12 @@ namespace CG
 	struct FBrushStampData
 	{
 	public:
-		unsigned char                                              UnknownData_DW69[0xAC];                                  // 0x0000(0x00AC) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_NIX4[0xAC];                                  // 0x0000(0x00AC) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct InteractiveToolsFramework.BehaviorInfo
@@ -218,9 +250,15 @@ namespace CG
 	struct FBehaviorInfo
 	{
 	public:
-		class UInputBehavior*                                      Behavior;                                                // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_DOUG[0x18];                                  // 0x0008(0x0018) MISSED OFFSET (PADDING)
+
+		class UInputBehavior*                                    Behavior;                                                // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_76YS[0x18];                                  // 0x0008(0x0018) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct InteractiveToolsFramework.ActiveGizmo
@@ -229,8 +267,12 @@ namespace CG
 	struct FActiveGizmo
 	{
 	public:
-		unsigned char                                              UnknownData_R7B7[0x30];                                  // 0x0000(0x0030) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_U4BN[0x30];                                  // 0x0000(0x0030) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct InteractiveToolsFramework.GizmoFloatParameterChange
@@ -239,9 +281,15 @@ namespace CG
 	struct FGizmoFloatParameterChange
 	{
 	public:
-		float                                                      InitialValue;                                            // 0x0000(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      CurrentValue;                                            // 0x0004(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		float                                                    InitialValue;                                            // 0x0000(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    CurrentValue;                                            // 0x0004(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct InteractiveToolsFramework.GizmoVec2ParameterChange
@@ -250,9 +298,15 @@ namespace CG
 	struct FGizmoVec2ParameterChange
 	{
 	public:
-		struct FVector2D                                           InitialValue;                                            // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FVector2D                                           CurrentValue;                                            // 0x0008(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		struct FVector2D                                         InitialValue;                                            // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FVector2D                                         CurrentValue;                                            // 0x0008(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct InteractiveToolsFramework.InputRayHit
@@ -261,7 +315,9 @@ namespace CG
 	struct FInputRayHit
 	{
 	public:
-		unsigned char                                              UnknownData_MGZ7[0x28];                                  // 0x0000(0x0028) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_IGYI[0x28];                                  // 0x0000(0x0028) MISSED OFFSET (PADDING)
+
 	};
 
 }

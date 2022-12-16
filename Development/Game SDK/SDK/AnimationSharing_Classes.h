@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,59 +14,106 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * Class AnimationSharing.AnimSharingStateInstance
-	 * Size -> 0x0020 (FullSize[0x02E0] - InheritedSize[0x02C0])
+	 * Size -> 0x0028 (FullSize[0x02E0] - InheritedSize[0x02B8])
 	 */
 	class UAnimSharingStateInstance : public UAnimInstance
 	{
 	public:
-		class UAnimSequence*                                       AnimationToPlay;                                         // 0x02B8(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		float                                                      PermutationTimeOffset;                                   // 0x02C0(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		float                                                      PlayRate;                                                // 0x02C4(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		bool                                                       bStateBool;                                              // 0x02C8(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		unsigned char                                              UnknownData_A8F1[0x7];                                   // 0x02C9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class UAnimSharingInstance*                                Instance;                                                // 0x02D0(0x0008) ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                              UnknownData_2RZF[0x8];                                   // 0x02D8(0x0008) MISSED OFFSET (PADDING)
+
+		class UAnimSequence*                                     AnimationToPlay;                                         // 0x02B8(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
+
+		float                                                    PermutationTimeOffset;                                   // 0x02C0(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
+
+		float                                                    PlayRate;                                                // 0x02C4(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
+
+		bool                                                     bStateBool;                                              // 0x02C8(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
+
+		unsigned char                                            UnknownData_5WPA[0x7];                                   // 0x02C9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		class UAnimSharingInstance*                              Instance;                                                // 0x02D0(0x0008) ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+
+		unsigned char                                            UnknownData_K9X1[0x8];                                   // 0x02D8(0x0008) MISSED OFFSET (PADDING)
+
 
 	public:
-		void GetInstancedActors(TArray<class AActor*>* Actors);
+
+		void GetInstancedActors(
+TArray<class AActor*>* Actors
+);
+
 		static UClass* StaticClass();
 	};
 
+
+
 	/**
 	 * Class AnimationSharing.AnimSharingTransitionInstance
-	 * Size -> 0x0010 (FullSize[0x02D0] - InheritedSize[0x02C0])
+	 * Size -> 0x0018 (FullSize[0x02D0] - InheritedSize[0x02B8])
 	 */
 	class UAnimSharingTransitionInstance : public UAnimInstance
 	{
 	public:
-		TWeakObjectPtr<class USkeletalMeshComponent>               FromComponent;                                           // 0x02B8(0x0008) Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		TWeakObjectPtr<class USkeletalMeshComponent>               ToComponent;                                             // 0x02C0(0x0008) Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		float                                                      BlendTime;                                               // 0x02C8(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		bool                                                       bBlendBool;                                              // 0x02CC(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		unsigned char                                              UnknownData_ZQWF[0x3];                                   // 0x02CD(0x0003) MISSED OFFSET (PADDING)
+
+		TWeakObjectPtr<class USkeletalMeshComponent>             FromComponent;                                           // 0x02B8(0x0008) Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
+
+		TWeakObjectPtr<class USkeletalMeshComponent>             ToComponent;                                             // 0x02C0(0x0008) Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
+
+		float                                                    BlendTime;                                               // 0x02C8(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
+
+		bool                                                     bBlendBool;                                              // 0x02CC(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
+
+		unsigned char                                            UnknownData_3A1M[0x3];                                   // 0x02CD(0x0003) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
 
+
+
 	/**
 	 * Class AnimationSharing.AnimSharingAdditiveInstance
-	 * Size -> 0x0010 (FullSize[0x02D0] - InheritedSize[0x02C0])
+	 * Size -> 0x0018 (FullSize[0x02D0] - InheritedSize[0x02B8])
 	 */
 	class UAnimSharingAdditiveInstance : public UAnimInstance
 	{
 	public:
-		TWeakObjectPtr<class USkeletalMeshComponent>               BaseComponent;                                           // 0x02B8(0x0008) Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		TWeakObjectPtr<class UAnimSequence>                        AdditiveAnimation;                                       // 0x02C0(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		float                                                      Alpha;                                                   // 0x02C8(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		bool                                                       bStateBool;                                              // 0x02CC(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		unsigned char                                              UnknownData_SIOJ[0x3];                                   // 0x02CD(0x0003) MISSED OFFSET (PADDING)
+
+		TWeakObjectPtr<class USkeletalMeshComponent>             BaseComponent;                                           // 0x02B8(0x0008) Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
+
+		TWeakObjectPtr<class UAnimSequence>                      AdditiveAnimation;                                       // 0x02C0(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
+
+		float                                                    Alpha;                                                   // 0x02C8(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
+
+		bool                                                     bStateBool;                                              // 0x02CC(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
+
+		unsigned char                                            UnknownData_4CTJ[0x3];                                   // 0x02CD(0x0003) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class AnimationSharing.AnimSharingInstance
@@ -75,19 +122,40 @@ namespace CG
 	class UAnimSharingInstance : public UObject
 	{
 	public:
-		TArray<class AActor*>                                      RegisteredActors;                                        // 0x0028(0x0010) Edit, ZeroConstructor, Transient, EditConst, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_PZUH[0x50];                                  // 0x0038(0x0050) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class UAnimationSharingStateProcessor*                     StateProcessor;                                          // 0x0088(0x0008) Edit, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_LXYM[0x38];                                  // 0x0090(0x0038) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<class UAnimSequence*>                               UsedAnimationSequences;                                  // 0x00C8(0x0010) Edit, ZeroConstructor, Transient, EditConst, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_F3BZ[0x10];                                  // 0x00D8(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class UEnum*                                               StateEnum;                                               // 0x00E8(0x0008) Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class AActor*                                              SharingActor;                                            // 0x00F0(0x0008) Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_ES98[0x20];                                  // 0x00F8(0x0020) MISSED OFFSET (PADDING)
+
+		TArray<class AActor*>                                    RegisteredActors;                                        // 0x0028(0x0010) Edit, ZeroConstructor, Transient, EditConst, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_EYKL[0x50];                                  // 0x0038(0x0050) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		class UAnimationSharingStateProcessor*                   StateProcessor;                                          // 0x0088(0x0008) Edit, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_N7PC[0x38];                                  // 0x0090(0x0038) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		TArray<class UAnimSequence*>                             UsedAnimationSequences;                                  // 0x00C8(0x0010) Edit, ZeroConstructor, Transient, EditConst, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_J2WF[0x10];                                  // 0x00D8(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		class UEnum*                                             StateEnum;                                               // 0x00E8(0x0008) Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class AActor*                                            SharingActor;                                            // 0x00F0(0x0008) Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_JOFD[0x20];                                  // 0x00F8(0x0020) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class AnimationSharing.AnimationSharingManager
@@ -96,17 +164,40 @@ namespace CG
 	class UAnimationSharingManager : public UObject
 	{
 	public:
-		TArray<class USkeleton*>                                   Skeletons;                                               // 0x0028(0x0010) ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected
-		TArray<class UAnimSharingInstance*>                        PerSkeletonData;                                         // 0x0038(0x0010) Edit, ZeroConstructor, Transient, EditConst, Protected, NativeAccessSpecifierProtected
-		unsigned char                                              UnknownData_6524[0x40];                                  // 0x0048(0x0040) MISSED OFFSET (PADDING)
+
+		TArray<class USkeleton*>                                 Skeletons;                                               // 0x0028(0x0010) ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected
+
+
+		TArray<class UAnimSharingInstance*>                      PerSkeletonData;                                         // 0x0038(0x0010) Edit, ZeroConstructor, Transient, EditConst, Protected, NativeAccessSpecifierProtected
+
+
+		unsigned char                                            UnknownData_SUY8[0x40];                                  // 0x0048(0x0040) MISSED OFFSET (PADDING)
+
 
 	public:
-		void RegisterActorWithSkeletonBP(class AActor* InActor, class USkeleton* SharingSkeleton);
-		class UAnimationSharingManager* GetAnimationSharingManager(class UObject* WorldContextObject);
-		bool CreateAnimationSharingManager(class UObject* WorldContextObject, class UAnimationSharingSetup* Setup);
+
+		void RegisterActorWithSkeletonBP(
+class AActor* InActor
+, 
+class USkeleton* SharingSkeleton
+);
+
+		class UAnimationSharingManager* GetAnimationSharingManager(
+class UObject* WorldContextObject
+);
+
+		bool CreateAnimationSharingManager(
+class UObject* WorldContextObject
+, 
+class UAnimationSharingSetup* Setup
+);
+
 		bool AnimationSharingEnabled();
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class AnimationSharing.AnimationSharingSetup
@@ -115,12 +206,19 @@ namespace CG
 	class UAnimationSharingSetup : public UObject
 	{
 	public:
-		TArray<struct FPerSkeletonAnimationSharingSetup>           SkeletonSetups;                                          // 0x0028(0x0010) Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic
-		struct FAnimationSharingScalability                        ScalabilitySettings;                                     // 0x0038(0x0010) Edit, Config, NoDestructor, NativeAccessSpecifierPublic
+
+		TArray<struct FPerSkeletonAnimationSharingSetup>         SkeletonSetups;                                          // 0x0028(0x0010) Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic
+
+
+		struct FAnimationSharingScalability                      ScalabilitySettings;                                     // 0x0038(0x0010) Edit, Config, NoDestructor, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class AnimationSharing.AnimationSharingStateProcessor
@@ -129,11 +227,26 @@ namespace CG
 	class UAnimationSharingStateProcessor : public UObject
 	{
 	public:
-		unsigned char                                              AnimationStateEnum[0x28];                                // 0x0028(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
+
+		unsigned char                                            AnimationStateEnum[0x28];                                // 0x0028(0x0028) UNKNOWN PROPERTY: SoftObjectProperty
+
 
 	public:
-		void ProcessActorState(int32_t* OutState, class AActor* InActor, unsigned char CurrentState, unsigned char OnDemandState, bool* bShouldProcess);
+
+		void ProcessActorState(
+int32_t* OutState
+, 
+class AActor* InActor
+, 
+unsigned char CurrentState
+, 
+unsigned char OnDemandState
+, 
+bool* bShouldProcess
+);
+
 		class UEnum* GetAnimationStateEnum();
+
 		static UClass* StaticClass();
 	};
 

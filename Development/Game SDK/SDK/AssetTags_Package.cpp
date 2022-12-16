@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18,7 +19,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     AssetPtr                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<class FName> UAssetTagsSubsystem::GetCollectionsContainingAssetPtr(class UObject* AssetPtr)
+	TArray<class FName> UAssetTagsSubsystem::GetCollectionsContainingAssetPtr(
+class UObject* AssetPtr
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -37,6 +40,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -45,7 +50,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FAssetData                                  AssetData                                                  (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<class FName> UAssetTagsSubsystem::GetCollectionsContainingAssetData(const struct FAssetData& AssetData)
+	TArray<class FName> UAssetTagsSubsystem::GetCollectionsContainingAssetData(
+const struct FAssetData& AssetData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -64,6 +71,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -72,7 +81,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        AssetPathName                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<class FName> UAssetTagsSubsystem::GetCollectionsContainingAsset(const class FName& AssetPathName)
+	TArray<class FName> UAssetTagsSubsystem::GetCollectionsContainingAsset(
+const class FName& AssetPathName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -90,6 +101,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -114,6 +127,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -122,7 +137,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        Name                                                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<struct FAssetData> UAssetTagsSubsystem::GetAssetsInCollection(const class FName& Name)
+	TArray<struct FAssetData> UAssetTagsSubsystem::GetAssetsInCollection(
+const class FName& Name
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -141,6 +158,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -149,7 +168,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        Name                                                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UAssetTagsSubsystem::CollectionExists(const class FName& Name)
+	bool UAssetTagsSubsystem::CollectionExists(
+const class FName& Name
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -168,10 +189,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAssetTagsSubsystem.StaticClass
+	 * 		Name   -> PredefinedFunction UAssetTagsSubsystem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAssetTagsSubsystem::StaticClass()
@@ -181,6 +204,7 @@ namespace CG
 			ptr = UObject::FindClass("Class AssetTags.AssetTagsSubsystem");
 		return ptr;
 	}
+
 
 }
 

@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * BlueprintGeneratedClass BPI_Interact.BPI_Interact_C
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
@@ -21,12 +22,35 @@ namespace CG
 	class UBPI_Interact_C : public UInterface
 	{
 	public:
-		void BPI_ToggleLookAt(class ABP_GameController_C* Controller, bool LookingAt_);
-		void BPI_Unhighlight(class ABP_GameController_C* Controller);
-		void BPI_Highlight(class ABP_GameController_C* Controller);
-		void BPI_GetCanHighlight(bool* CanHighlight_);
-		void BPI_SetHighlightArray(TArray<int32_t>* HighlightArray, bool* Result);
-		void BPI_GetHighlightArray(TArray<int32_t>* HighlightArray);
+
+		void BPI_ToggleLookAt(
+class ABP_GameController_C* Controller
+, 
+bool LookingAt
+);
+
+		void BPI_Unhighlight(
+class ABP_GameController_C* Controller
+);
+
+		void BPI_Highlight(
+class ABP_GameController_C* Controller
+);
+
+		void BPI_GetCanHighlight(
+bool* CanHighlight
+);
+
+		void BPI_SetHighlightArray(
+TArray<int32_t>* HighlightArray
+, 
+bool* Result
+);
+
+		void BPI_GetHighlightArray(
+TArray<int32_t>* HighlightArray
+);
+
 		static UClass* StaticClass();
 	};
 

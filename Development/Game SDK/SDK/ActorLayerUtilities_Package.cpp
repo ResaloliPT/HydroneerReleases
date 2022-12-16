@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19,7 +20,11 @@ namespace CG
 	 * 		class AActor*                                      InActor                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FActorLayer                                 Layer                                                      (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void ULayersBlueprintLibrary::RemoveActorFromLayer(class AActor* InActor, const struct FActorLayer& Layer)
+	void ULayersBlueprintLibrary::RemoveActorFromLayer(
+class AActor* InActor
+, 
+const struct FActorLayer& Layer
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -38,6 +43,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -47,7 +54,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FActorLayer                                 ActorLayer                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	TArray<class AActor*> ULayersBlueprintLibrary::GetActors(class UObject* WorldContextObject, const struct FActorLayer& ActorLayer)
+	TArray<class AActor*> ULayersBlueprintLibrary::GetActors(
+class UObject* WorldContextObject
+, 
+const struct FActorLayer& ActorLayer
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -68,6 +79,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -77,7 +90,11 @@ namespace CG
 	 * 		class AActor*                                      InActor                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FActorLayer                                 Layer                                                      (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void ULayersBlueprintLibrary::AddActorToLayer(class AActor* InActor, const struct FActorLayer& Layer)
+	void ULayersBlueprintLibrary::AddActorToLayer(
+class AActor* InActor
+, 
+const struct FActorLayer& Layer
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -96,10 +113,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULayersBlueprintLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction ULayersBlueprintLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULayersBlueprintLibrary::StaticClass()
@@ -109,6 +128,7 @@ namespace CG
 			ptr = UObject::FindClass("Class ActorLayerUtilities.LayersBlueprintLibrary");
 		return ptr;
 	}
+
 
 }
 

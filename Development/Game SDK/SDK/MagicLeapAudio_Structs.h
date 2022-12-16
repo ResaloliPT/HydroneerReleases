@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+
 	/**
 	 * ScriptStruct MagicLeapAudio.MagicLeapAudioDummyStruct
 	 * Size -> 0x0001
@@ -21,7 +22,9 @@ namespace CG
 	struct FMagicLeapAudioDummyStruct
 	{
 	public:
-		unsigned char                                              UnknownData_LERC[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_M1S9[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
+
 	};
 
 }

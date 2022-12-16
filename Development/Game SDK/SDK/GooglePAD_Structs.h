@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+
 	/**
 	 * Enum GooglePAD.EGooglePADCellularDataConfirmStatus
 	 */
@@ -26,6 +27,8 @@ namespace CG
 		AssetPack_CONFIRM_MAX           = 4
 	};
 
+
+
 	/**
 	 * Enum GooglePAD.EGooglePADStorageMethod
 	 */
@@ -37,6 +40,8 @@ namespace CG
 		AssetPack_STORAGE_NOT_INSTALLED = 3,
 		AssetPack_STORAGE_MAX           = 4
 	};
+
+
 
 	/**
 	 * Enum GooglePAD.EGooglePADDownloadStatus
@@ -58,6 +63,8 @@ namespace CG
 		AssetPack_REMOVAL_FAILED     = 12,
 		AssetPack_MAX                = 13
 	};
+
+
 
 	/**
 	 * Enum GooglePAD.EGooglePADErrorCode

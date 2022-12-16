@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * Class Mining.CGameEngine
 	 * Size -> 0x0000 (FullSize[0x0E30] - InheritedSize[0x0E30])
@@ -21,8 +22,11 @@ namespace CG
 	class UCGameEngine : public UGameEngine
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class Mining.CGameInstance
@@ -31,8 +35,11 @@ namespace CG
 	class UCGameInstance : public UGameInstance
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class Mining.CHydroneerLibrary
@@ -41,21 +48,79 @@ namespace CG
 	class UCHydroneerLibrary : public UBlueprintFunctionLibrary
 	{
 	public:
-		bool StringToClassRef(const class FString& ClassStringName, class UClass** OutClass);
-		void SetHiddenShadow(bool bNewCastHiddenShadow, class UPrimitiveComponent* Target);
-		class FString SanitizeString(const class FString& Filename);
-		bool RenameSave(const class FString& OriginalSaveName, const class FString& NewSaveName);
-		void ReloadInput(bool bReload);
+
+		bool StringToClassRef(
+const class FString& ClassStringName
+, 
+class UClass** OutClass
+);
+
+		void SetHiddenShadow(
+bool bNewCastHiddenShadow
+, 
+class UPrimitiveComponent* Target
+);
+
+		void SetCanAffectNavigation(
+bool bCanAffectNavigation
+, 
+class UPrimitiveComponent* Target
+);
+
+		class FString SanitizeString(
+const class FString& Filename
+);
+
+		bool RenameSave(
+const class FString& OriginalSaveName
+, 
+const class FString& NewSaveName
+);
+
+		void ReloadInput(
+bool bReload
+);
+
 		class FString GetSaveDirectory();
-		void GetSaveBackupNames(const class FString& SaveName, TArray<class FString>* OutBackups);
-		int32_t GetHighestCurrentSaveIndex(const class FString& SaveName);
-		class UClass* GetBlueprintAssetClass(const struct FAssetData& Asset);
+
+		void GetSaveBackupNames(
+const class FString& SaveName
+, 
+TArray<class FString>* OutBackups
+);
+
+		int32_t GetHighestCurrentSaveIndex(
+const class FString& SaveName
+);
+
+		class UClass* GetBlueprintAssetClass(
+const struct FAssetData& Asset
+);
+
 		class FString GetAppdataLocalDir();
-		TArray<class FString> FindFolders(const class FString& FilePath);
-		void CopyOverDirectory(const class FString& OldDirectory, const class FString& NewDirectory);
-		void BackupSave(const class FString& SaveName, bool bIncrementSave, int32_t MaxIncrements);
+
+		TArray<class FString> FindFolders(
+const class FString& FilePath
+);
+
+		void CopyOverDirectory(
+const class FString& OldDirectory
+, 
+const class FString& NewDirectory
+);
+
+		void BackupSave(
+const class FString& SaveName
+, 
+bool bIncrementSave
+, 
+int32_t MaxIncrements
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class Mining.CHydroneerProjectSettings
@@ -64,13 +129,21 @@ namespace CG
 	class UCHydroneerProjectSettings : public UDeveloperSettings
 	{
 	public:
-		bool                                                       bDebugMainMenu;                                          // 0x0038(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_TIQS[0x7];                                   // 0x0039(0x0007) MISSED OFFSET (PADDING)
+
+		bool                                                     bDebugMainMenu;                                          // 0x0038(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_L1QS[0x7];                                   // 0x0039(0x0007) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		class UCHydroneerProjectSettings* Get();
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class Mining.CModdingSubsystem
@@ -79,16 +152,31 @@ namespace CG
 	class UCModdingSubsystem : public UEngineSubsystem
 	{
 	public:
-		void UnloadMod(const class FString& ModName);
+
+		void UnloadMod(
+const class FString& ModName
+);
+
 		void UninstallUnsubscribedMods();
-		void LoadMod(const class FString& ModName);
+
+		void LoadMod(
+const class FString& ModName
+);
+
 		void InstallAllPending();
+
 		class UCModdingSubsystem* GetModdingSubsystem();
+
 		TArray<class FString> GetLoadedMods();
+
 		TArray<class FString> GetInstalledMods();
+
 		TArray<struct FPublishedFileID> GetAllSubscribedMods();
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class Mining.LocalCableComponent
@@ -97,9 +185,12 @@ namespace CG
 	class ULocalCableComponent : public UCableComponent
 	{
 	public:
-		unsigned char                                              UnknownData_6OOY[0x10];                                  // 0x0500(0x0010) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_QR9R[0x10];                                  // 0x0500(0x0010) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
 

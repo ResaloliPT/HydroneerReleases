@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19,9 +20,17 @@ namespace CG
 	 * 		class ABP_GameController_C*                        Controller                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class AActor*                                      HitActor                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		struct FVector                                     HitLocation                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		bool                                               ConsumeInput_                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               ConsumeInput                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_ParentTool_C::LMBDownWhileCarrying(class ABP_GameController_C* Controller, class AActor* HitActor, const struct FVector& HitLocation, bool* ConsumeInput_)
+	void ABP_ParentTool_C::LMBDownWhileCarrying(
+class ABP_GameController_C* Controller
+, 
+class AActor* HitActor
+, 
+const struct FVector& HitLocation
+, 
+bool* ConsumeInput
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -32,7 +41,7 @@ namespace CG
 			class ABP_GameController_C*                        Controller;
 			class AActor*                                      HitActor;
 			struct FVector                                     HitLocation;
-			bool                                               ConsumeInput_;
+			bool                                               ConsumeInput;
 		} params;
 		params.Controller = Controller;
 		params.HitActor = HitActor;
@@ -42,9 +51,11 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 		
-		if (ConsumeInput_ != nullptr)
-			*ConsumeInput_ = params.ConsumeInput_;
+		if (ConsumeInput != nullptr)
+			*ConsumeInput = params.ConsumeInput;
 	}
+
+
 
 	/**
 	 * Function:
@@ -67,6 +78,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -77,7 +90,13 @@ namespace CG
 	 * 		class AActor*                                      Hit_Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		struct FVector                                     HitLocation                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentTool_C::RMBDownWhileCarrying(class ABP_GameController_C* Controller, class AActor* Hit_Actor, const struct FVector& HitLocation)
+	void ABP_ParentTool_C::RMBDownWhileCarrying(
+class ABP_GameController_C* Controller
+, 
+class AActor* Hit_Actor
+, 
+const struct FVector& HitLocation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -98,6 +117,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -108,7 +129,13 @@ namespace CG
 	 * 		class ABP_ParentItem_C*                            CarryingItem                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class ABP_GameController_C*                        Instigator                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentTool_C::RMBDownIsTarget(class UPrimitiveComponent* Component, class ABP_ParentItem_C* CarryingItem, class ABP_GameController_C* Instigator)
+	void ABP_ParentTool_C::RMBDownIsTarget(
+class UPrimitiveComponent* Component
+, 
+class ABP_ParentItem_C* CarryingItem
+, 
+class ABP_GameController_C* Instigator
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -129,6 +156,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -139,7 +168,13 @@ namespace CG
 	 * 		class ABP_ParentItem_C*                            CarryingItem                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class ABP_GameController_C*                        Insigator                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentTool_C::LMBDownIsTarget(class UPrimitiveComponent* Component, class ABP_ParentItem_C* CarryingItem, class ABP_GameController_C* Insigator)
+	void ABP_ParentTool_C::LMBDownIsTarget(
+class UPrimitiveComponent* Component
+, 
+class ABP_ParentItem_C* CarryingItem
+, 
+class ABP_GameController_C* Insigator
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -159,6 +194,31 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentTool.BP_ParentTool_C.RMBUpWhileCarrying
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentTool_C::RMBUpWhileCarrying()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentTool.BP_ParentTool_C.RMBUpWhileCarrying");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
 
 	/**
 	 * Function:
@@ -181,6 +241,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -189,7 +251,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentTool_C::ExecuteUbergraph_BP_ParentTool(int32_t EntryPoint)
+	void ABP_ParentTool_C::ExecuteUbergraph_BP_ParentTool(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -206,10 +270,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ABP_ParentTool_C.StaticClass
+	 * 		Name   -> PredefinedFunction ABP_ParentTool_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ABP_ParentTool_C::StaticClass()
@@ -219,6 +285,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentTool.BP_ParentTool_C");
 		return ptr;
 	}
+
 
 }
 

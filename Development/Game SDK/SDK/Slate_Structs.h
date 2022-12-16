@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+
 	/**
 	 * Enum Slate.EVirtualKeyboardDismissAction
 	 */
@@ -25,6 +26,8 @@ namespace CG
 		MAX                 = 3
 	};
 
+
+
 	/**
 	 * Enum Slate.EVirtualKeyboardTrigger
 	 */
@@ -34,6 +37,8 @@ namespace CG
 		OnAllFocusEvents = 1,
 		MAX              = 2
 	};
+
+
 
 	/**
 	 * Enum Slate.ETableViewMode
@@ -46,6 +51,8 @@ namespace CG
 		MAX  = 3
 	};
 
+
+
 	/**
 	 * Enum Slate.ESelectionMode
 	 */
@@ -57,6 +64,8 @@ namespace CG
 		Multi        = 3,
 		MAX          = 4
 	};
+
+
 
 	/**
 	 * Enum Slate.EMultiBlockType
@@ -75,6 +84,8 @@ namespace CG
 		MAX                = 9
 	};
 
+
+
 	/**
 	 * Enum Slate.EMultiBoxType
 	 */
@@ -89,6 +100,8 @@ namespace CG
 		MAX             = 6
 	};
 
+
+
 	/**
 	 * Enum Slate.EProgressBarFillType
 	 */
@@ -101,6 +114,8 @@ namespace CG
 		BottomToTop    = 4,
 		MAX            = 5
 	};
+
+
 
 	/**
 	 * Enum Slate.EStretch
@@ -118,6 +133,8 @@ namespace CG
 		MAX             = 8
 	};
 
+
+
 	/**
 	 * Enum Slate.EStretchDirection
 	 */
@@ -128,6 +145,8 @@ namespace CG
 		UpOnly   = 2,
 		MAX      = 3
 	};
+
+
 
 	/**
 	 * Enum Slate.EScrollWhenFocusChanges
@@ -140,6 +159,8 @@ namespace CG
 		MAX            = 3
 	};
 
+
+
 	/**
 	 * Enum Slate.EDescendantScrollDestination
 	 */
@@ -150,6 +171,8 @@ namespace CG
 		Center    = 2,
 		MAX       = 3
 	};
+
+
 
 	/**
 	 * Enum Slate.EListItemAlignment
@@ -166,6 +189,8 @@ namespace CG
 		MAX               = 7
 	};
 
+
+
 	/**
 	 * Enum Slate.ETextFlowDirection
 	 */
@@ -177,6 +202,8 @@ namespace CG
 		MAX         = 3
 	};
 
+
+
 	/**
 	 * Enum Slate.ETextWrappingPolicy
 	 */
@@ -186,6 +213,8 @@ namespace CG
 		AllowPerCharacterWrapping = 1,
 		MAX                       = 2
 	};
+
+
 
 	/**
 	 * Enum Slate.ETextTransformPolicy
@@ -198,6 +227,8 @@ namespace CG
 		MAX     = 3
 	};
 
+
+
 	/**
 	 * Enum Slate.ETextJustify
 	 */
@@ -208,6 +239,8 @@ namespace CG
 		Right  = 2,
 		MAX    = 3
 	};
+
+
 
 	/**
 	 * Enum Slate.ECustomizedToolMenuVisibility
@@ -220,6 +253,8 @@ namespace CG
 		MAX     = 3
 	};
 
+
+
 	/**
 	 * Enum Slate.EMultipleKeyBindingIndex
 	 */
@@ -230,6 +265,8 @@ namespace CG
 		NumChords = 2,
 		MAX       = 3
 	};
+
+
 
 	/**
 	 * Enum Slate.EUserInterfaceActionType
@@ -248,6 +285,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+
 	/**
 	 * ScriptStruct Slate.InputChord
 	 * Size -> 0x0020
@@ -255,13 +293,27 @@ namespace CG
 	struct FInputChord
 	{
 	public:
-		struct FKey                                                Key;                                                     // 0x0000(0x0018) Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              bShift : 1;                                              // 0x0018(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              bCtrl : 1;                                               // 0x0018(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              bAlt : 1;                                                // 0x0018(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              bCmd : 1;                                                // 0x0018(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_YA5D[0x7];                                   // 0x0019(0x0007) MISSED OFFSET (PADDING)
+
+		struct FKey                                              Key;                                                     // 0x0000(0x0018) Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bShift : 1;                                              // 0x0018(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bCtrl : 1;                                               // 0x0018(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bAlt : 1;                                                // 0x0018(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bCmd : 1;                                                // 0x0018(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_1L3A[0x7];                                   // 0x0019(0x0007) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct Slate.VirtualKeyboardOptions
@@ -270,8 +322,12 @@ namespace CG
 	struct FVirtualKeyboardOptions
 	{
 	public:
-		bool                                                       bEnableAutocorrect;                                      // 0x0000(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		bool                                                     bEnableAutocorrect;                                      // 0x0000(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct Slate.Anchors
@@ -280,9 +336,15 @@ namespace CG
 	struct FAnchors
 	{
 	public:
-		struct FVector2D                                           Minimum;                                                 // 0x0000(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FVector2D                                           Maximum;                                                 // 0x0008(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		struct FVector2D                                         Minimum;                                                 // 0x0000(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FVector2D                                         Maximum;                                                 // 0x0008(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct Slate.CustomizedToolMenuEntry
@@ -291,9 +353,15 @@ namespace CG
 	struct FCustomizedToolMenuEntry
 	{
 	public:
-		ECustomizedToolMenuVisibility                              Visibility;                                              // 0x0000(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_6DW5[0x3];                                   // 0x0000(0x0003) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+
+		ECustomizedToolMenuVisibility                            Visibility;                                              // 0x0000(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_OWEO[0x3];                                   // 0x0001(0x0003) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+
 	};
+
+
 
 	/**
 	 * ScriptStruct Slate.CustomizedToolMenuSection
@@ -302,9 +370,15 @@ namespace CG
 	struct FCustomizedToolMenuSection
 	{
 	public:
-		ECustomizedToolMenuVisibility                              Visibility;                                              // 0x0000(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_UK05[0x3];                                   // 0x0000(0x0003) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+
+		ECustomizedToolMenuVisibility                            Visibility;                                              // 0x0000(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_ECHY[0x3];                                   // 0x0001(0x0003) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+
 	};
+
+
 
 	/**
 	 * ScriptStruct Slate.CustomizedToolMenuNameArray
@@ -313,8 +387,12 @@ namespace CG
 	struct FCustomizedToolMenuNameArray
 	{
 	public:
-		TArray<class FName>                                        Names;                                                   // 0x0000(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+
+		TArray<class FName>                                      Names;                                                   // 0x0000(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct Slate.CustomizedToolMenu
@@ -323,12 +401,24 @@ namespace CG
 	struct FCustomizedToolMenu
 	{
 	public:
-		class FName                                                Name;                                                    // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		TMap<class FName, struct FCustomizedToolMenuEntry>         Entries;                                                 // 0x0008(0x0050) NativeAccessSpecifierPublic
-		TMap<class FName, struct FCustomizedToolMenuSection>       Sections;                                                // 0x0058(0x0050) NativeAccessSpecifierPublic
-		TMap<class FName, struct FCustomizedToolMenuNameArray>     EntryOrder;                                              // 0x00A8(0x0050) NativeAccessSpecifierPublic
-		TArray<class FName>                                        SectionOrder;                                            // 0x00F8(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_1AK2[0xE0];                                  // 0x0108(0x00E0) MISSED OFFSET (PADDING)
+
+		class FName                                              Name;                                                    // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		TMap<class FName, struct FCustomizedToolMenuEntry>       Entries;                                                 // 0x0008(0x0050) NativeAccessSpecifierPublic
+
+
+		TMap<class FName, struct FCustomizedToolMenuSection>     Sections;                                                // 0x0058(0x0050) NativeAccessSpecifierPublic
+
+
+		TMap<class FName, struct FCustomizedToolMenuNameArray>   EntryOrder;                                              // 0x00A8(0x0050) NativeAccessSpecifierPublic
+
+
+		TArray<class FName>                                      SectionOrder;                                            // 0x00F8(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_T7E8[0xE0];                                  // 0x0108(0x00E0) MISSED OFFSET (PADDING)
+
 	};
 
 }

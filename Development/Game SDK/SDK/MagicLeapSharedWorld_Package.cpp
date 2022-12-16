@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -33,6 +34,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -53,6 +56,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -75,6 +80,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -83,7 +90,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FMagicLeapSharedWorldSharedData             NewSharedWorldData                                         (Parm, OutParm, NativeAccessSpecifierPublic)
 	 */
-	void AMagicLeapSharedWorldGameMode::DetermineSharedWorldData(struct FMagicLeapSharedWorldSharedData* NewSharedWorldData)
+	void AMagicLeapSharedWorldGameMode::DetermineSharedWorldData(
+struct FMagicLeapSharedWorldSharedData* NewSharedWorldData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -102,10 +111,12 @@ namespace CG
 			*NewSharedWorldData = params.NewSharedWorldData;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AMagicLeapSharedWorldGameMode.StaticClass
+	 * 		Name   -> PredefinedFunction AMagicLeapSharedWorldGameMode.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AMagicLeapSharedWorldGameMode::StaticClass()
@@ -115,6 +126,8 @@ namespace CG
 			ptr = UObject::FindClass("Class MagicLeapSharedWorld.MagicLeapSharedWorldGameMode");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -137,6 +150,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -158,6 +173,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -178,6 +195,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -202,10 +221,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AMagicLeapSharedWorldGameState.StaticClass
+	 * 		Name   -> PredefinedFunction AMagicLeapSharedWorldGameState.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AMagicLeapSharedWorldGameState::StaticClass()
@@ -216,6 +237,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -224,7 +247,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FMagicLeapSharedWorldLocalData              LocalWorldReplicationData                                  (ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void AMagicLeapSharedWorldPlayerController::ServerSetLocalWorldData(const struct FMagicLeapSharedWorldLocalData& LocalWorldReplicationData)
+	void AMagicLeapSharedWorldPlayerController::ServerSetLocalWorldData(
+const struct FMagicLeapSharedWorldLocalData& LocalWorldReplicationData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -241,6 +266,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -249,7 +276,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FMagicLeapSharedWorldAlignmentTransforms    InAlignmentTransforms                                      (ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void AMagicLeapSharedWorldPlayerController::ServerSetAlignmentTransforms(const struct FMagicLeapSharedWorldAlignmentTransforms& InAlignmentTransforms)
+	void AMagicLeapSharedWorldPlayerController::ServerSetAlignmentTransforms(
+const struct FMagicLeapSharedWorldAlignmentTransforms& InAlignmentTransforms
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -265,6 +294,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -289,6 +320,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -297,7 +330,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bChosenOne                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void AMagicLeapSharedWorldPlayerController::ClientSetChosenOne(bool bChosenOne)
+	void AMagicLeapSharedWorldPlayerController::ClientSetChosenOne(
+bool bChosenOne
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -313,6 +348,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -334,6 +371,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -358,10 +397,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AMagicLeapSharedWorldPlayerController.StaticClass
+	 * 		Name   -> PredefinedFunction AMagicLeapSharedWorldPlayerController.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AMagicLeapSharedWorldPlayerController::StaticClass()
@@ -371,6 +412,7 @@ namespace CG
 			ptr = UObject::FindClass("Class MagicLeapSharedWorld.MagicLeapSharedWorldPlayerController");
 		return ptr;
 	}
+
 
 }
 

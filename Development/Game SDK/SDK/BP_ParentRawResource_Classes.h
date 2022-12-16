@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,22 +14,36 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * BlueprintGeneratedClass BP_ParentRawResource.BP_ParentRawResource_C
-	 * Size -> 0x000F (FullSize[0x0388] - InheritedSize[0x0379])
+	 * Size -> 0x0008 (FullSize[0x03F0] - InheritedSize[0x03E8])
 	 */
 	class ABP_ParentRawResource_C : public ABP_ParentResource_C
 	{
 	public:
-		unsigned char                                              UnknownData_INXB[0x7];                                   // 0x0379(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x0380(0x0008) ZeroConstructor, Transient, DuplicateTransient, UObjectWrapper
+
+		struct FPointerToUberGraphFrame                          UberGraphFrame;                                          // 0x03E8(0x0008) ZeroConstructor, Transient, DuplicateTransient, UObjectWrapper
+
 
 	public:
-		void SetDoNotClear(bool DoNotClear);
-		void ToggleSaveRawResourcesChanged(bool NewValue);
+
+		void SetDoNotClear(
+bool DoNotClear
+);
+
+		void ToggleSaveRawResourcesChanged(
+bool NewValue
+);
+
 		void OverrideLoaded();
+
 		void ReceiveBeginPlay();
-		void ExecuteUbergraph_BP_ParentRawResource(int32_t EntryPoint);
+
+		void ExecuteUbergraph_BP_ParentRawResource(
+int32_t EntryPoint
+);
+
 		static UClass* StaticClass();
 	};
 

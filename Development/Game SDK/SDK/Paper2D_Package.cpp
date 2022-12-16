@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMaterialExpressionSpriteTextureSampler.StaticClass
+	 * 		Name   -> PredefinedFunction UMaterialExpressionSpriteTextureSampler.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMaterialExpressionSpriteTextureSampler::StaticClass()
@@ -24,10 +25,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction APaperCharacter.StaticClass
+	 * 		Name   -> PredefinedFunction APaperCharacter.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* APaperCharacter::StaticClass()
@@ -38,6 +41,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -46,7 +51,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UPaperFlipbook::IsValidKeyFrameIndex(int32_t Index)
+	bool UPaperFlipbook::IsValidKeyFrameIndex(
+int32_t Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -64,6 +71,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -88,6 +97,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -97,7 +108,11 @@ namespace CG
 	 * 		float                                              Time                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bClampToEnds                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UPaperSprite* UPaperFlipbook::GetSpriteAtTime(float Time, bool bClampToEnds)
+	class UPaperSprite* UPaperFlipbook::GetSpriteAtTime(
+float Time
+, 
+bool bClampToEnds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -118,6 +133,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -126,7 +143,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            FrameIndex                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UPaperSprite* UPaperFlipbook::GetSpriteAtFrame(int32_t FrameIndex)
+	class UPaperSprite* UPaperFlipbook::GetSpriteAtFrame(
+int32_t FrameIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -144,6 +163,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -168,6 +189,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -191,6 +214,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -200,7 +225,11 @@ namespace CG
 	 * 		float                                              Time                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bClampToEnds                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UPaperFlipbook::GetKeyFrameIndexAtTime(float Time, bool bClampToEnds)
+	int32_t UPaperFlipbook::GetKeyFrameIndexAtTime(
+float Time
+, 
+bool bClampToEnds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -221,10 +250,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPaperFlipbook.StaticClass
+	 * 		Name   -> PredefinedFunction UPaperFlipbook.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPaperFlipbook::StaticClass()
@@ -235,10 +266,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction APaperFlipbookActor.StaticClass
+	 * 		Name   -> PredefinedFunction APaperFlipbookActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* APaperFlipbookActor::StaticClass()
@@ -248,6 +281,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Paper2D.PaperFlipbookActor");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -270,6 +305,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -278,7 +315,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FLinearColor                                NewColor                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UPaperFlipbookComponent::SetSpriteColor(const struct FLinearColor& NewColor)
+	void UPaperFlipbookComponent::SetSpriteColor(
+const struct FLinearColor& NewColor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -295,6 +334,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -303,7 +344,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              NewRate                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UPaperFlipbookComponent::SetPlayRate(float NewRate)
+	void UPaperFlipbookComponent::SetPlayRate(
+float NewRate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -320,6 +363,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -329,7 +374,11 @@ namespace CG
 	 * 		int32_t                                            NewFramePosition                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bFireEvents                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UPaperFlipbookComponent::SetPlaybackPositionInFrames(int32_t NewFramePosition, bool bFireEvents)
+	void UPaperFlipbookComponent::SetPlaybackPositionInFrames(
+int32_t NewFramePosition
+, 
+bool bFireEvents
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -348,6 +397,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -357,7 +408,11 @@ namespace CG
 	 * 		float                                              NewPosition                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bFireEvents                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UPaperFlipbookComponent::SetPlaybackPosition(float NewPosition, bool bFireEvents)
+	void UPaperFlipbookComponent::SetPlaybackPosition(
+float NewPosition
+, 
+bool bFireEvents
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -376,6 +431,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -384,7 +441,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              NewTime                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UPaperFlipbookComponent::SetNewTime(float NewTime)
+	void UPaperFlipbookComponent::SetNewTime(
+float NewTime
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -401,6 +460,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -409,7 +470,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bNewLooping                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UPaperFlipbookComponent::SetLooping(bool bNewLooping)
+	void UPaperFlipbookComponent::SetLooping(
+bool bNewLooping
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -426,6 +489,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -434,7 +499,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UPaperFlipbook*                              NewFlipbook                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UPaperFlipbookComponent::SetFlipbook(class UPaperFlipbook* NewFlipbook)
+	bool UPaperFlipbookComponent::SetFlipbook(
+class UPaperFlipbook* NewFlipbook
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -452,6 +519,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -474,6 +543,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -494,6 +565,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -516,6 +589,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -537,6 +612,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -545,7 +622,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UPaperFlipbook*                              OldFlipbook                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UPaperFlipbookComponent::OnRep_SourceFlipbook(class UPaperFlipbook* OldFlipbook)
+	void UPaperFlipbookComponent::OnRep_SourceFlipbook(
+class UPaperFlipbook* OldFlipbook
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -561,6 +640,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -585,6 +666,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -607,6 +690,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -631,6 +716,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -653,6 +740,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -677,6 +766,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -699,6 +790,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -723,6 +816,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -745,6 +840,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -769,6 +866,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -791,6 +890,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -815,10 +916,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPaperFlipbookComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UPaperFlipbookComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPaperFlipbookComponent::StaticClass()
@@ -829,10 +932,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction APaperGroupedSpriteActor.StaticClass
+	 * 		Name   -> PredefinedFunction APaperGroupedSpriteActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* APaperGroupedSpriteActor::StaticClass()
@@ -842,6 +947,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Paper2D.PaperGroupedSpriteActor");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -855,7 +962,17 @@ namespace CG
 	 * 		bool                                               bMarkRenderStateDirty                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bTeleport                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UPaperGroupedSpriteComponent::UpdateInstanceTransform(int32_t InstanceIndex, const struct FTransform& NewInstanceTransform, bool bWorldSpace, bool bMarkRenderStateDirty, bool bTeleport)
+	bool UPaperGroupedSpriteComponent::UpdateInstanceTransform(
+int32_t InstanceIndex
+, 
+const struct FTransform& NewInstanceTransform
+, 
+bool bWorldSpace
+, 
+bool bMarkRenderStateDirty
+, 
+bool bTeleport
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -882,6 +999,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -892,7 +1011,13 @@ namespace CG
 	 * 		struct FLinearColor                                NewInstanceColor                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bMarkRenderStateDirty                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UPaperGroupedSpriteComponent::UpdateInstanceColor(int32_t InstanceIndex, const struct FLinearColor& NewInstanceColor, bool bMarkRenderStateDirty)
+	bool UPaperGroupedSpriteComponent::UpdateInstanceColor(
+int32_t InstanceIndex
+, 
+const struct FLinearColor& NewInstanceColor
+, 
+bool bMarkRenderStateDirty
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -915,6 +1040,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -923,7 +1050,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector                                     WorldSpaceSortAxis                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UPaperGroupedSpriteComponent::SortInstancesAlongAxis(const struct FVector& WorldSpaceSortAxis)
+	void UPaperGroupedSpriteComponent::SortInstancesAlongAxis(
+const struct FVector& WorldSpaceSortAxis
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -940,6 +1069,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -948,7 +1079,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            InstanceIndex                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UPaperGroupedSpriteComponent::RemoveInstance(int32_t InstanceIndex)
+	bool UPaperGroupedSpriteComponent::RemoveInstance(
+int32_t InstanceIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -967,6 +1100,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -977,7 +1112,13 @@ namespace CG
 	 * 		struct FTransform                                  OutInstanceTransform                                       (Parm, OutParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWorldSpace                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UPaperGroupedSpriteComponent::GetInstanceTransform(int32_t InstanceIndex, struct FTransform* OutInstanceTransform, bool bWorldSpace)
+	bool UPaperGroupedSpriteComponent::GetInstanceTransform(
+int32_t InstanceIndex
+, 
+struct FTransform* OutInstanceTransform
+, 
+bool bWorldSpace
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1002,6 +1143,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1025,6 +1168,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1046,6 +1191,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1057,7 +1204,15 @@ namespace CG
 	 * 		bool                                               bWorldSpace                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FLinearColor                                Color                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UPaperGroupedSpriteComponent::AddInstance(const struct FTransform& Transform, class UPaperSprite* Sprite, bool bWorldSpace, const struct FLinearColor& Color)
+	int32_t UPaperGroupedSpriteComponent::AddInstance(
+const struct FTransform& Transform
+, 
+class UPaperSprite* Sprite
+, 
+bool bWorldSpace
+, 
+const struct FLinearColor& Color
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1082,10 +1237,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPaperGroupedSpriteComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UPaperGroupedSpriteComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPaperGroupedSpriteComponent::StaticClass()
@@ -1096,10 +1253,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPaperRuntimeSettings.StaticClass
+	 * 		Name   -> PredefinedFunction UPaperRuntimeSettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPaperRuntimeSettings::StaticClass()
@@ -1110,10 +1269,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPaperSprite.StaticClass
+	 * 		Name   -> PredefinedFunction UPaperSprite.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPaperSprite::StaticClass()
@@ -1124,10 +1285,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction APaperSpriteActor.StaticClass
+	 * 		Name   -> PredefinedFunction APaperSpriteActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* APaperSpriteActor::StaticClass()
@@ -1138,10 +1301,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPaperSpriteAtlas.StaticClass
+	 * 		Name   -> PredefinedFunction UPaperSpriteAtlas.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPaperSpriteAtlas::StaticClass()
@@ -1151,6 +1316,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Paper2D.PaperSpriteAtlas");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1162,7 +1329,13 @@ namespace CG
 	 * 		int32_t                                            Width                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Height                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FSlateBrush UPaperSpriteBlueprintLibrary::MakeBrushFromSprite(class UPaperSprite* Sprite, int32_t Width, int32_t Height)
+	struct FSlateBrush UPaperSpriteBlueprintLibrary::MakeBrushFromSprite(
+class UPaperSprite* Sprite
+, 
+int32_t Width
+, 
+int32_t Height
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1185,10 +1358,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPaperSpriteBlueprintLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UPaperSpriteBlueprintLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPaperSpriteBlueprintLibrary::StaticClass()
@@ -1199,6 +1374,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1207,7 +1384,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FLinearColor                                NewColor                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UPaperSpriteComponent::SetSpriteColor(const struct FLinearColor& NewColor)
+	void UPaperSpriteComponent::SetSpriteColor(
+const struct FLinearColor& NewColor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1224,6 +1403,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1232,7 +1413,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UPaperSprite*                                NewSprite                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UPaperSpriteComponent::SetSprite(class UPaperSprite* NewSprite)
+	bool UPaperSpriteComponent::SetSprite(
+class UPaperSprite* NewSprite
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1250,6 +1433,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1274,10 +1459,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPaperSpriteComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UPaperSpriteComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPaperSpriteComponent::StaticClass()
@@ -1288,10 +1475,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction APaperTerrainActor.StaticClass
+	 * 		Name   -> PredefinedFunction APaperTerrainActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* APaperTerrainActor::StaticClass()
@@ -1302,6 +1491,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1310,7 +1501,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FLinearColor                                NewColor                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UPaperTerrainComponent::SetTerrainColor(const struct FLinearColor& NewColor)
+	void UPaperTerrainComponent::SetTerrainColor(
+const struct FLinearColor& NewColor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1327,10 +1520,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPaperTerrainComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UPaperTerrainComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPaperTerrainComponent::StaticClass()
@@ -1341,10 +1536,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPaperTerrainMaterial.StaticClass
+	 * 		Name   -> PredefinedFunction UPaperTerrainMaterial.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPaperTerrainMaterial::StaticClass()
@@ -1355,10 +1552,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPaperTerrainSplineComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UPaperTerrainSplineComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPaperTerrainSplineComponent::StaticClass()
@@ -1369,10 +1568,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPaperTileLayer.StaticClass
+	 * 		Name   -> PredefinedFunction UPaperTileLayer.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPaperTileLayer::StaticClass()
@@ -1383,10 +1584,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPaperTileMap.StaticClass
+	 * 		Name   -> PredefinedFunction UPaperTileMap.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPaperTileMap::StaticClass()
@@ -1397,10 +1600,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction APaperTileMapActor.StaticClass
+	 * 		Name   -> PredefinedFunction APaperTileMapActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* APaperTileMapActor::StaticClass()
@@ -1411,6 +1616,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1419,7 +1626,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FLinearColor                                NewColor                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UPaperTileMapComponent::SetTileMapColor(const struct FLinearColor& NewColor)
+	void UPaperTileMapComponent::SetTileMapColor(
+const struct FLinearColor& NewColor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1436,6 +1645,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1444,7 +1655,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UPaperTileMap*                               NewTileMap                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UPaperTileMapComponent::SetTileMap(class UPaperTileMap* NewTileMap)
+	bool UPaperTileMapComponent::SetTileMap(
+class UPaperTileMap* NewTileMap
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1463,6 +1676,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1474,7 +1689,15 @@ namespace CG
 	 * 		int32_t                                            Layer                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FPaperTileInfo                              NewValue                                                   (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UPaperTileMapComponent::SetTile(int32_t X, int32_t Y, int32_t Layer, const struct FPaperTileInfo& NewValue)
+	void UPaperTileMapComponent::SetTile(
+int32_t X
+, 
+int32_t Y
+, 
+int32_t Layer
+, 
+const struct FPaperTileInfo& NewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1497,6 +1720,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1506,7 +1731,11 @@ namespace CG
 	 * 		struct FLinearColor                                NewColor                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Layer                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UPaperTileMapComponent::SetLayerColor(const struct FLinearColor& NewColor, int32_t Layer)
+	void UPaperTileMapComponent::SetLayerColor(
+const struct FLinearColor& NewColor
+, 
+int32_t Layer
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1525,6 +1754,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1539,7 +1770,21 @@ namespace CG
 	 * 		float                                              CustomOffset                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bRebuildCollision                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UPaperTileMapComponent::SetLayerCollision(int32_t Layer, bool bHasCollision, bool bOverrideThickness, float CustomThickness, bool bOverrideOffset, float CustomOffset, bool bRebuildCollision)
+	void UPaperTileMapComponent::SetLayerCollision(
+int32_t Layer
+, 
+bool bHasCollision
+, 
+bool bOverrideThickness
+, 
+float CustomThickness
+, 
+bool bOverrideOffset
+, 
+float CustomOffset
+, 
+bool bRebuildCollision
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1568,6 +1813,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1577,7 +1824,11 @@ namespace CG
 	 * 		float                                              Thickness                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bRebuildCollision                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UPaperTileMapComponent::SetDefaultCollisionThickness(float Thickness, bool bRebuildCollision)
+	void UPaperTileMapComponent::SetDefaultCollisionThickness(
+float Thickness
+, 
+bool bRebuildCollision
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1596,6 +1847,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1605,7 +1858,11 @@ namespace CG
 	 * 		int32_t                                            NewWidthInTiles                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            NewHeightInTiles                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UPaperTileMapComponent::ResizeMap(int32_t NewWidthInTiles, int32_t NewHeightInTiles)
+	void UPaperTileMapComponent::ResizeMap(
+int32_t NewWidthInTiles
+, 
+int32_t NewHeightInTiles
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1623,6 +1880,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1644,6 +1903,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1668,6 +1929,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1689,6 +1952,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1701,7 +1966,17 @@ namespace CG
 	 * 		int32_t                                            LayerIndex                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWorldSpace                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UPaperTileMapComponent::GetTilePolygon(int32_t TileX, int32_t TileY, TArray<struct FVector>* Points, int32_t LayerIndex, bool bWorldSpace)
+	void UPaperTileMapComponent::GetTilePolygon(
+int32_t TileX
+, 
+int32_t TileY
+, 
+TArray<struct FVector>* Points
+, 
+int32_t LayerIndex
+, 
+bool bWorldSpace
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1728,6 +2003,8 @@ namespace CG
 			*Points = params.Points;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1751,6 +2028,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1762,7 +2041,15 @@ namespace CG
 	 * 		int32_t                                            LayerIndex                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWorldSpace                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVector UPaperTileMapComponent::GetTileCornerPosition(int32_t TileX, int32_t TileY, int32_t LayerIndex, bool bWorldSpace)
+	struct FVector UPaperTileMapComponent::GetTileCornerPosition(
+int32_t TileX
+, 
+int32_t TileY
+, 
+int32_t LayerIndex
+, 
+bool bWorldSpace
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1787,6 +2074,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1798,7 +2087,15 @@ namespace CG
 	 * 		int32_t                                            LayerIndex                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWorldSpace                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVector UPaperTileMapComponent::GetTileCenterPosition(int32_t TileX, int32_t TileY, int32_t LayerIndex, bool bWorldSpace)
+	struct FVector UPaperTileMapComponent::GetTileCenterPosition(
+int32_t TileX
+, 
+int32_t TileY
+, 
+int32_t LayerIndex
+, 
+bool bWorldSpace
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1823,6 +2120,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1833,7 +2132,13 @@ namespace CG
 	 * 		int32_t                                            Y                                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Layer                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FPaperTileInfo UPaperTileMapComponent::GetTile(int32_t X, int32_t Y, int32_t Layer)
+	struct FPaperTileInfo UPaperTileMapComponent::GetTile(
+int32_t X
+, 
+int32_t Y
+, 
+int32_t Layer
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1856,6 +2161,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1866,7 +2173,13 @@ namespace CG
 	 * 		int32_t                                            MapHeight                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            NumLayers                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UPaperTileMapComponent::GetMapSize(int32_t* MapWidth, int32_t* MapHeight, int32_t* NumLayers)
+	void UPaperTileMapComponent::GetMapSize(
+int32_t* MapWidth
+, 
+int32_t* MapHeight
+, 
+int32_t* NumLayers
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1891,6 +2204,8 @@ namespace CG
 			*NumLayers = params.NumLayers;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1899,7 +2214,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Layer                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FLinearColor UPaperTileMapComponent::GetLayerColor(int32_t Layer)
+	struct FLinearColor UPaperTileMapComponent::GetLayerColor(
+int32_t Layer
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1918,6 +2235,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1931,7 +2250,19 @@ namespace CG
 	 * 		float                                              PixelsPerUnrealUnit                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bCreateLayer                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UPaperTileMapComponent::CreateNewTileMap(int32_t MapWidth, int32_t MapHeight, int32_t TileWidth, int32_t TileHeight, float PixelsPerUnrealUnit, bool bCreateLayer)
+	void UPaperTileMapComponent::CreateNewTileMap(
+int32_t MapWidth
+, 
+int32_t MapHeight
+, 
+int32_t TileWidth
+, 
+int32_t TileHeight
+, 
+float PixelsPerUnrealUnit
+, 
+bool bCreateLayer
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1958,6 +2289,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1981,10 +2314,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPaperTileMapComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UPaperTileMapComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPaperTileMapComponent::StaticClass()
@@ -1995,10 +2330,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPaperTileSet.StaticClass
+	 * 		Name   -> PredefinedFunction UPaperTileSet.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPaperTileSet::StaticClass()
@@ -2008,6 +2345,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Paper2D.PaperTileSet");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2021,7 +2360,17 @@ namespace CG
 	 * 		bool                                               bFlipV                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bFlipD                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FPaperTileInfo UTileMapBlueprintLibrary::MakeTile(int32_t TileIndex, class UPaperTileSet* TileSet, bool bFlipH, bool bFlipV, bool bFlipD)
+	struct FPaperTileInfo UTileMapBlueprintLibrary::MakeTile(
+int32_t TileIndex
+, 
+class UPaperTileSet* TileSet
+, 
+bool bFlipH
+, 
+bool bFlipV
+, 
+bool bFlipD
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2048,6 +2397,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2056,7 +2407,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FPaperTileInfo                              Tile                                                       (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	class FName UTileMapBlueprintLibrary::GetTileUserData(const struct FPaperTileInfo& Tile)
+	class FName UTileMapBlueprintLibrary::GetTileUserData(
+const struct FPaperTileInfo& Tile
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2075,6 +2428,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2083,7 +2438,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FPaperTileInfo                              Tile                                                       (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	struct FTransform UTileMapBlueprintLibrary::GetTileTransform(const struct FPaperTileInfo& Tile)
+	struct FTransform UTileMapBlueprintLibrary::GetTileTransform(
+const struct FPaperTileInfo& Tile
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2102,6 +2459,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2115,7 +2474,19 @@ namespace CG
 	 * 		bool                                               bFlipV                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bFlipD                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UTileMapBlueprintLibrary::BreakTile(const struct FPaperTileInfo& Tile, int32_t* TileIndex, class UPaperTileSet** TileSet, bool* bFlipH, bool* bFlipV, bool* bFlipD)
+	void UTileMapBlueprintLibrary::BreakTile(
+const struct FPaperTileInfo& Tile
+, 
+int32_t* TileIndex
+, 
+class UPaperTileSet** TileSet
+, 
+bool* bFlipH
+, 
+bool* bFlipV
+, 
+bool* bFlipD
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2148,10 +2519,12 @@ namespace CG
 			*bFlipD = params.bFlipD;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UTileMapBlueprintLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UTileMapBlueprintLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UTileMapBlueprintLibrary::StaticClass()
@@ -2161,6 +2534,7 @@ namespace CG
 			ptr = UObject::FindClass("Class Paper2D.TileMapBlueprintLibrary");
 		return ptr;
 	}
+
 
 }
 

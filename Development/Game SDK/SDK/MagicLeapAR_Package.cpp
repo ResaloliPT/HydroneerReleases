@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20,7 +21,13 @@ namespace CG
 	 * 		struct FLatentActionInfo                           LatentInfo                                                 (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		class ULuminARSessionConfig*                       Configuration                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ULuminARSessionFunctionLibrary::StartLuminARSession(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class ULuminARSessionConfig* Configuration)
+	void ULuminARSessionFunctionLibrary::StartLuminARSession(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+class ULuminARSessionConfig* Configuration
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -41,10 +48,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULuminARSessionFunctionLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction ULuminARSessionFunctionLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULuminARSessionFunctionLibrary::StaticClass()
@@ -54,6 +63,8 @@ namespace CG
 			ptr = UObject::FindClass("Class MagicLeapAR.LuminARSessionFunctionLibrary");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -65,7 +76,13 @@ namespace CG
 	 * 		struct FVector2D                                   ScreenPosition                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FARTraceResult>                      OutHitResults                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	bool ULuminARFrameFunctionLibrary::LuminARLineTrace(class UObject* WorldContextObject, const struct FVector2D& ScreenPosition, TArray<struct FARTraceResult>* OutHitResults)
+	bool ULuminARFrameFunctionLibrary::LuminARLineTrace(
+class UObject* WorldContextObject
+, 
+const struct FVector2D& ScreenPosition
+, 
+TArray<struct FARTraceResult>* OutHitResults
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -90,6 +107,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -113,10 +132,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULuminARFrameFunctionLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction ULuminARFrameFunctionLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULuminARFrameFunctionLibrary::StaticClass()
@@ -126,6 +147,8 @@ namespace CG
 			ptr = UObject::FindClass("Class MagicLeapAR.LuminARFrameFunctionLibrary");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -141,7 +164,21 @@ namespace CG
 	 * 		bool                                               bImageIsStationary                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EMagicLeapImageTargetOrientation                   InAxisOrientation                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class ULuminARCandidateImage* ULuminARImageTrackingFunctionLibrary::AddLuminRuntimeCandidateImageEx(class UARSessionConfig* SessionConfig, class UTexture2D* CandidateTexture, const class FString& FriendlyName, float PhysicalWidth, bool bUseUnreliablePose, bool bImageIsStationary, EMagicLeapImageTargetOrientation InAxisOrientation)
+	class ULuminARCandidateImage* ULuminARImageTrackingFunctionLibrary::AddLuminRuntimeCandidateImageEx(
+class UARSessionConfig* SessionConfig
+, 
+class UTexture2D* CandidateTexture
+, 
+const class FString& FriendlyName
+, 
+float PhysicalWidth
+, 
+bool bUseUnreliablePose
+, 
+bool bImageIsStationary
+, 
+EMagicLeapImageTargetOrientation InAxisOrientation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -172,6 +209,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -185,7 +224,19 @@ namespace CG
 	 * 		bool                                               bUseUnreliablePose                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bImageIsStationary                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class ULuminARCandidateImage* ULuminARImageTrackingFunctionLibrary::AddLuminRuntimeCandidateImage(class UARSessionConfig* SessionConfig, class UTexture2D* CandidateTexture, const class FString& FriendlyName, float PhysicalWidth, bool bUseUnreliablePose, bool bImageIsStationary)
+	class ULuminARCandidateImage* ULuminARImageTrackingFunctionLibrary::AddLuminRuntimeCandidateImage(
+class UARSessionConfig* SessionConfig
+, 
+class UTexture2D* CandidateTexture
+, 
+const class FString& FriendlyName
+, 
+float PhysicalWidth
+, 
+bool bUseUnreliablePose
+, 
+bool bImageIsStationary
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -214,10 +265,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULuminARImageTrackingFunctionLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction ULuminARImageTrackingFunctionLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULuminARImageTrackingFunctionLibrary::StaticClass()
@@ -228,10 +281,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ALuminAROrigin.StaticClass
+	 * 		Name   -> PredefinedFunction ALuminAROrigin.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ALuminAROrigin::StaticClass()
@@ -242,10 +297,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULuminARSessionConfig.StaticClass
+	 * 		Name   -> PredefinedFunction ULuminARSessionConfig.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULuminARSessionConfig::StaticClass()
@@ -255,6 +312,8 @@ namespace CG
 			ptr = UObject::FindClass("Class MagicLeapAR.LuminARSessionConfig");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -279,10 +338,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULuminARLightEstimate.StaticClass
+	 * 		Name   -> PredefinedFunction ULuminARLightEstimate.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULuminARLightEstimate::StaticClass()
@@ -292,6 +353,8 @@ namespace CG
 			ptr = UObject::FindClass("Class MagicLeapAR.LuminARLightEstimate");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -316,6 +379,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -338,6 +403,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -362,10 +429,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULuminARCandidateImage.StaticClass
+	 * 		Name   -> PredefinedFunction ULuminARCandidateImage.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULuminARCandidateImage::StaticClass()
@@ -375,6 +444,7 @@ namespace CG
 			ptr = UObject::FindClass("Class MagicLeapAR.LuminARCandidateImage");
 		return ptr;
 	}
+
 
 }
 

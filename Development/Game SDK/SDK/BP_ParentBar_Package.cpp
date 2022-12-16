@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -31,76 +32,30 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentBar.BP_ParentBar_C.HeatUpdated
+	 * 		Name   -> Function BP_ParentBar.BP_ParentBar_C.HasWater
 	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              Heat                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentBar_C::HeatUpdated(float Heat)
+	void ABP_ParentBar_C::HasWater()
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_ParentBar.BP_ParentBar_C.HeatUpdated");
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBar.BP_ParentBar_C.HasWater");
 		
 		struct
 		{
-			float                                              Heat;
 		} params;
-		params.Heat = Heat;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
 
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentBar.BP_ParentBar_C.InFire
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               SlowBurn_                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	 */
-	void ABP_ParentBar_C::InFire(bool SlowBurn_)
-	{
-		static UFunction* fn = nullptr;
-		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_ParentBar.BP_ParentBar_C.InFire");
-		
-		struct
-		{
-			bool                                               SlowBurn_;
-		} params;
-		params.SlowBurn_ = SlowBurn_;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
 
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentBar.BP_ParentBar_C.OutOfFire
-	 * 		Flags  -> ()
-	 */
-	void ABP_ParentBar_C::OutOfFire()
-	{
-		static UFunction* fn = nullptr;
-		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_ParentBar.BP_ParentBar_C.OutOfFire");
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
 
 	/**
 	 * Function:
@@ -123,30 +78,111 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentBar.BP_ParentBar_C.InWater
+	 * 		Name   -> Function BP_ParentBar.BP_ParentBar_C.HeatUpdated
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               WaterBody_                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		float                                              Heat                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentBar_C::InWater(bool WaterBody_)
+	void ABP_ParentBar_C::HeatUpdated(
+float Heat
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_ParentBar.BP_ParentBar_C.InWater");
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBar.BP_ParentBar_C.HeatUpdated");
 		
 		struct
 		{
-			bool                                               WaterBody_;
+			float                                              Heat;
 		} params;
-		params.WaterBody_ = WaterBody_;
+		params.Heat = Heat;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentBar.BP_ParentBar_C.HasNoWater
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentBar_C::HasNoWater()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBar.BP_ParentBar_C.HasNoWater");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentBar.BP_ParentBar_C.InFire
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               SlowBurn                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 */
+	void ABP_ParentBar_C::InFire(
+bool SlowBurn
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBar.BP_ParentBar_C.InFire");
+		
+		struct
+		{
+			bool                                               SlowBurn;
+		} params;
+		params.SlowBurn = SlowBurn;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentBar.BP_ParentBar_C.OutOfFire
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentBar_C::OutOfFire()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBar.BP_ParentBar_C.OutOfFire");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
 
 	/**
 	 * Function:
@@ -169,47 +205,41 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentBar.BP_ParentBar_C.SetCraftedSize
+	 * 		Name   -> Function BP_ParentBar.BP_ParentBar_C.InWater
 	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               WaterBody                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		class UPrimitiveComponent*                         Comp                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentBar_C::SetCraftedSize()
+	void ABP_ParentBar_C::InWater(
+bool WaterBody
+, 
+class UPrimitiveComponent* Comp
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_ParentBar.BP_ParentBar_C.SetCraftedSize");
+			fn = UObject::FindObject<UFunction>("Function BP_ParentBar.BP_ParentBar_C.InWater");
 		
 		struct
 		{
+			bool                                               WaterBody;
+			class UPrimitiveComponent*                         Comp;
 		} params;
+		params.WaterBody = WaterBody;
+		params.Comp = Comp;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
 
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentBar.BP_ParentBar_C.SetResourceSize
-	 * 		Flags  -> ()
-	 */
-	void ABP_ParentBar_C::SetResourceSize()
-	{
-		static UFunction* fn = nullptr;
-		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_ParentBar.BP_ParentBar_C.SetResourceSize");
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
+
 
 	/**
 	 * Function:
@@ -219,7 +249,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentBar_C::ExecuteUbergraph_BP_ParentBar(int32_t EntryPoint)
+	void ABP_ParentBar_C::ExecuteUbergraph_BP_ParentBar(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -236,10 +268,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ABP_ParentBar_C.StaticClass
+	 * 		Name   -> PredefinedFunction ABP_ParentBar_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ABP_ParentBar_C::StaticClass()
@@ -249,6 +283,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentBar.BP_ParentBar_C");
 		return ptr;
 	}
+
 
 }
 

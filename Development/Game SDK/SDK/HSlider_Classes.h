@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * BlueprintGeneratedClass HSlider.HSlider_C
 	 * Size -> 0x0000 (FullSize[0x04F8] - InheritedSize[0x04F8])
@@ -21,6 +22,7 @@ namespace CG
 	class UHSlider_C : public USlider
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
 

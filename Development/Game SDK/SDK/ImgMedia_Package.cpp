@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18,7 +19,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Path                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UImgMediaSource::SetSequencePath(const class FString& Path)
+	void UImgMediaSource::SetSequencePath(
+const class FString& Path
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -34,6 +37,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -58,6 +63,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -66,7 +73,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<class FString>                              OutProxies                                                 (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UImgMediaSource::GetProxies(TArray<class FString>* OutProxies)
+	void UImgMediaSource::GetProxies(
+TArray<class FString>* OutProxies
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -85,10 +94,12 @@ namespace CG
 			*OutProxies = params.OutProxies;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UImgMediaSource.StaticClass
+	 * 		Name   -> PredefinedFunction UImgMediaSource.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UImgMediaSource::StaticClass()
@@ -98,6 +109,7 @@ namespace CG
 			ptr = UObject::FindClass("Class ImgMedia.ImgMediaSource");
 		return ptr;
 	}
+
 
 }
 

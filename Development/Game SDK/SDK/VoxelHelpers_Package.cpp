@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMaterialExpressionBlendMaterialAttributesBarycentric.StaticClass
+	 * 		Name   -> PredefinedFunction UMaterialExpressionBlendMaterialAttributesBarycentric.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMaterialExpressionBlendMaterialAttributesBarycentric::StaticClass()
@@ -24,10 +25,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMaterialExpressionPack.StaticClass
+	 * 		Name   -> PredefinedFunction UMaterialExpressionPack.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMaterialExpressionPack::StaticClass()
@@ -38,10 +41,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMaterialExpressionUnpack.StaticClass
+	 * 		Name   -> PredefinedFunction UMaterialExpressionUnpack.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMaterialExpressionUnpack::StaticClass()
@@ -52,10 +57,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelColorWheel.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelColorWheel.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelColorWheel::StaticClass()
@@ -65,6 +72,8 @@ namespace CG
 			ptr = UObject::FindClass("Class VoxelHelpers.VoxelColorWheel");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -77,7 +86,15 @@ namespace CG
 	 * 		int32_t                                            SizeY                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Step                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UVoxelHelpersLibrary::CreateProcMeshPlane(class UProceduralMeshComponent* Mesh, int32_t SizeX, int32_t SizeY, float Step)
+	void UVoxelHelpersLibrary::CreateProcMeshPlane(
+class UProceduralMeshComponent* Mesh
+, 
+int32_t SizeX
+, 
+int32_t SizeY
+, 
+float Step
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -100,10 +117,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoxelHelpersLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UVoxelHelpersLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoxelHelpersLibrary::StaticClass()
@@ -113,6 +132,7 @@ namespace CG
 			ptr = UObject::FindClass("Class VoxelHelpers.VoxelHelpersLibrary");
 		return ptr;
 	}
+
 
 }
 

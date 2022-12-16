@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * Class EyeTracker.EyeTrackerFunctionLibrary
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
@@ -21,11 +22,23 @@ namespace CG
 	class UEyeTrackerFunctionLibrary : public UBlueprintFunctionLibrary
 	{
 	public:
-		void SetEyeTrackedPlayer(class APlayerController* PlayerController);
+
+		void SetEyeTrackedPlayer(
+class APlayerController* PlayerController
+);
+
 		bool IsStereoGazeDataAvailable();
+
 		bool IsEyeTrackerConnected();
-		bool GetStereoGazeData(struct FEyeTrackerStereoGazeData* OutGazeData);
-		bool GetGazeData(struct FEyeTrackerGazeData* OutGazeData);
+
+		bool GetStereoGazeData(
+struct FEyeTrackerStereoGazeData* OutGazeData
+);
+
+		bool GetGazeData(
+struct FEyeTrackerGazeData* OutGazeData
+);
+
 		static UClass* StaticClass();
 	};
 

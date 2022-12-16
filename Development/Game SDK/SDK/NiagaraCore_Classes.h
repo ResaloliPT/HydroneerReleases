@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * Class NiagaraCore.NiagaraMergeable
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
@@ -21,8 +22,11 @@ namespace CG
 	class UNiagaraMergeable : public UObject
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class NiagaraCore.NiagaraDataInterfaceBase
@@ -31,6 +35,7 @@ namespace CG
 	class UNiagaraDataInterfaceBase : public UNiagaraMergeable
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
 

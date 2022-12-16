@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+
 	/**
 	 * UserDefinedStruct S_ShelfItem.S_ShelfItem
 	 * Size -> 0x0040
@@ -21,9 +22,15 @@ namespace CG
 	struct FS_ShelfItem
 	{
 	public:
-		class UClass*                                              Class_3_721954DC4A7EDC6A044AE491E61B2705;                // 0x0000(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
-		unsigned char                                              UnknownData_SDCA[0x8];                                   // 0x0008(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FTransform                                          Transform_8_947E21CF4814A6A670189EAEC7632598;            // 0x0010(0x0030) Edit, BlueprintVisible, IsPlainOldData, NoDestructor
+
+		class UClass*                                            Class_3_721954DC4A7EDC6A044AE491E61B2705;                // 0x0000(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+
+
+		unsigned char                                            UnknownData_QUR8[0x8];                                   // 0x0008(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FTransform                                        Transform_8_947E21CF4814A6A670189EAEC7632598;            // 0x0010(0x0030) Edit, BlueprintVisible, IsPlainOldData, NoDestructor
+
 	};
 
 }

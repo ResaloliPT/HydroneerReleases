@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18,7 +19,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<class AActor*>                              Actors                                                     (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UAnimSharingStateInstance::GetInstancedActors(TArray<class AActor*>* Actors)
+	void UAnimSharingStateInstance::GetInstancedActors(
+TArray<class AActor*>* Actors
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -37,10 +40,12 @@ namespace CG
 			*Actors = params.Actors;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAnimSharingStateInstance.StaticClass
+	 * 		Name   -> PredefinedFunction UAnimSharingStateInstance.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAnimSharingStateInstance::StaticClass()
@@ -51,10 +56,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAnimSharingTransitionInstance.StaticClass
+	 * 		Name   -> PredefinedFunction UAnimSharingTransitionInstance.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAnimSharingTransitionInstance::StaticClass()
@@ -65,10 +72,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAnimSharingAdditiveInstance.StaticClass
+	 * 		Name   -> PredefinedFunction UAnimSharingAdditiveInstance.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAnimSharingAdditiveInstance::StaticClass()
@@ -79,10 +88,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAnimSharingInstance.StaticClass
+	 * 		Name   -> PredefinedFunction UAnimSharingInstance.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAnimSharingInstance::StaticClass()
@@ -93,6 +104,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -102,7 +115,11 @@ namespace CG
 	 * 		class AActor*                                      InActor                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class USkeleton*                                   SharingSkeleton                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAnimationSharingManager::RegisterActorWithSkeletonBP(class AActor* InActor, class USkeleton* SharingSkeleton)
+	void UAnimationSharingManager::RegisterActorWithSkeletonBP(
+class AActor* InActor
+, 
+class USkeleton* SharingSkeleton
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -121,6 +138,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -129,7 +148,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UAnimationSharingManager* UAnimationSharingManager::GetAnimationSharingManager(class UObject* WorldContextObject)
+	class UAnimationSharingManager* UAnimationSharingManager::GetAnimationSharingManager(
+class UObject* WorldContextObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -148,6 +169,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -157,7 +180,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UAnimationSharingSetup*                      Setup                                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UAnimationSharingManager::CreateAnimationSharingManager(class UObject* WorldContextObject, class UAnimationSharingSetup* Setup)
+	bool UAnimationSharingManager::CreateAnimationSharingManager(
+class UObject* WorldContextObject
+, 
+class UAnimationSharingSetup* Setup
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -177,6 +204,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -201,10 +230,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAnimationSharingManager.StaticClass
+	 * 		Name   -> PredefinedFunction UAnimationSharingManager.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAnimationSharingManager::StaticClass()
@@ -215,10 +246,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAnimationSharingSetup.StaticClass
+	 * 		Name   -> PredefinedFunction UAnimationSharingSetup.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAnimationSharingSetup::StaticClass()
@@ -228,6 +261,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AnimationSharing.AnimationSharingSetup");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -241,7 +276,17 @@ namespace CG
 	 * 		unsigned char                                      OnDemandState                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bShouldProcess                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAnimationSharingStateProcessor::ProcessActorState(int32_t* OutState, class AActor* InActor, unsigned char CurrentState, unsigned char OnDemandState, bool* bShouldProcess)
+	void UAnimationSharingStateProcessor::ProcessActorState(
+int32_t* OutState
+, 
+class AActor* InActor
+, 
+unsigned char CurrentState
+, 
+unsigned char OnDemandState
+, 
+bool* bShouldProcess
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -269,6 +314,8 @@ namespace CG
 			*bShouldProcess = params.bShouldProcess;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -292,10 +339,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAnimationSharingStateProcessor.StaticClass
+	 * 		Name   -> PredefinedFunction UAnimationSharingStateProcessor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAnimationSharingStateProcessor::StaticClass()
@@ -305,6 +354,7 @@ namespace CG
 			ptr = UObject::FindClass("Class AnimationSharing.AnimationSharingStateProcessor");
 		return ptr;
 	}
+
 
 }
 

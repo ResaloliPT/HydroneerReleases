@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19,7 +20,11 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector                                     DataToStore                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapSecureStorage::PutSecureVector(const class FString& Key, const struct FVector& DataToStore)
+	bool UMagicLeapSecureStorage::PutSecureVector(
+const class FString& Key
+, 
+const struct FVector& DataToStore
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -40,6 +45,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -49,7 +56,11 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FTransform                                  DataToStore                                                (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapSecureStorage::PutSecureTransform(const class FString& Key, const struct FTransform& DataToStore)
+	bool UMagicLeapSecureStorage::PutSecureTransform(
+const class FString& Key
+, 
+const struct FTransform& DataToStore
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -70,6 +81,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -79,7 +92,11 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      DataToStore                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapSecureStorage::PutSecureString(const class FString& Key, const class FString& DataToStore)
+	bool UMagicLeapSecureStorage::PutSecureString(
+const class FString& Key
+, 
+const class FString& DataToStore
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -100,6 +117,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -109,7 +128,11 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class USaveGame*                                   ObjectToStore                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapSecureStorage::PutSecureSaveGame(const class FString& Key, class USaveGame* ObjectToStore)
+	bool UMagicLeapSecureStorage::PutSecureSaveGame(
+const class FString& Key
+, 
+class USaveGame* ObjectToStore
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -130,6 +153,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -139,7 +164,11 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FRotator                                    DataToStore                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapSecureStorage::PutSecureRotator(const class FString& Key, const struct FRotator& DataToStore)
+	bool UMagicLeapSecureStorage::PutSecureRotator(
+const class FString& Key
+, 
+const struct FRotator& DataToStore
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -160,6 +189,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -169,7 +200,11 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int64_t                                            DataToStore                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapSecureStorage::PutSecureInt64(const class FString& Key, int64_t DataToStore)
+	bool UMagicLeapSecureStorage::PutSecureInt64(
+const class FString& Key
+, 
+int64_t DataToStore
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -190,6 +225,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -199,7 +236,11 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            DataToStore                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapSecureStorage::PutSecureInt(const class FString& Key, int32_t DataToStore)
+	bool UMagicLeapSecureStorage::PutSecureInt(
+const class FString& Key
+, 
+int32_t DataToStore
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -220,6 +261,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -229,7 +272,11 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              DataToStore                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapSecureStorage::PutSecureFloat(const class FString& Key, float DataToStore)
+	bool UMagicLeapSecureStorage::PutSecureFloat(
+const class FString& Key
+, 
+float DataToStore
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -250,6 +297,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -259,7 +308,11 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		unsigned char                                      DataToStore                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapSecureStorage::PutSecureByte(const class FString& Key, unsigned char DataToStore)
+	bool UMagicLeapSecureStorage::PutSecureByte(
+const class FString& Key
+, 
+unsigned char DataToStore
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -280,6 +333,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -289,7 +344,11 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               DataToStore                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapSecureStorage::PutSecureBool(const class FString& Key, bool DataToStore)
+	bool UMagicLeapSecureStorage::PutSecureBool(
+const class FString& Key
+, 
+bool DataToStore
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -310,6 +369,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -319,7 +380,11 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<int32_t>                                    DataToStore                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapSecureStorage::PutSecureArray(const class FString& Key, TArray<int32_t> DataToStore)
+	bool UMagicLeapSecureStorage::PutSecureArray(
+const class FString& Key
+, 
+TArray<int32_t> DataToStore
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -340,6 +405,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -349,7 +416,11 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector                                     DataToRetrieve                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapSecureStorage::GetSecureVector(const class FString& Key, struct FVector* DataToRetrieve)
+	bool UMagicLeapSecureStorage::GetSecureVector(
+const class FString& Key
+, 
+struct FVector* DataToRetrieve
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -372,6 +443,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -381,7 +454,11 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FTransform                                  DataToRetrieve                                             (Parm, OutParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapSecureStorage::GetSecureTransform(const class FString& Key, struct FTransform* DataToRetrieve)
+	bool UMagicLeapSecureStorage::GetSecureTransform(
+const class FString& Key
+, 
+struct FTransform* DataToRetrieve
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -404,6 +481,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -413,7 +492,11 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      DataToRetrieve                                             (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapSecureStorage::GetSecureString(const class FString& Key, class FString* DataToRetrieve)
+	bool UMagicLeapSecureStorage::GetSecureString(
+const class FString& Key
+, 
+class FString* DataToRetrieve
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -436,6 +519,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -445,7 +530,11 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class USaveGame*                                   ObjectToRetrieve                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapSecureStorage::GetSecureSaveGame(const class FString& Key, class USaveGame** ObjectToRetrieve)
+	bool UMagicLeapSecureStorage::GetSecureSaveGame(
+const class FString& Key
+, 
+class USaveGame** ObjectToRetrieve
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -468,6 +557,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -477,7 +568,11 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FRotator                                    DataToRetrieve                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapSecureStorage::GetSecureRotator(const class FString& Key, struct FRotator* DataToRetrieve)
+	bool UMagicLeapSecureStorage::GetSecureRotator(
+const class FString& Key
+, 
+struct FRotator* DataToRetrieve
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -500,6 +595,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -509,7 +606,11 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int64_t                                            DataToRetrieve                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapSecureStorage::GetSecureInt64(const class FString& Key, int64_t* DataToRetrieve)
+	bool UMagicLeapSecureStorage::GetSecureInt64(
+const class FString& Key
+, 
+int64_t* DataToRetrieve
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -532,6 +633,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -541,7 +644,11 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            DataToRetrieve                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapSecureStorage::GetSecureInt(const class FString& Key, int32_t* DataToRetrieve)
+	bool UMagicLeapSecureStorage::GetSecureInt(
+const class FString& Key
+, 
+int32_t* DataToRetrieve
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -564,6 +671,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -573,7 +682,11 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              DataToRetrieve                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapSecureStorage::GetSecureFloat(const class FString& Key, float* DataToRetrieve)
+	bool UMagicLeapSecureStorage::GetSecureFloat(
+const class FString& Key
+, 
+float* DataToRetrieve
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -596,6 +709,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -605,7 +720,11 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		unsigned char                                      DataToRetrieve                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapSecureStorage::GetSecureByte(const class FString& Key, unsigned char* DataToRetrieve)
+	bool UMagicLeapSecureStorage::GetSecureByte(
+const class FString& Key
+, 
+unsigned char* DataToRetrieve
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -628,6 +747,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -637,7 +758,11 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               DataToRetrieve                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapSecureStorage::GetSecureBool(const class FString& Key, bool* DataToRetrieve)
+	bool UMagicLeapSecureStorage::GetSecureBool(
+const class FString& Key
+, 
+bool* DataToRetrieve
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -660,6 +785,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -669,7 +796,11 @@ namespace CG
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<int32_t>                                    DataToRetrieve                                             (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapSecureStorage::GetSecureArray(const class FString& Key, TArray<int32_t>* DataToRetrieve)
+	bool UMagicLeapSecureStorage::GetSecureArray(
+const class FString& Key
+, 
+TArray<int32_t>* DataToRetrieve
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -692,6 +823,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -700,7 +833,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapSecureStorage::DeleteSecureData(const class FString& Key)
+	bool UMagicLeapSecureStorage::DeleteSecureData(
+const class FString& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -719,10 +854,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMagicLeapSecureStorage.StaticClass
+	 * 		Name   -> PredefinedFunction UMagicLeapSecureStorage.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMagicLeapSecureStorage::StaticClass()
@@ -732,6 +869,7 @@ namespace CG
 			ptr = UObject::FindClass("Class MagicLeapSecureStorage.MagicLeapSecureStorage");
 		return ptr;
 	}
+
 
 }
 

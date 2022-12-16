@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19,7 +20,11 @@ namespace CG
 	 * 		class USkeletalMeshComponent*                      CharacterMesh                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		int32_t                                            Type                                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UFootstep_AnimNotify_C::FindFootstepType(class USkeletalMeshComponent* CharacterMesh, int32_t* Type)
+	void UFootstep_AnimNotify_C::FindFootstepType(
+class USkeletalMeshComponent* CharacterMesh
+, 
+int32_t* Type
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -40,6 +45,8 @@ namespace CG
 			*Type = params.Type;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -49,7 +56,11 @@ namespace CG
 	 * 		class USkeletalMeshComponent*                      MeshComp                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class UAnimSequenceBase*                           Animation                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	bool UFootstep_AnimNotify_C::Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation)
+	bool UFootstep_AnimNotify_C::Received_Notify(
+class USkeletalMeshComponent* MeshComp
+, 
+class UAnimSequenceBase* Animation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -70,10 +81,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UFootstep_AnimNotify_C.StaticClass
+	 * 		Name   -> PredefinedFunction UFootstep_AnimNotify_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UFootstep_AnimNotify_C::StaticClass()
@@ -83,6 +96,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass Footstep_AnimNotify.Footstep_AnimNotify_C");
 		return ptr;
 	}
+
 
 }
 

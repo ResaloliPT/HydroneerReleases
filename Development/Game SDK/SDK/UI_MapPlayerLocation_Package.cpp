@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18,7 +19,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            PlayerIndex                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_MapPlayerLocation_C::UpdateSelection(int32_t PlayerIndex)
+	void UUI_MapPlayerLocation_C::UpdateSelection(
+int32_t PlayerIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -35,6 +38,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -43,7 +48,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               IsDesignTime                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void UUI_MapPlayerLocation_C::PreConstruct(bool IsDesignTime)
+	void UUI_MapPlayerLocation_C::PreConstruct(
+bool IsDesignTime
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -60,6 +67,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -68,7 +77,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_MapPlayerLocation_C::ExecuteUbergraph_UI_MapPlayerLocation(int32_t EntryPoint)
+	void UUI_MapPlayerLocation_C::ExecuteUbergraph_UI_MapPlayerLocation(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -85,10 +96,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UUI_MapPlayerLocation_C.StaticClass
+	 * 		Name   -> PredefinedFunction UUI_MapPlayerLocation_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UUI_MapPlayerLocation_C::StaticClass()
@@ -98,6 +111,7 @@ namespace CG
 			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_MapPlayerLocation.UI_MapPlayerLocation_C");
 		return ptr;
 	}
+
 
 }
 

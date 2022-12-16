@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,38 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentCart.BP_ParentCart_C.GetAttachedMeshCollisionProfile
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		E_PhyReact                                         Index                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	class FName ABP_ParentCart_C::GetAttachedMeshCollisionProfile(
+E_PhyReact Index
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.GetAttachedMeshCollisionProfile");
+		
+		struct
+		{
+			E_PhyReact                                         Index;
+		} params;
+		params.Index = Index;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18,7 +50,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              DeltaSeconds                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentCart_C::CalculateWheelTurn(float DeltaSeconds)
+	void ABP_ParentCart_C::CalculateWheelTurn(
+float DeltaSeconds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -35,15 +69,19 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_ParentCart.BP_ParentCart_C.ScanForDropCollision
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               Can_Drop_                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               Can_Drop                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_ParentCart_C::ScanForDropCollision(bool* Can_Drop_)
+	void ABP_ParentCart_C::ScanForDropCollision(
+bool* Can_Drop
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -51,16 +89,18 @@ namespace CG
 		
 		struct
 		{
-			bool                                               Can_Drop_;
+			bool                                               Can_Drop;
 		} params;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 		
-		if (Can_Drop_ != nullptr)
-			*Can_Drop_ = params.Can_Drop_;
+		if (Can_Drop != nullptr)
+			*Can_Drop = params.Can_Drop;
 	}
+
+
 
 	/**
 	 * Function:
@@ -68,9 +108,11 @@ namespace CG
 	 * 		Name   -> Function BP_ParentCart.BP_ParentCart_C.ToggleProxyItem
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               Enabled_                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               Enabled                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_ParentCart_C::ToggleProxyItem(bool Enabled_)
+	void ABP_ParentCart_C::ToggleProxyItem(
+bool Enabled
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -78,14 +120,16 @@ namespace CG
 		
 		struct
 		{
-			bool                                               Enabled_;
+			bool                                               Enabled;
 		} params;
-		params.Enabled_ = Enabled_;
+		params.Enabled = Enabled;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -108,6 +152,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -129,6 +175,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -137,7 +185,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_ParentItem_C*                            Item                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentCart_C::ItemStored(class ABP_ParentItem_C* Item)
+	void ABP_ParentCart_C::ItemStored(
+class ABP_ParentItem_C* Item
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -153,6 +203,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -175,6 +227,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -183,7 +237,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               Condition                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_ParentCart_C::ToggleMovementSound(bool Condition)
+	void ABP_ParentCart_C::ToggleMovementSound(
+bool Condition
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -200,6 +256,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -213,7 +271,19 @@ namespace CG
 	 * 		bool                                               bFromSweep                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 * 		struct FHitResult                                  SweepResult                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	 */
-	void ABP_ParentCart_C::BndEvt__StorageBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+	void ABP_ParentCart_C::BndEvt__StorageBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(
+class UPrimitiveComponent* OverlappedComponent
+, 
+class AActor* OtherActor
+, 
+class UPrimitiveComponent* OtherComp
+, 
+int32_t OtherBodyIndex
+, 
+bool bFromSweep
+, 
+const struct FHitResult& SweepResult
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -240,26 +310,7 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentCart.BP_ParentCart_C.OverridePickedup
-	 * 		Flags  -> ()
-	 */
-	void ABP_ParentCart_C::OverridePickedup()
-	{
-		static UFunction* fn = nullptr;
-		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.OverridePickedup");
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
+
 
 	/**
 	 * Function:
@@ -269,7 +320,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_GameCharacter_C*                         Character                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentCart_C::OverrideDroppedItem(class ABP_GameCharacter_C* Character)
+	void ABP_ParentCart_C::OverrideDroppedItem(
+class ABP_GameCharacter_C* Character
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -285,6 +338,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -307,6 +362,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -315,7 +372,9 @@ namespace CG
 	 * Parameters:
 	 * 		E_PhyReact                                         New_Reaction                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentCart_C::ChangeAttachedReactionss(E_PhyReact New_Reaction)
+	void ABP_ParentCart_C::ChangeAttachedReactionss(
+E_PhyReact New_Reaction
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -332,6 +391,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -343,7 +404,15 @@ namespace CG
 	 * 		class UPrimitiveComponent*                         OtherComp                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		int32_t                                            OtherBodyIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentCart_C::BndEvt__BP_ParentCart_StorageBox_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex)
+	void ABP_ParentCart_C::BndEvt__BP_ParentCart_StorageBox_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(
+class UPrimitiveComponent* OverlappedComponent
+, 
+class AActor* OtherActor
+, 
+class UPrimitiveComponent* OtherComp
+, 
+int32_t OtherBodyIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -366,6 +435,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -374,7 +445,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_ParentItem_C*                            ItemPickedUp                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentCart_C::StoredItemPickedUp(class ABP_ParentItem_C* ItemPickedUp)
+	void ABP_ParentCart_C::StoredItemPickedUp(
+class ABP_ParentItem_C* ItemPickedUp
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -390,6 +463,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -412,6 +487,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -420,7 +497,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              DeltaSeconds                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentCart_C::ReceiveTick(float DeltaSeconds)
+	void ABP_ParentCart_C::ReceiveTick(
+float DeltaSeconds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -436,6 +515,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -458,6 +539,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -478,6 +561,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -500,6 +585,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -521,6 +608,54 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentCart.BP_ParentCart_C.OverridePickedupPreCarry
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentCart_C::OverridePickedupPreCarry()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.OverridePickedupPreCarry");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentCart.BP_ParentCart_C.OverridePickedup
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentCart_C::OverridePickedup()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentCart.BP_ParentCart_C.OverridePickedup");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -529,7 +664,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentCart_C::ExecuteUbergraph_BP_ParentCart(int32_t EntryPoint)
+	void ABP_ParentCart_C::ExecuteUbergraph_BP_ParentCart(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -546,10 +683,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ABP_ParentCart_C.StaticClass
+	 * 		Name   -> PredefinedFunction ABP_ParentCart_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ABP_ParentCart_C::StaticClass()
@@ -559,6 +698,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentCart.BP_ParentCart_C");
 		return ptr;
 	}
+
 
 }
 

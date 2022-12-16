@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,23 +14,37 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * BlueprintGeneratedClass BP_StandingTorch.BP_StandingTorch_C
-	 * Size -> 0x0010 (FullSize[0x03F0] - InheritedSize[0x03E0])
+	 * Size -> 0x0010 (FullSize[0x0450] - InheritedSize[0x0440])
 	 */
 	class ABP_StandingTorch_C : public ABP_ParentBuildLighting_C
 	{
 	public:
-		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x03E0(0x0008) ZeroConstructor, Transient, DuplicateTransient
-		class UNiagaraComponent*                                   Niagara;                                                 // 0x03E8(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+
+		struct FPointerToUberGraphFrame                          UberGraphFrame;                                          // 0x0440(0x0008) ZeroConstructor, Transient, DuplicateTransient
+
+
+		class UNiagaraComponent*                                 Niagara;                                                 // 0x0448(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+
 
 	public:
+
 		void SetProxyCollisionVisibility();
+
 		void ReceiveBeginPlay();
+
 		void OverrideLightOn();
+
 		void OverrideLightOff();
+
 		void ActorLoaded();
-		void ExecuteUbergraph_BP_StandingTorch(int32_t EntryPoint);
+
+		void ExecuteUbergraph_BP_StandingTorch(
+int32_t EntryPoint
+);
+
 		static UClass* StaticClass();
 	};
 

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19,7 +20,11 @@ namespace CG
 	 * 		TArray<struct FChaosTrailingEventData>             TrailingEvents                                             (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		EChaosTrailingSortMethod                           SortMethod                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UChaosDestructionListener::SortTrailingEvents(TArray<struct FChaosTrailingEventData>* TrailingEvents, EChaosTrailingSortMethod SortMethod)
+	void UChaosDestructionListener::SortTrailingEvents(
+TArray<struct FChaosTrailingEventData>* TrailingEvents
+, 
+EChaosTrailingSortMethod SortMethod
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -40,6 +45,8 @@ namespace CG
 			*TrailingEvents = params.TrailingEvents;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -49,7 +56,11 @@ namespace CG
 	 * 		TArray<struct FChaosCollisionEventData>            CollisionEvents                                            (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		EChaosCollisionSortMethod                          SortMethod                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UChaosDestructionListener::SortCollisionEvents(TArray<struct FChaosCollisionEventData>* CollisionEvents, EChaosCollisionSortMethod SortMethod)
+	void UChaosDestructionListener::SortCollisionEvents(
+TArray<struct FChaosCollisionEventData>* CollisionEvents
+, 
+EChaosCollisionSortMethod SortMethod
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -70,6 +81,8 @@ namespace CG
 			*CollisionEvents = params.CollisionEvents;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -79,7 +92,11 @@ namespace CG
 	 * 		TArray<struct FChaosBreakingEventData>             BreakingEvents                                             (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		EChaosBreakingSortMethod                           SortMethod                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UChaosDestructionListener::SortBreakingEvents(TArray<struct FChaosBreakingEventData>* BreakingEvents, EChaosBreakingSortMethod SortMethod)
+	void UChaosDestructionListener::SortBreakingEvents(
+TArray<struct FChaosBreakingEventData>* BreakingEvents
+, 
+EChaosBreakingSortMethod SortMethod
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -100,6 +117,8 @@ namespace CG
 			*BreakingEvents = params.BreakingEvents;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -108,7 +127,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FChaosTrailingEventRequestSettings          InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UChaosDestructionListener::SetTrailingEventRequestSettings(const struct FChaosTrailingEventRequestSettings& InSettings)
+	void UChaosDestructionListener::SetTrailingEventRequestSettings(
+const struct FChaosTrailingEventRequestSettings& InSettings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -125,6 +146,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -133,7 +156,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               BIsEnabled                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UChaosDestructionListener::SetTrailingEventEnabled(bool BIsEnabled)
+	void UChaosDestructionListener::SetTrailingEventEnabled(
+bool BIsEnabled
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -150,6 +175,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -158,7 +185,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FChaosCollisionEventRequestSettings         InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UChaosDestructionListener::SetCollisionEventRequestSettings(const struct FChaosCollisionEventRequestSettings& InSettings)
+	void UChaosDestructionListener::SetCollisionEventRequestSettings(
+const struct FChaosCollisionEventRequestSettings& InSettings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -175,6 +204,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -183,7 +214,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               BIsEnabled                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UChaosDestructionListener::SetCollisionEventEnabled(bool BIsEnabled)
+	void UChaosDestructionListener::SetCollisionEventEnabled(
+bool BIsEnabled
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -200,6 +233,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -208,7 +243,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FChaosBreakingEventRequestSettings          InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UChaosDestructionListener::SetBreakingEventRequestSettings(const struct FChaosBreakingEventRequestSettings& InSettings)
+	void UChaosDestructionListener::SetBreakingEventRequestSettings(
+const struct FChaosBreakingEventRequestSettings& InSettings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -225,6 +262,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -233,7 +272,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               BIsEnabled                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UChaosDestructionListener::SetBreakingEventEnabled(bool BIsEnabled)
+	void UChaosDestructionListener::SetBreakingEventEnabled(
+bool BIsEnabled
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -250,6 +291,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -258,7 +301,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AGeometryCollectionActor*                    GeometryCollectionActor                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UChaosDestructionListener::RemoveGeometryCollectionActor(class AGeometryCollectionActor* GeometryCollectionActor)
+	void UChaosDestructionListener::RemoveGeometryCollectionActor(
+class AGeometryCollectionActor* GeometryCollectionActor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -275,6 +320,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -283,7 +330,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AChaosSolverActor*                           ChaosSolverActor                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UChaosDestructionListener::RemoveChaosSolverActor(class AChaosSolverActor* ChaosSolverActor)
+	void UChaosDestructionListener::RemoveChaosSolverActor(
+class AChaosSolverActor* ChaosSolverActor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -299,6 +348,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -323,6 +374,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -331,7 +384,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AGeometryCollectionActor*                    GeometryCollectionActor                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UChaosDestructionListener::AddGeometryCollectionActor(class AGeometryCollectionActor* GeometryCollectionActor)
+	void UChaosDestructionListener::AddGeometryCollectionActor(
+class AGeometryCollectionActor* GeometryCollectionActor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -348,6 +403,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -356,7 +413,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AChaosSolverActor*                           ChaosSolverActor                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UChaosDestructionListener::AddChaosSolverActor(class AChaosSolverActor* ChaosSolverActor)
+	void UChaosDestructionListener::AddChaosSolverActor(
+class AChaosSolverActor* ChaosSolverActor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -373,10 +432,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UChaosDestructionListener.StaticClass
+	 * 		Name   -> PredefinedFunction UChaosDestructionListener.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UChaosDestructionListener::StaticClass()
@@ -386,6 +447,8 @@ namespace CG
 			ptr = UObject::FindClass("Class GeometryCollectionEngine.ChaosDestructionListener");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -397,7 +460,13 @@ namespace CG
 	 * 		struct FVector                                     End                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FHitResult                                  OutHit                                                     (Parm, OutParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	 */
-	bool AGeometryCollectionActor::RaycastSingle(const struct FVector& Start, const struct FVector& End, struct FHitResult* OutHit)
+	bool AGeometryCollectionActor::RaycastSingle(
+const struct FVector& Start
+, 
+const struct FVector& End
+, 
+struct FHitResult* OutHit
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -422,10 +491,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AGeometryCollectionActor.StaticClass
+	 * 		Name   -> PredefinedFunction AGeometryCollectionActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AGeometryCollectionActor::StaticClass()
@@ -436,10 +507,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGeometryCollectionCache.StaticClass
+	 * 		Name   -> PredefinedFunction UGeometryCollectionCache.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGeometryCollectionCache::StaticClass()
@@ -450,6 +523,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -458,7 +533,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bNewNotifyBreaks                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGeometryCollectionComponent::SetNotifyBreaks(bool bNewNotifyBreaks)
+	void UGeometryCollectionComponent::SetNotifyBreaks(
+bool bNewNotifyBreaks
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -475,6 +552,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -483,7 +562,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FChaosPhysicsCollisionInfo                  CollisionInfo                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	 */
-	void UGeometryCollectionComponent::ReceivePhysicsCollision(const struct FChaosPhysicsCollisionInfo& CollisionInfo)
+	void UGeometryCollectionComponent::ReceivePhysicsCollision(
+const struct FChaosPhysicsCollisionInfo& CollisionInfo
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -500,6 +581,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -508,7 +591,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FGeometryCollectionRepData                  OldData                                                    (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UGeometryCollectionComponent::OnRep_RepData(const struct FGeometryCollectionRepData& OldData)
+	void UGeometryCollectionComponent::OnRep_RepData(
+const struct FGeometryCollectionRepData& OldData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -525,6 +610,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -533,7 +620,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UGeometryCollectionComponent*                FracturedComponent                                         (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGeometryCollectionComponent::NotifyGeometryCollectionPhysicsStateChange__DelegateSignature(class UGeometryCollectionComponent* FracturedComponent)
+	void UGeometryCollectionComponent::NotifyGeometryCollectionPhysicsStateChange__DelegateSignature(
+class UGeometryCollectionComponent* FracturedComponent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -550,6 +639,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -558,7 +649,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UGeometryCollectionComponent*                FracturedComponent                                         (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGeometryCollectionComponent::NotifyGeometryCollectionPhysicsLoadingStateChange__DelegateSignature(class UGeometryCollectionComponent* FracturedComponent)
+	void UGeometryCollectionComponent::NotifyGeometryCollectionPhysicsLoadingStateChange__DelegateSignature(
+class UGeometryCollectionComponent* FracturedComponent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -575,6 +668,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -583,7 +678,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            TransformIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGeometryCollectionComponent::NetAbandonCluster(int32_t TransformIndex)
+	void UGeometryCollectionComponent::NetAbandonCluster(
+int32_t TransformIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -600,6 +697,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -611,7 +710,15 @@ namespace CG
 	 * 		class UFieldSystemMetaData*                        MetaData                                                   (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UFieldNodeBase*                              Field                                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGeometryCollectionComponent::ApplyPhysicsField(bool Enabled, EGeometryCollectionPhysicsTypeEnum Target, class UFieldSystemMetaData* MetaData, class UFieldNodeBase* Field)
+	void UGeometryCollectionComponent::ApplyPhysicsField(
+bool Enabled
+, 
+EGeometryCollectionPhysicsTypeEnum Target
+, 
+class UFieldSystemMetaData* MetaData
+, 
+class UFieldNodeBase* Field
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -634,6 +741,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -643,7 +752,11 @@ namespace CG
 	 * 		float                                              Radius                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector                                     Position                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGeometryCollectionComponent::ApplyKinematicField(float Radius, const struct FVector& Position)
+	void UGeometryCollectionComponent::ApplyKinematicField(
+float Radius
+, 
+const struct FVector& Position
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -662,10 +775,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGeometryCollectionComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UGeometryCollectionComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGeometryCollectionComponent::StaticClass()
@@ -676,10 +791,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AGeometryCollectionDebugDrawActor.StaticClass
+	 * 		Name   -> PredefinedFunction AGeometryCollectionDebugDrawActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AGeometryCollectionDebugDrawActor::StaticClass()
@@ -690,10 +807,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGeometryCollectionDebugDrawComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UGeometryCollectionDebugDrawComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGeometryCollectionDebugDrawComponent::StaticClass()
@@ -704,10 +823,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGeometryCollection.StaticClass
+	 * 		Name   -> PredefinedFunction UGeometryCollection.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGeometryCollection::StaticClass()
@@ -718,10 +839,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AGeometryCollectionRenderLevelSetActor.StaticClass
+	 * 		Name   -> PredefinedFunction AGeometryCollectionRenderLevelSetActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AGeometryCollectionRenderLevelSetActor::StaticClass()
@@ -732,6 +855,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -740,7 +865,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FChaosPhysicsCollisionInfo                  CollisionInfo                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	 */
-	void USkeletalMeshSimulationComponent::ReceivePhysicsCollision(const struct FChaosPhysicsCollisionInfo& CollisionInfo)
+	void USkeletalMeshSimulationComponent::ReceivePhysicsCollision(
+const struct FChaosPhysicsCollisionInfo& CollisionInfo
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -757,10 +884,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USkeletalMeshSimulationComponent.StaticClass
+	 * 		Name   -> PredefinedFunction USkeletalMeshSimulationComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USkeletalMeshSimulationComponent::StaticClass()
@@ -771,6 +900,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -779,7 +910,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FChaosPhysicsCollisionInfo                  CollisionInfo                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	 */
-	void UStaticMeshSimulationComponent::ReceivePhysicsCollision(const struct FChaosPhysicsCollisionInfo& CollisionInfo)
+	void UStaticMeshSimulationComponent::ReceivePhysicsCollision(
+const struct FChaosPhysicsCollisionInfo& CollisionInfo
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -795,6 +928,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -817,10 +952,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UStaticMeshSimulationComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UStaticMeshSimulationComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UStaticMeshSimulationComponent::StaticClass()
@@ -830,6 +967,7 @@ namespace CG
 			ptr = UObject::FindClass("Class GeometryCollectionEngine.StaticMeshSimulationComponent");
 		return ptr;
 	}
+
 
 }
 

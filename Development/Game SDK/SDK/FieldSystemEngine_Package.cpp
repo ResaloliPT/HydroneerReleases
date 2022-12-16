@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AFieldSystemActor.StaticClass
+	 * 		Name   -> PredefinedFunction AFieldSystemActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AFieldSystemActor::StaticClass()
@@ -24,10 +25,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UFieldSystem.StaticClass
+	 * 		Name   -> PredefinedFunction UFieldSystem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UFieldSystem::StaticClass()
@@ -37,6 +40,8 @@ namespace CG
 			ptr = UObject::FindClass("Class FieldSystemEngine.FieldSystem");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -59,6 +64,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -71,7 +78,17 @@ namespace CG
 	 * 		float                                              Radius                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Magnitude                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UFieldSystemComponent::ApplyUniformVectorFalloffForce(bool Enabled, const struct FVector& Position, const struct FVector& Direction, float Radius, float Magnitude)
+	void UFieldSystemComponent::ApplyUniformVectorFalloffForce(
+bool Enabled
+, 
+const struct FVector& Position
+, 
+const struct FVector& Direction
+, 
+float Radius
+, 
+float Magnitude
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -96,6 +113,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -108,7 +127,17 @@ namespace CG
 	 * 		float                                              Magnitude                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Iterations                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UFieldSystemComponent::ApplyStrainField(bool Enabled, const struct FVector& Position, float Radius, float Magnitude, int32_t Iterations)
+	void UFieldSystemComponent::ApplyStrainField(
+bool Enabled
+, 
+const struct FVector& Position
+, 
+float Radius
+, 
+float Magnitude
+, 
+int32_t Iterations
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -133,6 +162,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -143,7 +174,13 @@ namespace CG
 	 * 		struct FVector                                     Position                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Radius                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UFieldSystemComponent::ApplyStayDynamicField(bool Enabled, const struct FVector& Position, float Radius)
+	void UFieldSystemComponent::ApplyStayDynamicField(
+bool Enabled
+, 
+const struct FVector& Position
+, 
+float Radius
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -164,6 +201,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -175,7 +214,15 @@ namespace CG
 	 * 		float                                              Radius                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Magnitude                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UFieldSystemComponent::ApplyRadialVectorFalloffForce(bool Enabled, const struct FVector& Position, float Radius, float Magnitude)
+	void UFieldSystemComponent::ApplyRadialVectorFalloffForce(
+bool Enabled
+, 
+const struct FVector& Position
+, 
+float Radius
+, 
+float Magnitude
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -198,6 +245,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -208,7 +257,13 @@ namespace CG
 	 * 		struct FVector                                     Position                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Magnitude                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UFieldSystemComponent::ApplyRadialForce(bool Enabled, const struct FVector& Position, float Magnitude)
+	void UFieldSystemComponent::ApplyRadialForce(
+bool Enabled
+, 
+const struct FVector& Position
+, 
+float Magnitude
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -229,6 +284,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -240,7 +297,15 @@ namespace CG
 	 * 		class UFieldSystemMetaData*                        MetaData                                                   (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UFieldNodeBase*                              Field                                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UFieldSystemComponent::ApplyPhysicsField(bool Enabled, EFieldPhysicsType Target, class UFieldSystemMetaData* MetaData, class UFieldNodeBase* Field)
+	void UFieldSystemComponent::ApplyPhysicsField(
+bool Enabled
+, 
+EFieldPhysicsType Target
+, 
+class UFieldSystemMetaData* MetaData
+, 
+class UFieldNodeBase* Field
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -263,6 +328,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -273,7 +340,13 @@ namespace CG
 	 * 		struct FVector                                     Direction                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Magnitude                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UFieldSystemComponent::ApplyLinearForce(bool Enabled, const struct FVector& Direction, float Magnitude)
+	void UFieldSystemComponent::ApplyLinearForce(
+bool Enabled
+, 
+const struct FVector& Direction
+, 
+float Magnitude
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -294,6 +367,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -305,7 +380,15 @@ namespace CG
 	 * 		class UFieldSystemMetaData*                        MetaData                                                   (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UFieldNodeBase*                              Field                                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UFieldSystemComponent::AddFieldCommand(bool Enabled, EFieldPhysicsType Target, class UFieldSystemMetaData* MetaData, class UFieldNodeBase* Field)
+	void UFieldSystemComponent::AddFieldCommand(
+bool Enabled
+, 
+EFieldPhysicsType Target
+, 
+class UFieldSystemMetaData* MetaData
+, 
+class UFieldNodeBase* Field
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -328,10 +411,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UFieldSystemComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UFieldSystemComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UFieldSystemComponent::StaticClass()
@@ -342,10 +427,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UFieldSystemMetaData.StaticClass
+	 * 		Name   -> PredefinedFunction UFieldSystemMetaData.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UFieldSystemMetaData::StaticClass()
@@ -356,6 +443,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -364,7 +453,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Iterations                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UFieldSystemMetaDataIteration* UFieldSystemMetaDataIteration::SetMetaDataIteration(int32_t Iterations)
+	class UFieldSystemMetaDataIteration* UFieldSystemMetaDataIteration::SetMetaDataIteration(
+int32_t Iterations
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -383,10 +474,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UFieldSystemMetaDataIteration.StaticClass
+	 * 		Name   -> PredefinedFunction UFieldSystemMetaDataIteration.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UFieldSystemMetaDataIteration::StaticClass()
@@ -397,6 +490,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -405,7 +500,9 @@ namespace CG
 	 * Parameters:
 	 * 		EFieldResolutionType                               ResolutionType                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UFieldSystemMetaDataProcessingResolution* UFieldSystemMetaDataProcessingResolution::SetMetaDataaProcessingResolutionType(EFieldResolutionType ResolutionType)
+	class UFieldSystemMetaDataProcessingResolution* UFieldSystemMetaDataProcessingResolution::SetMetaDataaProcessingResolutionType(
+EFieldResolutionType ResolutionType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -424,10 +521,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UFieldSystemMetaDataProcessingResolution.StaticClass
+	 * 		Name   -> PredefinedFunction UFieldSystemMetaDataProcessingResolution.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UFieldSystemMetaDataProcessingResolution::StaticClass()
@@ -438,10 +537,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UFieldNodeBase.StaticClass
+	 * 		Name   -> PredefinedFunction UFieldNodeBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UFieldNodeBase::StaticClass()
@@ -452,10 +553,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UFieldNodeInt.StaticClass
+	 * 		Name   -> PredefinedFunction UFieldNodeInt.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UFieldNodeInt::StaticClass()
@@ -466,10 +569,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UFieldNodeFloat.StaticClass
+	 * 		Name   -> PredefinedFunction UFieldNodeFloat.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UFieldNodeFloat::StaticClass()
@@ -480,10 +585,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UFieldNodeVector.StaticClass
+	 * 		Name   -> PredefinedFunction UFieldNodeVector.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UFieldNodeVector::StaticClass()
@@ -494,6 +601,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -502,7 +611,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Magnitude                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UUniformInteger* UUniformInteger::SetUniformInteger(int32_t Magnitude)
+	class UUniformInteger* UUniformInteger::SetUniformInteger(
+int32_t Magnitude
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -521,10 +632,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UUniformInteger.StaticClass
+	 * 		Name   -> PredefinedFunction UUniformInteger.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UUniformInteger::StaticClass()
@@ -534,6 +647,8 @@ namespace CG
 			ptr = UObject::FindClass("Class FieldSystemEngine.UniformInteger");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -547,7 +662,17 @@ namespace CG
 	 * 		int32_t                                            ExteriorValue                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ESetMaskConditionType                              SetMaskConditionIn                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class URadialIntMask* URadialIntMask::SetRadialIntMask(float Radius, const struct FVector& Position, int32_t InteriorValue, int32_t ExteriorValue, ESetMaskConditionType SetMaskConditionIn)
+	class URadialIntMask* URadialIntMask::SetRadialIntMask(
+float Radius
+, 
+const struct FVector& Position
+, 
+int32_t InteriorValue
+, 
+int32_t ExteriorValue
+, 
+ESetMaskConditionType SetMaskConditionIn
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -574,10 +699,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction URadialIntMask.StaticClass
+	 * 		Name   -> PredefinedFunction URadialIntMask.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* URadialIntMask::StaticClass()
@@ -588,6 +715,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -596,7 +725,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              Magnitude                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UUniformScalar* UUniformScalar::SetUniformScalar(float Magnitude)
+	class UUniformScalar* UUniformScalar::SetUniformScalar(
+float Magnitude
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -615,10 +746,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UUniformScalar.StaticClass
+	 * 		Name   -> PredefinedFunction UUniformScalar.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UUniformScalar::StaticClass()
@@ -628,6 +761,8 @@ namespace CG
 			ptr = UObject::FindClass("Class FieldSystemEngine.UniformScalar");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -643,7 +778,21 @@ namespace CG
 	 * 		struct FVector                                     Position                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EFieldFalloffType                                  Falloff                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class URadialFalloff* URadialFalloff::SetRadialFalloff(float Magnitude, float MinRange, float MaxRange, float Default, float Radius, const struct FVector& Position, EFieldFalloffType Falloff)
+	class URadialFalloff* URadialFalloff::SetRadialFalloff(
+float Magnitude
+, 
+float MinRange
+, 
+float MaxRange
+, 
+float Default
+, 
+float Radius
+, 
+const struct FVector& Position
+, 
+EFieldFalloffType Falloff
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -674,10 +823,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction URadialFalloff.StaticClass
+	 * 		Name   -> PredefinedFunction URadialFalloff.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* URadialFalloff::StaticClass()
@@ -687,6 +838,8 @@ namespace CG
 			ptr = UObject::FindClass("Class FieldSystemEngine.RadialFalloff");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -703,7 +856,23 @@ namespace CG
 	 * 		struct FVector                                     Normal                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EFieldFalloffType                                  Falloff                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UPlaneFalloff* UPlaneFalloff::SetPlaneFalloff(float Magnitude, float MinRange, float MaxRange, float Default, float Distance, const struct FVector& Position, const struct FVector& Normal, EFieldFalloffType Falloff)
+	class UPlaneFalloff* UPlaneFalloff::SetPlaneFalloff(
+float Magnitude
+, 
+float MinRange
+, 
+float MaxRange
+, 
+float Default
+, 
+float Distance
+, 
+const struct FVector& Position
+, 
+const struct FVector& Normal
+, 
+EFieldFalloffType Falloff
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -736,10 +905,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPlaneFalloff.StaticClass
+	 * 		Name   -> PredefinedFunction UPlaneFalloff.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPlaneFalloff::StaticClass()
@@ -749,6 +920,8 @@ namespace CG
 			ptr = UObject::FindClass("Class FieldSystemEngine.PlaneFalloff");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -763,7 +936,19 @@ namespace CG
 	 * 		struct FTransform                                  Transform                                                  (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		EFieldFalloffType                                  Falloff                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UBoxFalloff* UBoxFalloff::SetBoxFalloff(float Magnitude, float MinRange, float MaxRange, float Default, const struct FTransform& Transform, EFieldFalloffType Falloff)
+	class UBoxFalloff* UBoxFalloff::SetBoxFalloff(
+float Magnitude
+, 
+float MinRange
+, 
+float MaxRange
+, 
+float Default
+, 
+const struct FTransform& Transform
+, 
+EFieldFalloffType Falloff
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -792,10 +977,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBoxFalloff.StaticClass
+	 * 		Name   -> PredefinedFunction UBoxFalloff.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBoxFalloff::StaticClass()
@@ -805,6 +992,8 @@ namespace CG
 			ptr = UObject::FindClass("Class FieldSystemEngine.BoxFalloff");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -816,7 +1005,13 @@ namespace CG
 	 * 		float                                              MaxRange                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FTransform                                  Transform                                                  (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	class UNoiseField* UNoiseField::SetNoiseField(float MinRange, float MaxRange, const struct FTransform& Transform)
+	class UNoiseField* UNoiseField::SetNoiseField(
+float MinRange
+, 
+float MaxRange
+, 
+const struct FTransform& Transform
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -839,10 +1034,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNoiseField.StaticClass
+	 * 		Name   -> PredefinedFunction UNoiseField.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNoiseField::StaticClass()
@@ -853,6 +1050,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -862,7 +1061,11 @@ namespace CG
 	 * 		float                                              Magnitude                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector                                     Direction                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UUniformVector* UUniformVector::SetUniformVector(float Magnitude, const struct FVector& Direction)
+	class UUniformVector* UUniformVector::SetUniformVector(
+float Magnitude
+, 
+const struct FVector& Direction
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -883,10 +1086,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UUniformVector.StaticClass
+	 * 		Name   -> PredefinedFunction UUniformVector.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UUniformVector::StaticClass()
@@ -897,6 +1102,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -906,7 +1113,11 @@ namespace CG
 	 * 		float                                              Magnitude                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector                                     Position                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class URadialVector* URadialVector::SetRadialVector(float Magnitude, const struct FVector& Position)
+	class URadialVector* URadialVector::SetRadialVector(
+float Magnitude
+, 
+const struct FVector& Position
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -927,10 +1138,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction URadialVector.StaticClass
+	 * 		Name   -> PredefinedFunction URadialVector.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* URadialVector::StaticClass()
@@ -941,6 +1154,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -949,7 +1164,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              Magnitude                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class URandomVector* URandomVector::SetRandomVector(float Magnitude)
+	class URandomVector* URandomVector::SetRandomVector(
+float Magnitude
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -968,10 +1185,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction URandomVector.StaticClass
+	 * 		Name   -> PredefinedFunction URandomVector.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* URandomVector::StaticClass()
@@ -981,6 +1200,8 @@ namespace CG
 			ptr = UObject::FindClass("Class FieldSystemEngine.RandomVector");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -993,7 +1214,15 @@ namespace CG
 	 * 		class UFieldNodeBase*                              LeftField                                                  (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EFieldOperationType                                Operation                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UOperatorField* UOperatorField::SetOperatorField(float Magnitude, class UFieldNodeBase* RightField, class UFieldNodeBase* LeftField, EFieldOperationType Operation)
+	class UOperatorField* UOperatorField::SetOperatorField(
+float Magnitude
+, 
+class UFieldNodeBase* RightField
+, 
+class UFieldNodeBase* LeftField
+, 
+EFieldOperationType Operation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1018,10 +1247,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UOperatorField.StaticClass
+	 * 		Name   -> PredefinedFunction UOperatorField.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UOperatorField::StaticClass()
@@ -1032,6 +1263,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1040,7 +1273,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UFieldNodeFloat*                             FloatField                                                 (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UToIntegerField* UToIntegerField::SetToIntegerField(class UFieldNodeFloat* FloatField)
+	class UToIntegerField* UToIntegerField::SetToIntegerField(
+class UFieldNodeFloat* FloatField
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1059,10 +1294,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UToIntegerField.StaticClass
+	 * 		Name   -> PredefinedFunction UToIntegerField.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UToIntegerField::StaticClass()
@@ -1073,6 +1310,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1081,7 +1320,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UFieldNodeInt*                               IntegerField                                               (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UToFloatField* UToFloatField::SetToFloatField(class UFieldNodeInt* IntegerField)
+	class UToFloatField* UToFloatField::SetToFloatField(
+class UFieldNodeInt* IntegerField
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1100,10 +1341,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UToFloatField.StaticClass
+	 * 		Name   -> PredefinedFunction UToFloatField.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UToFloatField::StaticClass()
@@ -1113,6 +1356,8 @@ namespace CG
 			ptr = UObject::FindClass("Class FieldSystemEngine.ToFloatField");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1124,7 +1369,13 @@ namespace CG
 	 * 		class UFieldNodeBase*                              Field                                                      (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EFieldCullingOperationType                         Operation                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UCullingField* UCullingField::SetCullingField(class UFieldNodeBase* Culling, class UFieldNodeBase* Field, EFieldCullingOperationType Operation)
+	class UCullingField* UCullingField::SetCullingField(
+class UFieldNodeBase* Culling
+, 
+class UFieldNodeBase* Field
+, 
+EFieldCullingOperationType Operation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1147,10 +1398,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UCullingField.StaticClass
+	 * 		Name   -> PredefinedFunction UCullingField.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UCullingField::StaticClass()
@@ -1160,6 +1413,8 @@ namespace CG
 			ptr = UObject::FindClass("Class FieldSystemEngine.CullingField");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1184,10 +1439,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UReturnResultsTerminal.StaticClass
+	 * 		Name   -> PredefinedFunction UReturnResultsTerminal.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UReturnResultsTerminal::StaticClass()
@@ -1197,6 +1454,7 @@ namespace CG
 			ptr = UObject::FindClass("Class FieldSystemEngine.ReturnResultsTerminal");
 		return ptr;
 	}
+
 
 }
 

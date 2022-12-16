@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -30,6 +31,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -52,6 +55,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -72,6 +77,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -96,6 +103,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -119,6 +128,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -140,6 +151,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -148,7 +161,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UMRMeshComponent*                            Mesh                                                       (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMeshReconstructorBase::ConnectMRMesh(class UMRMeshComponent* Mesh)
+	void UMeshReconstructorBase::ConnectMRMesh(
+class UMRMeshComponent* Mesh
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -165,10 +180,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMeshReconstructorBase.StaticClass
+	 * 		Name   -> PredefinedFunction UMeshReconstructorBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMeshReconstructorBase::StaticClass()
@@ -178,6 +195,8 @@ namespace CG
 			ptr = UObject::FindClass("Class MRMesh.MeshReconstructorBase");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -191,7 +210,17 @@ namespace CG
 	 * 		TArray<struct FVector>                             Normals                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		TArray<float>                                      Confidence                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UMockDataMeshTrackerComponent::OnMockDataMeshTrackerUpdated__DelegateSignature(int32_t Index, TArray<struct FVector> Vertices, TArray<int32_t> Triangles, TArray<struct FVector> Normals, TArray<float> Confidence)
+	void UMockDataMeshTrackerComponent::OnMockDataMeshTrackerUpdated__DelegateSignature(
+int32_t Index
+, 
+TArray<struct FVector> Vertices
+, 
+TArray<int32_t> Triangles
+, 
+TArray<struct FVector> Normals
+, 
+TArray<float> Confidence
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -216,6 +245,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -224,7 +255,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UMRMeshComponent*                            InMRMeshPtr                                                (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMockDataMeshTrackerComponent::DisconnectMRMesh(class UMRMeshComponent* InMRMeshPtr)
+	void UMockDataMeshTrackerComponent::DisconnectMRMesh(
+class UMRMeshComponent* InMRMeshPtr
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -241,6 +274,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -249,7 +284,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UMRMeshComponent*                            InMRMeshPtr                                                (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMockDataMeshTrackerComponent::ConnectMRMesh(class UMRMeshComponent* InMRMeshPtr)
+	void UMockDataMeshTrackerComponent::ConnectMRMesh(
+class UMRMeshComponent* InMRMeshPtr
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -266,10 +303,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMockDataMeshTrackerComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UMockDataMeshTrackerComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMockDataMeshTrackerComponent::StaticClass()
@@ -280,6 +319,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -288,7 +329,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UMaterialInterface*                          InMaterial                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMRMeshComponent::SetWireframeMaterial(class UMaterialInterface* InMaterial)
+	void UMRMeshComponent::SetWireframeMaterial(
+class UMaterialInterface* InMaterial
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -305,6 +348,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -313,7 +358,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FLinearColor                                InColor                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMRMeshComponent::SetWireframeColor(const struct FLinearColor& InColor)
+	void UMRMeshComponent::SetWireframeColor(
+const struct FLinearColor& InColor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -330,6 +377,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -338,7 +387,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bUseWireframe                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMRMeshComponent::SetUseWireframe(bool bUseWireframe)
+	void UMRMeshComponent::SetUseWireframe(
+bool bUseWireframe
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -355,6 +406,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -363,7 +416,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bEnable                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMRMeshComponent::SetEnableMeshOcclusion(bool bEnable)
+	void UMRMeshComponent::SetEnableMeshOcclusion(
+bool bEnable
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -379,6 +434,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -403,6 +460,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -425,6 +484,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -449,6 +510,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -472,6 +535,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -492,6 +557,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -514,10 +581,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMRMeshComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UMRMeshComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMRMeshComponent::StaticClass()
@@ -527,6 +596,7 @@ namespace CG
 			ptr = UObject::FindClass("Class MRMesh.MRMeshComponent");
 		return ptr;
 	}
+
 
 }
 

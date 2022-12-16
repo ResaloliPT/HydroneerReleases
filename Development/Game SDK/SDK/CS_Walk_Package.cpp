@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UCS_Walk_C.StaticClass
+	 * 		Name   -> PredefinedFunction UCS_Walk_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UCS_Walk_C::StaticClass()
@@ -23,6 +24,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass CS_Walk.CS_Walk_C");
 		return ptr;
 	}
+
 
 }
 

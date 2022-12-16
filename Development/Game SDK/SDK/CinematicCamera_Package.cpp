@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ACameraRig_Crane.StaticClass
+	 * 		Name   -> PredefinedFunction ACameraRig_Crane.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ACameraRig_Crane::StaticClass()
@@ -23,6 +24,8 @@ namespace CG
 			ptr = UObject::FindClass("Class CinematicCamera.CameraRig_Crane");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -47,10 +50,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ACameraRig_Rail.StaticClass
+	 * 		Name   -> PredefinedFunction ACameraRig_Rail.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ACameraRig_Rail::StaticClass()
@@ -60,6 +65,8 @@ namespace CG
 			ptr = UObject::FindClass("Class CinematicCamera.CameraRig_Rail");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -84,10 +91,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ACineCameraActor.StaticClass
+	 * 		Name   -> PredefinedFunction ACineCameraActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ACineCameraActor::StaticClass()
@@ -98,6 +107,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -106,7 +117,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      InPresetName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UCineCameraComponent::SetLensPresetByName(const class FString& InPresetName)
+	void UCineCameraComponent::SetLensPresetByName(
+const class FString& InPresetName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -123,6 +136,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -131,7 +146,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      InPresetName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UCineCameraComponent::SetFilmbackPresetByName(const class FString& InPresetName)
+	void UCineCameraComponent::SetFilmbackPresetByName(
+const class FString& InPresetName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -148,6 +165,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -156,7 +175,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InFocalLength                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UCineCameraComponent::SetCurrentFocalLength(float InFocalLength)
+	void UCineCameraComponent::SetCurrentFocalLength(
+float InFocalLength
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -172,6 +193,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -196,6 +219,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -218,6 +243,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -242,6 +269,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -264,6 +293,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -288,6 +319,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -310,6 +343,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -334,10 +369,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UCineCameraComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UCineCameraComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UCineCameraComponent::StaticClass()
@@ -347,6 +384,7 @@ namespace CG
 			ptr = UObject::FindClass("Class CinematicCamera.CineCameraComponent");
 		return ptr;
 	}
+
 
 }
 

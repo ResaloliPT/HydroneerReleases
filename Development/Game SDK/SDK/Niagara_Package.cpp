@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterface.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterface.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterface::StaticClass()
@@ -24,10 +25,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneNiagaraTrack.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneNiagaraTrack.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneNiagaraTrack::StaticClass()
@@ -38,10 +41,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneNiagaraParameterTrack.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneNiagaraParameterTrack.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneNiagaraParameterTrack::StaticClass()
@@ -52,10 +57,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneNiagaraBoolParameterTrack.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneNiagaraBoolParameterTrack.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneNiagaraBoolParameterTrack::StaticClass()
@@ -66,10 +73,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneNiagaraColorParameterTrack.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneNiagaraColorParameterTrack.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneNiagaraColorParameterTrack::StaticClass()
@@ -80,10 +89,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneNiagaraFloatParameterTrack.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneNiagaraFloatParameterTrack.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneNiagaraFloatParameterTrack::StaticClass()
@@ -94,10 +105,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneNiagaraIntegerParameterTrack.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneNiagaraIntegerParameterTrack.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneNiagaraIntegerParameterTrack::StaticClass()
@@ -108,10 +121,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneNiagaraSystemSpawnSection.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneNiagaraSystemSpawnSection.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneNiagaraSystemSpawnSection::StaticClass()
@@ -122,10 +137,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneNiagaraSystemTrack.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneNiagaraSystemTrack.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneNiagaraSystemTrack::StaticClass()
@@ -136,10 +153,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMovieSceneNiagaraVectorParameterTrack.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneNiagaraVectorParameterTrack.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMovieSceneNiagaraVectorParameterTrack::StaticClass()
@@ -150,6 +169,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -158,7 +179,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bShouldDestroyOnSystemFinish                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ANiagaraActor::SetDestroyOnSystemFinish(bool bShouldDestroyOnSystemFinish)
+	void ANiagaraActor::SetDestroyOnSystemFinish(
+bool bShouldDestroyOnSystemFinish
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -175,6 +198,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -183,7 +208,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UNiagaraComponent*                           FinishedComponent                                          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ANiagaraActor::OnNiagaraSystemFinished(class UNiagaraComponent* FinishedComponent)
+	void ANiagaraActor::OnNiagaraSystemFinished(
+class UNiagaraComponent* FinishedComponent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -200,10 +227,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ANiagaraActor.StaticClass
+	 * 		Name   -> PredefinedFunction ANiagaraActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ANiagaraActor::StaticClass()
@@ -214,6 +243,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -223,7 +254,11 @@ namespace CG
 	 * 		class FName                                        InVariableName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector4                                    InValue                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::SetVariableVec4(const class FName& InVariableName, const struct FVector4& InValue)
+	void UNiagaraComponent::SetVariableVec4(
+const class FName& InVariableName
+, 
+const struct FVector4& InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -242,6 +277,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -251,7 +288,11 @@ namespace CG
 	 * 		class FName                                        InVariableName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector                                     InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::SetVariableVec3(const class FName& InVariableName, const struct FVector& InValue)
+	void UNiagaraComponent::SetVariableVec3(
+const class FName& InVariableName
+, 
+const struct FVector& InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -270,6 +311,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -279,7 +322,11 @@ namespace CG
 	 * 		class FName                                        InVariableName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector2D                                   InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::SetVariableVec2(const class FName& InVariableName, const struct FVector2D& InValue)
+	void UNiagaraComponent::SetVariableVec2(
+const class FName& InVariableName
+, 
+const struct FVector2D& InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -298,6 +345,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -307,7 +356,11 @@ namespace CG
 	 * 		class FName                                        InVariableName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UTextureRenderTarget*                        TextureRenderTarget                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::SetVariableTextureRenderTarget(const class FName& InVariableName, class UTextureRenderTarget* TextureRenderTarget)
+	void UNiagaraComponent::SetVariableTextureRenderTarget(
+const class FName& InVariableName
+, 
+class UTextureRenderTarget* TextureRenderTarget
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -326,6 +379,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -335,7 +390,11 @@ namespace CG
 	 * 		class FName                                        InVariableName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FQuat                                       InValue                                                    (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::SetVariableQuat(const class FName& InVariableName, const struct FQuat& InValue)
+	void UNiagaraComponent::SetVariableQuat(
+const class FName& InVariableName
+, 
+const struct FQuat& InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -354,6 +413,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -363,7 +424,11 @@ namespace CG
 	 * 		class FName                                        InVariableName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UObject*                                     Object                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::SetVariableObject(const class FName& InVariableName, class UObject* Object)
+	void UNiagaraComponent::SetVariableObject(
+const class FName& InVariableName
+, 
+class UObject* Object
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -382,6 +447,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -391,7 +458,11 @@ namespace CG
 	 * 		class FName                                        InVariableName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UMaterialInterface*                          Object                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::SetVariableMaterial(const class FName& InVariableName, class UMaterialInterface* Object)
+	void UNiagaraComponent::SetVariableMaterial(
+const class FName& InVariableName
+, 
+class UMaterialInterface* Object
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -410,6 +481,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -419,7 +492,11 @@ namespace CG
 	 * 		class FName                                        InVariableName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FLinearColor                                InValue                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::SetVariableLinearColor(const class FName& InVariableName, const struct FLinearColor& InValue)
+	void UNiagaraComponent::SetVariableLinearColor(
+const class FName& InVariableName
+, 
+const struct FLinearColor& InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -438,6 +515,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -447,7 +526,11 @@ namespace CG
 	 * 		class FName                                        InVariableName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::SetVariableInt(const class FName& InVariableName, int32_t InValue)
+	void UNiagaraComponent::SetVariableInt(
+const class FName& InVariableName
+, 
+int32_t InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -466,6 +549,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -475,7 +560,11 @@ namespace CG
 	 * 		class FName                                        InVariableName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::SetVariableFloat(const class FName& InVariableName, float InValue)
+	void UNiagaraComponent::SetVariableFloat(
+const class FName& InVariableName
+, 
+float InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -494,6 +583,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -503,7 +594,11 @@ namespace CG
 	 * 		class FName                                        InVariableName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::SetVariableBool(const class FName& InVariableName, bool InValue)
+	void UNiagaraComponent::SetVariableBool(
+const class FName& InVariableName
+, 
+bool InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -522,6 +617,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -531,7 +628,11 @@ namespace CG
 	 * 		class FName                                        InVariableName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class AActor*                                      Actor                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::SetVariableActor(const class FName& InVariableName, class AActor* Actor)
+	void UNiagaraComponent::SetVariableActor(
+const class FName& InVariableName
+, 
+class AActor* Actor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -550,6 +651,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -558,7 +661,9 @@ namespace CG
 	 * Parameters:
 	 * 		ENiagaraTickBehavior                               NewTickBehavior                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::SetTickBehavior(ENiagaraTickBehavior NewTickBehavior)
+	void UNiagaraComponent::SetTickBehavior(
+ENiagaraTickBehavior NewTickBehavior
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -575,6 +680,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -583,7 +690,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InSeekDelta                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::SetSeekDelta(float InSeekDelta)
+	void UNiagaraComponent::SetSeekDelta(
+float InSeekDelta
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -600,6 +709,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -608,7 +719,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bInRenderingEnabled                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::SetRenderingEnabled(bool bInRenderingEnabled)
+	void UNiagaraComponent::SetRenderingEnabled(
+bool bInRenderingEnabled
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -625,6 +738,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -634,7 +749,11 @@ namespace CG
 	 * 		bool                                               bEnablePreviewLODDistance                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              PreviewLODDistance                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::SetPreviewLODDistance(bool bEnablePreviewLODDistance, float PreviewLODDistance)
+	void UNiagaraComponent::SetPreviewLODDistance(
+bool bEnablePreviewLODDistance
+, 
+float PreviewLODDistance
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -653,6 +772,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -661,7 +782,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bInPaused                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::SetPaused(bool bInPaused)
+	void UNiagaraComponent::SetPaused(
+bool bInPaused
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -678,6 +801,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -687,7 +812,11 @@ namespace CG
 	 * 		class FString                                      InVariableName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector4                                    InValue                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::SetNiagaraVariableVec4(const class FString& InVariableName, const struct FVector4& InValue)
+	void UNiagaraComponent::SetNiagaraVariableVec4(
+const class FString& InVariableName
+, 
+const struct FVector4& InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -706,6 +835,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -715,7 +846,11 @@ namespace CG
 	 * 		class FString                                      InVariableName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector                                     InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::SetNiagaraVariableVec3(const class FString& InVariableName, const struct FVector& InValue)
+	void UNiagaraComponent::SetNiagaraVariableVec3(
+const class FString& InVariableName
+, 
+const struct FVector& InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -734,6 +869,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -743,7 +880,11 @@ namespace CG
 	 * 		class FString                                      InVariableName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector2D                                   InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::SetNiagaraVariableVec2(const class FString& InVariableName, const struct FVector2D& InValue)
+	void UNiagaraComponent::SetNiagaraVariableVec2(
+const class FString& InVariableName
+, 
+const struct FVector2D& InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -762,6 +903,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -771,7 +914,11 @@ namespace CG
 	 * 		class FString                                      InVariableName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FQuat                                       InValue                                                    (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::SetNiagaraVariableQuat(const class FString& InVariableName, const struct FQuat& InValue)
+	void UNiagaraComponent::SetNiagaraVariableQuat(
+const class FString& InVariableName
+, 
+const struct FQuat& InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -790,6 +937,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -799,7 +948,11 @@ namespace CG
 	 * 		class FString                                      InVariableName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UObject*                                     Object                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::SetNiagaraVariableObject(const class FString& InVariableName, class UObject* Object)
+	void UNiagaraComponent::SetNiagaraVariableObject(
+const class FString& InVariableName
+, 
+class UObject* Object
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -818,6 +971,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -827,7 +982,11 @@ namespace CG
 	 * 		class FString                                      InVariableName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FLinearColor                                InValue                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::SetNiagaraVariableLinearColor(const class FString& InVariableName, const struct FLinearColor& InValue)
+	void UNiagaraComponent::SetNiagaraVariableLinearColor(
+const class FString& InVariableName
+, 
+const struct FLinearColor& InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -846,6 +1005,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -855,7 +1016,11 @@ namespace CG
 	 * 		class FString                                      InVariableName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::SetNiagaraVariableInt(const class FString& InVariableName, int32_t InValue)
+	void UNiagaraComponent::SetNiagaraVariableInt(
+const class FString& InVariableName
+, 
+int32_t InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -874,6 +1039,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -883,7 +1050,11 @@ namespace CG
 	 * 		class FString                                      InVariableName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::SetNiagaraVariableFloat(const class FString& InVariableName, float InValue)
+	void UNiagaraComponent::SetNiagaraVariableFloat(
+const class FString& InVariableName
+, 
+float InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -902,6 +1073,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -911,7 +1084,11 @@ namespace CG
 	 * 		class FString                                      InVariableName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::SetNiagaraVariableBool(const class FString& InVariableName, bool InValue)
+	void UNiagaraComponent::SetNiagaraVariableBool(
+const class FString& InVariableName
+, 
+bool InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -930,6 +1107,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -939,7 +1118,11 @@ namespace CG
 	 * 		class FString                                      InVariableName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class AActor*                                      Actor                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::SetNiagaraVariableActor(const class FString& InVariableName, class AActor* Actor)
+	void UNiagaraComponent::SetNiagaraVariableActor(
+const class FString& InVariableName
+, 
+class AActor* Actor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -958,6 +1141,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -966,7 +1151,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InMaxTime                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::SetMaxSimTime(float InMaxTime)
+	void UNiagaraComponent::SetMaxSimTime(
+float InMaxTime
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -983,6 +1170,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -991,7 +1180,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bEnableDebug                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::SetGpuComputeDebug(bool bEnableDebug)
+	void UNiagaraComponent::SetGpuComputeDebug(
+bool bEnableDebug
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1008,6 +1199,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1016,7 +1209,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bInForceSolo                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::SetForceSolo(bool bInForceSolo)
+	void UNiagaraComponent::SetForceSolo(
+bool bInForceSolo
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1033,6 +1228,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1041,7 +1238,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InDesiredAge                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::SetDesiredAge(float InDesiredAge)
+	void UNiagaraComponent::SetDesiredAge(
+float InDesiredAge
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1058,6 +1257,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1066,7 +1267,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bInCanRenderWhileSeeking                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::SetCanRenderWhileSeeking(bool bInCanRenderWhileSeeking)
+	void UNiagaraComponent::SetCanRenderWhileSeeking(
+bool bInCanRenderWhileSeeking
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1083,6 +1286,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1091,7 +1296,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bInAutoDestroy                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::SetAutoDestroy(bool bInAutoDestroy)
+	void UNiagaraComponent::SetAutoDestroy(
+bool bInAutoDestroy
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1108,6 +1315,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1116,7 +1325,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UNiagaraSystem*                              InAsset                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::SetAsset(class UNiagaraSystem* InAsset)
+	void UNiagaraComponent::SetAsset(
+class UNiagaraSystem* InAsset
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1133,6 +1344,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1141,7 +1354,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bAllow                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::SetAllowScalability(bool bAllow)
+	void UNiagaraComponent::SetAllowScalability(
+bool bAllow
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1158,6 +1373,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1166,7 +1383,9 @@ namespace CG
 	 * Parameters:
 	 * 		ENiagaraAgeUpdateMode                              InAgeUpdateMode                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::SetAgeUpdateMode(ENiagaraAgeUpdateMode InAgeUpdateMode)
+	void UNiagaraComponent::SetAgeUpdateMode(
+ENiagaraAgeUpdateMode InAgeUpdateMode
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1183,6 +1402,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1191,7 +1412,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InDesiredAge                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::SeekToDesiredAge(float InDesiredAge)
+	void UNiagaraComponent::SeekToDesiredAge(
+float InDesiredAge
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1207,6 +1430,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1229,6 +1454,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1249,6 +1476,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1273,6 +1502,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1295,6 +1526,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1319,6 +1552,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1341,6 +1576,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1365,6 +1602,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1374,7 +1613,11 @@ namespace CG
 	 * 		class FString                                      InEmitterName                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      InValueName                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<struct FVector> UNiagaraComponent::GetNiagaraParticleValueVec3_DebugOnly(const class FString& InEmitterName, const class FString& InValueName)
+	TArray<struct FVector> UNiagaraComponent::GetNiagaraParticleValueVec3_DebugOnly(
+const class FString& InEmitterName
+, 
+const class FString& InValueName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1395,6 +1638,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1404,7 +1649,11 @@ namespace CG
 	 * 		class FString                                      InEmitterName                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      InValueName                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<float> UNiagaraComponent::GetNiagaraParticleValues_DebugOnly(const class FString& InEmitterName, const class FString& InValueName)
+	TArray<float> UNiagaraComponent::GetNiagaraParticleValues_DebugOnly(
+const class FString& InEmitterName
+, 
+const class FString& InValueName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1425,6 +1674,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1433,7 +1684,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      InEmitterName                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<struct FVector> UNiagaraComponent::GetNiagaraParticlePositions_DebugOnly(const class FString& InEmitterName)
+	TArray<struct FVector> UNiagaraComponent::GetNiagaraParticlePositions_DebugOnly(
+const class FString& InEmitterName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1451,6 +1704,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1475,6 +1730,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1497,6 +1754,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1521,6 +1780,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1529,7 +1790,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Name                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UNiagaraDataInterface* UNiagaraComponent::GetDataInterface(const class FString& Name)
+	class UNiagaraDataInterface* UNiagaraComponent::GetDataInterface(
+const class FString& Name
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1547,6 +1810,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1571,6 +1836,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1594,6 +1861,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1603,7 +1872,11 @@ namespace CG
 	 * 		float                                              SimulateTime                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              TickDeltaSeconds                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::AdvanceSimulationByTime(float SimulateTime, float TickDeltaSeconds)
+	void UNiagaraComponent::AdvanceSimulationByTime(
+float SimulateTime
+, 
+float TickDeltaSeconds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1622,6 +1895,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1631,7 +1906,11 @@ namespace CG
 	 * 		int32_t                                            TickCount                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              TickDeltaSeconds                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraComponent::AdvanceSimulation(int32_t TickCount, float TickDeltaSeconds)
+	void UNiagaraComponent::AdvanceSimulation(
+int32_t TickCount
+, 
+float TickDeltaSeconds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1650,10 +1929,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraComponent::StaticClass()
@@ -1664,10 +1945,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraComponentPool.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraComponentPool.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraComponentPool::StaticClass()
@@ -1678,10 +1961,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraRendererProperties.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraRendererProperties.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraRendererProperties::StaticClass()
@@ -1692,10 +1977,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraComponentRendererProperties.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraComponentRendererProperties.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraComponentRendererProperties::StaticClass()
@@ -1706,10 +1993,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraComponentSettings.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraComponentSettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraComponentSettings::StaticClass()
@@ -1720,10 +2009,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraConvertInPlaceUtilityBase.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraConvertInPlaceUtilityBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraConvertInPlaceUtilityBase::StaticClass()
@@ -1734,10 +2025,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterface2DArrayTexture.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterface2DArrayTexture.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterface2DArrayTexture::StaticClass()
@@ -1748,10 +2041,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceArray.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceArray.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceArray::StaticClass()
@@ -1762,10 +2057,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceArrayFloat.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceArrayFloat.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceArrayFloat::StaticClass()
@@ -1776,10 +2073,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceArrayFloat2.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceArrayFloat2.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceArrayFloat2::StaticClass()
@@ -1790,10 +2089,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceArrayFloat3.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceArrayFloat3.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceArrayFloat3::StaticClass()
@@ -1804,10 +2105,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceArrayFloat4.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceArrayFloat4.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceArrayFloat4::StaticClass()
@@ -1818,10 +2121,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceArrayColor.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceArrayColor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceArrayColor::StaticClass()
@@ -1832,10 +2137,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceArrayQuat.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceArrayQuat.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceArrayQuat::StaticClass()
@@ -1845,6 +2152,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceArrayQuat");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1856,7 +2165,13 @@ namespace CG
 	 * 		class FName                                        OverrideName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FVector4>                            ArrayData                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayVector4(class UNiagaraComponent* NiagaraSystem, const class FName& OverrideName, TArray<struct FVector4> ArrayData)
+	void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayVector4(
+class UNiagaraComponent* NiagaraSystem
+, 
+const class FName& OverrideName
+, 
+TArray<struct FVector4> ArrayData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1877,6 +2192,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1887,7 +2204,13 @@ namespace CG
 	 * 		class FName                                        OverrideName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FVector2D>                           ArrayData                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayVector2D(class UNiagaraComponent* NiagaraSystem, const class FName& OverrideName, TArray<struct FVector2D> ArrayData)
+	void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayVector2D(
+class UNiagaraComponent* NiagaraSystem
+, 
+const class FName& OverrideName
+, 
+TArray<struct FVector2D> ArrayData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1908,6 +2231,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1918,7 +2243,13 @@ namespace CG
 	 * 		class FName                                        OverrideName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FVector>                             ArrayData                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayVector(class UNiagaraComponent* NiagaraSystem, const class FName& OverrideName, TArray<struct FVector> ArrayData)
+	void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayVector(
+class UNiagaraComponent* NiagaraSystem
+, 
+const class FName& OverrideName
+, 
+TArray<struct FVector> ArrayData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1939,6 +2270,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1949,7 +2282,13 @@ namespace CG
 	 * 		class FName                                        OverrideName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FQuat>                               ArrayData                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayQuat(class UNiagaraComponent* NiagaraSystem, const class FName& OverrideName, TArray<struct FQuat> ArrayData)
+	void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayQuat(
+class UNiagaraComponent* NiagaraSystem
+, 
+const class FName& OverrideName
+, 
+TArray<struct FQuat> ArrayData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1970,6 +2309,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1980,7 +2321,13 @@ namespace CG
 	 * 		class FName                                        OverrideName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<int32_t>                                    ArrayData                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayInt32(class UNiagaraComponent* NiagaraSystem, const class FName& OverrideName, TArray<int32_t> ArrayData)
+	void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayInt32(
+class UNiagaraComponent* NiagaraSystem
+, 
+const class FName& OverrideName
+, 
+TArray<int32_t> ArrayData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2001,6 +2348,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2011,7 +2360,13 @@ namespace CG
 	 * 		class FName                                        OverrideName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<float>                                      ArrayData                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayFloat(class UNiagaraComponent* NiagaraSystem, const class FName& OverrideName, TArray<float> ArrayData)
+	void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayFloat(
+class UNiagaraComponent* NiagaraSystem
+, 
+const class FName& OverrideName
+, 
+TArray<float> ArrayData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2032,6 +2387,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2042,7 +2399,13 @@ namespace CG
 	 * 		class FName                                        OverrideName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FLinearColor>                        ArrayData                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayColor(class UNiagaraComponent* NiagaraSystem, const class FName& OverrideName, TArray<struct FLinearColor> ArrayData)
+	void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayColor(
+class UNiagaraComponent* NiagaraSystem
+, 
+const class FName& OverrideName
+, 
+TArray<struct FLinearColor> ArrayData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2063,6 +2426,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2073,7 +2438,13 @@ namespace CG
 	 * 		class FName                                        OverrideName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<bool>                                       ArrayData                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayBool(class UNiagaraComponent* NiagaraSystem, const class FName& OverrideName, TArray<bool> ArrayData)
+	void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayBool(
+class UNiagaraComponent* NiagaraSystem
+, 
+const class FName& OverrideName
+, 
+TArray<bool> ArrayData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2094,6 +2465,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2103,7 +2476,11 @@ namespace CG
 	 * 		class UNiagaraComponent*                           NiagaraSystem                                              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FName                                        OverrideName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<struct FVector4> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayVector4(class UNiagaraComponent* NiagaraSystem, const class FName& OverrideName)
+	TArray<struct FVector4> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayVector4(
+class UNiagaraComponent* NiagaraSystem
+, 
+const class FName& OverrideName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2124,6 +2501,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2133,7 +2512,11 @@ namespace CG
 	 * 		class UNiagaraComponent*                           NiagaraSystem                                              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FName                                        OverrideName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<struct FVector2D> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayVector2D(class UNiagaraComponent* NiagaraSystem, const class FName& OverrideName)
+	TArray<struct FVector2D> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayVector2D(
+class UNiagaraComponent* NiagaraSystem
+, 
+const class FName& OverrideName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2154,6 +2537,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2163,7 +2548,11 @@ namespace CG
 	 * 		class UNiagaraComponent*                           NiagaraSystem                                              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FName                                        OverrideName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<struct FVector> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayVector(class UNiagaraComponent* NiagaraSystem, const class FName& OverrideName)
+	TArray<struct FVector> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayVector(
+class UNiagaraComponent* NiagaraSystem
+, 
+const class FName& OverrideName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2184,6 +2573,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2193,7 +2584,11 @@ namespace CG
 	 * 		class UNiagaraComponent*                           NiagaraSystem                                              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FName                                        OverrideName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<struct FQuat> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayQuat(class UNiagaraComponent* NiagaraSystem, const class FName& OverrideName)
+	TArray<struct FQuat> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayQuat(
+class UNiagaraComponent* NiagaraSystem
+, 
+const class FName& OverrideName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2214,6 +2609,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2223,7 +2620,11 @@ namespace CG
 	 * 		class UNiagaraComponent*                           NiagaraSystem                                              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FName                                        OverrideName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<int32_t> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayInt32(class UNiagaraComponent* NiagaraSystem, const class FName& OverrideName)
+	TArray<int32_t> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayInt32(
+class UNiagaraComponent* NiagaraSystem
+, 
+const class FName& OverrideName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2244,6 +2645,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2253,7 +2656,11 @@ namespace CG
 	 * 		class UNiagaraComponent*                           NiagaraSystem                                              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FName                                        OverrideName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<float> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayFloat(class UNiagaraComponent* NiagaraSystem, const class FName& OverrideName)
+	TArray<float> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayFloat(
+class UNiagaraComponent* NiagaraSystem
+, 
+const class FName& OverrideName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2274,6 +2681,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2283,7 +2692,11 @@ namespace CG
 	 * 		class UNiagaraComponent*                           NiagaraSystem                                              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FName                                        OverrideName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<struct FLinearColor> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayColor(class UNiagaraComponent* NiagaraSystem, const class FName& OverrideName)
+	TArray<struct FLinearColor> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayColor(
+class UNiagaraComponent* NiagaraSystem
+, 
+const class FName& OverrideName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2304,6 +2717,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2313,7 +2728,11 @@ namespace CG
 	 * 		class UNiagaraComponent*                           NiagaraSystem                                              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FName                                        OverrideName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<bool> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayBool(class UNiagaraComponent* NiagaraSystem, const class FName& OverrideName)
+	TArray<bool> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayBool(
+class UNiagaraComponent* NiagaraSystem
+, 
+const class FName& OverrideName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2334,10 +2753,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceArrayFunctionLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceArrayFunctionLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceArrayFunctionLibrary::StaticClass()
@@ -2348,10 +2769,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceArrayInt32.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceArrayInt32.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceArrayInt32::StaticClass()
@@ -2362,10 +2785,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceArrayBool.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceArrayBool.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceArrayBool::StaticClass()
@@ -2376,10 +2801,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceAudioSubmix.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceAudioSubmix.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceAudioSubmix::StaticClass()
@@ -2390,10 +2817,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceAudioOscilloscope.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceAudioOscilloscope.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceAudioOscilloscope::StaticClass()
@@ -2404,10 +2833,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceAudioPlayer.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceAudioPlayer.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceAudioPlayer::StaticClass()
@@ -2418,10 +2849,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceAudioSpectrum.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceAudioSpectrum.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceAudioSpectrum::StaticClass()
@@ -2432,10 +2865,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceCamera.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceCamera.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceCamera::StaticClass()
@@ -2446,10 +2881,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceCollisionQuery.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceCollisionQuery.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceCollisionQuery::StaticClass()
@@ -2460,10 +2897,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceCurveBase.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceCurveBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceCurveBase::StaticClass()
@@ -2474,10 +2913,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceColorCurve.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceColorCurve.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceColorCurve::StaticClass()
@@ -2488,10 +2929,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceCurlNoise.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceCurlNoise.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceCurlNoise::StaticClass()
@@ -2502,10 +2945,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceCurve.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceCurve.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceCurve::StaticClass()
@@ -2516,6 +2961,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2525,7 +2972,11 @@ namespace CG
 	 * 		TArray<struct FBasicParticleData>                  Data                                                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		class UNiagaraSystem*                              NiagaraSystem                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraParticleCallbackHandler::ReceiveParticleData(TArray<struct FBasicParticleData> Data, class UNiagaraSystem* NiagaraSystem)
+	void UNiagaraParticleCallbackHandler::ReceiveParticleData(
+TArray<struct FBasicParticleData> Data
+, 
+class UNiagaraSystem* NiagaraSystem
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2544,10 +2995,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraParticleCallbackHandler.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraParticleCallbackHandler.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraParticleCallbackHandler::StaticClass()
@@ -2558,10 +3011,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceExport.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceExport.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceExport::StaticClass()
@@ -2572,10 +3027,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceGBuffer.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceGBuffer.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceGBuffer::StaticClass()
@@ -2586,10 +3043,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceRWBase.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceRWBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceRWBase::StaticClass()
@@ -2600,10 +3059,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceGrid2D.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceGrid2D.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceGrid2D::StaticClass()
@@ -2613,6 +3074,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceGrid2D");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2624,7 +3087,13 @@ namespace CG
 	 * 		int32_t                                            SizeX                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            SizeY                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraDataInterfaceGrid2DCollection::GetTextureSize(class UNiagaraComponent* Component, int32_t* SizeX, int32_t* SizeY)
+	void UNiagaraDataInterfaceGrid2DCollection::GetTextureSize(
+class UNiagaraComponent* Component
+, 
+int32_t* SizeX
+, 
+int32_t* SizeY
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2648,6 +3117,8 @@ namespace CG
 			*SizeY = params.SizeY;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2658,7 +3129,13 @@ namespace CG
 	 * 		int32_t                                            SizeX                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            SizeY                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraDataInterfaceGrid2DCollection::GetRawTextureSize(class UNiagaraComponent* Component, int32_t* SizeX, int32_t* SizeY)
+	void UNiagaraDataInterfaceGrid2DCollection::GetRawTextureSize(
+class UNiagaraComponent* Component
+, 
+int32_t* SizeX
+, 
+int32_t* SizeY
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2682,6 +3159,8 @@ namespace CG
 			*SizeY = params.SizeY;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2692,7 +3171,13 @@ namespace CG
 	 * 		class UTextureRenderTarget2D*                      Dest                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AttributeIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UNiagaraDataInterfaceGrid2DCollection::FillTexture2D(class UNiagaraComponent* Component, class UTextureRenderTarget2D* Dest, int32_t AttributeIndex)
+	bool UNiagaraDataInterfaceGrid2DCollection::FillTexture2D(
+class UNiagaraComponent* Component
+, 
+class UTextureRenderTarget2D* Dest
+, 
+int32_t AttributeIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2715,6 +3200,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2726,7 +3213,15 @@ namespace CG
 	 * 		int32_t                                            TilesX                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            TilesY                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UNiagaraDataInterfaceGrid2DCollection::FillRawTexture2D(class UNiagaraComponent* Component, class UTextureRenderTarget2D* Dest, int32_t* TilesX, int32_t* TilesY)
+	bool UNiagaraDataInterfaceGrid2DCollection::FillRawTexture2D(
+class UNiagaraComponent* Component
+, 
+class UTextureRenderTarget2D* Dest
+, 
+int32_t* TilesX
+, 
+int32_t* TilesY
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2754,10 +3249,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceGrid2DCollection.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceGrid2DCollection.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceGrid2DCollection::StaticClass()
@@ -2768,10 +3265,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceGrid2DCollectionReader.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceGrid2DCollectionReader.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceGrid2DCollectionReader::StaticClass()
@@ -2782,10 +3281,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceGrid3D.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceGrid3D.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceGrid3D::StaticClass()
@@ -2795,6 +3296,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Niagara.NiagaraDataInterfaceGrid3D");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2807,7 +3310,15 @@ namespace CG
 	 * 		int32_t                                            SizeY                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            SizeZ                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraDataInterfaceGrid3DCollection::GetTextureSize(class UNiagaraComponent* Component, int32_t* SizeX, int32_t* SizeY, int32_t* SizeZ)
+	void UNiagaraDataInterfaceGrid3DCollection::GetTextureSize(
+class UNiagaraComponent* Component
+, 
+int32_t* SizeX
+, 
+int32_t* SizeY
+, 
+int32_t* SizeZ
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2834,6 +3345,8 @@ namespace CG
 			*SizeZ = params.SizeZ;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2845,7 +3358,15 @@ namespace CG
 	 * 		int32_t                                            SizeY                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            SizeZ                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraDataInterfaceGrid3DCollection::GetRawTextureSize(class UNiagaraComponent* Component, int32_t* SizeX, int32_t* SizeY, int32_t* SizeZ)
+	void UNiagaraDataInterfaceGrid3DCollection::GetRawTextureSize(
+class UNiagaraComponent* Component
+, 
+int32_t* SizeX
+, 
+int32_t* SizeY
+, 
+int32_t* SizeZ
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2872,6 +3393,8 @@ namespace CG
 			*SizeZ = params.SizeZ;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2882,7 +3405,13 @@ namespace CG
 	 * 		class UVolumeTexture*                              Dest                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            AttributeIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UNiagaraDataInterfaceGrid3DCollection::FillVolumeTexture(class UNiagaraComponent* Component, class UVolumeTexture* Dest, int32_t AttributeIndex)
+	bool UNiagaraDataInterfaceGrid3DCollection::FillVolumeTexture(
+class UNiagaraComponent* Component
+, 
+class UVolumeTexture* Dest
+, 
+int32_t AttributeIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2905,6 +3434,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2917,7 +3448,17 @@ namespace CG
 	 * 		int32_t                                            TilesY                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            TileZ                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UNiagaraDataInterfaceGrid3DCollection::FillRawVolumeTexture(class UNiagaraComponent* Component, class UVolumeTexture* Dest, int32_t* TilesX, int32_t* TilesY, int32_t* TileZ)
+	bool UNiagaraDataInterfaceGrid3DCollection::FillRawVolumeTexture(
+class UNiagaraComponent* Component
+, 
+class UVolumeTexture* Dest
+, 
+int32_t* TilesX
+, 
+int32_t* TilesY
+, 
+int32_t* TileZ
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2948,10 +3489,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceGrid3DCollection.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceGrid3DCollection.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceGrid3DCollection::StaticClass()
@@ -2962,10 +3505,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceLandscape.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceLandscape.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceLandscape::StaticClass()
@@ -2976,10 +3521,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceNeighborGrid3D.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceNeighborGrid3D.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceNeighborGrid3D::StaticClass()
@@ -2990,10 +3537,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceOcclusion.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceOcclusion.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceOcclusion::StaticClass()
@@ -3004,10 +3553,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceParticleRead.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceParticleRead.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceParticleRead::StaticClass()
@@ -3018,10 +3569,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfacePlatformSet.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfacePlatformSet.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfacePlatformSet::StaticClass()
@@ -3032,10 +3585,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceRenderTarget2D.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceRenderTarget2D.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceRenderTarget2D::StaticClass()
@@ -3046,10 +3601,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceRenderTarget2DArray.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceRenderTarget2DArray.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceRenderTarget2DArray::StaticClass()
@@ -3060,10 +3617,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceRenderTargetVolume.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceRenderTargetVolume.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceRenderTargetVolume::StaticClass()
@@ -3074,10 +3633,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceSimpleCounter.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceSimpleCounter.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceSimpleCounter::StaticClass()
@@ -3088,10 +3649,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceSkeletalMesh.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceSkeletalMesh.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceSkeletalMesh::StaticClass()
@@ -3102,10 +3665,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceSpline.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceSpline.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceSpline::StaticClass()
@@ -3116,10 +3681,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceStaticMesh.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceStaticMesh.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceStaticMesh::StaticClass()
@@ -3130,10 +3697,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceTexture.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceTexture.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceTexture::StaticClass()
@@ -3144,10 +3713,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceVector2DCurve.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceVector2DCurve.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceVector2DCurve::StaticClass()
@@ -3158,10 +3729,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceVector4Curve.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceVector4Curve.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceVector4Curve::StaticClass()
@@ -3172,10 +3745,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceVectorCurve.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceVectorCurve.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceVectorCurve::StaticClass()
@@ -3186,10 +3761,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceVectorField.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceVectorField.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceVectorField::StaticClass()
@@ -3200,10 +3777,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraDataInterfaceVolumeTexture.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraDataInterfaceVolumeTexture.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraDataInterfaceVolumeTexture::StaticClass()
@@ -3214,10 +3793,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraEditorDataBase.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraEditorDataBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraEditorDataBase::StaticClass()
@@ -3228,10 +3809,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraSignificanceHandler.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraSignificanceHandler.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraSignificanceHandler::StaticClass()
@@ -3242,10 +3825,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraSignificanceHandlerDistance.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraSignificanceHandlerDistance.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraSignificanceHandlerDistance::StaticClass()
@@ -3256,10 +3841,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraSignificanceHandlerAge.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraSignificanceHandlerAge.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraSignificanceHandlerAge::StaticClass()
@@ -3270,10 +3857,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraEffectType.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraEffectType.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraEffectType::StaticClass()
@@ -3284,10 +3873,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraEmitter.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraEmitter.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraEmitter::StaticClass()
@@ -3298,10 +3889,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraEventReceiverEmitterAction.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraEventReceiverEmitterAction.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraEventReceiverEmitterAction::StaticClass()
@@ -3312,10 +3905,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraEventReceiverEmitterAction_SpawnParticles.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraEventReceiverEmitterAction_SpawnParticles.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraEventReceiverEmitterAction_SpawnParticles::StaticClass()
@@ -3325,6 +3920,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Niagara.NiagaraEventReceiverEmitterAction_SpawnParticles");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3343,7 +3940,27 @@ namespace CG
 	 * 		ENCPoolMethod                                      PoolingMethod                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bPreCullCheck                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UNiagaraComponent* UNiagaraFunctionLibrary::SpawnSystemAttached(class UNiagaraSystem* SystemTemplate, class USceneComponent* AttachToComponent, const class FName& AttachPointName, const struct FVector& Location, const struct FRotator& Rotation, EAttachLocation LocationType, bool bAutoDestroy, bool bAutoActivate, ENCPoolMethod PoolingMethod, bool bPreCullCheck)
+	class UNiagaraComponent* UNiagaraFunctionLibrary::SpawnSystemAttached(
+class UNiagaraSystem* SystemTemplate
+, 
+class USceneComponent* AttachToComponent
+, 
+const class FName& AttachPointName
+, 
+const struct FVector& Location
+, 
+const struct FRotator& Rotation
+, 
+EAttachLocation LocationType
+, 
+bool bAutoDestroy
+, 
+bool bAutoActivate
+, 
+ENCPoolMethod PoolingMethod
+, 
+bool bPreCullCheck
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3380,6 +3997,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3396,7 +4015,25 @@ namespace CG
 	 * 		ENCPoolMethod                                      PoolingMethod                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bPreCullCheck                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UNiagaraComponent* UNiagaraFunctionLibrary::SpawnSystemAtLocation(class UObject* WorldContextObject, class UNiagaraSystem* SystemTemplate, const struct FVector& Location, const struct FRotator& Rotation, const struct FVector& Scale, bool bAutoDestroy, bool bAutoActivate, ENCPoolMethod PoolingMethod, bool bPreCullCheck)
+	class UNiagaraComponent* UNiagaraFunctionLibrary::SpawnSystemAtLocation(
+class UObject* WorldContextObject
+, 
+class UNiagaraSystem* SystemTemplate
+, 
+const struct FVector& Location
+, 
+const struct FRotator& Rotation
+, 
+const struct FVector& Scale
+, 
+bool bAutoDestroy
+, 
+bool bAutoActivate
+, 
+ENCPoolMethod PoolingMethod
+, 
+bool bPreCullCheck
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3431,6 +4068,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3441,7 +4080,13 @@ namespace CG
 	 * 		class FString                                      OverrideName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UVolumeTexture*                              Texture                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraFunctionLibrary::SetVolumeTextureObject(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class UVolumeTexture* Texture)
+	void UNiagaraFunctionLibrary::SetVolumeTextureObject(
+class UNiagaraComponent* NiagaraSystem
+, 
+const class FString& OverrideName
+, 
+class UVolumeTexture* Texture
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3462,6 +4107,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3472,7 +4119,13 @@ namespace CG
 	 * 		class FString                                      OverrideName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UTexture*                                    Texture                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraFunctionLibrary::SetTextureObject(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class UTexture* Texture)
+	void UNiagaraFunctionLibrary::SetTextureObject(
+class UNiagaraComponent* NiagaraSystem
+, 
+const class FString& OverrideName
+, 
+class UTexture* Texture
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3493,6 +4146,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3503,7 +4158,13 @@ namespace CG
 	 * 		class FString                                      OverrideName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<class FName>                                SamplingRegions                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraFunctionLibrary::SetSkeletalMeshDataInterfaceSamplingRegions(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, TArray<class FName> SamplingRegions)
+	void UNiagaraFunctionLibrary::SetSkeletalMeshDataInterfaceSamplingRegions(
+class UNiagaraComponent* NiagaraSystem
+, 
+const class FString& OverrideName
+, 
+TArray<class FName> SamplingRegions
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3524,6 +4185,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3534,7 +4197,13 @@ namespace CG
 	 * 		class FString                                      OverrideName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UStaticMeshComponent*                        StaticMeshComponent                                        (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraFunctionLibrary::OverrideSystemUserVariableStaticMeshComponent(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class UStaticMeshComponent* StaticMeshComponent)
+	void UNiagaraFunctionLibrary::OverrideSystemUserVariableStaticMeshComponent(
+class UNiagaraComponent* NiagaraSystem
+, 
+const class FString& OverrideName
+, 
+class UStaticMeshComponent* StaticMeshComponent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3555,6 +4224,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3565,7 +4236,13 @@ namespace CG
 	 * 		class FString                                      OverrideName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UStaticMesh*                                 StaticMesh                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraFunctionLibrary::OverrideSystemUserVariableStaticMesh(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class UStaticMesh* StaticMesh)
+	void UNiagaraFunctionLibrary::OverrideSystemUserVariableStaticMesh(
+class UNiagaraComponent* NiagaraSystem
+, 
+const class FString& OverrideName
+, 
+class UStaticMesh* StaticMesh
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3586,6 +4263,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3596,7 +4275,13 @@ namespace CG
 	 * 		class FString                                      OverrideName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class USkeletalMeshComponent*                      SkeletalMeshComponent                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraFunctionLibrary::OverrideSystemUserVariableSkeletalMeshComponent(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class USkeletalMeshComponent* SkeletalMeshComponent)
+	void UNiagaraFunctionLibrary::OverrideSystemUserVariableSkeletalMeshComponent(
+class UNiagaraComponent* NiagaraSystem
+, 
+const class FString& OverrideName
+, 
+class USkeletalMeshComponent* SkeletalMeshComponent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3617,6 +4302,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3626,7 +4313,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UNiagaraParameterCollection*                 Collection                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UNiagaraParameterCollectionInstance* UNiagaraFunctionLibrary::GetNiagaraParameterCollection(class UObject* WorldContextObject, class UNiagaraParameterCollection* Collection)
+	class UNiagaraParameterCollectionInstance* UNiagaraFunctionLibrary::GetNiagaraParameterCollection(
+class UObject* WorldContextObject
+, 
+class UNiagaraParameterCollection* Collection
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3647,10 +4338,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraFunctionLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraFunctionLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraFunctionLibrary::StaticClass()
@@ -3661,10 +4354,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraLightRendererProperties.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraLightRendererProperties.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraLightRendererProperties::StaticClass()
@@ -3675,10 +4370,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraMeshRendererProperties.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraMeshRendererProperties.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraMeshRendererProperties::StaticClass()
@@ -3689,10 +4386,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraMessageDataBase.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraMessageDataBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraMessageDataBase::StaticClass()
@@ -3703,6 +4402,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3712,7 +4413,11 @@ namespace CG
 	 * 		class FString                                      InVariableName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector                                     InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraParameterCollectionInstance::SetVectorParameter(const class FString& InVariableName, const struct FVector& InValue)
+	void UNiagaraParameterCollectionInstance::SetVectorParameter(
+const class FString& InVariableName
+, 
+const struct FVector& InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3731,6 +4436,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3740,7 +4447,11 @@ namespace CG
 	 * 		class FString                                      InVariableName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector4                                    InValue                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraParameterCollectionInstance::SetVector4Parameter(const class FString& InVariableName, const struct FVector4& InValue)
+	void UNiagaraParameterCollectionInstance::SetVector4Parameter(
+const class FString& InVariableName
+, 
+const struct FVector4& InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3759,6 +4470,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3768,7 +4481,11 @@ namespace CG
 	 * 		class FString                                      InVariableName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector2D                                   InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraParameterCollectionInstance::SetVector2DParameter(const class FString& InVariableName, const struct FVector2D& InValue)
+	void UNiagaraParameterCollectionInstance::SetVector2DParameter(
+const class FString& InVariableName
+, 
+const struct FVector2D& InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3787,6 +4504,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3796,7 +4515,11 @@ namespace CG
 	 * 		class FString                                      InVariableName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FQuat                                       InValue                                                    (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraParameterCollectionInstance::SetQuatParameter(const class FString& InVariableName, const struct FQuat& InValue)
+	void UNiagaraParameterCollectionInstance::SetQuatParameter(
+const class FString& InVariableName
+, 
+const struct FQuat& InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3815,6 +4538,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3824,7 +4549,11 @@ namespace CG
 	 * 		class FString                                      InVariableName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraParameterCollectionInstance::SetIntParameter(const class FString& InVariableName, int32_t InValue)
+	void UNiagaraParameterCollectionInstance::SetIntParameter(
+const class FString& InVariableName
+, 
+int32_t InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3843,6 +4572,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3852,7 +4583,11 @@ namespace CG
 	 * 		class FString                                      InVariableName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraParameterCollectionInstance::SetFloatParameter(const class FString& InVariableName, float InValue)
+	void UNiagaraParameterCollectionInstance::SetFloatParameter(
+const class FString& InVariableName
+, 
+float InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3871,6 +4606,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3880,7 +4617,11 @@ namespace CG
 	 * 		class FString                                      InVariableName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FLinearColor                                InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraParameterCollectionInstance::SetColorParameter(const class FString& InVariableName, const struct FLinearColor& InValue)
+	void UNiagaraParameterCollectionInstance::SetColorParameter(
+const class FString& InVariableName
+, 
+const struct FLinearColor& InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3899,6 +4640,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3908,7 +4651,11 @@ namespace CG
 	 * 		class FString                                      InVariableName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraParameterCollectionInstance::SetBoolParameter(const class FString& InVariableName, bool InValue)
+	void UNiagaraParameterCollectionInstance::SetBoolParameter(
+const class FString& InVariableName
+, 
+bool InValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3927,6 +4674,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3935,7 +4684,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      InVariableName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVector UNiagaraParameterCollectionInstance::GetVectorParameter(const class FString& InVariableName)
+	struct FVector UNiagaraParameterCollectionInstance::GetVectorParameter(
+const class FString& InVariableName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3954,6 +4705,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3962,7 +4715,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      InVariableName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVector4 UNiagaraParameterCollectionInstance::GetVector4Parameter(const class FString& InVariableName)
+	struct FVector4 UNiagaraParameterCollectionInstance::GetVector4Parameter(
+const class FString& InVariableName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3981,6 +4736,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3989,7 +4746,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      InVariableName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVector2D UNiagaraParameterCollectionInstance::GetVector2DParameter(const class FString& InVariableName)
+	struct FVector2D UNiagaraParameterCollectionInstance::GetVector2DParameter(
+const class FString& InVariableName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4008,6 +4767,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4016,7 +4777,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      InVariableName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FQuat UNiagaraParameterCollectionInstance::GetQuatParameter(const class FString& InVariableName)
+	struct FQuat UNiagaraParameterCollectionInstance::GetQuatParameter(
+const class FString& InVariableName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4035,6 +4798,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4043,7 +4808,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      InVariableName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UNiagaraParameterCollectionInstance::GetIntParameter(const class FString& InVariableName)
+	int32_t UNiagaraParameterCollectionInstance::GetIntParameter(
+const class FString& InVariableName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4062,6 +4829,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4070,7 +4839,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      InVariableName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float UNiagaraParameterCollectionInstance::GetFloatParameter(const class FString& InVariableName)
+	float UNiagaraParameterCollectionInstance::GetFloatParameter(
+const class FString& InVariableName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4089,6 +4860,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4097,7 +4870,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      InVariableName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FLinearColor UNiagaraParameterCollectionInstance::GetColorParameter(const class FString& InVariableName)
+	struct FLinearColor UNiagaraParameterCollectionInstance::GetColorParameter(
+const class FString& InVariableName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4116,6 +4891,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4124,7 +4901,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      InVariableName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UNiagaraParameterCollectionInstance::GetBoolParameter(const class FString& InVariableName)
+	bool UNiagaraParameterCollectionInstance::GetBoolParameter(
+const class FString& InVariableName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4143,10 +4922,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraParameterCollectionInstance.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraParameterCollectionInstance.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraParameterCollectionInstance::StaticClass()
@@ -4157,10 +4938,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraParameterCollection.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraParameterCollection.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraParameterCollection::StaticClass()
@@ -4171,10 +4954,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraPrecompileContainer.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraPrecompileContainer.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraPrecompileContainer::StaticClass()
@@ -4185,6 +4970,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4193,7 +4980,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UNiagaraSystem*                              InSystem                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ANiagaraPreviewBase::SetSystem(class UNiagaraSystem* InSystem)
+	void ANiagaraPreviewBase::SetSystem(
+class UNiagaraSystem* InSystem
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4210,6 +4999,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4219,7 +5010,11 @@ namespace CG
 	 * 		class FText                                        InXAxisText                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		class FText                                        InYAxisText                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void ANiagaraPreviewBase::SetLabelText(const class FText& InXAxisText, const class FText& InYAxisText)
+	void ANiagaraPreviewBase::SetLabelText(
+const class FText& InXAxisText
+, 
+const class FText& InYAxisText
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4238,10 +5033,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ANiagaraPreviewBase.StaticClass
+	 * 		Name   -> PredefinedFunction ANiagaraPreviewBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ANiagaraPreviewBase::StaticClass()
@@ -4251,6 +5048,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Niagara.NiagaraPreviewBase");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4275,6 +5074,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4286,7 +5087,15 @@ namespace CG
 	 * 		bool                                               bIsXAxis                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      OutLabelText                                               (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNiagaraPreviewAxis::ApplyToPreview(class UNiagaraComponent* PreviewComponent, int32_t PreviewIndex, bool bIsXAxis, class FString* OutLabelText)
+	void UNiagaraPreviewAxis::ApplyToPreview(
+class UNiagaraComponent* PreviewComponent
+, 
+int32_t PreviewIndex
+, 
+bool bIsXAxis
+, 
+class FString* OutLabelText
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4311,10 +5120,12 @@ namespace CG
 			*OutLabelText = params.OutLabelText;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraPreviewAxis.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraPreviewAxis.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraPreviewAxis::StaticClass()
@@ -4325,10 +5136,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraPreviewAxis_InterpParamBase.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraPreviewAxis_InterpParamBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraPreviewAxis_InterpParamBase::StaticClass()
@@ -4339,10 +5152,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraPreviewAxis_InterpParamInt32.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraPreviewAxis_InterpParamInt32.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraPreviewAxis_InterpParamInt32::StaticClass()
@@ -4353,10 +5168,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraPreviewAxis_InterpParamFloat.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraPreviewAxis_InterpParamFloat.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraPreviewAxis_InterpParamFloat::StaticClass()
@@ -4367,10 +5184,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraPreviewAxis_InterpParamVector2D.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraPreviewAxis_InterpParamVector2D.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraPreviewAxis_InterpParamVector2D::StaticClass()
@@ -4381,10 +5200,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraPreviewAxis_InterpParamVector.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraPreviewAxis_InterpParamVector.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraPreviewAxis_InterpParamVector::StaticClass()
@@ -4395,10 +5216,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraPreviewAxis_InterpParamVector4.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraPreviewAxis_InterpParamVector4.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraPreviewAxis_InterpParamVector4::StaticClass()
@@ -4409,10 +5232,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraPreviewAxis_InterpParamLinearColor.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraPreviewAxis_InterpParamLinearColor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraPreviewAxis_InterpParamLinearColor::StaticClass()
@@ -4423,6 +5248,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4431,7 +5258,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bPaused                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ANiagaraPreviewGrid::SetPaused(bool bPaused)
+	void ANiagaraPreviewGrid::SetPaused(
+bool bPaused
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4448,6 +5277,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4456,7 +5287,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<class UNiagaraComponent*>                   OutPreviews                                                (Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	 */
-	void ANiagaraPreviewGrid::GetPreviews(TArray<class UNiagaraComponent*>* OutPreviews)
+	void ANiagaraPreviewGrid::GetPreviews(
+TArray<class UNiagaraComponent*>* OutPreviews
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4474,6 +5307,8 @@ namespace CG
 		if (OutPreviews != nullptr)
 			*OutPreviews = params.OutPreviews;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4496,6 +5331,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4504,7 +5341,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bReset                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ANiagaraPreviewGrid::ActivatePreviews(bool bReset)
+	void ANiagaraPreviewGrid::ActivatePreviews(
+bool bReset
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4521,10 +5360,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ANiagaraPreviewGrid.StaticClass
+	 * 		Name   -> PredefinedFunction ANiagaraPreviewGrid.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ANiagaraPreviewGrid::StaticClass()
@@ -4535,10 +5376,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraRibbonRendererProperties.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraRibbonRendererProperties.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraRibbonRendererProperties::StaticClass()
@@ -4548,6 +5391,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Niagara.NiagaraRibbonRendererProperties");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4570,10 +5415,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraScript.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraScript.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraScript::StaticClass()
@@ -4584,10 +5431,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraScriptSourceBase.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraScriptSourceBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraScriptSourceBase::StaticClass()
@@ -4598,10 +5447,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraSettings.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraSettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraSettings::StaticClass()
@@ -4612,10 +5463,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraSimulationStageBase.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraSimulationStageBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraSimulationStageBase::StaticClass()
@@ -4626,10 +5479,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraSimulationStageGeneric.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraSimulationStageGeneric.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraSimulationStageGeneric::StaticClass()
@@ -4640,10 +5495,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraSpriteRendererProperties.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraSpriteRendererProperties.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraSpriteRendererProperties::StaticClass()
@@ -4654,10 +5511,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNiagaraSystem.StaticClass
+	 * 		Name   -> PredefinedFunction UNiagaraSystem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNiagaraSystem::StaticClass()
@@ -4667,6 +5526,7 @@ namespace CG
 			ptr = UObject::FindClass("Class Niagara.NiagaraSystem");
 		return ptr;
 	}
+
 
 }
 

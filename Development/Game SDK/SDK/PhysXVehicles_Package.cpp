@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18,7 +19,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bUseAuto                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWheeledVehicleMovementComponent::SetUseAutoGears(bool bUseAuto)
+	void UWheeledVehicleMovementComponent::SetUseAutoGears(
+bool bUseAuto
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -35,6 +38,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -43,7 +48,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              Throttle                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWheeledVehicleMovementComponent::SetThrottleInput(float Throttle)
+	void UWheeledVehicleMovementComponent::SetThrottleInput(
+float Throttle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -60,6 +67,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -69,7 +78,11 @@ namespace CG
 	 * 		int32_t                                            GearNum                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bImmediate                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWheeledVehicleMovementComponent::SetTargetGear(int32_t GearNum, bool bImmediate)
+	void UWheeledVehicleMovementComponent::SetTargetGear(
+int32_t GearNum
+, 
+bool bImmediate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -88,6 +101,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -96,7 +111,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              Steering                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWheeledVehicleMovementComponent::SetSteeringInput(float Steering)
+	void UWheeledVehicleMovementComponent::SetSteeringInput(
+float Steering
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -113,6 +130,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -121,7 +140,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bNewHandbrake                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWheeledVehicleMovementComponent::SetHandbrakeInput(bool bNewHandbrake)
+	void UWheeledVehicleMovementComponent::SetHandbrakeInput(
+bool bNewHandbrake
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -138,6 +159,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -146,7 +169,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FNavAvoidanceMask                           GroupMask                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UWheeledVehicleMovementComponent::SetGroupsToIgnoreMask(const struct FNavAvoidanceMask& GroupMask)
+	void UWheeledVehicleMovementComponent::SetGroupsToIgnoreMask(
+const struct FNavAvoidanceMask& GroupMask
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -163,6 +188,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -171,7 +198,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            GroupFlags                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWheeledVehicleMovementComponent::SetGroupsToIgnore(int32_t GroupFlags)
+	void UWheeledVehicleMovementComponent::SetGroupsToIgnore(
+int32_t GroupFlags
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -188,6 +217,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -196,7 +227,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FNavAvoidanceMask                           GroupMask                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UWheeledVehicleMovementComponent::SetGroupsToAvoidMask(const struct FNavAvoidanceMask& GroupMask)
+	void UWheeledVehicleMovementComponent::SetGroupsToAvoidMask(
+const struct FNavAvoidanceMask& GroupMask
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -213,6 +246,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -221,7 +256,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            GroupFlags                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWheeledVehicleMovementComponent::SetGroupsToAvoid(int32_t GroupFlags)
+	void UWheeledVehicleMovementComponent::SetGroupsToAvoid(
+int32_t GroupFlags
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -238,6 +275,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -246,7 +285,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bNewGearUp                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWheeledVehicleMovementComponent::SetGearUp(bool bNewGearUp)
+	void UWheeledVehicleMovementComponent::SetGearUp(
+bool bNewGearUp
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -263,6 +304,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -271,7 +314,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bNewGearDown                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWheeledVehicleMovementComponent::SetGearDown(bool bNewGearDown)
+	void UWheeledVehicleMovementComponent::SetGearDown(
+bool bNewGearDown
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -288,6 +333,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -296,7 +343,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              Brake                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWheeledVehicleMovementComponent::SetBrakeInput(float Brake)
+	void UWheeledVehicleMovementComponent::SetBrakeInput(
+float Brake
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -313,6 +362,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -321,7 +372,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FNavAvoidanceMask                           GroupMask                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UWheeledVehicleMovementComponent::SetAvoidanceGroupMask(const struct FNavAvoidanceMask& GroupMask)
+	void UWheeledVehicleMovementComponent::SetAvoidanceGroupMask(
+const struct FNavAvoidanceMask& GroupMask
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -338,6 +391,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -346,7 +401,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            GroupFlags                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWheeledVehicleMovementComponent::SetAvoidanceGroup(int32_t GroupFlags)
+	void UWheeledVehicleMovementComponent::SetAvoidanceGroup(
+int32_t GroupFlags
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -363,6 +420,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -371,7 +430,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bEnable                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWheeledVehicleMovementComponent::SetAvoidanceEnabled(bool bEnable)
+	void UWheeledVehicleMovementComponent::SetAvoidanceEnabled(
+bool bEnable
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -388,6 +449,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -400,7 +463,17 @@ namespace CG
 	 * 		float                                              InHandbrakeInput                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            CurrentGear                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWheeledVehicleMovementComponent::ServerUpdateState(float InSteeringInput, float InThrottleInput, float InBrakeInput, float InHandbrakeInput, int32_t CurrentGear)
+	void UWheeledVehicleMovementComponent::ServerUpdateState(
+float InSteeringInput
+, 
+float InThrottleInput
+, 
+float InBrakeInput
+, 
+float InHandbrakeInput
+, 
+int32_t CurrentGear
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -425,6 +498,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -447,6 +522,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -471,6 +548,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -493,6 +572,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -517,6 +598,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -539,6 +622,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -563,10 +648,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWheeledVehicleMovementComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UWheeledVehicleMovementComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWheeledVehicleMovementComponent::StaticClass()
@@ -577,6 +664,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -586,7 +675,11 @@ namespace CG
 	 * 		float                                              SteerAngle                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            WheelIndex                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USimpleWheeledVehicleMovementComponent::SetSteerAngle(float SteerAngle, int32_t WheelIndex)
+	void USimpleWheeledVehicleMovementComponent::SetSteerAngle(
+float SteerAngle
+, 
+int32_t WheelIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -605,6 +698,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -614,7 +709,11 @@ namespace CG
 	 * 		float                                              DriveTorque                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            WheelIndex                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USimpleWheeledVehicleMovementComponent::SetDriveTorque(float DriveTorque, int32_t WheelIndex)
+	void USimpleWheeledVehicleMovementComponent::SetDriveTorque(
+float DriveTorque
+, 
+int32_t WheelIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -633,6 +732,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -642,7 +743,11 @@ namespace CG
 	 * 		float                                              BrakeTorque                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            WheelIndex                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USimpleWheeledVehicleMovementComponent::SetBrakeTorque(float BrakeTorque, int32_t WheelIndex)
+	void USimpleWheeledVehicleMovementComponent::SetBrakeTorque(
+float BrakeTorque
+, 
+int32_t WheelIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -661,10 +766,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USimpleWheeledVehicleMovementComponent.StaticClass
+	 * 		Name   -> PredefinedFunction USimpleWheeledVehicleMovementComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USimpleWheeledVehicleMovementComponent::StaticClass()
@@ -675,10 +782,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UTireConfig.StaticClass
+	 * 		Name   -> PredefinedFunction UTireConfig.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UTireConfig::StaticClass()
@@ -688,6 +797,8 @@ namespace CG
 			ptr = UObject::FindClass("Class PhysXVehicles.TireConfig");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -712,10 +823,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVehicleAnimInstance.StaticClass
+	 * 		Name   -> PredefinedFunction UVehicleAnimInstance.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVehicleAnimInstance::StaticClass()
@@ -725,6 +838,8 @@ namespace CG
 			ptr = UObject::FindClass("Class PhysXVehicles.VehicleAnimInstance");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -749,6 +864,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -771,6 +888,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -795,6 +914,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -818,10 +939,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVehicleWheel.StaticClass
+	 * 		Name   -> PredefinedFunction UVehicleWheel.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVehicleWheel::StaticClass()
@@ -832,10 +955,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AWheeledVehicle.StaticClass
+	 * 		Name   -> PredefinedFunction AWheeledVehicle.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AWheeledVehicle::StaticClass()
@@ -846,10 +971,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UWheeledVehicleMovementComponent4W.StaticClass
+	 * 		Name   -> PredefinedFunction UWheeledVehicleMovementComponent4W.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UWheeledVehicleMovementComponent4W::StaticClass()
@@ -859,6 +986,7 @@ namespace CG
 			ptr = UObject::FindClass("Class PhysXVehicles.WheeledVehicleMovementComponent4W");
 		return ptr;
 	}
+
 
 }
 

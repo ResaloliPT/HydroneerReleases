@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * BlueprintGeneratedClass L_GameWorld.L_GameWorld_C
 	 * Size -> 0x0000 (FullSize[0x0228] - InheritedSize[0x0228])
@@ -21,6 +22,7 @@ namespace CG
 	class AL_GameWorld_C : public ALevelScriptActor
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
 

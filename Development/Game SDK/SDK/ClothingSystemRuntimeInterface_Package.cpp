@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UClothConfigBase.StaticClass
+	 * 		Name   -> PredefinedFunction UClothConfigBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UClothConfigBase::StaticClass()
@@ -24,10 +25,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UClothingSimulationFactory.StaticClass
+	 * 		Name   -> PredefinedFunction UClothingSimulationFactory.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UClothingSimulationFactory::StaticClass()
@@ -38,6 +41,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -46,7 +51,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InStiffness                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UClothingSimulationInteractor::SetAnimDriveSpringStiffness(float InStiffness)
+	void UClothingSimulationInteractor::SetAnimDriveSpringStiffness(
+float InStiffness
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -62,6 +69,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -83,6 +92,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -107,6 +118,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -129,6 +142,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -153,6 +168,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -175,6 +192,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -199,6 +218,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -222,6 +243,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -230,7 +253,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector                                     InVector                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UClothingSimulationInteractor::EnableGravityOverride(const struct FVector& InVector)
+	void UClothingSimulationInteractor::EnableGravityOverride(
+const struct FVector& InVector
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -246,6 +271,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -268,6 +295,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -289,10 +318,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UClothingSimulationInteractor.StaticClass
+	 * 		Name   -> PredefinedFunction UClothingSimulationInteractor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UClothingSimulationInteractor::StaticClass()
@@ -303,10 +334,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UClothSharedSimConfigBase.StaticClass
+	 * 		Name   -> PredefinedFunction UClothSharedSimConfigBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UClothSharedSimConfigBase::StaticClass()
@@ -317,10 +350,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UClothingAssetBase.StaticClass
+	 * 		Name   -> PredefinedFunction UClothingAssetBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UClothingAssetBase::StaticClass()
@@ -331,10 +366,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UClothPhysicalMeshDataBase_Legacy.StaticClass
+	 * 		Name   -> PredefinedFunction UClothPhysicalMeshDataBase_Legacy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UClothPhysicalMeshDataBase_Legacy::StaticClass()
@@ -344,6 +381,7 @@ namespace CG
 			ptr = UObject::FindClass("Class ClothingSystemRuntimeInterface.ClothPhysicalMeshDataBase_Legacy");
 		return ptr;
 	}
+
 
 }
 

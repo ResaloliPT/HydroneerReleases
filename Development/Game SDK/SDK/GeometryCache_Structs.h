@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+
 	/**
 	 * ScriptStruct GeometryCache.TrackRenderData
 	 * Size -> 0x0070
@@ -21,8 +22,12 @@ namespace CG
 	struct FTrackRenderData
 	{
 	public:
-		unsigned char                                              UnknownData_YBC2[0x70];                                  // 0x0000(0x0070) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_Y42M[0x70];                                  // 0x0000(0x0070) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct GeometryCache.GeometryCacheMeshData
@@ -31,8 +36,12 @@ namespace CG
 	struct FGeometryCacheMeshData
 	{
 	public:
-		unsigned char                                              UnknownData_9DW7[0xA8];                                  // 0x0000(0x00A8) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_KWKQ[0xA8];                                  // 0x0000(0x00A8) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct GeometryCache.GeometryCacheVertexInfo
@@ -41,8 +50,12 @@ namespace CG
 	struct FGeometryCacheVertexInfo
 	{
 	public:
-		unsigned char                                              UnknownData_JY81[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_TUF9[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct GeometryCache.GeometryCacheMeshBatchInfo
@@ -51,7 +64,9 @@ namespace CG
 	struct FGeometryCacheMeshBatchInfo
 	{
 	public:
-		unsigned char                                              UnknownData_TUGO[0xC];                                   // 0x0000(0x000C) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_9F6O[0xC];                                   // 0x0000(0x000C) MISSED OFFSET (PADDING)
+
 	};
 
 }

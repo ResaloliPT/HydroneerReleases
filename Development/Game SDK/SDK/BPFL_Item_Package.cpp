@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,53 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BPFL_Item.BPFL_Item_C.IsRootComponent
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class AActor*                                      Actor                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		class USceneComponent*                             Component                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		class UObject*                                     __WorldContext                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		bool                                               Result                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 */
+	void UBPFL_Item_C::IsRootComponent(
+class AActor* Actor
+, 
+class USceneComponent* Component
+, 
+class UObject* __WorldContext
+, 
+bool* Result
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BPFL_Item.BPFL_Item_C.IsRootComponent");
+		
+		struct
+		{
+			class AActor*                                      Actor;
+			class USceneComponent*                             Component;
+			class UObject*                                     __WorldContext;
+			bool                                               Result;
+		} params;
+		params.Actor = Actor;
+		params.Component = Component;
+		params.__WorldContext = __WorldContext;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		if (Result != nullptr)
+			*Result = params.Result;
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -20,7 +67,13 @@ namespace CG
 	 * 		class AActor*                                      Target                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class UObject*                                     __WorldContext                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UBPFL_Item_C::SetHighlight(class ABP_GameController_C* Controller, class AActor* Target, class UObject* __WorldContext)
+	void UBPFL_Item_C::SetHighlight(
+class ABP_GameController_C* Controller
+, 
+class AActor* Target
+, 
+class UObject* __WorldContext
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -41,6 +94,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -51,7 +106,13 @@ namespace CG
 	 * 		class AActor*                                      Target                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class UObject*                                     __WorldContext                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UBPFL_Item_C::ForceStopHighlight(class ABP_GameController_C* Controller, class AActor* Target, class UObject* __WorldContext)
+	void UBPFL_Item_C::ForceStopHighlight(
+class ABP_GameController_C* Controller
+, 
+class AActor* Target
+, 
+class UObject* __WorldContext
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -72,19 +133,31 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BPFL_Item.BPFL_Item_C.ToggleHighlightSpecific
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               Highlight_                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               Highlight                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 * 		int32_t                                            StencilValue                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class ABP_GameController_C*                        Controller                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class AActor*                                      Target                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class UObject*                                     __WorldContext                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UBPFL_Item_C::ToggleHighlightSpecific(bool Highlight_, int32_t StencilValue, class ABP_GameController_C* Controller, class AActor* Target, class UObject* __WorldContext)
+	void UBPFL_Item_C::ToggleHighlightSpecific(
+bool Highlight
+, 
+int32_t StencilValue
+, 
+class ABP_GameController_C* Controller
+, 
+class AActor* Target
+, 
+class UObject* __WorldContext
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -92,13 +165,13 @@ namespace CG
 		
 		struct
 		{
-			bool                                               Highlight_;
+			bool                                               Highlight;
 			int32_t                                            StencilValue;
 			class ABP_GameController_C*                        Controller;
 			class AActor*                                      Target;
 			class UObject*                                     __WorldContext;
 		} params;
-		params.Highlight_ = Highlight_;
+		params.Highlight = Highlight;
 		params.StencilValue = StencilValue;
 		params.Controller = Controller;
 		params.Target = Target;
@@ -109,18 +182,28 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BPFL_Item.BPFL_Item_C.ToggleHighlightPlayer
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               Highlight_                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               Highlight                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 * 		class ABP_GameController_C*                        Controller                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class AActor*                                      Target                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class UObject*                                     __WorldContext                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UBPFL_Item_C::ToggleHighlightPlayer(bool Highlight_, class ABP_GameController_C* Controller, class AActor* Target, class UObject* __WorldContext)
+	void UBPFL_Item_C::ToggleHighlightPlayer(
+bool Highlight
+, 
+class ABP_GameController_C* Controller
+, 
+class AActor* Target
+, 
+class UObject* __WorldContext
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -128,12 +211,12 @@ namespace CG
 		
 		struct
 		{
-			bool                                               Highlight_;
+			bool                                               Highlight;
 			class ABP_GameController_C*                        Controller;
 			class AActor*                                      Target;
 			class UObject*                                     __WorldContext;
 		} params;
-		params.Highlight_ = Highlight_;
+		params.Highlight = Highlight;
 		params.Controller = Controller;
 		params.Target = Target;
 		params.__WorldContext = __WorldContext;
@@ -143,10 +226,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBPFL_Item_C.StaticClass
+	 * 		Name   -> PredefinedFunction UBPFL_Item_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBPFL_Item_C::StaticClass()
@@ -156,6 +241,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass BPFL_Item.BPFL_Item_C");
 		return ptr;
 	}
+
 
 }
 

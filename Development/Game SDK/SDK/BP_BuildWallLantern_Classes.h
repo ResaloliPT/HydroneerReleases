@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,13 +14,15 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * BlueprintGeneratedClass BP_BuildWallLantern.BP_BuildWallLantern_C
-	 * Size -> 0x0000 (FullSize[0x03E0] - InheritedSize[0x03E0])
+	 * Size -> 0x0000 (FullSize[0x0440] - InheritedSize[0x0440])
 	 */
 	class ABP_BuildWallLantern_C : public ABP_ParentBuildLighting_C
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
 

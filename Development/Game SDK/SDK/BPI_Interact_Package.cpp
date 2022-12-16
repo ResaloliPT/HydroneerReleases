@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17,9 +18,13 @@ namespace CG
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		class ABP_GameController_C*                        Controller                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		bool                                               LookingAt_                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               LookingAt                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void UBPI_Interact_C::BPI_ToggleLookAt(class ABP_GameController_C* Controller, bool LookingAt_)
+	void UBPI_Interact_C::BPI_ToggleLookAt(
+class ABP_GameController_C* Controller
+, 
+bool LookingAt
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -28,15 +33,17 @@ namespace CG
 		struct
 		{
 			class ABP_GameController_C*                        Controller;
-			bool                                               LookingAt_;
+			bool                                               LookingAt;
 		} params;
 		params.Controller = Controller;
-		params.LookingAt_ = LookingAt_;
+		params.LookingAt = LookingAt;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -46,7 +53,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_GameController_C*                        Controller                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UBPI_Interact_C::BPI_Unhighlight(class ABP_GameController_C* Controller)
+	void UBPI_Interact_C::BPI_Unhighlight(
+class ABP_GameController_C* Controller
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -63,6 +72,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -71,7 +82,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_GameController_C*                        Controller                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UBPI_Interact_C::BPI_Highlight(class ABP_GameController_C* Controller)
+	void UBPI_Interact_C::BPI_Highlight(
+class ABP_GameController_C* Controller
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -88,15 +101,19 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BPI_Interact.BPI_Interact_C.BPI_GetCanHighlight
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               CanHighlight_                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               CanHighlight                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void UBPI_Interact_C::BPI_GetCanHighlight(bool* CanHighlight_)
+	void UBPI_Interact_C::BPI_GetCanHighlight(
+bool* CanHighlight
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -104,16 +121,18 @@ namespace CG
 		
 		struct
 		{
-			bool                                               CanHighlight_;
+			bool                                               CanHighlight;
 		} params;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 		
-		if (CanHighlight_ != nullptr)
-			*CanHighlight_ = params.CanHighlight_;
+		if (CanHighlight != nullptr)
+			*CanHighlight = params.CanHighlight;
 	}
+
+
 
 	/**
 	 * Function:
@@ -124,7 +143,11 @@ namespace CG
 	 * 		TArray<int32_t>                                    HighlightArray                                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	 * 		bool                                               Result                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void UBPI_Interact_C::BPI_SetHighlightArray(TArray<int32_t>* HighlightArray, bool* Result)
+	void UBPI_Interact_C::BPI_SetHighlightArray(
+TArray<int32_t>* HighlightArray
+, 
+bool* Result
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -146,6 +169,8 @@ namespace CG
 			*Result = params.Result;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -154,7 +179,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<int32_t>                                    HighlightArray                                             (Parm, OutParm)
 	 */
-	void UBPI_Interact_C::BPI_GetHighlightArray(TArray<int32_t>* HighlightArray)
+	void UBPI_Interact_C::BPI_GetHighlightArray(
+TArray<int32_t>* HighlightArray
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -173,10 +200,12 @@ namespace CG
 			*HighlightArray = params.HighlightArray;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBPI_Interact_C.StaticClass
+	 * 		Name   -> PredefinedFunction UBPI_Interact_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBPI_Interact_C::StaticClass()
@@ -186,6 +215,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass BPI_Interact.BPI_Interact_C");
 		return ptr;
 	}
+
 
 }
 

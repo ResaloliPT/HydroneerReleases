@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,17 +14,22 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * BlueprintGeneratedClass BP_ShelfGoldHead.BP_ShelfGoldHead_C
-	 * Size -> 0x0008 (FullSize[0x03F8] - InheritedSize[0x03F0])
+	 * Size -> 0x0008 (FullSize[0x0458] - InheritedSize[0x0450])
 	 */
 	class ABP_ShelfGoldHead_C : public ABP_ParentShelf_C
 	{
 	public:
-		class USC_ShelfLocation_C*                                 SC_ShelfLocation;                                        // 0x03F0(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+
+		class USC_ShelfLocation_C*                               SC_ShelfLocation;                                        // 0x0450(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, UObjectWrapper, HasGetValueTypeHash
+
 
 	public:
+
 		void UserConstructionScript();
+
 		static UClass* StaticClass();
 	};
 

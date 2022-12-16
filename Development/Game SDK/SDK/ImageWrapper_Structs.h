@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+
 	/**
 	 * Enum ImageWrapper.EBitmapCSType
 	 */
@@ -26,6 +27,8 @@ namespace CG
 		BCST_PROFILE_EMBEDDED        = 4,
 		BCST_MAX                     = 5
 	};
+
+
 
 	/**
 	 * Enum ImageWrapper.EBitmapHeaderVersion

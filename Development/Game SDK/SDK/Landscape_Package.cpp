@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMaterialExpressionLandscapeLayerBlend.StaticClass
+	 * 		Name   -> PredefinedFunction UMaterialExpressionLandscapeLayerBlend.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMaterialExpressionLandscapeLayerBlend::StaticClass()
@@ -24,10 +25,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMaterialExpressionLandscapeLayerSwitch.StaticClass
+	 * 		Name   -> PredefinedFunction UMaterialExpressionLandscapeLayerSwitch.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMaterialExpressionLandscapeLayerSwitch::StaticClass()
@@ -38,10 +41,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMaterialExpressionLandscapeLayerWeight.StaticClass
+	 * 		Name   -> PredefinedFunction UMaterialExpressionLandscapeLayerWeight.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMaterialExpressionLandscapeLayerWeight::StaticClass()
@@ -52,10 +57,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMaterialExpressionLandscapeLayerSample.StaticClass
+	 * 		Name   -> PredefinedFunction UMaterialExpressionLandscapeLayerSample.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMaterialExpressionLandscapeLayerSample::StaticClass()
@@ -66,10 +73,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMaterialExpressionLandscapeVisibilityMask.StaticClass
+	 * 		Name   -> PredefinedFunction UMaterialExpressionLandscapeVisibilityMask.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMaterialExpressionLandscapeVisibilityMask::StaticClass()
@@ -80,10 +89,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AControlPointMeshActor.StaticClass
+	 * 		Name   -> PredefinedFunction AControlPointMeshActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AControlPointMeshActor::StaticClass()
@@ -94,10 +105,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UControlPointMeshComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UControlPointMeshComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UControlPointMeshComponent::StaticClass()
@@ -108,6 +121,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -117,7 +132,11 @@ namespace CG
 	 * 		class FName                                        ParameterName                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FLinearColor                                Value                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ALandscapeProxy::SetLandscapeMaterialVectorParameterValue(const class FName& ParameterName, const struct FLinearColor& Value)
+	void ALandscapeProxy::SetLandscapeMaterialVectorParameterValue(
+const class FName& ParameterName
+, 
+const struct FLinearColor& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -136,6 +155,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -145,7 +166,11 @@ namespace CG
 	 * 		class FName                                        ParameterName                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UTexture*                                    Value                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ALandscapeProxy::SetLandscapeMaterialTextureParameterValue(const class FName& ParameterName, class UTexture* Value)
+	void ALandscapeProxy::SetLandscapeMaterialTextureParameterValue(
+const class FName& ParameterName
+, 
+class UTexture* Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -164,6 +189,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -173,7 +200,11 @@ namespace CG
 	 * 		class FName                                        ParameterName                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Value                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ALandscapeProxy::SetLandscapeMaterialScalarParameterValue(const class FName& ParameterName, float Value)
+	void ALandscapeProxy::SetLandscapeMaterialScalarParameterValue(
+const class FName& ParameterName
+, 
+float Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -192,6 +223,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -202,7 +235,13 @@ namespace CG
 	 * 		bool                                               InExportHeightIntoRGChannel                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               InExportLandscapeProxies                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool ALandscapeProxy::LandscapeExportHeightmapToRenderTarget(class UTextureRenderTarget2D* InRenderTarget, bool InExportHeightIntoRGChannel, bool InExportLandscapeProxies)
+	bool ALandscapeProxy::LandscapeExportHeightmapToRenderTarget(
+class UTextureRenderTarget2D* InRenderTarget
+, 
+bool InExportHeightIntoRGChannel
+, 
+bool InExportLandscapeProxies
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -225,6 +264,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -233,7 +274,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UMaterialInterface*                          NewLandscapeMaterial                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ALandscapeProxy::EditorSetLandscapeMaterial(class UMaterialInterface* NewLandscapeMaterial)
+	void ALandscapeProxy::EditorSetLandscapeMaterial(
+class UMaterialInterface* NewLandscapeMaterial
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -249,6 +292,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -269,7 +314,31 @@ namespace CG
 	 * 		class ULandscapeLayerInfoObject*                   PaintLayer                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FName                                        EditLayerName                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ALandscapeProxy::EditorApplySpline(class USplineComponent* InSplineComponent, float StartWidth, float EndWidth, float StartSideFalloff, float EndSideFalloff, float StartRoll, float EndRoll, int32_t NumSubdivisions, bool bRaiseHeights, bool bLowerHeights, class ULandscapeLayerInfoObject* PaintLayer, const class FName& EditLayerName)
+	void ALandscapeProxy::EditorApplySpline(
+class USplineComponent* InSplineComponent
+, 
+float StartWidth
+, 
+float EndWidth
+, 
+float StartSideFalloff
+, 
+float EndSideFalloff
+, 
+float StartRoll
+, 
+float EndRoll
+, 
+int32_t NumSubdivisions
+, 
+bool bRaiseHeights
+, 
+bool bLowerHeights
+, 
+class ULandscapeLayerInfoObject* PaintLayer
+, 
+const class FName& EditLayerName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -308,6 +377,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -316,7 +387,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               InComponentScreenSizeToUseSubSections                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ALandscapeProxy::ChangeUseTessellationComponentScreenSizeFalloff(bool InComponentScreenSizeToUseSubSections)
+	void ALandscapeProxy::ChangeUseTessellationComponentScreenSizeFalloff(
+bool InComponentScreenSizeToUseSubSections
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -333,6 +406,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -341,7 +416,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InUseTessellationComponentScreenSizeFalloff                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ALandscapeProxy::ChangeTessellationComponentScreenSizeFalloff(float InUseTessellationComponentScreenSizeFalloff)
+	void ALandscapeProxy::ChangeTessellationComponentScreenSizeFalloff(
+float InUseTessellationComponentScreenSizeFalloff
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -358,6 +435,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -366,7 +445,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InTessellationComponentScreenSize                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ALandscapeProxy::ChangeTessellationComponentScreenSize(float InTessellationComponentScreenSize)
+	void ALandscapeProxy::ChangeTessellationComponentScreenSize(
+float InTessellationComponentScreenSize
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -383,6 +464,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -391,7 +474,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InLODDistanceFactor                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ALandscapeProxy::ChangeLODDistanceFactor(float InLODDistanceFactor)
+	void ALandscapeProxy::ChangeLODDistanceFactor(
+float InLODDistanceFactor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -408,6 +493,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -416,7 +503,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              InComponentScreenSizeToUseSubSections                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ALandscapeProxy::ChangeComponentScreenSizeToUseSubSections(float InComponentScreenSizeToUseSubSections)
+	void ALandscapeProxy::ChangeComponentScreenSizeToUseSubSections(
+float InComponentScreenSizeToUseSubSections
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -433,10 +522,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ALandscapeProxy.StaticClass
+	 * 		Name   -> PredefinedFunction ALandscapeProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ALandscapeProxy::StaticClass()
@@ -447,10 +538,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ALandscape.StaticClass
+	 * 		Name   -> PredefinedFunction ALandscape.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ALandscape::StaticClass()
@@ -460,6 +553,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Landscape.Landscape");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -482,6 +577,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -492,7 +589,13 @@ namespace CG
 	 * 		class UTextureRenderTarget2D*                      InCombinedResult                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FName                                        InWeightmapLayerName                                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UTextureRenderTarget2D* ALandscapeBlueprintBrushBase::Render(bool InIsHeightmap, class UTextureRenderTarget2D* InCombinedResult, const class FName& InWeightmapLayerName)
+	class UTextureRenderTarget2D* ALandscapeBlueprintBrushBase::Render(
+bool InIsHeightmap
+, 
+class UTextureRenderTarget2D* InCombinedResult
+, 
+const class FName& InWeightmapLayerName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -515,6 +618,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -525,7 +630,13 @@ namespace CG
 	 * 		struct FIntPoint                                   InLandscapeSize                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FIntPoint                                   InLandscapeRenderTargetSize                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ALandscapeBlueprintBrushBase::Initialize(const struct FTransform& InLandscapeTransform, const struct FIntPoint& InLandscapeSize, const struct FIntPoint& InLandscapeRenderTargetSize)
+	void ALandscapeBlueprintBrushBase::Initialize(
+const struct FTransform& InLandscapeTransform
+, 
+const struct FIntPoint& InLandscapeSize
+, 
+const struct FIntPoint& InLandscapeRenderTargetSize
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -546,6 +657,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -554,7 +667,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<class UObject*>                             OutStreamableAssets                                        (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void ALandscapeBlueprintBrushBase::GetBlueprintRenderDependencies(TArray<class UObject*>* OutStreamableAssets)
+	void ALandscapeBlueprintBrushBase::GetBlueprintRenderDependencies(
+TArray<class UObject*>* OutStreamableAssets
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -573,10 +688,12 @@ namespace CG
 			*OutStreamableAssets = params.OutStreamableAssets;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ALandscapeBlueprintBrushBase.StaticClass
+	 * 		Name   -> PredefinedFunction ALandscapeBlueprintBrushBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ALandscapeBlueprintBrushBase::StaticClass()
@@ -587,10 +704,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULandscapeLODStreamingProxy.StaticClass
+	 * 		Name   -> PredefinedFunction ULandscapeLODStreamingProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULandscapeLODStreamingProxy::StaticClass()
@@ -601,6 +720,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -609,7 +730,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            InIndex                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UMaterialInstanceDynamic* ULandscapeComponent::GetMaterialInstanceDynamic(int32_t InIndex)
+	class UMaterialInstanceDynamic* ULandscapeComponent::GetMaterialInstanceDynamic(
+int32_t InIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -628,6 +751,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -637,7 +762,11 @@ namespace CG
 	 * 		struct FVector                                     InLocation                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FName                                        InPaintLayerName                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float ULandscapeComponent::EditorGetPaintLayerWeightByNameAtLocation(const struct FVector& InLocation, const class FName& InPaintLayerName)
+	float ULandscapeComponent::EditorGetPaintLayerWeightByNameAtLocation(
+const struct FVector& InLocation
+, 
+const class FName& InPaintLayerName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -658,6 +787,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -667,7 +798,11 @@ namespace CG
 	 * 		struct FVector                                     InLocation                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class ULandscapeLayerInfoObject*                   PaintLayer                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float ULandscapeComponent::EditorGetPaintLayerWeightAtLocation(const struct FVector& InLocation, class ULandscapeLayerInfoObject* PaintLayer)
+	float ULandscapeComponent::EditorGetPaintLayerWeightAtLocation(
+const struct FVector& InLocation
+, 
+class ULandscapeLayerInfoObject* PaintLayer
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -688,10 +823,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULandscapeComponent.StaticClass
+	 * 		Name   -> PredefinedFunction ULandscapeComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULandscapeComponent::StaticClass()
@@ -702,10 +839,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ALandscapeGizmoActor.StaticClass
+	 * 		Name   -> PredefinedFunction ALandscapeGizmoActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ALandscapeGizmoActor::StaticClass()
@@ -716,10 +855,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ALandscapeGizmoActiveActor.StaticClass
+	 * 		Name   -> PredefinedFunction ALandscapeGizmoActiveActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ALandscapeGizmoActiveActor::StaticClass()
@@ -730,10 +871,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULandscapeGizmoRenderComponent.StaticClass
+	 * 		Name   -> PredefinedFunction ULandscapeGizmoRenderComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULandscapeGizmoRenderComponent::StaticClass()
@@ -744,10 +887,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULandscapeGrassType.StaticClass
+	 * 		Name   -> PredefinedFunction ULandscapeGrassType.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULandscapeGrassType::StaticClass()
@@ -757,6 +902,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Landscape.LandscapeGrassType");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -781,10 +928,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULandscapeHeightfieldCollisionComponent.StaticClass
+	 * 		Name   -> PredefinedFunction ULandscapeHeightfieldCollisionComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULandscapeHeightfieldCollisionComponent::StaticClass()
@@ -795,10 +944,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULandscapeInfo.StaticClass
+	 * 		Name   -> PredefinedFunction ULandscapeInfo.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULandscapeInfo::StaticClass()
@@ -809,10 +960,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULandscapeInfoMap.StaticClass
+	 * 		Name   -> PredefinedFunction ULandscapeInfoMap.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULandscapeInfoMap::StaticClass()
@@ -823,10 +976,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULandscapeLayerInfoObject.StaticClass
+	 * 		Name   -> PredefinedFunction ULandscapeLayerInfoObject.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULandscapeLayerInfoObject::StaticClass()
@@ -837,10 +992,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULandscapeMaterialInstanceConstant.StaticClass
+	 * 		Name   -> PredefinedFunction ULandscapeMaterialInstanceConstant.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULandscapeMaterialInstanceConstant::StaticClass()
@@ -851,10 +1008,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULandscapeMeshCollisionComponent.StaticClass
+	 * 		Name   -> PredefinedFunction ULandscapeMeshCollisionComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULandscapeMeshCollisionComponent::StaticClass()
@@ -865,10 +1024,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ALandscapeMeshProxyActor.StaticClass
+	 * 		Name   -> PredefinedFunction ALandscapeMeshProxyActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ALandscapeMeshProxyActor::StaticClass()
@@ -879,10 +1040,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULandscapeMeshProxyComponent.StaticClass
+	 * 		Name   -> PredefinedFunction ULandscapeMeshProxyComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULandscapeMeshProxyComponent::StaticClass()
@@ -893,10 +1056,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULandscapeSettings.StaticClass
+	 * 		Name   -> PredefinedFunction ULandscapeSettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULandscapeSettings::StaticClass()
@@ -906,6 +1071,8 @@ namespace CG
 			ptr = UObject::FindClass("Class Landscape.LandscapeSettings");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -930,10 +1097,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULandscapeSplinesComponent.StaticClass
+	 * 		Name   -> PredefinedFunction ULandscapeSplinesComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULandscapeSplinesComponent::StaticClass()
@@ -944,10 +1113,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULandscapeSplineControlPoint.StaticClass
+	 * 		Name   -> PredefinedFunction ULandscapeSplineControlPoint.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULandscapeSplineControlPoint::StaticClass()
@@ -958,10 +1129,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULandscapeSplineSegment.StaticClass
+	 * 		Name   -> PredefinedFunction ULandscapeSplineSegment.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULandscapeSplineSegment::StaticClass()
@@ -972,10 +1145,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ALandscapeStreamingProxy.StaticClass
+	 * 		Name   -> PredefinedFunction ALandscapeStreamingProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ALandscapeStreamingProxy::StaticClass()
@@ -986,10 +1161,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULandscapeSubsystem.StaticClass
+	 * 		Name   -> PredefinedFunction ULandscapeSubsystem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULandscapeSubsystem::StaticClass()
@@ -1000,10 +1177,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULandscapeWeightmapUsage.StaticClass
+	 * 		Name   -> PredefinedFunction ULandscapeWeightmapUsage.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULandscapeWeightmapUsage::StaticClass()
@@ -1014,10 +1193,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMaterialExpressionLandscapeGrassOutput.StaticClass
+	 * 		Name   -> PredefinedFunction UMaterialExpressionLandscapeGrassOutput.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMaterialExpressionLandscapeGrassOutput::StaticClass()
@@ -1028,10 +1209,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMaterialExpressionLandscapeLayerCoords.StaticClass
+	 * 		Name   -> PredefinedFunction UMaterialExpressionLandscapeLayerCoords.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMaterialExpressionLandscapeLayerCoords::StaticClass()
@@ -1042,10 +1225,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMaterialExpressionLandscapePhysicalMaterialOutput.StaticClass
+	 * 		Name   -> PredefinedFunction UMaterialExpressionLandscapePhysicalMaterialOutput.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMaterialExpressionLandscapePhysicalMaterialOutput::StaticClass()
@@ -1055,6 +1240,7 @@ namespace CG
 			ptr = UObject::FindClass("Class Landscape.MaterialExpressionLandscapePhysicalMaterialOutput");
 		return ptr;
 	}
+
 
 }
 

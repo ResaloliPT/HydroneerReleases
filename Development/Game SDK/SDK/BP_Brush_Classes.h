@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,18 +14,33 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * BlueprintGeneratedClass BP_Brush.BP_Brush_C
-	 * Size -> 0x000F (FullSize[0x0378] - InheritedSize[0x0369])
+	 * Size -> 0x000F (FullSize[0x03D8] - InheritedSize[0x03C9])
 	 */
 	class ABP_Brush_C : public ABP_ParentTool_C
 	{
 	public:
-		unsigned char                                              UnknownData_O3LO[0x7];                                   // 0x0369(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class UAC_Animator_C*                                      AC_Animator;                                             // 0x0370(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+
+		unsigned char                                            UnknownData_M38K[0x7];                                   // 0x03C9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		class UAC_Animator_C*                                    AC_Animator;                                             // 0x03D0(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+
 
 	public:
-		void LMBDownWhileCarrying(class ABP_GameController_C* Controller, class AActor* HitActor, const struct FVector& HitLocation, bool* ConsumeInput_);
+
+		void LMBDownWhileCarrying(
+class ABP_GameController_C* Controller
+, 
+class AActor* HitActor
+, 
+const struct FVector& HitLocation
+, 
+bool* ConsumeInput
+);
+
 		static UClass* StaticClass();
 	};
 

@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * Class SignificanceManager.SignificanceManager
 	 * Size -> 0x00F8 (FullSize[0x0120] - InheritedSize[0x0028])
@@ -21,10 +22,15 @@ namespace CG
 	class USignificanceManager : public UObject
 	{
 	public:
-		unsigned char                                              UnknownData_NNC5[0xE0];                                  // 0x0028(0x00E0) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FSoftClassPath                                      SignificanceManagerClassName;                            // 0x0108(0x0018) Edit, ZeroConstructor, Config, GlobalConfig, NoClear, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+		unsigned char                                            UnknownData_YMI2[0xE0];                                  // 0x0028(0x00E0) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FSoftClassPath                                    SignificanceManagerClassName;                            // 0x0108(0x0018) Edit, ZeroConstructor, Config, GlobalConfig, NoClear, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
 

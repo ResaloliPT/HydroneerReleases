@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+
 	/**
 	 * Enum EngineSettings.ESubLevelStripMode
 	 */
@@ -23,6 +24,8 @@ namespace CG
 		IsChildOf  = 1,
 		MAX        = 2
 	};
+
+
 
 	/**
 	 * Enum EngineSettings.EFourPlayerSplitScreenType
@@ -35,6 +38,8 @@ namespace CG
 		MAX        = 3
 	};
 
+
+
 	/**
 	 * Enum EngineSettings.EThreePlayerSplitScreenType
 	 */
@@ -46,6 +51,8 @@ namespace CG
 		Horizontal  = 3,
 		MAX         = 4
 	};
+
+
 
 	/**
 	 * Enum EngineSettings.ETwoPlayerSplitScreenType
@@ -60,6 +67,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+
 	/**
 	 * ScriptStruct EngineSettings.AutoCompleteCommand
 	 * Size -> 0x0028
@@ -67,10 +75,18 @@ namespace CG
 	struct FAutoCompleteCommand
 	{
 	public:
-		class FString                                              Command;                                                 // 0x0000(0x0010) Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                              Desc;                                                    // 0x0010(0x0010) Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_K343[0x8];                                   // 0x0020(0x0008) MISSED OFFSET (PADDING)
+
+		class FString                                            Command;                                                 // 0x0000(0x0010) Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FString                                            Desc;                                                    // 0x0010(0x0010) Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_7472[0x8];                                   // 0x0020(0x0008) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct EngineSettings.GameModeName
@@ -79,8 +95,12 @@ namespace CG
 	struct FGameModeName
 	{
 	public:
-		class FString                                              Name;                                                    // 0x0000(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FSoftClassPath                                      GameMode;                                                // 0x0010(0x0018) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		class FString                                            Name;                                                    // 0x0000(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FSoftClassPath                                    GameMode;                                                // 0x0010(0x0018) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
 
 }

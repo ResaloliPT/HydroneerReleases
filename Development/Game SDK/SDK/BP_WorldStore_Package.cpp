@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,76 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_WorldStore.BP_WorldStore_C.SetAllStoreItemCurrencyTypes
+	 * 		Flags  -> ()
+	 */
+	void ABP_WorldStore_C::SetAllStoreItemCurrencyTypes()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_WorldStore.BP_WorldStore_C.SetAllStoreItemCurrencyTypes");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_WorldStore.BP_WorldStore_C.SetItemCurrencyType
+	 * 		Flags  -> ()
+	 */
+	void ABP_WorldStore_C::SetItemCurrencyType()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_WorldStore.BP_WorldStore_C.SetItemCurrencyType");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_WorldStore.BP_WorldStore_C.UserConstructionScript
+	 * 		Flags  -> ()
+	 */
+	void ABP_WorldStore_C::UserConstructionScript()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_WorldStore.BP_WorldStore_C.UserConstructionScript");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -31,6 +101,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -44,7 +116,19 @@ namespace CG
 	 * 		bool                                               bFromSweep                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 * 		struct FHitResult                                  SweepResult                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	 */
-	void ABP_WorldStore_C::BndEvt__BuyBox_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+	void ABP_WorldStore_C::BndEvt__BuyBox_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(
+class UPrimitiveComponent* OverlappedComponent
+, 
+class AActor* OtherActor
+, 
+class UPrimitiveComponent* OtherComp
+, 
+int32_t OtherBodyIndex
+, 
+bool bFromSweep
+, 
+const struct FHitResult& SweepResult
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -71,6 +155,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -82,7 +168,15 @@ namespace CG
 	 * 		class UPrimitiveComponent*                         OtherComp                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		int32_t                                            OtherBodyIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_WorldStore_C::BndEvt__BuyBox_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex)
+	void ABP_WorldStore_C::BndEvt__BuyBox_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature(
+class UPrimitiveComponent* OverlappedComponent
+, 
+class AActor* OtherActor
+, 
+class UPrimitiveComponent* OtherComp
+, 
+int32_t OtherBodyIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -105,6 +199,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -116,7 +212,15 @@ namespace CG
 	 * 		class UPrimitiveComponent*                         OtherComp                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		int32_t                                            OtherBodyIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_WorldStore_C::BndEvt__SecurityBox_K2Node_ComponentBoundEvent_4_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex)
+	void ABP_WorldStore_C::BndEvt__SecurityBox_K2Node_ComponentBoundEvent_4_ComponentEndOverlapSignature__DelegateSignature(
+class UPrimitiveComponent* OverlappedComponent
+, 
+class AActor* OtherActor
+, 
+class UPrimitiveComponent* OtherComp
+, 
+int32_t OtherBodyIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -139,6 +243,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -152,7 +258,19 @@ namespace CG
 	 * 		bool                                               bFromSweep                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 * 		struct FHitResult                                  SweepResult                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	 */
-	void ABP_WorldStore_C::BndEvt__SecurityBox_K2Node_ComponentBoundEvent_5_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+	void ABP_WorldStore_C::BndEvt__SecurityBox_K2Node_ComponentBoundEvent_5_ComponentBeginOverlapSignature__DelegateSignature(
+class UPrimitiveComponent* OverlappedComponent
+, 
+class AActor* OtherActor
+, 
+class UPrimitiveComponent* OtherComp
+, 
+int32_t OtherBodyIndex
+, 
+bool bFromSweep
+, 
+const struct FHitResult& SweepResult
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -179,6 +297,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -188,7 +308,11 @@ namespace CG
 	 * 		class UActorComponent*                             Component                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class ABP_GameController_C*                        Controller                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_WorldStore_C::OverrideMouseClicked(class UActorComponent* Component, class ABP_GameController_C* Controller)
+	void ABP_WorldStore_C::OverrideMouseClicked(
+class UActorComponent* Component
+, 
+class ABP_GameController_C* Controller
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -207,6 +331,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -220,7 +346,19 @@ namespace CG
 	 * 		bool                                               bFromSweep                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 * 		struct FHitResult                                  SweepResult                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	 */
-	void ABP_WorldStore_C::BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+	void ABP_WorldStore_C::BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(
+class UPrimitiveComponent* OverlappedComponent
+, 
+class AActor* OtherActor
+, 
+class UPrimitiveComponent* OtherComp
+, 
+int32_t OtherBodyIndex
+, 
+bool bFromSweep
+, 
+const struct FHitResult& SweepResult
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -247,6 +385,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -258,7 +398,15 @@ namespace CG
 	 * 		class UPrimitiveComponent*                         OtherComp                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		int32_t                                            OtherBodyIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_WorldStore_C::BndEvt__Sphere_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex)
+	void ABP_WorldStore_C::BndEvt__Sphere_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(
+class UPrimitiveComponent* OverlappedComponent
+, 
+class AActor* OtherActor
+, 
+class UPrimitiveComponent* OtherComp
+, 
+int32_t OtherBodyIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -281,6 +429,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -289,7 +439,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_ParentItem_C*                            Item                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_WorldStore_C::ItemStolenFromStore(class ABP_ParentItem_C* Item)
+	void ABP_WorldStore_C::ItemStolenFromStore(
+class ABP_ParentItem_C* Item
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -306,6 +458,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -314,7 +468,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<class ABP_ParentItem_C*>                    Items                                                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	 */
-	void ABP_WorldStore_C::ItemsSold(TArray<class ABP_ParentItem_C*> Items)
+	void ABP_WorldStore_C::ItemsSold(
+TArray<class ABP_ParentItem_C*> Items
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -331,6 +487,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -339,7 +497,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_WorldStore_C::ExecuteUbergraph_BP_WorldStore(int32_t EntryPoint)
+	void ABP_WorldStore_C::ExecuteUbergraph_BP_WorldStore(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -356,10 +516,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ABP_WorldStore_C.StaticClass
+	 * 		Name   -> PredefinedFunction ABP_WorldStore_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ABP_WorldStore_C::StaticClass()
@@ -369,6 +531,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass BP_WorldStore.BP_WorldStore_C");
 		return ptr;
 	}
+
 
 }
 

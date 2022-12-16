@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDLSSOverrideSettings.StaticClass
+	 * 		Name   -> PredefinedFunction UDLSSOverrideSettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDLSSOverrideSettings::StaticClass()
@@ -24,10 +25,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDLSSSettings.StaticClass
+	 * 		Name   -> PredefinedFunction UDLSSSettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDLSSSettings::StaticClass()
@@ -37,6 +40,7 @@ namespace CG
 			ptr = UObject::FindClass("Class DLSS.DLSSSettings");
 		return ptr;
 	}
+
 
 }
 

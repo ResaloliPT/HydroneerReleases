@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -17,9 +18,13 @@ namespace CG
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		class USceneComponent*                             Component                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		bool                                               CanPass_                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               CanPass                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_ParentLogic_C::AttachmentFunctionalityCheck(class USceneComponent* Component, bool* CanPass_)
+	void ABP_ParentLogic_C::AttachmentFunctionalityCheck(
+class USceneComponent* Component
+, 
+bool* CanPass
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -28,7 +33,7 @@ namespace CG
 		struct
 		{
 			class USceneComponent*                             Component;
-			bool                                               CanPass_;
+			bool                                               CanPass;
 		} params;
 		params.Component = Component;
 		
@@ -36,9 +41,11 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 		
-		if (CanPass_ != nullptr)
-			*CanPass_ = params.CanPass_;
+		if (CanPass != nullptr)
+			*CanPass = params.CanPass;
 	}
+
+
 
 	/**
 	 * Function:
@@ -49,7 +56,11 @@ namespace CG
 	 * 		class USceneComponent*                             OutComponent                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class FString                                      Logic                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentLogic_C::CastLogicOut(class USceneComponent* OutComponent, const class FString& Logic)
+	void ABP_ParentLogic_C::CastLogicOut(
+class USceneComponent* OutComponent
+, 
+const class FString& Logic
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -68,6 +79,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -76,7 +89,9 @@ namespace CG
 	 * Parameters:
 	 * 		class USceneComponent*                             Component                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentLogic_C::OverrideLogicIn(class USceneComponent* Component)
+	void ABP_ParentLogic_C::OverrideLogicIn(
+class USceneComponent* Component
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -93,6 +108,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -102,7 +119,11 @@ namespace CG
 	 * 		struct FVector                                     SpawnLocation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		struct FRotator                                    SpawnRotation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_ParentLogic_C::SpawnLogic(const struct FVector& SpawnLocation, const struct FRotator& SpawnRotation)
+	void ABP_ParentLogic_C::SpawnLogic(
+const struct FVector& SpawnLocation
+, 
+const struct FRotator& SpawnRotation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -120,6 +141,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -142,6 +165,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -151,7 +176,11 @@ namespace CG
 	 * 		class USceneComponent*                             Component                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class FString                                      Logic                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentLogic_C::LogicIn(class USceneComponent* Component, const class FString& Logic)
+	void ABP_ParentLogic_C::LogicIn(
+class USceneComponent* Component
+, 
+const class FString& Logic
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -170,6 +199,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -180,7 +211,13 @@ namespace CG
 	 * 		int32_t                                            Quality                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		float                                              Pressure                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentLogic_C::OverrideWaterIn(class USceneComponent* Component, int32_t Quality, float Pressure)
+	void ABP_ParentLogic_C::OverrideWaterIn(
+class USceneComponent* Component
+, 
+int32_t Quality
+, 
+float Pressure
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -200,6 +237,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -222,6 +261,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -230,7 +271,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentLogic_C::ExecuteUbergraph_BP_ParentLogic(int32_t EntryPoint)
+	void ABP_ParentLogic_C::ExecuteUbergraph_BP_ParentLogic(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -247,10 +290,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ABP_ParentLogic_C.StaticClass
+	 * 		Name   -> PredefinedFunction ABP_ParentLogic_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ABP_ParentLogic_C::StaticClass()
@@ -260,6 +305,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentLogic.BP_ParentLogic_C");
 		return ptr;
 	}
+
 
 }
 

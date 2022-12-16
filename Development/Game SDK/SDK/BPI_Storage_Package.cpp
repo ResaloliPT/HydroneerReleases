@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18,7 +19,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_ParentItem_C*                            ItemPickedUp                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UBPI_Storage_C::StoredItemPickedUp(class ABP_ParentItem_C* ItemPickedUp)
+	void UBPI_Storage_C::StoredItemPickedUp(
+class ABP_ParentItem_C* ItemPickedUp
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -35,6 +38,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -43,7 +48,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_ParentItem_C*                            Item                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UBPI_Storage_C::ItemStored(class ABP_ParentItem_C* Item)
+	void UBPI_Storage_C::ItemStored(
+class ABP_ParentItem_C* Item
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -60,10 +67,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBPI_Storage_C.StaticClass
+	 * 		Name   -> PredefinedFunction UBPI_Storage_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBPI_Storage_C::StaticClass()
@@ -73,6 +82,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass BPI_Storage.BPI_Storage_C");
 		return ptr;
 	}
+
 
 }
 

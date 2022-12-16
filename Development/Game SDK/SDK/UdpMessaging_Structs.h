@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+
 	/**
 	 * Enum UdpMessaging.EUdpMessageFormat
 	 */
@@ -30,6 +31,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+
 	/**
 	 * ScriptStruct UdpMessaging.UdpMockMessage
 	 * Size -> 0x0010
@@ -37,7 +39,9 @@ namespace CG
 	struct FUdpMockMessage
 	{
 	public:
-		TArray<unsigned char>                                      Data;                                                    // 0x0000(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+
+		TArray<unsigned char>                                    Data;                                                    // 0x0000(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+
 	};
 
 }

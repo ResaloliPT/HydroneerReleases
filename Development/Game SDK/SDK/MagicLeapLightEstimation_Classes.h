@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * Class MagicLeapLightEstimation.MagicLeapLightingTrackingComponent
 	 * Size -> 0x0010 (FullSize[0x00C0] - InheritedSize[0x00B0])
@@ -21,13 +22,22 @@ namespace CG
 	class UMagicLeapLightingTrackingComponent : public UActorComponent
 	{
 	public:
-		bool                                                       UseGlobalAmbience;                                       // 0x00B0(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       UseColorTemp;                                            // 0x00B1(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_8COO[0xE];                                   // 0x00B2(0x000E) MISSED OFFSET (PADDING)
+
+		bool                                                     UseGlobalAmbience;                                       // 0x00B0(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     UseColorTemp;                                            // 0x00B1(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_E70M[0xE];                                   // 0x00B2(0x000E) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class MagicLeapLightEstimation.MagicLeapLightEstimationFunctionLibrary
@@ -36,11 +46,21 @@ namespace CG
 	class UMagicLeapLightEstimationFunctionLibrary : public UBlueprintFunctionLibrary
 	{
 	public:
+
 		bool IsTrackerValid();
-		bool GetColorTemperatureState(struct FMagicLeapLightEstimationColorTemperatureState* ColorTemperatureState);
-		bool GetAmbientGlobalState(struct FMagicLeapLightEstimationAmbientGlobalState* GlobalAmbientState);
+
+		bool GetColorTemperatureState(
+struct FMagicLeapLightEstimationColorTemperatureState* ColorTemperatureState
+);
+
+		bool GetAmbientGlobalState(
+struct FMagicLeapLightEstimationAmbientGlobalState* GlobalAmbientState
+);
+
 		void DestroyTracker();
+
 		bool CreateTracker();
+
 		static UClass* StaticClass();
 	};
 

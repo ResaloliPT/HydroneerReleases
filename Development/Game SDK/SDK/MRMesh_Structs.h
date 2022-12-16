@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+
 	/**
 	 * Enum MRMesh.EMeshTrackerVertexColorMode
 	 */
@@ -28,6 +29,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+
 	/**
 	 * ScriptStruct MRMesh.MRMeshConfiguration
 	 * Size -> 0x0001
@@ -35,7 +37,9 @@ namespace CG
 	struct FMRMeshConfiguration
 	{
 	public:
-		unsigned char                                              UnknownData_FCIG[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_84PM[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
+
 	};
 
 }

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18,7 +19,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FText                                        InText                                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	 */
-	class FText UUI_Menu_Mods_C::SanitizeModTitle(const class FText& InText)
+	class FText UUI_Menu_Mods_C::SanitizeModTitle(
+const class FText& InText
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -37,6 +40,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -45,7 +50,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UH_ButtonSettingsTab_C*                      Tab                                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_Menu_Mods_C::UpdateSelectedTab(class UH_ButtonSettingsTab_C* Tab)
+	void UUI_Menu_Mods_C::UpdateSelectedTab(
+class UH_ButtonSettingsTab_C* Tab
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -62,6 +69,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -70,7 +79,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamUGCDetails                            ModDetails                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
 	 */
-	void UUI_Menu_Mods_C::UpdateModDetails(const struct FSteamUGCDetails& ModDetails)
+	void UUI_Menu_Mods_C::UpdateModDetails(
+const struct FSteamUGCDetails& ModDetails
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -87,6 +98,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -95,7 +108,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamUGCDetails                            ModDetails                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
 	 */
-	void UUI_Menu_Mods_C::UpdateInstalledModDetails(const struct FSteamUGCDetails& ModDetails)
+	void UUI_Menu_Mods_C::UpdateInstalledModDetails(
+const struct FSteamUGCDetails& ModDetails
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -111,6 +126,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -133,16 +150,22 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function UI_Menu_Mods.UI_Menu_Mods_C.SetTextColor
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               invalidEntry_                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               invalidEntry                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 * 		class UTextBlock*                                  Text                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_Menu_Mods_C::SetTextColor(bool invalidEntry_, class UTextBlock* Text)
+	void UUI_Menu_Mods_C::SetTextColor(
+bool invalidEntry
+, 
+class UTextBlock* Text
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -150,16 +173,18 @@ namespace CG
 		
 		struct
 		{
-			bool                                               invalidEntry_;
+			bool                                               invalidEntry;
 			class UTextBlock*                                  Text;
 		} params;
-		params.invalidEntry_ = invalidEntry_;
+		params.invalidEntry = invalidEntry;
 		params.Text = Text;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -182,6 +207,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -191,7 +218,11 @@ namespace CG
 	 * 		class FText                                        InText                                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	 * 		int32_t                                            Count                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	class FText UUI_Menu_Mods_C::LimitCharacterCount(const class FText& InText, int32_t Count)
+	class FText UUI_Menu_Mods_C::LimitCharacterCount(
+const class FText& InText
+, 
+int32_t Count
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -212,6 +243,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -220,7 +253,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Directory                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	 */
-	class UTexture2D* UUI_Menu_Mods_C::FindThumbnail(const class FString& Directory)
+	class UTexture2D* UUI_Menu_Mods_C::FindThumbnail(
+const class FString& Directory
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -239,6 +274,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -247,7 +284,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FPublishedFileID                            FileID                                                     (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_Menu_Mods_C::SetModFileID(const struct FPublishedFileID& FileID)
+	void UUI_Menu_Mods_C::SetModFileID(
+const struct FPublishedFileID& FileID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -263,6 +302,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -285,6 +326,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -292,10 +335,16 @@ namespace CG
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		class FString                                      Path                                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	 * 		bool                                               Valid_                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               Valid                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 * 		class UTexture2D*                                  ImageTexture                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_Menu_Mods_C::CheckImagePath(const class FString& Path, bool* Valid_, class UTexture2D** ImageTexture)
+	void UUI_Menu_Mods_C::CheckImagePath(
+const class FString& Path
+, 
+bool* Valid
+, 
+class UTexture2D** ImageTexture
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -304,7 +353,7 @@ namespace CG
 		struct
 		{
 			class FString                                      Path;
-			bool                                               Valid_;
+			bool                                               Valid;
 			class UTexture2D*                                  ImageTexture;
 		} params;
 		params.Path = Path;
@@ -313,11 +362,13 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 		
-		if (Valid_ != nullptr)
-			*Valid_ = params.Valid_;
+		if (Valid != nullptr)
+			*Valid = params.Valid;
 		if (ImageTexture != nullptr)
 			*ImageTexture = params.ImageTexture;
 	}
+
+
 
 	/**
 	 * Function:
@@ -340,6 +391,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -360,6 +413,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -382,6 +437,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -402,6 +459,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -424,6 +483,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -444,6 +505,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -466,6 +529,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -476,7 +541,13 @@ namespace CG
 	 * 		bool                                               bWasSuccessful                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 * 		class UPanelWidget*                                Target                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_Menu_Mods_C::QueryReceived(const struct FSteamUGCQueryCompleted& Data, bool bWasSuccessful, class UPanelWidget* Target)
+	void UUI_Menu_Mods_C::QueryReceived(
+const struct FSteamUGCQueryCompleted& Data
+, 
+bool bWasSuccessful
+, 
+class UPanelWidget* Target
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -496,6 +567,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -518,6 +591,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -527,7 +602,11 @@ namespace CG
 	 * 		struct FRemoteStorageSubscribePublishedFileResult  Data                                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 	 * 		bool                                               bWasSuccessful                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void UUI_Menu_Mods_C::OnCallback_50E16AF84B7BEC154FE5C5B55718BB72(const struct FRemoteStorageSubscribePublishedFileResult& Data, bool bWasSuccessful)
+	void UUI_Menu_Mods_C::OnCallback_50E16AF84B7BEC154FE5C5B55718BB72(
+const struct FRemoteStorageSubscribePublishedFileResult& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -545,6 +624,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -567,6 +648,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -576,7 +659,11 @@ namespace CG
 	 * 		struct FCreateItemResult                           Data                                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 	 * 		bool                                               bWasSuccessful                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void UUI_Menu_Mods_C::CB_CreateItem(const struct FCreateItemResult& Data, bool bWasSuccessful)
+	void UUI_Menu_Mods_C::CB_CreateItem(
+const struct FCreateItemResult& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -594,6 +681,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -616,6 +705,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -637,6 +728,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -646,7 +739,11 @@ namespace CG
 	 * 		struct FSubmitItemUpdateResult                     Data                                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 	 * 		bool                                               bWasSuccessful                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void UUI_Menu_Mods_C::ItemUpdated(const struct FSubmitItemUpdateResult& Data, bool bWasSuccessful)
+	void UUI_Menu_Mods_C::ItemUpdated(
+const struct FSubmitItemUpdateResult& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -665,6 +762,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -674,7 +773,11 @@ namespace CG
 	 * 		struct FSteamUGCQueryCompleted                     Data                                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 	 * 		bool                                               bWasSuccessful                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void UUI_Menu_Mods_C::UGCRequest_Callback(const struct FSteamUGCQueryCompleted& Data, bool bWasSuccessful)
+	void UUI_Menu_Mods_C::UGCRequest_Callback(
+const struct FSteamUGCQueryCompleted& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -693,6 +796,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -702,7 +807,11 @@ namespace CG
 	 * 		class FString                                      SelectedItem                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	 * 		ESelectInfo                                        SelectionType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_Menu_Mods_C::BndEvt__UI_Menu_Mods_H_ComboBox_C_106_K2Node_ComponentBoundEvent_4_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
+	void UUI_Menu_Mods_C::BndEvt__UI_Menu_Mods_H_ComboBox_C_106_K2Node_ComponentBoundEvent_4_OnSelectionChangedEvent__DelegateSignature(
+const class FString& SelectedItem
+, 
+ESelectInfo SelectionType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -721,6 +830,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -730,7 +841,11 @@ namespace CG
 	 * 		class FText                                        Text                                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	 * 		ETextCommit                                        CommitMethod                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_Menu_Mods_C::BndEvt__UI_Menu_Mods_EditableText_ThumbnailImage_K2Node_ComponentBoundEvent_5_OnEditableTextCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
+	void UUI_Menu_Mods_C::BndEvt__UI_Menu_Mods_EditableText_ThumbnailImage_K2Node_ComponentBoundEvent_5_OnEditableTextCommittedEvent__DelegateSignature(
+const class FText& Text
+, 
+ETextCommit CommitMethod
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -748,6 +863,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -770,6 +887,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -779,7 +898,11 @@ namespace CG
 	 * 		class FText                                        Text                                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	 * 		ETextCommit                                        CommitMethod                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_Menu_Mods_C::BndEvt__UI_Menu_Mods_EditableText_ModDirectory_K2Node_ComponentBoundEvent_3_OnEditableTextCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
+	void UUI_Menu_Mods_C::BndEvt__UI_Menu_Mods_EditableText_ModDirectory_K2Node_ComponentBoundEvent_3_OnEditableTextCommittedEvent__DelegateSignature(
+const class FText& Text
+, 
+ETextCommit CommitMethod
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -798,6 +921,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -807,7 +932,11 @@ namespace CG
 	 * 		class FText                                        Text                                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	 * 		ETextCommit                                        CommitMethod                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_Menu_Mods_C::BndEvt__UI_Menu_Mods_EditableText_ModName_1_K2Node_ComponentBoundEvent_7_OnEditableTextCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
+	void UUI_Menu_Mods_C::BndEvt__UI_Menu_Mods_EditableText_ModName_1_K2Node_ComponentBoundEvent_7_OnEditableTextCommittedEvent__DelegateSignature(
+const class FText& Text
+, 
+ETextCommit CommitMethod
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -826,6 +955,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -835,7 +966,11 @@ namespace CG
 	 * 		class FText                                        Text                                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	 * 		ETextCommit                                        CommitMethod                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_Menu_Mods_C::BndEvt__UI_Menu_Mods_MultiLineEditableText_ModDescription_K2Node_ComponentBoundEvent_8_OnMultiLineEditableTextCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
+	void UUI_Menu_Mods_C::BndEvt__UI_Menu_Mods_MultiLineEditableText_ModDescription_K2Node_ComponentBoundEvent_8_OnMultiLineEditableTextCommittedEvent__DelegateSignature(
+const class FText& Text
+, 
+ETextCommit CommitMethod
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -854,6 +989,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -862,7 +999,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FText                                        Text                                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	 */
-	void UUI_Menu_Mods_C::BndEvt__UI_Menu_Mods_EditableText_ModTitle_K2Node_ComponentBoundEvent_10_OnEditableTextChangedEvent__DelegateSignature(const class FText& Text)
+	void UUI_Menu_Mods_C::BndEvt__UI_Menu_Mods_EditableText_ModTitle_K2Node_ComponentBoundEvent_10_OnEditableTextChangedEvent__DelegateSignature(
+const class FText& Text
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -879,6 +1018,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -887,7 +1028,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FText                                        Text                                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	 */
-	void UUI_Menu_Mods_C::BndEvt__UI_Menu_Mods_MultiLineEditableText_ModDescription_K2Node_ComponentBoundEvent_11_OnMultiLineEditableTextChangedEvent__DelegateSignature(const class FText& Text)
+	void UUI_Menu_Mods_C::BndEvt__UI_Menu_Mods_MultiLineEditableText_ModDescription_K2Node_ComponentBoundEvent_11_OnMultiLineEditableTextChangedEvent__DelegateSignature(
+const class FText& Text
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -904,6 +1047,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -912,7 +1057,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FText                                        Text                                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	 */
-	void UUI_Menu_Mods_C::BndEvt__UI_Menu_Mods_EditableText_ModID_K2Node_ComponentBoundEvent_12_OnEditableTextChangedEvent__DelegateSignature(const class FText& Text)
+	void UUI_Menu_Mods_C::BndEvt__UI_Menu_Mods_EditableText_ModID_K2Node_ComponentBoundEvent_12_OnEditableTextChangedEvent__DelegateSignature(
+const class FText& Text
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -929,6 +1076,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -937,7 +1086,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FPublishedFileID                            PublishedFileID                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_Menu_Mods_C::UpdateMod(const struct FPublishedFileID& PublishedFileID)
+	void UUI_Menu_Mods_C::UpdateMod(
+const struct FPublishedFileID& PublishedFileID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -954,6 +1105,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -962,7 +1115,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               IsDesignTime                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void UUI_Menu_Mods_C::PreConstruct(bool IsDesignTime)
+	void UUI_Menu_Mods_C::PreConstruct(
+bool IsDesignTime
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -979,6 +1134,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -988,7 +1145,11 @@ namespace CG
 	 * 		class FString                                      SelectedItem                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	 * 		ESelectInfo                                        SelectionType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_Menu_Mods_C::BndEvt__UI_Menu_Mods_H_ComboBox_C_Visibility_K2Node_ComponentBoundEvent_9_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
+	void UUI_Menu_Mods_C::BndEvt__UI_Menu_Mods_H_ComboBox_C_Visibility_K2Node_ComponentBoundEvent_9_OnSelectionChangedEvent__DelegateSignature(
+const class FString& SelectedItem
+, 
+ESelectInfo SelectionType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1006,6 +1167,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1028,6 +1191,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1048,6 +1213,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1070,6 +1237,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1091,6 +1260,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1099,7 +1270,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_Menu_Mods_C::ExecuteUbergraph_UI_Menu_Mods(int32_t EntryPoint)
+	void UUI_Menu_Mods_C::ExecuteUbergraph_UI_Menu_Mods(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1116,10 +1289,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UUI_Menu_Mods_C.StaticClass
+	 * 		Name   -> PredefinedFunction UUI_Menu_Mods_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UUI_Menu_Mods_C::StaticClass()
@@ -1129,6 +1304,7 @@ namespace CG
 			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_Menu_Mods.UI_Menu_Mods_C");
 		return ptr;
 	}
+
 
 }
 

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19,7 +20,11 @@ namespace CG
 	 * 		struct FGeometry                                   MyGeometry                                                 (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	 * 		struct FPointerEvent                               MouseEvent                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	 */
-	struct FEventReply UUI_Menu_ModItem_C::On_Border_Body_MouseButtonDown_1(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
+	struct FEventReply UUI_Menu_ModItem_C::On_Border_Body_MouseButtonDown_1(
+const struct FGeometry& MyGeometry
+, 
+const struct FPointerEvent& MouseEvent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -40,13 +45,15 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function UI_Menu_ModItem.UI_Menu_ModItem_C.HasDiscrepancy?
 	 * 		Flags  -> ()
 	 */
-	bool UUI_Menu_ModItem_C::HasDiscrepancy_()
+	bool UUI_Menu_ModItem_C::HasDiscrepancy()
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -63,15 +70,19 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function UI_Menu_ModItem.UI_Menu_ModItem_C.CheckMountStatus
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               Mounted_                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               Mounted                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void UUI_Menu_ModItem_C::CheckMountStatus(bool* Mounted_)
+	void UUI_Menu_ModItem_C::CheckMountStatus(
+bool* Mounted
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -79,16 +90,18 @@ namespace CG
 		
 		struct
 		{
-			bool                                               Mounted_;
+			bool                                               Mounted;
 		} params;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 		
-		if (Mounted_ != nullptr)
-			*Mounted_ = params.Mounted_;
+		if (Mounted != nullptr)
+			*Mounted = params.Mounted;
 	}
+
+
 
 	/**
 	 * Function:
@@ -111,6 +124,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -131,6 +146,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -153,6 +170,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -174,6 +193,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -183,7 +204,11 @@ namespace CG
 	 * 		struct FRemoteStorageSubscribePublishedFileResult  Data                                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 	 * 		bool                                               bWasSuccessful                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void UUI_Menu_ModItem_C::SubscribeResult(const struct FRemoteStorageSubscribePublishedFileResult& Data, bool bWasSuccessful)
+	void UUI_Menu_ModItem_C::SubscribeResult(
+const struct FRemoteStorageSubscribePublishedFileResult& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -202,6 +227,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -211,7 +238,11 @@ namespace CG
 	 * 		struct FRemoteStorageSubscribePublishedFileResult  Data                                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 	 * 		bool                                               bWasSuccessful                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void UUI_Menu_ModItem_C::UnsubscribeResult(const struct FRemoteStorageSubscribePublishedFileResult& Data, bool bWasSuccessful)
+	void UUI_Menu_ModItem_C::UnsubscribeResult(
+const struct FRemoteStorageSubscribePublishedFileResult& Data
+, 
+bool bWasSuccessful
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -229,6 +260,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -251,6 +284,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -272,6 +307,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -280,7 +317,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bIsChecked                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void UUI_Menu_ModItem_C::BndEvt__UI_Menu_ModItem_HCheckbox_C_Enabled_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
+	void UUI_Menu_ModItem_C::BndEvt__UI_Menu_ModItem_HCheckbox_C_Enabled_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature(
+bool bIsChecked
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -297,6 +336,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -305,7 +346,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_Menu_ModItem_C::ExecuteUbergraph_UI_Menu_ModItem(int32_t EntryPoint)
+	void UUI_Menu_ModItem_C::ExecuteUbergraph_UI_Menu_ModItem(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -322,6 +365,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -330,7 +375,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSteamUGCDetails                            ModDetails                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
 	 */
-	void UUI_Menu_ModItem_C::OnClicked__DelegateSignature(const struct FSteamUGCDetails& ModDetails)
+	void UUI_Menu_ModItem_C::OnClicked__DelegateSignature(
+const struct FSteamUGCDetails& ModDetails
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -346,6 +393,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -368,6 +417,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -388,6 +439,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -410,10 +463,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UUI_Menu_ModItem_C.StaticClass
+	 * 		Name   -> PredefinedFunction UUI_Menu_ModItem_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UUI_Menu_ModItem_C::StaticClass()
@@ -423,6 +478,7 @@ namespace CG
 			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_Menu_ModItem.UI_Menu_ModItem_C");
 		return ptr;
 	}
+
 
 }
 

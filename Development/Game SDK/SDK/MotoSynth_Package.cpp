@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMotoSynthPreset.StaticClass
+	 * 		Name   -> PredefinedFunction UMotoSynthPreset.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMotoSynthPreset::StaticClass()
@@ -24,10 +25,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMotoSynthSource.StaticClass
+	 * 		Name   -> PredefinedFunction UMotoSynthSource.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMotoSynthSource::StaticClass()
@@ -38,6 +41,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -46,7 +51,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FMotoSynthRuntimeSettings                   InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMoto::SetSettings(const struct FMotoSynthRuntimeSettings& InSettings)
+	void USynthComponentMoto::SetSettings(
+const struct FMotoSynthRuntimeSettings& InSettings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -63,6 +70,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -72,7 +81,11 @@ namespace CG
 	 * 		float                                              InRPM                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              InTimeSec                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMoto::SetRPM(float InRPM, float InTimeSec)
+	void USynthComponentMoto::SetRPM(
+float InRPM
+, 
+float InTimeSec
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -90,6 +103,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -114,6 +129,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -123,7 +140,11 @@ namespace CG
 	 * 		float                                              OutMinRPM                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              OutMaxRPM                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USynthComponentMoto::GetRPMRange(float* OutMinRPM, float* OutMaxRPM)
+	void USynthComponentMoto::GetRPMRange(
+float* OutMinRPM
+, 
+float* OutMaxRPM
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -145,10 +166,12 @@ namespace CG
 			*OutMaxRPM = params.OutMaxRPM;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USynthComponentMoto.StaticClass
+	 * 		Name   -> PredefinedFunction USynthComponentMoto.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USynthComponentMoto::StaticClass()
@@ -158,6 +181,7 @@ namespace CG
 			ptr = UObject::FindClass("Class MotoSynth.SynthComponentMoto");
 		return ptr;
 	}
+
 
 }
 

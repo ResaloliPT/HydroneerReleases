@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+
 	/**
 	 * Enum ChaosNiagara.ELocationZToSpawnEnum
 	 */
@@ -25,6 +26,8 @@ namespace CG
 		ChaosNiagara_LocationZToSpawn_MinMax = 3,
 		ChaosNiagara_Max                     = 4
 	};
+
+
 
 	/**
 	 * Enum ChaosNiagara.ELocationYToSpawnEnum
@@ -38,6 +41,8 @@ namespace CG
 		ChaosNiagara_Max                     = 4
 	};
 
+
+
 	/**
 	 * Enum ChaosNiagara.ELocationXToSpawnEnum
 	 */
@@ -50,6 +55,8 @@ namespace CG
 		ChaosNiagara_Max                     = 4
 	};
 
+
+
 	/**
 	 * Enum ChaosNiagara.ELocationFilteringModeEnum
 	 */
@@ -59,6 +66,8 @@ namespace CG
 		ChaosNiagara_LocationFilteringMode_Exclusive = 1,
 		ChaosNiagara_Max                             = 2
 	};
+
+
 
 	/**
 	 * Enum ChaosNiagara.EDataSourceTypeEnum
@@ -71,6 +80,8 @@ namespace CG
 		ChaosNiagara_Max                      = 3
 	};
 
+
+
 	/**
 	 * Enum ChaosNiagara.EDebugTypeEnum
 	 */
@@ -82,6 +93,8 @@ namespace CG
 		ChaosNiagara_Max                            = 3
 	};
 
+
+
 	/**
 	 * Enum ChaosNiagara.ERandomVelocityGenerationTypeEnum
 	 */
@@ -92,6 +105,8 @@ namespace CG
 		ChaosNiagara_RandomVelocityGenerationType_CollisionNormalBased            = 2,
 		ChaosNiagara_Max                                                          = 3
 	};
+
+
 
 	/**
 	 * Enum ChaosNiagara.EDataSortTypeEnum
@@ -108,6 +123,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+
 	/**
 	 * ScriptStruct ChaosNiagara.ChaosDestructionEvent
 	 * Size -> 0x0044
@@ -115,15 +131,33 @@ namespace CG
 	struct FChaosDestructionEvent
 	{
 	public:
-		struct FVector                                             Position;                                                // 0x0000(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FVector                                             Normal;                                                  // 0x000C(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FVector                                             Velocity;                                                // 0x0018(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FVector                                             AngularVelocity;                                         // 0x0024(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      ExtentMin;                                               // 0x0030(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      ExtentMax;                                               // 0x0034(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    ParticleID;                                              // 0x0038(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Time;                                                    // 0x003C(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    Type;                                                    // 0x0040(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		struct FVector                                           Position;                                                // 0x0000(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FVector                                           Normal;                                                  // 0x000C(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FVector                                           Velocity;                                                // 0x0018(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FVector                                           AngularVelocity;                                         // 0x0024(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    ExtentMin;                                               // 0x0030(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    ExtentMax;                                               // 0x0034(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  ParticleID;                                              // 0x0038(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Time;                                                    // 0x003C(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  Type;                                                    // 0x0040(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
 
 }

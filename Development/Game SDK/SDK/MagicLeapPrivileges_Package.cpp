@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19,7 +20,11 @@ namespace CG
 	 * 		EMagicLeapPrivilege                                Privilege                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FScriptDelegate                              ResultDelegate                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapPrivilegesFunctionLibrary::RequestPrivilegeAsync(EMagicLeapPrivilege Privilege, const class FScriptDelegate& ResultDelegate)
+	bool UMagicLeapPrivilegesFunctionLibrary::RequestPrivilegeAsync(
+EMagicLeapPrivilege Privilege
+, 
+const class FScriptDelegate& ResultDelegate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -40,6 +45,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -48,7 +55,9 @@ namespace CG
 	 * Parameters:
 	 * 		EMagicLeapPrivilege                                Privilege                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapPrivilegesFunctionLibrary::RequestPrivilege(EMagicLeapPrivilege Privilege)
+	bool UMagicLeapPrivilegesFunctionLibrary::RequestPrivilege(
+EMagicLeapPrivilege Privilege
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -67,6 +76,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -75,7 +86,9 @@ namespace CG
 	 * Parameters:
 	 * 		EMagicLeapPrivilege                                Privilege                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapPrivilegesFunctionLibrary::CheckPrivilege(EMagicLeapPrivilege Privilege)
+	bool UMagicLeapPrivilegesFunctionLibrary::CheckPrivilege(
+EMagicLeapPrivilege Privilege
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -94,10 +107,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMagicLeapPrivilegesFunctionLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UMagicLeapPrivilegesFunctionLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMagicLeapPrivilegesFunctionLibrary::StaticClass()
@@ -107,6 +122,7 @@ namespace CG
 			ptr = UObject::FindClass("Class MagicLeapPrivileges.MagicLeapPrivilegesFunctionLibrary");
 		return ptr;
 	}
+
 
 }
 

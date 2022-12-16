@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19,9 +20,17 @@ namespace CG
 	 * 		class ABP_GameController_C*                        Controller                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class AActor*                                      HitActor                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		struct FVector                                     HitLocation                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		bool                                               ConsumeInput_                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               ConsumeInput                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_Spanner_C::LMBDownWhileCarrying(class ABP_GameController_C* Controller, class AActor* HitActor, const struct FVector& HitLocation, bool* ConsumeInput_)
+	void ABP_Spanner_C::LMBDownWhileCarrying(
+class ABP_GameController_C* Controller
+, 
+class AActor* HitActor
+, 
+const struct FVector& HitLocation
+, 
+bool* ConsumeInput
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -32,7 +41,7 @@ namespace CG
 			class ABP_GameController_C*                        Controller;
 			class AActor*                                      HitActor;
 			struct FVector                                     HitLocation;
-			bool                                               ConsumeInput_;
+			bool                                               ConsumeInput;
 		} params;
 		params.Controller = Controller;
 		params.HitActor = HitActor;
@@ -42,9 +51,11 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 		
-		if (ConsumeInput_ != nullptr)
-			*ConsumeInput_ = params.ConsumeInput_;
+		if (ConsumeInput != nullptr)
+			*ConsumeInput = params.ConsumeInput;
 	}
+
+
 
 	/**
 	 * Function:
@@ -54,7 +65,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_ParentItem_C*                            RepairingTool                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_Spanner_C::TryRepair(class ABP_ParentItem_C* RepairingTool)
+	void ABP_Spanner_C::TryRepair(
+class ABP_ParentItem_C* RepairingTool
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -71,6 +84,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -79,7 +94,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_ParentItem_C*                            Item                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_Spanner_C::FindDurability(class ABP_ParentItem_C* Item)
+	void ABP_Spanner_C::FindDurability(
+class ABP_ParentItem_C* Item
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -96,6 +113,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -104,7 +123,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              DurabilityAmount                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_Spanner_C::ReturnDurability(float DurabilityAmount)
+	void ABP_Spanner_C::ReturnDurability(
+float DurabilityAmount
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -120,6 +141,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -142,6 +165,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -163,6 +188,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -171,7 +198,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AActor*                                      OtherActor                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_Spanner_C::OverrideHit(class AActor* OtherActor)
+	void ABP_Spanner_C::OverrideHit(
+class AActor* OtherActor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -188,6 +217,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -196,7 +227,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_Spanner_C::ExecuteUbergraph_BP_Spanner(int32_t EntryPoint)
+	void ABP_Spanner_C::ExecuteUbergraph_BP_Spanner(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -213,10 +246,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ABP_Spanner_C.StaticClass
+	 * 		Name   -> PredefinedFunction ABP_Spanner_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ABP_Spanner_C::StaticClass()
@@ -226,6 +261,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass BP_Spanner.BP_Spanner_C");
 		return ptr;
 	}
+
 
 }
 

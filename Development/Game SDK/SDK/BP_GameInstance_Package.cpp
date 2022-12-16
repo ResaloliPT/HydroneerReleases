@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18,7 +19,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Folder                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	 */
-	void UBP_GameInstance_C::LoadModActors(const class FString& Folder)
+	void UBP_GameInstance_C::LoadModActors(
+const class FString& Folder
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -35,6 +38,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -43,7 +48,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Index                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UBP_GameInstance_C::RemoveSessionID(int32_t Index)
+	void UBP_GameInstance_C::RemoveSessionID(
+int32_t Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -60,6 +67,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -67,9 +76,13 @@ namespace CG
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		int32_t                                            SessionID                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		bool                                               Remote_                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               Remote                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void UBP_GameInstance_C::AddSessionID(int32_t SessionID, bool Remote_)
+	void UBP_GameInstance_C::AddSessionID(
+int32_t SessionID
+, 
+bool Remote
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -78,15 +91,17 @@ namespace CG
 		struct
 		{
 			int32_t                                            SessionID;
-			bool                                               Remote_;
+			bool                                               Remote;
 		} params;
 		params.SessionID = SessionID;
-		params.Remote_ = Remote_;
+		params.Remote = Remote;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -109,6 +124,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -129,6 +146,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -151,6 +170,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -172,6 +193,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -180,7 +203,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UBP_GameInstance_C::AmbianceVolumeChanged(float NewValue)
+	void UBP_GameInstance_C::AmbianceVolumeChanged(
+float NewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -197,6 +222,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -205,7 +232,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UBP_GameInstance_C::MasterVolumeChanged(float NewValue)
+	void UBP_GameInstance_C::MasterVolumeChanged(
+float NewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -222,6 +251,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -230,7 +261,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UBP_GameInstance_C::MusicVolumeChanged(float NewValue)
+	void UBP_GameInstance_C::MusicVolumeChanged(
+float NewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -247,6 +280,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -255,7 +290,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UBP_GameInstance_C::GeneralVolumeChanged(float NewValue)
+	void UBP_GameInstance_C::GeneralVolumeChanged(
+float NewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -272,6 +309,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -280,7 +319,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UBP_GameInstance_C::MachineryVolumeChanged(float NewValue)
+	void UBP_GameInstance_C::MachineryVolumeChanged(
+float NewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -297,6 +338,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -305,7 +348,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UBP_GameInstance_C::PlayerVolumeChanged(float NewValue)
+	void UBP_GameInstance_C::PlayerVolumeChanged(
+float NewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -322,6 +367,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -330,7 +377,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UBP_GameInstance_C::VehicleVolumeChanged(float NewValue)
+	void UBP_GameInstance_C::VehicleVolumeChanged(
+float NewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -347,6 +396,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -355,7 +406,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UBP_GameInstance_C::WaterVolumeChanged(float NewValue)
+	void UBP_GameInstance_C::WaterVolumeChanged(
+float NewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -372,6 +425,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -380,7 +435,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	 */
-	void UBP_GameInstance_C::GamepadIconsChanged(const class FString& NewValue)
+	void UBP_GameInstance_C::GamepadIconsChanged(
+const class FString& NewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -396,6 +453,37 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_GameInstance.BP_GameInstance_C.ExplosionVolumeChanged
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void UBP_GameInstance_C::ExplosionVolumeChanged(
+float NewValue
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.ExplosionVolumeChanged");
+		
+		struct
+		{
+			float                                              NewValue;
+		} params;
+		params.NewValue = NewValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
 
 	/**
 	 * Function:
@@ -418,30 +506,7 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_GameInstance.BP_GameInstance_C.ExplosionVolumeChanged
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 */
-	void UBP_GameInstance_C::ExplosionVolumeChanged(float NewValue)
-	{
-		static UFunction* fn = nullptr;
-		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.ExplosionVolumeChanged");
-		
-		struct
-		{
-			float                                              NewValue;
-		} params;
-		params.NewValue = NewValue;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
+
 
 	/**
 	 * Function:
@@ -451,7 +516,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void UBP_GameInstance_C::MultiMonitorToggle(bool NewValue)
+	void UBP_GameInstance_C::MultiMonitorToggle(
+bool NewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -468,6 +535,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -476,7 +545,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UBP_GameInstance_C::SetDLSSMode(int32_t NewValue)
+	void UBP_GameInstance_C::SetDLSSMode(
+int32_t NewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -493,6 +564,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -501,7 +574,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UBP_GameInstance_C::AutosaveChange(float NewValue)
+	void UBP_GameInstance_C::AutosaveChange(
+float NewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -518,6 +593,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -526,7 +603,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UBP_GameInstance_C::ToggleCrouchChange(float NewValue)
+	void UBP_GameInstance_C::ToggleCrouchChange(
+float NewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -543,6 +622,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -551,7 +632,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UBP_GameInstance_C::ToggleSprintChange(float NewValue)
+	void UBP_GameInstance_C::ToggleSprintChange(
+float NewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -568,6 +651,66 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_GameInstance.BP_GameInstance_C.SubtitlesEnabledChanged
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 */
+	void UBP_GameInstance_C::SubtitlesEnabledChanged(
+bool NewValue
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.SubtitlesEnabledChanged");
+		
+		struct
+		{
+			bool                                               NewValue;
+		} params;
+		params.NewValue = NewValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_GameInstance.BP_GameInstance_C.NPCVoicesChanged
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void UBP_GameInstance_C::NPCVoicesChanged(
+float NewValue
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_GameInstance.BP_GameInstance_C.NPCVoicesChanged");
+		
+		struct
+		{
+			float                                              NewValue;
+		} params;
+		params.NewValue = NewValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -576,7 +719,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UBP_GameInstance_C::ExecuteUbergraph_BP_GameInstance(int32_t EntryPoint)
+	void UBP_GameInstance_C::ExecuteUbergraph_BP_GameInstance(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -593,10 +738,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBP_GameInstance_C.StaticClass
+	 * 		Name   -> PredefinedFunction UBP_GameInstance_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBP_GameInstance_C::StaticClass()
@@ -606,6 +753,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass BP_GameInstance.BP_GameInstance_C");
 		return ptr;
 	}
+
 
 }
 

@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * BlueprintGeneratedClass BPI_Vehicle.BPI_Vehicle_C
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
@@ -21,8 +22,13 @@ namespace CG
 	class UBPI_Vehicle_C : public UInterface
 	{
 	public:
+
 		void ExitVehicle();
-		void EnterVehicle(class APawn* Pawn);
+
+		void EnterVehicle(
+class APawn* Pawn
+);
+
 		static UClass* StaticClass();
 	};
 

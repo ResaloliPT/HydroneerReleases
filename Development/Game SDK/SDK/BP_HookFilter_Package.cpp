@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18,7 +19,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<class UActorComponent*>                     Components                                                 (Parm, OutParm, ContainsInstancedReference)
 	 */
-	void ABP_HookFilter_C::ComponentsToSave(TArray<class UActorComponent*>* Components)
+	void ABP_HookFilter_C::ComponentsToSave(
+TArray<class UActorComponent*>* Components
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -37,6 +40,8 @@ namespace CG
 			*Components = params.Components;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -45,9 +50,15 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_ParentItem_C*                            HookedTo                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class USceneComponent*                             Component                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		bool                                               CanPass_                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               CanPass                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_HookFilter_C::HookFunctionality(class ABP_ParentItem_C* HookedTo, class USceneComponent* Component, bool* CanPass_)
+	void ABP_HookFilter_C::HookFunctionality(
+class ABP_ParentItem_C* HookedTo
+, 
+class USceneComponent* Component
+, 
+bool* CanPass
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -57,7 +68,7 @@ namespace CG
 		{
 			class ABP_ParentItem_C*                            HookedTo;
 			class USceneComponent*                             Component;
-			bool                                               CanPass_;
+			bool                                               CanPass;
 		} params;
 		params.HookedTo = HookedTo;
 		params.Component = Component;
@@ -66,9 +77,11 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 		
-		if (CanPass_ != nullptr)
-			*CanPass_ = params.CanPass_;
+		if (CanPass != nullptr)
+			*CanPass = params.CanPass;
 	}
+
+
 
 	/**
 	 * Function:
@@ -78,7 +91,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              DurabilityAmount                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_HookFilter_C::ReturnDurability(float DurabilityAmount)
+	void ABP_HookFilter_C::ReturnDurability(
+float DurabilityAmount
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -95,6 +110,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -103,7 +120,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_ParentItem_C*                            RepairingTool                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_HookFilter_C::TryRepair(class ABP_ParentItem_C* RepairingTool)
+	void ABP_HookFilter_C::TryRepair(
+class ABP_ParentItem_C* RepairingTool
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -119,6 +138,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -141,6 +162,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -149,7 +172,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_ParentItem_C*                            Item                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_HookFilter_C::FindDurability(class ABP_ParentItem_C* Item)
+	void ABP_HookFilter_C::FindDurability(
+class ABP_ParentItem_C* Item
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -166,6 +191,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -174,7 +201,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_HookFilter_C::ExecuteUbergraph_BP_HookFilter(int32_t EntryPoint)
+	void ABP_HookFilter_C::ExecuteUbergraph_BP_HookFilter(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -191,10 +220,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ABP_HookFilter_C.StaticClass
+	 * 		Name   -> PredefinedFunction ABP_HookFilter_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ABP_HookFilter_C::StaticClass()
@@ -204,6 +235,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass BP_HookFilter.BP_HookFilter_C");
 		return ptr;
 	}
+
 
 }
 

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -22,7 +23,17 @@ namespace CG
 	 * 		bool                                               bFoundID                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Progress                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAchievementBlueprintLibrary::GetCachedAchievementProgress(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FName& AchievementID, bool* bFoundID, float* Progress)
+	void UAchievementBlueprintLibrary::GetCachedAchievementProgress(
+class UObject* WorldContextObject
+, 
+class APlayerController* PlayerController
+, 
+const class FName& AchievementID
+, 
+bool* bFoundID
+, 
+float* Progress
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -50,6 +61,8 @@ namespace CG
 			*Progress = params.Progress;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -65,7 +78,23 @@ namespace CG
 	 * 		class FText                                        UnlockedDescription                                        (Parm, OutParm, NativeAccessSpecifierPublic)
 	 * 		bool                                               bHidden                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAchievementBlueprintLibrary::GetCachedAchievementDescription(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FName& AchievementID, bool* bFoundID, class FText* Title, class FText* LockedDescription, class FText* UnlockedDescription, bool* bHidden)
+	void UAchievementBlueprintLibrary::GetCachedAchievementDescription(
+class UObject* WorldContextObject
+, 
+class APlayerController* PlayerController
+, 
+const class FName& AchievementID
+, 
+bool* bFoundID
+, 
+class FText* Title
+, 
+class FText* LockedDescription
+, 
+class FText* UnlockedDescription
+, 
+bool* bHidden
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -102,10 +131,12 @@ namespace CG
 			*bHidden = params.bHidden;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAchievementBlueprintLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UAchievementBlueprintLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAchievementBlueprintLibrary::StaticClass()
@@ -116,6 +147,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -125,7 +158,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UAchievementQueryCallbackProxy* UAchievementQueryCallbackProxy::CacheAchievements(class UObject* WorldContextObject, class APlayerController* PlayerController)
+	class UAchievementQueryCallbackProxy* UAchievementQueryCallbackProxy::CacheAchievements(
+class UObject* WorldContextObject
+, 
+class APlayerController* PlayerController
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -146,6 +183,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -155,7 +194,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UAchievementQueryCallbackProxy* UAchievementQueryCallbackProxy::CacheAchievementDescriptions(class UObject* WorldContextObject, class APlayerController* PlayerController)
+	class UAchievementQueryCallbackProxy* UAchievementQueryCallbackProxy::CacheAchievementDescriptions(
+class UObject* WorldContextObject
+, 
+class APlayerController* PlayerController
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -176,10 +219,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAchievementQueryCallbackProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UAchievementQueryCallbackProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAchievementQueryCallbackProxy::StaticClass()
@@ -189,6 +234,8 @@ namespace CG
 			ptr = UObject::FindClass("Class OnlineSubsystemUtils.AchievementQueryCallbackProxy");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -202,7 +249,17 @@ namespace CG
 	 * 		float                                              Progress                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            UserTag                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UAchievementWriteCallbackProxy* UAchievementWriteCallbackProxy::WriteAchievementProgress(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FName& AchievementName, float Progress, int32_t UserTag)
+	class UAchievementWriteCallbackProxy* UAchievementWriteCallbackProxy::WriteAchievementProgress(
+class UObject* WorldContextObject
+, 
+class APlayerController* PlayerController
+, 
+const class FName& AchievementName
+, 
+float Progress
+, 
+int32_t UserTag
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -229,10 +286,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAchievementWriteCallbackProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UAchievementWriteCallbackProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAchievementWriteCallbackProxy::StaticClass()
@@ -243,6 +302,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -252,7 +313,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UConnectionCallbackProxy* UConnectionCallbackProxy::ConnectToService(class UObject* WorldContextObject, class APlayerController* PlayerController)
+	class UConnectionCallbackProxy* UConnectionCallbackProxy::ConnectToService(
+class UObject* WorldContextObject
+, 
+class APlayerController* PlayerController
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -273,10 +338,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UConnectionCallbackProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UConnectionCallbackProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UConnectionCallbackProxy::StaticClass()
@@ -286,6 +353,8 @@ namespace CG
 			ptr = UObject::FindClass("Class OnlineSubsystemUtils.ConnectionCallbackProxy");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -298,7 +367,15 @@ namespace CG
 	 * 		int32_t                                            PublicConnections                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bUseLAN                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UCreateSessionCallbackProxy* UCreateSessionCallbackProxy::CreateSession(class UObject* WorldContextObject, class APlayerController* PlayerController, int32_t PublicConnections, bool bUseLAN)
+	class UCreateSessionCallbackProxy* UCreateSessionCallbackProxy::CreateSession(
+class UObject* WorldContextObject
+, 
+class APlayerController* PlayerController
+, 
+int32_t PublicConnections
+, 
+bool bUseLAN
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -323,10 +400,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UCreateSessionCallbackProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UCreateSessionCallbackProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UCreateSessionCallbackProxy::StaticClass()
@@ -337,6 +416,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -346,7 +427,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UDestroySessionCallbackProxy* UDestroySessionCallbackProxy::DestroySession(class UObject* WorldContextObject, class APlayerController* PlayerController)
+	class UDestroySessionCallbackProxy* UDestroySessionCallbackProxy::DestroySession(
+class UObject* WorldContextObject
+, 
+class APlayerController* PlayerController
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -367,10 +452,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDestroySessionCallbackProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UDestroySessionCallbackProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDestroySessionCallbackProxy::StaticClass()
@@ -380,6 +467,8 @@ namespace CG
 			ptr = UObject::FindClass("Class OnlineSubsystemUtils.DestroySessionCallbackProxy");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -393,7 +482,17 @@ namespace CG
 	 * 		EMPMatchOutcome                                    LocalPlayerOutcome                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EMPMatchOutcome                                    OtherPlayersOutcome                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UEndMatchCallbackProxy* UEndMatchCallbackProxy::EndMatch(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& MatchID, EMPMatchOutcome LocalPlayerOutcome, EMPMatchOutcome OtherPlayersOutcome)
+	class UEndMatchCallbackProxy* UEndMatchCallbackProxy::EndMatch(
+class UObject* WorldContextObject
+, 
+class APlayerController* PlayerController
+, 
+const class FString& MatchID
+, 
+EMPMatchOutcome LocalPlayerOutcome
+, 
+EMPMatchOutcome OtherPlayersOutcome
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -420,10 +519,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEndMatchCallbackProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UEndMatchCallbackProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEndMatchCallbackProxy::StaticClass()
@@ -433,6 +534,8 @@ namespace CG
 			ptr = UObject::FindClass("Class OnlineSubsystemUtils.EndMatchCallbackProxy");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -444,7 +547,13 @@ namespace CG
 	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      MatchID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UEndTurnCallbackProxy* UEndTurnCallbackProxy::EndTurn(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& MatchID)
+	class UEndTurnCallbackProxy* UEndTurnCallbackProxy::EndTurn(
+class UObject* WorldContextObject
+, 
+class APlayerController* PlayerController
+, 
+const class FString& MatchID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -467,10 +576,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEndTurnCallbackProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UEndTurnCallbackProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEndTurnCallbackProxy::StaticClass()
@@ -481,6 +592,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -489,7 +602,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FBlueprintSessionResult                     Result                                                     (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	class FString UFindSessionsCallbackProxy::GetServerName(const struct FBlueprintSessionResult& Result)
+	class FString UFindSessionsCallbackProxy::GetServerName(
+const struct FBlueprintSessionResult& Result
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -508,6 +623,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -516,7 +633,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FBlueprintSessionResult                     Result                                                     (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	int32_t UFindSessionsCallbackProxy::GetPingInMs(const struct FBlueprintSessionResult& Result)
+	int32_t UFindSessionsCallbackProxy::GetPingInMs(
+const struct FBlueprintSessionResult& Result
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -535,6 +654,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -543,7 +664,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FBlueprintSessionResult                     Result                                                     (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	int32_t UFindSessionsCallbackProxy::GetMaxPlayers(const struct FBlueprintSessionResult& Result)
+	int32_t UFindSessionsCallbackProxy::GetMaxPlayers(
+const struct FBlueprintSessionResult& Result
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -562,6 +685,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -570,7 +695,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FBlueprintSessionResult                     Result                                                     (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	int32_t UFindSessionsCallbackProxy::GetCurrentPlayers(const struct FBlueprintSessionResult& Result)
+	int32_t UFindSessionsCallbackProxy::GetCurrentPlayers(
+const struct FBlueprintSessionResult& Result
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -589,6 +716,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -600,7 +729,15 @@ namespace CG
 	 * 		int32_t                                            MaxResults                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bUseLAN                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UFindSessionsCallbackProxy* UFindSessionsCallbackProxy::FindSessions(class UObject* WorldContextObject, class APlayerController* PlayerController, int32_t MaxResults, bool bUseLAN)
+	class UFindSessionsCallbackProxy* UFindSessionsCallbackProxy::FindSessions(
+class UObject* WorldContextObject
+, 
+class APlayerController* PlayerController
+, 
+int32_t MaxResults
+, 
+bool bUseLAN
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -625,10 +762,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UFindSessionsCallbackProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UFindSessionsCallbackProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UFindSessionsCallbackProxy::StaticClass()
@@ -638,6 +777,8 @@ namespace CG
 			ptr = UObject::FindClass("Class OnlineSubsystemUtils.FindSessionsCallbackProxy");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -652,7 +793,19 @@ namespace CG
 	 * 		int32_t                                            PlayerGroup                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               ShowExistingMatches                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UFindTurnBasedMatchCallbackProxy* UFindTurnBasedMatchCallbackProxy::FindTurnBasedMatch(class UObject* WorldContextObject, class APlayerController* PlayerController, int32_t MinPlayers, int32_t MaxPlayers, int32_t PlayerGroup, bool ShowExistingMatches)
+	class UFindTurnBasedMatchCallbackProxy* UFindTurnBasedMatchCallbackProxy::FindTurnBasedMatch(
+class UObject* WorldContextObject
+, 
+class APlayerController* PlayerController
+, 
+int32_t MinPlayers
+, 
+int32_t MaxPlayers
+, 
+int32_t PlayerGroup
+, 
+bool ShowExistingMatches
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -681,10 +834,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UFindTurnBasedMatchCallbackProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UFindTurnBasedMatchCallbackProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UFindTurnBasedMatchCallbackProxy::StaticClass()
@@ -695,6 +850,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -704,7 +861,11 @@ namespace CG
 	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FInAppPurchaseProductRequest                ProductRequest                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	class UInAppPurchaseCallbackProxy* UInAppPurchaseCallbackProxy::CreateProxyObjectForInAppPurchase(class APlayerController* PlayerController, const struct FInAppPurchaseProductRequest& ProductRequest)
+	class UInAppPurchaseCallbackProxy* UInAppPurchaseCallbackProxy::CreateProxyObjectForInAppPurchase(
+class APlayerController* PlayerController
+, 
+const struct FInAppPurchaseProductRequest& ProductRequest
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -725,10 +886,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UInAppPurchaseCallbackProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UInAppPurchaseCallbackProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UInAppPurchaseCallbackProxy::StaticClass()
@@ -739,6 +902,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -747,7 +912,9 @@ namespace CG
 	 * Parameters:
 	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UInAppPurchaseCallbackProxy2* UInAppPurchaseCallbackProxy2::CreateProxyObjectForInAppPurchaseUnprocessedPurchases(class APlayerController* PlayerController)
+	class UInAppPurchaseCallbackProxy2* UInAppPurchaseCallbackProxy2::CreateProxyObjectForInAppPurchaseUnprocessedPurchases(
+class APlayerController* PlayerController
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -766,6 +933,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -774,7 +943,9 @@ namespace CG
 	 * Parameters:
 	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UInAppPurchaseCallbackProxy2* UInAppPurchaseCallbackProxy2::CreateProxyObjectForInAppPurchaseQueryOwned(class APlayerController* PlayerController)
+	class UInAppPurchaseCallbackProxy2* UInAppPurchaseCallbackProxy2::CreateProxyObjectForInAppPurchaseQueryOwned(
+class APlayerController* PlayerController
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -793,6 +964,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -802,7 +975,11 @@ namespace CG
 	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FInAppPurchaseProductRequest2               ProductRequest                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	class UInAppPurchaseCallbackProxy2* UInAppPurchaseCallbackProxy2::CreateProxyObjectForInAppPurchase(class APlayerController* PlayerController, const struct FInAppPurchaseProductRequest2& ProductRequest)
+	class UInAppPurchaseCallbackProxy2* UInAppPurchaseCallbackProxy2::CreateProxyObjectForInAppPurchase(
+class APlayerController* PlayerController
+, 
+const struct FInAppPurchaseProductRequest2& ProductRequest
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -823,10 +1000,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UInAppPurchaseCallbackProxy2.StaticClass
+	 * 		Name   -> PredefinedFunction UInAppPurchaseCallbackProxy2.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UInAppPurchaseCallbackProxy2::StaticClass()
@@ -837,6 +1016,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -846,7 +1027,11 @@ namespace CG
 	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<class FString>                              ProductIdentifiers                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	class UInAppPurchaseQueryCallbackProxy* UInAppPurchaseQueryCallbackProxy::CreateProxyObjectForInAppPurchaseQuery(class APlayerController* PlayerController, TArray<class FString> ProductIdentifiers)
+	class UInAppPurchaseQueryCallbackProxy* UInAppPurchaseQueryCallbackProxy::CreateProxyObjectForInAppPurchaseQuery(
+class APlayerController* PlayerController
+, 
+TArray<class FString> ProductIdentifiers
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -867,10 +1052,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UInAppPurchaseQueryCallbackProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UInAppPurchaseQueryCallbackProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UInAppPurchaseQueryCallbackProxy::StaticClass()
@@ -881,6 +1068,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -890,7 +1079,11 @@ namespace CG
 	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<class FString>                              ProductIdentifiers                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	class UInAppPurchaseQueryCallbackProxy2* UInAppPurchaseQueryCallbackProxy2::CreateProxyObjectForInAppPurchaseQuery(class APlayerController* PlayerController, TArray<class FString> ProductIdentifiers)
+	class UInAppPurchaseQueryCallbackProxy2* UInAppPurchaseQueryCallbackProxy2::CreateProxyObjectForInAppPurchaseQuery(
+class APlayerController* PlayerController
+, 
+TArray<class FString> ProductIdentifiers
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -911,10 +1104,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UInAppPurchaseQueryCallbackProxy2.StaticClass
+	 * 		Name   -> PredefinedFunction UInAppPurchaseQueryCallbackProxy2.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UInAppPurchaseQueryCallbackProxy2::StaticClass()
@@ -925,6 +1120,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -934,7 +1131,11 @@ namespace CG
 	 * 		TArray<struct FInAppPurchaseProductRequest>        ConsumableProductFlags                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UInAppPurchaseRestoreCallbackProxy* UInAppPurchaseRestoreCallbackProxy::CreateProxyObjectForInAppPurchaseRestore(TArray<struct FInAppPurchaseProductRequest> ConsumableProductFlags, class APlayerController* PlayerController)
+	class UInAppPurchaseRestoreCallbackProxy* UInAppPurchaseRestoreCallbackProxy::CreateProxyObjectForInAppPurchaseRestore(
+TArray<struct FInAppPurchaseProductRequest> ConsumableProductFlags
+, 
+class APlayerController* PlayerController
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -955,10 +1156,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UInAppPurchaseRestoreCallbackProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UInAppPurchaseRestoreCallbackProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UInAppPurchaseRestoreCallbackProxy::StaticClass()
@@ -969,6 +1172,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -978,7 +1183,11 @@ namespace CG
 	 * 		TArray<struct FInAppPurchaseProductRequest2>       ConsumableProductFlags                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UInAppPurchaseRestoreCallbackProxy2* UInAppPurchaseRestoreCallbackProxy2::CreateProxyObjectForInAppPurchaseRestore(TArray<struct FInAppPurchaseProductRequest2> ConsumableProductFlags, class APlayerController* PlayerController)
+	class UInAppPurchaseRestoreCallbackProxy2* UInAppPurchaseRestoreCallbackProxy2::CreateProxyObjectForInAppPurchaseRestore(
+TArray<struct FInAppPurchaseProductRequest2> ConsumableProductFlags
+, 
+class APlayerController* PlayerController
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -999,10 +1208,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UInAppPurchaseRestoreCallbackProxy2.StaticClass
+	 * 		Name   -> PredefinedFunction UInAppPurchaseRestoreCallbackProxy2.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UInAppPurchaseRestoreCallbackProxy2::StaticClass()
@@ -1013,10 +1224,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UIpConnection.StaticClass
+	 * 		Name   -> PredefinedFunction UIpConnection.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UIpConnection::StaticClass()
@@ -1027,10 +1240,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UIpNetDriver.StaticClass
+	 * 		Name   -> PredefinedFunction UIpNetDriver.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UIpNetDriver::StaticClass()
@@ -1040,6 +1255,8 @@ namespace CG
 			ptr = UObject::FindClass("Class OnlineSubsystemUtils.IpNetDriver");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1051,7 +1268,13 @@ namespace CG
 	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FBlueprintSessionResult                     SearchResult                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	class UJoinSessionCallbackProxy* UJoinSessionCallbackProxy::JoinSession(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FBlueprintSessionResult& SearchResult)
+	class UJoinSessionCallbackProxy* UJoinSessionCallbackProxy::JoinSession(
+class UObject* WorldContextObject
+, 
+class APlayerController* PlayerController
+, 
+const struct FBlueprintSessionResult& SearchResult
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1074,10 +1297,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UJoinSessionCallbackProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UJoinSessionCallbackProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UJoinSessionCallbackProxy::StaticClass()
@@ -1087,6 +1312,8 @@ namespace CG
 			ptr = UObject::FindClass("Class OnlineSubsystemUtils.JoinSessionCallbackProxy");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1098,7 +1325,13 @@ namespace CG
 	 * 		class FName                                        StatName                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            StatValue                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool ULeaderboardBlueprintLibrary::WriteLeaderboardInteger(class APlayerController* PlayerController, const class FName& StatName, int32_t StatValue)
+	bool ULeaderboardBlueprintLibrary::WriteLeaderboardInteger(
+class APlayerController* PlayerController
+, 
+const class FName& StatName
+, 
+int32_t StatValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1121,10 +1354,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULeaderboardBlueprintLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction ULeaderboardBlueprintLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULeaderboardBlueprintLibrary::StaticClass()
@@ -1135,6 +1370,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1144,7 +1381,11 @@ namespace CG
 	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FName                                        SessionName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class ULeaderboardFlushCallbackProxy* ULeaderboardFlushCallbackProxy::CreateProxyObjectForFlush(class APlayerController* PlayerController, const class FName& SessionName)
+	class ULeaderboardFlushCallbackProxy* ULeaderboardFlushCallbackProxy::CreateProxyObjectForFlush(
+class APlayerController* PlayerController
+, 
+const class FName& SessionName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1165,10 +1406,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULeaderboardFlushCallbackProxy.StaticClass
+	 * 		Name   -> PredefinedFunction ULeaderboardFlushCallbackProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULeaderboardFlushCallbackProxy::StaticClass()
@@ -1179,6 +1422,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1188,7 +1433,11 @@ namespace CG
 	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FName                                        StatName                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class ULeaderboardQueryCallbackProxy* ULeaderboardQueryCallbackProxy::CreateProxyObjectForIntQuery(class APlayerController* PlayerController, const class FName& StatName)
+	class ULeaderboardQueryCallbackProxy* ULeaderboardQueryCallbackProxy::CreateProxyObjectForIntQuery(
+class APlayerController* PlayerController
+, 
+const class FName& StatName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1209,10 +1458,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULeaderboardQueryCallbackProxy.StaticClass
+	 * 		Name   -> PredefinedFunction ULeaderboardQueryCallbackProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULeaderboardQueryCallbackProxy::StaticClass()
@@ -1223,6 +1474,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1232,7 +1485,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class ULogoutCallbackProxy* ULogoutCallbackProxy::Logout(class UObject* WorldContextObject, class APlayerController* PlayerController)
+	class ULogoutCallbackProxy* ULogoutCallbackProxy::Logout(
+class UObject* WorldContextObject
+, 
+class APlayerController* PlayerController
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1253,10 +1510,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULogoutCallbackProxy.StaticClass
+	 * 		Name   -> PredefinedFunction ULogoutCallbackProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULogoutCallbackProxy::StaticClass()
@@ -1267,10 +1526,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AOnlineBeacon.StaticClass
+	 * 		Name   -> PredefinedFunction AOnlineBeacon.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AOnlineBeacon::StaticClass()
@@ -1280,6 +1541,8 @@ namespace CG
 			ptr = UObject::FindClass("Class OnlineSubsystemUtils.OnlineBeacon");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1302,10 +1565,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AOnlineBeaconClient.StaticClass
+	 * 		Name   -> PredefinedFunction AOnlineBeaconClient.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AOnlineBeaconClient::StaticClass()
@@ -1316,10 +1581,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AOnlineBeaconHost.StaticClass
+	 * 		Name   -> PredefinedFunction AOnlineBeaconHost.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AOnlineBeaconHost::StaticClass()
@@ -1330,10 +1597,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AOnlineBeaconHostObject.StaticClass
+	 * 		Name   -> PredefinedFunction AOnlineBeaconHostObject.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AOnlineBeaconHostObject::StaticClass()
@@ -1344,10 +1613,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UOnlineEngineInterfaceImpl.StaticClass
+	 * 		Name   -> PredefinedFunction UOnlineEngineInterfaceImpl.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UOnlineEngineInterfaceImpl::StaticClass()
@@ -1358,10 +1629,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UOnlinePIESettings.StaticClass
+	 * 		Name   -> PredefinedFunction UOnlinePIESettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UOnlinePIESettings::StaticClass()
@@ -1372,10 +1645,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UOnlineSessionClient.StaticClass
+	 * 		Name   -> PredefinedFunction UOnlineSessionClient.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UOnlineSessionClient::StaticClass()
@@ -1386,6 +1661,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1395,7 +1672,11 @@ namespace CG
 	 * 		class FString                                      SessionID                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FPartyReservation                           ReservationUpdate                                          (ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void APartyBeaconClient::ServerUpdateReservationRequest(const class FString& SessionID, const struct FPartyReservation& ReservationUpdate)
+	void APartyBeaconClient::ServerUpdateReservationRequest(
+const class FString& SessionID
+, 
+const struct FPartyReservation& ReservationUpdate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1414,6 +1695,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1423,7 +1706,11 @@ namespace CG
 	 * 		class FString                                      SessionID                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FPartyReservation                           Reservation                                                (ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void APartyBeaconClient::ServerReservationRequest(const class FString& SessionID, const struct FPartyReservation& Reservation)
+	void APartyBeaconClient::ServerReservationRequest(
+const class FString& SessionID
+, 
+const struct FPartyReservation& Reservation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1442,6 +1729,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1451,7 +1740,11 @@ namespace CG
 	 * 		class FString                                      SessionID                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FPartyReservation                           ReservationUpdate                                          (ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void APartyBeaconClient::ServerRemoveMemberFromReservationRequest(const class FString& SessionID, const struct FPartyReservation& ReservationUpdate)
+	void APartyBeaconClient::ServerRemoveMemberFromReservationRequest(
+const class FString& SessionID
+, 
+const struct FPartyReservation& ReservationUpdate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1470,6 +1763,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1478,7 +1773,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FUniqueNetIdRepl                            PartyLeader                                                (ConstParm, Parm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void APartyBeaconClient::ServerCancelReservationRequest(const struct FUniqueNetIdRepl& PartyLeader)
+	void APartyBeaconClient::ServerCancelReservationRequest(
+const struct FUniqueNetIdRepl& PartyLeader
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1495,6 +1792,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1503,7 +1802,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            NumRemainingReservations                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void APartyBeaconClient::ClientSendReservationUpdates(int32_t NumRemainingReservations)
+	void APartyBeaconClient::ClientSendReservationUpdates(
+int32_t NumRemainingReservations
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1519,6 +1820,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1541,6 +1844,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1549,7 +1854,9 @@ namespace CG
 	 * Parameters:
 	 * 		EPartyReservationResult                            ReservationResponse                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void APartyBeaconClient::ClientReservationResponse(EPartyReservationResult ReservationResponse)
+	void APartyBeaconClient::ClientReservationResponse(
+EPartyReservationResult ReservationResponse
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1566,6 +1873,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1574,7 +1883,9 @@ namespace CG
 	 * Parameters:
 	 * 		EPartyReservationResult                            ReservationResponse                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void APartyBeaconClient::ClientCancelReservationResponse(EPartyReservationResult ReservationResponse)
+	void APartyBeaconClient::ClientCancelReservationResponse(
+EPartyReservationResult ReservationResponse
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1591,10 +1902,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction APartyBeaconClient.StaticClass
+	 * 		Name   -> PredefinedFunction APartyBeaconClient.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* APartyBeaconClient::StaticClass()
@@ -1605,10 +1918,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction APartyBeaconHost.StaticClass
+	 * 		Name   -> PredefinedFunction APartyBeaconHost.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* APartyBeaconHost::StaticClass()
@@ -1619,10 +1934,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPartyBeaconState.StaticClass
+	 * 		Name   -> PredefinedFunction UPartyBeaconState.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPartyBeaconState::StaticClass()
@@ -1632,6 +1949,8 @@ namespace CG
 			ptr = UObject::FindClass("Class OnlineSubsystemUtils.PartyBeaconState");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1645,7 +1964,17 @@ namespace CG
 	 * 		EMPMatchOutcome                                    Outcome                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            TurnTimeoutInSeconds                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UQuitMatchCallbackProxy* UQuitMatchCallbackProxy::QuitMatch(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& MatchID, EMPMatchOutcome Outcome, int32_t TurnTimeoutInSeconds)
+	class UQuitMatchCallbackProxy* UQuitMatchCallbackProxy::QuitMatch(
+class UObject* WorldContextObject
+, 
+class APlayerController* PlayerController
+, 
+const class FString& MatchID
+, 
+EMPMatchOutcome Outcome
+, 
+int32_t TurnTimeoutInSeconds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1672,10 +2001,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UQuitMatchCallbackProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UQuitMatchCallbackProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UQuitMatchCallbackProxy::StaticClass()
@@ -1686,6 +2017,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1695,7 +2028,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class APlayerController*                           InPlayerController                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UShowLoginUICallbackProxy* UShowLoginUICallbackProxy::ShowExternalLoginUI(class UObject* WorldContextObject, class APlayerController* InPlayerController)
+	class UShowLoginUICallbackProxy* UShowLoginUICallbackProxy::ShowExternalLoginUI(
+class UObject* WorldContextObject
+, 
+class APlayerController* InPlayerController
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1716,10 +2053,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UShowLoginUICallbackProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UShowLoginUICallbackProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UShowLoginUICallbackProxy::StaticClass()
@@ -1730,6 +2069,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1739,7 +2080,11 @@ namespace CG
 	 * 		class FString                                      SessionID                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FSpectatorReservation                       Reservation                                                (ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void ASpectatorBeaconClient::ServerReservationRequest(const class FString& SessionID, const struct FSpectatorReservation& Reservation)
+	void ASpectatorBeaconClient::ServerReservationRequest(
+const class FString& SessionID
+, 
+const struct FSpectatorReservation& Reservation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1758,6 +2103,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1766,7 +2113,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FUniqueNetIdRepl                            Spectator                                                  (ConstParm, Parm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ASpectatorBeaconClient::ServerCancelReservationRequest(const struct FUniqueNetIdRepl& Spectator)
+	void ASpectatorBeaconClient::ServerCancelReservationRequest(
+const struct FUniqueNetIdRepl& Spectator
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1783,6 +2132,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1791,7 +2142,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            NumRemainingReservations                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ASpectatorBeaconClient::ClientSendReservationUpdates(int32_t NumRemainingReservations)
+	void ASpectatorBeaconClient::ClientSendReservationUpdates(
+int32_t NumRemainingReservations
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1807,6 +2160,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1829,6 +2184,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1837,7 +2194,9 @@ namespace CG
 	 * Parameters:
 	 * 		ESpectatorReservationResult                        ReservationResponse                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ASpectatorBeaconClient::ClientReservationResponse(ESpectatorReservationResult ReservationResponse)
+	void ASpectatorBeaconClient::ClientReservationResponse(
+ESpectatorReservationResult ReservationResponse
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1854,6 +2213,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1862,7 +2223,9 @@ namespace CG
 	 * Parameters:
 	 * 		ESpectatorReservationResult                        ReservationResponse                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ASpectatorBeaconClient::ClientCancelReservationResponse(ESpectatorReservationResult ReservationResponse)
+	void ASpectatorBeaconClient::ClientCancelReservationResponse(
+ESpectatorReservationResult ReservationResponse
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1879,10 +2242,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ASpectatorBeaconClient.StaticClass
+	 * 		Name   -> PredefinedFunction ASpectatorBeaconClient.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ASpectatorBeaconClient::StaticClass()
@@ -1893,10 +2258,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ASpectatorBeaconHost.StaticClass
+	 * 		Name   -> PredefinedFunction ASpectatorBeaconHost.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ASpectatorBeaconHost::StaticClass()
@@ -1907,10 +2274,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction USpectatorBeaconState.StaticClass
+	 * 		Name   -> PredefinedFunction USpectatorBeaconState.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* USpectatorBeaconState::StaticClass()
@@ -1920,6 +2289,8 @@ namespace CG
 			ptr = UObject::FindClass("Class OnlineSubsystemUtils.SpectatorBeaconState");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1942,6 +2313,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1963,10 +2336,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ATestBeaconClient.StaticClass
+	 * 		Name   -> PredefinedFunction ATestBeaconClient.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ATestBeaconClient::StaticClass()
@@ -1977,10 +2352,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ATestBeaconHost.StaticClass
+	 * 		Name   -> PredefinedFunction ATestBeaconHost.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ATestBeaconHost::StaticClass()
@@ -1990,6 +2367,8 @@ namespace CG
 			ptr = UObject::FindClass("Class OnlineSubsystemUtils.TestBeaconHost");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2001,7 +2380,13 @@ namespace CG
 	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UObject*                                     Object                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UTurnBasedBlueprintLibrary::RegisterTurnBasedMatchInterfaceObject(class UObject* WorldContextObject, class APlayerController* PlayerController, class UObject* Object)
+	void UTurnBasedBlueprintLibrary::RegisterTurnBasedMatchInterfaceObject(
+class UObject* WorldContextObject
+, 
+class APlayerController* PlayerController
+, 
+class UObject* Object
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2022,6 +2407,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2034,7 +2421,17 @@ namespace CG
 	 * 		int32_t                                            PlayerIndex                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      PlayerDisplayName                                          (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UTurnBasedBlueprintLibrary::GetPlayerDisplayName(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& MatchID, int32_t PlayerIndex, class FString* PlayerDisplayName)
+	void UTurnBasedBlueprintLibrary::GetPlayerDisplayName(
+class UObject* WorldContextObject
+, 
+class APlayerController* PlayerController
+, 
+const class FString& MatchID
+, 
+int32_t PlayerIndex
+, 
+class FString* PlayerDisplayName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2061,6 +2458,8 @@ namespace CG
 			*PlayerDisplayName = params.PlayerDisplayName;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2072,7 +2471,15 @@ namespace CG
 	 * 		class FString                                      MatchID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            PlayerIndex                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UTurnBasedBlueprintLibrary::GetMyPlayerIndex(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& MatchID, int32_t* PlayerIndex)
+	void UTurnBasedBlueprintLibrary::GetMyPlayerIndex(
+class UObject* WorldContextObject
+, 
+class APlayerController* PlayerController
+, 
+const class FString& MatchID
+, 
+int32_t* PlayerIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2097,6 +2504,8 @@ namespace CG
 			*PlayerIndex = params.PlayerIndex;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2108,7 +2517,15 @@ namespace CG
 	 * 		class FString                                      MatchID                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bIsMyTurn                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UTurnBasedBlueprintLibrary::GetIsMyTurn(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& MatchID, bool* bIsMyTurn)
+	void UTurnBasedBlueprintLibrary::GetIsMyTurn(
+class UObject* WorldContextObject
+, 
+class APlayerController* PlayerController
+, 
+const class FString& MatchID
+, 
+bool* bIsMyTurn
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2133,10 +2550,12 @@ namespace CG
 			*bIsMyTurn = params.bIsMyTurn;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UTurnBasedBlueprintLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UTurnBasedBlueprintLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UTurnBasedBlueprintLibrary::StaticClass()
@@ -2146,6 +2565,8 @@ namespace CG
 			ptr = UObject::FindClass("Class OnlineSubsystemUtils.TurnBasedBlueprintLibrary");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2170,10 +2591,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVoipListenerSynthComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UVoipListenerSynthComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVoipListenerSynthComponent::StaticClass()
@@ -2183,6 +2606,7 @@ namespace CG
 			ptr = UObject::FindClass("Class OnlineSubsystemUtils.VoipListenerSynthComponent");
 		return ptr;
 	}
+
 
 }
 

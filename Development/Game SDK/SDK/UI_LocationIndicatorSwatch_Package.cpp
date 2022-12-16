@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -31,6 +32,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -39,7 +42,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	 */
-	void UUI_LocationIndicatorSwatch_C::LocationIndicatorColorChange(const class FString& NewValue)
+	void UUI_LocationIndicatorSwatch_C::LocationIndicatorColorChange(
+const class FString& NewValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -56,6 +61,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -64,7 +71,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               IsDesignTime                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void UUI_LocationIndicatorSwatch_C::PreConstruct(bool IsDesignTime)
+	void UUI_LocationIndicatorSwatch_C::PreConstruct(
+bool IsDesignTime
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -81,6 +90,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -89,7 +100,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        ColorID                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_LocationIndicatorSwatch_C::BndEvt__UI_LocationIndicatorSwatch_UI_SwatchColor_K2Node_ComponentBoundEvent_0_OnSelected__DelegateSignature(const class FName& ColorID)
+	void UUI_LocationIndicatorSwatch_C::BndEvt__UI_LocationIndicatorSwatch_UI_SwatchColor_K2Node_ComponentBoundEvent_0_OnSelected__DelegateSignature(
+const class FName& ColorID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -106,6 +119,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -114,7 +129,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_LocationIndicatorSwatch_C::ExecuteUbergraph_UI_LocationIndicatorSwatch(int32_t EntryPoint)
+	void UUI_LocationIndicatorSwatch_C::ExecuteUbergraph_UI_LocationIndicatorSwatch(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -131,6 +148,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -139,7 +158,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Value                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	 */
-	void UUI_LocationIndicatorSwatch_C::OnSelected__DelegateSignature(const class FString& Value)
+	void UUI_LocationIndicatorSwatch_C::OnSelected__DelegateSignature(
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -156,10 +177,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UUI_LocationIndicatorSwatch_C.StaticClass
+	 * 		Name   -> PredefinedFunction UUI_LocationIndicatorSwatch_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UUI_LocationIndicatorSwatch_C::StaticClass()
@@ -169,6 +192,7 @@ namespace CG
 			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_LocationIndicatorSwatch.UI_LocationIndicatorSwatch_C");
 		return ptr;
 	}
+
 
 }
 

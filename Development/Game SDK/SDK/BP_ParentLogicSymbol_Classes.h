@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,23 +14,50 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * BlueprintGeneratedClass BP_ParentLogicSymbol.BP_ParentLogicSymbol_C
-	 * Size -> 0x0011 (FullSize[0x03E9] - InheritedSize[0x03D8])
+	 * Size -> 0x0011 (FullSize[0x0449] - InheritedSize[0x0438])
 	 */
 	class ABP_ParentLogicSymbol_C : public ABP_ParentLogic_C
 	{
 	public:
-		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x03D8(0x0008) ZeroConstructor, Transient, DuplicateTransient
-		class UStaticMeshComponent*                                Symbol;                                                  // 0x03E0(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
-		E_LogicButtonSymbols                                       CurrentSymbol;                                           // 0x03E8(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+
+		struct FPointerToUberGraphFrame                          UberGraphFrame;                                          // 0x0438(0x0008) ZeroConstructor, Transient, DuplicateTransient
+
+
+		class UStaticMeshComponent*                              Symbol;                                                  // 0x0440(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+
+
+		E_LogicButtonSymbols                                     CurrentSymbol;                                           // 0x0448(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+
 
 	public:
+
 		void ChangeSymbol();
-		void LMBDownIsTarget(class UPrimitiveComponent* Component, class ABP_ParentItem_C* CarryingItem, class ABP_GameController_C* Insigator);
-		void RMBDownIsTarget(class UPrimitiveComponent* Component, class ABP_ParentItem_C* CarryingItem, class ABP_GameController_C* Instigator);
+
+		void LMBDownIsTarget(
+class UPrimitiveComponent* Component
+, 
+class ABP_ParentItem_C* CarryingItem
+, 
+class ABP_GameController_C* Insigator
+);
+
+		void RMBDownIsTarget(
+class UPrimitiveComponent* Component
+, 
+class ABP_ParentItem_C* CarryingItem
+, 
+class ABP_GameController_C* Instigator
+);
+
 		void ActorLoaded();
-		void ExecuteUbergraph_BP_ParentLogicSymbol(int32_t EntryPoint);
+
+		void ExecuteUbergraph_BP_ParentLogicSymbol(
+int32_t EntryPoint
+);
+
 		static UClass* StaticClass();
 	};
 

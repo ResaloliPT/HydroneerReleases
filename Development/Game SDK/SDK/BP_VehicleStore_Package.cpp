@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18,7 +19,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<int32_t>                                    HighlightArray                                             (Parm, OutParm)
 	 */
-	void ABP_VehicleStore_C::BPI_GetHighlightArray(TArray<int32_t>* HighlightArray)
+	void ABP_VehicleStore_C::BPI_GetHighlightArray(
+TArray<int32_t>* HighlightArray
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -37,6 +40,8 @@ namespace CG
 			*HighlightArray = params.HighlightArray;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -46,7 +51,11 @@ namespace CG
 	 * 		TArray<int32_t>                                    HighlightArray                                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	 * 		bool                                               Result                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_VehicleStore_C::BPI_SetHighlightArray(TArray<int32_t>* HighlightArray, bool* Result)
+	void ABP_VehicleStore_C::BPI_SetHighlightArray(
+TArray<int32_t>* HighlightArray
+, 
+bool* Result
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -68,15 +77,19 @@ namespace CG
 			*Result = params.Result;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_VehicleStore.BP_VehicleStore_C.BPI_GetCanHighlight
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               CanHighlight_                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               CanHighlight                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_VehicleStore_C::BPI_GetCanHighlight(bool* CanHighlight_)
+	void ABP_VehicleStore_C::BPI_GetCanHighlight(
+bool* CanHighlight
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -84,16 +97,18 @@ namespace CG
 		
 		struct
 		{
-			bool                                               CanHighlight_;
+			bool                                               CanHighlight;
 		} params;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 		
-		if (CanHighlight_ != nullptr)
-			*CanHighlight_ = params.CanHighlight_;
+		if (CanHighlight != nullptr)
+			*CanHighlight = params.CanHighlight;
 	}
+
+
 
 	/**
 	 * Function:
@@ -116,6 +131,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -137,6 +154,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -144,9 +163,13 @@ namespace CG
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		class ABP_GameController_C*                        Controller                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		bool                                               LookingAt_                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               LookingAt                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_VehicleStore_C::BPI_ToggleLookAt(class ABP_GameController_C* Controller, bool LookingAt_)
+	void ABP_VehicleStore_C::BPI_ToggleLookAt(
+class ABP_GameController_C* Controller
+, 
+bool LookingAt
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -155,15 +178,17 @@ namespace CG
 		struct
 		{
 			class ABP_GameController_C*                        Controller;
-			bool                                               LookingAt_;
+			bool                                               LookingAt;
 		} params;
 		params.Controller = Controller;
-		params.LookingAt_ = LookingAt_;
+		params.LookingAt = LookingAt;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -174,7 +199,11 @@ namespace CG
 	 * 		class UActorComponent*                             Component                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class ABP_GameController_C*                        Controller                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_VehicleStore_C::OverrideMouseClicked(class UActorComponent* Component, class ABP_GameController_C* Controller)
+	void ABP_VehicleStore_C::OverrideMouseClicked(
+class UActorComponent* Component
+, 
+class ABP_GameController_C* Controller
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -193,6 +222,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -206,7 +237,19 @@ namespace CG
 	 * 		bool                                               bFromSweep                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 * 		struct FHitResult                                  SweepResult                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	 */
-	void ABP_VehicleStore_C::BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+	void ABP_VehicleStore_C::BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(
+class UPrimitiveComponent* OverlappedComponent
+, 
+class AActor* OtherActor
+, 
+class UPrimitiveComponent* OtherComp
+, 
+int32_t OtherBodyIndex
+, 
+bool bFromSweep
+, 
+const struct FHitResult& SweepResult
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -233,6 +276,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -244,7 +289,15 @@ namespace CG
 	 * 		class UPrimitiveComponent*                         OtherComp                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		int32_t                                            OtherBodyIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_VehicleStore_C::BndEvt__Sphere_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex)
+	void ABP_VehicleStore_C::BndEvt__Sphere_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(
+class UPrimitiveComponent* OverlappedComponent
+, 
+class AActor* OtherActor
+, 
+class UPrimitiveComponent* OtherComp
+, 
+int32_t OtherBodyIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -267,6 +320,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -275,7 +330,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_GameController_C*                        Controller                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_VehicleStore_C::BPI_Highlight(class ABP_GameController_C* Controller)
+	void ABP_VehicleStore_C::BPI_Highlight(
+class ABP_GameController_C* Controller
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -292,6 +349,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -300,7 +359,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_GameController_C*                        Controller                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_VehicleStore_C::BPI_Unhighlight(class ABP_GameController_C* Controller)
+	void ABP_VehicleStore_C::BPI_Unhighlight(
+class ABP_GameController_C* Controller
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -317,6 +378,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -325,7 +388,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_VehicleStore_C::ExecuteUbergraph_BP_VehicleStore(int32_t EntryPoint)
+	void ABP_VehicleStore_C::ExecuteUbergraph_BP_VehicleStore(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -342,10 +407,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ABP_VehicleStore_C.StaticClass
+	 * 		Name   -> PredefinedFunction ABP_VehicleStore_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ABP_VehicleStore_C::StaticClass()
@@ -355,6 +422,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass BP_VehicleStore.BP_VehicleStore_C");
 		return ptr;
 	}
+
 
 }
 

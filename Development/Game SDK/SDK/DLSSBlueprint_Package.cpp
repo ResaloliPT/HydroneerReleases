@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18,7 +19,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              Sharpness                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UDLSSLibrary::SetDLSSSharpness(float Sharpness)
+	void UDLSSLibrary::SetDLSSSharpness(
+float Sharpness
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -35,6 +38,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -43,7 +48,9 @@ namespace CG
 	 * Parameters:
 	 * 		EUDLSSMode                                         DLSSMode                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UDLSSLibrary::SetDLSSMode(EUDLSSMode DLSSMode)
+	void UDLSSLibrary::SetDLSSMode(
+EUDLSSMode DLSSMode
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -59,6 +66,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -83,6 +92,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -106,6 +117,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -114,7 +127,9 @@ namespace CG
 	 * Parameters:
 	 * 		EUDLSSMode                                         DLSSMode                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UDLSSLibrary::IsDLSSModeSupported(EUDLSSMode DLSSMode)
+	bool UDLSSLibrary::IsDLSSModeSupported(
+EUDLSSMode DLSSMode
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -132,6 +147,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -156,6 +173,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -179,6 +198,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -188,7 +209,11 @@ namespace CG
 	 * 		float                                              MinScreenPercentage                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              MaxScreenPercentage                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UDLSSLibrary::GetDLSSScreenPercentageRange(float* MinScreenPercentage, float* MaxScreenPercentage)
+	void UDLSSLibrary::GetDLSSScreenPercentageRange(
+float* MinScreenPercentage
+, 
+float* MaxScreenPercentage
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -210,6 +235,8 @@ namespace CG
 			*MaxScreenPercentage = params.MaxScreenPercentage;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -225,7 +252,23 @@ namespace CG
 	 * 		float                                              MaxScreenPercentage                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              OptimalSharpness                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UDLSSLibrary::GetDLSSModeInformation(EUDLSSMode DLSSMode, const struct FVector2D& ScreenResolution, bool* bIsSupported, float* OptimalScreenPercentage, bool* bIsFixedScreenPercentage, float* MinScreenPercentage, float* MaxScreenPercentage, float* OptimalSharpness)
+	void UDLSSLibrary::GetDLSSModeInformation(
+EUDLSSMode DLSSMode
+, 
+const struct FVector2D& ScreenResolution
+, 
+bool* bIsSupported
+, 
+float* OptimalScreenPercentage
+, 
+bool* bIsFixedScreenPercentage
+, 
+float* MinScreenPercentage
+, 
+float* MaxScreenPercentage
+, 
+float* OptimalSharpness
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -263,6 +306,8 @@ namespace CG
 			*OptimalSharpness = params.OptimalSharpness;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -286,6 +331,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -295,7 +342,11 @@ namespace CG
 	 * 		int32_t                                            MinDriverVersionMajor                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            MinDriverVersionMinor                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UDLSSLibrary::GetDLSSMinimumDriverVersion(int32_t* MinDriverVersionMajor, int32_t* MinDriverVersionMinor)
+	void UDLSSLibrary::GetDLSSMinimumDriverVersion(
+int32_t* MinDriverVersionMajor
+, 
+int32_t* MinDriverVersionMinor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -316,6 +367,8 @@ namespace CG
 		if (MinDriverVersionMinor != nullptr)
 			*MinDriverVersionMinor = params.MinDriverVersionMinor;
 	}
+
+
 
 	/**
 	 * Function:
@@ -340,10 +393,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDLSSLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UDLSSLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDLSSLibrary::StaticClass()
@@ -353,6 +408,7 @@ namespace CG
 			ptr = UObject::FindClass("Class DLSSBlueprint.DLSSLibrary");
 		return ptr;
 	}
+
 
 }
 

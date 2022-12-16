@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,15 +10,26 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Static Fields
 	// --------------------------------------------------
-	FNamePool*                                                  FName::GNames = nullptr;                                 // 0x0000(0x0000)
+
+	FNamePool*                                                FName::GNames = nullptr;                                 // 0x0000(0x0000)
+
 
 	// --------------------------------------------------
 	// # Global functions
 	// --------------------------------------------------
+
 	/**
 	 * Initialize SDK
 	 */
-	bool InitSdk(const std::wstring& moduleName, uintptr_t gObjectsOffset, uintptr_t gNamesOffset, uintptr_t gWorldOffset)
+	bool InitSdk(
+const std::wstring& moduleName
+, 
+uintptr_t gObjectsOffset
+, 
+uintptr_t gNamesOffset
+, 
+uintptr_t gWorldOffset
+)
 	{
 		auto mBaseAddress = reinterpret_cast<uintptr_t>(GetModuleHandleW(moduleName.c_str()));
 		if (!mBaseAddress)
@@ -31,17 +42,20 @@ namespace CG
 		return true;
 	}
 
+
+
 	/**
 	 * Initialize SDK
 	 */
 	bool InitSdk()
 	{
-		return InitSdk(L"Mining-Win64-Shipping.exe", 0x5074F68, 0x505C9C0, 0x51ADF10);
+		return InitSdk(L"Mining-Win64-Shipping.exe", 0x4F08FE8, 0x4EF0A40, 0x5041F90);
 	}
 
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -53,6 +67,8 @@ namespace CG
 
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -61,12 +77,16 @@ namespace CG
 	 * Parameters:
 	 * 		const wchar_t*                                     other
 	 */
-	FString::FString(const wchar_t* other)
+	FString::FString(
+const wchar_t* other
+)
 	{
 		_max = _count = *other ? static_cast<int32_t>(std::wcslen(other)) + 1 : 0;
 		if (_count)
 			_data = const_cast<wchar_t*>(other);
 	}
+
+
 
 	/**
 	 * Function:
@@ -79,6 +99,8 @@ namespace CG
 		return _data;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -90,6 +112,8 @@ namespace CG
 		return (const char*)_data;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -100,6 +124,8 @@ namespace CG
 	{
 		return _data != nullptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -115,6 +141,8 @@ namespace CG
 		return str;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -127,6 +155,8 @@ namespace CG
 		return str;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -137,6 +167,8 @@ namespace CG
 	{
 		return !!(Flags & static_cast<std::underlying_type_t<ObjectFlags>>(ObjectFlags::Unreachable));
 	}
+
+
 
 	/**
 	 * Function:
@@ -149,6 +181,8 @@ namespace CG
 		return !!(Flags & static_cast<std::underlying_type_t<ObjectFlags>>(ObjectFlags::PendingKill));
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -159,6 +193,8 @@ namespace CG
 	{
 		return NumElements;
 	}
+
+
 
 	/**
 	 * Function:
@@ -171,6 +207,8 @@ namespace CG
 		return MaxElements;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -179,10 +217,14 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Index
 	 */
-	bool TUObjectArray::IsValidIndex(int32_t Index) const
+	bool TUObjectArray::IsValidIndex(
+int32_t Index
+) const
 	{
 		return Index < Count() && Index >= 0;
 	}
+
+
 
 	/**
 	 * Function:
@@ -192,7 +234,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Index
 	 */
-	FUObjectItem* TUObjectArray::GetObjectPtr(int32_t Index) const
+	FUObjectItem* TUObjectArray::GetObjectPtr(
+int32_t Index
+) const
 	{
 		const int32_t ChunkIndex = Index / NumElementsPerChunk;
 		const int32_t WithinChunkIndex = Index % NumElementsPerChunk;
@@ -204,6 +248,8 @@ namespace CG
 		return Chunk + WithinChunkIndex;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -212,12 +258,16 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            index
 	 */
-	UObject* TUObjectArray::GetByIndex(int32_t index) const
+	UObject* TUObjectArray::GetByIndex(
+int32_t index
+) const
 	{
 		FUObjectItem* ItemPtr = GetObjectPtr(index);
 		if (!ItemPtr) return nullptr;
 		return (*ItemPtr).Object;
 	}
+
+
 
 	/**
 	 * Function:
@@ -227,25 +277,16 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            index
 	 */
-	FUObjectItem* TUObjectArray::GetItemByIndex(int32_t index) const
+	FUObjectItem* TUObjectArray::GetItemByIndex(
+int32_t index
+) const
 	{
 		FUObjectItem* ItemPtr = GetObjectPtr(index);
 		if (!ItemPtr) return nullptr;
 		return ItemPtr;
 	}
 
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction BasicTypes.TUObjectArray.operator[]
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            i
-	 */
-	UObject* TUObjectArray::operator[](int32_t i)
-	{
-		return GetByIndex(i);
-	}
+
 
 	/**
 	 * Function:
@@ -255,10 +296,31 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            i
 	 */
-	const UObject* TUObjectArray::operator[](int32_t i) const
+	UObject* TUObjectArray::operator[](
+int32_t i
+)
 	{
 		return GetByIndex(i);
 	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction BasicTypes.TUObjectArray.operator[]
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            i
+	 */
+	const UObject* TUObjectArray::operator[](
+int32_t i
+) const
+	{
+		return GetByIndex(i);
+	}
+
+
 
 	/**
 	 * Function:
@@ -271,6 +333,8 @@ namespace CG
 		return Header.Len;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -282,6 +346,8 @@ namespace CG
 		return Header.bIsWide;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -290,8 +356,10 @@ namespace CG
 	 */
 	int32_t FNameEntry::GetId() const
 	{
-		return *reinterpret_cast<const uint16_t*>(&Header);
+		throw std::exception("This game doesn't use 'FNAME_POOL_WITH_CASE_PRESERVING_NAME' so 'ComparisonId' not stored in 'FNameEntry'");
 	}
+
+
 
 	/**
 	 * Function:
@@ -306,6 +374,8 @@ namespace CG
 		return std::string((const char*)AnsiName, len);
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -318,6 +388,8 @@ namespace CG
 		return std::wstring((const wchar_t*)WideName, len);
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -328,6 +400,8 @@ namespace CG
 	{
 		return GetAnsiName();
 	}
+
+
 
 	/**
 	 * Function:
@@ -340,6 +414,8 @@ namespace CG
 		return CurrentBlock + 1;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -348,7 +424,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            key
 	 */
-	FNameEntry* FNameEntryAllocator::GetById(int32_t key) const
+	FNameEntry* FNameEntryAllocator::GetById(
+int32_t key
+) const
 	{
 		int block = key >> 16;
 		int offset = (uint16_t)key;
@@ -356,6 +434,8 @@ namespace CG
 			return reinterpret_cast<FNameEntry*>(Blocks[0] + 0); // "None"
 		return reinterpret_cast<FNameEntry*>(Blocks[block] + ((uint64_t)offset * Stride));
 	}
+
+
 
 	/**
 	 * Function:
@@ -365,12 +445,16 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            key
 	 */
-	bool FNameEntryAllocator::IsValidIndex(int32_t key) const
+	bool FNameEntryAllocator::IsValidIndex(
+int32_t key
+) const
 	{
 		uint32_t block = key >> 16;
 		uint16_t offset = key;
 		return IsValidIndex(key, block, offset);
 	}
+
+
 
 	/**
 	 * Function:
@@ -382,10 +466,18 @@ namespace CG
 	 * 		uint32_t                                           block
 	 * 		uint16_t                                           offset
 	 */
-	bool FNameEntryAllocator::IsValidIndex(int32_t key, uint32_t block, uint16_t offset) const
+	bool FNameEntryAllocator::IsValidIndex(
+int32_t key
+, 
+uint32_t block
+, 
+uint16_t offset
+) const
 	{
 		return (key >= 0 && block < static_cast<uint32_t>(NumBlocks()) && offset * Stride < MaxOffset);
 	}
+
+
 
 	/**
 	 * Function:
@@ -394,8 +486,13 @@ namespace CG
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		uintptr_t&                                         nextFNameAddress
+	 * 		uint32_t*                                          comparisonId
 	 */
-	FNameEntry* FNamePool::GetNext(uintptr_t& nextFNameAddress) const
+	FNameEntry* FNamePool::GetNext(
+uintptr_t& nextFNameAddress
+, 
+uint32_t* comparisonId
+) const
 	{
 		static int lastBlock = 0;
 		if (!nextFNameAddress)
@@ -412,7 +509,7 @@ namespace CG
 		// Get entry information
 		const uintptr_t entryOffset = nextFNameAddress;
 		const int toAdd = 0x00 + 0x02; // HeaderOffset + HeaderSize
-		const uint16_t nameHeader = static_cast<uint16_t>(entryOffset);
+		const uint16_t nameHeader = *reinterpret_cast<uint16_t*>(entryOffset);
 		int nameLength = nameHeader >> 6;
 		bool isWide = (nameHeader & 1) != 0;
 		if (isWide)
@@ -438,8 +535,14 @@ namespace CG
 		
 		// Get name
 		FNameEntry* ret = Allocator.GetById(nextFNameComparisonId);
+		
+		if (comparisonId)
+			*comparisonId = nextFNameComparisonId;
+		
 		return ret;
 	}
+
+
 
 	/**
 	 * Function:
@@ -452,6 +555,8 @@ namespace CG
 		return AnsiCount;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -460,10 +565,14 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            index
 	 */
-	bool FNamePool::IsValidIndex(int32_t index) const
+	bool FNamePool::IsValidIndex(
+int32_t index
+) const
 	{
 		return Allocator.IsValidIndex(static_cast<int32_t>(index));
 	}
+
+
 
 	/**
 	 * Function:
@@ -473,10 +582,14 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            id
 	 */
-	FNameEntry* FNamePool::GetById(int32_t id) const
+	FNameEntry* FNamePool::GetById(
+int32_t id
+) const
 	{
 		return Allocator.GetById(id);
 	}
+
+
 
 	/**
 	 * Function:
@@ -486,10 +599,14 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            id
 	 */
-	FNameEntry* FNamePool::operator[](int32_t id) const
+	FNameEntry* FNamePool::operator[](
+int32_t id
+) const
 	{
 		return GetById(id);
 	}
+
+
 
 	/**
 	 * Function:
@@ -503,6 +620,8 @@ namespace CG
 		Number = 0;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -511,11 +630,15 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            i
 	 */
-	FName::FName(int32_t i)
+	FName::FName(
+int32_t i
+)
 	{
 		ComparisonIndex = i;
 		Number = 0;
 	}
+
+
 
 	/**
 	 * Function:
@@ -525,7 +648,9 @@ namespace CG
 	 * Parameters:
 	 * 		const char*                                        nameToFind
 	 */
-	FName::FName(const char* nameToFind)
+	FName::FName(
+const char* nameToFind
+)
 	{
 		Number = 0;
 		static std::unordered_set<int> cache;
@@ -543,14 +668,15 @@ namespace CG
 		
 		#ifdef FNAME_POOL
 		uintptr_t lastFNameAddress = NULL;
-		for (FNameEntry* name = GetGlobalNames().GetNext(lastFNameAddress); name != nullptr; name = GetGlobalNames().GetNext(lastFNameAddress))
+		uint32_t curComparisonId = 0;
+		for (FNameEntry* name = GetGlobalNames().GetNext(lastFNameAddress, &curComparisonId); name != nullptr; name = GetGlobalNames().GetNext(lastFNameAddress, &curComparisonId))
 		{
 			if (name->GetAnsiName() == nameToFind)
 			{
-				cache.insert(name->GetId());
-				ComparisonIndex = name->GetId();
+				cache.insert(curComparisonId);
+				ComparisonIndex = curComparisonId;
 				#ifdef FNAME_POOL_WITH_CASE_PRESERVING_NAME
-				DisplayIndex = name->GetId();
+				DisplayIndex = curComparisonId;
 				#endif
 				return;
 			}
@@ -568,6 +694,8 @@ namespace CG
 		#endif
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -576,7 +704,9 @@ namespace CG
 	 * Parameters:
 	 * 		const wchar_t*                                     nameToFind
 	 */
-	FName::FName(const wchar_t* nameToFind)
+	FName::FName(
+const wchar_t* nameToFind
+)
 	{
 		Number = 0;
 		static std::unordered_set<int> cache;
@@ -594,14 +724,15 @@ namespace CG
 		
 		#ifdef FNAME_POOL
 		uintptr_t lastFNameAddress = NULL;
-		for (FNameEntry* name = GetGlobalNames().GetNext(lastFNameAddress); name != nullptr; name = GetGlobalNames().GetNext(lastFNameAddress))
+		uint32_t curComparisonId = 0;
+		for (FNameEntry* name = GetGlobalNames().GetNext(lastFNameAddress, &curComparisonId); name != nullptr; name = GetGlobalNames().GetNext(lastFNameAddress, &curComparisonId))
 		{
 			if (name->GetWideName() == nameToFind)
 			{
-				cache.insert(name->GetId());
-				ComparisonIndex = name->GetId();
+				cache.insert(curComparisonId);
+				ComparisonIndex = curComparisonId;
 				#ifdef FNAME_POOL_WITH_CASE_PRESERVING_NAME
-				DisplayIndex = name->GetId();
+				DisplayIndex = curComparisonId;
 				#endif
 				return;
 			}
@@ -618,6 +749,8 @@ namespace CG
 		}
 		#endif
 	}
+
+
 
 	/**
 	 * Function:
@@ -630,6 +763,8 @@ namespace CG
 		return *GNames;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -640,6 +775,8 @@ namespace CG
 	{
 		return GetGlobalNames()[ComparisonIndex]->GetAnsiName();
 	}
+
+
 
 	/**
 	 * Function:
@@ -652,6 +789,8 @@ namespace CG
 		return GetGlobalNames()[ComparisonIndex]->GetWideName();
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -662,6 +801,8 @@ namespace CG
 	{
 		return GetNameA();
 	}
+
+
 
 	/**
 	 * Function:
@@ -674,6 +815,8 @@ namespace CG
 		return ObjectPointer;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -684,6 +827,8 @@ namespace CG
 	{
 		return ObjectPointer;
 	}
+
+
 
 	/**
 	 * Function:
@@ -696,6 +841,60 @@ namespace CG
 		return ObjectPointer != nullptr ? InterfacePointer : nullptr;
 	}
 
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction BasicTypes.FText.Get
+	 * 		Flags  -> ()
+	 */
+	wchar_t* FText::Get() const
+	{
+		return Data != nullptr ? Data->Name : nullptr;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction BasicTypes.FText.ToString
+	 * 		Flags  -> ()
+	 */
+	std::string FText::ToString() const
+	{
+		wchar_t* name = Get();
+		if (!name)
+		    return "NOT FOUND";
+		
+		size_t length = std::wcslen(name);
+		std::string str(length, '\0');
+		std::use_facet<std::ctype<wchar_t>>(std::locale()).narrow(name, name + length, '?', &str[0]);
+		
+		return str;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction BasicTypes.FText.ToWString
+	 * 		Flags  -> ()
+	 */
+	std::wstring FText::ToWString() const
+	{
+		wchar_t* name = Get();
+		if (!name)
+		    return L"NOT FOUND";
+		
+		std::wstring str(name);
+		return str;
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -704,10 +903,14 @@ namespace CG
 	 * Parameters:
 	 * 		FUObjectItem*                                      objectItem
 	 */
-	bool FWeakObjectPtr::SerialNumbersMatch(FUObjectItem* objectItem) const
+	bool FWeakObjectPtr::SerialNumbersMatch(
+FUObjectItem* objectItem
+) const
 	{
 		return objectItem->SerialNumber == ObjectSerialNumber;
 	}
+
+
 
 	/**
 	 * Function:
@@ -730,6 +933,8 @@ namespace CG
 		return !(ObjectItem->IsUnreachable() || ObjectItem->IsPendingKill());
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -747,6 +952,7 @@ namespace CG
 		
 		return ObjectItem->Object;
 	}
+
 
 }
 

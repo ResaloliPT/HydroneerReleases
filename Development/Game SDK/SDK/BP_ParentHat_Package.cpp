@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -31,15 +32,19 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_ParentHat.BP_ParentHat_C.ToggleProxyHat
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               On_                                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               On                                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_ParentHat_C::ToggleProxyHat(bool On_)
+	void ABP_ParentHat_C::ToggleProxyHat(
+bool On
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -47,14 +52,16 @@ namespace CG
 		
 		struct
 		{
-			bool                                               On_;
+			bool                                               On;
 		} params;
-		params.On_ = On_;
+		params.On = On;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -64,7 +71,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_GameCharacter_C*                         Character                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentHat_C::OverrideHatOn(class ABP_GameCharacter_C* Character)
+	void ABP_ParentHat_C::OverrideHatOn(
+class ABP_GameCharacter_C* Character
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -81,6 +90,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -89,7 +100,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_GameCharacter_C*                         Character                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentHat_C::OverrideHatOff(class ABP_GameCharacter_C* Character)
+	void ABP_ParentHat_C::OverrideHatOff(
+class ABP_GameCharacter_C* Character
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -106,16 +119,22 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_ParentHat.BP_ParentHat_C.Equip
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               Equiped_                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               Equiped                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 * 		class ABP_GameCharacter_C*                         Character                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentHat_C::Equip(bool Equiped_, class ABP_GameCharacter_C* Character)
+	void ABP_ParentHat_C::Equip(
+bool Equiped
+, 
+class ABP_GameCharacter_C* Character
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -123,16 +142,18 @@ namespace CG
 		
 		struct
 		{
-			bool                                               Equiped_;
+			bool                                               Equiped;
 			class ABP_GameCharacter_C*                         Character;
 		} params;
-		params.Equiped_ = Equiped_;
+		params.Equiped = Equiped;
 		params.Character = Character;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -142,7 +163,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_GameController_C*                        Controller                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentHat_C::BPI_Unhighlight(class ABP_GameController_C* Controller)
+	void ABP_ParentHat_C::BPI_Unhighlight(
+class ABP_GameController_C* Controller
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -159,6 +182,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -167,7 +192,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_GameController_C*                        Controller                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentHat_C::BPI_Highlight(class ABP_GameController_C* Controller)
+	void ABP_ParentHat_C::BPI_Highlight(
+class ABP_GameController_C* Controller
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -183,6 +210,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -205,6 +234,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -213,7 +244,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentHat_C::ExecuteUbergraph_BP_ParentHat(int32_t EntryPoint)
+	void ABP_ParentHat_C::ExecuteUbergraph_BP_ParentHat(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -230,10 +263,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ABP_ParentHat_C.StaticClass
+	 * 		Name   -> PredefinedFunction ABP_ParentHat_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ABP_ParentHat_C::StaticClass()
@@ -243,6 +278,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentHat.BP_ParentHat_C");
 		return ptr;
 	}
+
 
 }
 

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18,7 +19,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSettingOption                              SelectedOption                                             (BlueprintVisible, BlueprintReadOnly, Parm)
 	 */
-	void UStyledSpinner_C::OnSelectionChanged(const struct FSettingOption& SelectedOption)
+	void UStyledSpinner_C::OnSelectionChanged(
+const struct FSettingOption& SelectedOption
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -34,6 +37,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -58,6 +63,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -80,6 +87,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -104,6 +113,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -124,6 +135,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -146,6 +159,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -154,7 +169,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UStyledSpinner_C::ExecuteUbergraph_StyledSpinner(int32_t EntryPoint)
+	void UStyledSpinner_C::ExecuteUbergraph_StyledSpinner(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -171,10 +188,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UStyledSpinner_C.StaticClass
+	 * 		Name   -> PredefinedFunction UStyledSpinner_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UStyledSpinner_C::StaticClass()
@@ -184,6 +203,7 @@ namespace CG
 			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass StyledSpinner.StyledSpinner_C");
 		return ptr;
 	}
+
 
 }
 

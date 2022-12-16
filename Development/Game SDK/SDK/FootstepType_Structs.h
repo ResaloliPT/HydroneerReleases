@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,16 +14,17 @@ namespace CG
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+
 	/**
 	 * UserDefinedEnum FootstepType.FootstepType
 	 */
 	enum class EFootstepType : uint8_t
 	{
-		FootstepType__NewEnumerator0   = 0,
-		FootstepType__NewEnumerator4   = 1,
-		FootstepType__NewEnumerator7   = 2,
-		FootstepType__NewEnumerator8   = 3,
-		FootstepType__FootstepType_MAX = 4
+		FootstepType_NewEnumerator0   = 0,
+		FootstepType_NewEnumerator4   = 1,
+		FootstepType_NewEnumerator7   = 2,
+		FootstepType_NewEnumerator8   = 3,
+		FootstepType_FootstepType_MAX = 4
 	};
 
 }

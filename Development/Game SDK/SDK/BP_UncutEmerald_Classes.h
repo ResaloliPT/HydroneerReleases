@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,13 +14,15 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * BlueprintGeneratedClass BP_UncutEmerald.BP_UncutEmerald_C
-	 * Size -> 0x0000 (FullSize[0x0388] - InheritedSize[0x0388])
+	 * Size -> 0x0000 (FullSize[0x03F0] - InheritedSize[0x03F0])
 	 */
 	class ABP_UncutEmerald_C : public ABP_ParentRawResource_C
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
 

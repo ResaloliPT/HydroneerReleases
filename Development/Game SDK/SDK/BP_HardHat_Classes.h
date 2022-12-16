@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,19 +14,32 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * BlueprintGeneratedClass BP_HardHat.BP_HardHat_C
-	 * Size -> 0x0008 (FullSize[0x03B8] - InheritedSize[0x03B0])
+	 * Size -> 0x0008 (FullSize[0x0418] - InheritedSize[0x0410])
 	 */
 	class ABP_HardHat_C : public ABP_ParentHat_C
 	{
 	public:
-		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x03B0(0x0008) ZeroConstructor, Transient, DuplicateTransient
+
+		struct FPointerToUberGraphFrame                          UberGraphFrame;                                          // 0x0410(0x0008) ZeroConstructor, Transient, DuplicateTransient
+
 
 	public:
-		void OverrideHatOn(class ABP_GameCharacter_C* Character);
-		void OverrideHatOff(class ABP_GameCharacter_C* Character);
-		void ExecuteUbergraph_BP_HardHat(int32_t EntryPoint);
+
+		void OverrideHatOn(
+class ABP_GameCharacter_C* Character
+);
+
+		void OverrideHatOff(
+class ABP_GameCharacter_C* Character
+);
+
+		void ExecuteUbergraph_BP_HardHat(
+int32_t EntryPoint
+);
+
 		static UClass* StaticClass();
 	};
 

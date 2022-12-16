@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * Class ClothingSystemRuntimeInterface.ClothConfigBase
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
@@ -21,8 +22,11 @@ namespace CG
 	class UClothConfigBase : public UObject
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class ClothingSystemRuntimeInterface.ClothingSimulationFactory
@@ -31,8 +35,11 @@ namespace CG
 	class UClothingSimulationFactory : public UObject
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class ClothingSystemRuntimeInterface.ClothingSimulationInteractor
@@ -41,22 +48,42 @@ namespace CG
 	class UClothingSimulationInteractor : public UObject
 	{
 	public:
-		unsigned char                                              UnknownData_RXLT[0x8];                                   // 0x0028(0x0008) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_ESC9[0x8];                                   // 0x0028(0x0008) MISSED OFFSET (PADDING)
+
 
 	public:
-		void SetAnimDriveSpringStiffness(float InStiffness);
+
+		void SetAnimDriveSpringStiffness(
+float InStiffness
+);
+
 		void PhysicsAssetUpdated();
+
 		float GetSimulationTime();
+
 		int32_t GetNumSubsteps();
+
 		int32_t GetNumKinematicParticles();
+
 		int32_t GetNumIterations();
+
 		int32_t GetNumDynamicParticles();
+
 		int32_t GetNumCloths();
-		void EnableGravityOverride(const struct FVector& InVector);
+
+		void EnableGravityOverride(
+const struct FVector& InVector
+);
+
 		void DisableGravityOverride();
+
 		void ClothConfigUpdated();
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class ClothingSystemRuntimeInterface.ClothSharedSimConfigBase
@@ -65,8 +92,11 @@ namespace CG
 	class UClothSharedSimConfigBase : public UObject
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class ClothingSystemRuntimeInterface.ClothingAssetBase
@@ -75,12 +105,19 @@ namespace CG
 	class UClothingAssetBase : public UObject
 	{
 	public:
-		class FString                                              ImportedFilePath;                                        // 0x0028(0x0010) Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FGuid                                               AssetGuid;                                               // 0x0038(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
+		class FString                                            ImportedFilePath;                                        // 0x0028(0x0010) Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FGuid                                             AssetGuid;                                               // 0x0038(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class ClothingSystemRuntimeInterface.ClothPhysicalMeshDataBase_Legacy
@@ -89,17 +126,36 @@ namespace CG
 	class UClothPhysicalMeshDataBase_Legacy : public UObject
 	{
 	public:
-		TArray<struct FVector>                                     Vertices;                                                // 0x0028(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		TArray<struct FVector>                                     Normals;                                                 // 0x0038(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		TArray<uint32_t>                                           Indices;                                                 // 0x0048(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		TArray<float>                                              InverseMasses;                                           // 0x0058(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		TArray<struct FClothVertBoneData>                          BoneData;                                                // 0x0068(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		int32_t                                                    NumFixedVerts;                                           // 0x0078(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    MaxBoneWeights;                                          // 0x007C(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		TArray<uint32_t>                                           SelfCollisionIndices;                                    // 0x0080(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_FPS6[0x50];                                  // 0x0090(0x0050) MISSED OFFSET (PADDING)
+
+		TArray<struct FVector>                                   Vertices;                                                // 0x0028(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+
+
+		TArray<struct FVector>                                   Normals;                                                 // 0x0038(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+
+
+		TArray<uint32_t>                                         Indices;                                                 // 0x0048(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+
+
+		TArray<float>                                            InverseMasses;                                           // 0x0058(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+
+
+		TArray<struct FClothVertBoneData>                        BoneData;                                                // 0x0068(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  NumFixedVerts;                                           // 0x0078(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  MaxBoneWeights;                                          // 0x007C(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		TArray<uint32_t>                                         SelfCollisionIndices;                                    // 0x0080(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_1XYE[0x50];                                  // 0x0090(0x0050) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
 

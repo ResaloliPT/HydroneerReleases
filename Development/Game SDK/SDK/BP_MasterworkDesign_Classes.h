@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,26 +14,48 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * BlueprintGeneratedClass BP_MasterworkDesign.BP_MasterworkDesign_C
-	 * Size -> 0x003F (FullSize[0x03A8] - InheritedSize[0x0369])
+	 * Size -> 0x003F (FullSize[0x0408] - InheritedSize[0x03C9])
 	 */
 	class ABP_MasterworkDesign_C : public ABP_ParentTool_C
 	{
 	public:
-		unsigned char                                              UnknownData_IXOD[0x7];                                   // 0x0369(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x0370(0x0008) ZeroConstructor, Transient, DuplicateTransient, UObjectWrapper
-		class UTextRenderComponent*                                TextRender1;                                             // 0x0378(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
-		class UTextRenderComponent*                                TextRender;                                              // 0x0380(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
-		class FName                                                DesignName;                                              // 0x0388(0x0008) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash
-		class UClass*                                              Craftable_Class;                                         // 0x0390(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
-		TArray<struct FS_ResourceEnumAndWeight>                    Requirements;                                            // 0x0398(0x0010) Edit, BlueprintVisible, DisableEditOnInstance
+
+		unsigned char                                            UnknownData_886Y[0x7];                                   // 0x03C9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FPointerToUberGraphFrame                          UberGraphFrame;                                          // 0x03D0(0x0008) ZeroConstructor, Transient, DuplicateTransient, UObjectWrapper
+
+
+		class UTextRenderComponent*                              TextRender1;                                             // 0x03D8(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+
+
+		class UTextRenderComponent*                              TextRender;                                              // 0x03E0(0x0008) BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash
+
+
+		class FName                                              DesignName;                                              // 0x03E8(0x0008) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash
+
+
+		class UClass*                                            Craftable_Class;                                         // 0x03F0(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+
+
+		TArray<struct FS_ResourceEnumAndWeight>                  Requirements;                                            // 0x03F8(0x0010) Edit, BlueprintVisible, DisableEditOnInstance
+
 
 	public:
+
 		void InitDesign();
+
 		void UserConstructionScript();
+
 		void ActorLoaded();
-		void ExecuteUbergraph_BP_MasterworkDesign(int32_t EntryPoint);
+
+		void ExecuteUbergraph_BP_MasterworkDesign(
+int32_t EntryPoint
+);
+
 		static UClass* StaticClass();
 	};
 

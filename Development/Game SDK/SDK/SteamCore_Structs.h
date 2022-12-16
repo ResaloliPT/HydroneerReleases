@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+
 	/**
 	 * Enum SteamCore.ESteamResult
 	 */
@@ -136,6 +137,8 @@ namespace CG
 		MAX                                     = 114
 	};
 
+
+
 	/**
 	 * Enum SteamCore.ESteamMessageType
 	 */
@@ -146,6 +149,8 @@ namespace CG
 		EWarning      = 2,
 		MAX           = 3
 	};
+
+
 
 	/**
 	 * Enum SteamCore.ESteamPersonaChange
@@ -169,6 +174,8 @@ namespace CG
 		MAX                 = 14
 	};
 
+
+
 	/**
 	 * Enum SteamCore.ESteamChatRoomEnterResponse
 	 */
@@ -190,6 +197,8 @@ namespace CG
 		MAX               = 13
 	};
 
+
+
 	/**
 	 * Enum SteamCore.ESteamPlayerAcceptState
 	 */
@@ -200,6 +209,8 @@ namespace CG
 		PlayerDeclined = 2,
 		MAX            = 3
 	};
+
+
 
 	/**
 	 * Enum SteamCore.ESteamAuthSessionResponse
@@ -218,6 +229,8 @@ namespace CG
 		PublisherIssuedBan           = 9,
 		MAX                          = 10
 	};
+
+
 
 	/**
 	 * Enum SteamCore.ESteamDenyReason
@@ -243,6 +256,8 @@ namespace CG
 		MAX                     = 16
 	};
 
+
+
 	/**
 	 * Enum SteamCore.ESteamFavoriteFlags
 	 */
@@ -253,6 +268,8 @@ namespace CG
 		History  = 2,
 		MAX      = 3
 	};
+
+
 
 	/**
 	 * Enum SteamCore.ESteamChatEntryType
@@ -274,6 +291,8 @@ namespace CG
 		MAX              = 12
 	};
 
+
+
 	/**
 	 * Enum SteamCore.ESteamChatMemberStateChange
 	 */
@@ -288,6 +307,8 @@ namespace CG
 		MAX          = 6
 	};
 
+
+
 	/**
 	 * Enum SteamCore.ESteamP2PSessionError
 	 */
@@ -301,6 +322,8 @@ namespace CG
 		Max                    = 5
 	};
 
+
+
 	/**
 	 * Enum SteamCore.ESteamFailureType
 	 */
@@ -310,6 +333,8 @@ namespace CG
 		PipeFail             = 1,
 		MAX                  = 2
 	};
+
+
 
 	/**
 	 * Enum SteamCore.ESteamCheckFileSignature
@@ -323,6 +348,8 @@ namespace CG
 		NoSignaturesFoundForThisFile = 4,
 		MAX                          = 5
 	};
+
+
 
 	/**
 	 * Enum SteamCore.ESteamSubsystem
@@ -356,6 +383,8 @@ namespace CG
 		MAX                = 24
 	};
 
+
+
 	/**
 	 * Enum SteamCore.ESteamOverlayToStoreFlag
 	 */
@@ -366,6 +395,8 @@ namespace CG
 		AddToCartAndShow = 2,
 		MAX              = 3
 	};
+
+
 
 	/**
 	 * Enum SteamCore.ESteamUserRestriction
@@ -382,6 +413,8 @@ namespace CG
 		Trading     = 7,
 		MAX         = 8
 	};
+
+
 
 	/**
 	 * Enum SteamCore.ESteamFriendFlags
@@ -403,6 +436,8 @@ namespace CG
 		MAX                  = 12
 	};
 
+
+
 	/**
 	 * Enum SteamCore.ESteamPersonaState
 	 */
@@ -417,6 +452,8 @@ namespace CG
 		LookingToPlay  = 6,
 		Max            = 7
 	};
+
+
 
 	/**
 	 * Enum SteamCore.ESteamFriendRelationship
@@ -434,6 +471,8 @@ namespace CG
 		Max                  = 8
 	};
 
+
+
 	/**
 	 * Enum SteamCore.ESteamActivateGameOverlayToWebPageMode
 	 */
@@ -443,6 +482,8 @@ namespace CG
 		Modal   = 1,
 		MAX     = 2
 	};
+
+
 
 	/**
 	 * Enum SteamCore.ESteamPlayerResult
@@ -457,6 +498,8 @@ namespace CG
 		Completed       = 5,
 		MAX             = 6
 	};
+
+
 
 	/**
 	 * Enum SteamCore.ESteamGameSearchErrorCode
@@ -476,6 +519,8 @@ namespace CG
 		MAX                               = 10
 	};
 
+
+
 	/**
 	 * Enum SteamCore.ESteamCoreInputLEDFlag
 	 */
@@ -485,6 +530,8 @@ namespace CG
 		RestoreUserDefault = 1,
 		MAX                = 2
 	};
+
+
 
 	/**
 	 * Enum SteamCore.ESteamCoreInputType
@@ -509,6 +556,8 @@ namespace CG
 		MAX                  = 15
 	};
 
+
+
 	/**
 	 * Enum SteamCore.ESteamCoreControllerPad
 	 */
@@ -518,6 +567,8 @@ namespace CG
 		Right = 1,
 		MAX   = 2
 	};
+
+
 
 	/**
 	 * Enum SteamCore.ESteamCoreXboxOrigin
@@ -556,10 +607,12 @@ namespace CG
 		MAX                  = 29
 	};
 
+
+
 	/**
 	 * Enum SteamCore.ESteamCoreInputActionOrigin
 	 */
-	enum class ESteamCoreInputActionOrigin : uint8_t
+	enum class ESteamCoreInputActionOrigin : uint16_t
 	{
 		None                                = 0,
 		SteamController_A                   = 1,
@@ -820,6 +873,8 @@ namespace CG
 		MAX                                 = 256
 	};
 
+
+
 	/**
 	 * Enum SteamCore.ESteamCoreInputSourceMode
 	 */
@@ -844,6 +899,8 @@ namespace CG
 		Switches       = 16,
 		MAX            = 17
 	};
+
+
 
 	/**
 	 * Enum SteamCore.ESteamCoreInputSource
@@ -871,6 +928,8 @@ namespace CG
 		MAX            = 18
 	};
 
+
+
 	/**
 	 * Enum SteamCore.ESteamCoreItemFlags
 	 */
@@ -881,6 +940,8 @@ namespace CG
 		EConsumed = 2,
 		MAX       = 3
 	};
+
+
 
 	/**
 	 * Enum SteamCore.ESteamLobbyDistanceFilter
@@ -893,6 +954,8 @@ namespace CG
 		Worldwide = 3,
 		MAX       = 4
 	};
+
+
 
 	/**
 	 * Enum SteamCore.ESteamLobbyComparison
@@ -908,6 +971,8 @@ namespace CG
 		MAX                  = 6
 	};
 
+
+
 	/**
 	 * Enum SteamCore.ESteamLobbyType
 	 */
@@ -920,6 +985,8 @@ namespace CG
 		MAX         = 4
 	};
 
+
+
 	/**
 	 * Enum SteamCore.ESteamSessionFindType
 	 */
@@ -929,6 +996,8 @@ namespace CG
 		Dedicated = 1,
 		MAX       = 2
 	};
+
+
 
 	/**
 	 * Enum SteamCore.ESteamAudioPlaybackStatus
@@ -942,6 +1011,8 @@ namespace CG
 		MAX       = 4
 	};
 
+
+
 	/**
 	 * Enum SteamCore.ESteamP2PSend
 	 */
@@ -953,6 +1024,8 @@ namespace CG
 		ReliableWithBuffering = 3,
 		MAX                   = 4
 	};
+
+
 
 	/**
 	 * Enum SteamCore.ESteamParentalFeature
@@ -975,6 +1048,8 @@ namespace CG
 		Max           = 13
 	};
 
+
+
 	/**
 	 * Enum SteamCore.ESteamPartiesBeaconLocationData
 	 */
@@ -988,6 +1063,8 @@ namespace CG
 		MAX           = 5
 	};
 
+
+
 	/**
 	 * Enum SteamCore.ESteamPartiesBeaconLocationType
 	 */
@@ -997,6 +1074,8 @@ namespace CG
 		ChatGroup = 1,
 		Max       = 2
 	};
+
+
 
 	/**
 	 * Enum SteamCore.ESteamCoreDeviceFormFactor
@@ -1011,6 +1090,8 @@ namespace CG
 		MAX      = 5
 	};
 
+
+
 	/**
 	 * Enum SteamCore.ESteamUGCReadAction
 	 */
@@ -1021,6 +1102,8 @@ namespace CG
 		k_EUGCRead_Close                        = 2,
 		k_EUGCRead_MAX                          = 3
 	};
+
+
 
 	/**
 	 * Enum SteamCore.ESteamRemoteStoragePlatform
@@ -1037,6 +1120,8 @@ namespace CG
 		MAX       = 7
 	};
 
+
+
 	/**
 	 * Enum SteamCore.ESteamVRScreenshotType
 	 */
@@ -1050,6 +1135,8 @@ namespace CG
 		StereoPanorama = 5,
 		MAX            = 6
 	};
+
+
 
 	/**
 	 * Enum SteamCore.ESteamAccountType
@@ -1070,6 +1157,8 @@ namespace CG
 		Max            = 11
 	};
 
+
+
 	/**
 	 * Enum SteamCore.ESteamBeginAuthSessionResult
 	 */
@@ -1084,6 +1173,8 @@ namespace CG
 		MAX              = 6
 	};
 
+
+
 	/**
 	 * Enum SteamCore.ESteamUserHasLicenseForAppResult
 	 */
@@ -1094,6 +1185,8 @@ namespace CG
 		NoAuth             = 2,
 		MAX                = 3
 	};
+
+
 
 	/**
 	 * Enum SteamCore.EOnlineComparison
@@ -1108,6 +1201,8 @@ namespace CG
 		LessThanEquals    = 5,
 		MAX               = 6
 	};
+
+
 
 	/**
 	 * Enum SteamCore.ESteamComparisonOp
@@ -1126,6 +1221,8 @@ namespace CG
 		MAX               = 9
 	};
 
+
+
 	/**
 	 * Enum SteamCore.ESteamRemoteStoragePublishedFileVisibility
 	 */
@@ -1136,6 +1233,8 @@ namespace CG
 		Private     = 2,
 		MAX         = 3
 	};
+
+
 
 	/**
 	 * Enum SteamCore.ESteamWorkshopFileType
@@ -1162,6 +1261,8 @@ namespace CG
 		Max                    = 17
 	};
 
+
+
 	/**
 	 * Enum SteamCore.ESteamItemPreviewType
 	 */
@@ -1175,6 +1276,8 @@ namespace CG
 		ReservedMax                    = 5,
 		MAX                            = 6
 	};
+
+
 
 	/**
 	 * Enum SteamCore.ESteamItemStatistic
@@ -1197,6 +1300,8 @@ namespace CG
 		MAX                                 = 13
 	};
 
+
+
 	/**
 	 * Enum SteamCore.ESteamItemState
 	 */
@@ -1212,6 +1317,8 @@ namespace CG
 		MAX             = 7
 	};
 
+
+
 	/**
 	 * Enum SteamCore.ESteamItemUpdateStatus
 	 */
@@ -1225,6 +1332,8 @@ namespace CG
 		CommittingChanges    = 5,
 		MAX                  = 6
 	};
+
+
 
 	/**
 	 * Enum SteamCore.ESteamUGCQuery
@@ -1253,6 +1362,8 @@ namespace CG
 		MAX                                           = 19
 	};
 
+
+
 	/**
 	 * Enum SteamCore.ESteamUserUGCListSortOrder
 	 */
@@ -1267,6 +1378,8 @@ namespace CG
 		ForModeration        = 6,
 		MAX                  = 7
 	};
+
+
 
 	/**
 	 * Enum SteamCore.ESteamUserUGCList
@@ -1284,6 +1397,8 @@ namespace CG
 		Followed      = 8,
 		MAX           = 9
 	};
+
+
 
 	/**
 	 * Enum SteamCore.ESteamUGCMatchingUGCType
@@ -1307,6 +1422,8 @@ namespace CG
 		MAX                = 14
 	};
 
+
+
 	/**
 	 * Enum SteamCore.ESteamLeaderboardUploadScoreMethod
 	 */
@@ -1317,6 +1434,8 @@ namespace CG
 		ForceUpdate = 2,
 		MAX         = 3
 	};
+
+
 
 	/**
 	 * Enum SteamCore.ESteamLeaderboardDisplayType
@@ -1330,6 +1449,8 @@ namespace CG
 		MAX              = 4
 	};
 
+
+
 	/**
 	 * Enum SteamCore.ESteamLeaderboardSortMethod
 	 */
@@ -1340,6 +1461,8 @@ namespace CG
 		Descending = 2,
 		MAX        = 3
 	};
+
+
 
 	/**
 	 * Enum SteamCore.ESteamLeaderboardDataRequest
@@ -1352,6 +1475,8 @@ namespace CG
 		Users            = 3,
 		MAX              = 4
 	};
+
+
 
 	/**
 	 * Enum SteamCore.ESteamVoiceResult
@@ -1371,6 +1496,8 @@ namespace CG
 		MAX                  = 10
 	};
 
+
+
 	/**
 	 * Enum SteamCore.ESteamCoreIdentical
 	 */
@@ -1381,6 +1508,8 @@ namespace CG
 		MAX          = 2
 	};
 
+
+
 	/**
 	 * Enum SteamCore.ESteamCoreValid
 	 */
@@ -1390,6 +1519,8 @@ namespace CG
 		NotValid = 1,
 		MAX      = 2
 	};
+
+
 
 	/**
 	 * Enum SteamCore.ESteamUniverse
@@ -1404,6 +1535,8 @@ namespace CG
 		Max      = 5
 	};
 
+
+
 	/**
 	 * Enum SteamCore.ESteamNotificationPosition
 	 */
@@ -1416,6 +1549,8 @@ namespace CG
 		MAX         = 4
 	};
 
+
+
 	/**
 	 * Enum SteamCore.ESteamGamepadTextInputMode
 	 */
@@ -1426,6 +1561,8 @@ namespace CG
 		MAX      = 2
 	};
 
+
+
 	/**
 	 * Enum SteamCore.ESteamGamepadTextInputLineMode
 	 */
@@ -1435,6 +1572,8 @@ namespace CG
 		MultipleLines = 1,
 		MAX           = 2
 	};
+
+
 
 	/**
 	 * Enum SteamCore.ESteamTextFilteringContext
@@ -1447,6 +1586,8 @@ namespace CG
 		k_ETextFilteringContextName        = 3,
 		k_MAX                              = 4
 	};
+
+
 
 	/**
 	 * Enum SteamCore.ESteamBroadcastUploadResult
@@ -1473,6 +1614,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+
 	/**
 	 * ScriptStruct SteamCore.SteamInventoryResult
 	 * Size -> 0x0004
@@ -1480,8 +1622,12 @@ namespace CG
 	struct FSteamInventoryResult
 	{
 	public:
-		int32_t                                                    Value;                                                   // 0x0000(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
+		int32_t                                                  Value;                                                   // 0x0000(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SteamInventoryResultReady
@@ -1490,10 +1636,18 @@ namespace CG
 	struct FSteamInventoryResultReady
 	{
 	public:
-		struct FSteamInventoryResult                               Handle;                                                  // 0x0000(0x0004) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESteamResult                                               Result;                                                  // 0x0004(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_R7HE[0x3];                                   // 0x0005(0x0003) MISSED OFFSET (PADDING)
+
+		struct FSteamInventoryResult                             Handle;                                                  // 0x0000(0x0004) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		ESteamResult                                             Result;                                                  // 0x0004(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_SH3B[0x3];                                   // 0x0005(0x0003) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SteamInventoryFullUpdate
@@ -1502,8 +1656,12 @@ namespace CG
 	struct FSteamInventoryFullUpdate
 	{
 	public:
-		struct FSteamInventoryResult                               Handle;                                                  // 0x0000(0x0004) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		struct FSteamInventoryResult                             Handle;                                                  // 0x0000(0x0004) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SteamInventoryStartPurchaseResult
@@ -1512,11 +1670,21 @@ namespace CG
 	struct FSteamInventoryStartPurchaseResult
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_OMDI[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FString                                              OrderId;                                                 // 0x0008(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                              TransactionId;                                           // 0x0018(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_RSXC[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		class FString                                            OrderId;                                                 // 0x0008(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FString                                            TransactionId;                                           // 0x0018(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SteamInventoryRequestPricesResult
@@ -1525,10 +1693,18 @@ namespace CG
 	struct FSteamInventoryRequestPricesResult
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_BPON[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FString                                              Currency;                                                // 0x0008(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_NR1E[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		class FString                                            Currency;                                                // 0x0008(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SteamID
@@ -1537,8 +1713,12 @@ namespace CG
 	struct FSteamID
 	{
 	public:
-		unsigned char                                              UnknownData_MP8F[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_XKAU[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SteamInventoryEligiblePromoItemDefIDs
@@ -1547,13 +1727,27 @@ namespace CG
 	struct FSteamInventoryEligiblePromoItemDefIDs
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_90VQ[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FSteamID                                            SteamID;                                                 // 0x0008(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    NumEligiblePromoItemDefs;                                // 0x0010(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bCachedData;                                             // 0x0014(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_RUW1[0x3];                                   // 0x0015(0x0003) MISSED OFFSET (PADDING)
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_J6H8[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FSteamID                                          SteamID;                                                 // 0x0008(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  NumEligiblePromoItemDefs;                                // 0x0010(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bCachedData;                                             // 0x0014(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_RRAP[0x3];                                   // 0x0015(0x0003) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SteamAppInstalled
@@ -1562,8 +1756,12 @@ namespace CG
 	struct FSteamAppInstalled
 	{
 	public:
-		int32_t                                                    AppID;                                                   // 0x0000(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		int32_t                                                  AppID;                                                   // 0x0000(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SteamAppUninstalled
@@ -1572,8 +1770,12 @@ namespace CG
 	struct FSteamAppUninstalled
 	{
 	public:
-		int32_t                                                    AppID;                                                   // 0x0000(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		int32_t                                                  AppID;                                                   // 0x0000(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.FileDetailsResult
@@ -1582,12 +1784,24 @@ namespace CG
 	struct FFileDetailsResult
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_R3C1[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		int32_t                                                    FileSize;                                                // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                              SHA;                                                     // 0x0008(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		TArray<int32_t>                                            Flags;                                                   // 0x0018(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_EN5N[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		int32_t                                                  FileSize;                                                // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FString                                            SHA;                                                     // 0x0008(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		TArray<int32_t>                                          Flags;                                                   // 0x0018(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.DLCInstalled
@@ -1596,8 +1810,12 @@ namespace CG
 	struct FDLCInstalled
 	{
 	public:
-		int32_t                                                    AppID;                                                   // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		int32_t                                                  AppID;                                                   // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.GameOverlayActivated
@@ -1606,8 +1824,12 @@ namespace CG
 	struct FGameOverlayActivated
 	{
 	public:
-		bool                                                       bActive;                                                 // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		bool                                                     bActive;                                                 // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.AvatarImageLoaded
@@ -1616,10 +1838,18 @@ namespace CG
 	struct FAvatarImageLoaded
 	{
 	public:
-		struct FSteamID                                            SteamID;                                                 // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UTexture2D*                                          Image;                                                   // 0x0008(0x0008) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_P7GI[0x10];                                  // 0x0010(0x0010) MISSED OFFSET (PADDING)
+
+		struct FSteamID                                          SteamID;                                                 // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class UTexture2D*                                        Image;                                                   // 0x0008(0x0008) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_PAG1[0x10];                                  // 0x0010(0x0010) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.GameServerChangeRequested
@@ -1628,9 +1858,15 @@ namespace CG
 	struct FGameServerChangeRequested
 	{
 	public:
-		class FString                                              Server;                                                  // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                              Password;                                                // 0x0010(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		class FString                                            Server;                                                  // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FString                                            Password;                                                // 0x0010(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.GameConnectedFriendChatMsg
@@ -1639,10 +1875,18 @@ namespace CG
 	struct FGameConnectedFriendChatMsg
 	{
 	public:
-		struct FSteamID                                            SteamIDUser;                                             // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    MessageID;                                               // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_KHEO[0x4];                                   // 0x000C(0x0004) MISSED OFFSET (PADDING)
+
+		struct FSteamID                                          SteamIDUser;                                             // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  MessageID;                                               // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_ZGV5[0x4];                                   // 0x000C(0x0004) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.GameLobbyJoinRequested
@@ -1651,9 +1895,15 @@ namespace CG
 	struct FGameLobbyJoinRequested
 	{
 	public:
-		struct FSteamID                                            SteamIDLobby;                                            // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FSteamID                                            SteamIDFriend;                                           // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		struct FSteamID                                          SteamIDLobby;                                            // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FSteamID                                          SteamIDFriend;                                           // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.GameRichPresenceJoinRequested
@@ -1662,9 +1912,15 @@ namespace CG
 	struct FGameRichPresenceJoinRequested
 	{
 	public:
-		struct FSteamID                                            SteamIDFriend;                                           // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                              Connect;                                                 // 0x0008(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		struct FSteamID                                          SteamIDFriend;                                           // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FString                                            Connect;                                                 // 0x0008(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.PersonaStateChange
@@ -1673,9 +1929,15 @@ namespace CG
 	struct FPersonaStateChange
 	{
 	public:
-		struct FSteamID                                            SteamID;                                                 // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		TArray<ESteamPersonaChange>                                Flags;                                                   // 0x0008(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
+
+		struct FSteamID                                          SteamID;                                                 // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		TArray<ESteamPersonaChange>                              Flags;                                                   // 0x0008(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.ClanOfficerListResponse
@@ -1684,11 +1946,21 @@ namespace CG
 	struct FClanOfficerListResponse
 	{
 	public:
-		struct FSteamID                                            SteamIDClan;                                             // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    Officers;                                                // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bSuccess;                                                // 0x000C(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_B8E5[0x3];                                   // 0x000D(0x0003) MISSED OFFSET (PADDING)
+
+		struct FSteamID                                          SteamIDClan;                                             // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  Officers;                                                // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bSuccess;                                                // 0x000C(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_7TI2[0x3];                                   // 0x000D(0x0003) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.FriendRichPresenceUpdate
@@ -1697,10 +1969,18 @@ namespace CG
 	struct FFriendRichPresenceUpdate
 	{
 	public:
-		struct FSteamID                                            SteamIDFriend;                                           // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    AppID;                                                   // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_M7QW[0x4];                                   // 0x000C(0x0004) MISSED OFFSET (PADDING)
+
+		struct FSteamID                                          SteamIDFriend;                                           // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  AppID;                                                   // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_1N67[0x4];                                   // 0x000C(0x0004) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.GameConnectedClanChatMsg
@@ -1709,11 +1989,21 @@ namespace CG
 	struct FGameConnectedClanChatMsg
 	{
 	public:
-		struct FSteamID                                            SteamIDUser;                                             // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FSteamID                                            SteamIDClanChat;                                         // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    MessageID;                                               // 0x0010(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_O9TM[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (PADDING)
+
+		struct FSteamID                                          SteamIDUser;                                             // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FSteamID                                          SteamIDClanChat;                                         // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  MessageID;                                               // 0x0010(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_8G9F[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.GameConnectedChatJoin
@@ -1722,9 +2012,15 @@ namespace CG
 	struct FGameConnectedChatJoin
 	{
 	public:
-		struct FSteamID                                            SteamIDClanChat;                                         // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FSteamID                                            SteamIDUser;                                             // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		struct FSteamID                                          SteamIDClanChat;                                         // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FSteamID                                          SteamIDUser;                                             // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.GameConnectedChatLeave
@@ -1733,12 +2029,24 @@ namespace CG
 	struct FGameConnectedChatLeave
 	{
 	public:
-		struct FSteamID                                            SteamIDClanChat;                                         // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FSteamID                                            SteamIDUser;                                             // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bKicked;                                                 // 0x0010(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bDropped;                                                // 0x0011(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_0MPL[0x6];                                   // 0x0012(0x0006) MISSED OFFSET (PADDING)
+
+		struct FSteamID                                          SteamIDClanChat;                                         // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FSteamID                                          SteamIDUser;                                             // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bKicked;                                                 // 0x0010(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bDropped;                                                // 0x0011(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_F80W[0x6];                                   // 0x0012(0x0006) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.DownloadClanActivityCountsResult
@@ -1747,8 +2055,12 @@ namespace CG
 	struct FDownloadClanActivityCountsResult
 	{
 	public:
-		bool                                                       bSuccess;                                                // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		bool                                                     bSuccess;                                                // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.JoinClanChatRoomCompletionResult
@@ -1757,10 +2069,18 @@ namespace CG
 	struct FJoinClanChatRoomCompletionResult
 	{
 	public:
-		struct FSteamID                                            SteamIDClanChat;                                         // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESteamChatRoomEnterResponse                                ChatRoomEnterResponse;                                   // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_ADHG[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (PADDING)
+
+		struct FSteamID                                          SteamIDClanChat;                                         // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		ESteamChatRoomEnterResponse                              ChatRoomEnterResponse;                                   // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_GYVO[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SetPersonaNameResponse
@@ -1769,10 +2089,18 @@ namespace CG
 	struct FSetPersonaNameResponse
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bSuccess;                                                // 0x0001(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bLocalSuccess;                                           // 0x0002(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bSuccess;                                                // 0x0001(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bLocalSuccess;                                           // 0x0002(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.FriendsGetFollowerCount
@@ -1781,12 +2109,24 @@ namespace CG
 	struct FFriendsGetFollowerCount
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_ZUP1[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FSteamID                                            SteamID;                                                 // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    Count;                                                   // 0x0010(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_3H5X[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (PADDING)
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_70EZ[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FSteamID                                          SteamID;                                                 // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  Count;                                                   // 0x0010(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_1CCS[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.FriendsIsFollowing
@@ -1795,12 +2135,24 @@ namespace CG
 	struct FFriendsIsFollowing
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_FIVH[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FSteamID                                            SteamID;                                                 // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bIsFollowing;                                            // 0x0010(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_5YF0[0x7];                                   // 0x0011(0x0007) MISSED OFFSET (PADDING)
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_PU27[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FSteamID                                          SteamID;                                                 // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bIsFollowing;                                            // 0x0010(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_2FWN[0x7];                                   // 0x0011(0x0007) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.FriendsEnumerateFollowingList
@@ -1809,12 +2161,24 @@ namespace CG
 	struct FFriendsEnumerateFollowingList
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_BA8S[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<struct FSteamID>                                    SteamIDs;                                                // 0x0008(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
-		int32_t                                                    Results;                                                 // 0x0018(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    TotalResult;                                             // 0x001C(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_R7V0[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		TArray<struct FSteamID>                                  SteamIDs;                                                // 0x0008(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  Results;                                                 // 0x0018(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  TotalResult;                                             // 0x001C(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SearchForGameProgressCallback
@@ -1823,14 +2187,30 @@ namespace CG
 	struct FSearchForGameProgressCallback
 	{
 	public:
-		class FString                                              SearchID;                                                // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESteamResult                                               Result;                                                  // 0x0010(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_LPQT[0x7];                                   // 0x0011(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FSteamID                                            LobbyID;                                                 // 0x0018(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FSteamID                                            SteamIDEndedSearch;                                      // 0x0020(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    SecondsRemainingEstimate;                                // 0x0028(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    PlayersSearching;                                        // 0x002C(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		class FString                                            SearchID;                                                // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		ESteamResult                                             Result;                                                  // 0x0010(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_KHN2[0x7];                                   // 0x0011(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FSteamID                                          LobbyID;                                                 // 0x0018(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FSteamID                                          SteamIDEndedSearch;                                      // 0x0020(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  SecondsRemainingEstimate;                                // 0x0028(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  PlayersSearching;                                        // 0x002C(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SearchForGameResultCallback
@@ -1839,16 +2219,36 @@ namespace CG
 	struct FSearchForGameResultCallback
 	{
 	public:
-		class FString                                              SearchID;                                                // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESteamResult                                               Result;                                                  // 0x0010(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_IY7X[0x3];                                   // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		int32_t                                                    CountPlayersInGame;                                      // 0x0014(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    CountAcceptedGame;                                       // 0x0018(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_6AB1[0x4];                                   // 0x001C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FSteamID                                            SteamIDHost;                                             // 0x0020(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bFinalCallback;                                          // 0x0028(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_S5AX[0x7];                                   // 0x0029(0x0007) MISSED OFFSET (PADDING)
+
+		class FString                                            SearchID;                                                // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		ESteamResult                                             Result;                                                  // 0x0010(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_6ST9[0x3];                                   // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		int32_t                                                  CountPlayersInGame;                                      // 0x0014(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  CountAcceptedGame;                                       // 0x0018(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_TZ2S[0x4];                                   // 0x001C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FSteamID                                          SteamIDHost;                                             // 0x0020(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bFinalCallback;                                          // 0x0028(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_W5W3[0x7];                                   // 0x0029(0x0007) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.RequestPlayersForGameProgressCallback
@@ -1857,10 +2257,18 @@ namespace CG
 	struct FRequestPlayersForGameProgressCallback
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_EJHP[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FString                                              SearchID;                                                // 0x0008(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_EL2W[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		class FString                                            SearchID;                                                // 0x0008(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.RequestPlayersForGameResultCallback
@@ -1869,20 +2277,48 @@ namespace CG
 	struct FRequestPlayersForGameResultCallback
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_QQCU[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FString                                              SearchID;                                                // 0x0008(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FSteamID                                            SteamIDPlayerFound;                                      // 0x0018(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FSteamID                                            SteamIDLobby;                                            // 0x0020(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESteamPlayerAcceptState                                    PlayerAcceptState;                                       // 0x0028(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_WUYE[0x3];                                   // 0x0029(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		int32_t                                                    PlayerIndex;                                             // 0x002C(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    TotalPlayersFound;                                       // 0x0030(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    TotalPlayersAcceptedGame;                                // 0x0034(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    SuggestedTeamIndex;                                      // 0x0038(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_WLXY[0x4];                                   // 0x003C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FString                                              UniqueGameID;                                            // 0x0040(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_N7TW[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		class FString                                            SearchID;                                                // 0x0008(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FSteamID                                          SteamIDPlayerFound;                                      // 0x0018(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FSteamID                                          SteamIDLobby;                                            // 0x0020(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		ESteamPlayerAcceptState                                  PlayerAcceptState;                                       // 0x0028(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_JHER[0x3];                                   // 0x0029(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		int32_t                                                  PlayerIndex;                                             // 0x002C(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  TotalPlayersFound;                                       // 0x0030(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  TotalPlayersAcceptedGame;                                // 0x0034(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  SuggestedTeamIndex;                                      // 0x0038(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_PWIW[0x4];                                   // 0x003C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		class FString                                            UniqueGameID;                                            // 0x0040(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.RequestPlayersForGameFinalResultCallback
@@ -1891,11 +2327,21 @@ namespace CG
 	struct FRequestPlayersForGameFinalResultCallback
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_BUGL[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FString                                              SearchID;                                                // 0x0008(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                              UniqueGameID;                                            // 0x0018(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_JW56[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		class FString                                            SearchID;                                                // 0x0008(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FString                                            UniqueGameID;                                            // 0x0018(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SubmitPlayerResultResultCallback
@@ -1904,11 +2350,21 @@ namespace CG
 	struct FSubmitPlayerResultResultCallback
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_DMZ4[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FString                                              UniqueGameID;                                            // 0x0008(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FSteamID                                            SteamIDPlayer;                                           // 0x0018(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_K5GC[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		class FString                                            UniqueGameID;                                            // 0x0008(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FSteamID                                          SteamIDPlayer;                                           // 0x0018(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.EndGameResultCallback
@@ -1917,10 +2373,18 @@ namespace CG
 	struct FEndGameResultCallback
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_JQC6[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FString                                              UniqueGameID;                                            // 0x0008(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_UH1J[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		class FString                                            UniqueGameID;                                            // 0x0008(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.AssociateWithClanResult
@@ -1929,8 +2393,12 @@ namespace CG
 	struct FAssociateWithClanResult
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.ComputeNewPlayerCompatibilityResult
@@ -1939,13 +2407,27 @@ namespace CG
 	struct FComputeNewPlayerCompatibilityResult
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_Q40A[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		int32_t                                                    PlayersThatDontLikeCandidate;                            // 0x0004(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    PlayersThatCandidateDoesntLike;                          // 0x0008(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    ClanPlayersThatDontLikeCandidate;                        // 0x000C(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FSteamID                                            SteamIDCandidate;                                        // 0x0010(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_JW57[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		int32_t                                                  PlayersThatDontLikeCandidate;                            // 0x0004(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  PlayersThatCandidateDoesntLike;                          // 0x0008(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  ClanPlayersThatDontLikeCandidate;                        // 0x000C(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FSteamID                                          SteamIDCandidate;                                        // 0x0010(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.GSPolicyResponse
@@ -1954,8 +2436,12 @@ namespace CG
 	struct FGSPolicyResponse
 	{
 	public:
-		bool                                                       BSecure;                                                 // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		bool                                                     BSecure;                                                 // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.GSClientGroupStatus
@@ -1964,12 +2450,24 @@ namespace CG
 	struct FGSClientGroupStatus
 	{
 	public:
-		struct FSteamID                                            SteamIDUser;                                             // 0x0000(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FSteamID                                            SteamIDGroup;                                            // 0x0008(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bMember;                                                 // 0x0010(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bOfficer;                                                // 0x0011(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_QHVU[0x6];                                   // 0x0012(0x0006) MISSED OFFSET (PADDING)
+
+		struct FSteamID                                          SteamIDUser;                                             // 0x0000(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FSteamID                                          SteamIDGroup;                                            // 0x0008(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bMember;                                                 // 0x0010(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bOfficer;                                                // 0x0011(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_GNVT[0x6];                                   // 0x0012(0x0006) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.ValidateAuthTicketResponse
@@ -1978,11 +2476,21 @@ namespace CG
 	struct FValidateAuthTicketResponse
 	{
 	public:
-		struct FSteamID                                            SteamID;                                                 // 0x0000(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESteamAuthSessionResponse                                  AuthSessionResponse;                                     // 0x0008(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_6NFT[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FSteamID                                            OwnerSteamID;                                            // 0x0010(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		struct FSteamID                                          SteamID;                                                 // 0x0000(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		ESteamAuthSessionResponse                                AuthSessionResponse;                                     // 0x0008(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_PR20[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FSteamID                                          OwnerSteamID;                                            // 0x0010(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.GSClientApprove
@@ -1991,9 +2499,15 @@ namespace CG
 	struct FGSClientApprove
 	{
 	public:
-		struct FSteamID                                            SteamID;                                                 // 0x0000(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FSteamID                                            OwnerSteamID;                                            // 0x0008(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		struct FSteamID                                          SteamID;                                                 // 0x0000(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FSteamID                                          OwnerSteamID;                                            // 0x0008(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.GSClientDeny
@@ -2002,11 +2516,21 @@ namespace CG
 	struct FGSClientDeny
 	{
 	public:
-		struct FSteamID                                            SteamID;                                                 // 0x0000(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESteamDenyReason                                           DenyReason;                                              // 0x0008(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_8UO4[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FString                                              OptionalText;                                            // 0x0010(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		struct FSteamID                                          SteamID;                                                 // 0x0000(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		ESteamDenyReason                                         DenyReason;                                              // 0x0008(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_98XT[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		class FString                                            OptionalText;                                            // 0x0010(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.GSStatsReceived
@@ -2015,10 +2539,18 @@ namespace CG
 	struct FGSStatsReceived
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_R7P4[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FSteamID                                            SteamIDUser;                                             // 0x0008(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_G4ZL[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FSteamID                                          SteamIDUser;                                             // 0x0008(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.GSStatsStored
@@ -2027,10 +2559,18 @@ namespace CG
 	struct FGSStatsStored
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_IQY4[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FSteamID                                            SteamIDUser;                                             // 0x0008(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_GN7L[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FSteamID                                          SteamIDUser;                                             // 0x0008(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.GSStatsUnloaded
@@ -2039,8 +2579,12 @@ namespace CG
 	struct FGSStatsUnloaded
 	{
 	public:
-		struct FSteamID                                            SteamIDUser;                                             // 0x0000(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		struct FSteamID                                          SteamIDUser;                                             // 0x0000(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.FavoritesListAccountsUpdated
@@ -2049,8 +2593,12 @@ namespace CG
 	struct FFavoritesListAccountsUpdated
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.FavoritesListChanged
@@ -2059,16 +2607,36 @@ namespace CG
 	struct FFavoritesListChanged
 	{
 	public:
-		class FString                                              IP;                                                      // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    QueryPort;                                               // 0x0010(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    ConnectionPort;                                          // 0x0014(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    AppID;                                                   // 0x0018(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_YXFD[0x4];                                   // 0x001C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<ESteamFavoriteFlags>                                Flags;                                                   // 0x0020(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
-		bool                                                       bAdd;                                                    // 0x0030(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_78A5[0x7];                                   // 0x0031(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FSteamID                                            SteamID;                                                 // 0x0038(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		class FString                                            IP;                                                      // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  QueryPort;                                               // 0x0010(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  ConnectionPort;                                          // 0x0014(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  AppID;                                                   // 0x0018(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_YWP0[0x4];                                   // 0x001C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		TArray<ESteamFavoriteFlags>                              Flags;                                                   // 0x0020(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
+
+
+		bool                                                     bAdd;                                                    // 0x0030(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_JMDE[0x7];                                   // 0x0031(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FSteamID                                          SteamID;                                                 // 0x0038(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.LobbyChatMsg
@@ -2077,12 +2645,24 @@ namespace CG
 	struct FLobbyChatMsg
 	{
 	public:
-		struct FSteamID                                            SteamIDLobby;                                            // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FSteamID                                            SteamIDUser;                                             // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESteamChatEntryType                                        ChatEntryType;                                           // 0x0010(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_6WXF[0x3];                                   // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		int32_t                                                    ChatID;                                                  // 0x0014(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		struct FSteamID                                          SteamIDLobby;                                            // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FSteamID                                          SteamIDUser;                                             // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		ESteamChatEntryType                                      ChatEntryType;                                           // 0x0010(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_5CKJ[0x3];                                   // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		int32_t                                                  ChatID;                                                  // 0x0014(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.LobbyChatUpdate
@@ -2091,11 +2671,21 @@ namespace CG
 	struct FLobbyChatUpdate
 	{
 	public:
-		struct FSteamID                                            SteamIDLobby;                                            // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FSteamID                                            SteamIDUserChanged;                                      // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FSteamID                                            SteamIDMakingChange;                                     // 0x0010(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		TArray<ESteamChatMemberStateChange>                        ChatMemberStateChange;                                   // 0x0018(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
+
+		struct FSteamID                                          SteamIDLobby;                                            // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FSteamID                                          SteamIDUserChanged;                                      // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FSteamID                                          SteamIDMakingChange;                                     // 0x0010(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		TArray<ESteamChatMemberStateChange>                      ChatMemberStateChange;                                   // 0x0018(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.LobbyDataUpdate
@@ -2104,11 +2694,21 @@ namespace CG
 	struct FLobbyDataUpdate
 	{
 	public:
-		struct FSteamID                                            SteamIDLobby;                                            // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FSteamID                                            SteamIDMember;                                           // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bSuccess;                                                // 0x0010(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_FN33[0x7];                                   // 0x0011(0x0007) MISSED OFFSET (PADDING)
+
+		struct FSteamID                                          SteamIDLobby;                                            // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FSteamID                                          SteamIDMember;                                           // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bSuccess;                                                // 0x0010(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_14FV[0x7];                                   // 0x0011(0x0007) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.LobbyEnterData
@@ -2117,11 +2717,21 @@ namespace CG
 	struct FLobbyEnterData
 	{
 	public:
-		struct FSteamID                                            SteamIDLobby;                                            // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bLocked;                                                 // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESteamChatRoomEnterResponse                                ChatRoomEnterResponse;                                   // 0x0009(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_J95W[0x6];                                   // 0x000A(0x0006) MISSED OFFSET (PADDING)
+
+		struct FSteamID                                          SteamIDLobby;                                            // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bLocked;                                                 // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		ESteamChatRoomEnterResponse                              ChatRoomEnterResponse;                                   // 0x0009(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_NV7H[0x6];                                   // 0x000A(0x0006) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.LobbyGameCreated
@@ -2130,12 +2740,24 @@ namespace CG
 	struct FLobbyGameCreated
 	{
 	public:
-		struct FSteamID                                            SteamIDLobby;                                            // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FSteamID                                            SteamIDGameServer;                                       // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                              IP;                                                      // 0x0010(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    Port;                                                    // 0x0020(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_35AJ[0x4];                                   // 0x0024(0x0004) MISSED OFFSET (PADDING)
+
+		struct FSteamID                                          SteamIDLobby;                                            // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FSteamID                                          SteamIDGameServer;                                       // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FString                                            IP;                                                      // 0x0010(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  Port;                                                    // 0x0020(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_CAH7[0x4];                                   // 0x0024(0x0004) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SteamGameID
@@ -2144,8 +2766,12 @@ namespace CG
 	struct FSteamGameID
 	{
 	public:
-		unsigned char                                              UnknownData_7VST[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_WKBH[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.LobbyInviteData
@@ -2154,10 +2780,18 @@ namespace CG
 	struct FLobbyInviteData
 	{
 	public:
-		struct FSteamID                                            SteamIDUser;                                             // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FSteamID                                            SteamIDLobby;                                            // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FSteamGameID                                        GameID;                                                  // 0x0010(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		struct FSteamID                                          SteamIDUser;                                             // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FSteamID                                          SteamIDLobby;                                            // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FSteamGameID                                      GameID;                                                  // 0x0010(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.LobbyKickedData
@@ -2166,11 +2800,21 @@ namespace CG
 	struct FLobbyKickedData
 	{
 	public:
-		struct FSteamID                                            SteamIDLobby;                                            // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FSteamID                                            SteamIDAdmin;                                            // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bKickedDueToDisconnect;                                  // 0x0010(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_J25B[0x7];                                   // 0x0011(0x0007) MISSED OFFSET (PADDING)
+
+		struct FSteamID                                          SteamIDLobby;                                            // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FSteamID                                          SteamIDAdmin;                                            // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bKickedDueToDisconnect;                                  // 0x0010(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_M9IY[0x7];                                   // 0x0011(0x0007) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.LobbyMatchList
@@ -2179,8 +2823,12 @@ namespace CG
 	struct FLobbyMatchList
 	{
 	public:
-		int32_t                                                    LobbiesMatching;                                         // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		int32_t                                                  LobbiesMatching;                                         // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.CreateLobbyData
@@ -2189,10 +2837,18 @@ namespace CG
 	struct FCreateLobbyData
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_O6EU[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FSteamID                                            SteamIDLobby;                                            // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_2L9K[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FSteamID                                          SteamIDLobby;                                            // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.JoinLobbyData
@@ -2201,11 +2857,21 @@ namespace CG
 	struct FJoinLobbyData
 	{
 	public:
-		struct FSteamID                                            SteamIDLobby;                                            // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bLocked;                                                 // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESteamChatRoomEnterResponse                                ChatRoomEnterResponse;                                   // 0x0009(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_6HAR[0x6];                                   // 0x000A(0x0006) MISSED OFFSET (PADDING)
+
+		struct FSteamID                                          SteamIDLobby;                                            // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bLocked;                                                 // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		ESteamChatRoomEnterResponse                              ChatRoomEnterResponse;                                   // 0x0009(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_EM6B[0x6];                                   // 0x000A(0x0006) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SteamSessionSetting
@@ -2214,8 +2880,12 @@ namespace CG
 	struct FSteamSessionSetting
 	{
 	public:
-		unsigned char                                              UnknownData_8KOD[0x28];                                  // 0x0000(0x0028) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_JGD7[0x28];                                  // 0x0000(0x0028) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SteamSessionResult
@@ -2224,9 +2894,15 @@ namespace CG
 	struct FSteamSessionResult
 	{
 	public:
-		struct FBlueprintSessionResult                             Result;                                                  // 0x0000(0x0108) Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic
-		TArray<struct FSteamSessionSetting>                        SessionSettings;                                         // 0x0108(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
+
+		struct FBlueprintSessionResult                           Result;                                                  // 0x0000(0x0108) Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic
+
+
+		TArray<struct FSteamSessionSetting>                      SessionSettings;                                         // 0x0108(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SteamServerAddr
@@ -2235,12 +2911,24 @@ namespace CG
 	struct FSteamServerAddr
 	{
 	public:
-		class FString                                              IP;                                                      // 0x0000(0x0010) BlueprintVisible, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		int32_t                                                    Port;                                                    // 0x0010(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		int32_t                                                    QueryPort;                                               // 0x0014(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		class FString                                              ConnectionAddressString;                                 // 0x0018(0x0010) BlueprintVisible, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		class FString                                              SteamP2PAddr;                                            // 0x0028(0x0010) BlueprintVisible, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
+		class FString                                            IP;                                                      // 0x0000(0x0010) BlueprintVisible, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
+
+		int32_t                                                  Port;                                                    // 0x0010(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
+
+		int32_t                                                  QueryPort;                                               // 0x0014(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
+
+		class FString                                            ConnectionAddressString;                                 // 0x0018(0x0010) BlueprintVisible, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
+
+		class FString                                            SteamP2PAddr;                                            // 0x0028(0x0010) BlueprintVisible, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.GameServerItem
@@ -2249,20 +2937,48 @@ namespace CG
 	struct FGameServerItem
 	{
 	public:
-		class FString                                              ServerName;                                              // 0x0000(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                              MapName;                                                 // 0x0010(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                              GameDescription;                                         // 0x0020(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                              GameTags;                                                // 0x0030(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FSteamServerAddr                                    SteamServerAddr;                                         // 0x0040(0x0038) BlueprintVisible, NativeAccessSpecifierPublic
-		int32_t                                                    Ping;                                                    // 0x0078(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    Players;                                                 // 0x007C(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    MaxPlayers;                                              // 0x0080(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    BotPlayers;                                              // 0x0084(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    ServerVersion;                                           // 0x0088(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bPassword;                                               // 0x008C(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       BSecure;                                                 // 0x008D(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_6NXC[0x22];                                  // 0x008E(0x0022) MISSED OFFSET (PADDING)
+
+		class FString                                            ServerName;                                              // 0x0000(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FString                                            MapName;                                                 // 0x0010(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FString                                            GameDescription;                                         // 0x0020(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FString                                            GameTags;                                                // 0x0030(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FSteamServerAddr                                  SteamServerAddr;                                         // 0x0040(0x0038) BlueprintVisible, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  Ping;                                                    // 0x0078(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  Players;                                                 // 0x007C(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  MaxPlayers;                                              // 0x0080(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  BotPlayers;                                              // 0x0084(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  ServerVersion;                                           // 0x0088(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bPassword;                                               // 0x008C(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     BSecure;                                                 // 0x008D(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_2Q3P[0x22];                                  // 0x008E(0x0022) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.GameServerRule
@@ -2271,9 +2987,15 @@ namespace CG
 	struct FGameServerRule
 	{
 	public:
-		class FString                                              Name;                                                    // 0x0000(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                              Value;                                                   // 0x0010(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		class FString                                            Name;                                                    // 0x0000(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FString                                            Value;                                                   // 0x0010(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.PlaybackStatusHasChanged
@@ -2282,8 +3004,12 @@ namespace CG
 	struct FPlaybackStatusHasChanged
 	{
 	public:
-		unsigned char                                              UnknownData_2NB0[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_IU2J[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.VolumeHasChanged
@@ -2292,8 +3018,12 @@ namespace CG
 	struct FVolumeHasChanged
 	{
 	public:
-		float                                                      Volume;                                                  // 0x0000(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		float                                                    Volume;                                                  // 0x0000(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.P2PSessionRequest
@@ -2302,8 +3032,12 @@ namespace CG
 	struct FP2PSessionRequest
 	{
 	public:
-		struct FSteamID                                            SteamIDRemote;                                           // 0x0000(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		struct FSteamID                                          SteamIDRemote;                                           // 0x0000(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.P2PSessionConnectFail
@@ -2312,10 +3046,18 @@ namespace CG
 	struct FP2PSessionConnectFail
 	{
 	public:
-		struct FSteamID                                            SteamIDRemote;                                           // 0x0000(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESteamP2PSessionError                                      P2PSessionError;                                         // 0x0008(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_S016[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (PADDING)
+
+		struct FSteamID                                          SteamIDRemote;                                           // 0x0000(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		ESteamP2PSessionError                                    P2PSessionError;                                         // 0x0008(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_74QD[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.PartyBeaconID
@@ -2324,8 +3066,12 @@ namespace CG
 	struct FPartyBeaconID
 	{
 	public:
-		unsigned char                                              UnknownData_JTBY[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_UIZY[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.JoinPartyData
@@ -2334,12 +3080,24 @@ namespace CG
 	struct FJoinPartyData
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_XKQ5[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FPartyBeaconID                                      BeaconID;                                                // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FSteamID                                            SteamIDBeaconOwner;                                      // 0x0010(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                              ConnectString;                                           // 0x0018(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_JY2J[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FPartyBeaconID                                    BeaconID;                                                // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FSteamID                                          SteamIDBeaconOwner;                                      // 0x0010(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FString                                            ConnectString;                                           // 0x0018(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.CreateBeaconData
@@ -2348,10 +3106,18 @@ namespace CG
 	struct FCreateBeaconData
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_T4HM[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FPartyBeaconID                                      BeaconID;                                                // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_8WMO[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FPartyBeaconID                                    BeaconID;                                                // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.ReservationNotificationData
@@ -2360,9 +3126,15 @@ namespace CG
 	struct FReservationNotificationData
 	{
 	public:
-		struct FPartyBeaconID                                      BeaconID;                                                // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FSteamID                                            SteamIDJoiner;                                           // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		struct FPartyBeaconID                                    BeaconID;                                                // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FSteamID                                          SteamIDJoiner;                                           // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.ChangeNumOpenSlotsData
@@ -2371,8 +3143,12 @@ namespace CG
 	struct FChangeNumOpenSlotsData
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SteamRemotePlaySessionConnected
@@ -2381,8 +3157,12 @@ namespace CG
 	struct FSteamRemotePlaySessionConnected
 	{
 	public:
-		int32_t                                                    SessionID;                                               // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		int32_t                                                  SessionID;                                               // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SteamRemotePlaySessionDisconnected
@@ -2391,8 +3171,12 @@ namespace CG
 	struct FSteamRemotePlaySessionDisconnected
 	{
 	public:
-		int32_t                                                    SessionID;                                               // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		int32_t                                                  SessionID;                                               // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.PublishedFileID
@@ -2401,8 +3185,12 @@ namespace CG
 	struct FPublishedFileID
 	{
 	public:
-		unsigned char                                              UnknownData_JPQK[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_EHUF[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.RemoteStorageUnsubscribePublishedFileResult
@@ -2411,10 +3199,18 @@ namespace CG
 	struct FRemoteStorageUnsubscribePublishedFileResult
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_BPC8[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FPublishedFileID                                    PublishedFileID;                                         // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_8C10[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FPublishedFileID                                  PublishedFileID;                                         // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.RemoteStorageSubscribePublishedFileResult
@@ -2423,10 +3219,18 @@ namespace CG
 	struct FRemoteStorageSubscribePublishedFileResult
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_4SK8[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FPublishedFileID                                    PublishedFileID;                                         // 0x0008(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_352A[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FPublishedFileID                                  PublishedFileID;                                         // 0x0008(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.RemoteStoragePublishedFileUnsubscribed
@@ -2435,10 +3239,18 @@ namespace CG
 	struct FRemoteStoragePublishedFileUnsubscribed
 	{
 	public:
-		struct FPublishedFileID                                    PublishedFileID;                                         // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    AppID;                                                   // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_18UU[0x4];                                   // 0x000C(0x0004) MISSED OFFSET (PADDING)
+
+		struct FPublishedFileID                                  PublishedFileID;                                         // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  AppID;                                                   // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_FDWH[0x4];                                   // 0x000C(0x0004) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.RemoteStoragePublishedFileSubscribed
@@ -2447,10 +3259,18 @@ namespace CG
 	struct FRemoteStoragePublishedFileSubscribed
 	{
 	public:
-		struct FPublishedFileID                                    PublishedFileID;                                         // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    AppID;                                                   // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_9HU1[0x4];                                   // 0x000C(0x0004) MISSED OFFSET (PADDING)
+
+		struct FPublishedFileID                                  PublishedFileID;                                         // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  AppID;                                                   // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_UUB5[0x4];                                   // 0x000C(0x0004) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.RemoteStorageFileWriteAsyncComplete
@@ -2459,8 +3279,12 @@ namespace CG
 	struct FRemoteStorageFileWriteAsyncComplete
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.RemoteStorageFileReadAsyncComplete
@@ -2469,12 +3293,24 @@ namespace CG
 	struct FRemoteStorageFileReadAsyncComplete
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_11OD[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		int32_t                                                    Offset;                                                  // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    Read;                                                    // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_2RNV[0xC];                                   // 0x000C(0x000C) MISSED OFFSET (PADDING)
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_ZRME[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		int32_t                                                  Offset;                                                  // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  Read;                                                    // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_QOPZ[0xC];                                   // 0x000C(0x000C) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SteamUGCHandle
@@ -2483,8 +3319,12 @@ namespace CG
 	struct FSteamUGCHandle
 	{
 	public:
-		unsigned char                                              UnknownData_4ERK[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_L8M5[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.RemoteStorageDownloadUGCResult
@@ -2493,14 +3333,30 @@ namespace CG
 	struct FRemoteStorageDownloadUGCResult
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_TRYU[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FSteamUGCHandle                                     FileHandle;                                              // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    AppID;                                                   // 0x0010(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    SizeInBytes;                                             // 0x0014(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                              Filename;                                                // 0x0018(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FSteamID                                            SteamIDOwner;                                            // 0x0028(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_RPZE[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FSteamUGCHandle                                   FileHandle;                                              // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  AppID;                                                   // 0x0010(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  SizeInBytes;                                             // 0x0014(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FString                                            Filename;                                                // 0x0018(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FSteamID                                          SteamIDOwner;                                            // 0x0028(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.RemoteStorageFileShareResult
@@ -2509,11 +3365,21 @@ namespace CG
 	struct FRemoteStorageFileShareResult
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_1URJ[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FSteamUGCHandle                                     File;                                                    // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                              Filename;                                                // 0x0010(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_VLCP[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FSteamUGCHandle                                   File;                                                    // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FString                                            Filename;                                                // 0x0010(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.ScreenshotHandle
@@ -2522,8 +3388,12 @@ namespace CG
 	struct FScreenshotHandle
 	{
 	public:
-		unsigned char                                              UnknownData_513P[0x4];                                   // 0x0000(0x0004) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_1A2L[0x4];                                   // 0x0000(0x0004) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.ScreenshotReady
@@ -2532,10 +3402,18 @@ namespace CG
 	struct FScreenshotReady
 	{
 	public:
-		struct FScreenshotHandle                                   Handle;                                                  // 0x0000(0x0004) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESteamResult                                               Result;                                                  // 0x0004(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_POWW[0x3];                                   // 0x0005(0x0003) MISSED OFFSET (PADDING)
+
+		struct FScreenshotHandle                                 Handle;                                                  // 0x0000(0x0004) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		ESteamResult                                             Result;                                                  // 0x0004(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_RMWC[0x3];                                   // 0x0005(0x0003) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.ScreenshotRequested
@@ -2544,8 +3422,12 @@ namespace CG
 	struct FScreenshotRequested
 	{
 	public:
-		unsigned char                                              UnknownData_MVJV[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_GZRW[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.UserFavoriteItemsListChanged
@@ -2554,11 +3436,21 @@ namespace CG
 	struct FUserFavoriteItemsListChanged
 	{
 	public:
-		struct FPublishedFileID                                    PublishedFileID;                                         // 0x0000(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESteamResult                                               Result;                                                  // 0x0008(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bWasAddRequest;                                          // 0x0009(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_I2WX[0x6];                                   // 0x000A(0x0006) MISSED OFFSET (PADDING)
+
+		struct FPublishedFileID                                  PublishedFileID;                                         // 0x0000(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		ESteamResult                                             Result;                                                  // 0x0008(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bWasAddRequest;                                          // 0x0009(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_Y0BJ[0x6];                                   // 0x000A(0x0006) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.CreateItemResult
@@ -2567,12 +3459,24 @@ namespace CG
 	struct FCreateItemResult
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_5F0A[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FPublishedFileID                                    PublishedFileID;                                         // 0x0008(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bUserNeedsToAcceptWorkshopLegalAgreement;                // 0x0010(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_7TGF[0x7];                                   // 0x0011(0x0007) MISSED OFFSET (PADDING)
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_8M5G[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FPublishedFileID                                  PublishedFileID;                                         // 0x0008(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bUserNeedsToAcceptWorkshopLegalAgreement;                // 0x0010(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_D74A[0x7];                                   // 0x0011(0x0007) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SetUserItemVoteResult
@@ -2581,11 +3485,21 @@ namespace CG
 	struct FSetUserItemVoteResult
 	{
 	public:
-		struct FPublishedFileID                                    PublishedFileID;                                         // 0x0000(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESteamResult                                               Result;                                                  // 0x0008(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bVoteUp;                                                 // 0x0009(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_KVKE[0x6];                                   // 0x000A(0x0006) MISSED OFFSET (PADDING)
+
+		struct FPublishedFileID                                  PublishedFileID;                                         // 0x0000(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		ESteamResult                                             Result;                                                  // 0x0008(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bVoteUp;                                                 // 0x0009(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_L3SH[0x6];                                   // 0x000A(0x0006) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.GetUserItemVoteResult
@@ -2594,13 +3508,27 @@ namespace CG
 	struct FGetUserItemVoteResult
 	{
 	public:
-		struct FPublishedFileID                                    PublishedFileID;                                         // 0x0000(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESteamResult                                               Result;                                                  // 0x0008(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bVotedUp;                                                // 0x0009(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bVotedDown;                                              // 0x000A(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bVoteSkipped;                                            // 0x000B(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_WHDR[0x4];                                   // 0x000C(0x0004) MISSED OFFSET (PADDING)
+
+		struct FPublishedFileID                                  PublishedFileID;                                         // 0x0000(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		ESteamResult                                             Result;                                                  // 0x0008(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bVotedUp;                                                // 0x0009(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bVotedDown;                                              // 0x000A(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bVoteSkipped;                                            // 0x000B(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_4ULN[0x4];                                   // 0x000C(0x0004) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.UGCQueryHandle
@@ -2609,8 +3537,12 @@ namespace CG
 	struct FUGCQueryHandle
 	{
 	public:
-		unsigned char                                              UnknownData_GHEQ[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_D7X9[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SteamUGCQueryCompleted
@@ -2619,14 +3551,30 @@ namespace CG
 	struct FSteamUGCQueryCompleted
 	{
 	public:
-		struct FUGCQueryHandle                                     Handle;                                                  // 0x0000(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESteamResult                                               Result;                                                  // 0x0008(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_MWLS[0x3];                                   // 0x0009(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		int32_t                                                    NumResultsReturned;                                      // 0x000C(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    TotalMatchingResults;                                    // 0x0010(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bCachedData;                                             // 0x0014(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_S4JA[0x3];                                   // 0x0015(0x0003) MISSED OFFSET (PADDING)
+
+		struct FUGCQueryHandle                                   Handle;                                                  // 0x0000(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		ESteamResult                                             Result;                                                  // 0x0008(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_6U9Y[0x3];                                   // 0x0009(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		int32_t                                                  NumResultsReturned;                                      // 0x000C(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  TotalMatchingResults;                                    // 0x0010(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bCachedData;                                             // 0x0014(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_VYGY[0x3];                                   // 0x0015(0x0003) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.AddAppDependencyResult
@@ -2635,12 +3583,24 @@ namespace CG
 	struct FAddAppDependencyResult
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_NK1S[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FPublishedFileID                                    PublishedFileID;                                         // 0x0008(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    AppID;                                                   // 0x0010(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_8HGF[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (PADDING)
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_3GBR[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FPublishedFileID                                  PublishedFileID;                                         // 0x0008(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  AppID;                                                   // 0x0010(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_44L8[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.RemoveAppDependencyResult
@@ -2649,12 +3609,24 @@ namespace CG
 	struct FRemoveAppDependencyResult
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_H6A5[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FPublishedFileID                                    PublishedFileID;                                         // 0x0008(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    AppID;                                                   // 0x0010(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_ZKAI[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (PADDING)
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_WRD2[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FPublishedFileID                                  PublishedFileID;                                         // 0x0008(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  AppID;                                                   // 0x0010(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_EGMW[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.AddUGCDependencyResult
@@ -2663,11 +3635,21 @@ namespace CG
 	struct FAddUGCDependencyResult
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_XQBU[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FPublishedFileID                                    PublishedFileID;                                         // 0x0008(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FPublishedFileID                                    ChildPublishedFileId;                                    // 0x0010(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_G7FW[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FPublishedFileID                                  PublishedFileID;                                         // 0x0008(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FPublishedFileID                                  ChildPublishedFileId;                                    // 0x0010(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.RemoveUGCDependencyResult
@@ -2676,11 +3658,21 @@ namespace CG
 	struct FRemoveUGCDependencyResult
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_CFQU[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FPublishedFileID                                    PublishedFileID;                                         // 0x0008(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FPublishedFileID                                    ChildPublishedFileId;                                    // 0x0010(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_X2YX[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FPublishedFileID                                  PublishedFileID;                                         // 0x0008(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FPublishedFileID                                  ChildPublishedFileId;                                    // 0x0010(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.UGCDeleteItemResult
@@ -2689,10 +3681,18 @@ namespace CG
 	struct FUGCDeleteItemResult
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_5YXZ[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FPublishedFileID                                    PublishedFileID;                                         // 0x0008(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_P7LM[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FPublishedFileID                                  PublishedFileID;                                         // 0x0008(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.GetAppDependenciesResult
@@ -2701,13 +3701,27 @@ namespace CG
 	struct FGetAppDependenciesResult
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_R7P7[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FPublishedFileID                                    PublishedFileID;                                         // 0x0008(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		TArray<int32_t>                                            AppIDs;                                                  // 0x0010(0x0010) BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
-		int32_t                                                    NumAppDependencies;                                      // 0x0020(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    TotalNumAppDependencies;                                 // 0x0024(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_PK5U[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FPublishedFileID                                  PublishedFileID;                                         // 0x0008(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		TArray<int32_t>                                          AppIDs;                                                  // 0x0010(0x0010) BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  NumAppDependencies;                                      // 0x0020(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  TotalNumAppDependencies;                                 // 0x0024(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SubmitItemUpdateResult
@@ -2716,11 +3730,21 @@ namespace CG
 	struct FSubmitItemUpdateResult
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bUserNeedsToAcceptWorkshopLegalAgreement;                // 0x0001(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_AFCN[0x6];                                   // 0x0002(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FPublishedFileID                                    PublishedFileID;                                         // 0x0008(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bUserNeedsToAcceptWorkshopLegalAgreement;                // 0x0001(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_31ZT[0x6];                                   // 0x0002(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FPublishedFileID                                  PublishedFileID;                                         // 0x0008(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.StartPlaytimeTrackingResult
@@ -2729,8 +3753,12 @@ namespace CG
 	struct FStartPlaytimeTrackingResult
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.StopPlaytimeTrackingResult
@@ -2739,8 +3767,12 @@ namespace CG
 	struct FStopPlaytimeTrackingResult
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.DownloadItemResult
@@ -2749,12 +3781,24 @@ namespace CG
 	struct FDownloadItemResult
 	{
 	public:
-		int32_t                                                    AppID;                                                   // 0x0000(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_GTKR[0x4];                                   // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FPublishedFileID                                    PublishedFileID;                                         // 0x0008(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESteamResult                                               Result;                                                  // 0x0010(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_3377[0x7];                                   // 0x0011(0x0007) MISSED OFFSET (PADDING)
+
+		int32_t                                                  AppID;                                                   // 0x0000(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_S8E6[0x4];                                   // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FPublishedFileID                                  PublishedFileID;                                         // 0x0008(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		ESteamResult                                             Result;                                                  // 0x0010(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_6JGT[0x7];                                   // 0x0011(0x0007) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.ItemInstalled
@@ -2763,10 +3807,18 @@ namespace CG
 	struct FItemInstalled
 	{
 	public:
-		int32_t                                                    AppID;                                                   // 0x0000(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_61N3[0x4];                                   // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FPublishedFileID                                    PublishedFileID;                                         // 0x0008(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		int32_t                                                  AppID;                                                   // 0x0000(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_PIIL[0x4];                                   // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FPublishedFileID                                  PublishedFileID;                                         // 0x0008(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.ClientGameServerDeny
@@ -2775,14 +3827,30 @@ namespace CG
 	struct FClientGameServerDeny
 	{
 	public:
-		int32_t                                                    AppID;                                                   // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_NBUP[0x4];                                   // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FString                                              GameServerIP;                                            // 0x0008(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    GameServerPort;                                          // 0x0018(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       BSecure;                                                 // 0x001C(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESteamDenyReason                                           Reason;                                                  // 0x001D(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_C1EI[0x2];                                   // 0x001E(0x0002) MISSED OFFSET (PADDING)
+
+		int32_t                                                  AppID;                                                   // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_CWI7[0x4];                                   // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		class FString                                            GameServerIP;                                            // 0x0008(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  GameServerPort;                                          // 0x0018(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     BSecure;                                                 // 0x001C(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		ESteamDenyReason                                         Reason;                                                  // 0x001D(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_ET2Z[0x2];                                   // 0x001E(0x0002) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.GameWebCallback
@@ -2791,8 +3859,12 @@ namespace CG
 	struct FGameWebCallback
 	{
 	public:
-		class FString                                              URL;                                                     // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		class FString                                            URL;                                                     // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SteamTicketHandle
@@ -2801,8 +3873,12 @@ namespace CG
 	struct FSteamTicketHandle
 	{
 	public:
-		unsigned char                                              UnknownData_FD0L[0x4];                                   // 0x0000(0x0004) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_7Y8B[0x4];                                   // 0x0000(0x0004) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.GetAuthSessionTicketResponse
@@ -2811,10 +3887,18 @@ namespace CG
 	struct FGetAuthSessionTicketResponse
 	{
 	public:
-		struct FSteamTicketHandle                                  AuthTicket;                                              // 0x0000(0x0004) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESteamResult                                               Result;                                                  // 0x0004(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_NIUJ[0x3];                                   // 0x0005(0x0003) MISSED OFFSET (PADDING)
+
+		struct FSteamTicketHandle                                AuthTicket;                                              // 0x0000(0x0004) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		ESteamResult                                             Result;                                                  // 0x0004(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_1HVO[0x3];                                   // 0x0005(0x0003) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.IPCFailure
@@ -2823,8 +3907,12 @@ namespace CG
 	struct FIPCFailure
 	{
 	public:
-		ESteamFailureType                                          FailureType;                                             // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamFailureType                                        FailureType;                                             // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.LicensesUpdated
@@ -2833,8 +3921,12 @@ namespace CG
 	struct FLicensesUpdated
 	{
 	public:
-		unsigned char                                              UnknownData_TSXE[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_BQFO[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.MicroTxnAuthorizationResponse
@@ -2843,12 +3935,24 @@ namespace CG
 	struct FMicroTxnAuthorizationResponse
 	{
 	public:
-		int32_t                                                    AppID;                                                   // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_8IL7[0x4];                                   // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FString                                              OrderId;                                                 // 0x0008(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bAuthorized;                                             // 0x0018(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_EC7P[0x7];                                   // 0x0019(0x0007) MISSED OFFSET (PADDING)
+
+		int32_t                                                  AppID;                                                   // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_WRCP[0x4];                                   // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		class FString                                            OrderId;                                                 // 0x0008(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bAuthorized;                                             // 0x0018(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_3CHZ[0x7];                                   // 0x0019(0x0007) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SteamServersConnected
@@ -2857,8 +3961,12 @@ namespace CG
 	struct FSteamServersConnected
 	{
 	public:
-		unsigned char                                              UnknownData_WGNE[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_C3P1[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SteamServerConnectFailure
@@ -2867,9 +3975,15 @@ namespace CG
 	struct FSteamServerConnectFailure
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bStillRetrying;                                          // 0x0001(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bStillRetrying;                                          // 0x0001(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SteamServersDisconnected
@@ -2878,8 +3992,12 @@ namespace CG
 	struct FSteamServersDisconnected
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.EncryptedAppTicketResponse
@@ -2888,8 +4006,12 @@ namespace CG
 	struct FEncryptedAppTicketResponse
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.StoreAuthURLResponse
@@ -2898,8 +4020,12 @@ namespace CG
 	struct FStoreAuthURLResponse
 	{
 	public:
-		class FString                                              URL;                                                     // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		class FString                                            URL;                                                     // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.UserAchievementIconFetched
@@ -2908,13 +4034,27 @@ namespace CG
 	struct FUserAchievementIconFetched
 	{
 	public:
-		struct FSteamGameID                                        GameID;                                                  // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                              AchievementName;                                         // 0x0008(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bAchieved;                                               // 0x0018(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_JV9Y[0x7];                                   // 0x0019(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class UTexture2D*                                          Icon;                                                    // 0x0020(0x0008) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_P8YC[0x8];                                   // 0x0028(0x0008) MISSED OFFSET (PADDING)
+
+		struct FSteamGameID                                      GameID;                                                  // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FString                                            AchievementName;                                         // 0x0008(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bAchieved;                                               // 0x0018(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_JVVA[0x7];                                   // 0x0019(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		class UTexture2D*                                        Icon;                                                    // 0x0020(0x0008) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_R4AU[0x8];                                   // 0x0028(0x0008) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.UserAchievementStored
@@ -2923,13 +4063,27 @@ namespace CG
 	struct FUserAchievementStored
 	{
 	public:
-		struct FSteamGameID                                        GameID;                                                  // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bGroupAchievement;                                       // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_JZW6[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FString                                              AchievementName;                                         // 0x0010(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    CurrentProgress;                                         // 0x0020(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    MaxProgress;                                             // 0x0024(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		struct FSteamGameID                                      GameID;                                                  // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bGroupAchievement;                                       // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_WRNP[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		class FString                                            AchievementName;                                         // 0x0010(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  CurrentProgress;                                         // 0x0020(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  MaxProgress;                                             // 0x0024(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.UserStatsReceived
@@ -2938,11 +4092,21 @@ namespace CG
 	struct FUserStatsReceived
 	{
 	public:
-		struct FSteamID                                            GameID;                                                  // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESteamResult                                               Result;                                                  // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_ZLCX[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FSteamID                                            SteamID;                                                 // 0x0010(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		struct FSteamID                                          GameID;                                                  // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		ESteamResult                                             Result;                                                  // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_1070[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FSteamID                                          SteamID;                                                 // 0x0010(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.UserStatsStored
@@ -2951,10 +4115,18 @@ namespace CG
 	struct FUserStatsStored
 	{
 	public:
-		struct FSteamGameID                                        GameID;                                                  // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESteamResult                                               Result;                                                  // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_MVVD[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (PADDING)
+
+		struct FSteamGameID                                      GameID;                                                  // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		ESteamResult                                             Result;                                                  // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_QOKI[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.UserStatsUnloaded
@@ -2963,8 +4135,12 @@ namespace CG
 	struct FUserStatsUnloaded
 	{
 	public:
-		struct FSteamID                                            SteamIDUser;                                             // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		struct FSteamID                                          SteamIDUser;                                             // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SteamLeaderboard
@@ -2973,8 +4149,12 @@ namespace CG
 	struct FSteamLeaderboard
 	{
 	public:
-		unsigned char                                              UnknownData_SSPU[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_Y3F4[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SteamLeaderboardEntries
@@ -2983,8 +4163,12 @@ namespace CG
 	struct FSteamLeaderboardEntries
 	{
 	public:
-		unsigned char                                              UnknownData_OP7L[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_956M[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.LeaderboardScoresDownloaded
@@ -2993,11 +4177,21 @@ namespace CG
 	struct FLeaderboardScoresDownloaded
 	{
 	public:
-		struct FSteamLeaderboard                                   SteamLeaderboard;                                        // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FSteamLeaderboardEntries                            SteamLeaderboardEntries;                                 // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    EntryCount;                                              // 0x0010(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_VZNM[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (PADDING)
+
+		struct FSteamLeaderboard                                 SteamLeaderboard;                                        // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FSteamLeaderboardEntries                          SteamLeaderboardEntries;                                 // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  EntryCount;                                              // 0x0010(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_K1IU[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.LeaderboardScoresDownloadedForUsers
@@ -3006,11 +4200,21 @@ namespace CG
 	struct FLeaderboardScoresDownloadedForUsers
 	{
 	public:
-		struct FSteamLeaderboard                                   SteamLeaderboard;                                        // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FSteamLeaderboardEntries                            SteamLeaderboardEntries;                                 // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    EntryCount;                                              // 0x0010(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_3F31[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (PADDING)
+
+		struct FSteamLeaderboard                                 SteamLeaderboard;                                        // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FSteamLeaderboardEntries                          SteamLeaderboardEntries;                                 // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  EntryCount;                                              // 0x0010(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_XX78[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.RequestUserStatsData
@@ -3019,11 +4223,21 @@ namespace CG
 	struct FRequestUserStatsData
 	{
 	public:
-		struct FSteamGameID                                        GameID;                                                  // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESteamResult                                               Result;                                                  // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_J615[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FSteamID                                            SteamIDUser;                                             // 0x0010(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		struct FSteamGameID                                      GameID;                                                  // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		ESteamResult                                             Result;                                                  // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_HJBB[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FSteamID                                          SteamIDUser;                                             // 0x0010(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.LeaderboardScoreUploaded
@@ -3032,15 +4246,33 @@ namespace CG
 	struct FLeaderboardScoreUploaded
 	{
 	public:
-		bool                                                       bSuccess;                                                // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_QXAO[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FSteamLeaderboard                                   SteamLeaderboard;                                        // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    Score;                                                   // 0x0010(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bScoreChanged;                                           // 0x0014(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_LBLL[0x3];                                   // 0x0015(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		int32_t                                                    GlobalRankNew;                                           // 0x0018(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    GlobalRankPrevious;                                      // 0x001C(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		bool                                                     bSuccess;                                                // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_K8DN[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FSteamLeaderboard                                 SteamLeaderboard;                                        // 0x0008(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  Score;                                                   // 0x0010(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bScoreChanged;                                           // 0x0014(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_0SWG[0x3];                                   // 0x0015(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		int32_t                                                  GlobalRankNew;                                           // 0x0018(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  GlobalRankPrevious;                                      // 0x001C(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.AttachLeaderboardUGCData
@@ -3049,10 +4281,18 @@ namespace CG
 	struct FAttachLeaderboardUGCData
 	{
 	public:
-		struct FSteamLeaderboard                                   SteamLeaderboard;                                        // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESteamResult                                               Result;                                                  // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_EAIN[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (PADDING)
+
+		struct FSteamLeaderboard                                 SteamLeaderboard;                                        // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		ESteamResult                                             Result;                                                  // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_U3JU[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.LeaderboardFindResult
@@ -3061,10 +4301,18 @@ namespace CG
 	struct FLeaderboardFindResult
 	{
 	public:
-		struct FSteamLeaderboard                                   SteamLeaderboard;                                        // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bLeaderboardFound;                                       // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_YKI6[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (PADDING)
+
+		struct FSteamLeaderboard                                 SteamLeaderboard;                                        // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bLeaderboardFound;                                       // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_L60G[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.FindOrCreateLeaderboardData
@@ -3073,10 +4321,18 @@ namespace CG
 	struct FFindOrCreateLeaderboardData
 	{
 	public:
-		struct FSteamLeaderboard                                   SteamLeaderboard;                                        // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bLeaderboardFound;                                       // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_3RE3[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (PADDING)
+
+		struct FSteamLeaderboard                                 SteamLeaderboard;                                        // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bLeaderboardFound;                                       // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_PT7D[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.NumberOfCurrentPlayers
@@ -3085,10 +4341,18 @@ namespace CG
 	struct FNumberOfCurrentPlayers
 	{
 	public:
-		bool                                                       bSuccess;                                                // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_1OQZ[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		int32_t                                                    Players;                                                 // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		bool                                                     bSuccess;                                                // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_RFLL[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		int32_t                                                  Players;                                                 // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.GlobalAchievementPercentagesReady
@@ -3097,10 +4361,18 @@ namespace CG
 	struct FGlobalAchievementPercentagesReady
 	{
 	public:
-		struct FSteamGameID                                        GameID;                                                  // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESteamResult                                               Result;                                                  // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_ZWY1[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (PADDING)
+
+		struct FSteamGameID                                      GameID;                                                  // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		ESteamResult                                             Result;                                                  // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_OXO3[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.GlobalStatsReceived
@@ -3109,10 +4381,18 @@ namespace CG
 	struct FGlobalStatsReceived
 	{
 	public:
-		struct FSteamGameID                                        GameID;                                                  // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESteamResult                                               Result;                                                  // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_CW2K[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (PADDING)
+
+		struct FSteamGameID                                      GameID;                                                  // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		ESteamResult                                             Result;                                                  // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_7914[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.CheckFileSignature
@@ -3121,8 +4401,12 @@ namespace CG
 	struct FCheckFileSignature
 	{
 	public:
-		ESteamCheckFileSignature                                   CheckFileSignature;                                      // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamCheckFileSignature                                 CheckFileSignature;                                      // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.GamepadTextInputDismissed
@@ -3131,10 +4415,18 @@ namespace CG
 	struct FGamepadTextInputDismissed
 	{
 	public:
-		bool                                                       bSubmitted;                                              // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_27QM[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		int32_t                                                    SubmittedText;                                           // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		bool                                                     bSubmitted;                                              // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_SD0F[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		int32_t                                                  SubmittedText;                                           // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.IPCountry
@@ -3143,8 +4435,12 @@ namespace CG
 	struct FIPCountry
 	{
 	public:
-		unsigned char                                              UnknownData_12D8[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_NRLH[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.LowBatteryPower
@@ -3153,8 +4449,12 @@ namespace CG
 	struct FLowBatteryPower
 	{
 	public:
-		int32_t                                                    MinutesBatteryLeft;                                      // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		int32_t                                                  MinutesBatteryLeft;                                      // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SteamShutdown
@@ -3163,8 +4463,12 @@ namespace CG
 	struct FSteamShutdown
 	{
 	public:
-		unsigned char                                              UnknownData_IMKA[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_30CC[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.GetOPFSettingsResult
@@ -3173,10 +4477,18 @@ namespace CG
 	struct FGetOPFSettingsResult
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_U0TO[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		int32_t                                                    AppID;                                                   // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_PRXL[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		int32_t                                                  AppID;                                                   // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.GetVideoURLResult
@@ -3185,11 +4497,21 @@ namespace CG
 	struct FGetVideoURLResult
 	{
 	public:
-		ESteamResult                                               Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_UYK4[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		int32_t                                                    AppID;                                                   // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                              URL;                                                     // 0x0008(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamResult                                             Result;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_WST5[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		int32_t                                                  AppID;                                                   // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FString                                            URL;                                                     // 0x0008(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SteamFriendsGroupID
@@ -3198,8 +4520,12 @@ namespace CG
 	struct FSteamFriendsGroupID
 	{
 	public:
-		unsigned char                                              UnknownData_7OXE[0x2];                                   // 0x0000(0x0002) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_9N2B[0x2];                                   // 0x0000(0x0002) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.InputAnalogActionHandle
@@ -3208,8 +4534,12 @@ namespace CG
 	struct FInputAnalogActionHandle
 	{
 	public:
-		unsigned char                                              UnknownData_X6WU[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_2WVF[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.InputDigitalActionHandle
@@ -3218,8 +4548,12 @@ namespace CG
 	struct FInputDigitalActionHandle
 	{
 	public:
-		unsigned char                                              UnknownData_DA6K[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_Y85W[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.InputActionSetHandle
@@ -3228,8 +4562,12 @@ namespace CG
 	struct FInputActionSetHandle
 	{
 	public:
-		unsigned char                                              UnknownData_OMBF[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_64DH[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.InputHandle
@@ -3238,8 +4576,12 @@ namespace CG
 	struct FInputHandle
 	{
 	public:
-		unsigned char                                              UnknownData_UU3E[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_3SNN[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.InputMotionData
@@ -3248,17 +4590,39 @@ namespace CG
 	struct FInputMotionData
 	{
 	public:
-		float                                                      RotQuatX;                                                // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      RotQuatY;                                                // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      RotQuatZ;                                                // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      RotQuatW;                                                // 0x000C(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      PosAccelX;                                               // 0x0010(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      PosAccelY;                                               // 0x0014(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      PosAccelZ;                                               // 0x0018(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      RotVelX;                                                 // 0x001C(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      RotVelY;                                                 // 0x0020(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      RotVelZ;                                                 // 0x0024(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		float                                                    RotQuatX;                                                // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    RotQuatY;                                                // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    RotQuatZ;                                                // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    RotQuatW;                                                // 0x000C(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    PosAccelX;                                               // 0x0010(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    PosAccelY;                                               // 0x0014(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    PosAccelZ;                                               // 0x0018(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    RotVelX;                                                 // 0x001C(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    RotVelY;                                                 // 0x0020(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    RotVelZ;                                                 // 0x0024(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.InputDigitalActionData
@@ -3267,9 +4631,15 @@ namespace CG
 	struct FInputDigitalActionData
 	{
 	public:
-		bool                                                       bState;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bActive;                                                 // 0x0001(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		bool                                                     bState;                                                  // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bActive;                                                 // 0x0001(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.InputAnalogActionData
@@ -3278,13 +4648,27 @@ namespace CG
 	struct FInputAnalogActionData
 	{
 	public:
-		ESteamCoreInputSourceMode                                  Mode;                                                    // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_MG9I[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		float                                                      X;                                                       // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Y;                                                       // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bActive;                                                 // 0x000C(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_YDYX[0x3];                                   // 0x000D(0x0003) MISSED OFFSET (PADDING)
+
+		ESteamCoreInputSourceMode                                Mode;                                                    // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_FH0C[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		float                                                    X;                                                       // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Y;                                                       // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bActive;                                                 // 0x000C(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_MF8F[0x3];                                   // 0x000D(0x0003) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SteamItemInstanceID
@@ -3293,8 +4677,12 @@ namespace CG
 	struct FSteamItemInstanceID
 	{
 	public:
-		unsigned char                                              UnknownData_YCSZ[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_2CEJ[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SteamItemDef
@@ -3303,8 +4691,12 @@ namespace CG
 	struct FSteamItemDef
 	{
 	public:
-		int32_t                                                    Value;                                                   // 0x0000(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
+		int32_t                                                  Value;                                                   // 0x0000(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SteamItemDetails
@@ -3313,11 +4705,21 @@ namespace CG
 	struct FSteamItemDetails
 	{
 	public:
-		struct FSteamItemInstanceID                                InstanceID;                                              // 0x0000(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FSteamItemDef                                       Definition;                                              // 0x0008(0x0004) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    Quantity;                                                // 0x000C(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		TArray<ESteamCoreItemFlags>                                Flags;                                                   // 0x0010(0x0010) BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
+
+		struct FSteamItemInstanceID                              InstanceID;                                              // 0x0000(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FSteamItemDef                                     Definition;                                              // 0x0008(0x0004) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  Quantity;                                                // 0x000C(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		TArray<ESteamCoreItemFlags>                              Flags;                                                   // 0x0010(0x0010) BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SteamP2PSessionState
@@ -3326,17 +4728,39 @@ namespace CG
 	struct FSteamP2PSessionState
 	{
 	public:
-		bool                                                       bConnectionActive;                                       // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		bool                                                       bConnecting;                                             // 0x0001(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		ESteamP2PSessionError                                      P2PSessionError;                                         // 0x0002(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		bool                                                       bUsingRelay;                                             // 0x0003(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		int32_t                                                    BytesQueuedForSend;                                      // 0x0004(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		int32_t                                                    PacketsQueuedForSend;                                    // 0x0008(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		unsigned char                                              UnknownData_564H[0x4];                                   // 0x000C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FString                                              RemoteIP;                                                // 0x0010(0x0010) BlueprintVisible, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		int32_t                                                    RemotePort;                                              // 0x0020(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		unsigned char                                              UnknownData_GBAM[0x4];                                   // 0x0024(0x0004) MISSED OFFSET (PADDING)
+
+		bool                                                     bConnectionActive;                                       // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
+
+		bool                                                     bConnecting;                                             // 0x0001(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
+
+		ESteamP2PSessionError                                    P2PSessionError;                                         // 0x0002(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
+
+		bool                                                     bUsingRelay;                                             // 0x0003(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
+
+		int32_t                                                  BytesQueuedForSend;                                      // 0x0004(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
+
+		int32_t                                                  PacketsQueuedForSend;                                    // 0x0008(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
+
+		unsigned char                                            UnknownData_HBOQ[0x4];                                   // 0x000C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		class FString                                            RemoteIP;                                                // 0x0010(0x0010) BlueprintVisible, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
+
+		int32_t                                                  RemotePort;                                              // 0x0020(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
+
+		unsigned char                                            UnknownData_LB34[0x4];                                   // 0x0024(0x0004) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SteamNetworkPingLocation
@@ -3345,8 +4769,12 @@ namespace CG
 	struct FSteamNetworkPingLocation
 	{
 	public:
-		class FString                                              Location;                                                // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
+		class FString                                            Location;                                                // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SteamParentalSettingsChanged
@@ -3355,8 +4783,12 @@ namespace CG
 	struct FSteamParentalSettingsChanged
 	{
 	public:
-		unsigned char                                              UnknownData_P6H0[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_JIFS[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SteamPartyBeaconLocation
@@ -3365,10 +4797,18 @@ namespace CG
 	struct FSteamPartyBeaconLocation
 	{
 	public:
-		ESteamPartiesBeaconLocationType                            Type;                                                    // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_IFK7[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FString                                              LocationId;                                              // 0x0008(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		ESteamPartiesBeaconLocationType                          Type;                                                    // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_E66T[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		class FString                                            LocationId;                                              // 0x0008(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.UGCFileWriteStreamHandle
@@ -3377,8 +4817,12 @@ namespace CG
 	struct FUGCFileWriteStreamHandle
 	{
 	public:
-		unsigned char                                              UnknownData_595T[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_OFKY[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SteamSessionSearchSetting
@@ -3387,8 +4831,12 @@ namespace CG
 	struct FSteamSessionSearchSetting
 	{
 	public:
-		unsigned char                                              UnknownData_UGLL[0x20];                                  // 0x0000(0x0020) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_GV9W[0x20];                                  // 0x0000(0x0020) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.HostPingData
@@ -3397,8 +4845,12 @@ namespace CG
 	struct FHostPingData
 	{
 	public:
-		class FString                                              HostString;                                              // 0x0000(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		class FString                                            HostString;                                              // 0x0000(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SteamInventoryUpdateHandle
@@ -3407,8 +4859,12 @@ namespace CG
 	struct FSteamInventoryUpdateHandle
 	{
 	public:
-		unsigned char                                              UnknownData_P0EE[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_UG6P[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.UGCUpdateHandle
@@ -3417,8 +4873,12 @@ namespace CG
 	struct FUGCUpdateHandle
 	{
 	public:
-		unsigned char                                              UnknownData_6SAD[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_UPJX[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SteamUGCDetails
@@ -3427,35 +4887,93 @@ namespace CG
 	struct FSteamUGCDetails
 	{
 	public:
-		struct FPublishedFileID                                    PublishedFileID;                                         // 0x0000(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESteamResult                                               Result;                                                  // 0x0008(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESteamWorkshopFileType                                     FileType;                                                // 0x0009(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_P7IO[0x2];                                   // 0x000A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		int32_t                                                    CreatorAppID;                                            // 0x000C(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    ConsumerAppID;                                           // 0x0010(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_DX38[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FString                                              Title;                                                   // 0x0018(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                              Description;                                             // 0x0028(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FSteamID                                            SteamIDOwner;                                            // 0x0038(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    TimeCreated;                                             // 0x0040(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    TimeUpdated;                                             // 0x0044(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    TimeAddedToUserList;                                     // 0x0048(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESteamRemoteStoragePublishedFileVisibility                 Visibility;                                              // 0x004C(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bBanned;                                                 // 0x004D(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bAcceptedForUse;                                         // 0x004E(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bTagsTruncated;                                          // 0x004F(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		TArray<class FString>                                      Tags;                                                    // 0x0050(0x0010) BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
-		struct FSteamUGCHandle                                     File;                                                    // 0x0060(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FSteamUGCHandle                                     PreviewFile;                                             // 0x0068(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                              Filename;                                                // 0x0070(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    FileSize;                                                // 0x0080(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    PreviewFileSize;                                         // 0x0084(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                              URL;                                                     // 0x0088(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    VotesUp;                                                 // 0x0098(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    VotesDown;                                               // 0x009C(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Score;                                                   // 0x00A0(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    NumChildren;                                             // 0x00A4(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		struct FPublishedFileID                                  PublishedFileID;                                         // 0x0000(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		ESteamResult                                             Result;                                                  // 0x0008(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		ESteamWorkshopFileType                                   FileType;                                                // 0x0009(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_72P5[0x2];                                   // 0x000A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		int32_t                                                  CreatorAppID;                                            // 0x000C(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  ConsumerAppID;                                           // 0x0010(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_144D[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		class FString                                            Title;                                                   // 0x0018(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FString                                            Description;                                             // 0x0028(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FSteamID                                          SteamIDOwner;                                            // 0x0038(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  TimeCreated;                                             // 0x0040(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  TimeUpdated;                                             // 0x0044(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  TimeAddedToUserList;                                     // 0x0048(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		ESteamRemoteStoragePublishedFileVisibility               Visibility;                                              // 0x004C(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bBanned;                                                 // 0x004D(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bAcceptedForUse;                                         // 0x004E(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bTagsTruncated;                                          // 0x004F(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		TArray<class FString>                                    Tags;                                                    // 0x0050(0x0010) BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
+
+
+		struct FSteamUGCHandle                                   File;                                                    // 0x0060(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FSteamUGCHandle                                   PreviewFile;                                             // 0x0068(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FString                                            Filename;                                                // 0x0070(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  FileSize;                                                // 0x0080(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  PreviewFileSize;                                         // 0x0084(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FString                                            URL;                                                     // 0x0088(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  VotesUp;                                                 // 0x0098(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  VotesDown;                                               // 0x009C(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Score;                                                   // 0x00A0(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  NumChildren;                                             // 0x00A4(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct SteamCore.SteamLeaderboardEntry
@@ -3464,12 +4982,24 @@ namespace CG
 	struct FSteamLeaderboardEntry
 	{
 	public:
-		struct FSteamID                                            SteamID;                                                 // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    GlobalRank;                                              // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    Score;                                                   // 0x000C(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    Details;                                                 // 0x0010(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_XWML[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FSteamUGCHandle                                     UGCHandle;                                               // 0x0018(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		struct FSteamID                                          SteamID;                                                 // 0x0000(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  GlobalRank;                                              // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  Score;                                                   // 0x000C(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  Details;                                                 // 0x0010(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_INAJ[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FSteamUGCHandle                                   UGCHandle;                                               // 0x0018(0x0008) Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
 
 }

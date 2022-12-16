@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+
 	/**
 	 * Enum MediaAssets.EMediaWebcamCaptureDeviceFilter
 	 */
@@ -26,6 +27,8 @@ namespace CG
 		Unknown     = 4,
 		MAX         = 5
 	};
+
+
 
 	/**
 	 * Enum MediaAssets.EMediaVideoCaptureDeviceFilter
@@ -40,6 +43,8 @@ namespace CG
 		MAX      = 5
 	};
 
+
+
 	/**
 	 * Enum MediaAssets.EMediaAudioCaptureDeviceFilter
 	 */
@@ -52,6 +57,8 @@ namespace CG
 		Unknown    = 4,
 		MAX        = 5
 	};
+
+
 
 	/**
 	 * Enum MediaAssets.EMediaPlayerTrack
@@ -68,6 +75,8 @@ namespace CG
 		MAX      = 7
 	};
 
+
+
 	/**
 	 * Enum MediaAssets.EMediaSoundComponentFFTSize
 	 */
@@ -80,6 +89,8 @@ namespace CG
 		MAX    = 4
 	};
 
+
+
 	/**
 	 * Enum MediaAssets.EMediaSoundChannels
 	 */
@@ -90,6 +101,8 @@ namespace CG
 		Surround = 2,
 		MAX      = 3
 	};
+
+
 
 	/**
 	 * Enum MediaAssets.MediaTextureOrientation
@@ -102,6 +115,8 @@ namespace CG
 		MTORI_CW270    = 3,
 		MTORI_MAX      = 4
 	};
+
+
 
 	/**
 	 * Enum MediaAssets.MediaTextureOutputFormat
@@ -116,6 +131,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+
 	/**
 	 * ScriptStruct MediaAssets.MediaCaptureDevice
 	 * Size -> 0x0028
@@ -123,9 +139,15 @@ namespace CG
 	struct FMediaCaptureDevice
 	{
 	public:
-		class FText                                                DisplayName;                                             // 0x0000(0x0018) BlueprintVisible, BlueprintReadOnly, Transient, NativeAccessSpecifierPublic
-		class FString                                              URL;                                                     // 0x0018(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		class FText                                              DisplayName;                                             // 0x0000(0x0018) BlueprintVisible, BlueprintReadOnly, Transient, NativeAccessSpecifierPublic
+
+
+		class FString                                            URL;                                                     // 0x0018(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct MediaAssets.MediaSoundComponentSpectralData
@@ -134,8 +156,12 @@ namespace CG
 	struct FMediaSoundComponentSpectralData
 	{
 	public:
-		float                                                      FrequencyHz;                                             // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Magnitude;                                               // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		float                                                    FrequencyHz;                                             // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Magnitude;                                               // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
 
 }

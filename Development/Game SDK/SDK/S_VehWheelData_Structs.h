@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+
 	/**
 	 * UserDefinedStruct S_VehWheelData.S_VehWheelData
 	 * Size -> 0x0008
@@ -21,8 +22,12 @@ namespace CG
 	struct FS_VehWheelData
 	{
 	public:
-		float                                                      Radius_2_8D457F26419135A146BA5C954CF36BFE;               // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
-		float                                                      Mass_4_340E45374C5E059C6E07E0B6F49C43BC;                 // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+
+		float                                                    Radius_2_8D457F26419135A146BA5C954CF36BFE;               // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+
+
+		float                                                    Mass_4_340E45374C5E059C6E07E0B6F49C43BC;                 // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+
 	};
 
 }

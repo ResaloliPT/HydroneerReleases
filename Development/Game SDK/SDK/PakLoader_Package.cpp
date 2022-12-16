@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19,7 +20,11 @@ namespace CG
 	 * 		class FString                                      URL                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SavePath                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UAsyncPakDownloader* UAsyncPakDownloader::DownloadPak(const class FString& URL, const class FString& SavePath)
+	class UAsyncPakDownloader* UAsyncPakDownloader::DownloadPak(
+const class FString& URL
+, 
+const class FString& SavePath
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -40,10 +45,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAsyncPakDownloader.StaticClass
+	 * 		Name   -> PredefinedFunction UAsyncPakDownloader.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAsyncPakDownloader::StaticClass()
@@ -54,6 +61,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -63,7 +72,11 @@ namespace CG
 	 * 		class FString                                      RootPath                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      ContentPath                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UPakLoaderLibrary::UnRegisterMountPoint(const class FString& RootPath, const class FString& ContentPath)
+	void UPakLoaderLibrary::UnRegisterMountPoint(
+const class FString& RootPath
+, 
+const class FString& ContentPath
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -82,6 +95,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -90,7 +105,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      PakFilename                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UPakLoaderLibrary::UnmountPakFile(const class FString& PakFilename)
+	bool UPakLoaderLibrary::UnmountPakFile(
+const class FString& PakFilename
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -109,6 +126,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -118,7 +137,11 @@ namespace CG
 	 * 		class FString                                      Filename                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      PackageName                                                (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UPakLoaderLibrary::TryConvertFilenameToLongPackageName(const class FString& Filename, class FString* PackageName)
+	bool UPakLoaderLibrary::TryConvertFilenameToLongPackageName(
+const class FString& Filename
+, 
+class FString* PackageName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -141,6 +164,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -149,7 +174,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Filename                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UPakLoaderLibrary::SHA1SUM(const class FString& Filename)
+	class FString UPakLoaderLibrary::SHA1SUM(
+const class FString& Filename
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -168,6 +195,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -176,7 +205,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Text                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UPakLoaderLibrary::RuntimeLog(const class FString& Text)
+	void UPakLoaderLibrary::RuntimeLog(
+const class FString& Text
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -193,6 +224,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -202,7 +235,11 @@ namespace CG
 	 * 		class FString                                      RootPath                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      ContentPath                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UPakLoaderLibrary::RegisterMountPoint(const class FString& RootPath, const class FString& ContentPath)
+	void UPakLoaderLibrary::RegisterMountPoint(
+const class FString& RootPath
+, 
+const class FString& ContentPath
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -221,6 +258,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -230,7 +269,11 @@ namespace CG
 	 * 		class FString                                      Guid                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      AesKey                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UPakLoaderLibrary::RegisterEncryptionKey(const class FString& Guid, const class FString& AesKey)
+	bool UPakLoaderLibrary::RegisterEncryptionKey(
+const class FString& Guid
+, 
+const class FString& AesKey
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -250,6 +293,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -274,6 +319,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -283,7 +330,11 @@ namespace CG
 	 * 		class FString                                      PakFilename                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      MountPath                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UPakLoaderLibrary::MountPakFile(const class FString& PakFilename, const class FString& MountPath)
+	bool UPakLoaderLibrary::MountPakFile(
+const class FString& PakFilename
+, 
+const class FString& MountPath
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -304,6 +355,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -312,7 +365,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      AssetRegistryFile                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UPakLoaderLibrary::LoadPakAssetRegistryFile(const class FString& AssetRegistryFile)
+	void UPakLoaderLibrary::LoadPakAssetRegistryFile(
+const class FString& AssetRegistryFile
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -329,6 +384,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -338,7 +395,11 @@ namespace CG
 	 * 		class FString                                      PakFilename                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int64_t                                            PakSize                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UPakLoaderLibrary::IsValidPakFile(const class FString& PakFilename, int64_t* PakSize)
+	bool UPakLoaderLibrary::IsValidPakFile(
+const class FString& PakFilename
+, 
+int64_t* PakSize
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -360,6 +421,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -384,6 +447,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -392,7 +457,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      LongName                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UPakLoaderLibrary::GetShortName(const class FString& LongName)
+	class FString UPakLoaderLibrary::GetShortName(
+const class FString& LongName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -410,6 +477,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -434,6 +503,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -442,7 +513,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Filename                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UTexture2D* UPakLoaderLibrary::GetPakFileTexture2D(const class FString& Filename)
+	class UTexture2D* UPakLoaderLibrary::GetPakFileTexture2D(
+const class FString& Filename
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -461,6 +534,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -470,7 +545,11 @@ namespace CG
 	 * 		class FString                                      Filename                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      String                                                     (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UPakLoaderLibrary::GetPakFileText(const class FString& Filename, class FString* String)
+	bool UPakLoaderLibrary::GetPakFileText(
+const class FString& Filename
+, 
+class FString* String
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -493,6 +572,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -501,7 +582,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Filename                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UStaticMesh* UPakLoaderLibrary::GetPakFileStaticMesh(const class FString& Filename)
+	class UStaticMesh* UPakLoaderLibrary::GetPakFileStaticMesh(
+const class FString& Filename
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -520,6 +603,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -528,7 +613,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Filename                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USoundBase* UPakLoaderLibrary::GetPakFileSound(const class FString& Filename)
+	class USoundBase* UPakLoaderLibrary::GetPakFileSound(
+const class FString& Filename
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -547,6 +634,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -555,7 +644,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Filename                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class USkeletalMesh* UPakLoaderLibrary::GetPakFileSkeletalMesh(const class FString& Filename)
+	class USkeletalMesh* UPakLoaderLibrary::GetPakFileSkeletalMesh(
+const class FString& Filename
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -574,6 +665,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -582,7 +675,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Filename                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UObject* UPakLoaderLibrary::GetPakFileObject(const class FString& Filename)
+	class UObject* UPakLoaderLibrary::GetPakFileObject(
+const class FString& Filename
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -601,6 +696,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -609,7 +706,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Filename                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UMaterialInstanceConstant* UPakLoaderLibrary::GetPakFileMaterialInstanceConstant(const class FString& Filename)
+	class UMaterialInstanceConstant* UPakLoaderLibrary::GetPakFileMaterialInstanceConstant(
+const class FString& Filename
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -628,6 +727,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -636,7 +737,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Filename                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UMaterial* UPakLoaderLibrary::GetPakFileMaterial(const class FString& Filename)
+	class UMaterial* UPakLoaderLibrary::GetPakFileMaterial(
+const class FString& Filename
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -655,6 +758,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -663,7 +768,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Filename                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UClass* UPakLoaderLibrary::GetPakFileClass(const class FString& Filename)
+	class UClass* UPakLoaderLibrary::GetPakFileClass(
+const class FString& Filename
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -682,6 +789,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -690,7 +799,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Filename                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UAnimSequence* UPakLoaderLibrary::GetPakFileAnimSequence(const class FString& Filename)
+	class UAnimSequence* UPakLoaderLibrary::GetPakFileAnimSequence(
+const class FString& Filename
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -708,6 +819,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -732,6 +845,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -741,7 +856,11 @@ namespace CG
 	 * 		class FString                                      PakDirectory                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bRecursively                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<class FString> UPakLoaderLibrary::GetFilesInPakDirectory(const class FString& PakDirectory, bool bRecursively)
+	TArray<class FString> UPakLoaderLibrary::GetFilesInPakDirectory(
+const class FString& PakDirectory
+, 
+bool bRecursively
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -762,6 +881,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -771,7 +892,11 @@ namespace CG
 	 * 		class FString                                      PakFilename                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bUAssetOnly                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<class FString> UPakLoaderLibrary::GetFilesInPak(const class FString& PakFilename, bool bUAssetOnly)
+	TArray<class FString> UPakLoaderLibrary::GetFilesInPak(
+const class FString& PakFilename
+, 
+bool bUAssetOnly
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -792,6 +917,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -801,7 +928,11 @@ namespace CG
 	 * 		bool                                               bEnable                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      NewLogPath                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UPakLoaderLibrary::EnableRuntimeLog(bool bEnable, const class FString& NewLogPath)
+	void UPakLoaderLibrary::EnableRuntimeLog(
+bool bEnable
+, 
+const class FString& NewLogPath
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -820,6 +951,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -828,7 +961,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      PakDirectory                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UPakLoaderLibrary::DoesPakDirectoryExist(const class FString& PakDirectory)
+	bool UPakLoaderLibrary::DoesPakDirectoryExist(
+const class FString& PakDirectory
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -847,10 +982,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPakLoaderLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UPakLoaderLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPakLoaderLibrary::StaticClass()
@@ -860,6 +997,7 @@ namespace CG
 			ptr = UObject::FindClass("Class PakLoader.PakLoaderLibrary");
 		return ptr;
 	}
+
 
 }
 

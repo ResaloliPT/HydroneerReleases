@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19,7 +20,11 @@ namespace CG
 	 * 		struct FAIRequestID                                RequestID                                                  (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EPathFollowingResult                               MovementResult                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAIAsyncTaskBlueprintProxy::OnMoveCompleted(const struct FAIRequestID& RequestID, EPathFollowingResult MovementResult)
+	void UAIAsyncTaskBlueprintProxy::OnMoveCompleted(
+const struct FAIRequestID& RequestID
+, 
+EPathFollowingResult MovementResult
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -38,10 +43,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAIAsyncTaskBlueprintProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UAIAsyncTaskBlueprintProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAIAsyncTaskBlueprintProxy::StaticClass()
@@ -51,6 +58,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AIModule.AIAsyncTaskBlueprintProxy");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -62,7 +71,13 @@ namespace CG
 	 * 		bool                                               bUnlockMovement                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               UnlockAILogic                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAIBlueprintHelperLibrary::UnlockAIResourcesWithAnimation(class UAnimInstance* AnimInstance, bool bUnlockMovement, bool UnlockAILogic)
+	void UAIBlueprintHelperLibrary::UnlockAIResourcesWithAnimation(
+class UAnimInstance* AnimInstance
+, 
+bool bUnlockMovement
+, 
+bool UnlockAILogic
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -83,6 +98,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -97,7 +114,21 @@ namespace CG
 	 * 		bool                                               bNoCollisionFail                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class AActor*                                      Owner                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class APawn* UAIBlueprintHelperLibrary::SpawnAIFromClass(class UObject* WorldContextObject, class UClass* PawnClass, class UBehaviorTree* BehaviorTree, const struct FVector& Location, const struct FRotator& Rotation, bool bNoCollisionFail, class AActor* Owner)
+	class APawn* UAIBlueprintHelperLibrary::SpawnAIFromClass(
+class UObject* WorldContextObject
+, 
+class UClass* PawnClass
+, 
+class UBehaviorTree* BehaviorTree
+, 
+const struct FVector& Location
+, 
+const struct FRotator& Rotation
+, 
+bool bNoCollisionFail
+, 
+class AActor* Owner
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -128,6 +159,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -137,7 +170,11 @@ namespace CG
 	 * 		class AController*                                 Controller                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector                                     Goal                                                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAIBlueprintHelperLibrary::SimpleMoveToLocation(class AController* Controller, const struct FVector& Goal)
+	void UAIBlueprintHelperLibrary::SimpleMoveToLocation(
+class AController* Controller
+, 
+const struct FVector& Goal
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -156,6 +193,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -165,7 +204,11 @@ namespace CG
 	 * 		class AController*                                 Controller                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class AActor*                                      Goal                                                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAIBlueprintHelperLibrary::SimpleMoveToActor(class AController* Controller, class AActor* Goal)
+	void UAIBlueprintHelperLibrary::SimpleMoveToActor(
+class AController* Controller
+, 
+class AActor* Goal
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -184,6 +227,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -195,7 +240,15 @@ namespace CG
 	 * 		class UObject*                                     MessageSource                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bSuccess                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAIBlueprintHelperLibrary::SendAIMessage(class APawn* Target, const class FName& Message, class UObject* MessageSource, bool bSuccess)
+	void UAIBlueprintHelperLibrary::SendAIMessage(
+class APawn* Target
+, 
+const class FName& Message
+, 
+class UObject* MessageSource
+, 
+bool bSuccess
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -218,6 +271,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -228,7 +283,13 @@ namespace CG
 	 * 		bool                                               bLockMovement                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               LockAILogic                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAIBlueprintHelperLibrary::LockAIResourcesWithAnimation(class UAnimInstance* AnimInstance, bool bLockMovement, bool LockAILogic)
+	void UAIBlueprintHelperLibrary::LockAIResourcesWithAnimation(
+class UAnimInstance* AnimInstance
+, 
+bool bLockMovement
+, 
+bool LockAILogic
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -249,6 +310,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -257,7 +320,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FRotator                                    Rotation                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	bool UAIBlueprintHelperLibrary::IsValidAIRotation(const struct FRotator& Rotation)
+	bool UAIBlueprintHelperLibrary::IsValidAIRotation(
+const struct FRotator& Rotation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -276,6 +341,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -284,7 +351,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector                                     Location                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UAIBlueprintHelperLibrary::IsValidAILocation(const struct FVector& Location)
+	bool UAIBlueprintHelperLibrary::IsValidAILocation(
+const struct FVector& Location
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -303,6 +372,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -311,7 +382,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector                                     DirectionVector                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UAIBlueprintHelperLibrary::IsValidAIDirection(const struct FVector& DirectionVector)
+	bool UAIBlueprintHelperLibrary::IsValidAIDirection(
+const struct FVector& DirectionVector
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -330,6 +403,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -338,7 +413,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AController*                                 Controller                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UAIBlueprintHelperLibrary::GetNextNavLinkIndex(class AController* Controller)
+	int32_t UAIBlueprintHelperLibrary::GetNextNavLinkIndex(
+class AController* Controller
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -357,6 +434,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -365,7 +444,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AController*                                 Controller                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<struct FVector> UAIBlueprintHelperLibrary::GetCurrentPathPoints(class AController* Controller)
+	TArray<struct FVector> UAIBlueprintHelperLibrary::GetCurrentPathPoints(
+class AController* Controller
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -384,6 +465,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -392,7 +475,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AController*                                 Controller                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UAIBlueprintHelperLibrary::GetCurrentPathIndex(class AController* Controller)
+	int32_t UAIBlueprintHelperLibrary::GetCurrentPathIndex(
+class AController* Controller
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -411,6 +496,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -419,7 +506,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AController*                                 Controller                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UNavigationPath* UAIBlueprintHelperLibrary::GetCurrentPath(class AController* Controller)
+	class UNavigationPath* UAIBlueprintHelperLibrary::GetCurrentPath(
+class AController* Controller
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -438,6 +527,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -446,7 +537,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AActor*                                      Target                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UBlackboardComponent* UAIBlueprintHelperLibrary::GetBlackboard(class AActor* Target)
+	class UBlackboardComponent* UAIBlueprintHelperLibrary::GetBlackboard(
+class AActor* Target
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -465,6 +558,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -473,7 +568,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AActor*                                      ControlledActor                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class AAIController* UAIBlueprintHelperLibrary::GetAIController(class AActor* ControlledActor)
+	class AAIController* UAIBlueprintHelperLibrary::GetAIController(
+class AActor* ControlledActor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -492,6 +589,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -505,7 +604,19 @@ namespace CG
 	 * 		float                                              AcceptanceRadius                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bStopOnOverlap                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UAIAsyncTaskBlueprintProxy* UAIBlueprintHelperLibrary::CreateMoveToProxyObject(class UObject* WorldContextObject, class APawn* Pawn, const struct FVector& Destination, class AActor* TargetActor, float AcceptanceRadius, bool bStopOnOverlap)
+	class UAIAsyncTaskBlueprintProxy* UAIBlueprintHelperLibrary::CreateMoveToProxyObject(
+class UObject* WorldContextObject
+, 
+class APawn* Pawn
+, 
+const struct FVector& Destination
+, 
+class AActor* TargetActor
+, 
+float AcceptanceRadius
+, 
+bool bStopOnOverlap
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -534,10 +645,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAIBlueprintHelperLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UAIBlueprintHelperLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAIBlueprintHelperLibrary::StaticClass()
@@ -548,6 +661,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -557,7 +672,11 @@ namespace CG
 	 * 		class UBlackboardData*                             BlackboardAsset                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UBlackboardComponent*                        BlackboardComponent                                        (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool AAIController::UseBlackboard(class UBlackboardData* BlackboardAsset, class UBlackboardComponent** BlackboardComponent)
+	bool AAIController::UseBlackboard(
+class UBlackboardData* BlackboardAsset
+, 
+class UBlackboardComponent** BlackboardComponent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -580,6 +699,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -588,7 +709,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UClass*                                      ResourceClass                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void AAIController::UnclaimTaskResource(class UClass* ResourceClass)
+	void AAIController::UnclaimTaskResource(
+class UClass* ResourceClass
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -605,6 +728,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -613,7 +738,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UPathFollowingComponent*                     NewPFComponent                                             (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void AAIController::SetPathFollowingComponent(class UPathFollowingComponent* NewPFComponent)
+	void AAIController::SetPathFollowingComponent(
+class UPathFollowingComponent* NewPFComponent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -630,6 +757,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -638,7 +767,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bEnable                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void AAIController::SetMoveBlockDetection(bool bEnable)
+	void AAIController::SetMoveBlockDetection(
+bool bEnable
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -655,6 +786,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -663,7 +796,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UBehaviorTree*                               BTAsset                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool AAIController::RunBehaviorTree(class UBehaviorTree* BTAsset)
+	bool AAIController::RunBehaviorTree(
+class UBehaviorTree* BTAsset
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -682,6 +817,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -691,7 +828,11 @@ namespace CG
 	 * 		class UBlackboardComponent*                        BlackboardComp                                             (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UBlackboardData*                             BlackboardAsset                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void AAIController::OnUsingBlackBoard(class UBlackboardComponent* BlackboardComp, class UBlackboardData* BlackboardAsset)
+	void AAIController::OnUsingBlackBoard(
+class UBlackboardComponent* BlackboardComp
+, 
+class UBlackboardData* BlackboardAsset
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -710,6 +851,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -719,7 +862,11 @@ namespace CG
 	 * 		struct FGameplayResourceSet                        NewlyClaimed                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FGameplayResourceSet                        FreshlyReleased                                            (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void AAIController::OnGameplayTaskResourcesClaimed(const struct FGameplayResourceSet& NewlyClaimed, const struct FGameplayResourceSet& FreshlyReleased)
+	void AAIController::OnGameplayTaskResourcesClaimed(
+const struct FGameplayResourceSet& NewlyClaimed
+, 
+const struct FGameplayResourceSet& FreshlyReleased
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -738,6 +885,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -753,7 +902,23 @@ namespace CG
 	 * 		class UClass*                                      FilterClass                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bAllowPartialPath                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	EPathFollowingRequestResult AAIController::MoveToLocation(const struct FVector& Dest, float AcceptanceRadius, bool bStopOnOverlap, bool bUsePathfinding, bool bProjectDestinationToNavigation, bool bCanStrafe, class UClass* FilterClass, bool bAllowPartialPath)
+	EPathFollowingRequestResult AAIController::MoveToLocation(
+const struct FVector& Dest
+, 
+float AcceptanceRadius
+, 
+bool bStopOnOverlap
+, 
+bool bUsePathfinding
+, 
+bool bProjectDestinationToNavigation
+, 
+bool bCanStrafe
+, 
+class UClass* FilterClass
+, 
+bool bAllowPartialPath
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -786,6 +951,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -800,7 +967,21 @@ namespace CG
 	 * 		class UClass*                                      FilterClass                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bAllowPartialPath                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	EPathFollowingRequestResult AAIController::MoveToActor(class AActor* Goal, float AcceptanceRadius, bool bStopOnOverlap, bool bUsePathfinding, bool bCanStrafe, class UClass* FilterClass, bool bAllowPartialPath)
+	EPathFollowingRequestResult AAIController::MoveToActor(
+class AActor* Goal
+, 
+float AcceptanceRadius
+, 
+bool bStopOnOverlap
+, 
+bool bUsePathfinding
+, 
+bool bCanStrafe
+, 
+class UClass* FilterClass
+, 
+bool bAllowPartialPath
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -831,6 +1012,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -839,7 +1022,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AActor*                                      NewFocus                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void AAIController::K2_SetFocus(class AActor* NewFocus)
+	void AAIController::K2_SetFocus(
+class AActor* NewFocus
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -856,6 +1041,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -864,7 +1051,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector                                     FP                                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void AAIController::K2_SetFocalPoint(const struct FVector& FP)
+	void AAIController::K2_SetFocalPoint(
+const struct FVector& FP
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -880,6 +1069,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -901,6 +1092,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -925,6 +1118,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -947,6 +1142,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -971,6 +1168,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -993,6 +1192,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1017,6 +1218,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1025,7 +1228,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AActor*                                      Actor                                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVector AAIController::GetFocalPointOnActor(class AActor* Actor)
+	struct FVector AAIController::GetFocalPointOnActor(
+class AActor* Actor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1043,6 +1248,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1067,6 +1274,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1090,6 +1299,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1098,7 +1309,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UClass*                                      ResourceClass                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void AAIController::ClaimTaskResource(class UClass* ResourceClass)
+	void AAIController::ClaimTaskResource(
+class UClass* ResourceClass
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1115,10 +1328,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AAIController.StaticClass
+	 * 		Name   -> PredefinedFunction AAIController.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AAIController::StaticClass()
@@ -1129,10 +1344,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAIDataProvider.StaticClass
+	 * 		Name   -> PredefinedFunction UAIDataProvider.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAIDataProvider::StaticClass()
@@ -1143,10 +1360,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAIDataProvider_QueryParams.StaticClass
+	 * 		Name   -> PredefinedFunction UAIDataProvider_QueryParams.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAIDataProvider_QueryParams::StaticClass()
@@ -1157,10 +1376,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAIDataProvider_Random.StaticClass
+	 * 		Name   -> PredefinedFunction UAIDataProvider_Random.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAIDataProvider_Random::StaticClass()
@@ -1171,10 +1392,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAIHotSpotManager.StaticClass
+	 * 		Name   -> PredefinedFunction UAIHotSpotManager.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAIHotSpotManager::StaticClass()
@@ -1185,6 +1408,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1194,7 +1419,11 @@ namespace CG
 	 * 		class UClass*                                      SenseClass                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bEnable                                                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAIPerceptionComponent::SetSenseEnabled(class UClass* SenseClass, bool bEnable)
+	void UAIPerceptionComponent::SetSenseEnabled(
+class UClass* SenseClass
+, 
+bool bEnable
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1212,6 +1441,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1234,6 +1465,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1243,7 +1476,11 @@ namespace CG
 	 * 		class AActor*                                      Actor                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EEndPlayReason                                     EndPlayReason                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAIPerceptionComponent::OnOwnerEndPlay(class AActor* Actor, EEndPlayReason EndPlayReason)
+	void UAIPerceptionComponent::OnOwnerEndPlay(
+class AActor* Actor
+, 
+EEndPlayReason EndPlayReason
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1262,6 +1499,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1271,7 +1510,11 @@ namespace CG
 	 * 		class UClass*                                      SenseToUse                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<class AActor*>                              OutActors                                                  (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UAIPerceptionComponent::GetPerceivedHostileActorsBySense(class UClass* SenseToUse, TArray<class AActor*>* OutActors)
+	void UAIPerceptionComponent::GetPerceivedHostileActorsBySense(
+class UClass* SenseToUse
+, 
+TArray<class AActor*>* OutActors
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1292,6 +1535,8 @@ namespace CG
 			*OutActors = params.OutActors;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1300,7 +1545,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<class AActor*>                              OutActors                                                  (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UAIPerceptionComponent::GetPerceivedHostileActors(TArray<class AActor*>* OutActors)
+	void UAIPerceptionComponent::GetPerceivedHostileActors(
+TArray<class AActor*>* OutActors
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1319,6 +1566,8 @@ namespace CG
 			*OutActors = params.OutActors;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1328,7 +1577,11 @@ namespace CG
 	 * 		class UClass*                                      SenseToUse                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<class AActor*>                              OutActors                                                  (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UAIPerceptionComponent::GetPerceivedActors(class UClass* SenseToUse, TArray<class AActor*>* OutActors)
+	void UAIPerceptionComponent::GetPerceivedActors(
+class UClass* SenseToUse
+, 
+TArray<class AActor*>* OutActors
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1349,6 +1602,8 @@ namespace CG
 			*OutActors = params.OutActors;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1358,7 +1613,11 @@ namespace CG
 	 * 		class UClass*                                      SenseToUse                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<class AActor*>                              OutActors                                                  (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UAIPerceptionComponent::GetKnownPerceivedActors(class UClass* SenseToUse, TArray<class AActor*>* OutActors)
+	void UAIPerceptionComponent::GetKnownPerceivedActors(
+class UClass* SenseToUse
+, 
+TArray<class AActor*>* OutActors
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1379,6 +1638,8 @@ namespace CG
 			*OutActors = params.OutActors;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1388,7 +1649,11 @@ namespace CG
 	 * 		class UClass*                                      SenseToUse                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<class AActor*>                              OutActors                                                  (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UAIPerceptionComponent::GetCurrentlyPerceivedActors(class UClass* SenseToUse, TArray<class AActor*>* OutActors)
+	void UAIPerceptionComponent::GetCurrentlyPerceivedActors(
+class UClass* SenseToUse
+, 
+TArray<class AActor*>* OutActors
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1409,6 +1674,8 @@ namespace CG
 			*OutActors = params.OutActors;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1418,7 +1685,11 @@ namespace CG
 	 * 		class AActor*                                      Actor                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FActorPerceptionBlueprintInfo               Info                                                       (Parm, OutParm, NativeAccessSpecifierPublic)
 	 */
-	bool UAIPerceptionComponent::GetActorsPerception(class AActor* Actor, struct FActorPerceptionBlueprintInfo* Info)
+	bool UAIPerceptionComponent::GetActorsPerception(
+class AActor* Actor
+, 
+struct FActorPerceptionBlueprintInfo* Info
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1441,6 +1712,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1462,10 +1735,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAIPerceptionComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UAIPerceptionComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAIPerceptionComponent::StaticClass()
@@ -1476,10 +1751,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAIPerceptionListenerInterface.StaticClass
+	 * 		Name   -> PredefinedFunction UAIPerceptionListenerInterface.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAIPerceptionListenerInterface::StaticClass()
@@ -1490,6 +1767,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1498,7 +1777,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UClass*                                      SenseClass                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAIPerceptionStimuliSourceComponent::UnregisterFromSense(class UClass* SenseClass)
+	void UAIPerceptionStimuliSourceComponent::UnregisterFromSense(
+class UClass* SenseClass
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1514,6 +1795,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1536,6 +1819,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1557,6 +1842,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1565,7 +1852,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UClass*                                      SenseClass                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAIPerceptionStimuliSourceComponent::RegisterForSense(class UClass* SenseClass)
+	void UAIPerceptionStimuliSourceComponent::RegisterForSense(
+class UClass* SenseClass
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1582,10 +1871,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAIPerceptionStimuliSourceComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UAIPerceptionStimuliSourceComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAIPerceptionStimuliSourceComponent::StaticClass()
@@ -1596,10 +1887,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAISubsystem.StaticClass
+	 * 		Name   -> PredefinedFunction UAISubsystem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAISubsystem::StaticClass()
@@ -1610,6 +1903,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1619,7 +1914,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UAISenseEvent*                               PerceptionEvent                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAIPerceptionSystem::ReportPerceptionEvent(class UObject* WorldContextObject, class UAISenseEvent* PerceptionEvent)
+	void UAIPerceptionSystem::ReportPerceptionEvent(
+class UObject* WorldContextObject
+, 
+class UAISenseEvent* PerceptionEvent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1638,6 +1937,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1646,7 +1947,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UAISenseEvent*                               PerceptionEvent                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAIPerceptionSystem::ReportEvent(class UAISenseEvent* PerceptionEvent)
+	void UAIPerceptionSystem::ReportEvent(
+class UAISenseEvent* PerceptionEvent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1663,6 +1966,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1673,7 +1978,13 @@ namespace CG
 	 * 		class UClass*                                      Sense                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class AActor*                                      Target                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UAIPerceptionSystem::RegisterPerceptionStimuliSource(class UObject* WorldContextObject, class UClass* Sense, class AActor* Target)
+	bool UAIPerceptionSystem::RegisterPerceptionStimuliSource(
+class UObject* WorldContextObject
+, 
+class UClass* Sense
+, 
+class AActor* Target
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1696,6 +2007,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1705,7 +2018,11 @@ namespace CG
 	 * 		class AActor*                                      Actor                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EEndPlayReason                                     EndPlayReason                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAIPerceptionSystem::OnPerceptionStimuliSourceEndPlay(class AActor* Actor, EEndPlayReason EndPlayReason)
+	void UAIPerceptionSystem::OnPerceptionStimuliSourceEndPlay(
+class AActor* Actor
+, 
+EEndPlayReason EndPlayReason
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1724,6 +2041,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1733,7 +2052,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FAIStimulus                                 Stimulus                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	class UClass* UAIPerceptionSystem::GetSenseClassForStimulus(class UObject* WorldContextObject, const struct FAIStimulus& Stimulus)
+	class UClass* UAIPerceptionSystem::GetSenseClassForStimulus(
+class UObject* WorldContextObject
+, 
+const struct FAIStimulus& Stimulus
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1754,10 +2077,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAIPerceptionSystem.StaticClass
+	 * 		Name   -> PredefinedFunction UAIPerceptionSystem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAIPerceptionSystem::StaticClass()
@@ -1768,10 +2093,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAIResourceInterface.StaticClass
+	 * 		Name   -> PredefinedFunction UAIResourceInterface.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAIResourceInterface::StaticClass()
@@ -1782,10 +2109,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAIResource_Movement.StaticClass
+	 * 		Name   -> PredefinedFunction UAIResource_Movement.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAIResource_Movement::StaticClass()
@@ -1796,10 +2125,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAIResource_Logic.StaticClass
+	 * 		Name   -> PredefinedFunction UAIResource_Logic.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAIResource_Logic::StaticClass()
@@ -1810,10 +2141,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAISense.StaticClass
+	 * 		Name   -> PredefinedFunction UAISense.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAISense::StaticClass()
@@ -1824,6 +2157,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1832,7 +2167,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<class UAISenseEvent*>                       EventsToProcess                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	float UAISense_Blueprint::OnUpdate(TArray<class UAISenseEvent*> EventsToProcess)
+	float UAISense_Blueprint::OnUpdate(
+TArray<class UAISenseEvent*> EventsToProcess
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1851,6 +2188,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1860,7 +2199,11 @@ namespace CG
 	 * 		class AActor*                                      ActorListener                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UAIPerceptionComponent*                      PerceptionComponent                                        (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAISense_Blueprint::OnListenerUpdated(class AActor* ActorListener, class UAIPerceptionComponent* PerceptionComponent)
+	void UAISense_Blueprint::OnListenerUpdated(
+class AActor* ActorListener
+, 
+class UAIPerceptionComponent* PerceptionComponent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1879,6 +2222,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1888,7 +2233,11 @@ namespace CG
 	 * 		class AActor*                                      ActorListener                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UAIPerceptionComponent*                      PerceptionComponent                                        (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAISense_Blueprint::OnListenerUnregistered(class AActor* ActorListener, class UAIPerceptionComponent* PerceptionComponent)
+	void UAISense_Blueprint::OnListenerUnregistered(
+class AActor* ActorListener
+, 
+class UAIPerceptionComponent* PerceptionComponent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1907,6 +2256,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1916,7 +2267,11 @@ namespace CG
 	 * 		class AActor*                                      ActorListener                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UAIPerceptionComponent*                      PerceptionComponent                                        (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAISense_Blueprint::OnListenerRegistered(class AActor* ActorListener, class UAIPerceptionComponent* PerceptionComponent)
+	void UAISense_Blueprint::OnListenerRegistered(
+class AActor* ActorListener
+, 
+class UAIPerceptionComponent* PerceptionComponent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1935,6 +2290,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1943,7 +2300,9 @@ namespace CG
 	 * Parameters:
 	 * 		class APawn*                                       NewPawn                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAISense_Blueprint::K2_OnNewPawn(class APawn* NewPawn)
+	void UAISense_Blueprint::K2_OnNewPawn(
+class APawn* NewPawn
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1960,6 +2319,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1968,7 +2329,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<class UAIPerceptionComponent*>              ListenerComponents                                         (Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	 */
-	void UAISense_Blueprint::GetAllListenerComponents(TArray<class UAIPerceptionComponent*>* ListenerComponents)
+	void UAISense_Blueprint::GetAllListenerComponents(
+TArray<class UAIPerceptionComponent*>* ListenerComponents
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1987,6 +2350,8 @@ namespace CG
 			*ListenerComponents = params.ListenerComponents;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1995,7 +2360,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<class AActor*>                              ListenerActors                                             (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UAISense_Blueprint::GetAllListenerActors(TArray<class AActor*>* ListenerActors)
+	void UAISense_Blueprint::GetAllListenerActors(
+TArray<class AActor*>* ListenerActors
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2014,10 +2381,12 @@ namespace CG
 			*ListenerActors = params.ListenerActors;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAISense_Blueprint.StaticClass
+	 * 		Name   -> PredefinedFunction UAISense_Blueprint.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAISense_Blueprint::StaticClass()
@@ -2027,6 +2396,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AIModule.AISense_Blueprint");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2041,7 +2412,19 @@ namespace CG
 	 * 		struct FVector                                     EventLocation                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector                                     HitLocation                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAISense_Damage::ReportDamageEvent(class UObject* WorldContextObject, class AActor* DamagedActor, class AActor* Instigator, float DamageAmount, const struct FVector& EventLocation, const struct FVector& HitLocation)
+	void UAISense_Damage::ReportDamageEvent(
+class UObject* WorldContextObject
+, 
+class AActor* DamagedActor
+, 
+class AActor* Instigator
+, 
+float DamageAmount
+, 
+const struct FVector& EventLocation
+, 
+const struct FVector& HitLocation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2068,10 +2451,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAISense_Damage.StaticClass
+	 * 		Name   -> PredefinedFunction UAISense_Damage.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAISense_Damage::StaticClass()
@@ -2081,6 +2466,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AIModule.AISense_Damage");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2095,7 +2482,19 @@ namespace CG
 	 * 		float                                              MaxRange                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FName                                        Tag                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAISense_Hearing::ReportNoiseEvent(class UObject* WorldContextObject, const struct FVector& NoiseLocation, float Loudness, class AActor* Instigator, float MaxRange, const class FName& Tag)
+	void UAISense_Hearing::ReportNoiseEvent(
+class UObject* WorldContextObject
+, 
+const struct FVector& NoiseLocation
+, 
+float Loudness
+, 
+class AActor* Instigator
+, 
+float MaxRange
+, 
+const class FName& Tag
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2122,10 +2521,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAISense_Hearing.StaticClass
+	 * 		Name   -> PredefinedFunction UAISense_Hearing.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAISense_Hearing::StaticClass()
@@ -2135,6 +2536,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AIModule.AISense_Hearing");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2146,7 +2549,13 @@ namespace CG
 	 * 		class AActor*                                      PredictedActor                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              PredictionTime                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAISense_Prediction::RequestPawnPredictionEvent(class APawn* Requestor, class AActor* PredictedActor, float PredictionTime)
+	void UAISense_Prediction::RequestPawnPredictionEvent(
+class APawn* Requestor
+, 
+class AActor* PredictedActor
+, 
+float PredictionTime
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2167,6 +2576,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2177,7 +2588,13 @@ namespace CG
 	 * 		class AActor*                                      PredictedActor                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              PredictionTime                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UAISense_Prediction::RequestControllerPredictionEvent(class AAIController* Requestor, class AActor* PredictedActor, float PredictionTime)
+	void UAISense_Prediction::RequestControllerPredictionEvent(
+class AAIController* Requestor
+, 
+class AActor* PredictedActor
+, 
+float PredictionTime
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2198,10 +2615,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAISense_Prediction.StaticClass
+	 * 		Name   -> PredefinedFunction UAISense_Prediction.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAISense_Prediction::StaticClass()
@@ -2212,10 +2631,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAISense_Sight.StaticClass
+	 * 		Name   -> PredefinedFunction UAISense_Sight.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAISense_Sight::StaticClass()
@@ -2226,10 +2647,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAISense_Team.StaticClass
+	 * 		Name   -> PredefinedFunction UAISense_Team.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAISense_Team::StaticClass()
@@ -2240,10 +2663,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAISense_Touch.StaticClass
+	 * 		Name   -> PredefinedFunction UAISense_Touch.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAISense_Touch::StaticClass()
@@ -2254,10 +2679,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAISenseBlueprintListener.StaticClass
+	 * 		Name   -> PredefinedFunction UAISenseBlueprintListener.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAISenseBlueprintListener::StaticClass()
@@ -2268,10 +2695,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAISenseConfig.StaticClass
+	 * 		Name   -> PredefinedFunction UAISenseConfig.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAISenseConfig::StaticClass()
@@ -2282,10 +2711,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAISenseConfig_Blueprint.StaticClass
+	 * 		Name   -> PredefinedFunction UAISenseConfig_Blueprint.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAISenseConfig_Blueprint::StaticClass()
@@ -2296,10 +2727,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAISenseConfig_Damage.StaticClass
+	 * 		Name   -> PredefinedFunction UAISenseConfig_Damage.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAISenseConfig_Damage::StaticClass()
@@ -2310,10 +2743,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAISenseConfig_Hearing.StaticClass
+	 * 		Name   -> PredefinedFunction UAISenseConfig_Hearing.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAISenseConfig_Hearing::StaticClass()
@@ -2324,10 +2759,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAISenseConfig_Prediction.StaticClass
+	 * 		Name   -> PredefinedFunction UAISenseConfig_Prediction.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAISenseConfig_Prediction::StaticClass()
@@ -2338,10 +2775,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAISenseConfig_Sight.StaticClass
+	 * 		Name   -> PredefinedFunction UAISenseConfig_Sight.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAISenseConfig_Sight::StaticClass()
@@ -2352,10 +2791,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAISenseConfig_Team.StaticClass
+	 * 		Name   -> PredefinedFunction UAISenseConfig_Team.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAISenseConfig_Team::StaticClass()
@@ -2366,10 +2807,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAISenseConfig_Touch.StaticClass
+	 * 		Name   -> PredefinedFunction UAISenseConfig_Touch.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAISenseConfig_Touch::StaticClass()
@@ -2380,10 +2823,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAISenseEvent.StaticClass
+	 * 		Name   -> PredefinedFunction UAISenseEvent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAISenseEvent::StaticClass()
@@ -2394,10 +2839,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAISenseEvent_Damage.StaticClass
+	 * 		Name   -> PredefinedFunction UAISenseEvent_Damage.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAISenseEvent_Damage::StaticClass()
@@ -2408,10 +2855,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAISenseEvent_Hearing.StaticClass
+	 * 		Name   -> PredefinedFunction UAISenseEvent_Hearing.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAISenseEvent_Hearing::StaticClass()
@@ -2422,10 +2871,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAISightTargetInterface.StaticClass
+	 * 		Name   -> PredefinedFunction UAISightTargetInterface.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAISightTargetInterface::StaticClass()
@@ -2435,6 +2886,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AIModule.AISightTargetInterface");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2457,6 +2910,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2478,10 +2933,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAISystem.StaticClass
+	 * 		Name   -> PredefinedFunction UAISystem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAISystem::StaticClass()
@@ -2492,10 +2949,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAITask.StaticClass
+	 * 		Name   -> PredefinedFunction UAITask.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAITask::StaticClass()
@@ -2506,10 +2965,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAITask_LockLogic.StaticClass
+	 * 		Name   -> PredefinedFunction UAITask_LockLogic.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAITask_LockLogic::StaticClass()
@@ -2519,6 +2980,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AIModule.AITask_LockLogic");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2537,7 +3000,27 @@ namespace CG
 	 * 		bool                                               bUseContinuosGoalTracking                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EAIOptionFlag                                      ProjectGoalOnNavigation                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UAITask_MoveTo* UAITask_MoveTo::AIMoveTo(class AAIController* Controller, const struct FVector& GoalLocation, class AActor* GoalActor, float AcceptanceRadius, EAIOptionFlag StopOnOverlap, EAIOptionFlag AcceptPartialPath, bool bUsePathfinding, bool bLockAILogic, bool bUseContinuosGoalTracking, EAIOptionFlag ProjectGoalOnNavigation)
+	class UAITask_MoveTo* UAITask_MoveTo::AIMoveTo(
+class AAIController* Controller
+, 
+const struct FVector& GoalLocation
+, 
+class AActor* GoalActor
+, 
+float AcceptanceRadius
+, 
+EAIOptionFlag StopOnOverlap
+, 
+EAIOptionFlag AcceptPartialPath
+, 
+bool bUsePathfinding
+, 
+bool bLockAILogic
+, 
+bool bUseContinuosGoalTracking
+, 
+EAIOptionFlag ProjectGoalOnNavigation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2574,10 +3057,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAITask_MoveTo.StaticClass
+	 * 		Name   -> PredefinedFunction UAITask_MoveTo.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAITask_MoveTo::StaticClass()
@@ -2588,6 +3073,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2597,7 +3084,11 @@ namespace CG
 	 * 		class AAIController*                               Controller                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UEnvQuery*                                   QueryTemplate                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UAITask_RunEQS* UAITask_RunEQS::RunEQS(class AAIController* Controller, class UEnvQuery* QueryTemplate)
+	class UAITask_RunEQS* UAITask_RunEQS::RunEQS(
+class AAIController* Controller
+, 
+class UEnvQuery* QueryTemplate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2618,10 +3109,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAITask_RunEQS.StaticClass
+	 * 		Name   -> PredefinedFunction UAITask_RunEQS.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAITask_RunEQS::StaticClass()
@@ -2632,10 +3125,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBehaviorTree.StaticClass
+	 * 		Name   -> PredefinedFunction UBehaviorTree.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBehaviorTree::StaticClass()
@@ -2646,6 +3141,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2654,7 +3151,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Reason                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBrainComponent::StopLogic(const class FString& Reason)
+	void UBrainComponent::StopLogic(
+const class FString& Reason
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2670,6 +3169,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2692,6 +3193,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2712,6 +3215,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2736,6 +3241,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2759,10 +3266,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBrainComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UBrainComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBrainComponent::StaticClass()
@@ -2773,6 +3282,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2782,7 +3293,11 @@ namespace CG
 	 * 		struct FGameplayTag                                InjectTag                                                  (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UBehaviorTree*                               BehaviorAsset                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBehaviorTreeComponent::SetDynamicSubtree(const struct FGameplayTag& InjectTag, class UBehaviorTree* BehaviorAsset)
+	void UBehaviorTreeComponent::SetDynamicSubtree(
+const struct FGameplayTag& InjectTag
+, 
+class UBehaviorTree* BehaviorAsset
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2801,6 +3316,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2809,7 +3326,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FGameplayTag                                CooldownTag                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float UBehaviorTreeComponent::GetTagCooldownEndTime(const struct FGameplayTag& CooldownTag)
+	float UBehaviorTreeComponent::GetTagCooldownEndTime(
+const struct FGameplayTag& CooldownTag
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2828,6 +3347,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2838,7 +3359,13 @@ namespace CG
 	 * 		float                                              CooldownDuration                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bAddToExistingDuration                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBehaviorTreeComponent::AddCooldownTagDuration(const struct FGameplayTag& CooldownTag, float CooldownDuration, bool bAddToExistingDuration)
+	void UBehaviorTreeComponent::AddCooldownTagDuration(
+const struct FGameplayTag& CooldownTag
+, 
+float CooldownDuration
+, 
+bool bAddToExistingDuration
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2859,10 +3386,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBehaviorTreeComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UBehaviorTreeComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBehaviorTreeComponent::StaticClass()
@@ -2873,10 +3402,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBehaviorTreeManager.StaticClass
+	 * 		Name   -> PredefinedFunction UBehaviorTreeManager.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBehaviorTreeManager::StaticClass()
@@ -2887,10 +3418,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBehaviorTreeTypes.StaticClass
+	 * 		Name   -> PredefinedFunction UBehaviorTreeTypes.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBehaviorTreeTypes::StaticClass()
@@ -2900,6 +3433,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AIModule.BehaviorTreeTypes");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2924,10 +3459,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBlackboardAssetProvider.StaticClass
+	 * 		Name   -> PredefinedFunction UBlackboardAssetProvider.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBlackboardAssetProvider::StaticClass()
@@ -2938,6 +3475,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2947,7 +3486,11 @@ namespace CG
 	 * 		class FName                                        KeyName                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector                                     VectorValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBlackboardComponent::SetValueAsVector(const class FName& KeyName, const struct FVector& VectorValue)
+	void UBlackboardComponent::SetValueAsVector(
+const class FName& KeyName
+, 
+const struct FVector& VectorValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2966,6 +3509,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2975,7 +3520,11 @@ namespace CG
 	 * 		class FName                                        KeyName                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      StringValue                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBlackboardComponent::SetValueAsString(const class FName& KeyName, const class FString& StringValue)
+	void UBlackboardComponent::SetValueAsString(
+const class FName& KeyName
+, 
+const class FString& StringValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2994,6 +3543,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3003,7 +3554,11 @@ namespace CG
 	 * 		class FName                                        KeyName                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FRotator                                    VectorValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UBlackboardComponent::SetValueAsRotator(const class FName& KeyName, const struct FRotator& VectorValue)
+	void UBlackboardComponent::SetValueAsRotator(
+const class FName& KeyName
+, 
+const struct FRotator& VectorValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3022,6 +3577,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3031,7 +3588,11 @@ namespace CG
 	 * 		class FName                                        KeyName                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UObject*                                     ObjectValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBlackboardComponent::SetValueAsObject(const class FName& KeyName, class UObject* ObjectValue)
+	void UBlackboardComponent::SetValueAsObject(
+const class FName& KeyName
+, 
+class UObject* ObjectValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3050,6 +3611,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3059,7 +3622,11 @@ namespace CG
 	 * 		class FName                                        KeyName                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FName                                        NameValue                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBlackboardComponent::SetValueAsName(const class FName& KeyName, const class FName& NameValue)
+	void UBlackboardComponent::SetValueAsName(
+const class FName& KeyName
+, 
+const class FName& NameValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3078,6 +3645,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3087,7 +3656,11 @@ namespace CG
 	 * 		class FName                                        KeyName                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            IntValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBlackboardComponent::SetValueAsInt(const class FName& KeyName, int32_t IntValue)
+	void UBlackboardComponent::SetValueAsInt(
+const class FName& KeyName
+, 
+int32_t IntValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3106,6 +3679,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3115,7 +3690,11 @@ namespace CG
 	 * 		class FName                                        KeyName                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              FloatValue                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBlackboardComponent::SetValueAsFloat(const class FName& KeyName, float FloatValue)
+	void UBlackboardComponent::SetValueAsFloat(
+const class FName& KeyName
+, 
+float FloatValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3134,6 +3713,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3143,7 +3724,11 @@ namespace CG
 	 * 		class FName                                        KeyName                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		unsigned char                                      EnumValue                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBlackboardComponent::SetValueAsEnum(const class FName& KeyName, unsigned char EnumValue)
+	void UBlackboardComponent::SetValueAsEnum(
+const class FName& KeyName
+, 
+unsigned char EnumValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3162,6 +3747,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3171,7 +3758,11 @@ namespace CG
 	 * 		class FName                                        KeyName                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UClass*                                      ClassValue                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBlackboardComponent::SetValueAsClass(const class FName& KeyName, class UClass* ClassValue)
+	void UBlackboardComponent::SetValueAsClass(
+const class FName& KeyName
+, 
+class UClass* ClassValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3190,6 +3781,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3199,7 +3792,11 @@ namespace CG
 	 * 		class FName                                        KeyName                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               BoolValue                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBlackboardComponent::SetValueAsBool(const class FName& KeyName, bool BoolValue)
+	void UBlackboardComponent::SetValueAsBool(
+const class FName& KeyName
+, 
+bool BoolValue
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3218,6 +3815,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3226,7 +3825,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        KeyName                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UBlackboardComponent::IsVectorValueSet(const class FName& KeyName)
+	bool UBlackboardComponent::IsVectorValueSet(
+const class FName& KeyName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3245,6 +3846,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3253,7 +3856,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        KeyName                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVector UBlackboardComponent::GetValueAsVector(const class FName& KeyName)
+	struct FVector UBlackboardComponent::GetValueAsVector(
+const class FName& KeyName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3272,6 +3877,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3280,7 +3887,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        KeyName                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UBlackboardComponent::GetValueAsString(const class FName& KeyName)
+	class FString UBlackboardComponent::GetValueAsString(
+const class FName& KeyName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3299,6 +3908,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3307,7 +3918,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        KeyName                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FRotator UBlackboardComponent::GetValueAsRotator(const class FName& KeyName)
+	struct FRotator UBlackboardComponent::GetValueAsRotator(
+const class FName& KeyName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3326,6 +3939,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3334,7 +3949,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        KeyName                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UObject* UBlackboardComponent::GetValueAsObject(const class FName& KeyName)
+	class UObject* UBlackboardComponent::GetValueAsObject(
+const class FName& KeyName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3353,6 +3970,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3361,7 +3980,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        KeyName                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FName UBlackboardComponent::GetValueAsName(const class FName& KeyName)
+	class FName UBlackboardComponent::GetValueAsName(
+const class FName& KeyName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3380,6 +4001,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3388,7 +4011,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        KeyName                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UBlackboardComponent::GetValueAsInt(const class FName& KeyName)
+	int32_t UBlackboardComponent::GetValueAsInt(
+const class FName& KeyName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3407,6 +4032,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3415,7 +4042,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        KeyName                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float UBlackboardComponent::GetValueAsFloat(const class FName& KeyName)
+	float UBlackboardComponent::GetValueAsFloat(
+const class FName& KeyName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3434,6 +4063,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3442,7 +4073,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        KeyName                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	unsigned char UBlackboardComponent::GetValueAsEnum(const class FName& KeyName)
+	unsigned char UBlackboardComponent::GetValueAsEnum(
+const class FName& KeyName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3461,6 +4094,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3469,7 +4104,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        KeyName                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UClass* UBlackboardComponent::GetValueAsClass(const class FName& KeyName)
+	class UClass* UBlackboardComponent::GetValueAsClass(
+const class FName& KeyName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3488,6 +4125,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3496,7 +4135,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        KeyName                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UBlackboardComponent::GetValueAsBool(const class FName& KeyName)
+	bool UBlackboardComponent::GetValueAsBool(
+const class FName& KeyName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3515,6 +4156,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3524,7 +4167,11 @@ namespace CG
 	 * 		class FName                                        KeyName                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FRotator                                    ResultRotation                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	bool UBlackboardComponent::GetRotationFromEntry(const class FName& KeyName, struct FRotator* ResultRotation)
+	bool UBlackboardComponent::GetRotationFromEntry(
+const class FName& KeyName
+, 
+struct FRotator* ResultRotation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3547,6 +4194,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3556,7 +4205,11 @@ namespace CG
 	 * 		class FName                                        KeyName                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector                                     ResultLocation                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UBlackboardComponent::GetLocationFromEntry(const class FName& KeyName, struct FVector* ResultLocation)
+	bool UBlackboardComponent::GetLocationFromEntry(
+const class FName& KeyName
+, 
+struct FVector* ResultLocation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3579,6 +4232,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3587,7 +4242,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        KeyName                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBlackboardComponent::ClearValue(const class FName& KeyName)
+	void UBlackboardComponent::ClearValue(
+const class FName& KeyName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3604,10 +4261,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBlackboardComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UBlackboardComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBlackboardComponent::StaticClass()
@@ -3618,10 +4277,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBlackboardData.StaticClass
+	 * 		Name   -> PredefinedFunction UBlackboardData.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBlackboardData::StaticClass()
@@ -3632,10 +4293,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBlackboardKeyType.StaticClass
+	 * 		Name   -> PredefinedFunction UBlackboardKeyType.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBlackboardKeyType::StaticClass()
@@ -3646,10 +4309,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBlackboardKeyType_Bool.StaticClass
+	 * 		Name   -> PredefinedFunction UBlackboardKeyType_Bool.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBlackboardKeyType_Bool::StaticClass()
@@ -3660,10 +4325,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBlackboardKeyType_Class.StaticClass
+	 * 		Name   -> PredefinedFunction UBlackboardKeyType_Class.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBlackboardKeyType_Class::StaticClass()
@@ -3674,10 +4341,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBlackboardKeyType_Enum.StaticClass
+	 * 		Name   -> PredefinedFunction UBlackboardKeyType_Enum.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBlackboardKeyType_Enum::StaticClass()
@@ -3688,10 +4357,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBlackboardKeyType_Float.StaticClass
+	 * 		Name   -> PredefinedFunction UBlackboardKeyType_Float.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBlackboardKeyType_Float::StaticClass()
@@ -3702,10 +4373,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBlackboardKeyType_Int.StaticClass
+	 * 		Name   -> PredefinedFunction UBlackboardKeyType_Int.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBlackboardKeyType_Int::StaticClass()
@@ -3716,10 +4389,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBlackboardKeyType_Name.StaticClass
+	 * 		Name   -> PredefinedFunction UBlackboardKeyType_Name.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBlackboardKeyType_Name::StaticClass()
@@ -3730,10 +4405,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBlackboardKeyType_NativeEnum.StaticClass
+	 * 		Name   -> PredefinedFunction UBlackboardKeyType_NativeEnum.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBlackboardKeyType_NativeEnum::StaticClass()
@@ -3744,10 +4421,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBlackboardKeyType_Object.StaticClass
+	 * 		Name   -> PredefinedFunction UBlackboardKeyType_Object.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBlackboardKeyType_Object::StaticClass()
@@ -3758,10 +4437,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBlackboardKeyType_Rotator.StaticClass
+	 * 		Name   -> PredefinedFunction UBlackboardKeyType_Rotator.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBlackboardKeyType_Rotator::StaticClass()
@@ -3772,10 +4453,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBlackboardKeyType_String.StaticClass
+	 * 		Name   -> PredefinedFunction UBlackboardKeyType_String.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBlackboardKeyType_String::StaticClass()
@@ -3786,10 +4469,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBlackboardKeyType_Vector.StaticClass
+	 * 		Name   -> PredefinedFunction UBlackboardKeyType_Vector.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBlackboardKeyType_Vector::StaticClass()
@@ -3800,10 +4485,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTNode.StaticClass
+	 * 		Name   -> PredefinedFunction UBTNode.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTNode::StaticClass()
@@ -3814,10 +4501,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTAuxiliaryNode.StaticClass
+	 * 		Name   -> PredefinedFunction UBTAuxiliaryNode.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTAuxiliaryNode::StaticClass()
@@ -3828,10 +4517,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTCompositeNode.StaticClass
+	 * 		Name   -> PredefinedFunction UBTCompositeNode.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTCompositeNode::StaticClass()
@@ -3842,10 +4533,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTComposite_Selector.StaticClass
+	 * 		Name   -> PredefinedFunction UBTComposite_Selector.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTComposite_Selector::StaticClass()
@@ -3856,10 +4549,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTComposite_Sequence.StaticClass
+	 * 		Name   -> PredefinedFunction UBTComposite_Sequence.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTComposite_Sequence::StaticClass()
@@ -3870,10 +4565,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTComposite_SimpleParallel.StaticClass
+	 * 		Name   -> PredefinedFunction UBTComposite_SimpleParallel.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTComposite_SimpleParallel::StaticClass()
@@ -3884,10 +4581,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTDecorator.StaticClass
+	 * 		Name   -> PredefinedFunction UBTDecorator.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTDecorator::StaticClass()
@@ -3898,10 +4597,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTDecorator_BlackboardBase.StaticClass
+	 * 		Name   -> PredefinedFunction UBTDecorator_BlackboardBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTDecorator_BlackboardBase::StaticClass()
@@ -3912,10 +4613,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTDecorator_Blackboard.StaticClass
+	 * 		Name   -> PredefinedFunction UBTDecorator_Blackboard.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTDecorator_Blackboard::StaticClass()
@@ -3925,6 +4628,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AIModule.BTDecorator_Blackboard");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3936,7 +4641,13 @@ namespace CG
 	 * 		class APawn*                                       ControlledPawn                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              DeltaSeconds                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTDecorator_BlueprintBase::ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds)
+	void UBTDecorator_BlueprintBase::ReceiveTickAI(
+class AAIController* OwnerController
+, 
+class APawn* ControlledPawn
+, 
+float DeltaSeconds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3957,6 +4668,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3966,7 +4679,11 @@ namespace CG
 	 * 		class AActor*                                      OwnerActor                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              DeltaSeconds                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTDecorator_BlueprintBase::ReceiveTick(class AActor* OwnerActor, float DeltaSeconds)
+	void UBTDecorator_BlueprintBase::ReceiveTick(
+class AActor* OwnerActor
+, 
+float DeltaSeconds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -3985,6 +4702,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3994,7 +4713,11 @@ namespace CG
 	 * 		class AAIController*                               OwnerController                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class APawn*                                       ControlledPawn                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTDecorator_BlueprintBase::ReceiveObserverDeactivatedAI(class AAIController* OwnerController, class APawn* ControlledPawn)
+	void UBTDecorator_BlueprintBase::ReceiveObserverDeactivatedAI(
+class AAIController* OwnerController
+, 
+class APawn* ControlledPawn
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4013,6 +4736,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4021,7 +4746,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AActor*                                      OwnerActor                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTDecorator_BlueprintBase::ReceiveObserverDeactivated(class AActor* OwnerActor)
+	void UBTDecorator_BlueprintBase::ReceiveObserverDeactivated(
+class AActor* OwnerActor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4038,6 +4765,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4047,7 +4776,11 @@ namespace CG
 	 * 		class AAIController*                               OwnerController                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class APawn*                                       ControlledPawn                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTDecorator_BlueprintBase::ReceiveObserverActivatedAI(class AAIController* OwnerController, class APawn* ControlledPawn)
+	void UBTDecorator_BlueprintBase::ReceiveObserverActivatedAI(
+class AAIController* OwnerController
+, 
+class APawn* ControlledPawn
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4066,6 +4799,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4074,7 +4809,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AActor*                                      OwnerActor                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTDecorator_BlueprintBase::ReceiveObserverActivated(class AActor* OwnerActor)
+	void UBTDecorator_BlueprintBase::ReceiveObserverActivated(
+class AActor* OwnerActor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4091,6 +4828,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4100,7 +4839,11 @@ namespace CG
 	 * 		class AAIController*                               OwnerController                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class APawn*                                       ControlledPawn                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTDecorator_BlueprintBase::ReceiveExecutionStartAI(class AAIController* OwnerController, class APawn* ControlledPawn)
+	void UBTDecorator_BlueprintBase::ReceiveExecutionStartAI(
+class AAIController* OwnerController
+, 
+class APawn* ControlledPawn
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4119,6 +4862,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4127,7 +4872,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AActor*                                      OwnerActor                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTDecorator_BlueprintBase::ReceiveExecutionStart(class AActor* OwnerActor)
+	void UBTDecorator_BlueprintBase::ReceiveExecutionStart(
+class AActor* OwnerActor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4144,6 +4891,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4154,7 +4903,13 @@ namespace CG
 	 * 		class APawn*                                       ControlledPawn                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EBTNodeResult                                      NodeResult                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTDecorator_BlueprintBase::ReceiveExecutionFinishAI(class AAIController* OwnerController, class APawn* ControlledPawn, EBTNodeResult NodeResult)
+	void UBTDecorator_BlueprintBase::ReceiveExecutionFinishAI(
+class AAIController* OwnerController
+, 
+class APawn* ControlledPawn
+, 
+EBTNodeResult NodeResult
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4175,6 +4930,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4184,7 +4941,11 @@ namespace CG
 	 * 		class AActor*                                      OwnerActor                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EBTNodeResult                                      NodeResult                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTDecorator_BlueprintBase::ReceiveExecutionFinish(class AActor* OwnerActor, EBTNodeResult NodeResult)
+	void UBTDecorator_BlueprintBase::ReceiveExecutionFinish(
+class AActor* OwnerActor
+, 
+EBTNodeResult NodeResult
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4203,6 +4964,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4212,7 +4975,11 @@ namespace CG
 	 * 		class AAIController*                               OwnerController                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class APawn*                                       ControlledPawn                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UBTDecorator_BlueprintBase::PerformConditionCheckAI(class AAIController* OwnerController, class APawn* ControlledPawn)
+	bool UBTDecorator_BlueprintBase::PerformConditionCheckAI(
+class AAIController* OwnerController
+, 
+class APawn* ControlledPawn
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4233,6 +5000,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4241,7 +5010,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AActor*                                      OwnerActor                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UBTDecorator_BlueprintBase::PerformConditionCheck(class AActor* OwnerActor)
+	bool UBTDecorator_BlueprintBase::PerformConditionCheck(
+class AActor* OwnerActor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4259,6 +5030,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -4283,6 +5056,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4306,10 +5081,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTDecorator_BlueprintBase.StaticClass
+	 * 		Name   -> PredefinedFunction UBTDecorator_BlueprintBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTDecorator_BlueprintBase::StaticClass()
@@ -4320,10 +5097,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTDecorator_CheckGameplayTagsOnActor.StaticClass
+	 * 		Name   -> PredefinedFunction UBTDecorator_CheckGameplayTagsOnActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTDecorator_CheckGameplayTagsOnActor::StaticClass()
@@ -4334,10 +5113,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTDecorator_CompareBBEntries.StaticClass
+	 * 		Name   -> PredefinedFunction UBTDecorator_CompareBBEntries.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTDecorator_CompareBBEntries::StaticClass()
@@ -4348,10 +5129,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTDecorator_ConditionalLoop.StaticClass
+	 * 		Name   -> PredefinedFunction UBTDecorator_ConditionalLoop.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTDecorator_ConditionalLoop::StaticClass()
@@ -4362,10 +5145,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTDecorator_ConeCheck.StaticClass
+	 * 		Name   -> PredefinedFunction UBTDecorator_ConeCheck.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTDecorator_ConeCheck::StaticClass()
@@ -4376,10 +5161,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTDecorator_Cooldown.StaticClass
+	 * 		Name   -> PredefinedFunction UBTDecorator_Cooldown.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTDecorator_Cooldown::StaticClass()
@@ -4390,10 +5177,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTDecorator_DoesPathExist.StaticClass
+	 * 		Name   -> PredefinedFunction UBTDecorator_DoesPathExist.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTDecorator_DoesPathExist::StaticClass()
@@ -4404,10 +5193,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTDecorator_ForceSuccess.StaticClass
+	 * 		Name   -> PredefinedFunction UBTDecorator_ForceSuccess.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTDecorator_ForceSuccess::StaticClass()
@@ -4418,10 +5209,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTDecorator_IsAtLocation.StaticClass
+	 * 		Name   -> PredefinedFunction UBTDecorator_IsAtLocation.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTDecorator_IsAtLocation::StaticClass()
@@ -4432,10 +5225,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTDecorator_IsBBEntryOfClass.StaticClass
+	 * 		Name   -> PredefinedFunction UBTDecorator_IsBBEntryOfClass.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTDecorator_IsBBEntryOfClass::StaticClass()
@@ -4446,10 +5241,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTDecorator_KeepInCone.StaticClass
+	 * 		Name   -> PredefinedFunction UBTDecorator_KeepInCone.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTDecorator_KeepInCone::StaticClass()
@@ -4460,10 +5257,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTDecorator_Loop.StaticClass
+	 * 		Name   -> PredefinedFunction UBTDecorator_Loop.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTDecorator_Loop::StaticClass()
@@ -4474,10 +5273,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTDecorator_ReachedMoveGoal.StaticClass
+	 * 		Name   -> PredefinedFunction UBTDecorator_ReachedMoveGoal.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTDecorator_ReachedMoveGoal::StaticClass()
@@ -4488,10 +5289,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTDecorator_SetTagCooldown.StaticClass
+	 * 		Name   -> PredefinedFunction UBTDecorator_SetTagCooldown.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTDecorator_SetTagCooldown::StaticClass()
@@ -4502,10 +5305,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTDecorator_TagCooldown.StaticClass
+	 * 		Name   -> PredefinedFunction UBTDecorator_TagCooldown.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTDecorator_TagCooldown::StaticClass()
@@ -4516,10 +5321,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTDecorator_TimeLimit.StaticClass
+	 * 		Name   -> PredefinedFunction UBTDecorator_TimeLimit.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTDecorator_TimeLimit::StaticClass()
@@ -4530,6 +5337,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4538,7 +5347,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UBTNode*                                     NodeOwner                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTFunctionLibrary::StopUsingExternalEvent(class UBTNode* NodeOwner)
+	void UBTFunctionLibrary::StopUsingExternalEvent(
+class UBTNode* NodeOwner
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4555,6 +5366,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4564,7 +5377,11 @@ namespace CG
 	 * 		class UBTNode*                                     NodeOwner                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class AActor*                                      OwningActor                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTFunctionLibrary::StartUsingExternalEvent(class UBTNode* NodeOwner, class AActor* OwningActor)
+	void UBTFunctionLibrary::StartUsingExternalEvent(
+class UBTNode* NodeOwner
+, 
+class AActor* OwningActor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4583,6 +5400,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4593,7 +5412,13 @@ namespace CG
 	 * 		struct FBlackboardKeySelector                      Key                                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		struct FVector                                     Value                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTFunctionLibrary::SetBlackboardValueAsVector(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key, const struct FVector& Value)
+	void UBTFunctionLibrary::SetBlackboardValueAsVector(
+class UBTNode* NodeOwner
+, 
+const struct FBlackboardKeySelector& Key
+, 
+const struct FVector& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4614,6 +5439,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4624,7 +5451,13 @@ namespace CG
 	 * 		struct FBlackboardKeySelector                      Key                                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Value                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTFunctionLibrary::SetBlackboardValueAsString(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key, const class FString& Value)
+	void UBTFunctionLibrary::SetBlackboardValueAsString(
+class UBTNode* NodeOwner
+, 
+const struct FBlackboardKeySelector& Key
+, 
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4645,6 +5478,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4655,7 +5490,13 @@ namespace CG
 	 * 		struct FBlackboardKeySelector                      Key                                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		struct FRotator                                    Value                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UBTFunctionLibrary::SetBlackboardValueAsRotator(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key, const struct FRotator& Value)
+	void UBTFunctionLibrary::SetBlackboardValueAsRotator(
+class UBTNode* NodeOwner
+, 
+const struct FBlackboardKeySelector& Key
+, 
+const struct FRotator& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4676,6 +5517,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4686,7 +5529,13 @@ namespace CG
 	 * 		struct FBlackboardKeySelector                      Key                                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		class UObject*                                     Value                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTFunctionLibrary::SetBlackboardValueAsObject(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key, class UObject* Value)
+	void UBTFunctionLibrary::SetBlackboardValueAsObject(
+class UBTNode* NodeOwner
+, 
+const struct FBlackboardKeySelector& Key
+, 
+class UObject* Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4707,6 +5556,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4717,7 +5568,13 @@ namespace CG
 	 * 		struct FBlackboardKeySelector                      Key                                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		class FName                                        Value                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTFunctionLibrary::SetBlackboardValueAsName(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key, const class FName& Value)
+	void UBTFunctionLibrary::SetBlackboardValueAsName(
+class UBTNode* NodeOwner
+, 
+const struct FBlackboardKeySelector& Key
+, 
+const class FName& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4738,6 +5595,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4748,7 +5607,13 @@ namespace CG
 	 * 		struct FBlackboardKeySelector                      Key                                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Value                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTFunctionLibrary::SetBlackboardValueAsInt(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key, int32_t Value)
+	void UBTFunctionLibrary::SetBlackboardValueAsInt(
+class UBTNode* NodeOwner
+, 
+const struct FBlackboardKeySelector& Key
+, 
+int32_t Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4769,6 +5634,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4779,7 +5646,13 @@ namespace CG
 	 * 		struct FBlackboardKeySelector                      Key                                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		float                                              Value                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTFunctionLibrary::SetBlackboardValueAsFloat(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key, float Value)
+	void UBTFunctionLibrary::SetBlackboardValueAsFloat(
+class UBTNode* NodeOwner
+, 
+const struct FBlackboardKeySelector& Key
+, 
+float Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4800,6 +5673,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4810,7 +5685,13 @@ namespace CG
 	 * 		struct FBlackboardKeySelector                      Key                                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		unsigned char                                      Value                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTFunctionLibrary::SetBlackboardValueAsEnum(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key, unsigned char Value)
+	void UBTFunctionLibrary::SetBlackboardValueAsEnum(
+class UBTNode* NodeOwner
+, 
+const struct FBlackboardKeySelector& Key
+, 
+unsigned char Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4831,6 +5712,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4841,7 +5724,13 @@ namespace CG
 	 * 		struct FBlackboardKeySelector                      Key                                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		class UClass*                                      Value                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTFunctionLibrary::SetBlackboardValueAsClass(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key, class UClass* Value)
+	void UBTFunctionLibrary::SetBlackboardValueAsClass(
+class UBTNode* NodeOwner
+, 
+const struct FBlackboardKeySelector& Key
+, 
+class UClass* Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4862,6 +5751,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4872,7 +5763,13 @@ namespace CG
 	 * 		struct FBlackboardKeySelector                      Key                                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		bool                                               Value                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTFunctionLibrary::SetBlackboardValueAsBool(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key, bool Value)
+	void UBTFunctionLibrary::SetBlackboardValueAsBool(
+class UBTNode* NodeOwner
+, 
+const struct FBlackboardKeySelector& Key
+, 
+bool Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4893,6 +5790,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4901,7 +5800,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UBTNode*                                     NodeOwner                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UBlackboardComponent* UBTFunctionLibrary::GetOwnersBlackboard(class UBTNode* NodeOwner)
+	class UBlackboardComponent* UBTFunctionLibrary::GetOwnersBlackboard(
+class UBTNode* NodeOwner
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4920,6 +5821,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4928,7 +5831,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UBTNode*                                     NodeOwner                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UBehaviorTreeComponent* UBTFunctionLibrary::GetOwnerComponent(class UBTNode* NodeOwner)
+	class UBehaviorTreeComponent* UBTFunctionLibrary::GetOwnerComponent(
+class UBTNode* NodeOwner
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4947,6 +5852,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4956,7 +5863,11 @@ namespace CG
 	 * 		class UBTNode*                                     NodeOwner                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FBlackboardKeySelector                      Key                                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	struct FVector UBTFunctionLibrary::GetBlackboardValueAsVector(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
+	struct FVector UBTFunctionLibrary::GetBlackboardValueAsVector(
+class UBTNode* NodeOwner
+, 
+const struct FBlackboardKeySelector& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -4977,6 +5888,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -4986,7 +5899,11 @@ namespace CG
 	 * 		class UBTNode*                                     NodeOwner                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FBlackboardKeySelector                      Key                                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	class FString UBTFunctionLibrary::GetBlackboardValueAsString(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
+	class FString UBTFunctionLibrary::GetBlackboardValueAsString(
+class UBTNode* NodeOwner
+, 
+const struct FBlackboardKeySelector& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5007,6 +5924,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5016,7 +5935,11 @@ namespace CG
 	 * 		class UBTNode*                                     NodeOwner                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FBlackboardKeySelector                      Key                                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	struct FRotator UBTFunctionLibrary::GetBlackboardValueAsRotator(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
+	struct FRotator UBTFunctionLibrary::GetBlackboardValueAsRotator(
+class UBTNode* NodeOwner
+, 
+const struct FBlackboardKeySelector& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5037,6 +5960,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5046,7 +5971,11 @@ namespace CG
 	 * 		class UBTNode*                                     NodeOwner                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FBlackboardKeySelector                      Key                                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	class UObject* UBTFunctionLibrary::GetBlackboardValueAsObject(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
+	class UObject* UBTFunctionLibrary::GetBlackboardValueAsObject(
+class UBTNode* NodeOwner
+, 
+const struct FBlackboardKeySelector& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5067,6 +5996,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5076,7 +6007,11 @@ namespace CG
 	 * 		class UBTNode*                                     NodeOwner                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FBlackboardKeySelector                      Key                                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	class FName UBTFunctionLibrary::GetBlackboardValueAsName(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
+	class FName UBTFunctionLibrary::GetBlackboardValueAsName(
+class UBTNode* NodeOwner
+, 
+const struct FBlackboardKeySelector& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5097,6 +6032,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5106,7 +6043,11 @@ namespace CG
 	 * 		class UBTNode*                                     NodeOwner                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FBlackboardKeySelector                      Key                                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	int32_t UBTFunctionLibrary::GetBlackboardValueAsInt(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
+	int32_t UBTFunctionLibrary::GetBlackboardValueAsInt(
+class UBTNode* NodeOwner
+, 
+const struct FBlackboardKeySelector& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5127,6 +6068,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5136,7 +6079,11 @@ namespace CG
 	 * 		class UBTNode*                                     NodeOwner                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FBlackboardKeySelector                      Key                                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	float UBTFunctionLibrary::GetBlackboardValueAsFloat(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
+	float UBTFunctionLibrary::GetBlackboardValueAsFloat(
+class UBTNode* NodeOwner
+, 
+const struct FBlackboardKeySelector& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5157,6 +6104,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5166,7 +6115,11 @@ namespace CG
 	 * 		class UBTNode*                                     NodeOwner                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FBlackboardKeySelector                      Key                                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	unsigned char UBTFunctionLibrary::GetBlackboardValueAsEnum(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
+	unsigned char UBTFunctionLibrary::GetBlackboardValueAsEnum(
+class UBTNode* NodeOwner
+, 
+const struct FBlackboardKeySelector& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5187,6 +6140,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5196,7 +6151,11 @@ namespace CG
 	 * 		class UBTNode*                                     NodeOwner                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FBlackboardKeySelector                      Key                                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	class UClass* UBTFunctionLibrary::GetBlackboardValueAsClass(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
+	class UClass* UBTFunctionLibrary::GetBlackboardValueAsClass(
+class UBTNode* NodeOwner
+, 
+const struct FBlackboardKeySelector& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5217,6 +6176,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5226,7 +6187,11 @@ namespace CG
 	 * 		class UBTNode*                                     NodeOwner                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FBlackboardKeySelector                      Key                                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	bool UBTFunctionLibrary::GetBlackboardValueAsBool(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
+	bool UBTFunctionLibrary::GetBlackboardValueAsBool(
+class UBTNode* NodeOwner
+, 
+const struct FBlackboardKeySelector& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5247,6 +6212,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5256,7 +6223,11 @@ namespace CG
 	 * 		class UBTNode*                                     NodeOwner                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FBlackboardKeySelector                      Key                                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	class AActor* UBTFunctionLibrary::GetBlackboardValueAsActor(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
+	class AActor* UBTFunctionLibrary::GetBlackboardValueAsActor(
+class UBTNode* NodeOwner
+, 
+const struct FBlackboardKeySelector& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5277,6 +6248,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5286,7 +6259,11 @@ namespace CG
 	 * 		class UBTNode*                                     NodeOwner                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FBlackboardKeySelector                      Key                                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UBTFunctionLibrary::ClearBlackboardValueAsVector(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
+	void UBTFunctionLibrary::ClearBlackboardValueAsVector(
+class UBTNode* NodeOwner
+, 
+const struct FBlackboardKeySelector& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5305,6 +6282,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5314,7 +6293,11 @@ namespace CG
 	 * 		class UBTNode*                                     NodeOwner                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FBlackboardKeySelector                      Key                                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UBTFunctionLibrary::ClearBlackboardValue(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
+	void UBTFunctionLibrary::ClearBlackboardValue(
+class UBTNode* NodeOwner
+, 
+const struct FBlackboardKeySelector& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5333,10 +6316,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTFunctionLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UBTFunctionLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTFunctionLibrary::StaticClass()
@@ -5347,10 +6332,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTService.StaticClass
+	 * 		Name   -> PredefinedFunction UBTService.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTService::StaticClass()
@@ -5361,10 +6348,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTService_BlackboardBase.StaticClass
+	 * 		Name   -> PredefinedFunction UBTService_BlackboardBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTService_BlackboardBase::StaticClass()
@@ -5374,6 +6363,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AIModule.BTService_BlackboardBase");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5385,7 +6376,13 @@ namespace CG
 	 * 		class APawn*                                       ControlledPawn                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              DeltaSeconds                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTService_BlueprintBase::ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds)
+	void UBTService_BlueprintBase::ReceiveTickAI(
+class AAIController* OwnerController
+, 
+class APawn* ControlledPawn
+, 
+float DeltaSeconds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5406,6 +6403,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5415,7 +6414,11 @@ namespace CG
 	 * 		class AActor*                                      OwnerActor                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              DeltaSeconds                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTService_BlueprintBase::ReceiveTick(class AActor* OwnerActor, float DeltaSeconds)
+	void UBTService_BlueprintBase::ReceiveTick(
+class AActor* OwnerActor
+, 
+float DeltaSeconds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5434,6 +6437,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5443,7 +6448,11 @@ namespace CG
 	 * 		class AAIController*                               OwnerController                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class APawn*                                       ControlledPawn                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTService_BlueprintBase::ReceiveSearchStartAI(class AAIController* OwnerController, class APawn* ControlledPawn)
+	void UBTService_BlueprintBase::ReceiveSearchStartAI(
+class AAIController* OwnerController
+, 
+class APawn* ControlledPawn
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5462,6 +6471,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5470,7 +6481,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AActor*                                      OwnerActor                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTService_BlueprintBase::ReceiveSearchStart(class AActor* OwnerActor)
+	void UBTService_BlueprintBase::ReceiveSearchStart(
+class AActor* OwnerActor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5487,6 +6500,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5496,7 +6511,11 @@ namespace CG
 	 * 		class AAIController*                               OwnerController                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class APawn*                                       ControlledPawn                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTService_BlueprintBase::ReceiveDeactivationAI(class AAIController* OwnerController, class APawn* ControlledPawn)
+	void UBTService_BlueprintBase::ReceiveDeactivationAI(
+class AAIController* OwnerController
+, 
+class APawn* ControlledPawn
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5515,6 +6534,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5523,7 +6544,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AActor*                                      OwnerActor                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTService_BlueprintBase::ReceiveDeactivation(class AActor* OwnerActor)
+	void UBTService_BlueprintBase::ReceiveDeactivation(
+class AActor* OwnerActor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5540,6 +6563,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5549,7 +6574,11 @@ namespace CG
 	 * 		class AAIController*                               OwnerController                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class APawn*                                       ControlledPawn                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTService_BlueprintBase::ReceiveActivationAI(class AAIController* OwnerController, class APawn* ControlledPawn)
+	void UBTService_BlueprintBase::ReceiveActivationAI(
+class AAIController* OwnerController
+, 
+class APawn* ControlledPawn
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5568,6 +6597,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5576,7 +6607,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AActor*                                      OwnerActor                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTService_BlueprintBase::ReceiveActivation(class AActor* OwnerActor)
+	void UBTService_BlueprintBase::ReceiveActivation(
+class AActor* OwnerActor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5592,6 +6625,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5616,10 +6651,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTService_BlueprintBase.StaticClass
+	 * 		Name   -> PredefinedFunction UBTService_BlueprintBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTService_BlueprintBase::StaticClass()
@@ -5630,10 +6667,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTService_DefaultFocus.StaticClass
+	 * 		Name   -> PredefinedFunction UBTService_DefaultFocus.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTService_DefaultFocus::StaticClass()
@@ -5644,10 +6683,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTService_RunEQS.StaticClass
+	 * 		Name   -> PredefinedFunction UBTService_RunEQS.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTService_RunEQS::StaticClass()
@@ -5658,10 +6699,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTTaskNode.StaticClass
+	 * 		Name   -> PredefinedFunction UBTTaskNode.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTTaskNode::StaticClass()
@@ -5672,10 +6715,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTTask_BlackboardBase.StaticClass
+	 * 		Name   -> PredefinedFunction UBTTask_BlackboardBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTTask_BlackboardBase::StaticClass()
@@ -5686,6 +6731,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5695,7 +6742,11 @@ namespace CG
 	 * 		class FName                                        MessageName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            RequestID                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTTask_BlueprintBase::SetFinishOnMessageWithId(const class FName& MessageName, int32_t RequestID)
+	void UBTTask_BlueprintBase::SetFinishOnMessageWithId(
+const class FName& MessageName
+, 
+int32_t RequestID
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5714,6 +6765,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5722,7 +6775,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        MessageName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTTask_BlueprintBase::SetFinishOnMessage(const class FName& MessageName)
+	void UBTTask_BlueprintBase::SetFinishOnMessage(
+const class FName& MessageName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5739,6 +6794,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5749,7 +6806,13 @@ namespace CG
 	 * 		class APawn*                                       ControlledPawn                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              DeltaSeconds                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTTask_BlueprintBase::ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds)
+	void UBTTask_BlueprintBase::ReceiveTickAI(
+class AAIController* OwnerController
+, 
+class APawn* ControlledPawn
+, 
+float DeltaSeconds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5770,6 +6833,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5779,7 +6844,11 @@ namespace CG
 	 * 		class AActor*                                      OwnerActor                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              DeltaSeconds                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTTask_BlueprintBase::ReceiveTick(class AActor* OwnerActor, float DeltaSeconds)
+	void UBTTask_BlueprintBase::ReceiveTick(
+class AActor* OwnerActor
+, 
+float DeltaSeconds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5798,6 +6867,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5807,7 +6878,11 @@ namespace CG
 	 * 		class AAIController*                               OwnerController                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class APawn*                                       ControlledPawn                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTTask_BlueprintBase::ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn)
+	void UBTTask_BlueprintBase::ReceiveExecuteAI(
+class AAIController* OwnerController
+, 
+class APawn* ControlledPawn
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5826,6 +6901,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5834,7 +6911,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AActor*                                      OwnerActor                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTTask_BlueprintBase::ReceiveExecute(class AActor* OwnerActor)
+	void UBTTask_BlueprintBase::ReceiveExecute(
+class AActor* OwnerActor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5851,6 +6930,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5860,7 +6941,11 @@ namespace CG
 	 * 		class AAIController*                               OwnerController                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class APawn*                                       ControlledPawn                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTTask_BlueprintBase::ReceiveAbortAI(class AAIController* OwnerController, class APawn* ControlledPawn)
+	void UBTTask_BlueprintBase::ReceiveAbortAI(
+class AAIController* OwnerController
+, 
+class APawn* ControlledPawn
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5879,6 +6964,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5887,7 +6974,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AActor*                                      OwnerActor                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTTask_BlueprintBase::ReceiveAbort(class AActor* OwnerActor)
+	void UBTTask_BlueprintBase::ReceiveAbort(
+class AActor* OwnerActor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5903,6 +6992,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5927,6 +7018,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5950,6 +7043,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -5958,7 +7053,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bSuccess                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UBTTask_BlueprintBase::FinishExecute(bool bSuccess)
+	void UBTTask_BlueprintBase::FinishExecute(
+bool bSuccess
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -5974,6 +7071,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -5996,10 +7095,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTTask_BlueprintBase.StaticClass
+	 * 		Name   -> PredefinedFunction UBTTask_BlueprintBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTTask_BlueprintBase::StaticClass()
@@ -6010,10 +7111,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTTask_FinishWithResult.StaticClass
+	 * 		Name   -> PredefinedFunction UBTTask_FinishWithResult.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTTask_FinishWithResult::StaticClass()
@@ -6024,10 +7127,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTTask_GameplayTaskBase.StaticClass
+	 * 		Name   -> PredefinedFunction UBTTask_GameplayTaskBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTTask_GameplayTaskBase::StaticClass()
@@ -6038,10 +7143,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTTask_MakeNoise.StaticClass
+	 * 		Name   -> PredefinedFunction UBTTask_MakeNoise.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTTask_MakeNoise::StaticClass()
@@ -6052,10 +7159,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTTask_MoveTo.StaticClass
+	 * 		Name   -> PredefinedFunction UBTTask_MoveTo.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTTask_MoveTo::StaticClass()
@@ -6066,10 +7175,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTTask_MoveDirectlyToward.StaticClass
+	 * 		Name   -> PredefinedFunction UBTTask_MoveDirectlyToward.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTTask_MoveDirectlyToward::StaticClass()
@@ -6080,10 +7191,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTTask_PawnActionBase.StaticClass
+	 * 		Name   -> PredefinedFunction UBTTask_PawnActionBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTTask_PawnActionBase::StaticClass()
@@ -6094,10 +7207,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTTask_PlayAnimation.StaticClass
+	 * 		Name   -> PredefinedFunction UBTTask_PlayAnimation.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTTask_PlayAnimation::StaticClass()
@@ -6108,10 +7223,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTTask_PlaySound.StaticClass
+	 * 		Name   -> PredefinedFunction UBTTask_PlaySound.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTTask_PlaySound::StaticClass()
@@ -6122,10 +7239,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTTask_PushPawnAction.StaticClass
+	 * 		Name   -> PredefinedFunction UBTTask_PushPawnAction.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTTask_PushPawnAction::StaticClass()
@@ -6136,10 +7255,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTTask_RotateToFaceBBEntry.StaticClass
+	 * 		Name   -> PredefinedFunction UBTTask_RotateToFaceBBEntry.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTTask_RotateToFaceBBEntry::StaticClass()
@@ -6150,10 +7271,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTTask_RunBehavior.StaticClass
+	 * 		Name   -> PredefinedFunction UBTTask_RunBehavior.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTTask_RunBehavior::StaticClass()
@@ -6164,10 +7287,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTTask_RunBehaviorDynamic.StaticClass
+	 * 		Name   -> PredefinedFunction UBTTask_RunBehaviorDynamic.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTTask_RunBehaviorDynamic::StaticClass()
@@ -6178,10 +7303,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTTask_RunEQSQuery.StaticClass
+	 * 		Name   -> PredefinedFunction UBTTask_RunEQSQuery.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTTask_RunEQSQuery::StaticClass()
@@ -6192,10 +7319,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTTask_SetTagCooldown.StaticClass
+	 * 		Name   -> PredefinedFunction UBTTask_SetTagCooldown.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTTask_SetTagCooldown::StaticClass()
@@ -6206,10 +7335,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTTask_Wait.StaticClass
+	 * 		Name   -> PredefinedFunction UBTTask_Wait.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTTask_Wait::StaticClass()
@@ -6220,10 +7351,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBTTask_WaitBlackboardTime.StaticClass
+	 * 		Name   -> PredefinedFunction UBTTask_WaitBlackboardTime.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBTTask_WaitBlackboardTime::StaticClass()
@@ -6234,10 +7367,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UCrowdAgentInterface.StaticClass
+	 * 		Name   -> PredefinedFunction UCrowdAgentInterface.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UCrowdAgentInterface::StaticClass()
@@ -6248,6 +7383,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6256,7 +7393,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ANavigationData*                             NavData                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UPathFollowingComponent::OnNavDataRegistered(class ANavigationData* NavData)
+	void UPathFollowingComponent::OnNavDataRegistered(
+class ANavigationData* NavData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6273,6 +7412,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6284,7 +7425,15 @@ namespace CG
 	 * 		struct FVector                                     NormalImpulse                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FHitResult                                  Hit                                                        (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	 */
-	void UPathFollowingComponent::OnActorBump(class AActor* SelfActor, class AActor* OtherActor, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
+	void UPathFollowingComponent::OnActorBump(
+class AActor* SelfActor
+, 
+class AActor* OtherActor
+, 
+const struct FVector& NormalImpulse
+, 
+const struct FHitResult& Hit
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6306,6 +7455,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -6330,6 +7481,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6353,10 +7506,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPathFollowingComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UPathFollowingComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPathFollowingComponent::StaticClass()
@@ -6367,6 +7522,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6375,7 +7532,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bSuspend                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UCrowdFollowingComponent::SuspendCrowdSteering(bool bSuspend)
+	void UCrowdFollowingComponent::SuspendCrowdSteering(
+bool bSuspend
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6392,10 +7551,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UCrowdFollowingComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UCrowdFollowingComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UCrowdFollowingComponent::StaticClass()
@@ -6406,10 +7567,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UCrowdManager.StaticClass
+	 * 		Name   -> PredefinedFunction UCrowdManager.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UCrowdManager::StaticClass()
@@ -6420,10 +7583,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ADetourCrowdAIController.StaticClass
+	 * 		Name   -> PredefinedFunction ADetourCrowdAIController.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ADetourCrowdAIController::StaticClass()
@@ -6434,10 +7599,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQuery.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQuery.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQuery::StaticClass()
@@ -6448,10 +7615,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryContext.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryContext.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryContext::StaticClass()
@@ -6461,6 +7630,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AIModule.EnvQueryContext");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -6472,7 +7643,13 @@ namespace CG
 	 * 		class AActor*                                      QuerierActor                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector                                     ResultingLocation                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEnvQueryContext_BlueprintBase::ProvideSingleLocation(class UObject* QuerierObject, class AActor* QuerierActor, struct FVector* ResultingLocation)
+	void UEnvQueryContext_BlueprintBase::ProvideSingleLocation(
+class UObject* QuerierObject
+, 
+class AActor* QuerierActor
+, 
+struct FVector* ResultingLocation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6495,6 +7672,8 @@ namespace CG
 			*ResultingLocation = params.ResultingLocation;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6505,7 +7684,13 @@ namespace CG
 	 * 		class AActor*                                      QuerierActor                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class AActor*                                      ResultingActor                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEnvQueryContext_BlueprintBase::ProvideSingleActor(class UObject* QuerierObject, class AActor* QuerierActor, class AActor** ResultingActor)
+	void UEnvQueryContext_BlueprintBase::ProvideSingleActor(
+class UObject* QuerierObject
+, 
+class AActor* QuerierActor
+, 
+class AActor** ResultingActor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6528,6 +7713,8 @@ namespace CG
 			*ResultingActor = params.ResultingActor;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6538,7 +7725,13 @@ namespace CG
 	 * 		class AActor*                                      QuerierActor                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FVector>                             ResultingLocationSet                                       (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UEnvQueryContext_BlueprintBase::ProvideLocationsSet(class UObject* QuerierObject, class AActor* QuerierActor, TArray<struct FVector>* ResultingLocationSet)
+	void UEnvQueryContext_BlueprintBase::ProvideLocationsSet(
+class UObject* QuerierObject
+, 
+class AActor* QuerierActor
+, 
+TArray<struct FVector>* ResultingLocationSet
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6561,6 +7754,8 @@ namespace CG
 			*ResultingLocationSet = params.ResultingLocationSet;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6571,7 +7766,13 @@ namespace CG
 	 * 		class AActor*                                      QuerierActor                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<class AActor*>                              ResultingActorsSet                                         (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UEnvQueryContext_BlueprintBase::ProvideActorsSet(class UObject* QuerierObject, class AActor* QuerierActor, TArray<class AActor*>* ResultingActorsSet)
+	void UEnvQueryContext_BlueprintBase::ProvideActorsSet(
+class UObject* QuerierObject
+, 
+class AActor* QuerierActor
+, 
+TArray<class AActor*>* ResultingActorsSet
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6594,10 +7795,12 @@ namespace CG
 			*ResultingActorsSet = params.ResultingActorsSet;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryContext_BlueprintBase.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryContext_BlueprintBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryContext_BlueprintBase::StaticClass()
@@ -6608,10 +7811,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryContext_Item.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryContext_Item.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryContext_Item::StaticClass()
@@ -6622,10 +7827,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryContext_Querier.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryContext_Querier.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryContext_Querier::StaticClass()
@@ -6636,10 +7843,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryDebugHelpers.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryDebugHelpers.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryDebugHelpers::StaticClass()
@@ -6650,10 +7859,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryNode.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryNode.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryNode::StaticClass()
@@ -6664,10 +7875,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryGenerator.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryGenerator.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryGenerator::StaticClass()
@@ -6678,10 +7891,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryGenerator_ActorsOfClass.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryGenerator_ActorsOfClass.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryGenerator_ActorsOfClass::StaticClass()
@@ -6691,6 +7906,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AIModule.EnvQueryGenerator_ActorsOfClass");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -6715,6 +7932,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6723,7 +7942,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<struct FVector>                             ContextLocations                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UEnvQueryGenerator_BlueprintBase::DoItemGeneration(TArray<struct FVector> ContextLocations)
+	void UEnvQueryGenerator_BlueprintBase::DoItemGeneration(
+TArray<struct FVector> ContextLocations
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6740,6 +7961,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6748,7 +7971,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector                                     GeneratedVector                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEnvQueryGenerator_BlueprintBase::AddGeneratedVector(const struct FVector& GeneratedVector)
+	void UEnvQueryGenerator_BlueprintBase::AddGeneratedVector(
+const struct FVector& GeneratedVector
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6765,6 +7990,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6773,7 +8000,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AActor*                                      GeneratedActor                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEnvQueryGenerator_BlueprintBase::AddGeneratedActor(class AActor* GeneratedActor)
+	void UEnvQueryGenerator_BlueprintBase::AddGeneratedActor(
+class AActor* GeneratedActor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6790,10 +8019,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryGenerator_BlueprintBase.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryGenerator_BlueprintBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryGenerator_BlueprintBase::StaticClass()
@@ -6804,10 +8035,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryGenerator_Composite.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryGenerator_Composite.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryGenerator_Composite::StaticClass()
@@ -6818,10 +8051,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryGenerator_ProjectedPoints.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryGenerator_ProjectedPoints.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryGenerator_ProjectedPoints::StaticClass()
@@ -6832,10 +8067,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryGenerator_Cone.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryGenerator_Cone.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryGenerator_Cone::StaticClass()
@@ -6846,10 +8083,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryGenerator_CurrentLocation.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryGenerator_CurrentLocation.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryGenerator_CurrentLocation::StaticClass()
@@ -6860,10 +8099,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryGenerator_Donut.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryGenerator_Donut.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryGenerator_Donut::StaticClass()
@@ -6874,10 +8115,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryGenerator_OnCircle.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryGenerator_OnCircle.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryGenerator_OnCircle::StaticClass()
@@ -6888,10 +8131,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryGenerator_SimpleGrid.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryGenerator_SimpleGrid.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryGenerator_SimpleGrid::StaticClass()
@@ -6902,10 +8147,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryGenerator_PathingGrid.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryGenerator_PathingGrid.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryGenerator_PathingGrid::StaticClass()
@@ -6916,6 +8163,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6925,7 +8174,11 @@ namespace CG
 	 * 		class FName                                        ParamName                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Value                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEnvQueryInstanceBlueprintWrapper::SetNamedParam(const class FName& ParamName, float Value)
+	void UEnvQueryInstanceBlueprintWrapper::SetNamedParam(
+const class FName& ParamName
+, 
+float Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -6943,6 +8196,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -6967,6 +8222,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6990,6 +8247,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -6998,7 +8257,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<struct FVector>                             ResultLocations                                            (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	bool UEnvQueryInstanceBlueprintWrapper::GetQueryResultsAsLocations(TArray<struct FVector>* ResultLocations)
+	bool UEnvQueryInstanceBlueprintWrapper::GetQueryResultsAsLocations(
+TArray<struct FVector>* ResultLocations
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7019,6 +8280,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7027,7 +8290,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<class AActor*>                              ResultActors                                               (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	bool UEnvQueryInstanceBlueprintWrapper::GetQueryResultsAsActors(TArray<class AActor*>* ResultActors)
+	bool UEnvQueryInstanceBlueprintWrapper::GetQueryResultsAsActors(
+TArray<class AActor*>* ResultActors
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7048,6 +8313,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7056,7 +8323,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            ItemIndex                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float UEnvQueryInstanceBlueprintWrapper::GetItemScore(int32_t ItemIndex)
+	float UEnvQueryInstanceBlueprintWrapper::GetItemScore(
+int32_t ItemIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7075,6 +8344,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7084,7 +8355,11 @@ namespace CG
 	 * 		class UEnvQueryInstanceBlueprintWrapper*           QueryInstance                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EEnvQueryStatus                                    QueryStatus                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEnvQueryInstanceBlueprintWrapper::EQSQueryDoneSignature__DelegateSignature(class UEnvQueryInstanceBlueprintWrapper* QueryInstance, EEnvQueryStatus QueryStatus)
+	void UEnvQueryInstanceBlueprintWrapper::EQSQueryDoneSignature__DelegateSignature(
+class UEnvQueryInstanceBlueprintWrapper* QueryInstance
+, 
+EEnvQueryStatus QueryStatus
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7103,10 +8378,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryInstanceBlueprintWrapper.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryInstanceBlueprintWrapper.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryInstanceBlueprintWrapper::StaticClass()
@@ -7117,10 +8394,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryItemType.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryItemType.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryItemType::StaticClass()
@@ -7131,10 +8410,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryItemType_VectorBase.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryItemType_VectorBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryItemType_VectorBase::StaticClass()
@@ -7145,10 +8426,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryItemType_ActorBase.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryItemType_ActorBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryItemType_ActorBase::StaticClass()
@@ -7159,10 +8442,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryItemType_Actor.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryItemType_Actor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryItemType_Actor::StaticClass()
@@ -7173,10 +8458,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryItemType_Direction.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryItemType_Direction.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryItemType_Direction::StaticClass()
@@ -7187,10 +8474,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryItemType_Point.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryItemType_Point.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryItemType_Point::StaticClass()
@@ -7200,6 +8489,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AIModule.EnvQueryItemType_Point");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7213,7 +8504,17 @@ namespace CG
 	 * 		EEnvQueryRunMode                                   RunMode                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UClass*                                      WrapperClass                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UEnvQueryInstanceBlueprintWrapper* UEnvQueryManager::RunEQSQuery(class UObject* WorldContextObject, class UEnvQuery* QueryTemplate, class UObject* Querier, EEnvQueryRunMode RunMode, class UClass* WrapperClass)
+	class UEnvQueryInstanceBlueprintWrapper* UEnvQueryManager::RunEQSQuery(
+class UObject* WorldContextObject
+, 
+class UEnvQuery* QueryTemplate
+, 
+class UObject* Querier
+, 
+EEnvQueryRunMode RunMode
+, 
+class UClass* WrapperClass
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7240,10 +8541,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryManager.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryManager.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryManager::StaticClass()
@@ -7254,10 +8557,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryOption.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryOption.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryOption::StaticClass()
@@ -7268,10 +8573,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryTest.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryTest.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryTest::StaticClass()
@@ -7282,10 +8589,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryTest_Distance.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryTest_Distance.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryTest_Distance::StaticClass()
@@ -7296,10 +8605,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryTest_Dot.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryTest_Dot.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryTest_Dot::StaticClass()
@@ -7310,10 +8621,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryTest_GameplayTags.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryTest_GameplayTags.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryTest_GameplayTags::StaticClass()
@@ -7324,10 +8637,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryTest_Overlap.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryTest_Overlap.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryTest_Overlap::StaticClass()
@@ -7338,10 +8653,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryTest_Pathfinding.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryTest_Pathfinding.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryTest_Pathfinding::StaticClass()
@@ -7352,10 +8669,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryTest_PathfindingBatch.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryTest_PathfindingBatch.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryTest_PathfindingBatch::StaticClass()
@@ -7366,10 +8685,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryTest_Project.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryTest_Project.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryTest_Project::StaticClass()
@@ -7380,10 +8701,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryTest_Random.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryTest_Random.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryTest_Random::StaticClass()
@@ -7394,10 +8717,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryTest_Trace.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryTest_Trace.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryTest_Trace::StaticClass()
@@ -7408,10 +8733,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryTest_Volume.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryTest_Volume.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryTest_Volume::StaticClass()
@@ -7422,10 +8749,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEnvQueryTypes.StaticClass
+	 * 		Name   -> PredefinedFunction UEnvQueryTypes.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEnvQueryTypes::StaticClass()
@@ -7436,10 +8765,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEQSQueryResultSourceInterface.StaticClass
+	 * 		Name   -> PredefinedFunction UEQSQueryResultSourceInterface.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEQSQueryResultSourceInterface::StaticClass()
@@ -7450,10 +8781,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEQSRenderingComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UEQSRenderingComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEQSRenderingComponent::StaticClass()
@@ -7464,10 +8797,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AEQSTestingPawn.StaticClass
+	 * 		Name   -> PredefinedFunction AEQSTestingPawn.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AEQSTestingPawn::StaticClass()
@@ -7478,10 +8813,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGenericTeamAgentInterface.StaticClass
+	 * 		Name   -> PredefinedFunction UGenericTeamAgentInterface.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGenericTeamAgentInterface::StaticClass()
@@ -7492,10 +8829,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AGridPathAIController.StaticClass
+	 * 		Name   -> PredefinedFunction AGridPathAIController.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AGridPathAIController::StaticClass()
@@ -7506,10 +8845,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGridPathFollowingComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UGridPathFollowingComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGridPathFollowingComponent::StaticClass()
@@ -7520,10 +8861,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNavFilter_AIControllerDefault.StaticClass
+	 * 		Name   -> PredefinedFunction UNavFilter_AIControllerDefault.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNavFilter_AIControllerDefault::StaticClass()
@@ -7534,6 +8877,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7542,7 +8887,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bEnabled                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ANavLinkProxy::SetSmartLinkEnabled(bool bEnabled)
+	void ANavLinkProxy::SetSmartLinkEnabled(
+bool bEnabled
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7559,6 +8906,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7567,7 +8916,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AActor*                                      Agent                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ANavLinkProxy::ResumePathFollowing(class AActor* Agent)
+	void ANavLinkProxy::ResumePathFollowing(
+class AActor* Agent
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7584,6 +8935,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7593,7 +8946,11 @@ namespace CG
 	 * 		class AActor*                                      Agent                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector                                     Destination                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ANavLinkProxy::ReceiveSmartLinkReached(class AActor* Agent, const struct FVector& Destination)
+	void ANavLinkProxy::ReceiveSmartLinkReached(
+class AActor* Agent
+, 
+const struct FVector& Destination
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7611,6 +8968,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7635,6 +8994,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7658,10 +9019,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ANavLinkProxy.StaticClass
+	 * 		Name   -> PredefinedFunction ANavLinkProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ANavLinkProxy::StaticClass()
@@ -7672,6 +9035,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7681,7 +9046,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              CellSize                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UNavLocalGridManager::SetLocalNavigationGridDensity(class UObject* WorldContextObject, float CellSize)
+	bool UNavLocalGridManager::SetLocalNavigationGridDensity(
+class UObject* WorldContextObject
+, 
+float CellSize
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7702,6 +9071,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7712,7 +9083,13 @@ namespace CG
 	 * 		int32_t                                            GridId                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bRebuildGrids                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UNavLocalGridManager::RemoveLocalNavigationGrid(class UObject* WorldContextObject, int32_t GridId, bool bRebuildGrids)
+	void UNavLocalGridManager::RemoveLocalNavigationGrid(
+class UObject* WorldContextObject
+, 
+int32_t GridId
+, 
+bool bRebuildGrids
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7733,6 +9110,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7744,7 +9123,15 @@ namespace CG
 	 * 		struct FVector                                     End                                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FVector>                             PathPoints                                                 (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	bool UNavLocalGridManager::FindLocalNavigationGridPath(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, TArray<struct FVector>* PathPoints)
+	bool UNavLocalGridManager::FindLocalNavigationGridPath(
+class UObject* WorldContextObject
+, 
+const struct FVector& Start
+, 
+const struct FVector& End
+, 
+TArray<struct FVector>* PathPoints
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7771,6 +9158,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7783,7 +9172,17 @@ namespace CG
 	 * 		float                                              Height                                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bRebuildGrids                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UNavLocalGridManager::AddLocalNavigationGridForPoints(class UObject* WorldContextObject, TArray<struct FVector> Locations, int32_t Radius2D, float Height, bool bRebuildGrids)
+	int32_t UNavLocalGridManager::AddLocalNavigationGridForPoints(
+class UObject* WorldContextObject
+, 
+TArray<struct FVector> Locations
+, 
+int32_t Radius2D
+, 
+float Height
+, 
+bool bRebuildGrids
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7810,6 +9209,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7822,7 +9223,17 @@ namespace CG
 	 * 		float                                              Height                                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bRebuildGrids                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UNavLocalGridManager::AddLocalNavigationGridForPoint(class UObject* WorldContextObject, const struct FVector& Location, int32_t Radius2D, float Height, bool bRebuildGrids)
+	int32_t UNavLocalGridManager::AddLocalNavigationGridForPoint(
+class UObject* WorldContextObject
+, 
+const struct FVector& Location
+, 
+int32_t Radius2D
+, 
+float Height
+, 
+bool bRebuildGrids
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7849,6 +9260,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7863,7 +9276,21 @@ namespace CG
 	 * 		float                                              Height                                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bRebuildGrids                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UNavLocalGridManager::AddLocalNavigationGridForCapsule(class UObject* WorldContextObject, const struct FVector& Location, float CapsuleRadius, float CapsuleHalfHeight, int32_t Radius2D, float Height, bool bRebuildGrids)
+	int32_t UNavLocalGridManager::AddLocalNavigationGridForCapsule(
+class UObject* WorldContextObject
+, 
+const struct FVector& Location
+, 
+float CapsuleRadius
+, 
+float CapsuleHalfHeight
+, 
+int32_t Radius2D
+, 
+float Height
+, 
+bool bRebuildGrids
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7894,6 +9321,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7908,7 +9337,21 @@ namespace CG
 	 * 		float                                              Height                                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bRebuildGrids                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UNavLocalGridManager::AddLocalNavigationGridForBox(class UObject* WorldContextObject, const struct FVector& Location, const struct FVector& Extent, const struct FRotator& Rotation, int32_t Radius2D, float Height, bool bRebuildGrids)
+	int32_t UNavLocalGridManager::AddLocalNavigationGridForBox(
+class UObject* WorldContextObject
+, 
+const struct FVector& Location
+, 
+const struct FVector& Extent
+, 
+const struct FRotator& Rotation
+, 
+int32_t Radius2D
+, 
+float Height
+, 
+bool bRebuildGrids
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -7939,10 +9382,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNavLocalGridManager.StaticClass
+	 * 		Name   -> PredefinedFunction UNavLocalGridManager.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNavLocalGridManager::StaticClass()
@@ -7953,10 +9398,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPathFollowingManager.StaticClass
+	 * 		Name   -> PredefinedFunction UPathFollowingManager.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPathFollowingManager::StaticClass()
@@ -7966,6 +9413,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AIModule.PathFollowingManager");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -7990,6 +9439,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -7998,7 +9449,9 @@ namespace CG
 	 * Parameters:
 	 * 		EPawnActionResult                                  WithResult                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UPawnAction::Finish(EPawnActionResult WithResult)
+	void UPawnAction::Finish(
+EPawnActionResult WithResult
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8015,6 +9468,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8024,7 +9479,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UClass*                                      ActionClass                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UPawnAction* UPawnAction::CreateActionInstance(class UObject* WorldContextObject, class UClass* ActionClass)
+	class UPawnAction* UPawnAction::CreateActionInstance(
+class UObject* WorldContextObject
+, 
+class UClass* ActionClass
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8045,10 +9504,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPawnAction.StaticClass
+	 * 		Name   -> PredefinedFunction UPawnAction.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPawnAction::StaticClass()
@@ -8059,6 +9520,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8068,7 +9531,11 @@ namespace CG
 	 * 		class APawn*                                       ControlledPawn                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              DeltaSeconds                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UPawnAction_BlueprintBase::ActionTick(class APawn* ControlledPawn, float DeltaSeconds)
+	void UPawnAction_BlueprintBase::ActionTick(
+class APawn* ControlledPawn
+, 
+float DeltaSeconds
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8087,6 +9554,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8095,7 +9564,9 @@ namespace CG
 	 * Parameters:
 	 * 		class APawn*                                       ControlledPawn                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UPawnAction_BlueprintBase::ActionStart(class APawn* ControlledPawn)
+	void UPawnAction_BlueprintBase::ActionStart(
+class APawn* ControlledPawn
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8112,6 +9583,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8120,7 +9593,9 @@ namespace CG
 	 * Parameters:
 	 * 		class APawn*                                       ControlledPawn                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UPawnAction_BlueprintBase::ActionResume(class APawn* ControlledPawn)
+	void UPawnAction_BlueprintBase::ActionResume(
+class APawn* ControlledPawn
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8137,6 +9612,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8145,7 +9622,9 @@ namespace CG
 	 * Parameters:
 	 * 		class APawn*                                       ControlledPawn                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UPawnAction_BlueprintBase::ActionPause(class APawn* ControlledPawn)
+	void UPawnAction_BlueprintBase::ActionPause(
+class APawn* ControlledPawn
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8162,6 +9641,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8171,7 +9652,11 @@ namespace CG
 	 * 		class APawn*                                       ControlledPawn                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EPawnActionResult                                  WithResult                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UPawnAction_BlueprintBase::ActionFinished(class APawn* ControlledPawn, EPawnActionResult WithResult)
+	void UPawnAction_BlueprintBase::ActionFinished(
+class APawn* ControlledPawn
+, 
+EPawnActionResult WithResult
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8190,10 +9675,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPawnAction_BlueprintBase.StaticClass
+	 * 		Name   -> PredefinedFunction UPawnAction_BlueprintBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPawnAction_BlueprintBase::StaticClass()
@@ -8204,10 +9691,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPawnAction_Move.StaticClass
+	 * 		Name   -> PredefinedFunction UPawnAction_Move.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPawnAction_Move::StaticClass()
@@ -8218,10 +9707,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPawnAction_Repeat.StaticClass
+	 * 		Name   -> PredefinedFunction UPawnAction_Repeat.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPawnAction_Repeat::StaticClass()
@@ -8232,10 +9723,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPawnAction_Sequence.StaticClass
+	 * 		Name   -> PredefinedFunction UPawnAction_Sequence.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPawnAction_Sequence::StaticClass()
@@ -8246,10 +9739,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPawnAction_Wait.StaticClass
+	 * 		Name   -> PredefinedFunction UPawnAction_Wait.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPawnAction_Wait::StaticClass()
@@ -8259,6 +9754,8 @@ namespace CG
 			ptr = UObject::FindClass("Class AIModule.PawnAction_Wait");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -8270,7 +9767,13 @@ namespace CG
 	 * 		EAIRequestPriority                                 Priority                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UObject*                                     Instigator                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UPawnActionsComponent::K2_PushAction(class UPawnAction* NewAction, EAIRequestPriority Priority, class UObject* Instigator)
+	bool UPawnActionsComponent::K2_PushAction(
+class UPawnAction* NewAction
+, 
+EAIRequestPriority Priority
+, 
+class UObject* Instigator
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8293,6 +9796,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8303,7 +9808,13 @@ namespace CG
 	 * 		class UPawnAction*                                 Action                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EAIRequestPriority                                 Priority                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UPawnActionsComponent::K2_PerformAction(class APawn* Pawn, class UPawnAction* Action, EAIRequestPriority Priority)
+	bool UPawnActionsComponent::K2_PerformAction(
+class APawn* Pawn
+, 
+class UPawnAction* Action
+, 
+EAIRequestPriority Priority
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8326,6 +9837,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8334,7 +9847,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UPawnAction*                                 ActionToAbort                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	EPawnActionAbortState UPawnActionsComponent::K2_ForceAbortAction(class UPawnAction* ActionToAbort)
+	EPawnActionAbortState UPawnActionsComponent::K2_ForceAbortAction(
+class UPawnAction* ActionToAbort
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8353,6 +9868,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8361,7 +9878,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UPawnAction*                                 ActionToAbort                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	EPawnActionAbortState UPawnActionsComponent::K2_AbortAction(class UPawnAction* ActionToAbort)
+	EPawnActionAbortState UPawnActionsComponent::K2_AbortAction(
+class UPawnAction* ActionToAbort
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8380,10 +9899,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPawnActionsComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UPawnActionsComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPawnActionsComponent::StaticClass()
@@ -8394,6 +9915,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8402,7 +9925,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bEnabled                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UPawnSensingComponent::SetSensingUpdatesEnabled(bool bEnabled)
+	void UPawnSensingComponent::SetSensingUpdatesEnabled(
+bool bEnabled
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8419,6 +9944,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8427,7 +9954,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              NewSensingInterval                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UPawnSensingComponent::SetSensingInterval(float NewSensingInterval)
+	void UPawnSensingComponent::SetSensingInterval(
+float NewSensingInterval
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8444,6 +9973,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8452,7 +9983,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              NewPeripheralVisionAngle                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UPawnSensingComponent::SetPeripheralVisionAngle(float NewPeripheralVisionAngle)
+	void UPawnSensingComponent::SetPeripheralVisionAngle(
+float NewPeripheralVisionAngle
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8469,6 +10002,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8477,7 +10012,9 @@ namespace CG
 	 * Parameters:
 	 * 		class APawn*                                       Pawn                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UPawnSensingComponent::SeePawnDelegate__DelegateSignature(class APawn* Pawn)
+	void UPawnSensingComponent::SeePawnDelegate__DelegateSignature(
+class APawn* Pawn
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8494,6 +10031,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8504,7 +10043,13 @@ namespace CG
 	 * 		struct FVector                                     Location                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Volume                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UPawnSensingComponent::HearNoiseDelegate__DelegateSignature(class APawn* Instigator, const struct FVector& Location, float Volume)
+	void UPawnSensingComponent::HearNoiseDelegate__DelegateSignature(
+class APawn* Instigator
+, 
+const struct FVector& Location
+, 
+float Volume
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -8524,6 +10069,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -8548,6 +10095,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -8571,10 +10120,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPawnSensingComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UPawnSensingComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPawnSensingComponent::StaticClass()
@@ -8585,10 +10136,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UVisualLoggerExtension.StaticClass
+	 * 		Name   -> PredefinedFunction UVisualLoggerExtension.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UVisualLoggerExtension::StaticClass()
@@ -8598,6 +10151,7 @@ namespace CG
 			ptr = UObject::FindClass("Class AIModule.VisualLoggerExtension");
 		return ptr;
 	}
+
 
 }
 

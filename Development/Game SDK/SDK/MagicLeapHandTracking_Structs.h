@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+
 	/**
 	 * Enum MagicLeapHandTracking.EMagicLeapGestureTransformSpace
 	 */
@@ -24,6 +25,8 @@ namespace CG
 		Tracking = 2,
 		MAX      = 3
 	};
+
+
 
 	/**
 	 * Enum MagicLeapHandTracking.EMagicLeapHandTrackingGestureFilterLevel
@@ -36,6 +39,8 @@ namespace CG
 		MAX                       = 3
 	};
 
+
+
 	/**
 	 * Enum MagicLeapHandTracking.EMagicLeapHandTrackingKeypointFilterLevel
 	 */
@@ -46,6 +51,8 @@ namespace CG
 		PredictiveSmoothing = 2,
 		MAX                 = 3
 	};
+
+
 
 	/**
 	 * Enum MagicLeapHandTracking.EMagicLeapHandTrackingGesture
@@ -65,6 +72,8 @@ namespace CG
 		NoHand       = 10,
 		MAX          = 11
 	};
+
+
 
 	/**
 	 * Enum MagicLeapHandTracking.EMagicLeapHandTrackingKeypoint

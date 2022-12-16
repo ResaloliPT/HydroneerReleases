@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+
 	/**
 	 * ScriptStruct JsonUtilities.JsonObjectWrapper
 	 * Size -> 0x0020
@@ -21,8 +22,12 @@ namespace CG
 	struct FJsonObjectWrapper
 	{
 	public:
-		class FString                                              JsonString;                                              // 0x0000(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_WF1F[0x10];                                  // 0x0010(0x0010) MISSED OFFSET (PADDING)
+
+		class FString                                            JsonString;                                              // 0x0000(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_OA82[0x10];                                  // 0x0010(0x0010) MISSED OFFSET (PADDING)
+
 	};
 
 }

@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18,7 +19,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<class UActorComponent*>                     Components                                                 (Parm, OutParm, ContainsInstancedReference)
 	 */
-	void ABP_IcehelmMasterwork_C::ComponentsToSave(TArray<class UActorComponent*>* Components)
+	void ABP_IcehelmMasterwork_C::ComponentsToSave(
+TArray<class UActorComponent*>* Components
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -36,6 +39,8 @@ namespace CG
 		if (Components != nullptr)
 			*Components = params.Components;
 	}
+
+
 
 	/**
 	 * Function:
@@ -58,6 +63,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -66,7 +73,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FS_ResourceEnumAndWeight                    Resource                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_IcehelmMasterwork_C::Add_to_Contents(const struct FS_ResourceEnumAndWeight& Resource)
+	void ABP_IcehelmMasterwork_C::Add_to_Contents(
+const struct FS_ResourceEnumAndWeight& Resource
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -83,6 +92,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -90,10 +101,16 @@ namespace CG
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		class UClass*                                      Resource                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		bool                                               IsRequired_                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               IsRequired                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 * 		E_MetalType                                        Type                                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_IcehelmMasterwork_C::IsClassInOurRequirements_(class UClass* Resource, bool* IsRequired_, E_MetalType* Type)
+	void ABP_IcehelmMasterwork_C::IsClassInOurRequirements(
+class UClass* Resource
+, 
+bool* IsRequired
+, 
+E_MetalType* Type
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -102,7 +119,7 @@ namespace CG
 		struct
 		{
 			class UClass*                                      Resource;
-			bool                                               IsRequired_;
+			bool                                               IsRequired;
 			E_MetalType                                        Type;
 		} params;
 		params.Resource = Resource;
@@ -111,11 +128,13 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 		
-		if (IsRequired_ != nullptr)
-			*IsRequired_ = params.IsRequired_;
+		if (IsRequired != nullptr)
+			*IsRequired = params.IsRequired;
 		if (Type != nullptr)
 			*Type = params.Type;
 	}
+
+
 
 	/**
 	 * Function:
@@ -126,7 +145,11 @@ namespace CG
 	 * 		E_MetalType                                        Type                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		float                                              Weight                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_IcehelmMasterwork_C::FindWeightNeededOfSpecific(E_MetalType Type, float* Weight)
+	void ABP_IcehelmMasterwork_C::FindWeightNeededOfSpecific(
+E_MetalType Type
+, 
+float* Weight
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -147,17 +170,19 @@ namespace CG
 			*Weight = params.Weight;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.SpawnAdditionalBars
+	 * 		Name   -> Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.RemoveMatsFromContents
 	 * 		Flags  -> ()
 	 */
-	void ABP_IcehelmMasterwork_C::SpawnAdditionalBars()
+	void ABP_IcehelmMasterwork_C::RemoveMatsFromContents()
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.SpawnAdditionalBars");
+			fn = UObject::FindObject<UFunction>("Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.RemoveMatsFromContents");
 		
 		struct
 		{
@@ -168,15 +193,19 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_IcehelmMasterwork.BP_IcehelmMasterwork_C.Has All Required Contents?
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               HasAllRequirements_                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               HasAllRequirements                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_IcehelmMasterwork_C::Has_All_Required_Contents_(bool* HasAllRequirements_)
+	void ABP_IcehelmMasterwork_C::Has_All_Required_Contents(
+bool* HasAllRequirements
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -184,16 +213,18 @@ namespace CG
 		
 		struct
 		{
-			bool                                               HasAllRequirements_;
+			bool                                               HasAllRequirements;
 		} params;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 		
-		if (HasAllRequirements_ != nullptr)
-			*HasAllRequirements_ = params.HasAllRequirements_;
+		if (HasAllRequirements != nullptr)
+			*HasAllRequirements = params.HasAllRequirements;
 	}
+
+
 
 	/**
 	 * Function:
@@ -204,7 +235,11 @@ namespace CG
 	 * 		class UActorComponent*                             Component                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class ABP_GameController_C*                        Controller                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_IcehelmMasterwork_C::OverrideMouseClicked(class UActorComponent* Component, class ABP_GameController_C* Controller)
+	void ABP_IcehelmMasterwork_C::OverrideMouseClicked(
+class UActorComponent* Component
+, 
+class ABP_GameController_C* Controller
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -222,6 +257,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -244,6 +281,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -252,7 +291,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UClass*                                      Class                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_IcehelmMasterwork_C::SpawnItem(class UClass* Class)
+	void ABP_IcehelmMasterwork_C::SpawnItem(
+class UClass* Class
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -268,6 +309,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -290,6 +333,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -301,7 +346,15 @@ namespace CG
 	 * 		class UPrimitiveComponent*                         OtherComp                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		int32_t                                            OtherBodyIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_IcehelmMasterwork_C::BndEvt__BP_IcehelmMasterwork_MouldBox_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex)
+	void ABP_IcehelmMasterwork_C::BndEvt__BP_IcehelmMasterwork_MouldBox_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(
+class UPrimitiveComponent* OverlappedComponent
+, 
+class AActor* OtherActor
+, 
+class UPrimitiveComponent* OtherComp
+, 
+int32_t OtherBodyIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -324,6 +377,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -337,7 +392,19 @@ namespace CG
 	 * 		bool                                               bFromSweep                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 * 		struct FHitResult                                  SweepResult                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	 */
-	void ABP_IcehelmMasterwork_C::BndEvt__BP_IcehelmMasterwork_MouldBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+	void ABP_IcehelmMasterwork_C::BndEvt__BP_IcehelmMasterwork_MouldBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(
+class UPrimitiveComponent* OverlappedComponent
+, 
+class AActor* OtherActor
+, 
+class UPrimitiveComponent* OtherComp
+, 
+int32_t OtherBodyIndex
+, 
+bool bFromSweep
+, 
+const struct FHitResult& SweepResult
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -364,6 +431,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -377,7 +446,19 @@ namespace CG
 	 * 		bool                                               bFromSweep                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 * 		struct FHitResult                                  SweepResult                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	 */
-	void ABP_IcehelmMasterwork_C::BndEvt__BP_IcehelmMasterwork_CrucibleCollision_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+	void ABP_IcehelmMasterwork_C::BndEvt__BP_IcehelmMasterwork_CrucibleCollision_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(
+class UPrimitiveComponent* OverlappedComponent
+, 
+class AActor* OtherActor
+, 
+class UPrimitiveComponent* OtherComp
+, 
+int32_t OtherBodyIndex
+, 
+bool bFromSweep
+, 
+const struct FHitResult& SweepResult
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -404,6 +485,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -424,6 +507,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -446,6 +531,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -466,6 +553,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -488,6 +577,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -496,7 +587,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_IcehelmMasterwork_C::ExecuteUbergraph_BP_IcehelmMasterwork(int32_t EntryPoint)
+	void ABP_IcehelmMasterwork_C::ExecuteUbergraph_BP_IcehelmMasterwork(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -513,10 +606,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ABP_IcehelmMasterwork_C.StaticClass
+	 * 		Name   -> PredefinedFunction ABP_IcehelmMasterwork_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ABP_IcehelmMasterwork_C::StaticClass()
@@ -526,6 +621,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass BP_IcehelmMasterwork.BP_IcehelmMasterwork_C");
 		return ptr;
 	}
+
 
 }
 

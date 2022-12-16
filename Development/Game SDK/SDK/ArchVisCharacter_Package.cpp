@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction AArchVisCharacter.StaticClass
+	 * 		Name   -> PredefinedFunction AArchVisCharacter.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* AArchVisCharacter::StaticClass()
@@ -24,10 +25,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UArchVisCharMovementComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UArchVisCharMovementComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UArchVisCharMovementComponent::StaticClass()
@@ -37,6 +40,7 @@ namespace CG
 			ptr = UObject::FindClass("Class ArchVisCharacter.ArchVisCharMovementComponent");
 		return ptr;
 	}
+
 
 }
 

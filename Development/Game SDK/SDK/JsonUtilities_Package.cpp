@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UJsonUtilitiesDummyObject.StaticClass
+	 * 		Name   -> PredefinedFunction UJsonUtilitiesDummyObject.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UJsonUtilitiesDummyObject::StaticClass()
@@ -23,6 +24,7 @@ namespace CG
 			ptr = UObject::FindClass("Class JsonUtilities.JsonUtilitiesDummyObject");
 		return ptr;
 	}
+
 
 }
 

@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+
 	/**
 	 * Enum AutoSettingsInput.EBindingCaptureMode
 	 */
@@ -27,6 +28,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+
 	/**
 	 * ScriptStruct AutoSettingsInput.ConfigActionKeyMapping
 	 * Size -> 0x0008 (FullSize[0x0030] - InheritedSize[0x0028])
@@ -34,9 +36,15 @@ namespace CG
 	struct FConfigActionKeyMapping : public FInputActionKeyMapping
 	{
 	public:
-		bool                                                       bIsDefault;                                              // 0x0028(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_E19Z[0x7];                                   // 0x0029(0x0007) MISSED OFFSET (PADDING)
+
+		bool                                                     bIsDefault;                                              // 0x0028(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_JBWL[0x7];                                   // 0x0029(0x0007) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct AutoSettingsInput.ConfigAxisKeyMapping
@@ -45,9 +53,15 @@ namespace CG
 	struct FConfigAxisKeyMapping : public FInputAxisKeyMapping
 	{
 	public:
-		bool                                                       bIsDefault;                                              // 0x0028(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_TRNR[0x7];                                   // 0x0029(0x0007) MISSED OFFSET (PADDING)
+
+		bool                                                     bIsDefault;                                              // 0x0028(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_SW26[0x7];                                   // 0x0029(0x0007) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct AutoSettingsInput.InputMappingGroup
@@ -56,12 +70,24 @@ namespace CG
 	struct FInputMappingGroup
 	{
 	public:
-		TArray<struct FConfigActionKeyMapping>                     ActionMappings;                                          // 0x0000(0x0010) Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic
-		TArray<struct FConfigAxisKeyMapping>                       AxisMappings;                                            // 0x0010(0x0010) Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic
-		TArray<struct FConfigActionKeyMapping>                     UnboundActionMappings;                                   // 0x0020(0x0010) ZeroConstructor, Config, NativeAccessSpecifierPublic
-		TArray<struct FConfigAxisKeyMapping>                       UnboundAxisMappings;                                     // 0x0030(0x0010) ZeroConstructor, Config, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_L85X[0x10];                                  // 0x0040(0x0010) MISSED OFFSET (PADDING)
+
+		TArray<struct FConfigActionKeyMapping>                   ActionMappings;                                          // 0x0000(0x0010) Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic
+
+
+		TArray<struct FConfigAxisKeyMapping>                     AxisMappings;                                            // 0x0010(0x0010) Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic
+
+
+		TArray<struct FConfigActionKeyMapping>                   UnboundActionMappings;                                   // 0x0020(0x0010) ZeroConstructor, Config, NativeAccessSpecifierPublic
+
+
+		TArray<struct FConfigAxisKeyMapping>                     UnboundAxisMappings;                                     // 0x0030(0x0010) ZeroConstructor, Config, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_5W2E[0x10];                                  // 0x0040(0x0010) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct AutoSettingsInput.InputMappingLayout
@@ -70,9 +96,15 @@ namespace CG
 	struct FInputMappingLayout
 	{
 	public:
-		TArray<struct FInputMappingGroup>                          MappingGroups;                                           // 0x0000(0x0010) Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_BEWF[0x10];                                  // 0x0010(0x0010) MISSED OFFSET (PADDING)
+
+		TArray<struct FInputMappingGroup>                        MappingGroups;                                           // 0x0000(0x0010) Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_HOX7[0x10];                                  // 0x0010(0x0010) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct AutoSettingsInput.InputMappingPreset
@@ -81,12 +113,24 @@ namespace CG
 	struct FInputMappingPreset
 	{
 	public:
-		struct FGameplayTag                                        PresetTag;                                               // 0x0000(0x0008) Edit, BlueprintVisible, Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bUseDefaultMappings;                                     // 0x0008(0x0001) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_XDZ6[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FInputMappingLayout                                 InputLayout;                                             // 0x0010(0x0020) Edit, Config, NativeAccessSpecifierPublic
-		TArray<struct FInputMappingGroup>                          MappingGroups;                                           // 0x0030(0x0010) ZeroConstructor, Config, Deprecated, NativeAccessSpecifierPublic
+
+		struct FGameplayTag                                      PresetTag;                                               // 0x0000(0x0008) Edit, BlueprintVisible, Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bUseDefaultMappings;                                     // 0x0008(0x0001) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_N55M[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FInputMappingLayout                               InputLayout;                                             // 0x0010(0x0020) Edit, Config, NativeAccessSpecifierPublic
+
+
+		TArray<struct FInputMappingGroup>                        MappingGroups;                                           // 0x0030(0x0010) ZeroConstructor, Config, Deprecated, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct AutoSettingsInput.MappingGroupLink
@@ -95,8 +139,12 @@ namespace CG
 	struct FMappingGroupLink
 	{
 	public:
-		TArray<int32_t>                                            MappingGroups;                                           // 0x0000(0x0010) Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic
+
+		TArray<int32_t>                                          MappingGroups;                                           // 0x0000(0x0010) Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct AutoSettingsInput.KeyIconPair
@@ -105,9 +153,15 @@ namespace CG
 	struct FKeyIconPair
 	{
 	public:
-		struct FKey                                                Key;                                                     // 0x0000(0x0018) Deprecated, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UTexture*                                            Icon;                                                    // 0x0018(0x0008) ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+		struct FKey                                              Key;                                                     // 0x0000(0x0018) Deprecated, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class UTexture*                                          Icon;                                                    // 0x0018(0x0008) ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct AutoSettingsInput.KeyIconSet
@@ -116,10 +170,18 @@ namespace CG
 	struct FKeyIconSet
 	{
 	public:
-		struct FGameplayTagContainer                               Tags;                                                    // 0x0000(0x0020) Edit, Config, NativeAccessSpecifierPublic
-		unsigned char                                              IconMap[0x50];                                           // 0x0020(0x0050) UNKNOWN PROPERTY: MapProperty
-		TArray<struct FKeyIconPair>                                Icons;                                                   // 0x0070(0x0010) ZeroConstructor, Deprecated, NativeAccessSpecifierPublic
+
+		struct FGameplayTagContainer                             Tags;                                                    // 0x0000(0x0020) Edit, Config, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            IconMap[0x50];                                           // 0x0020(0x0050) UNKNOWN PROPERTY: MapProperty
+
+
+		TArray<struct FKeyIconPair>                              Icons;                                                   // 0x0070(0x0010) ZeroConstructor, Deprecated, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct AutoSettingsInput.KeyFriendlyName
@@ -128,9 +190,15 @@ namespace CG
 	struct FKeyFriendlyName
 	{
 	public:
-		struct FKey                                                Key;                                                     // 0x0000(0x0018) Edit, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FText                                                FriendlyName;                                            // 0x0018(0x0018) Edit, Config, NativeAccessSpecifierPublic
+
+		struct FKey                                              Key;                                                     // 0x0000(0x0018) Edit, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FText                                              FriendlyName;                                            // 0x0018(0x0018) Edit, Config, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct AutoSettingsInput.KeyGroup
@@ -139,12 +207,24 @@ namespace CG
 	struct FKeyGroup
 	{
 	public:
-		struct FGameplayTag                                        KeyGroupTag;                                             // 0x0000(0x0008) Edit, Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bUseGamepadKeys;                                         // 0x0008(0x0001) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bUseNonGamepadKeys;                                      // 0x0009(0x0001) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_FAQM[0x6];                                   // 0x000A(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<struct FKey>                                        Keys;                                                    // 0x0010(0x0010) Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic
+
+		struct FGameplayTag                                      KeyGroupTag;                                             // 0x0000(0x0008) Edit, Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bUseGamepadKeys;                                         // 0x0008(0x0001) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bUseNonGamepadKeys;                                      // 0x0009(0x0001) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_BXGB[0x6];                                   // 0x000A(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		TArray<struct FKey>                                      Keys;                                                    // 0x0010(0x0010) Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct AutoSettingsInput.KeyScale
@@ -153,10 +233,18 @@ namespace CG
 	struct FKeyScale
 	{
 	public:
-		struct FKey                                                Key;                                                     // 0x0000(0x0018) Edit, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      Scale;                                                   // 0x0018(0x0004) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_LGW4[0x4];                                   // 0x001C(0x0004) MISSED OFFSET (PADDING)
+
+		struct FKey                                              Key;                                                     // 0x0000(0x0018) Edit, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    Scale;                                                   // 0x0018(0x0004) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_7D2N[0x4];                                   // 0x001C(0x0004) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct AutoSettingsInput.AxisAssociation
@@ -165,11 +253,21 @@ namespace CG
 	struct FAxisAssociation
 	{
 	public:
-		struct FKey                                                AxisKey;                                                 // 0x0000(0x0018) Edit, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FKey                                                AnalogKey;                                               // 0x0018(0x0018) Config, Deprecated, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		TArray<struct FKeyScale>                                   ButtonKeys;                                              // 0x0030(0x0010) Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic
-		TArray<struct FKeyScale>                                   BooleanKeys;                                             // 0x0040(0x0010) ZeroConstructor, Config, Deprecated, NativeAccessSpecifierPublic
+
+		struct FKey                                              AxisKey;                                                 // 0x0000(0x0018) Edit, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FKey                                              AnalogKey;                                               // 0x0018(0x0018) Config, Deprecated, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		TArray<struct FKeyScale>                                 ButtonKeys;                                              // 0x0030(0x0010) Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic
+
+
+		TArray<struct FKeyScale>                                 BooleanKeys;                                             // 0x0040(0x0010) ZeroConstructor, Config, Deprecated, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct AutoSettingsInput.PlayerInputMappings
@@ -178,18 +276,42 @@ namespace CG
 	struct FPlayerInputMappings
 	{
 	public:
-		class FString                                              PlayerId;                                                // 0x0000(0x0010) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                    PlayerIndex;                                             // 0x0010(0x0004) ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FGameplayTag                                        BasePresetTag;                                           // 0x0014(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                       bNullBasePreset;                                         // 0x001C(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_AV53[0x3];                                   // 0x001D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FInputMappingLayout                                 MappingOverrides;                                        // 0x0020(0x0020) NativeAccessSpecifierPublic
-		bool                                                       Custom;                                                  // 0x0040(0x0001) ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_J08M[0x7];                                   // 0x0041(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FInputMappingPreset                                 Preset;                                                  // 0x0048(0x0040) Deprecated, NativeAccessSpecifierPublic
-		struct FGameplayTag                                        PlayerKeyGroup;                                          // 0x0088(0x0008) NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_6N1B[0x10];                                  // 0x0090(0x0010) MISSED OFFSET (PADDING)
+
+		class FString                                            PlayerId;                                                // 0x0000(0x0010) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		int32_t                                                  PlayerIndex;                                             // 0x0010(0x0004) ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FGameplayTag                                      BasePresetTag;                                           // 0x0014(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		bool                                                     bNullBasePreset;                                         // 0x001C(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_ANHR[0x3];                                   // 0x001D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FInputMappingLayout                               MappingOverrides;                                        // 0x0020(0x0020) NativeAccessSpecifierPublic
+
+
+		bool                                                     Custom;                                                  // 0x0040(0x0001) ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_1LYQ[0x7];                                   // 0x0041(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		struct FInputMappingPreset                               Preset;                                                  // 0x0048(0x0040) Deprecated, NativeAccessSpecifierPublic
+
+
+		struct FGameplayTag                                      PlayerKeyGroup;                                          // 0x0088(0x0008) NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_DUKK[0x10];                                  // 0x0090(0x0010) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct AutoSettingsInput.CapturedInput
@@ -198,9 +320,15 @@ namespace CG
 	struct FCapturedInput
 	{
 	public:
-		struct FInputChord                                         Chord;                                                   // 0x0000(0x0020) Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                      AxisScale;                                               // 0x0020(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_SBOW[0x4];                                   // 0x0024(0x0004) MISSED OFFSET (PADDING)
+
+		struct FInputChord                                       Chord;                                                   // 0x0000(0x0020) Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		float                                                    AxisScale;                                               // 0x0020(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_FR1D[0x4];                                   // 0x0024(0x0004) MISSED OFFSET (PADDING)
+
 	};
 
 }

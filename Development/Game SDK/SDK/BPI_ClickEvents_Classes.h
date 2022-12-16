@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * BlueprintGeneratedClass BPI_ClickEvents.BPI_ClickEvents_C
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
@@ -21,11 +22,45 @@ namespace CG
 	class UBPI_ClickEvents_C : public UInterface
 	{
 	public:
-		void LMBDownIsTarget(class UPrimitiveComponent* Component, class ABP_ParentItem_C* CarryingItem, class ABP_GameController_C* Insigator);
-		void RMBDownIsTarget(class UPrimitiveComponent* Component, class ABP_ParentItem_C* CarryingItem, class ABP_GameController_C* Instigator);
-		void RMBDownWhileCarrying(class ABP_GameController_C* Controller, class AActor* Hit_Actor, const struct FVector& HitLocation);
-		void LMBDownWhileCarrying(class ABP_GameController_C* Controller, class AActor* HitActor, const struct FVector& HitLocation, bool* ConsumeInput_);
+
+		void RMBUpWhileCarrying();
+
+		void LMBDownIsTarget(
+class UPrimitiveComponent* Component
+, 
+class ABP_ParentItem_C* CarryingItem
+, 
+class ABP_GameController_C* Insigator
+);
+
+		void RMBDownIsTarget(
+class UPrimitiveComponent* Component
+, 
+class ABP_ParentItem_C* CarryingItem
+, 
+class ABP_GameController_C* Instigator
+);
+
+		void RMBDownWhileCarrying(
+class ABP_GameController_C* Controller
+, 
+class AActor* Hit_Actor
+, 
+const struct FVector& HitLocation
+);
+
+		void LMBDownWhileCarrying(
+class ABP_GameController_C* Controller
+, 
+class AActor* HitActor
+, 
+const struct FVector& HitLocation
+, 
+bool* ConsumeInput
+);
+
 		void LMBUpWhileCarrying();
+
 		static UClass* StaticClass();
 	};
 

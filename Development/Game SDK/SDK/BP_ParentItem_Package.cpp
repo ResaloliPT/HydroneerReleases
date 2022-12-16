@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,15 +10,18 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.BPI_GetCanHighlight
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               CanHighlight_                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               CanHighlight                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_ParentItem_C::BPI_GetCanHighlight(bool* CanHighlight_)
+	void ABP_ParentItem_C::BPI_GetCanHighlight(
+bool* CanHighlight
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -26,16 +29,18 @@ namespace CG
 		
 		struct
 		{
-			bool                                               CanHighlight_;
+			bool                                               CanHighlight;
 		} params;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 		
-		if (CanHighlight_ != nullptr)
-			*CanHighlight_ = params.CanHighlight_;
+		if (CanHighlight != nullptr)
+			*CanHighlight = params.CanHighlight;
 	}
+
+
 
 	/**
 	 * Function:
@@ -45,7 +50,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<int32_t>                                    HighlightArray                                             (Parm, OutParm)
 	 */
-	void ABP_ParentItem_C::BPI_GetHighlightArray(TArray<int32_t>* HighlightArray)
+	void ABP_ParentItem_C::BPI_GetHighlightArray(
+TArray<int32_t>* HighlightArray
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -64,6 +71,8 @@ namespace CG
 			*HighlightArray = params.HighlightArray;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -73,7 +82,11 @@ namespace CG
 	 * 		TArray<int32_t>                                    HighlightArray                                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	 * 		bool                                               Result                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_ParentItem_C::BPI_SetHighlightArray(TArray<int32_t>* HighlightArray, bool* Result)
+	void ABP_ParentItem_C::BPI_SetHighlightArray(
+TArray<int32_t>* HighlightArray
+, 
+bool* Result
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -95,6 +108,8 @@ namespace CG
 			*Result = params.Result;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -103,7 +118,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<class UActorComponent*>                     Components                                                 (Parm, OutParm, ContainsInstancedReference)
 	 */
-	void ABP_ParentItem_C::ComponentsToSave(TArray<class UActorComponent*>* Components)
+	void ABP_ParentItem_C::ComponentsToSave(
+TArray<class UActorComponent*>* Components
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -121,6 +138,125 @@ namespace CG
 		if (Components != nullptr)
 			*Components = params.Components;
 	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.StoreMeshMats
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentItem_C::StoreMeshMats()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.StoreMeshMats");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.GetAttachedMeshCollisionProfile
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		E_PhyReact                                         Index                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	class FName ABP_ParentItem_C::GetAttachedMeshCollisionProfile(
+E_PhyReact Index
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.GetAttachedMeshCollisionProfile");
+		
+		struct
+		{
+			E_PhyReact                                         Index;
+		} params;
+		params.Index = Index;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.SetAttachedMeshCollisionProfile
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UStaticMeshComponent*                        Mesh                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		class FName                                        CollisionProfile                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_ParentItem_C::SetAttachedMeshCollisionProfile(
+class UStaticMeshComponent* Mesh
+, 
+const class FName& CollisionProfile
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.SetAttachedMeshCollisionProfile");
+		
+		struct
+		{
+			class UStaticMeshComponent*                        Mesh;
+			class FName                                        CollisionProfile;
+		} params;
+		params.Mesh = Mesh;
+		params.CollisionProfile = CollisionProfile;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.MassReset
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UPrimitiveComponent*                         Mesh                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_ParentItem_C::MassReset(
+class UPrimitiveComponent* Mesh
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.MassReset");
+		
+		struct
+		{
+			class UPrimitiveComponent*                         Mesh;
+		} params;
+		params.Mesh = Mesh;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
 
 	/**
 	 * Function:
@@ -143,6 +279,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -152,7 +290,11 @@ namespace CG
 	 * 		class UPrimitiveComponent*                         Primitive                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		bool                                               Result                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_ParentItem_C::CanChangeMeshCollisions_(class UPrimitiveComponent* Primitive, bool* Result)
+	void ABP_ParentItem_C::CanChangeMeshCollisions(
+class UPrimitiveComponent* Primitive
+, 
+bool* Result
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -173,15 +315,19 @@ namespace CG
 			*Result = params.Result;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.ToggleHighlight
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               Highlight_                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               Highlight                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_ParentItem_C::ToggleHighlight(bool Highlight_)
+	void ABP_ParentItem_C::ToggleHighlight(
+bool Highlight
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -189,14 +335,16 @@ namespace CG
 		
 		struct
 		{
-			bool                                               Highlight_;
+			bool                                               Highlight;
 		} params;
-		params.Highlight_ = Highlight_;
+		params.Highlight = Highlight;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -219,6 +367,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -240,6 +390,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -248,7 +400,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               OnlyOwnerSee                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_ParentItem_C::ToggleOnlyOwnerSee(bool OnlyOwnerSee)
+	void ABP_ParentItem_C::ToggleOnlyOwnerSee(
+bool OnlyOwnerSee
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -264,6 +418,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -286,15 +442,19 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.ToggleProxyItem
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               Enabled_                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               Enabled                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_ParentItem_C::ToggleProxyItem(bool Enabled_)
+	void ABP_ParentItem_C::ToggleProxyItem(
+bool Enabled
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -302,14 +462,16 @@ namespace CG
 		
 		struct
 		{
-			bool                                               Enabled_;
+			bool                                               Enabled;
 		} params;
-		params.Enabled_ = Enabled_;
+		params.Enabled = Enabled;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -332,6 +494,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -341,7 +505,11 @@ namespace CG
 	 * 		E_PhyReact                                         New_Reaction                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class UStaticMeshComponent*                        Mesh                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentItem_C::SetMeshPhysicalReaction(E_PhyReact New_Reaction, class UStaticMeshComponent* Mesh)
+	void ABP_ParentItem_C::SetMeshPhysicalReaction(
+E_PhyReact New_Reaction
+, 
+class UStaticMeshComponent* Mesh
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -359,6 +527,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -381,6 +551,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -388,9 +560,10 @@ namespace CG
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		class UMaterialInterface*                          Material                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		bool                                               Temporary_                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_ParentItem_C::Change_Materials(class UMaterialInterface* Material, bool Temporary_)
+	void ABP_ParentItem_C::Change_Materials(
+class UMaterialInterface* Material
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -399,15 +572,15 @@ namespace CG
 		struct
 		{
 			class UMaterialInterface*                          Material;
-			bool                                               Temporary_;
 		} params;
 		params.Material = Material;
-		params.Temporary_ = Temporary_;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -430,6 +603,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -451,6 +626,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -459,7 +636,9 @@ namespace CG
 	 * Parameters:
 	 * 		E_PhyReact                                         New_Reaction                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentItem_C::Set_Item_Physical_Reactions(E_PhyReact New_Reaction)
+	void ABP_ParentItem_C::Set_Item_Physical_Reactions(
+E_PhyReact New_Reaction
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -476,6 +655,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -485,7 +666,11 @@ namespace CG
 	 * 		ECollisionResponse                                 NewResponse                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		ECollisionChannel                                  Channel                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentItem_C::SetAllResponseToChannel(ECollisionResponse NewResponse, ECollisionChannel Channel)
+	void ABP_ParentItem_C::SetAllResponseToChannel(
+ECollisionResponse NewResponse
+, 
+ECollisionChannel Channel
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -504,15 +689,19 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.ScanForDropCollision
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               Can_Drop_                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               Can_Drop                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_ParentItem_C::ScanForDropCollision(bool* Can_Drop_)
+	void ABP_ParentItem_C::ScanForDropCollision(
+bool* Can_Drop
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -520,16 +709,18 @@ namespace CG
 		
 		struct
 		{
-			bool                                               Can_Drop_;
+			bool                                               Can_Drop;
 		} params;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 		
-		if (Can_Drop_ != nullptr)
-			*Can_Drop_ = params.Can_Drop_;
+		if (Can_Drop != nullptr)
+			*Can_Drop = params.Can_Drop;
 	}
+
+
 
 	/**
 	 * Function:
@@ -552,6 +743,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -572,6 +765,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -594,6 +789,37 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.OverrideDroppedItem
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class ABP_GameCharacter_C*                         Character                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_ParentItem_C::OverrideDroppedItem(
+class ABP_GameCharacter_C* Character
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.OverrideDroppedItem");
+		
+		struct
+		{
+			class ABP_GameCharacter_C*                         Character;
+		} params;
+		params.Character = Character;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -614,6 +840,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -636,6 +864,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -644,7 +874,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_GameCharacter_C*                         Player                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentItem_C::ItemPrecisionPlace(class ABP_GameCharacter_C* Player)
+	void ABP_ParentItem_C::ItemPrecisionPlace(
+class ABP_GameCharacter_C* Player
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -660,6 +892,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -682,6 +916,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -703,38 +939,71 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.OverrideDroppedItem
+	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.ItemDropped
 	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class ABP_GameCharacter_C*                         Character                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentItem_C::OverrideDroppedItem(class ABP_GameCharacter_C* Character)
+	void ABP_ParentItem_C::ItemDropped()
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.OverrideDroppedItem");
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ItemDropped");
 		
 		struct
 		{
-			class ABP_GameCharacter_C*                         Character;
 		} params;
-		params.Character = Character;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
 
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.ItemPickedUp
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class ABP_GameCharacter_C*                         Player                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_ParentItem_C::ItemPickedUp(
+class ABP_GameCharacter_C* Player
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ItemPickedUp");
+		
+		struct
+		{
+			class ABP_GameCharacter_C*                         Player;
+		} params;
+		params.Player = Player;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.TriggerPhysics
 	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              LockoutTime                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentItem_C::TriggerPhysics()
+	void ABP_ParentItem_C::TriggerPhysics(
+float LockoutTime
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -742,12 +1011,16 @@ namespace CG
 		
 		struct
 		{
+			float                                              LockoutTime;
 		} params;
+		params.LockoutTime = LockoutTime;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -770,6 +1043,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -790,6 +1065,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -812,6 +1089,54 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.ActorSaved
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentItem_C::ActorSaved()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ActorSaved");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.ActorPreSave
+	 * 		Flags  -> ()
+	 */
+	void ABP_ParentItem_C::ActorPreSave()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ActorPreSave");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -833,6 +1158,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -845,7 +1172,17 @@ namespace CG
 	 * 		struct FVector                                     NormalImpulse                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		struct FHitResult                                  Hit                                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	 */
-	void ABP_ParentItem_C::BndEvt__StaticMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
+	void ABP_ParentItem_C::BndEvt__StaticMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(
+class UPrimitiveComponent* HitComponent
+, 
+class AActor* OtherActor
+, 
+class UPrimitiveComponent* OtherComp
+, 
+const struct FVector& NormalImpulse
+, 
+const struct FHitResult& Hit
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -870,6 +1207,42 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.BPI_ToggleLookAt
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class ABP_GameController_C*                        Controller                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		bool                                               LookingAt                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 */
+	void ABP_ParentItem_C::BPI_ToggleLookAt(
+class ABP_GameController_C* Controller
+, 
+bool LookingAt
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.BPI_ToggleLookAt");
+		
+		struct
+		{
+			class ABP_GameController_C*                        Controller;
+			bool                                               LookingAt;
+		} params;
+		params.Controller = Controller;
+		params.LookingAt = LookingAt;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -891,6 +1264,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -899,7 +1274,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AActor*                                      OtherActor                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentItem_C::OverrideHit(class AActor* OtherActor)
+	void ABP_ParentItem_C::OverrideHit(
+class AActor* OtherActor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -916,6 +1293,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -924,7 +1303,9 @@ namespace CG
 	 * Parameters:
 	 * 		class AActor*                                      BeingStoredBy                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentItem_C::ShelfItem(class AActor* BeingStoredBy)
+	void ABP_ParentItem_C::ShelfItem(
+class AActor* BeingStoredBy
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -941,26 +1322,7 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.ItemDropped
-	 * 		Flags  -> ()
-	 */
-	void ABP_ParentItem_C::ItemDropped()
-	{
-		static UFunction* fn = nullptr;
-		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ItemDropped");
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
+
 
 	/**
 	 * Function:
@@ -983,6 +1345,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1004,30 +1368,7 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.ItemPickedUp
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class ABP_GameCharacter_C*                         Player                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 */
-	void ABP_ParentItem_C::ItemPickedUp(class ABP_GameCharacter_C* Player)
-	{
-		static UFunction* fn = nullptr;
-		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ItemPickedUp");
-		
-		struct
-		{
-			class ABP_GameCharacter_C*                         Player;
-		} params;
-		params.Player = Player;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
+
 
 	/**
 	 * Function:
@@ -1050,26 +1391,7 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.ActorSaved
-	 * 		Flags  -> ()
-	 */
-	void ABP_ParentItem_C::ActorSaved()
-	{
-		static UFunction* fn = nullptr;
-		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ActorSaved");
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
+
 
 	/**
 	 * Function:
@@ -1092,6 +1414,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1100,7 +1424,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_GameController_C*                        Controller                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentItem_C::BPI_Unhighlight(class ABP_GameController_C* Controller)
+	void ABP_ParentItem_C::BPI_Unhighlight(
+class ABP_GameController_C* Controller
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1117,6 +1443,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1125,7 +1453,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_GameController_C*                        Controller                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentItem_C::BPI_Highlight(class ABP_GameController_C* Controller)
+	void ABP_ParentItem_C::BPI_Highlight(
+class ABP_GameController_C* Controller
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1141,6 +1471,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1163,33 +1495,7 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.BPI_ToggleLookAt
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class ABP_GameController_C*                        Controller                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		bool                                               LookingAt_                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	 */
-	void ABP_ParentItem_C::BPI_ToggleLookAt(class ABP_GameController_C* Controller, bool LookingAt_)
-	{
-		static UFunction* fn = nullptr;
-		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.BPI_ToggleLookAt");
-		
-		struct
-		{
-			class ABP_GameController_C*                        Controller;
-			bool                                               LookingAt_;
-		} params;
-		params.Controller = Controller;
-		params.LookingAt_ = LookingAt_;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
+
 
 	/**
 	 * Function:
@@ -1212,6 +1518,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1233,17 +1541,19 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.ActorPreSave
+	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.OverridePickedupPreCarry
 	 * 		Flags  -> ()
 	 */
-	void ABP_ParentItem_C::ActorPreSave()
+	void ABP_ParentItem_C::OverridePickedupPreCarry()
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
-			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.ActorPreSave");
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.OverridePickedupPreCarry");
 		
 		struct
 		{
@@ -1254,6 +1564,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1262,7 +1574,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentItem_C::ExecuteUbergraph_BP_ParentItem(int32_t EntryPoint)
+	void ABP_ParentItem_C::ExecuteUbergraph_BP_ParentItem(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1279,10 +1593,75 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ABP_ParentItem_C.StaticClass
+	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.OnStored__DelegateSignature
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class ABP_ParentItem_C*                            Item                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		class UAC_Storage_C*                               Storage                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_ParentItem_C::OnStored__DelegateSignature(
+class ABP_ParentItem_C* Item
+, 
+class UAC_Storage_C* Storage
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.OnStored__DelegateSignature");
+		
+		struct
+		{
+			class ABP_ParentItem_C*                            Item;
+			class UAC_Storage_C*                               Storage;
+		} params;
+		params.Item = Item;
+		params.Storage = Storage;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_ParentItem.BP_ParentItem_C.OnGrounded__DelegateSignature
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class ABP_ParentItem_C*                            Item                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_ParentItem_C::OnGrounded__DelegateSignature(
+class ABP_ParentItem_C* Item
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_ParentItem.BP_ParentItem_C.OnGrounded__DelegateSignature");
+		
+		struct
+		{
+			class ABP_ParentItem_C*                            Item;
+		} params;
+		params.Item = Item;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ABP_ParentItem_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ABP_ParentItem_C::StaticClass()
@@ -1292,6 +1671,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentItem.BP_ParentItem_C");
 		return ptr;
 	}
+
 
 }
 

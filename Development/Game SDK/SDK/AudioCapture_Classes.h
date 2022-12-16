@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * Class AudioCapture.AudioCapture
 	 * Size -> 0x0008 (FullSize[0x00B0] - InheritedSize[0x00A8])
@@ -21,15 +22,26 @@ namespace CG
 	class UAudioCapture : public UAudioGenerator
 	{
 	public:
-		unsigned char                                              UnknownData_LKJV[0x8];                                   // 0x00A8(0x0008) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_OBT2[0x8];                                   // 0x00A8(0x0008) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		void StopCapturingAudio();
+
 		void StartCapturingAudio();
+
 		bool IsCapturingAudio();
-		bool GetAudioCaptureDeviceInfo(struct FAudioCaptureDeviceInfo* OutInfo);
+
+		bool GetAudioCaptureDeviceInfo(
+struct FAudioCaptureDeviceInfo* OutInfo
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class AudioCapture.AudioCaptureFunctionLibrary
@@ -38,9 +50,13 @@ namespace CG
 	class UAudioCaptureFunctionLibrary : public UBlueprintFunctionLibrary
 	{
 	public:
+
 		class UAudioCapture* CreateAudioCapture();
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class AudioCapture.AudioCaptureComponent
@@ -49,10 +65,15 @@ namespace CG
 	class UAudioCaptureComponent : public USynthComponent
 	{
 	public:
-		int32_t                                                    JitterLatencyFrames;                                     // 0x06C0(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_M0FE[0xBC];                                  // 0x06C4(0x00BC) MISSED OFFSET (PADDING)
+
+		int32_t                                                  JitterLatencyFrames;                                     // 0x06C0(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_SILW[0xBC];                                  // 0x06C4(0x00BC) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
 

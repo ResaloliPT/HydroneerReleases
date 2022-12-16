@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,18 +14,28 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * BlueprintGeneratedClass BP_LogicDualDivide.BP_LogicDualDivide_C
-	 * Size -> 0x0008 (FullSize[0x0410] - InheritedSize[0x0408])
+	 * Size -> 0x0008 (FullSize[0x0470] - InheritedSize[0x0468])
 	 */
 	class ABP_LogicDualDivide_C : public ABP_ParentDualLogic_C
 	{
 	public:
-		struct FPointerToUberGraphFrame                            UberGraphFrame;                                          // 0x0408(0x0008) ZeroConstructor, Transient, DuplicateTransient
+
+		struct FPointerToUberGraphFrame                          UberGraphFrame;                                          // 0x0468(0x0008) ZeroConstructor, Transient, DuplicateTransient
+
 
 	public:
-		void OverrideLogicIn(class USceneComponent* Component);
-		void ExecuteUbergraph_BP_LogicDualDivide(int32_t EntryPoint);
+
+		void OverrideLogicIn(
+class USceneComponent* Component
+);
+
+		void ExecuteUbergraph_BP_LogicDualDivide(
+int32_t EntryPoint
+);
+
 		static UClass* StaticClass();
 	};
 

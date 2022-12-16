@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * Class OnlineSubsystemSteam.SteamAuthComponentModuleInterface
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
@@ -21,8 +22,11 @@ namespace CG
 	class USteamAuthComponentModuleInterface : public UHandlerComponentFactory
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class OnlineSubsystemSteam.SteamNetConnection
@@ -31,12 +35,19 @@ namespace CG
 	class USteamNetConnection : public UIpConnection
 	{
 	public:
-		bool                                                       bIsPassthrough;                                          // 0x1B90(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_ZY1Z[0x7];                                   // 0x1B91(0x0007) MISSED OFFSET (PADDING)
+
+		bool                                                     bIsPassthrough;                                          // 0x1B90(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_VF5J[0x7];                                   // 0x1B91(0x0007) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class OnlineSubsystemSteam.SteamNetDriver
@@ -45,9 +56,12 @@ namespace CG
 	class USteamNetDriver : public UIpNetDriver
 	{
 	public:
-		unsigned char                                              UnknownData_7T3Z[0x8];                                   // 0x07B8(0x0008) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_224N[0x8];                                   // 0x07B8(0x0008) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
 

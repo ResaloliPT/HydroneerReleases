@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,15 +10,21 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function AC_Heat.AC_Heat_C.InWater
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               WaterBody_                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               WaterBody                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		class UPrimitiveComponent*                         Comp                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UAC_Heat_C::InWater(bool WaterBody_)
+	void UAC_Heat_C::InWater(
+bool WaterBody
+, 
+class UPrimitiveComponent* Comp
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -26,14 +32,18 @@ namespace CG
 		
 		struct
 		{
-			bool                                               WaterBody_;
+			bool                                               WaterBody;
+			class UPrimitiveComponent*                         Comp;
 		} params;
-		params.WaterBody_ = WaterBody_;
+		params.WaterBody = WaterBody;
+		params.Comp = Comp;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -56,6 +66,54 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function AC_Heat.AC_Heat_C.HasNoWater
+	 * 		Flags  -> ()
+	 */
+	void UAC_Heat_C::HasNoWater()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Heat.AC_Heat_C.HasNoWater");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function AC_Heat.AC_Heat_C.HasWater
+	 * 		Flags  -> ()
+	 */
+	void UAC_Heat_C::HasWater()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function AC_Heat.AC_Heat_C.HasWater");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -64,7 +122,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              Heat                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UAC_Heat_C::HeatUpdated(float Heat)
+	void UAC_Heat_C::HeatUpdated(
+float Heat
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -80,6 +140,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -102,6 +164,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -110,7 +174,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              HeatIncrement                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UAC_Heat_C::StartHeat(float HeatIncrement)
+	void UAC_Heat_C::StartHeat(
+float HeatIncrement
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -126,6 +192,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -148,6 +216,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -168,6 +238,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -190,6 +262,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -210,6 +284,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -232,15 +308,19 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function AC_Heat.AC_Heat_C.InFire
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               SlowBurn_                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               SlowBurn                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void UAC_Heat_C::InFire(bool SlowBurn_)
+	void UAC_Heat_C::InFire(
+bool SlowBurn
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -248,14 +328,16 @@ namespace CG
 		
 		struct
 		{
-			bool                                               SlowBurn_;
+			bool                                               SlowBurn;
 		} params;
-		params.SlowBurn_ = SlowBurn_;
+		params.SlowBurn = SlowBurn;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -278,6 +360,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -286,7 +370,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UAC_Heat_C::ExecuteUbergraph_AC_Heat(int32_t EntryPoint)
+	void UAC_Heat_C::ExecuteUbergraph_AC_Heat(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -303,10 +389,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAC_Heat_C.StaticClass
+	 * 		Name   -> PredefinedFunction UAC_Heat_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAC_Heat_C::StaticClass()
@@ -316,6 +404,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass AC_Heat.AC_Heat_C");
 		return ptr;
 	}
+
 
 }
 

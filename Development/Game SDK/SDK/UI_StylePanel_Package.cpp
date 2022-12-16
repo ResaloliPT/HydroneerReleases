@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18,7 +19,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Index                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_StylePanel_C::UpdateSelectionVisual(int32_t Index)
+	void UUI_StylePanel_C::UpdateSelectionVisual(
+int32_t Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -35,6 +38,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -43,7 +48,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UWidget*                                     Widget                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_StylePanel_C::Update(class UWidget* Widget)
+	void UUI_StylePanel_C::Update(
+class UWidget* Widget
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -60,6 +67,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -69,7 +78,11 @@ namespace CG
 	 * 		TArray<class UPData_Customizable_Base_C*>          Options                                                    (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	 * 		int32_t                                            SelectedOptionIndex                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_StylePanel_C::Init(TArray<class UPData_Customizable_Base_C*>* Options, int32_t SelectedOptionIndex)
+	void UUI_StylePanel_C::Init(
+TArray<class UPData_Customizable_Base_C*>* Options
+, 
+int32_t SelectedOptionIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -90,6 +103,8 @@ namespace CG
 			*Options = params.Options;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -98,7 +113,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               IsDesignTime                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void UUI_StylePanel_C::PreConstruct(bool IsDesignTime)
+	void UUI_StylePanel_C::PreConstruct(
+bool IsDesignTime
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -115,6 +132,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -123,7 +142,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_StylePanel_C::ExecuteUbergraph_UI_StylePanel(int32_t EntryPoint)
+	void UUI_StylePanel_C::ExecuteUbergraph_UI_StylePanel(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -140,6 +161,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -148,7 +171,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            StyleIndex                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UUI_StylePanel_C::OnUpdateStyle__DelegateSignature(int32_t StyleIndex)
+	void UUI_StylePanel_C::OnUpdateStyle__DelegateSignature(
+int32_t StyleIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -165,10 +190,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UUI_StylePanel_C.StaticClass
+	 * 		Name   -> PredefinedFunction UUI_StylePanel_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UUI_StylePanel_C::StaticClass()
@@ -178,6 +205,7 @@ namespace CG
 			ptr = UObject::FindClass("WidgetBlueprintGeneratedClass UI_StylePanel.UI_StylePanel_C");
 		return ptr;
 	}
+
 
 }
 

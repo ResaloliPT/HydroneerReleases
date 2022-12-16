@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18,7 +19,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<class UActorComponent*>                     Components                                                 (Parm, OutParm, ContainsInstancedReference)
 	 */
-	void ABP_ParentDrill_C::ComponentsToSave(TArray<class UActorComponent*>* Components)
+	void ABP_ParentDrill_C::ComponentsToSave(
+TArray<class UActorComponent*>* Components
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -36,6 +39,8 @@ namespace CG
 		if (Components != nullptr)
 			*Components = params.Components;
 	}
+
+
 
 	/**
 	 * Function:
@@ -60,6 +65,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -83,16 +90,22 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_ParentDrill.BP_ParentDrill_C.DirtHitCheck
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               HitDirt_                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               HitDirt                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 * 		int32_t                                            DQA                                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentDrill_C::DirtHitCheck(bool* HitDirt_, int32_t* DQA)
+	void ABP_ParentDrill_C::DirtHitCheck(
+bool* HitDirt
+, 
+int32_t* DQA
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -100,7 +113,7 @@ namespace CG
 		
 		struct
 		{
-			bool                                               HitDirt_;
+			bool                                               HitDirt;
 			int32_t                                            DQA;
 		} params;
 		
@@ -108,11 +121,13 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 		
-		if (HitDirt_ != nullptr)
-			*HitDirt_ = params.HitDirt_;
+		if (HitDirt != nullptr)
+			*HitDirt = params.HitDirt;
 		if (DQA != nullptr)
 			*DQA = params.DQA;
 	}
+
+
 
 	/**
 	 * Function:
@@ -122,7 +137,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_ParentItem_C*                            RepairingTool                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentDrill_C::TryRepair(class ABP_ParentItem_C* RepairingTool)
+	void ABP_ParentDrill_C::TryRepair(
+class ABP_ParentItem_C* RepairingTool
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -139,6 +156,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -147,7 +166,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_ParentItem_C*                            Item                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentDrill_C::FindDurability(class ABP_ParentItem_C* Item)
+	void ABP_ParentDrill_C::FindDurability(
+class ABP_ParentItem_C* Item
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -164,6 +185,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -174,7 +197,13 @@ namespace CG
 	 * 		class ABP_ParentItem_C*                            CarryingItem                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class ABP_GameController_C*                        Insigator                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentDrill_C::LMBDownIsTarget(class UPrimitiveComponent* Component, class ABP_ParentItem_C* CarryingItem, class ABP_GameController_C* Insigator)
+	void ABP_ParentDrill_C::LMBDownIsTarget(
+class UPrimitiveComponent* Component
+, 
+class ABP_ParentItem_C* CarryingItem
+, 
+class ABP_GameController_C* Insigator
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -195,6 +224,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -204,7 +235,11 @@ namespace CG
 	 * 		class USceneComponent*                             Component                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		float                                              RootPressure                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentDrill_C::OverrideWaterIn(class USceneComponent* Component, float RootPressure)
+	void ABP_ParentDrill_C::OverrideWaterIn(
+class USceneComponent* Component
+, 
+float RootPressure
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -222,6 +257,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -244,6 +281,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -265,15 +304,19 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_ParentDrill.BP_ParentDrill_C.ToggleLight
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               On_                                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               On                                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_ParentDrill_C::ToggleLight(bool On_)
+	void ABP_ParentDrill_C::ToggleLight(
+bool On
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -281,14 +324,16 @@ namespace CG
 		
 		struct
 		{
-			bool                                               On_;
+			bool                                               On;
 		} params;
-		params.On_ = On_;
+		params.On = On;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -311,6 +356,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -319,7 +366,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              DurabilityAmount                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentDrill_C::ReturnDurability(float DurabilityAmount)
+	void ABP_ParentDrill_C::ReturnDurability(
+float DurabilityAmount
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -336,6 +385,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -345,7 +396,11 @@ namespace CG
 	 * 		int32_t                                            DirtQuality                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		float                                              Weight                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentDrill_C::SpawnDirt(int32_t DirtQuality, float Weight)
+	void ABP_ParentDrill_C::SpawnDirt(
+int32_t DirtQuality
+, 
+float Weight
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -363,6 +418,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -385,6 +442,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -405,6 +464,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -427,6 +488,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -447,6 +510,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -469,6 +534,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -477,7 +544,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_ParentDrill_C::ExecuteUbergraph_BP_ParentDrill(int32_t EntryPoint)
+	void ABP_ParentDrill_C::ExecuteUbergraph_BP_ParentDrill(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -494,10 +563,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ABP_ParentDrill_C.StaticClass
+	 * 		Name   -> PredefinedFunction ABP_ParentDrill_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ABP_ParentDrill_C::StaticClass()
@@ -507,6 +578,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass BP_ParentDrill.BP_ParentDrill_C");
 		return ptr;
 	}
+
 
 }
 

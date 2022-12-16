@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * BlueprintGeneratedClass H_TextMultiLine.H_TextMultiLine_C
 	 * Size -> 0x0000 (FullSize[0x0C98] - InheritedSize[0x0C98])
@@ -21,6 +22,7 @@ namespace CG
 	class UH_TextMultiLine_C : public UMultiLineEditableTextBox
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
 

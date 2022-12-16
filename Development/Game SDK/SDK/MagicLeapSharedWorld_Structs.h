@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+
 	/**
 	 * ScriptStruct MagicLeapSharedWorld.MagicLeapSharedWorldSharedData
 	 * Size -> 0x0010
@@ -21,8 +22,12 @@ namespace CG
 	struct FMagicLeapSharedWorldSharedData
 	{
 	public:
-		TArray<struct FGuid>                                       PinIDs;                                                  // 0x0000(0x0010) BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
+
+		TArray<struct FGuid>                                     PinIDs;                                                  // 0x0000(0x0010) BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct MagicLeapSharedWorld.MagicLeapSharedWorldAlignmentTransforms
@@ -31,8 +36,12 @@ namespace CG
 	struct FMagicLeapSharedWorldAlignmentTransforms
 	{
 	public:
-		TArray<struct FTransform>                                  AlignmentTransforms;                                     // 0x0000(0x0010) BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
+
+		TArray<struct FTransform>                                AlignmentTransforms;                                     // 0x0000(0x0010) BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct MagicLeapSharedWorld.MagicLeapSharedWorldPinData
@@ -41,9 +50,15 @@ namespace CG
 	struct FMagicLeapSharedWorldPinData
 	{
 	public:
-		struct FGuid                                               PinId;                                                   // 0x0000(0x0010) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FMagicLeapARPinState                                PinState;                                                // 0x0010(0x0014) BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
+
+		struct FGuid                                             PinId;                                                   // 0x0000(0x0010) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FMagicLeapARPinState                              PinState;                                                // 0x0010(0x0014) BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct MagicLeapSharedWorld.MagicLeapSharedWorldLocalData
@@ -52,7 +67,9 @@ namespace CG
 	struct FMagicLeapSharedWorldLocalData
 	{
 	public:
-		TArray<struct FMagicLeapSharedWorldPinData>                LocalPins;                                               // 0x0000(0x0010) BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
+
+		TArray<struct FMagicLeapSharedWorldPinData>              LocalPins;                                               // 0x0000(0x0010) BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
+
 	};
 
 }

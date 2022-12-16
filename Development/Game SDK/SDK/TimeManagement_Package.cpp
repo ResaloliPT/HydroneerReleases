@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UFixedFrameRateCustomTimeStep.StaticClass
+	 * 		Name   -> PredefinedFunction UFixedFrameRateCustomTimeStep.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UFixedFrameRateCustomTimeStep::StaticClass()
@@ -24,10 +25,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGenlockedCustomTimeStep.StaticClass
+	 * 		Name   -> PredefinedFunction UGenlockedCustomTimeStep.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGenlockedCustomTimeStep::StaticClass()
@@ -38,10 +41,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGenlockedTimecodeProvider.StaticClass
+	 * 		Name   -> PredefinedFunction UGenlockedTimecodeProvider.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGenlockedTimecodeProvider::StaticClass()
@@ -51,6 +56,8 @@ namespace CG
 			ptr = UObject::FindClass("Class TimeManagement.GenlockedTimecodeProvider");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -62,7 +69,13 @@ namespace CG
 	 * 		struct FFrameRate                                  SourceRate                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FFrameRate                                  DestinationRate                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FFrameTime UTimeManagementBlueprintLibrary::TransformTime(const struct FFrameTime& SourceTime, const struct FFrameRate& SourceRate, const struct FFrameRate& DestinationRate)
+	struct FFrameTime UTimeManagementBlueprintLibrary::TransformTime(
+const struct FFrameTime& SourceTime
+, 
+const struct FFrameRate& SourceRate
+, 
+const struct FFrameRate& DestinationRate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -85,6 +98,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -94,7 +109,11 @@ namespace CG
 	 * 		struct FFrameNumber                                A                                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            B                                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FFrameNumber UTimeManagementBlueprintLibrary::Subtract_FrameNumberInteger(const struct FFrameNumber& A, int32_t B)
+	struct FFrameNumber UTimeManagementBlueprintLibrary::Subtract_FrameNumberInteger(
+const struct FFrameNumber& A
+, 
+int32_t B
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -115,6 +134,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -124,7 +145,11 @@ namespace CG
 	 * 		struct FFrameNumber                                A                                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FFrameNumber                                B                                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FFrameNumber UTimeManagementBlueprintLibrary::Subtract_FrameNumberFrameNumber(const struct FFrameNumber& A, const struct FFrameNumber& B)
+	struct FFrameNumber UTimeManagementBlueprintLibrary::Subtract_FrameNumberFrameNumber(
+const struct FFrameNumber& A
+, 
+const struct FFrameNumber& B
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -145,6 +170,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -155,7 +182,13 @@ namespace CG
 	 * 		struct FFrameRate                                  SourceRate                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FFrameRate                                  SnapToRate                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FFrameTime UTimeManagementBlueprintLibrary::SnapFrameTimeToRate(const struct FFrameTime& SourceTime, const struct FFrameRate& SourceRate, const struct FFrameRate& SnapToRate)
+	struct FFrameTime UTimeManagementBlueprintLibrary::SnapFrameTimeToRate(
+const struct FFrameTime& SourceTime
+, 
+const struct FFrameRate& SourceRate
+, 
+const struct FFrameRate& SnapToRate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -178,6 +211,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -187,7 +222,11 @@ namespace CG
 	 * 		float                                              TimeInSeconds                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FFrameRate                                  FrameRate                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FFrameTime UTimeManagementBlueprintLibrary::Multiply_SecondsFrameRate(float TimeInSeconds, const struct FFrameRate& FrameRate)
+	struct FFrameTime UTimeManagementBlueprintLibrary::Multiply_SecondsFrameRate(
+float TimeInSeconds
+, 
+const struct FFrameRate& FrameRate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -208,6 +247,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -217,7 +258,11 @@ namespace CG
 	 * 		struct FFrameNumber                                A                                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            B                                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FFrameNumber UTimeManagementBlueprintLibrary::Multiply_FrameNumberInteger(const struct FFrameNumber& A, int32_t B)
+	struct FFrameNumber UTimeManagementBlueprintLibrary::Multiply_FrameNumberInteger(
+const struct FFrameNumber& A
+, 
+int32_t B
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -238,6 +283,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -247,7 +294,11 @@ namespace CG
 	 * 		struct FFrameRate                                  InFrameRate                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FFrameRate                                  OtherFramerate                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UTimeManagementBlueprintLibrary::IsValid_MultipleOf(const struct FFrameRate& InFrameRate, const struct FFrameRate& OtherFramerate)
+	bool UTimeManagementBlueprintLibrary::IsValid_MultipleOf(
+const struct FFrameRate& InFrameRate
+, 
+const struct FFrameRate& OtherFramerate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -268,6 +319,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -276,7 +329,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FFrameRate                                  InFrameRate                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UTimeManagementBlueprintLibrary::IsValid_Framerate(const struct FFrameRate& InFrameRate)
+	bool UTimeManagementBlueprintLibrary::IsValid_Framerate(
+const struct FFrameRate& InFrameRate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -294,6 +349,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -318,6 +375,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -341,6 +400,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -350,7 +411,11 @@ namespace CG
 	 * 		struct FFrameNumber                                A                                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            B                                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FFrameNumber UTimeManagementBlueprintLibrary::Divide_FrameNumberInteger(const struct FFrameNumber& A, int32_t B)
+	struct FFrameNumber UTimeManagementBlueprintLibrary::Divide_FrameNumberInteger(
+const struct FFrameNumber& A
+, 
+int32_t B
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -371,6 +436,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -380,7 +447,11 @@ namespace CG
 	 * 		struct FTimecode                                   InTimecode                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bForceSignDisplay                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UTimeManagementBlueprintLibrary::Conv_TimecodeToString(const struct FTimecode& InTimecode, bool bForceSignDisplay)
+	class FString UTimeManagementBlueprintLibrary::Conv_TimecodeToString(
+const struct FTimecode& InTimecode
+, 
+bool bForceSignDisplay
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -401,6 +472,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -409,7 +482,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FQualifiedFrameTime                         InFrameTime                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float UTimeManagementBlueprintLibrary::Conv_QualifiedFrameTimeToSeconds(const struct FQualifiedFrameTime& InFrameTime)
+	float UTimeManagementBlueprintLibrary::Conv_QualifiedFrameTimeToSeconds(
+const struct FQualifiedFrameTime& InFrameTime
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -428,6 +503,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -436,7 +513,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FFrameRate                                  InFrameRate                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float UTimeManagementBlueprintLibrary::Conv_FrameRateToSeconds(const struct FFrameRate& InFrameRate)
+	float UTimeManagementBlueprintLibrary::Conv_FrameRateToSeconds(
+const struct FFrameRate& InFrameRate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -455,6 +534,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -463,7 +544,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FFrameNumber                                InFrameNumber                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UTimeManagementBlueprintLibrary::Conv_FrameNumberToInteger(const struct FFrameNumber& InFrameNumber)
+	int32_t UTimeManagementBlueprintLibrary::Conv_FrameNumberToInteger(
+const struct FFrameNumber& InFrameNumber
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -482,6 +565,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -491,7 +576,11 @@ namespace CG
 	 * 		struct FFrameNumber                                A                                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            B                                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FFrameNumber UTimeManagementBlueprintLibrary::Add_FrameNumberInteger(const struct FFrameNumber& A, int32_t B)
+	struct FFrameNumber UTimeManagementBlueprintLibrary::Add_FrameNumberInteger(
+const struct FFrameNumber& A
+, 
+int32_t B
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -512,6 +601,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -521,7 +612,11 @@ namespace CG
 	 * 		struct FFrameNumber                                A                                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FFrameNumber                                B                                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FFrameNumber UTimeManagementBlueprintLibrary::Add_FrameNumberFrameNumber(const struct FFrameNumber& A, const struct FFrameNumber& B)
+	struct FFrameNumber UTimeManagementBlueprintLibrary::Add_FrameNumberFrameNumber(
+const struct FFrameNumber& A
+, 
+const struct FFrameNumber& B
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -542,10 +637,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UTimeManagementBlueprintLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UTimeManagementBlueprintLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UTimeManagementBlueprintLibrary::StaticClass()
@@ -556,10 +653,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UTimeSynchronizationSource.StaticClass
+	 * 		Name   -> PredefinedFunction UTimeSynchronizationSource.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UTimeSynchronizationSource::StaticClass()
@@ -569,6 +668,7 @@ namespace CG
 			ptr = UObject::FindClass("Class TimeManagement.TimeSynchronizationSource");
 		return ptr;
 	}
+
 
 }
 

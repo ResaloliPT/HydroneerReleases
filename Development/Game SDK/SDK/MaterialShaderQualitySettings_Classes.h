@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * Class MaterialShaderQualitySettings.MaterialShaderQualitySettings
 	 * Size -> 0x0050 (FullSize[0x0078] - InheritedSize[0x0028])
@@ -21,11 +22,16 @@ namespace CG
 	class UMaterialShaderQualitySettings : public UObject
 	{
 	public:
-		TMap<class FName, class UShaderPlatformQualitySettings*>   ForwardSettingMap;                                       // 0x0028(0x0050) NativeAccessSpecifierPrivate
+
+		TMap<class FName, class UShaderPlatformQualitySettings*> ForwardSettingMap;                                       // 0x0028(0x0050) NativeAccessSpecifierPrivate
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class MaterialShaderQualitySettings.ShaderPlatformQualitySettings
@@ -34,10 +40,15 @@ namespace CG
 	class UShaderPlatformQualitySettings : public UObject
 	{
 	public:
-		struct FMaterialQualityOverrides                           QualityOverrides[0x4];                                   // 0x0028(0x0024) Edit, Config, NoDestructor, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_34NA[0x14];                                  // 0x004C(0x0014) MISSED OFFSET (PADDING)
+
+		struct FMaterialQualityOverrides                         QualityOverrides[0x4];                                   // 0x0028(0x0024) Edit, Config, NoDestructor, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_C0BB[0x14];                                  // 0x004C(0x0014) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
 

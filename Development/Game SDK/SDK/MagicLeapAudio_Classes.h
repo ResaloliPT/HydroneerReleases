@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * Class MagicLeapAudio.MagicLeapAudioFunctionLibrary
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
@@ -21,10 +22,21 @@ namespace CG
 	class UMagicLeapAudioFunctionLibrary : public UBlueprintFunctionLibrary
 	{
 	public:
-		bool SetOnAudioJackUnpluggedDelegate(const class FScriptDelegate& ResultDelegate);
-		bool SetOnAudioJackPluggedDelegate(const class FScriptDelegate& ResultDelegate);
-		bool SetMicMute(bool IsMuted);
+
+		bool SetOnAudioJackUnpluggedDelegate(
+const class FScriptDelegate& ResultDelegate
+);
+
+		bool SetOnAudioJackPluggedDelegate(
+const class FScriptDelegate& ResultDelegate
+);
+
+		bool SetMicMute(
+bool IsMuted
+);
+
 		bool IsMicMuted();
+
 		static UClass* StaticClass();
 	};
 

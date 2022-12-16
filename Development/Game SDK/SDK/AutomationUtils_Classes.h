@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * Class AutomationUtils.AutomationUtilsBlueprintLibrary
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
@@ -21,7 +22,17 @@ namespace CG
 	class UAutomationUtilsBlueprintLibrary : public UBlueprintFunctionLibrary
 	{
 	public:
-		void TakeGameplayAutomationScreenshot(const class FString& ScreenshotName, float MaxGlobalError, float MaxLocalError, const class FString& MapNameOverride);
+
+		void TakeGameplayAutomationScreenshot(
+const class FString& ScreenshotName
+, 
+float MaxGlobalError
+, 
+float MaxLocalError
+, 
+const class FString& MapNameOverride
+);
+
 		static UClass* StaticClass();
 	};
 

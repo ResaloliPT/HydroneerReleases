@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -33,6 +34,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -41,7 +44,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Name                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	EGooglePADErrorCode UGooglePADFunctionLibrary::RequestRemoval(const class FString& Name)
+	EGooglePADErrorCode UGooglePADFunctionLibrary::RequestRemoval(
+const class FString& Name
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -60,6 +65,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -68,7 +75,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<class FString>                              AssetPacks                                                 (ConstParm, Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	EGooglePADErrorCode UGooglePADFunctionLibrary::RequestInfo(TArray<class FString> AssetPacks)
+	EGooglePADErrorCode UGooglePADFunctionLibrary::RequestInfo(
+TArray<class FString> AssetPacks
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -87,6 +96,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -95,7 +106,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<class FString>                              AssetPacks                                                 (ConstParm, Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	EGooglePADErrorCode UGooglePADFunctionLibrary::RequestDownload(TArray<class FString> AssetPacks)
+	EGooglePADErrorCode UGooglePADFunctionLibrary::RequestDownload(
+TArray<class FString> AssetPacks
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -114,6 +127,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -122,7 +137,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            State                                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGooglePADFunctionLibrary::ReleaseDownloadState(int32_t State)
+	void UGooglePADFunctionLibrary::ReleaseDownloadState(
+int32_t State
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -139,6 +156,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -147,7 +166,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Location                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UGooglePADFunctionLibrary::ReleaseAssetPackLocation(int32_t Location)
+	void UGooglePADFunctionLibrary::ReleaseAssetPackLocation(
+int32_t Location
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -164,6 +185,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -172,7 +195,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            State                                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UGooglePADFunctionLibrary::GetTotalBytesToDownload(int32_t State)
+	int32_t UGooglePADFunctionLibrary::GetTotalBytesToDownload(
+int32_t State
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -191,6 +216,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -199,7 +226,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Location                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	EGooglePADStorageMethod UGooglePADFunctionLibrary::GetStorageMethod(int32_t Location)
+	EGooglePADStorageMethod UGooglePADFunctionLibrary::GetStorageMethod(
+int32_t Location
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -218,6 +247,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -226,7 +257,9 @@ namespace CG
 	 * Parameters:
 	 * 		EGooglePADCellularDataConfirmStatus                Status                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	EGooglePADErrorCode UGooglePADFunctionLibrary::GetShowCellularDataConfirmationStatus(EGooglePADCellularDataConfirmStatus* Status)
+	EGooglePADErrorCode UGooglePADFunctionLibrary::GetShowCellularDataConfirmationStatus(
+EGooglePADCellularDataConfirmStatus* Status
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -247,6 +280,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -255,7 +290,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            State                                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	EGooglePADDownloadStatus UGooglePADFunctionLibrary::GetDownloadStatus(int32_t State)
+	EGooglePADDownloadStatus UGooglePADFunctionLibrary::GetDownloadStatus(
+int32_t State
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -274,6 +311,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -283,7 +322,11 @@ namespace CG
 	 * 		class FString                                      Name                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            State                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	EGooglePADErrorCode UGooglePADFunctionLibrary::GetDownloadState(const class FString& Name, int32_t* State)
+	EGooglePADErrorCode UGooglePADFunctionLibrary::GetDownloadState(
+const class FString& Name
+, 
+int32_t* State
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -306,6 +349,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -314,7 +359,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            State                                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UGooglePADFunctionLibrary::GetBytesDownloaded(int32_t State)
+	int32_t UGooglePADFunctionLibrary::GetBytesDownloaded(
+int32_t State
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -333,6 +380,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -341,7 +390,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Location                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UGooglePADFunctionLibrary::GetAssetsPath(int32_t Location)
+	class FString UGooglePADFunctionLibrary::GetAssetsPath(
+int32_t Location
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -360,6 +411,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -369,7 +422,11 @@ namespace CG
 	 * 		class FString                                      Name                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Location                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	EGooglePADErrorCode UGooglePADFunctionLibrary::GetAssetPackLocation(const class FString& Name, int32_t* Location)
+	EGooglePADErrorCode UGooglePADFunctionLibrary::GetAssetPackLocation(
+const class FString& Name
+, 
+int32_t* Location
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -392,6 +449,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -400,7 +459,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<class FString>                              AssetPacks                                                 (ConstParm, Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	EGooglePADErrorCode UGooglePADFunctionLibrary::CancelDownload(TArray<class FString> AssetPacks)
+	EGooglePADErrorCode UGooglePADFunctionLibrary::CancelDownload(
+TArray<class FString> AssetPacks
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -419,10 +480,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UGooglePADFunctionLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UGooglePADFunctionLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UGooglePADFunctionLibrary::StaticClass()
@@ -432,6 +495,7 @@ namespace CG
 			ptr = UObject::FindClass("Class GooglePAD.GooglePADFunctionLibrary");
 		return ptr;
 	}
+
 
 }
 

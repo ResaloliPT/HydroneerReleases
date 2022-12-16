@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * Class GeometryCollectionTracks.MovieSceneGeometryCollectionSection
 	 * Size -> 0x0030 (FullSize[0x0118] - InheritedSize[0x00E8])
@@ -21,11 +22,16 @@ namespace CG
 	class UMovieSceneGeometryCollectionSection : public UMovieSceneSection
 	{
 	public:
-		struct FMovieSceneGeometryCollectionParams                 Params;                                                  // 0x00E8(0x0030) Edit, NativeAccessSpecifierPublic
+
+		struct FMovieSceneGeometryCollectionParams               Params;                                                  // 0x00E8(0x0030) Edit, NativeAccessSpecifierPublic
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class GeometryCollectionTracks.MovieSceneGeometryCollectionTrack
@@ -34,10 +40,15 @@ namespace CG
 	class UMovieSceneGeometryCollectionTrack : public UMovieSceneNameableTrack
 	{
 	public:
-		unsigned char                                              UnknownData_4F4S[0x8];                                   // 0x0078(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<class UMovieSceneSection*>                          AnimationSections;                                       // 0x0080(0x0010) ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate
+
+		unsigned char                                            UnknownData_P5U8[0x8];                                   // 0x0078(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+
+
+		TArray<class UMovieSceneSection*>                        AnimationSections;                                       // 0x0080(0x0010) ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
 

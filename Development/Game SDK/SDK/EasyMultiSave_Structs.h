@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+
 	/**
 	 * Enum EasyMultiSave.ENextStepType
 	 */
@@ -23,6 +24,8 @@ namespace CG
 		FinishSave = 1,
 		MAX        = 2
 	};
+
+
 
 	/**
 	 * Enum EasyMultiSave.ELoadTypeFlags
@@ -34,6 +37,8 @@ namespace CG
 		LF_MAX    = 2
 	};
 
+
+
 	/**
 	 * Enum EasyMultiSave.ESaveTypeFlags
 	 */
@@ -44,6 +49,8 @@ namespace CG
 		SF_MAX    = 2
 	};
 
+
+
 	/**
 	 * Enum EasyMultiSave.EFileSaveMethod
 	 */
@@ -53,6 +60,8 @@ namespace CG
 		FM_Optimized = 1,
 		FM_MAX       = 2
 	};
+
+
 
 	/**
 	 * Enum EasyMultiSave.ELoadMethod
@@ -65,6 +74,8 @@ namespace CG
 		LM_MAX      = 3
 	};
 
+
+
 	/**
 	 * Enum EasyMultiSave.ESaveGameMode
 	 */
@@ -75,6 +86,8 @@ namespace CG
 		MODE_All    = 2,
 		MODE_MAX    = 3
 	};
+
+
 
 	/**
 	 * Enum EasyMultiSave.EActorType
@@ -90,6 +103,8 @@ namespace CG
 		AT_MAX         = 6
 	};
 
+
+
 	/**
 	 * Enum EasyMultiSave.EDataLoadType
 	 */
@@ -100,6 +115,8 @@ namespace CG
 		DATA_Object = 2,
 		DATA_MAX    = 3
 	};
+
+
 
 	/**
 	 * Enum EasyMultiSave.EUpdateActorResult
@@ -115,6 +132,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+
 	/**
 	 * ScriptStruct EasyMultiSave.SaveSlotInfo
 	 * Size -> 0x0030
@@ -122,11 +140,21 @@ namespace CG
 	struct FSaveSlotInfo
 	{
 	public:
-		class FString                                              Name;                                                    // 0x0000(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FDateTime                                           Timestamp;                                               // 0x0010(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FName                                                Level;                                                   // 0x0018(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		TArray<class FString>                                      Players;                                                 // 0x0020(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic
+
+		class FString                                            Name;                                                    // 0x0000(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		struct FDateTime                                         Timestamp;                                               // 0x0010(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		class FName                                              Level;                                                   // 0x0018(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+
+		TArray<class FString>                                    Players;                                                 // 0x0020(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic
+
 	};
+
+
 
 	/**
 	 * ScriptStruct EasyMultiSave.PlayerArchive
@@ -135,8 +163,12 @@ namespace CG
 	struct FPlayerArchive
 	{
 	public:
-		unsigned char                                              UnknownData_1W6G[0x90];                                  // 0x0000(0x0090) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_XHUI[0x90];                                  // 0x0000(0x0090) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct EasyMultiSave.LevelArchive
@@ -145,8 +177,12 @@ namespace CG
 	struct FLevelArchive
 	{
 	public:
-		unsigned char                                              UnknownData_XRK0[0x68];                                  // 0x0000(0x0068) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_SS24[0x68];                                  // 0x0000(0x0068) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct EasyMultiSave.ControllerSaveData
@@ -155,8 +191,12 @@ namespace CG
 	struct FControllerSaveData
 	{
 	public:
-		unsigned char                                              UnknownData_Z9BP[0x30];                                  // 0x0000(0x0030) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_83O8[0x30];                                  // 0x0000(0x0030) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct EasyMultiSave.PawnSaveData
@@ -165,8 +205,12 @@ namespace CG
 	struct FPawnSaveData
 	{
 	public:
-		unsigned char                                              UnknownData_XYJB[0x38];                                  // 0x0000(0x0038) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_R6W8[0x38];                                  // 0x0000(0x0038) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct EasyMultiSave.LevelScriptSaveData
@@ -175,8 +219,12 @@ namespace CG
 	struct FLevelScriptSaveData
 	{
 	public:
-		unsigned char                                              UnknownData_OMRM[0x28];                                  // 0x0000(0x0028) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_EFIC[0x28];                                  // 0x0000(0x0028) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct EasyMultiSave.ActorSaveData
@@ -185,8 +233,12 @@ namespace CG
 	struct FActorSaveData
 	{
 	public:
-		unsigned char                                              UnknownData_GX7Z[0x80];                                  // 0x0000(0x0080) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_1UYK[0x80];                                  // 0x0000(0x0080) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct EasyMultiSave.GameObjectSaveData
@@ -195,8 +247,12 @@ namespace CG
 	struct FGameObjectSaveData
 	{
 	public:
-		unsigned char                                              UnknownData_31QJ[0x20];                                  // 0x0000(0x0020) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_LIYF[0x20];                                  // 0x0000(0x0020) MISSED OFFSET (PADDING)
+
 	};
+
+
 
 	/**
 	 * ScriptStruct EasyMultiSave.ComponentSaveData
@@ -205,7 +261,9 @@ namespace CG
 	struct FComponentSaveData
 	{
 	public:
-		unsigned char                                              UnknownData_6J6V[0x50];                                  // 0x0000(0x0050) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_3065[0x50];                                  // 0x0000(0x0050) MISSED OFFSET (PADDING)
+
 	};
 
 }

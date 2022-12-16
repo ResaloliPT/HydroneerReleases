@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPData_ClothingSet_C.StaticClass
+	 * 		Name   -> PredefinedFunction UPData_ClothingSet_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPData_ClothingSet_C::StaticClass()
@@ -23,6 +24,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass PData_ClothingSet.PData_ClothingSet_C");
 		return ptr;
 	}
+
 
 }
 

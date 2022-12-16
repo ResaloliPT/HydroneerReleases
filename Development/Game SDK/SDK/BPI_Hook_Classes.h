@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * BlueprintGeneratedClass BPI_Hook.BPI_Hook_C
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
@@ -21,8 +22,15 @@ namespace CG
 	class UBPI_Hook_C : public UInterface
 	{
 	public:
-		void RemovePart(class ABP_ParentHook_C* Hook);
-		void AttachPart(class ABP_ParentHook_C* Hook);
+
+		void RemovePart(
+class ABP_ParentHook_C* Hook
+);
+
+		void AttachPart(
+class ABP_ParentHook_C* Hook
+);
+
 		static UClass* StaticClass();
 	};
 

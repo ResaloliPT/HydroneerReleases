@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithObjectTemplate.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithObjectTemplate.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithObjectTemplate::StaticClass()
@@ -24,10 +25,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithActorTemplate.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithActorTemplate.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithActorTemplate::StaticClass()
@@ -38,10 +41,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithAdditionalData.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithAdditionalData.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithAdditionalData::StaticClass()
@@ -52,10 +57,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ADatasmithAreaLightActor.StaticClass
+	 * 		Name   -> PredefinedFunction ADatasmithAreaLightActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ADatasmithAreaLightActor::StaticClass()
@@ -66,10 +73,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithAreaLightActorTemplate.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithAreaLightActorTemplate.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithAreaLightActorTemplate::StaticClass()
@@ -80,10 +89,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithAssetImportData.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithAssetImportData.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithAssetImportData::StaticClass()
@@ -94,10 +105,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithStaticMeshImportData.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithStaticMeshImportData.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithStaticMeshImportData::StaticClass()
@@ -108,10 +121,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithStaticMeshCADImportData.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithStaticMeshCADImportData.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithStaticMeshCADImportData::StaticClass()
@@ -122,10 +137,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithSceneImportData.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithSceneImportData.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithSceneImportData::StaticClass()
@@ -136,10 +153,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithTranslatedSceneImportData.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithTranslatedSceneImportData.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithTranslatedSceneImportData::StaticClass()
@@ -150,10 +169,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithCADImportSceneData.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithCADImportSceneData.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithCADImportSceneData::StaticClass()
@@ -164,10 +185,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithMDLSceneImportData.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithMDLSceneImportData.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithMDLSceneImportData::StaticClass()
@@ -178,10 +201,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithGLTFSceneImportData.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithGLTFSceneImportData.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithGLTFSceneImportData::StaticClass()
@@ -192,10 +217,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithStaticMeshGLTFImportData.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithStaticMeshGLTFImportData.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithStaticMeshGLTFImportData::StaticClass()
@@ -206,10 +233,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithFBXSceneImportData.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithFBXSceneImportData.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithFBXSceneImportData::StaticClass()
@@ -220,10 +249,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithDeltaGenAssetImportData.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithDeltaGenAssetImportData.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithDeltaGenAssetImportData::StaticClass()
@@ -234,10 +265,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithDeltaGenSceneImportData.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithDeltaGenSceneImportData.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithDeltaGenSceneImportData::StaticClass()
@@ -248,10 +281,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithVREDAssetImportData.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithVREDAssetImportData.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithVREDAssetImportData::StaticClass()
@@ -262,10 +297,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithVREDSceneImportData.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithVREDSceneImportData.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithVREDSceneImportData::StaticClass()
@@ -276,10 +313,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithIFCSceneImportData.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithIFCSceneImportData.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithIFCSceneImportData::StaticClass()
@@ -290,10 +329,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithStaticMeshIFCImportData.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithStaticMeshIFCImportData.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithStaticMeshIFCImportData::StaticClass()
@@ -304,10 +345,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithAssetUserData.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithAssetUserData.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithAssetUserData::StaticClass()
@@ -318,10 +361,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithCineCameraActorTemplate.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithCineCameraActorTemplate.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithCineCameraActorTemplate::StaticClass()
@@ -332,10 +377,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithCineCameraComponentTemplate.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithCineCameraComponentTemplate.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithCineCameraComponentTemplate::StaticClass()
@@ -346,6 +393,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -355,7 +404,11 @@ namespace CG
 	 * 		class UObject*                                     Object                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FName                                        Key                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UDatasmithContentBlueprintLibrary::GetDatasmithUserDataValueForKey(class UObject* Object, const class FName& Key)
+	class FString UDatasmithContentBlueprintLibrary::GetDatasmithUserDataValueForKey(
+class UObject* Object
+, 
+const class FName& Key
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -376,6 +429,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -387,7 +442,15 @@ namespace CG
 	 * 		TArray<class FName>                                OutKeys                                                    (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		TArray<class FString>                              OutValues                                                  (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UDatasmithContentBlueprintLibrary::GetDatasmithUserDataKeysAndValuesForValue(class UObject* Object, const class FString& StringToMatch, TArray<class FName>* OutKeys, TArray<class FString>* OutValues)
+	void UDatasmithContentBlueprintLibrary::GetDatasmithUserDataKeysAndValuesForValue(
+class UObject* Object
+, 
+const class FString& StringToMatch
+, 
+TArray<class FName>* OutKeys
+, 
+TArray<class FString>* OutValues
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -413,6 +476,8 @@ namespace CG
 			*OutValues = params.OutValues;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -421,7 +486,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     Object                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UDatasmithAssetUserData* UDatasmithContentBlueprintLibrary::GetDatasmithUserData(class UObject* Object)
+	class UDatasmithAssetUserData* UDatasmithContentBlueprintLibrary::GetDatasmithUserData(
+class UObject* Object
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -440,10 +507,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithContentBlueprintLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithContentBlueprintLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithContentBlueprintLibrary::StaticClass()
@@ -454,10 +523,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithCustomActionBase.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithCustomActionBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithCustomActionBase::StaticClass()
@@ -468,10 +539,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithDecalComponentTemplate.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithDecalComponentTemplate.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithDecalComponentTemplate::StaticClass()
@@ -482,6 +555,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -490,7 +565,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ULevelSequence*                              SequenceToPlay                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void ADatasmithImportedSequencesActor::PlayLevelSequence(class ULevelSequence* SequenceToPlay)
+	void ADatasmithImportedSequencesActor::PlayLevelSequence(
+class ULevelSequence* SequenceToPlay
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -507,10 +584,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ADatasmithImportedSequencesActor.StaticClass
+	 * 		Name   -> PredefinedFunction ADatasmithImportedSequencesActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ADatasmithImportedSequencesActor::StaticClass()
@@ -521,10 +600,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithOptionsBase.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithOptionsBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithOptionsBase::StaticClass()
@@ -535,10 +616,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithCommonTessellationOptions.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithCommonTessellationOptions.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithCommonTessellationOptions::StaticClass()
@@ -549,10 +632,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithImportOptions.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithImportOptions.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithImportOptions::StaticClass()
@@ -563,10 +648,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithLandscapeTemplate.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithLandscapeTemplate.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithLandscapeTemplate::StaticClass()
@@ -577,10 +664,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithLightComponentTemplate.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithLightComponentTemplate.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithLightComponentTemplate::StaticClass()
@@ -591,10 +680,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithMaterialInstanceTemplate.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithMaterialInstanceTemplate.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithMaterialInstanceTemplate::StaticClass()
@@ -605,10 +696,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithPointLightComponentTemplate.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithPointLightComponentTemplate.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithPointLightComponentTemplate::StaticClass()
@@ -619,10 +712,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithPostProcessVolumeTemplate.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithPostProcessVolumeTemplate.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithPostProcessVolumeTemplate::StaticClass()
@@ -633,10 +728,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithScene.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithScene.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithScene::StaticClass()
@@ -647,10 +744,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ADatasmithSceneActor.StaticClass
+	 * 		Name   -> PredefinedFunction ADatasmithSceneActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ADatasmithSceneActor::StaticClass()
@@ -661,10 +760,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithSceneComponentTemplate.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithSceneComponentTemplate.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithSceneComponentTemplate::StaticClass()
@@ -675,10 +776,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithSkyLightComponentTemplate.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithSkyLightComponentTemplate.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithSkyLightComponentTemplate::StaticClass()
@@ -689,10 +792,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithSpotLightComponentTemplate.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithSpotLightComponentTemplate.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithSpotLightComponentTemplate::StaticClass()
@@ -703,10 +808,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithStaticMeshComponentTemplate.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithStaticMeshComponentTemplate.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithStaticMeshComponentTemplate::StaticClass()
@@ -717,10 +824,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UDatasmithStaticMeshTemplate.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithStaticMeshTemplate.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UDatasmithStaticMeshTemplate::StaticClass()
@@ -730,6 +839,7 @@ namespace CG
 			ptr = UObject::FindClass("Class DatasmithContent.DatasmithStaticMeshTemplate");
 		return ptr;
 	}
+
 
 }
 

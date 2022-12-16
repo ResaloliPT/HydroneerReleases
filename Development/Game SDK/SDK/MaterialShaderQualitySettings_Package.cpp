@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMaterialShaderQualitySettings.StaticClass
+	 * 		Name   -> PredefinedFunction UMaterialShaderQualitySettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMaterialShaderQualitySettings::StaticClass()
@@ -24,10 +25,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UShaderPlatformQualitySettings.StaticClass
+	 * 		Name   -> PredefinedFunction UShaderPlatformQualitySettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UShaderPlatformQualitySettings::StaticClass()
@@ -37,6 +40,7 @@ namespace CG
 			ptr = UObject::FindClass("Class MaterialShaderQualitySettings.ShaderPlatformQualitySettings");
 		return ptr;
 	}
+
 
 }
 

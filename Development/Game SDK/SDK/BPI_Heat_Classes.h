@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * BlueprintGeneratedClass BPI_Heat.BPI_Heat_C
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
@@ -21,10 +22,19 @@ namespace CG
 	class UBPI_Heat_C : public UInterface
 	{
 	public:
+
 		void OutOfFire();
-		void InFire(bool SlowBurn_);
+
+		void InFire(
+bool SlowBurn
+);
+
 		void FullHeat();
-		void HeatUpdated(float Heat);
+
+		void HeatUpdated(
+float Heat
+);
+
 		static UClass* StaticClass();
 	};
 

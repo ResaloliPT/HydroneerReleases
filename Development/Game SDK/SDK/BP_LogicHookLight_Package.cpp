@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,95 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_LogicHookLight.BP_LogicHookLight_C.GetLightValue
+	 * 		Flags  -> ()
+	 */
+	float ABP_LogicHookLight_C::GetLightValue()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicHookLight.BP_LogicHookLight_C.GetLightValue");
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_LogicHookLight.BP_LogicHookLight_C.UpdatePlantLight
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class AActor*                                      PlantActor                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		float                                              LightValue                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_LogicHookLight_C::UpdatePlantLight(
+class AActor* PlantActor
+, 
+float LightValue
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicHookLight.BP_LogicHookLight_C.UpdatePlantLight");
+		
+		struct
+		{
+			class AActor*                                      PlantActor;
+			float                                              LightValue;
+		} params;
+		params.PlantActor = PlantActor;
+		params.LightValue = LightValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_LogicHookLight.BP_LogicHookLight_C.LightPlants
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              LightValue                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_LogicHookLight_C::LightPlants(
+float LightValue
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicHookLight.BP_LogicHookLight_C.LightPlants");
+		
+		struct
+		{
+			float                                              LightValue;
+		} params;
+		params.LightValue = LightValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -30,6 +119,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -52,6 +143,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -60,9 +153,15 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_ParentItem_C*                            HookedTo                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		class USceneComponent*                             Component                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	 * 		bool                                               CanPass_                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               CanPass                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_LogicHookLight_C::HookFunctionality(class ABP_ParentItem_C* HookedTo, class USceneComponent* Component, bool* CanPass_)
+	void ABP_LogicHookLight_C::HookFunctionality(
+class ABP_ParentItem_C* HookedTo
+, 
+class USceneComponent* Component
+, 
+bool* CanPass
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -72,7 +171,7 @@ namespace CG
 		{
 			class ABP_ParentItem_C*                            HookedTo;
 			class USceneComponent*                             Component;
-			bool                                               CanPass_;
+			bool                                               CanPass;
 		} params;
 		params.HookedTo = HookedTo;
 		params.Component = Component;
@@ -81,9 +180,11 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 		
-		if (CanPass_ != nullptr)
-			*CanPass_ = params.CanPass_;
+		if (CanPass != nullptr)
+			*CanPass = params.CanPass;
 	}
+
+
 
 	/**
 	 * Function:
@@ -106,6 +207,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -126,6 +229,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -148,6 +253,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -168,6 +275,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -190,15 +299,19 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function BP_LogicHookLight.BP_LogicHookLight_C.RaiseBrightness
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               Up_                                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		bool                                               Up                                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	 */
-	void ABP_LogicHookLight_C::RaiseBrightness(bool Up_)
+	void ABP_LogicHookLight_C::RaiseBrightness(
+bool Up
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -206,14 +319,16 @@ namespace CG
 		
 		struct
 		{
-			bool                                               Up_;
+			bool                                               Up;
 		} params;
-		params.Up_ = Up_;
+		params.Up = Up;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -223,7 +338,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector                                     A                                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_LogicHookLight_C::ChangeColor(const struct FVector& A)
+	void ABP_LogicHookLight_C::ChangeColor(
+const struct FVector& A
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -240,6 +357,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -248,7 +367,9 @@ namespace CG
 	 * Parameters:
 	 * 		class ABP_ParentLogic_C*                           LogicItem                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_LogicHookLight_C::NewLogicInput(class ABP_ParentLogic_C* LogicItem)
+	void ABP_LogicHookLight_C::NewLogicInput(
+class ABP_ParentLogic_C* LogicItem
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -264,6 +385,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -286,6 +409,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -307,6 +432,106 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_LogicHookLight.BP_LogicHookLight_C.BndEvt__BP_LogicHookLight_Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UPrimitiveComponent*                         OverlappedComponent                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		class AActor*                                      OtherActor                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		class UPrimitiveComponent*                         OtherComp                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		int32_t                                            OtherBodyIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		bool                                               bFromSweep                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	 * 		struct FHitResult                                  SweepResult                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	 */
+	void ABP_LogicHookLight_C::BndEvt__BP_LogicHookLight_Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(
+class UPrimitiveComponent* OverlappedComponent
+, 
+class AActor* OtherActor
+, 
+class UPrimitiveComponent* OtherComp
+, 
+int32_t OtherBodyIndex
+, 
+bool bFromSweep
+, 
+const struct FHitResult& SweepResult
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicHookLight.BP_LogicHookLight_C.BndEvt__BP_LogicHookLight_Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
+		
+		struct
+		{
+			class UPrimitiveComponent*                         OverlappedComponent;
+			class AActor*                                      OtherActor;
+			class UPrimitiveComponent*                         OtherComp;
+			int32_t                                            OtherBodyIndex;
+			bool                                               bFromSweep;
+			struct FHitResult                                  SweepResult;
+		} params;
+		params.OverlappedComponent = OverlappedComponent;
+		params.OtherActor = OtherActor;
+		params.OtherComp = OtherComp;
+		params.OtherBodyIndex = OtherBodyIndex;
+		params.bFromSweep = bFromSweep;
+		params.SweepResult = SweepResult;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function BP_LogicHookLight.BP_LogicHookLight_C.BndEvt__BP_LogicHookLight_Sphere_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UPrimitiveComponent*                         OverlappedComponent                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		class AActor*                                      OtherActor                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		class UPrimitiveComponent*                         OtherComp                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 * 		int32_t                                            OtherBodyIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	 */
+	void ABP_LogicHookLight_C::BndEvt__BP_LogicHookLight_Sphere_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(
+class UPrimitiveComponent* OverlappedComponent
+, 
+class AActor* OtherActor
+, 
+class UPrimitiveComponent* OtherComp
+, 
+int32_t OtherBodyIndex
+)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn)
+			fn = UObject::FindObject<UFunction>("Function BP_LogicHookLight.BP_LogicHookLight_C.BndEvt__BP_LogicHookLight_Sphere_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
+		
+		struct
+		{
+			class UPrimitiveComponent*                         OverlappedComponent;
+			class AActor*                                      OtherActor;
+			class UPrimitiveComponent*                         OtherComp;
+			int32_t                                            OtherBodyIndex;
+		} params;
+		params.OverlappedComponent = OverlappedComponent;
+		params.OtherActor = OtherActor;
+		params.OtherComp = OtherComp;
+		params.OtherBodyIndex = OtherBodyIndex;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -315,7 +540,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            EntryPoint                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void ABP_LogicHookLight_C::ExecuteUbergraph_BP_LogicHookLight(int32_t EntryPoint)
+	void ABP_LogicHookLight_C::ExecuteUbergraph_BP_LogicHookLight(
+int32_t EntryPoint
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -332,10 +559,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ABP_LogicHookLight_C.StaticClass
+	 * 		Name   -> PredefinedFunction ABP_LogicHookLight_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ABP_LogicHookLight_C::StaticClass()
@@ -345,6 +574,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass BP_LogicHookLight.BP_LogicHookLight_C");
 		return ptr;
 	}
+
 
 }
 

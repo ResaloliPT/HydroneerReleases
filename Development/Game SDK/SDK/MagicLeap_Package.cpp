@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18,7 +19,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FPurchaseItemDetails                        ItemDetails                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	bool UInAppPurchaseComponent::TryPurchaseItemAsync(const struct FPurchaseItemDetails& ItemDetails)
+	bool UInAppPurchaseComponent::TryPurchaseItemAsync(
+const struct FPurchaseItemDetails& ItemDetails
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -37,6 +40,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -45,7 +50,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            InNumPages                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UInAppPurchaseComponent::TryGetPurchaseHistoryAsync(int32_t InNumPages)
+	bool UInAppPurchaseComponent::TryGetPurchaseHistoryAsync(
+int32_t InNumPages
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -64,6 +71,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -72,7 +81,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<class FString>                              ItemIDs                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	bool UInAppPurchaseComponent::TryGetItemsDetailsAsync(TArray<class FString> ItemIDs)
+	bool UInAppPurchaseComponent::TryGetItemsDetailsAsync(
+TArray<class FString> ItemIDs
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -91,6 +102,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -99,7 +112,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FPurchaseConfirmation                       PurchaseConfirmations                                      (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UInAppPurchaseComponent::PurchaseConfirmationSuccess__DelegateSignature(const struct FPurchaseConfirmation& PurchaseConfirmations)
+	void UInAppPurchaseComponent::PurchaseConfirmationSuccess__DelegateSignature(
+const struct FPurchaseConfirmation& PurchaseConfirmations
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -115,6 +130,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -137,6 +154,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -145,7 +164,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      LogMessage                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UInAppPurchaseComponent::InAppPurchaseLogMessage__DelegateSignature(const class FString& LogMessage)
+	void UInAppPurchaseComponent::InAppPurchaseLogMessage__DelegateSignature(
+const class FString& LogMessage
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -162,6 +183,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -170,7 +193,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<struct FPurchaseConfirmation>               PurchaseHistory                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UInAppPurchaseComponent::GetPurchaseHistorySuccess__DelegateSignature(TArray<struct FPurchaseConfirmation> PurchaseHistory)
+	void UInAppPurchaseComponent::GetPurchaseHistorySuccess__DelegateSignature(
+TArray<struct FPurchaseConfirmation> PurchaseHistory
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -186,6 +211,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -208,6 +235,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -216,7 +245,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<struct FPurchaseItemDetails>                ItemsDetails                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UInAppPurchaseComponent::GetItemsDetailsSuccess__DelegateSignature(TArray<struct FPurchaseItemDetails> ItemsDetails)
+	void UInAppPurchaseComponent::GetItemsDetailsSuccess__DelegateSignature(
+TArray<struct FPurchaseItemDetails> ItemsDetails
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -232,6 +263,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -254,10 +287,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UInAppPurchaseComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UInAppPurchaseComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UInAppPurchaseComponent::StaticClass()
@@ -268,10 +303,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction ULuminApplicationLifecycleComponent.StaticClass
+	 * 		Name   -> PredefinedFunction ULuminApplicationLifecycleComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* ULuminApplicationLifecycleComponent::StaticClass()
@@ -282,10 +319,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMagicLeapHeadTrackingNotificationsComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UMagicLeapHeadTrackingNotificationsComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMagicLeapHeadTrackingNotificationsComponent::StaticClass()
@@ -296,6 +335,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -305,7 +346,11 @@ namespace CG
 	 * 		class AActor*                                      InStabilizationDepthActor                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bSetFocusActor                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMagicLeapHMDFunctionLibrary::SetStabilizationDepthActor(class AActor* InStabilizationDepthActor, bool bSetFocusActor)
+	void UMagicLeapHMDFunctionLibrary::SetStabilizationDepthActor(
+class AActor* InStabilizationDepthActor
+, 
+bool bSetFocusActor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -324,6 +369,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -333,7 +380,11 @@ namespace CG
 	 * 		class AActor*                                      InFocusActor                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bSetStabilizationActor                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMagicLeapHMDFunctionLibrary::SetFocusActor(class AActor* InFocusActor, bool bSetStabilizationActor)
+	void UMagicLeapHMDFunctionLibrary::SetFocusActor(
+class AActor* InFocusActor
+, 
+bool bSetStabilizationActor
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -352,6 +403,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -360,7 +413,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FRotator                                    InBaseRotation                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UMagicLeapHMDFunctionLibrary::SetBaseRotation(const struct FRotator& InBaseRotation)
+	void UMagicLeapHMDFunctionLibrary::SetBaseRotation(
+const struct FRotator& InBaseRotation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -377,6 +432,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -385,7 +442,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FVector                                     InBasePosition                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMagicLeapHMDFunctionLibrary::SetBasePosition(const struct FVector& InBasePosition)
+	void UMagicLeapHMDFunctionLibrary::SetBasePosition(
+const struct FVector& InBasePosition
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -402,6 +461,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -410,7 +471,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FQuat                                       InBaseOrientation                                          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UMagicLeapHMDFunctionLibrary::SetBaseOrientation(const struct FQuat& InBaseOrientation)
+	void UMagicLeapHMDFunctionLibrary::SetBaseOrientation(
+const struct FQuat& InBaseOrientation
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -426,6 +489,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -450,6 +515,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -472,6 +539,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -496,6 +565,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -518,6 +589,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -542,6 +615,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -564,6 +639,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -588,6 +665,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -611,6 +690,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -619,7 +700,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FMagicLeapHeadTrackingState                 State                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapHMDFunctionLibrary::GetHeadTrackingState(struct FMagicLeapHeadTrackingState* State)
+	bool UMagicLeapHMDFunctionLibrary::GetHeadTrackingState(
+struct FMagicLeapHeadTrackingState* State
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -639,6 +722,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -663,6 +748,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -671,7 +758,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FMagicLeapGraphicsClientPerformanceInfo     PerformanceInfo                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapHMDFunctionLibrary::GetGraphicsClientPerformanceInfo(struct FMagicLeapGraphicsClientPerformanceInfo* PerformanceInfo)
+	bool UMagicLeapHMDFunctionLibrary::GetGraphicsClientPerformanceInfo(
+struct FMagicLeapGraphicsClientPerformanceInfo* PerformanceInfo
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -692,10 +781,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMagicLeapHMDFunctionLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UMagicLeapHMDFunctionLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMagicLeapHMDFunctionLibrary::StaticClass()
@@ -706,6 +797,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -715,7 +808,11 @@ namespace CG
 	 * 		struct FMagicLeapTrackingMeshInfo                  NewMeshInfo                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FMagicLeapMeshBlockRequest>          RequestedMesh                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UMagicLeapMeshTrackerComponent::SelectMeshBlocks(const struct FMagicLeapTrackingMeshInfo& NewMeshInfo, TArray<struct FMagicLeapMeshBlockRequest>* RequestedMesh)
+	void UMagicLeapMeshTrackerComponent::SelectMeshBlocks(
+const struct FMagicLeapTrackingMeshInfo& NewMeshInfo
+, 
+TArray<struct FMagicLeapMeshBlockRequest>* RequestedMesh
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -736,6 +833,8 @@ namespace CG
 			*RequestedMesh = params.RequestedMesh;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -748,7 +847,17 @@ namespace CG
 	 * 		TArray<struct FVector>                             Normals                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		TArray<float>                                      Confidence                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 */
-	void UMagicLeapMeshTrackerComponent::OnMeshTrackerUpdated__DelegateSignature(const struct FGuid& ID, TArray<struct FVector> Vertices, TArray<int32_t> Triangles, TArray<struct FVector> Normals, TArray<float> Confidence)
+	void UMagicLeapMeshTrackerComponent::OnMeshTrackerUpdated__DelegateSignature(
+const struct FGuid& ID
+, 
+TArray<struct FVector> Vertices
+, 
+TArray<int32_t> Triangles
+, 
+TArray<struct FVector> Normals
+, 
+TArray<float> Confidence
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -773,6 +882,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -796,6 +907,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -804,7 +917,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UMRMeshComponent*                            InMRMeshPtr                                                (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMagicLeapMeshTrackerComponent::DisconnectMRMesh(class UMRMeshComponent* InMRMeshPtr)
+	void UMagicLeapMeshTrackerComponent::DisconnectMRMesh(
+class UMRMeshComponent* InMRMeshPtr
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -820,6 +935,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -842,6 +959,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -850,7 +969,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UMRMeshComponent*                            InMRMeshPtr                                                (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMagicLeapMeshTrackerComponent::ConnectMRMesh(class UMRMeshComponent* InMRMeshPtr)
+	void UMagicLeapMeshTrackerComponent::ConnectMRMesh(
+class UMRMeshComponent* InMRMeshPtr
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -866,6 +987,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -888,10 +1011,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMagicLeapMeshTrackerComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UMagicLeapMeshTrackerComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMagicLeapMeshTrackerComponent::StaticClass()
@@ -902,10 +1027,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMagicLeapSettings.StaticClass
+	 * 		Name   -> PredefinedFunction UMagicLeapSettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMagicLeapSettings::StaticClass()
@@ -916,6 +1043,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -925,7 +1054,11 @@ namespace CG
 	 * 		struct FMagicLeapTrackingMeshInfo                  NewMeshInfo                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FMagicLeapMeshBlockRequest>          RequestedMesh                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 */
-	void UMagicLeapMeshBlockSelectorInterface::SelectMeshBlocks(const struct FMagicLeapTrackingMeshInfo& NewMeshInfo, TArray<struct FMagicLeapMeshBlockRequest>* RequestedMesh)
+	void UMagicLeapMeshBlockSelectorInterface::SelectMeshBlocks(
+const struct FMagicLeapTrackingMeshInfo& NewMeshInfo
+, 
+TArray<struct FMagicLeapMeshBlockRequest>* RequestedMesh
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -946,10 +1079,12 @@ namespace CG
 			*RequestedMesh = params.RequestedMesh;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMagicLeapMeshBlockSelectorInterface.StaticClass
+	 * 		Name   -> PredefinedFunction UMagicLeapMeshBlockSelectorInterface.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMagicLeapMeshBlockSelectorInterface::StaticClass()
@@ -960,6 +1095,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -969,7 +1106,11 @@ namespace CG
 	 * 		struct FMagicLeapRaycastQueryParams                RequestParams                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		class FScriptDelegate                              ResultDelegate                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapRaycastComponent::RequestRaycast(const struct FMagicLeapRaycastQueryParams& RequestParams, const class FScriptDelegate& ResultDelegate)
+	bool UMagicLeapRaycastComponent::RequestRaycast(
+const struct FMagicLeapRaycastQueryParams& RequestParams
+, 
+const class FScriptDelegate& ResultDelegate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -990,6 +1131,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -998,7 +1141,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FMagicLeapRaycastHitResult                  HitResult                                                  (Parm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	void UMagicLeapRaycastComponent::RaycastResultDelegate__DelegateSignature(const struct FMagicLeapRaycastHitResult& HitResult)
+	void UMagicLeapRaycastComponent::RaycastResultDelegate__DelegateSignature(
+const struct FMagicLeapRaycastHitResult& HitResult
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1015,10 +1160,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMagicLeapRaycastComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UMagicLeapRaycastComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMagicLeapRaycastComponent::StaticClass()
@@ -1028,6 +1175,8 @@ namespace CG
 			ptr = UObject::FindClass("Class MagicLeap.MagicLeapRaycastComponent");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1044,7 +1193,23 @@ namespace CG
 	 * 		bool                                               CollideWithUnobserved                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            UserData                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FMagicLeapRaycastQueryParams UMagicLeapRaycastFunctionLibrary::MakeRaycastQueryParams(const struct FVector& Position, const struct FVector& Direction, const struct FVector& UpVector, int32_t Width, int32_t Height, float HorizontalFovDegrees, bool CollideWithUnobserved, int32_t UserData)
+	struct FMagicLeapRaycastQueryParams UMagicLeapRaycastFunctionLibrary::MakeRaycastQueryParams(
+const struct FVector& Position
+, 
+const struct FVector& Direction
+, 
+const struct FVector& UpVector
+, 
+int32_t Width
+, 
+int32_t Height
+, 
+float HorizontalFovDegrees
+, 
+bool CollideWithUnobserved
+, 
+int32_t UserData
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1077,10 +1242,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMagicLeapRaycastFunctionLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UMagicLeapRaycastFunctionLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMagicLeapRaycastFunctionLibrary::StaticClass()
@@ -1090,6 +1257,7 @@ namespace CG
 			ptr = UObject::FindClass("Class MagicLeap.MagicLeapRaycastFunctionLibrary");
 		return ptr;
 	}
+
 
 }
 

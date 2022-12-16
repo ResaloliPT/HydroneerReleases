@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * Class CoreUObject.Object
 	 * Size -> 0x0028
@@ -21,20 +22,40 @@ namespace CG
 	class UObject
 	{
 	public:
-		static class TUObjectArray*                                GObjects;                                                // 0x0000(0x0008) PREDEFINED PROPERTY
-		void*                                                      VfTable;                                                 // 0x0000(0x0008) PRE-DEFINED PROPERTY
-		int32_t                                                    Flags;                                                   // 0x0008(0x0004) PRE-DEFINED PROPERTY
-		int32_t                                                    InternalIndex;                                           // 0x000C(0x0004) PRE-DEFINED PROPERTY
-		class UClass*                                              Class;                                                   // 0x0010(0x0008) PRE-DEFINED PROPERTY
-		FName                                                      Name;                                                    // 0x0018(0x0008) PRE-DEFINED PROPERTY
-		class UObject*                                             Outer;                                                   // 0x0020(0x0008) PRE-DEFINED PROPERTY
+
+		static class TUObjectArray*                              GObjects;                                                // 0x0000(0x0008) PREDEFINED PROPERTY
+
+
+		void*                                                    VfTable;                                                 // 0x0000(0x0008) PRE-DEFINED PROPERTY
+
+
+		int32_t                                                  Flags;                                                   // 0x0008(0x0004) PRE-DEFINED PROPERTY
+
+
+		int32_t                                                  InternalIndex;                                           // 0x000C(0x0004) PRE-DEFINED PROPERTY
+
+
+		class UClass*                                            Class;                                                   // 0x0010(0x0008) PRE-DEFINED PROPERTY
+
+
+		FName                                                    Name;                                                    // 0x0018(0x0008) PRE-DEFINED PROPERTY
+
+
+		class UObject*                                           Outer;                                                   // 0x0020(0x0008) PRE-DEFINED PROPERTY
+
 
 	public:
+
 		static TUObjectArray& GetGlobalObjects();
+
 		std::string GetName() const;
+
 		std::string GetFullName() const;
+
 		template<typename T>
-		static T* FindObject(const std::string& name)
+		static T* FindObject(
+const std::string& name
+)
 		{
 			for (int32_t i = 0; i < UObject::GetGlobalObjects().Count(); ++i)
 			{
@@ -48,6 +69,8 @@ namespace CG
 			}
 			return nullptr;
 		}
+
+
 
 		template<typename T>
 		static T* FindObject()
@@ -66,8 +89,12 @@ namespace CG
 			return nullptr;
 		}
 
+
+
 		template<typename T>
-		static std::vector<T*> FindObjects(const std::string& name)
+		static std::vector<T*> FindObjects(
+const std::string& name
+)
 		{
 			std::vector<T*> ret;
 			for (int32_t i = 0; i < UObject::GetGlobalObjects().Count(); ++i)
@@ -82,6 +109,8 @@ namespace CG
 			}
 			return ret;
 		}
+
+
 
 		template<typename T>
 		static std::vector<T*> FindObjects()
@@ -101,18 +130,40 @@ namespace CG
 			return ret;
 		}
 
-		static UClass* FindClass(const std::string& name);
+
+
+		static UClass* FindClass(
+const std::string& name
+);
+
 		template<typename T>
-		static T* GetObjectCasted(size_t index)
+		static T* GetObjectCasted(
+size_t index
+)
 		{
 			return static_cast<T*>(UObject::GetGlobalObjects().GetByIndex(index));
 		}
 
-		bool IsA(UClass* cmp) const;
-		void ExecuteUbergraph(int32_t EntryPoint);
-		void ProcessEvent(class UFunction* function, void* parms);
+
+
+		bool IsA(
+UClass* cmp
+) const;
+
+		void ExecuteUbergraph(
+int32_t EntryPoint
+);
+
+		void ProcessEvent(
+class UFunction* function
+, 
+void* parms
+);
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.Interface
@@ -121,8 +172,11 @@ namespace CG
 	class UInterface : public UObject
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.GCObjectReferencer
@@ -131,11 +185,16 @@ namespace CG
 	class UGCObjectReferencer : public UObject
 	{
 	public:
-		unsigned char                                              UnknownData_VSM4[0x48];                                  // 0x0028(0x0048) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_06BW[0x48];                                  // 0x0028(0x0048) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.TextBuffer
@@ -144,11 +203,16 @@ namespace CG
 	class UTextBuffer : public UObject
 	{
 	public:
-		unsigned char                                              UnknownData_ZZSS[0x28];                                  // 0x0028(0x0028) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_GE7N[0x28];                                  // 0x0028(0x0028) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.Field
@@ -157,11 +221,16 @@ namespace CG
 	class UField : public UObject
 	{
 	public:
-		class UField*                                              Next;                                                    // 0x0028(0x0008) PRE-DEFINED PROPERTY
+
+		class UField*                                            Next;                                                    // 0x0028(0x0008) PRE-DEFINED PROPERTY
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.Struct
@@ -170,21 +239,46 @@ namespace CG
 	class UStruct : public UField, public FStructBaseChain
 	{
 	public:
-		class UStruct*                                             SuperField;                                              // 0x0040(0x0008) PRE-DEFINED PROPERTY
-		class UField*                                              Children;                                                // 0x0048(0x0008) PRE-DEFINED PROPERTY
-		class FField*                                              ChildProperties;                                         // 0x0050(0x0008) PRE-DEFINED PROPERTY
-		int32_t                                                    PropertySize;                                            // 0x0058(0x0004) PRE-DEFINED PROPERTY
-		int32_t                                                    MinAlignment;                                            // 0x005C(0x0004) PRE-DEFINED PROPERTY
-		TArray<uint8_t>                                            Script;                                                  // 0x0060(0x0010) PRE-DEFINED PROPERTY
-		class FProperty*                                           PropertyLink;                                            // 0x0070(0x0008) PRE-DEFINED PROPERTY
-		class FProperty*                                           RefLink;                                                 // 0x0078(0x0008) PRE-DEFINED PROPERTY
-		class FProperty*                                           DestructorLink;                                          // 0x0080(0x0008) PRE-DEFINED PROPERTY
-		class FProperty*                                           PostConstructLink;                                       // 0x0088(0x0008) PRE-DEFINED PROPERTY
-		TArray<UObject*>                                           ScriptObjectReferences;                                  // 0x0090(0x0010) PRE-DEFINED PROPERTY
+
+		class UStruct*                                           SuperField;                                              // 0x0040(0x0008) PRE-DEFINED PROPERTY
+
+
+		class UField*                                            Children;                                                // 0x0048(0x0008) PRE-DEFINED PROPERTY
+
+
+		class FField*                                            ChildProperties;                                         // 0x0050(0x0008) PRE-DEFINED PROPERTY
+
+
+		int32_t                                                  PropertySize;                                            // 0x0058(0x0004) PRE-DEFINED PROPERTY
+
+
+		int32_t                                                  MinAlignment;                                            // 0x005C(0x0004) PRE-DEFINED PROPERTY
+
+
+		TArray<uint8_t>                                          Script;                                                  // 0x0060(0x0010) PRE-DEFINED PROPERTY
+
+
+		class FProperty*                                         PropertyLink;                                            // 0x0070(0x0008) PRE-DEFINED PROPERTY
+
+
+		class FProperty*                                         RefLink;                                                 // 0x0078(0x0008) PRE-DEFINED PROPERTY
+
+
+		class FProperty*                                         DestructorLink;                                          // 0x0080(0x0008) PRE-DEFINED PROPERTY
+
+
+		class FProperty*                                         PostConstructLink;                                       // 0x0088(0x0008) PRE-DEFINED PROPERTY
+
+
+		TArray<UObject*>                                         ScriptObjectReferences;                                  // 0x0090(0x0010) PRE-DEFINED PROPERTY
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.ScriptStruct
@@ -193,11 +287,16 @@ namespace CG
 	class UScriptStruct : public UStruct
 	{
 	public:
-		unsigned char                                              UnknownData_OSVH[0x10];                                  // 0x00B0(0x0010) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_81DC[0x10];                                  // 0x00B0(0x0010) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.Package
@@ -206,11 +305,16 @@ namespace CG
 	class UPackage : public UObject
 	{
 	public:
-		unsigned char                                              UnknownData_5NCU[0x78];                                  // 0x0028(0x0078) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_4YDI[0x78];                                  // 0x0028(0x0078) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.Class
@@ -219,18 +323,26 @@ namespace CG
 	class UClass : public UStruct
 	{
 	public:
-		unsigned char                                              UnknownData_R23J[0x180];                                 // 0x00B0(0x0180) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_CB2X[0x180];                                 // 0x00B0(0x0180) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		template<typename T>
 		T* CreateDefaultObjectOfType()
 		{
 			return static_cast<T*>(CreateDefaultObject());
 		}
 
+
+
 		UObject* CreateDefaultObject();
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.Function
@@ -239,23 +351,52 @@ namespace CG
 	class UFunction : public UStruct
 	{
 	public:
-		int32_t                                                    FunctionFlags;                                           // 0x00A0(0x0004) PRE-DEFINED PROPERTY
-		int16_t                                                    RepOffset;                                               // 0x00A4(0x0002) PRE-DEFINED PROPERTY
-		int8_t                                                     NumParms;                                                // 0x00A6(0x0001) PRE-DEFINED PROPERTY
-		unsigned char                                              pad_XDLQDQMPVB[0x01];                                    // 0x00A7(0x0001) PRE-DEFINED PROPERTY
-		uint16_t                                                   ParmsSize;                                               // 0x00A8(0x0002) PRE-DEFINED PROPERTY
-		uint16_t                                                   ReturnValueOffset;                                       // 0x00AA(0x0002) PRE-DEFINED PROPERTY
-		uint16_t                                                   RPCId;                                                   // 0x00AC(0x0002) PRE-DEFINED PROPERTY
-		uint16_t                                                   RPCResponseId;                                           // 0x00AE(0x0002) PRE-DEFINED PROPERTY
-		class FProperty*                                           FirstPropertyToInit;                                     // 0x00B0(0x0008) PRE-DEFINED PROPERTY
-		class UFunction*                                           EventGraphFunction;                                      // 0x00B8(0x0008) PRE-DEFINED PROPERTY
-		int32_t                                                    EventGraphCallOffset;                                    // 0x00C0(0x0004) PRE-DEFINED PROPERTY
-		unsigned char                                              pad_SLWA5HMW6Z[0x04];                                    // 0x00C4(0x0004) PRE-DEFINED PROPERTY
-		void*                                                      Func;                                                    // 0x00C8(0x0008) PRE-DEFINED PROPERTY
+
+		int32_t                                                  FunctionFlags;                                           // 0x00A0(0x0004) PRE-DEFINED PROPERTY
+
+
+		int16_t                                                  RepOffset;                                               // 0x00A4(0x0002) PRE-DEFINED PROPERTY
+
+
+		int8_t                                                   NumParms;                                                // 0x00A6(0x0001) PRE-DEFINED PROPERTY
+
+
+		unsigned char                                            pad_U6W22A3FV7[0x01];                                    // 0x00A7(0x0001) PRE-DEFINED PROPERTY
+
+
+		uint16_t                                                 ParmsSize;                                               // 0x00A8(0x0002) PRE-DEFINED PROPERTY
+
+
+		uint16_t                                                 ReturnValueOffset;                                       // 0x00AA(0x0002) PRE-DEFINED PROPERTY
+
+
+		uint16_t                                                 RPCId;                                                   // 0x00AC(0x0002) PRE-DEFINED PROPERTY
+
+
+		uint16_t                                                 RPCResponseId;                                           // 0x00AE(0x0002) PRE-DEFINED PROPERTY
+
+
+		class FProperty*                                         FirstPropertyToInit;                                     // 0x00B0(0x0008) PRE-DEFINED PROPERTY
+
+
+		class UFunction*                                         EventGraphFunction;                                      // 0x00B8(0x0008) PRE-DEFINED PROPERTY
+
+
+		int32_t                                                  EventGraphCallOffset;                                    // 0x00C0(0x0004) PRE-DEFINED PROPERTY
+
+
+		unsigned char                                            pad_QSGN4RLFTY[0x04];                                    // 0x00C4(0x0004) PRE-DEFINED PROPERTY
+
+
+		void*                                                    Func;                                                    // 0x00C8(0x0008) PRE-DEFINED PROPERTY
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.DelegateFunction
@@ -264,8 +405,11 @@ namespace CG
 	class UDelegateFunction : public UFunction
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.SparseDelegateFunction
@@ -274,11 +418,16 @@ namespace CG
 	class USparseDelegateFunction : public UDelegateFunction
 	{
 	public:
-		unsigned char                                              UnknownData_99NE[0x10];                                  // 0x00E0(0x0010) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_DFWM[0x10];                                  // 0x00E0(0x0010) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.DynamicClass
@@ -287,11 +436,16 @@ namespace CG
 	class UDynamicClass : public UClass
 	{
 	public:
-		unsigned char                                              UnknownData_R9WI[0x80];                                  // 0x0230(0x0080) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_56UE[0x80];                                  // 0x0230(0x0080) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.PackageMap
@@ -300,11 +454,16 @@ namespace CG
 	class UPackageMap : public UObject
 	{
 	public:
-		unsigned char                                              UnknownData_1VEO[0xB8];                                  // 0x0028(0x00B8) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_KS2Q[0xB8];                                  // 0x0028(0x00B8) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.Enum
@@ -313,11 +472,16 @@ namespace CG
 	class UEnum : public UField
 	{
 	public:
-		unsigned char                                              UnknownData_Y56M[0x30];                                  // 0x0030(0x0030) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_9OA0[0x30];                                  // 0x0030(0x0030) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.LinkerPlaceholderClass
@@ -326,11 +490,16 @@ namespace CG
 	class ULinkerPlaceholderClass : public UClass
 	{
 	public:
-		unsigned char                                              UnknownData_JZIS[0x1B8];                                 // 0x0230(0x01B8) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_8QNX[0x1B8];                                 // 0x0230(0x01B8) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.LinkerPlaceholderExportObject
@@ -339,11 +508,16 @@ namespace CG
 	class ULinkerPlaceholderExportObject : public UObject
 	{
 	public:
-		unsigned char                                              UnknownData_066U[0xC8];                                  // 0x0028(0x00C8) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_1IIJ[0xC8];                                  // 0x0028(0x00C8) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.LinkerPlaceholderFunction
@@ -352,11 +526,16 @@ namespace CG
 	class ULinkerPlaceholderFunction : public UFunction
 	{
 	public:
-		unsigned char                                              UnknownData_NIEK[0x1B8];                                 // 0x00E0(0x01B8) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_3TB8[0x1B8];                                 // 0x00E0(0x01B8) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.MetaData
@@ -365,11 +544,16 @@ namespace CG
 	class UMetaData : public UObject
 	{
 	public:
-		unsigned char                                              UnknownData_SEJY[0xA0];                                  // 0x0028(0x00A0) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_X9AL[0xA0];                                  // 0x0028(0x00A0) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.ObjectRedirector
@@ -378,11 +562,16 @@ namespace CG
 	class UObjectRedirector : public UObject
 	{
 	public:
-		unsigned char                                              UnknownData_DU7K[0x8];                                   // 0x0028(0x0008) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_RDK9[0x8];                                   // 0x0028(0x0008) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.Property
@@ -391,11 +580,16 @@ namespace CG
 	class UProperty : public UField
 	{
 	public:
-		unsigned char                                              UnknownData_7JJI[0x40];                                  // 0x0030(0x0040) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_EOUW[0x40];                                  // 0x0030(0x0040) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.EnumProperty
@@ -404,11 +598,16 @@ namespace CG
 	class UEnumProperty : public UProperty
 	{
 	public:
-		unsigned char                                              UnknownData_Y33H[0x10];                                  // 0x0070(0x0010) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_MFEC[0x10];                                  // 0x0070(0x0010) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.ArrayProperty
@@ -417,11 +616,16 @@ namespace CG
 	class UArrayProperty : public UProperty
 	{
 	public:
-		unsigned char                                              UnknownData_Y71T[0x8];                                   // 0x0070(0x0008) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_Y0VH[0x8];                                   // 0x0070(0x0008) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.ObjectPropertyBase
@@ -430,11 +634,16 @@ namespace CG
 	class UObjectPropertyBase : public UProperty
 	{
 	public:
-		unsigned char                                              UnknownData_5KBI[0x8];                                   // 0x0070(0x0008) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_CLZZ[0x8];                                   // 0x0070(0x0008) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.BoolProperty
@@ -443,11 +652,16 @@ namespace CG
 	class UBoolProperty : public UProperty
 	{
 	public:
-		unsigned char                                              UnknownData_ECLS[0x8];                                   // 0x0070(0x0008) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_EMVD[0x8];                                   // 0x0070(0x0008) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.NumericProperty
@@ -456,8 +670,11 @@ namespace CG
 	class UNumericProperty : public UProperty
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.ByteProperty
@@ -466,11 +683,16 @@ namespace CG
 	class UByteProperty : public UNumericProperty
 	{
 	public:
-		unsigned char                                              UnknownData_9RC4[0x8];                                   // 0x0070(0x0008) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_6JRR[0x8];                                   // 0x0070(0x0008) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.ObjectProperty
@@ -479,8 +701,11 @@ namespace CG
 	class UObjectProperty : public UObjectPropertyBase
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.ClassProperty
@@ -489,11 +714,16 @@ namespace CG
 	class UClassProperty : public UObjectProperty
 	{
 	public:
-		unsigned char                                              UnknownData_HMU0[0x8];                                   // 0x0078(0x0008) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_HPNR[0x8];                                   // 0x0078(0x0008) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.DelegateProperty
@@ -502,8 +732,11 @@ namespace CG
 	class UDelegateProperty : public UProperty
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.DoubleProperty
@@ -512,8 +745,11 @@ namespace CG
 	class UDoubleProperty : public UNumericProperty
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.FloatProperty
@@ -522,8 +758,11 @@ namespace CG
 	class UFloatProperty : public UNumericProperty
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.IntProperty
@@ -532,8 +771,11 @@ namespace CG
 	class UIntProperty : public UNumericProperty
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.Int8Property
@@ -542,8 +784,11 @@ namespace CG
 	class UInt8Property : public UNumericProperty
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.Int16Property
@@ -552,8 +797,11 @@ namespace CG
 	class UInt16Property : public UNumericProperty
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.Int64Property
@@ -562,8 +810,11 @@ namespace CG
 	class UInt64Property : public UNumericProperty
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.InterfaceProperty
@@ -572,11 +823,16 @@ namespace CG
 	class UInterfaceProperty : public UProperty
 	{
 	public:
-		unsigned char                                              UnknownData_USEV[0x8];                                   // 0x0070(0x0008) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_WNED[0x8];                                   // 0x0070(0x0008) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.LazyObjectProperty
@@ -585,8 +841,11 @@ namespace CG
 	class ULazyObjectProperty : public UObjectPropertyBase
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.MapProperty
@@ -595,11 +854,16 @@ namespace CG
 	class UMapProperty : public UProperty
 	{
 	public:
-		unsigned char                                              UnknownData_JG2P[0x28];                                  // 0x0070(0x0028) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_BU33[0x28];                                  // 0x0070(0x0028) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.MulticastDelegateProperty
@@ -608,11 +872,16 @@ namespace CG
 	class UMulticastDelegateProperty : public UDelegateProperty
 	{
 	public:
-		unsigned char                                              UnknownData_5SO0[0x8];                                   // 0x0070(0x0008) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_257F[0x8];                                   // 0x0070(0x0008) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.MulticastInlineDelegateProperty
@@ -621,8 +890,11 @@ namespace CG
 	class UMulticastInlineDelegateProperty : public UMulticastDelegateProperty
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.MulticastSparseDelegateProperty
@@ -631,8 +903,11 @@ namespace CG
 	class UMulticastSparseDelegateProperty : public UMulticastDelegateProperty
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.NameProperty
@@ -641,8 +916,11 @@ namespace CG
 	class UNameProperty : public UProperty
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.SetProperty
@@ -651,11 +929,16 @@ namespace CG
 	class USetProperty : public UProperty
 	{
 	public:
-		unsigned char                                              UnknownData_30GG[0x20];                                  // 0x0070(0x0020) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_7EZZ[0x20];                                  // 0x0070(0x0020) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.SoftObjectProperty
@@ -664,8 +947,11 @@ namespace CG
 	class USoftObjectProperty : public UObjectPropertyBase
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.SoftClassProperty
@@ -674,11 +960,16 @@ namespace CG
 	class USoftClassProperty : public USoftObjectProperty
 	{
 	public:
-		unsigned char                                              UnknownData_5TXC[0x8];                                   // 0x0078(0x0008) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_97TS[0x8];                                   // 0x0078(0x0008) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.StrProperty
@@ -687,8 +978,11 @@ namespace CG
 	class UStrProperty : public UProperty
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.StructProperty
@@ -697,11 +991,16 @@ namespace CG
 	class UStructProperty : public UProperty
 	{
 	public:
-		unsigned char                                              UnknownData_ZE56[0x8];                                   // 0x0070(0x0008) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_S5H8[0x8];                                   // 0x0070(0x0008) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.UInt16Property
@@ -710,8 +1009,11 @@ namespace CG
 	class UUInt16Property : public UNumericProperty
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.UInt32Property
@@ -720,8 +1022,11 @@ namespace CG
 	class UUInt32Property : public UNumericProperty
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.UInt64Property
@@ -730,8 +1035,11 @@ namespace CG
 	class UUInt64Property : public UNumericProperty
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.WeakObjectProperty
@@ -740,8 +1048,11 @@ namespace CG
 	class UWeakObjectProperty : public UObjectPropertyBase
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.TextProperty
@@ -750,8 +1061,11 @@ namespace CG
 	class UTextProperty : public UProperty
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.PropertyWrapper
@@ -760,11 +1074,16 @@ namespace CG
 	class UPropertyWrapper : public UObject
 	{
 	public:
-		unsigned char                                              UnknownData_2TLF[0x8];                                   // 0x0028(0x0008) MISSED OFFSET (PADDING)
+
+		unsigned char                                            UnknownData_YQEU[0x8];                                   // 0x0028(0x0008) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.MulticastDelegatePropertyWrapper
@@ -773,8 +1092,11 @@ namespace CG
 	class UMulticastDelegatePropertyWrapper : public UPropertyWrapper
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class CoreUObject.MulticastInlineDelegatePropertyWrapper
@@ -783,6 +1105,7 @@ namespace CG
 	class UMulticastInlineDelegatePropertyWrapper : public UMulticastDelegatePropertyWrapper
 	{
 	public:
+
 		static UClass* StaticClass();
 	};
 

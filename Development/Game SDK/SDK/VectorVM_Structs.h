@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+
 	/**
 	 * Enum VectorVM.EVectorVMOp
 	 */
@@ -117,6 +118,8 @@ namespace CG
 		NumOpcodes                = 95
 	};
 
+
+
 	/**
 	 * Enum VectorVM.EVectorVMOperandLocation
 	 */
@@ -127,6 +130,8 @@ namespace CG
 		Num      = 2,
 		MAX      = 3
 	};
+
+
 
 	/**
 	 * Enum VectorVM.EVectorVMBaseTypes

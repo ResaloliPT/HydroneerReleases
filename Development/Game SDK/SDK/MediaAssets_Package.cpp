@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -33,6 +34,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -42,7 +45,11 @@ namespace CG
 	 * 		class FName                                        Key                                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Value                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMediaSource::SetMediaOptionString(const class FName& Key, const class FString& Value)
+	void UMediaSource::SetMediaOptionString(
+const class FName& Key
+, 
+const class FString& Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -61,6 +68,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -70,7 +79,11 @@ namespace CG
 	 * 		class FName                                        Key                                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int64_t                                            Value                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMediaSource::SetMediaOptionInt64(const class FName& Key, int64_t Value)
+	void UMediaSource::SetMediaOptionInt64(
+const class FName& Key
+, 
+int64_t Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -89,6 +102,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -98,7 +113,11 @@ namespace CG
 	 * 		class FName                                        Key                                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Value                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMediaSource::SetMediaOptionFloat(const class FName& Key, float Value)
+	void UMediaSource::SetMediaOptionFloat(
+const class FName& Key
+, 
+float Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -117,6 +136,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -126,7 +147,11 @@ namespace CG
 	 * 		class FName                                        Key                                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               Value                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMediaSource::SetMediaOptionBool(const class FName& Key, bool Value)
+	void UMediaSource::SetMediaOptionBool(
+const class FName& Key
+, 
+bool Value
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -144,6 +169,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -168,10 +195,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMediaSource.StaticClass
+	 * 		Name   -> PredefinedFunction UMediaSource.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMediaSource::StaticClass()
@@ -182,10 +211,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UBaseMediaSource.StaticClass
+	 * 		Name   -> PredefinedFunction UBaseMediaSource.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UBaseMediaSource::StaticClass()
@@ -196,6 +227,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -204,7 +237,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Path                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UFileMediaSource::SetFilePath(const class FString& Path)
+	void UFileMediaSource::SetFilePath(
+const class FString& Path
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -221,10 +256,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UFileMediaSource.StaticClass
+	 * 		Name   -> PredefinedFunction UFileMediaSource.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UFileMediaSource::StaticClass()
@@ -235,6 +272,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -244,7 +283,11 @@ namespace CG
 	 * 		TArray<struct FMediaCaptureDevice>                 OutDevices                                                 (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Filter                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMediaBlueprintFunctionLibrary::EnumerateWebcamCaptureDevices(TArray<struct FMediaCaptureDevice>* OutDevices, int32_t Filter)
+	void UMediaBlueprintFunctionLibrary::EnumerateWebcamCaptureDevices(
+TArray<struct FMediaCaptureDevice>* OutDevices
+, 
+int32_t Filter
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -265,6 +308,8 @@ namespace CG
 			*OutDevices = params.OutDevices;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -274,7 +319,11 @@ namespace CG
 	 * 		TArray<struct FMediaCaptureDevice>                 OutDevices                                                 (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Filter                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMediaBlueprintFunctionLibrary::EnumerateVideoCaptureDevices(TArray<struct FMediaCaptureDevice>* OutDevices, int32_t Filter)
+	void UMediaBlueprintFunctionLibrary::EnumerateVideoCaptureDevices(
+TArray<struct FMediaCaptureDevice>* OutDevices
+, 
+int32_t Filter
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -295,6 +344,8 @@ namespace CG
 			*OutDevices = params.OutDevices;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -304,7 +355,11 @@ namespace CG
 	 * 		TArray<struct FMediaCaptureDevice>                 OutDevices                                                 (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Filter                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMediaBlueprintFunctionLibrary::EnumerateAudioCaptureDevices(TArray<struct FMediaCaptureDevice>* OutDevices, int32_t Filter)
+	void UMediaBlueprintFunctionLibrary::EnumerateAudioCaptureDevices(
+TArray<struct FMediaCaptureDevice>* OutDevices
+, 
+int32_t Filter
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -325,10 +380,12 @@ namespace CG
 			*OutDevices = params.OutDevices;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMediaBlueprintFunctionLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UMediaBlueprintFunctionLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMediaBlueprintFunctionLibrary::StaticClass()
@@ -338,6 +395,8 @@ namespace CG
 			ptr = UObject::FindClass("Class MediaAssets.MediaBlueprintFunctionLibrary");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -362,6 +421,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -385,10 +446,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMediaComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UMediaComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMediaComponent::StaticClass()
@@ -399,10 +462,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMediaTimeStampInfo.StaticClass
+	 * 		Name   -> PredefinedFunction UMediaTimeStampInfo.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMediaTimeStampInfo::StaticClass()
@@ -412,6 +477,8 @@ namespace CG
 			ptr = UObject::FindClass("Class MediaAssets.MediaTimeStampInfo");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -436,6 +503,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -459,6 +528,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -468,7 +539,11 @@ namespace CG
 	 * 		float                                              Rate                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               Unthinned                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMediaPlayer::SupportsRate(float Rate, bool Unthinned)
+	bool UMediaPlayer::SupportsRate(
+float Rate
+, 
+bool Unthinned
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -489,6 +564,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -498,7 +575,11 @@ namespace CG
 	 * 		struct FRotator                                    Rotation                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               Absolute                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMediaPlayer::SetViewRotation(const struct FRotator& Rotation, bool Absolute)
+	bool UMediaPlayer::SetViewRotation(
+const struct FRotator& Rotation
+, 
+bool Absolute
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -519,6 +600,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -529,7 +612,13 @@ namespace CG
 	 * 		float                                              Vertical                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               Absolute                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMediaPlayer::SetViewField(float Horizontal, float Vertical, bool Absolute)
+	bool UMediaPlayer::SetViewField(
+float Horizontal
+, 
+float Vertical
+, 
+bool Absolute
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -552,6 +641,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -562,7 +653,13 @@ namespace CG
 	 * 		int32_t                                            FormatIndex                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              FrameRate                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMediaPlayer::SetVideoTrackFrameRate(int32_t TrackIndex, int32_t FormatIndex, float FrameRate)
+	bool UMediaPlayer::SetVideoTrackFrameRate(
+int32_t TrackIndex
+, 
+int32_t FormatIndex
+, 
+float FrameRate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -585,6 +682,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -595,7 +694,13 @@ namespace CG
 	 * 		int32_t                                            TrackIndex                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            FormatIndex                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMediaPlayer::SetTrackFormat(EMediaPlayerTrack TrackType, int32_t TrackIndex, int32_t FormatIndex)
+	bool UMediaPlayer::SetTrackFormat(
+EMediaPlayerTrack TrackType
+, 
+int32_t TrackIndex
+, 
+int32_t FormatIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -618,6 +723,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -626,7 +733,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FTimespan                                   TimeDelay                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMediaPlayer::SetTimeDelay(const struct FTimespan& TimeDelay)
+	void UMediaPlayer::SetTimeDelay(
+const struct FTimespan& TimeDelay
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -643,6 +752,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -651,7 +762,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              Rate                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMediaPlayer::SetRate(float Rate)
+	bool UMediaPlayer::SetRate(
+float Rate
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -670,6 +783,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -678,7 +793,9 @@ namespace CG
 	 * Parameters:
 	 * 		float                                              Volume                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMediaPlayer::SetNativeVolume(float Volume)
+	bool UMediaPlayer::SetNativeVolume(
+float Volume
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -697,6 +814,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -705,7 +824,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UMediaSource*                                Options                                                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMediaPlayer::SetMediaOptions(class UMediaSource* Options)
+	void UMediaPlayer::SetMediaOptions(
+class UMediaSource* Options
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -722,6 +843,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -730,7 +853,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               Looping                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMediaPlayer::SetLooping(bool Looping)
+	bool UMediaPlayer::SetLooping(
+bool Looping
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -749,6 +874,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -757,7 +884,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FName                                        PlayerName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMediaPlayer::SetDesiredPlayerName(const class FName& PlayerName)
+	void UMediaPlayer::SetDesiredPlayerName(
+const class FName& PlayerName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -774,6 +903,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -782,7 +913,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FTimespan                                   Time                                                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMediaPlayer::SetBlockOnTime(const struct FTimespan& Time)
+	void UMediaPlayer::SetBlockOnTime(
+const struct FTimespan& Time
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -799,6 +932,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -808,7 +943,11 @@ namespace CG
 	 * 		EMediaPlayerTrack                                  TrackType                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            TrackIndex                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMediaPlayer::SelectTrack(EMediaPlayerTrack TrackType, int32_t TrackIndex)
+	bool UMediaPlayer::SelectTrack(
+EMediaPlayerTrack TrackType
+, 
+int32_t TrackIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -829,6 +968,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -837,7 +978,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FTimespan                                   Time                                                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMediaPlayer::Seek(const struct FTimespan& Time)
+	bool UMediaPlayer::Seek(
+const struct FTimespan& Time
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -855,6 +998,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -879,6 +1024,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -901,6 +1048,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -925,6 +1074,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -945,6 +1096,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -969,6 +1122,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -992,6 +1147,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1000,7 +1157,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      URL                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMediaPlayer::OpenUrl(const class FString& URL)
+	bool UMediaPlayer::OpenUrl(
+const class FString& URL
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1019,6 +1178,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1028,7 +1189,11 @@ namespace CG
 	 * 		class UMediaSource*                                MediaSource                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FMediaPlayerOptions                         Options                                                    (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	bool UMediaPlayer::OpenSourceWithOptions(class UMediaSource* MediaSource, const struct FMediaPlayerOptions& Options)
+	bool UMediaPlayer::OpenSourceWithOptions(
+class UMediaSource* MediaSource
+, 
+const struct FMediaPlayerOptions& Options
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1049,6 +1214,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1061,7 +1228,17 @@ namespace CG
 	 * 		struct FMediaPlayerOptions                         Options                                                    (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bSuccess                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMediaPlayer::OpenSourceLatent(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class UMediaSource* MediaSource, const struct FMediaPlayerOptions& Options, bool* bSuccess)
+	void UMediaPlayer::OpenSourceLatent(
+class UObject* WorldContextObject
+, 
+const struct FLatentActionInfo& LatentInfo
+, 
+class UMediaSource* MediaSource
+, 
+const struct FMediaPlayerOptions& Options
+, 
+bool* bSuccess
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1088,6 +1265,8 @@ namespace CG
 			*bSuccess = params.bSuccess;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1096,7 +1275,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UMediaSource*                                MediaSource                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMediaPlayer::OpenSource(class UMediaSource* MediaSource)
+	bool UMediaPlayer::OpenSource(
+class UMediaSource* MediaSource
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1115,6 +1296,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1124,7 +1307,11 @@ namespace CG
 	 * 		class UMediaPlaylist*                              InPlaylist                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMediaPlayer::OpenPlaylistIndex(class UMediaPlaylist* InPlaylist, int32_t Index)
+	bool UMediaPlayer::OpenPlaylistIndex(
+class UMediaPlaylist* InPlaylist
+, 
+int32_t Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1145,6 +1332,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1153,7 +1342,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UMediaPlaylist*                              InPlaylist                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMediaPlayer::OpenPlaylist(class UMediaPlaylist* InPlaylist)
+	bool UMediaPlayer::OpenPlaylist(
+class UMediaPlaylist* InPlaylist
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1172,6 +1363,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1180,7 +1373,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      FilePath                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMediaPlayer::OpenFile(const class FString& FilePath)
+	bool UMediaPlayer::OpenFile(
+const class FString& FilePath
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1198,6 +1393,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1222,6 +1419,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1244,6 +1443,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1268,6 +1469,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1290,6 +1493,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1314,6 +1519,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1336,6 +1543,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1360,6 +1569,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1382,6 +1593,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1406,6 +1619,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1428,6 +1643,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1452,6 +1669,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1461,7 +1680,11 @@ namespace CG
 	 * 		int32_t                                            TrackIndex                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            FormatIndex                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UMediaPlayer::GetVideoTrackType(int32_t TrackIndex, int32_t FormatIndex)
+	class FString UMediaPlayer::GetVideoTrackType(
+int32_t TrackIndex
+, 
+int32_t FormatIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1482,6 +1705,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1491,7 +1716,11 @@ namespace CG
 	 * 		int32_t                                            TrackIndex                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            FormatIndex                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FFloatRange UMediaPlayer::GetVideoTrackFrameRates(int32_t TrackIndex, int32_t FormatIndex)
+	struct FFloatRange UMediaPlayer::GetVideoTrackFrameRates(
+int32_t TrackIndex
+, 
+int32_t FormatIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1512,6 +1741,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1521,7 +1752,11 @@ namespace CG
 	 * 		int32_t                                            TrackIndex                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            FormatIndex                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float UMediaPlayer::GetVideoTrackFrameRate(int32_t TrackIndex, int32_t FormatIndex)
+	float UMediaPlayer::GetVideoTrackFrameRate(
+int32_t TrackIndex
+, 
+int32_t FormatIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1542,6 +1777,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1551,7 +1788,11 @@ namespace CG
 	 * 		int32_t                                            TrackIndex                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            FormatIndex                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FIntPoint UMediaPlayer::GetVideoTrackDimensions(int32_t TrackIndex, int32_t FormatIndex)
+	struct FIntPoint UMediaPlayer::GetVideoTrackDimensions(
+int32_t TrackIndex
+, 
+int32_t FormatIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1572,6 +1813,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1581,7 +1824,11 @@ namespace CG
 	 * 		int32_t                                            TrackIndex                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            FormatIndex                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float UMediaPlayer::GetVideoTrackAspectRatio(int32_t TrackIndex, int32_t FormatIndex)
+	float UMediaPlayer::GetVideoTrackAspectRatio(
+int32_t TrackIndex
+, 
+int32_t FormatIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1601,6 +1848,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1625,6 +1874,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1648,6 +1899,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1657,7 +1910,11 @@ namespace CG
 	 * 		EMediaPlayerTrack                                  TrackType                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            TrackIndex                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UMediaPlayer::GetTrackLanguage(EMediaPlayerTrack TrackType, int32_t TrackIndex)
+	class FString UMediaPlayer::GetTrackLanguage(
+EMediaPlayerTrack TrackType
+, 
+int32_t TrackIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1678,6 +1935,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1687,7 +1946,11 @@ namespace CG
 	 * 		EMediaPlayerTrack                                  TrackType                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            TrackIndex                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UMediaPlayer::GetTrackFormat(EMediaPlayerTrack TrackType, int32_t TrackIndex)
+	int32_t UMediaPlayer::GetTrackFormat(
+EMediaPlayerTrack TrackType
+, 
+int32_t TrackIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1708,6 +1971,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1717,7 +1982,11 @@ namespace CG
 	 * 		EMediaPlayerTrack                                  TrackType                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            TrackIndex                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FText UMediaPlayer::GetTrackDisplayName(EMediaPlayerTrack TrackType, int32_t TrackIndex)
+	class FText UMediaPlayer::GetTrackDisplayName(
+EMediaPlayerTrack TrackType
+, 
+int32_t TrackIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1737,6 +2006,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1761,6 +2032,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1783,6 +2056,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1807,6 +2082,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1816,7 +2093,11 @@ namespace CG
 	 * 		TArray<struct FFloatRange>                         OutRates                                                   (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               Unthinned                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMediaPlayer::GetSupportedRates(TArray<struct FFloatRange>* OutRates, bool Unthinned)
+	void UMediaPlayer::GetSupportedRates(
+TArray<struct FFloatRange>* OutRates
+, 
+bool Unthinned
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1837,6 +2118,8 @@ namespace CG
 			*OutRates = params.OutRates;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1845,7 +2128,9 @@ namespace CG
 	 * Parameters:
 	 * 		EMediaPlayerTrack                                  TrackType                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UMediaPlayer::GetSelectedTrack(EMediaPlayerTrack TrackType)
+	int32_t UMediaPlayer::GetSelectedTrack(
+EMediaPlayerTrack TrackType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1863,6 +2148,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1887,6 +2174,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1909,6 +2198,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -1933,6 +2224,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1956,6 +2249,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1964,7 +2259,9 @@ namespace CG
 	 * Parameters:
 	 * 		EMediaPlayerTrack                                  TrackType                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UMediaPlayer::GetNumTracks(EMediaPlayerTrack TrackType)
+	int32_t UMediaPlayer::GetNumTracks(
+EMediaPlayerTrack TrackType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -1983,6 +2280,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1992,7 +2291,11 @@ namespace CG
 	 * 		EMediaPlayerTrack                                  TrackType                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            TrackIndex                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UMediaPlayer::GetNumTrackFormats(EMediaPlayerTrack TrackType, int32_t TrackIndex)
+	int32_t UMediaPlayer::GetNumTrackFormats(
+EMediaPlayerTrack TrackType
+, 
+int32_t TrackIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2012,6 +2315,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2036,6 +2341,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2058,6 +2365,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2082,6 +2391,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2105,6 +2416,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2114,7 +2427,11 @@ namespace CG
 	 * 		int32_t                                            TrackIndex                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            FormatIndex                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class FString UMediaPlayer::GetAudioTrackType(int32_t TrackIndex, int32_t FormatIndex)
+	class FString UMediaPlayer::GetAudioTrackType(
+int32_t TrackIndex
+, 
+int32_t FormatIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2135,6 +2452,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2144,7 +2463,11 @@ namespace CG
 	 * 		int32_t                                            TrackIndex                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            FormatIndex                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UMediaPlayer::GetAudioTrackSampleRate(int32_t TrackIndex, int32_t FormatIndex)
+	int32_t UMediaPlayer::GetAudioTrackSampleRate(
+int32_t TrackIndex
+, 
+int32_t FormatIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2165,6 +2488,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2174,7 +2499,11 @@ namespace CG
 	 * 		int32_t                                            TrackIndex                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            FormatIndex                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UMediaPlayer::GetAudioTrackChannels(int32_t TrackIndex, int32_t FormatIndex)
+	int32_t UMediaPlayer::GetAudioTrackChannels(
+int32_t TrackIndex
+, 
+int32_t FormatIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2194,6 +2523,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2216,6 +2547,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2224,7 +2557,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      URL                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMediaPlayer::CanPlayUrl(const class FString& URL)
+	bool UMediaPlayer::CanPlayUrl(
+const class FString& URL
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2243,6 +2578,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2251,7 +2588,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UMediaSource*                                MediaSource                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMediaPlayer::CanPlaySource(class UMediaSource* MediaSource)
+	bool UMediaPlayer::CanPlaySource(
+class UMediaSource* MediaSource
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2269,6 +2608,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2293,10 +2634,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMediaPlayer.StaticClass
+	 * 		Name   -> PredefinedFunction UMediaPlayer.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMediaPlayer::StaticClass()
@@ -2307,6 +2650,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2316,7 +2661,11 @@ namespace CG
 	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UMediaSource*                                Replacement                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMediaPlaylist::Replace(int32_t Index, class UMediaSource* Replacement)
+	bool UMediaPlaylist::Replace(
+int32_t Index
+, 
+class UMediaSource* Replacement
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2337,6 +2686,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2345,7 +2696,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMediaPlaylist::RemoveAt(int32_t Index)
+	bool UMediaPlaylist::RemoveAt(
+int32_t Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2364,6 +2717,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2372,7 +2727,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UMediaSource*                                MediaSource                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMediaPlaylist::Remove(class UMediaSource* MediaSource)
+	bool UMediaPlaylist::Remove(
+class UMediaSource* MediaSource
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2390,6 +2747,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2414,6 +2773,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2423,7 +2784,11 @@ namespace CG
 	 * 		class UMediaSource*                                MediaSource                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMediaPlaylist::Insert(class UMediaSource* MediaSource, int32_t Index)
+	void UMediaPlaylist::Insert(
+class UMediaSource* MediaSource
+, 
+int32_t Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2442,6 +2807,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2450,7 +2817,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            OutIndex                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UMediaSource* UMediaPlaylist::GetRandom(int32_t* OutIndex)
+	class UMediaSource* UMediaPlaylist::GetRandom(
+int32_t* OutIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2471,6 +2840,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2479,7 +2850,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            InOutIndex                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UMediaSource* UMediaPlaylist::GetPrevious(int32_t* InOutIndex)
+	class UMediaSource* UMediaPlaylist::GetPrevious(
+int32_t* InOutIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2500,6 +2873,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2508,7 +2883,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            InOutIndex                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UMediaSource* UMediaPlaylist::GetNext(int32_t* InOutIndex)
+	class UMediaSource* UMediaPlaylist::GetNext(
+int32_t* InOutIndex
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2529,6 +2906,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2537,7 +2916,9 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UMediaSource* UMediaPlaylist::Get(int32_t Index)
+	class UMediaSource* UMediaPlaylist::Get(
+int32_t Index
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2556,6 +2937,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2564,7 +2947,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      URL                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMediaPlaylist::AddUrl(const class FString& URL)
+	bool UMediaPlaylist::AddUrl(
+const class FString& URL
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2583,6 +2968,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2591,7 +2978,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      FilePath                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMediaPlaylist::AddFile(const class FString& FilePath)
+	bool UMediaPlaylist::AddFile(
+const class FString& FilePath
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2610,6 +2999,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2618,7 +3009,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UMediaSource*                                MediaSource                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMediaPlaylist::Add(class UMediaSource* MediaSource)
+	bool UMediaPlaylist::Add(
+class UMediaSource* MediaSource
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2637,10 +3030,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMediaPlaylist.StaticClass
+	 * 		Name   -> PredefinedFunction UMediaPlaylist.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMediaPlaylist::StaticClass()
@@ -2651,6 +3046,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2660,7 +3057,11 @@ namespace CG
 	 * 		TArray<float>                                      InFrequenciesToAnalyze                                     (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		EMediaSoundComponentFFTSize                        InFFTSize                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMediaSoundComponent::SetSpectralAnalysisSettings(TArray<float> InFrequenciesToAnalyze, EMediaSoundComponentFFTSize InFFTSize)
+	void UMediaSoundComponent::SetSpectralAnalysisSettings(
+TArray<float> InFrequenciesToAnalyze
+, 
+EMediaSoundComponentFFTSize InFFTSize
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2679,6 +3080,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2687,7 +3090,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UMediaPlayer*                                NewMediaPlayer                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMediaSoundComponent::SetMediaPlayer(class UMediaPlayer* NewMediaPlayer)
+	void UMediaSoundComponent::SetMediaPlayer(
+class UMediaPlayer* NewMediaPlayer
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2704,6 +3109,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2713,7 +3120,11 @@ namespace CG
 	 * 		int32_t                                            AttackTimeMsec                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            ReleaseTimeMsec                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMediaSoundComponent::SetEnvelopeFollowingsettings(int32_t AttackTimeMsec, int32_t ReleaseTimeMsec)
+	void UMediaSoundComponent::SetEnvelopeFollowingsettings(
+int32_t AttackTimeMsec
+, 
+int32_t ReleaseTimeMsec
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2732,6 +3143,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2740,7 +3153,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bInSpectralAnalysisEnabled                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMediaSoundComponent::SetEnableSpectralAnalysis(bool bInSpectralAnalysisEnabled)
+	void UMediaSoundComponent::SetEnableSpectralAnalysis(
+bool bInSpectralAnalysisEnabled
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2757,6 +3172,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2765,7 +3182,9 @@ namespace CG
 	 * Parameters:
 	 * 		bool                                               bInEnvelopeFollowing                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMediaSoundComponent::SetEnableEnvelopeFollowing(bool bInEnvelopeFollowing)
+	void UMediaSoundComponent::SetEnableEnvelopeFollowing(
+bool bInEnvelopeFollowing
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2781,6 +3200,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2805,6 +3226,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2827,6 +3250,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2851,6 +3276,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2874,6 +3301,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2882,7 +3311,9 @@ namespace CG
 	 * Parameters:
 	 * 		struct FSoundAttenuationSettings                   OutAttenuationSettings                                     (Parm, OutParm, NativeAccessSpecifierPublic)
 	 */
-	bool UMediaSoundComponent::BP_GetAttenuationSettingsToApply(struct FSoundAttenuationSettings* OutAttenuationSettings)
+	bool UMediaSoundComponent::BP_GetAttenuationSettingsToApply(
+struct FSoundAttenuationSettings* OutAttenuationSettings
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2903,10 +3334,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMediaSoundComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UMediaSoundComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMediaSoundComponent::StaticClass()
@@ -2917,6 +3350,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2925,7 +3360,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UMediaPlayer*                                NewMediaPlayer                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMediaTexture::SetMediaPlayer(class UMediaPlayer* NewMediaPlayer)
+	void UMediaTexture::SetMediaPlayer(
+class UMediaPlayer* NewMediaPlayer
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -2941,6 +3378,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -2965,6 +3404,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -2987,6 +3428,8 @@ namespace CG
 		
 		return params.ReturnValue;
 	}
+
+
 
 	/**
 	 * Function:
@@ -3011,6 +3454,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3034,10 +3479,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UMediaTexture.StaticClass
+	 * 		Name   -> PredefinedFunction UMediaTexture.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UMediaTexture::StaticClass()
@@ -3048,10 +3495,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UPlatformMediaSource.StaticClass
+	 * 		Name   -> PredefinedFunction UPlatformMediaSource.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UPlatformMediaSource::StaticClass()
@@ -3062,10 +3511,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UStreamMediaSource.StaticClass
+	 * 		Name   -> PredefinedFunction UStreamMediaSource.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UStreamMediaSource::StaticClass()
@@ -3076,10 +3527,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UTimeSynchronizableMediaSource.StaticClass
+	 * 		Name   -> PredefinedFunction UTimeSynchronizableMediaSource.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UTimeSynchronizableMediaSource::StaticClass()
@@ -3089,6 +3542,7 @@ namespace CG
 			ptr = UObject::FindClass("Class MediaAssets.TimeSynchronizableMediaSource");
 		return ptr;
 	}
+
 
 }
 

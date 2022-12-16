@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -18,7 +19,9 @@ namespace CG
 	 * Parameters:
 	 * 		TArray<class UActorComponent*>                     Components                                                 (Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	 */
-	void UEMSActorSaveInterface::ComponentsToSave(TArray<class UActorComponent*>* Components)
+	void UEMSActorSaveInterface::ComponentsToSave(
+TArray<class UActorComponent*>* Components
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -36,6 +39,8 @@ namespace CG
 		if (Components != nullptr)
 			*Components = params.Components;
 	}
+
+
 
 	/**
 	 * Function:
@@ -58,6 +63,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -78,6 +85,8 @@ namespace CG
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -100,10 +109,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEMSActorSaveInterface.StaticClass
+	 * 		Name   -> PredefinedFunction UEMSActorSaveInterface.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEMSActorSaveInterface::StaticClass()
@@ -113,6 +124,8 @@ namespace CG
 			ptr = UObject::FindClass("Class EasyMultiSave.EMSActorSaveInterface");
 		return ptr;
 	}
+
+
 
 	/**
 	 * Function:
@@ -124,7 +137,13 @@ namespace CG
 	 * 		int32_t                                            Data                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bFullReload                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UEMSAsyncLoadGame* UEMSAsyncLoadGame::AsyncLoadActors(class UObject* WorldContextObject, int32_t Data, bool bFullReload)
+	class UEMSAsyncLoadGame* UEMSAsyncLoadGame::AsyncLoadActors(
+class UObject* WorldContextObject
+, 
+int32_t Data
+, 
+bool bFullReload
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -147,10 +166,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEMSAsyncLoadGame.StaticClass
+	 * 		Name   -> PredefinedFunction UEMSAsyncLoadGame.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEMSAsyncLoadGame::StaticClass()
@@ -161,6 +182,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -170,7 +193,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Data                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UEMSAsyncSaveGame* UEMSAsyncSaveGame::AsyncSaveActors(class UObject* WorldContextObject, int32_t Data)
+	class UEMSAsyncSaveGame* UEMSAsyncSaveGame::AsyncSaveActors(
+class UObject* WorldContextObject
+, 
+int32_t Data
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -191,10 +218,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEMSAsyncSaveGame.StaticClass
+	 * 		Name   -> PredefinedFunction UEMSAsyncSaveGame.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEMSAsyncSaveGame::StaticClass()
@@ -205,6 +234,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -213,7 +244,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UEMSAsyncWait* UEMSAsyncWait::AsyncWaitForOperation(class UObject* WorldContextObject)
+	class UEMSAsyncWait* UEMSAsyncWait::AsyncWaitForOperation(
+class UObject* WorldContextObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -232,10 +265,12 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEMSAsyncWait.StaticClass
+	 * 		Name   -> PredefinedFunction UEMSAsyncWait.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEMSAsyncWait::StaticClass()
@@ -246,10 +281,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEMSCustomSaveGame.StaticClass
+	 * 		Name   -> PredefinedFunction UEMSCustomSaveGame.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEMSCustomSaveGame::StaticClass()
@@ -260,6 +297,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -269,7 +308,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      UserName                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEMSFunctionLibrary::SetCurrentSaveUserName(class UObject* WorldContextObject, const class FString& UserName)
+	void UEMSFunctionLibrary::SetCurrentSaveUserName(
+class UObject* WorldContextObject
+, 
+const class FString& UserName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -288,6 +331,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -297,7 +342,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SaveGameName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEMSFunctionLibrary::SetCurrentSaveGameName(class UObject* WorldContextObject, const class FString& SaveGameName)
+	void UEMSFunctionLibrary::SetCurrentSaveGameName(
+class UObject* WorldContextObject
+, 
+const class FString& SaveGameName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -316,6 +365,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -327,7 +378,15 @@ namespace CG
 	 * 		bool                                               bPersistent                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bSkipTransform                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEMSFunctionLibrary::SetActorSaveProperties(class UObject* WorldContextObject, bool bSkipSave, bool bPersistent, bool bSkipTransform)
+	void UEMSFunctionLibrary::SetActorSaveProperties(
+class UObject* WorldContextObject
+, 
+bool bSkipSave
+, 
+bool bPersistent
+, 
+bool bSkipTransform
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -350,6 +409,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -358,7 +419,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UEMSFunctionLibrary::SavePersistentObject(class UObject* WorldContextObject)
+	bool UEMSFunctionLibrary::SavePersistentObject(
+class UObject* WorldContextObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -377,6 +440,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -385,7 +450,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UEMSFunctionLibrary::SaveLocalProfile(class UObject* WorldContextObject)
+	bool UEMSFunctionLibrary::SaveLocalProfile(
+class UObject* WorldContextObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -404,6 +471,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -413,7 +482,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UEMSCustomSaveGame*                          SaveGame                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UEMSFunctionLibrary::SaveCustom(class UObject* WorldContextObject, class UEMSCustomSaveGame* SaveGame)
+	bool UEMSFunctionLibrary::SaveCustom(
+class UObject* WorldContextObject
+, 
+class UEMSCustomSaveGame* SaveGame
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -434,6 +507,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -442,7 +517,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UEMSFunctionLibrary::IsSavingOrLoading(class UObject* WorldContextObject)
+	bool UEMSFunctionLibrary::IsSavingOrLoading(
+class UObject* WorldContextObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -461,6 +538,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -470,7 +549,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SaveGameName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UTexture2D* UEMSFunctionLibrary::ImportSaveThumbnail(class UObject* WorldContextObject, const class FString& SaveGameName)
+	class UTexture2D* UEMSFunctionLibrary::ImportSaveThumbnail(
+class UObject* WorldContextObject
+, 
+const class FString& SaveGameName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -491,6 +574,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -499,7 +584,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<class FString> UEMSFunctionLibrary::GetSortedSaveSlots(class UObject* WorldContextObject)
+	TArray<class FString> UEMSFunctionLibrary::GetSortedSaveSlots(
+class UObject* WorldContextObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -518,6 +605,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -527,7 +616,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SaveGameName                                               (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UEMSInfoSaveGame* UEMSFunctionLibrary::GetSlotInfoSaveGame(class UObject* WorldContextObject, class FString* SaveGameName)
+	class UEMSInfoSaveGame* UEMSFunctionLibrary::GetSlotInfoSaveGame(
+class UObject* WorldContextObject
+, 
+class FString* SaveGameName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -550,6 +643,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -558,7 +653,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UEMSPersistentSaveGame* UEMSFunctionLibrary::GetPersistentSave(class UObject* WorldContextObject)
+	class UEMSPersistentSaveGame* UEMSFunctionLibrary::GetPersistentSave(
+class UObject* WorldContextObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -577,6 +674,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -586,7 +685,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SaveGameName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UEMSInfoSaveGame* UEMSFunctionLibrary::GetNamedSlotInfo(class UObject* WorldContextObject, const class FString& SaveGameName)
+	class UEMSInfoSaveGame* UEMSFunctionLibrary::GetNamedSlotInfo(
+class UObject* WorldContextObject
+, 
+const class FString& SaveGameName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -607,6 +710,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -615,7 +720,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UEMSProfileSaveGame* UEMSFunctionLibrary::GetLocalProfileSaveGame(class UObject* WorldContextObject)
+	class UEMSProfileSaveGame* UEMSFunctionLibrary::GetLocalProfileSaveGame(
+class UObject* WorldContextObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -634,6 +741,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -643,7 +752,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UClass*                                      SaveGameClass                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UEMSCustomSaveGame* UEMSFunctionLibrary::GetCustomSave(class UObject* WorldContextObject, class UClass* SaveGameClass)
+	class UEMSCustomSaveGame* UEMSFunctionLibrary::GetCustomSave(
+class UObject* WorldContextObject
+, 
+class UClass* SaveGameClass
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -664,6 +777,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -672,7 +787,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	TArray<class FString> UEMSFunctionLibrary::GetAllSaveUsers(class UObject* WorldContextObject)
+	TArray<class FString> UEMSFunctionLibrary::GetAllSaveUsers(
+class UObject* WorldContextObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -691,6 +808,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -701,7 +820,13 @@ namespace CG
 	 * 		class UTextureRenderTarget2D*                      TextureRenderTarget                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SaveGameName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEMSFunctionLibrary::ExportSaveThumbnail(class UObject* WorldContextObject, class UTextureRenderTarget2D* TextureRenderTarget, const class FString& SaveGameName)
+	void UEMSFunctionLibrary::ExportSaveThumbnail(
+class UObject* WorldContextObject
+, 
+class UTextureRenderTarget2D* TextureRenderTarget
+, 
+const class FString& SaveGameName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -722,6 +847,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -731,7 +858,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SaveGameName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UEMSFunctionLibrary::DoesSaveSlotExist(class UObject* WorldContextObject, const class FString& SaveGameName)
+	bool UEMSFunctionLibrary::DoesSaveSlotExist(
+class UObject* WorldContextObject
+, 
+const class FString& SaveGameName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -752,6 +883,8 @@ namespace CG
 		return params.ReturnValue;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -761,7 +894,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      UserName                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEMSFunctionLibrary::DeleteSaveUser(class UObject* WorldContextObject, const class FString& UserName)
+	void UEMSFunctionLibrary::DeleteSaveUser(
+class UObject* WorldContextObject
+, 
+const class FString& UserName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -780,6 +917,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -788,7 +927,9 @@ namespace CG
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEMSFunctionLibrary::DeleteLocalProfile(class UObject* WorldContextObject)
+	void UEMSFunctionLibrary::DeleteLocalProfile(
+class UObject* WorldContextObject
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -805,6 +946,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -814,7 +957,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class UEMSCustomSaveGame*                          SaveGame                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEMSFunctionLibrary::DeleteCustomSave(class UObject* WorldContextObject, class UEMSCustomSaveGame* SaveGame)
+	void UEMSFunctionLibrary::DeleteCustomSave(
+class UObject* WorldContextObject
+, 
+class UEMSCustomSaveGame* SaveGame
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -833,6 +980,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -842,7 +991,11 @@ namespace CG
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      SaveGameName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEMSFunctionLibrary::DeleteAllSaveDataForSlot(class UObject* WorldContextObject, const class FString& SaveGameName)
+	void UEMSFunctionLibrary::DeleteAllSaveDataForSlot(
+class UObject* WorldContextObject
+, 
+const class FString& SaveGameName
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -861,10 +1014,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEMSFunctionLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UEMSFunctionLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEMSFunctionLibrary::StaticClass()
@@ -875,10 +1030,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEMSInfoSaveGame.StaticClass
+	 * 		Name   -> PredefinedFunction UEMSInfoSaveGame.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEMSInfoSaveGame::StaticClass()
@@ -889,6 +1046,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -898,7 +1057,11 @@ namespace CG
 	 * 		class AActor*                                      Actor                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EEndPlayReason                                     EndPlayReason                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UEMSObject::OuterActorEndPlay(class AActor* Actor, EEndPlayReason EndPlayReason)
+	void UEMSObject::OuterActorEndPlay(
+class AActor* Actor
+, 
+EEndPlayReason EndPlayReason
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -917,10 +1080,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEMSObject.StaticClass
+	 * 		Name   -> PredefinedFunction UEMSObject.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEMSObject::StaticClass()
@@ -931,10 +1096,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEMSPersistentSaveGame.StaticClass
+	 * 		Name   -> PredefinedFunction UEMSPersistentSaveGame.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEMSPersistentSaveGame::StaticClass()
@@ -945,10 +1112,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEMSPluginSettings.StaticClass
+	 * 		Name   -> PredefinedFunction UEMSPluginSettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEMSPluginSettings::StaticClass()
@@ -959,10 +1128,12 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UEMSProfileSaveGame.StaticClass
+	 * 		Name   -> PredefinedFunction UEMSProfileSaveGame.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UEMSProfileSaveGame::StaticClass()
@@ -972,6 +1143,7 @@ namespace CG
 			ptr = UObject::FindClass("Class EasyMultiSave.EMSProfileSaveGame");
 		return ptr;
 	}
+
 
 }
 

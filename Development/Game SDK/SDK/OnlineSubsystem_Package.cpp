@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,10 +10,11 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UNamedInterfaces.StaticClass
+	 * 		Name   -> PredefinedFunction UNamedInterfaces.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UNamedInterfaces::StaticClass()
@@ -24,6 +25,8 @@ namespace CG
 		return ptr;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -33,7 +36,11 @@ namespace CG
 	 * 		class FString                                      Match                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bDidBecomeActive                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UTurnBasedMatchInterface::OnMatchReceivedTurn(const class FString& Match, bool bDidBecomeActive)
+	void UTurnBasedMatchInterface::OnMatchReceivedTurn(
+const class FString& Match
+, 
+bool bDidBecomeActive
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -52,6 +59,8 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -60,7 +69,9 @@ namespace CG
 	 * Parameters:
 	 * 		class FString                                      Match                                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UTurnBasedMatchInterface::OnMatchEnded(const class FString& Match)
+	void UTurnBasedMatchInterface::OnMatchEnded(
+const class FString& Match
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -77,10 +88,12 @@ namespace CG
 		fn->FunctionFlags = flags;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UTurnBasedMatchInterface.StaticClass
+	 * 		Name   -> PredefinedFunction UTurnBasedMatchInterface.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UTurnBasedMatchInterface::StaticClass()
@@ -90,6 +103,7 @@ namespace CG
 			ptr = UObject::FindClass("Class OnlineSubsystem.TurnBasedMatchInterface");
 		return ptr;
 	}
+
 
 }
 

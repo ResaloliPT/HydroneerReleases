@@ -1,6 +1,6 @@
 ﻿/**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #include "pch.h"
@@ -10,6 +10,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -19,7 +20,11 @@ namespace CG
 	 * 		TArray<class ABP_ParentResource_C*>                Resources                                                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	 * 		float                                              Weight                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UAC_StoreFunctions_C::CalcWeight(TArray<class ABP_ParentResource_C*>* Resources, float* Weight)
+	void UAC_StoreFunctions_C::CalcWeight(
+TArray<class ABP_ParentResource_C*>* Resources
+, 
+float* Weight
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -41,6 +46,8 @@ namespace CG
 			*Weight = params.Weight;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -50,7 +57,11 @@ namespace CG
 	 * 		TArray<class ABP_ParentResource_C*>                Array                                                      (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	 * 		int32_t                                            Total                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UAC_StoreFunctions_C::CalcPrice(TArray<class ABP_ParentResource_C*>* Array, int32_t* Total)
+	void UAC_StoreFunctions_C::CalcPrice(
+TArray<class ABP_ParentResource_C*>* Array
+, 
+int32_t* Total
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -72,6 +83,8 @@ namespace CG
 			*Total = params.Total;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -81,7 +94,11 @@ namespace CG
 	 * 		class ABP_ParentCraftedResource_C*                 CraftedItem                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		int32_t                                            Price                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UAC_StoreFunctions_C::CalculateCraftedPrice(class ABP_ParentCraftedResource_C* CraftedItem, int32_t* Price)
+	void UAC_StoreFunctions_C::CalculateCraftedPrice(
+class ABP_ParentCraftedResource_C* CraftedItem
+, 
+int32_t* Price
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -102,6 +119,8 @@ namespace CG
 			*Price = params.Price;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -111,7 +130,11 @@ namespace CG
 	 * 		class ABP_CaughtFish_C*                            Fish                                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		int32_t                                            Cost                                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UAC_StoreFunctions_C::CalculateFishPrice(class ABP_CaughtFish_C* Fish, int32_t* Cost)
+	void UAC_StoreFunctions_C::CalculateFishPrice(
+class ABP_CaughtFish_C* Fish
+, 
+int32_t* Cost
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -132,6 +155,8 @@ namespace CG
 			*Cost = params.Cost;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -140,8 +165,15 @@ namespace CG
 	 * Parameters:
 	 * 		int32_t                                            NewValue                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		struct FTransform                                  SpawnLocation                                              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	 * 		E_CurrencyType                                     CurrencyType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UAC_StoreFunctions_C::ReplaceCoinsWithNewValue(int32_t NewValue, const struct FTransform& SpawnLocation)
+	void UAC_StoreFunctions_C::ReplaceCoinsWithNewValue(
+int32_t NewValue
+, 
+const struct FTransform& SpawnLocation
+, 
+E_CurrencyType CurrencyType
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -151,14 +183,18 @@ namespace CG
 		{
 			int32_t                                            NewValue;
 			struct FTransform                                  SpawnLocation;
+			E_CurrencyType                                     CurrencyType;
 		} params;
 		params.NewValue = NewValue;
 		params.SpawnLocation = SpawnLocation;
+		params.CurrencyType = CurrencyType;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 	}
+
+
 
 	/**
 	 * Function:
@@ -166,9 +202,14 @@ namespace CG
 	 * 		Name   -> Function AC_StoreFunctions.AC_StoreFunctions_C.GetTotalCoinValue
 	 * 		Flags  -> ()
 	 * Parameters:
+	 * 		E_CurrencyType                                     CurrencyType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 * 		int32_t                                            Price                                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	 */
-	void UAC_StoreFunctions_C::GetTotalCoinValue(int32_t* Price)
+	void UAC_StoreFunctions_C::GetTotalCoinValue(
+E_CurrencyType CurrencyType
+, 
+int32_t* Price
+)
 	{
 		static UFunction* fn = nullptr;
 		if (!fn)
@@ -176,8 +217,10 @@ namespace CG
 		
 		struct
 		{
+			E_CurrencyType                                     CurrencyType;
 			int32_t                                            Price;
 		} params;
+		params.CurrencyType = CurrencyType;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -187,10 +230,12 @@ namespace CG
 			*Price = params.Price;
 	}
 
+
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefindFunction UAC_StoreFunctions_C.StaticClass
+	 * 		Name   -> PredefinedFunction UAC_StoreFunctions_C.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 */
 	UClass* UAC_StoreFunctions_C::StaticClass()
@@ -200,6 +245,7 @@ namespace CG
 			ptr = UObject::FindClass("BlueprintGeneratedClass AC_StoreFunctions.AC_StoreFunctions_C");
 		return ptr;
 	}
+
 
 }
 

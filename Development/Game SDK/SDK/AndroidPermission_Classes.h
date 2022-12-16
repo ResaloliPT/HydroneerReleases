@@ -2,7 +2,7 @@
 
 /**
  * Name: Hydroneer
- * Version: 2.0.6
+ * Version: 2.1.1
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,7 @@ namespace CG
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+
 	/**
 	 * Class AndroidPermission.AndroidPermissionCallbackProxy
 	 * Size -> 0x0020 (FullSize[0x0048] - InheritedSize[0x0028])
@@ -21,12 +22,19 @@ namespace CG
 	class UAndroidPermissionCallbackProxy : public UObject
 	{
 	public:
-		class FScriptMulticastDelegate                             OnPermissionsGrantedDynamicDelegate;                     // 0x0028(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                              UnknownData_CLGY[0x10];                                  // 0x0038(0x0010) MISSED OFFSET (PADDING)
+
+		class FScriptMulticastDelegate                           OnPermissionsGrantedDynamicDelegate;                     // 0x0028(0x0010) ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+
+
+		unsigned char                                            UnknownData_WH88[0x10];                                  // 0x0038(0x0010) MISSED OFFSET (PADDING)
+
 
 	public:
+
 		static UClass* StaticClass();
 	};
+
+
 
 	/**
 	 * Class AndroidPermission.AndroidPermissionFunctionLibrary
@@ -35,8 +43,15 @@ namespace CG
 	class UAndroidPermissionFunctionLibrary : public UBlueprintFunctionLibrary
 	{
 	public:
-		bool CheckPermission(const class FString& permission);
-		class UAndroidPermissionCallbackProxy* AcquirePermissions(TArray<class FString> Permissions);
+
+		bool CheckPermission(
+const class FString& permission
+);
+
+		class UAndroidPermissionCallbackProxy* AcquirePermissions(
+TArray<class FString> Permissions
+);
+
 		static UClass* StaticClass();
 	};
 
