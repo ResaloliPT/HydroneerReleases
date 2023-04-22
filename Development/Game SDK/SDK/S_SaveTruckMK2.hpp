@@ -1,0 +1,13 @@
+#ifndef UE4SS_SDK_S_SaveTruckMK2_HPP
+#define UE4SS_SDK_S_SaveTruckMK2_HPP
+
+struct FS_SaveTruckMK2
+{
+    TSubclassOf<class ABP_HydroTruck_MK2_C> Vehicle_9_4D024F97495B2D37C6BF659480232C6E;
+    FTransform Trans_5_1FCEAA98434951214AAC6EB444B18B64;
+    float Fuel_12_D858E7C3473209BAF2BF548068060773;
+    TEnumAsByte<E_PaintTruck::Type> PaintType_8_EDBD4AE642ABBE1A3F2EF0A819CA1BB3;
+
+};
+
+#endif

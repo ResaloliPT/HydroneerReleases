@@ -1,0 +1,14 @@
+#ifndef UE4SS_SDK_ST_NPC_RequestContents_HPP
+#define UE4SS_SDK_ST_NPC_RequestContents_HPP
+
+struct FST_NPC_RequestContents
+{
+    TSubclassOf<class ABP_ParentResource_C> ResourceClass_7_8BA7D30443F7EA5F6F8316ABB9630A3B;
+    float MinWeight_18_C293B4BF470664CB0CAE28875C56AD31;
+    float MaxWeight_17_18103AB640F8EF8C822192BAFE555602;
+    int32 Index_12_27AA651342548C493D78C29E5CBB445E;
+    FString Type_16_917305BB443C3F0FFCE4D4B435CE6766;
+
+};
+
+#endif

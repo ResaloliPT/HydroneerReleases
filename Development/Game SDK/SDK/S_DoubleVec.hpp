@@ -1,0 +1,11 @@
+#ifndef UE4SS_SDK_S_DoubleVec_HPP
+#define UE4SS_SDK_S_DoubleVec_HPP
+
+struct FS_DoubleVec
+{
+    FVector One_15_960F03664609044DB909AB9D567F19B1;
+    FVector Two_17_411204BD4BD8B5D1ACBFB2810C20E369;
+
+};
+
+#endif
