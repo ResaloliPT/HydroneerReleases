@@ -1,0 +1,50 @@
+#ifndef UE4SS_SDK_PakLoader_HPP
+#define UE4SS_SDK_PakLoader_HPP
+
+class UAsyncPakDownloader : public UBlueprintAsyncActionBase
+{
+    FAsyncPakDownloaderOnSuccess OnSuccess;                                           // 0x0030 (size: 0x10)
+    void DownloadPakDelegate(int32 HttpResponseCode, int32 ContentLength, const FString SavePath, int32 BytesReceived);
+    FAsyncPakDownloaderOnFail OnFail;                                                 // 0x0040 (size: 0x10)
+    void DownloadPakDelegate(int32 HttpResponseCode, int32 ContentLength, const FString SavePath, int32 BytesReceived);
+    FAsyncPakDownloaderOnProgress OnProgress;                                         // 0x0050 (size: 0x10)
+    void DownloadPakDelegate(int32 HttpResponseCode, int32 ContentLength, const FString SavePath, int32 BytesReceived);
+
+    class UAsyncPakDownloader* DownloadPak(FString URL, FString SavePath);
+}; // Size: 0x70
+
+class UPakLoaderLibrary : public UBlueprintFunctionLibrary
+{
+
+    void UnRegisterMountPoint(FString RootPath, FString ContentPath);
+    bool UnmountPakFile(FString PakFilename);
+    bool TryConvertFilenameToLongPackageName(FString Filename, FString& PackageName);
+    FString SHA1SUM(FString Filename);
+    void RuntimeLog(FString Text);
+    void RegisterMountPoint(FString RootPath, FString ContentPath);
+    bool RegisterEncryptionKey(FString Guid, FString AesKey);
+    FString ProjectPersistentDownloadDir();
+    bool MountPakFile(FString PakFilename, FString MountPath);
+    void LoadPakAssetRegistryFile(FString AssetRegistryFile);
+    bool IsValidPakFile(FString PakFilename, int64& PakSize);
+    bool IsPackagedBuild();
+    FString GetShortName(FString LongName);
+    FString GetProjectName();
+    class UTexture2D* GetPakFileTexture2D(FString Filename);
+    bool GetPakFileText(FString Filename, FString& String);
+    class UStaticMesh* GetPakFileStaticMesh(FString Filename);
+    class USoundBase* GetPakFileSound(FString Filename);
+    class USkeletalMesh* GetPakFileSkeletalMesh(FString Filename);
+    class UObject* GetPakFileObject(FString Filename);
+    class UMaterialInstanceConstant* GetPakFileMaterialInstanceConstant(FString Filename);
+    class UMaterial* GetPakFileMaterial(FString Filename);
+    UClass* GetPakFileClass(FString Filename);
+    class UAnimSequence* GetPakFileAnimSequence(FString Filename);
+    TArray<FString> GetMountedPakFilenames();
+    TArray<FString> GetFilesInPakDirectory(FString PakDirectory, bool bRecursively);
+    TArray<FString> GetFilesInPak(FString PakFilename, bool bUAssetOnly);
+    void EnableRuntimeLog(bool bEnable, FString NewLogPath);
+    bool DoesPakDirectoryExist(FString PakDirectory);
+}; // Size: 0x28
+
+#endif
